@@ -2,25 +2,106 @@
    pageEncoding="UTF-8"%>
 <script>
 	function goUrl(str){
-		if(str == "notice"){
-			document.getElementById("ff").submit();
-		}else if(str == "tel"){
-			document.getElementById("dd").submit();
+		if(str == "join"){
+			document.getElementById("join").submit();
+		}else if(str == "check"){
+			document.getElementById("check").submit();
+		} else if(str == "change"){
+			document.getElementById("change").submit();
+		} else if(str == "out"){
+			document.getElementById("out").submit();
+		} else if(str == "notice"){
+			document.getElementById("notice").submit();
+		} else if(str == "itr"){
+			document.getElementById("itr").submit();
+		} else if(str == "term"){
+			document.getElementById("term").submit();
+		} else if(str == "tel"){
+			document.getElementById("tel").submit();
+		} else if(str == "check"){
+			document.getElementById("check").submit();
+		} else if(str == "move"){
+			document.getElementById("move").submit();
+		} else if(str == "table"){
+			document.getElementById("table").submit();
+		} else if(str == "rank"){
+			document.getElementById("rank").submit();
 		}
 	}
 </script>
 
+<form method="post" action="sh.apos" id="join">
+<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="subcmd" value="join">
+</form>
 
-<form method="post" action="sh.apos" id="ff">
-<input type="hidden" name="cmd" value="work">
+<form method="post" action="sh.apos" id="check">
+<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="subcmd" value="check">
+</form>
+
+<form method="post" action="sh.apos" id="change">
+<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="subcmd" value="change">
+</form>
+
+<form method="post" action="sh.apos" id="out">
+<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="subcmd" value="out">
+</form>
+
+
+
+
+
+<form method="post" action="sh.apos" id="notice">
+<input type="hidden" name="cmd" value="swork">
 <input type="hidden" name="subcmd" value="notice">
 </form>
 
 
-<form method="post" action="sh.apos" id="dd">
-<input type="hidden" name="cmd" value="work">
+<form method="post" action="sh.apos" id="itr">
+<input type="hidden" name="cmd" value="swork">
+<input type="hidden" name="subcmd" value="itr">
+</form>
+
+<form method="post" action="sh.apos" id="term">
+<input type="hidden" name="cmd" value="swork">
+<input type="hidden" name="subcmd" value="term">
+</form>
+
+<form method="post" action="sh.apos" id="tel">
+<input type="hidden" name="cmd" value="swork">
 <input type="hidden" name="subcmd" value="tel">
 </form>
+
+
+
+
+<form method="post" action="sh.apos" id="check">
+<input type="hidden" name="cmd" value="product">
+<input type="hidden" name="subcmd" value="check">
+</form>
+
+<form method="post" action="sh.apos" id="move">
+<input type="hidden" name="cmd" value="product">
+<input type="hidden" name="subcmd" value="move">
+</form>
+
+
+
+
+<form method="post" action="sh.apos" id="table">
+<input type="hidden" name="cmd" value="sales">
+<input type="hidden" name="subcmd" value="table">
+</form>
+
+<form method="post" action="sh.apos" id="rank">
+<input type="hidden" name="cmd" value="sales">
+<input type="hidden" name="subcmd" value="rank">
+</form>
+
+
 
 
       <!--sidebar start-->
@@ -44,8 +125,8 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
-                          <li><a class="" href="javascript:goUrl()">내부 규정</a></li>
-                          <li><a class="" href="sh_Terms.jsp">약관</a></li>
+                          <li><a class="" href="javascript:goUrl('itr')">내부 규정</a></li>
+                          <li><a class="" href="javascript:goUrl('term')">약관</a></li>
                           <li><a class="" href="javascript:goUrl('tel')">연락처</a></li>
                       </ul>
                   </li>
@@ -57,10 +138,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="sh_MemberJoin.jsp">회원가입</a></li>                          
-                          <li><a class="" href="sh_MemberCheck.jsp">회원조회</a></li>
-                          <li><a class="" href="sh_MemberChange.jsp">회원수정</a></li>
-                          <li><a class="" href="sh_MemberOut">회원탈퇴</a></li>
+                          <li><a class="" href="javascript:goUrl('join')">회원가입</a></li>                          
+                          <li><a class="" href="javascript:goUrl('check')">회원조회</a></li>
+                          <li><a class="" href="javascript:goUrl('change')">회원수정</a></li>
+                          <li><a class="" href="javascript:goUrl('out')">회원탈퇴</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -70,8 +151,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="sh_ItemCheck.jsp">상품조회</a></li>
-                          <li><a class="" href="sh_ItemRequest.jsp">상품이동요청</a></li>
+                          <li><a class="" href="javascript:goUrl('check')">상품조회</a></li>
+                          <li><a class="" href="javascript:goUrl('move')">상품이동요청</a></li>
                       </ul>
                   </li>
                   
@@ -83,8 +164,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">                          
-                          <li><a class="" href="sh_SalesTable.jsp">판매현황</a></li>
-                          <li><a class="" href="sh_SalesRank.jsp"><span>상품판매순위</span></a></li>
+                          <li><a class="" href="javascript:goUrl('table')">판매현황</a></li>
+                          <li><a class="" href="javascript:goUrl('rank')"><span>상품판매순위</span></a></li>
                       </ul>
                   </li>
               </ul>
