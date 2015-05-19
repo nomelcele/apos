@@ -31,22 +31,22 @@
 </script>
 
 <form method="post" action="sh.apos" id="join">
-<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="join">
 </form>
 
 <form method="post" action="sh.apos" id="check">
-<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="check">
 </form>
 
 <form method="post" action="sh.apos" id="change">
-<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="change">
 </form>
 
 <form method="post" action="sh.apos" id="out">
-<input type="hidden" name="cmd" value="member">
+<input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="out">
 </form>
 
@@ -79,12 +79,12 @@
 
 
 <form method="post" action="sh.apos" id="check">
-<input type="hidden" name="cmd" value="product">
+<input type="hidden" name="cmd" value="sproduct">
 <input type="hidden" name="subcmd" value="check">
 </form>
 
 <form method="post" action="sh.apos" id="move">
-<input type="hidden" name="cmd" value="product">
+<input type="hidden" name="cmd" value="sproduct">
 <input type="hidden" name="subcmd" value="move">
 </form>
 
@@ -92,12 +92,12 @@
 
 
 <form method="post" action="sh.apos" id="table">
-<input type="hidden" name="cmd" value="sales">
+<input type="hidden" name="cmd" value="ssales">
 <input type="hidden" name="subcmd" value="table">
 </form>
 
 <form method="post" action="sh.apos" id="rank">
-<input type="hidden" name="cmd" value="sales">
+<input type="hidden" name="cmd" value="ssales">
 <input type="hidden" name="subcmd" value="rank">
 </form>
 
