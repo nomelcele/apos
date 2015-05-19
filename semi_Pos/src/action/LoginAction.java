@@ -31,17 +31,12 @@ public class LoginAction implements Action{
 		 MemVO v = new MemVO();
 		 v.setId(id);
 		 v.setPwd(pwd);
-		 try {
-			int res = MemDao.getDao().login(v);
-			System.out.println("res :"+res);
-			if(res > 0){
-				// sessionScope에 아이디를 저장
-				HttpSession session = request.getSession();
-				session.setAttribute("userid", id);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		 int res = MemDao.getDao().login(v);
+		System.out.println("res :"+res);
+		if(res > 0){
+			// sessionScope에 아이디를 저장
+			HttpSession session = request.getSession();
+			session.setAttribute("userid", id);
 		}
 		
 		 method=true;
