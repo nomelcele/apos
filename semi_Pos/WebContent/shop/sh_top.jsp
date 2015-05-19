@@ -51,8 +51,11 @@
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
             </div>
 
-            <!--logo start-->
+            <!--logo start  class="position"  style="margin:0 auto; width:500px;">-->
+           
+            <div style="margin:0 auto;">
             <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+            </div>
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">
