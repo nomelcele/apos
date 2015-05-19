@@ -32,40 +32,54 @@
 
 
 <form method="post" action="bon.apos" id="notice">
-<input type="hidden" name="cmd" value="work">
+<input type="hidden" name="cmd" value="bwork">
 <input type="hidden" name="subcmd" value="notice">
 </form>
 <form method="post" action="bon.apos" id="move">
-<input type="hidden" name="cmd" value="work">
+<input type="hidden" name="cmd" value="bwork">
 <input type="hidden" name="subcmd" value="move">
 </form>
 <form method="post" action="bon.apos" id="join">
-<input type="hidden" name="cmd" value="shop">
+<input type="hidden" name="cmd" value="bshop">
 <input type="hidden" name="subcmd" value="join">
 </form>
 <form method="post" action="bon.apos" id="infor">
-<input type="hidden" name="cmd" value="shop">
+<input type="hidden" name="cmd" value="bshop">
 <input type="hidden" name="subcmd" value="infor">
 </form>
 <form method="post" action="bon.apos" id="check">
-<input type="hidden" name="cmd" value="shop">
+<input type="hidden" name="cmd" value="bshop">
 <input type="hidden" name="subcmd" value="check">
 </form>
 <form method="post" action="bon.apos" id="scheck">
-<input type="hidden" name="cmd" value="shop">
+<input type="hidden" name="cmd" value="bshop">
 <input type="hidden" name="subcmd" value="scheck">
 </form>
 <form method="post" action="bon.apos" id="add">
-<input type="hidden" name="cmd" value="product">
+<input type="hidden" name="cmd" value="bproduct">
 <input type="hidden" name="subcmd" value="add">
 </form>
 <form method="post" action="bon.apos" id="del">
-<input type="hidden" name="cmd" value="product">
+<input type="hidden" name="cmd" value="bproduct">
 <input type="hidden" name="subcmd" value="del">
 </form>
 <form method="post" action="bon.apos" id="sale">
-<input type="hidden" name="cmd" value="product">
+<input type="hidden" name="cmd" value="bproduct">
 <input type="hidden" name="subcmd" value="sale">
+</form>
+<form method="post" action="bon.apos" id="brandsch">
+<input type="hidden" name="cmd" value="bsales">
+<input type="hidden" name="subcmd" value="brandsch">
+</form>
+
+<form method="post" action="bon.apos" id="productsch">
+<input type="hidden" name="cmd" value="bsales">
+<input type="hidden" name="subcmd" value="productsch">
+</form>
+
+<form method="post" action="bon.apos" id="outletsch">
+<input type="hidden" name="cmd" value="bsales">
+<input type="hidden" name="subcmd" value="outletsch">
 </form>
 
       <!--sidebar start-->
@@ -98,7 +112,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('join')">매장 가입</a></li>                          
-                          <li><a class="" href="bjavascript:goUrl('infor')">매장 정보 수정</a></li>
+                          <li><a class="" href="javascript:goUrl('infor')">매장 정보 수정</a></li>
                           <li><a class="" href="javascript:goUrl('check')">매장 조회</a></li>
                           <li><a class="" href="javascript:goUrl('scheck')">매장 매출 관리</a></li>
                       </ul>
