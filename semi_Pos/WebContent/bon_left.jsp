@@ -11,6 +11,17 @@
                           <span>Main</span>
                       </a>
                   </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_documents_alt"></i>
+                          <span>업무관리</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">                          
+                          <li><a class="" href="bon_workNotice.jsp">공지사항</a></li>
+                          <li><a class="" href="bon_workMove.jsp"><span>상품이동</span></a></li>
+                      </ul>
+                  </li>
 				  <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
@@ -21,7 +32,7 @@
                           <li><a class="" href="bon_shopJoin.jsp">매장 가입</a></li>                          
                           <li><a class="" href="bon_shopInformation.jsp">매장 정보 수정</a></li>
                           <li><a class="" href="bon_shopCheck.jsp">매장 조회</a></li>
-                          <li><a class="" href="bon_shopSalesCheck">매장 매출 관리</a></li>
+                          <li><a class="" href="bon_shopSalesCheck.jsp">매장 매출 관리</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -31,23 +42,13 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="general.html">상품추가</a></li>
-                          <li><a class="" href="buttons.html">상품삭제</a></li>
-                          <li><a class="" href="grids.html">상품세일</a></li>
+                          <li><a class="" href="bon_productAdd.jsp">상품추가</a></li>
+                          <li><a class="" href="bon_productDelete.jsp">상품삭제</a></li>
+                          <li><a class="" href="bon_productSale.jsp">상품세일</a></li>
                       </ul>
                   </li>
                 
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_documents_alt"></i>
-                          <span>업무관리</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">                          
-                          <li><a class="" href="profile.html">공지사항</a></li>
-                          <li><a class="" href="login.html"><span>상품이동</span></a></li>
-                      </ul>
-                  </li>
+                  
                   
               </ul>
               <!-- sidebar menu end-->
