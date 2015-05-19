@@ -1,5 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<script>
+	function goUrl(str){
+		if(str == "notice"){
+			document.getElementById("ff").submit();
+		}else if(str == "tel"){
+			document.getElementById("dd").submit();
+		}
+	}
+</script>
+
+
+<form method="post" action="sh.apos" id="ff">
+<input type="hidden" name="cmd" value="work">
+<input type="hidden" name="subcmd" value="notice">
+</form>
+
+
+<form method="post" action="sh.apos" id="dd">
+<input type="hidden" name="cmd" value="work">
+<input type="hidden" name="subcmd" value="tel">
+</form>
+
+
       <!--sidebar start-->
       <aside>
           <div id="sidebar"  class="nav-collapse ">
@@ -20,10 +43,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="sh_Notice.jsp">공지사항</a></li>
-                          <li><a class="" href="sh_InternalRule.jsp">내부 규정</a></li>
+                          <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
+                          <li><a class="" href="javascript:goUrl()">내부 규정</a></li>
                           <li><a class="" href="sh_Terms.jsp">약관</a></li>
-                          <li><a class="" href="sh_Tel.jsp">연락처</a></li>
+                          <li><a class="" href="javascript:goUrl('tel')">연락처</a></li>
                       </ul>
                   </li>
                   
