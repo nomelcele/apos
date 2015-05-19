@@ -11,6 +11,22 @@
                           <span>Main</span>
                       </a>
                   </li>
+                  
+                  
+                    <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_table"></i>
+                          <span>업무관리</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="sh_Notice.jsp">공지사항</a></li>
+                          <li><a class="" href="sh_InternalRule.jsp">내부 규정</a></li>
+                          <li><a class="" href="sh_Terms.jsp">약관</a></li>
+                          <li><a class="" href="sh_Tel.jsp">연락처</a></li>
+                      </ul>
+                  </li>
+                  
               <li class="sub-menu">
                       <a href="javascript:;" class="">
                           <i class="icon_document_alt"></i>
@@ -51,19 +67,7 @@
                   
                   
                              
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="">
-                          <i class="icon_table"></i>
-                          <span>업무관리</span>
-                          <span class="menu-arrow arrow_carrot-right"></span>
-                      </a>
-                      <ul class="sub">
-                          <li><a class="" href="sh_Notice.jsp">공지사항</a></li>
-                          <li><a class="" href="sh_InternalRule.jsp">내부 규정</a></li>
-                          <li><a class="" href="sh_Terms.jsp">약관</a></li>
-                          <li><a class="" href="sh_Tel.jsp">연락처</a></li>
-                      </ul>
-                  </li>
+                
                   
                   
                   
