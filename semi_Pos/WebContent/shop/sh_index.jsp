@@ -4,6 +4,6 @@
 <%@include file="sh_left.jsp"%>
  <section id="main-content">
  	<section class="wrapper">
- 		<p>인덱스입니다</p>
+ 		<p>대리점 인덱스입니다</p>
  	</section>
  </section>
