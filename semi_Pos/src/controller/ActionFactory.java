@@ -19,7 +19,7 @@ public class ActionFactory {
 	public Action getAction(String cmd){
 		Action action = null;
 		try {
-			prop.load(new FileInputStream("C:\\Users\\KOSTA\\git\\semi\\semi_Pos\\src\\controller\\classinfo.properties"));
+			prop.load(new FileInputStream("C:\\kosta97\\webapp\\service\\workspace\\semi_Pos\\src\\controller\\classinfo.properties"));
 			System.out.println("key :"+prop.getProperty("index"));
 			String rPath = prop.getProperty(cmd);
 			System.out.println("kk:"+rPath);

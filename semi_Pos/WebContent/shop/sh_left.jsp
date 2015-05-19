@@ -146,7 +146,7 @@
 
       <!--sidebar start-->
       <aside>
-          <div id="sidebar"  class="nav-collapse ">
+          <div id="sidebar"  class="nav-collapse " style="font-family:'나눔바른고딕 Light'">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
                   <li class="active">

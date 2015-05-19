@@ -21,19 +21,19 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet" />    
     <!-- full calendar css-->
     <link href="../assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-	<link href="../assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+   <link href="../assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
     <!-- easy pie chart-->
     <link href="../assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
     <!-- owl carousel -->
     <link rel="stylesheet" href="../css/owl.carousel.css" type="text/css">
-	<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+   <link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
     <!-- Custom styles -->
-	<link rel="stylesheet" href="../css/fullcalendar.css">
-	<link href="../css/widgets.css" rel="stylesheet">
+   <link rel="stylesheet" href="../css/fullcalendar.css">
+   <link href="../css/widgets.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <link href="../css/style-responsive.css" rel="stylesheet" />
-	<link href="../css/xcharts.min.css" rel=" stylesheet">	
-	<link href="../css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+   <link href="../css/xcharts.min.css" rel=" stylesheet">   
+   <link href="../css/jquery-ui-1.10.4.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -51,15 +51,16 @@
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
             </div>
 
-            <!--logo start  class="position"  style="margin:0 auto; width:500px;">-->
-           
-            <div style="margin:0 auto;">
-            <a href="index.html" class="logo">Nice <span class="lite">Admin</span></a>
+            <!--logo start-->
+            <div style="margin:0 auto">
+            <a href="index.html" class="logo">
+            <img src ="../img/bg-20.jpg"><span class="lite"></span></a>
             </div>
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">
                 <!--  search form start -->
+               
                 <ul class="nav top-menu">                    
                     <li>
                         <form class="navbar-form">
@@ -274,7 +275,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="../img/avatar1_small.jpg">
+                                <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
                             <span class="username">Jenifer Smith</span>
                             <b class="caret"></b>
