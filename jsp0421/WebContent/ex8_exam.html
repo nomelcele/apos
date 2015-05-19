@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+$(function(){
+	$('#id').keyup(function(){
+		//JQuery load를 사용해서 Ajax방식으로
+		//브라우저에 맞는 XMLHTTPRequest,와 callbackFn,
+		//open,send를 알아서 캡슐화 해놓았습니다. 주석이 더 기네요.
+		var id=$('#id').val();
+		$('#result').load("idchk.jsp?id="+id,function(){
+			console.log("callback함수도 작동하네^^");
+		});
+	});
+}); </script>
+</head>
+<body>
+<p>ID: <input type="text" id="id" name="id"></p>
+<span id="result"></span>
+
+</body>
+</html>
