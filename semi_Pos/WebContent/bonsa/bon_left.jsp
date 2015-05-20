@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	        <!-- javascripts -->
+	
     <script src="../js/jquery.js"></script>
 	<script src="../js/jquery-ui-1.10.4.min.js"></script>
     <script src="../js/jquery-1.8.3.min.js"></script>
@@ -40,6 +41,7 @@
 	<script src="../js/sparklines.js"></script>	
 	<script src="../js/charts.js"></script>
 	<script src="../js/jquery.slimscroll.min.js"></script>
+
   <script>
 	function goUrl(str){
 		if(str == "notice"){
