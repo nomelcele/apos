@@ -123,7 +123,7 @@
                                       <div class="col-lg-10">
                                      	    <input class="form-control2 " type="text" id="sample4_postcode1" name="adr1"> - 
                                      	    <input class="form-control2 " type="text" id="sample4_postcode2" name="adr2">
-						    				<input class="form-control4 " type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기 "><br>
+						    				<input class="form-control5 " type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기 "><br>
 						    		  </div>
 						    		  </div>
 						    		  
