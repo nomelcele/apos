@@ -29,7 +29,7 @@ public class ControllServlet extends HttpServlet {
 		doService(request,response);
 	}
 	protected void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			request.setCharacterEncoding("euc-kr");
+			request.setCharacterEncoding("utf-8");
 			// 사용자로 부터 요청을 받는다. 
 			String cmd = request.getParameter("cmd");
 			// cmd가 꼭 있을 경우 (사용자로 부터 요청이 있담)
