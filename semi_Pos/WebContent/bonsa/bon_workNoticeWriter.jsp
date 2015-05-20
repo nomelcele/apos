@@ -29,11 +29,15 @@
                                           <input type="hidden" name="cmd" value="notice">
                                           <input type="hidden" name="subcmd" value="insert">                  
                                               <div class="form-group">
-                                              	<label class="control-label col-sm-2">제목</label>
                                                   <div class="col-sm-10">
-                                                      <input name="title" class="instyle">             
+                                              	<div style="font-size: 15px;">제목
+                                              	<input type="text">
+                                              	</div>
+                                              	<p></p>
+                                              	<div style="font-size: 15px;">내용</div>
                                                   </div>
-                                                  <label class="control-label col-sm-2">내용</label>
+                                                  <label class="control-label col-sm-2" style="left: auto;"></label>
+                                                   
                                                   <div class="col-sm-10">
                                                       <textarea class="form-control ckeditor" id="content" name="content" rows="6"></textarea>
                                                   </div>
