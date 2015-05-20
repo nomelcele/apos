@@ -70,7 +70,7 @@
 <section id="main-content">
  	<section class="wrapper">
  	
- 	<div class="row">
+ 	<div class="row" style="font-family:'나눔바른고딕 Light'">
 				<div class="col-lg-12">
 					<h3 class="page-header"><i class="fa fa-files-o"></i> 회원가입</h3>
  	
@@ -98,9 +98,7 @@
                                               <input class="form-control1 " id="date" type="date" name="date" />
                                           </div>
                                       </div>
-                                      
-                                      
-                                      
+
                                       <div class="form-group ">
                                           <label for="cemail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
                                           <div class="col-lg-10">

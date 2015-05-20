@@ -13,7 +13,7 @@ public class ActionFactory {
 		if(factory == null) factory = new ActionFactory();
 		return factory;
 	}
-	public ActionFactory() {	
+	public ActionFactory() {	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 		prop = new Properties();
 	}
 	public Action getAction(String cmd){
