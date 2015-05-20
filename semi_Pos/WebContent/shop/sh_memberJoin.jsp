@@ -4,8 +4,6 @@
 <%@include file="sh_left.jsp"%>
 
 
-
-
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
     function sample4_execDaumPostcode() {
@@ -40,6 +38,8 @@
                 document.getElementById("sample4_postcode2").value = data.postcode2;
                 document.getElementById("sample4_roadAddress").value = fullRoadAddr;
                 document.getElementById("sample4_jibunAddress").value = data.jibunAddress;
+                
+                window.close();
 
                 // 사용자가 '선택 안함'을 클릭한 경우, 예상 주소라는 표시를 해준다.
                 if(data.autoRoadAddress) {
