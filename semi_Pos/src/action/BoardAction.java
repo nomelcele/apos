@@ -64,9 +64,9 @@ public class BoardAction implements Action{
 			//자동으로 파라미터를 받아서 처리해주는 주요 핵심 코드
 			HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
 			BoardDao.getDao().insert(maps);
-			
-			url="*.kosta?cmd=board&subcmd=boardList&page=1";
-			method=true;
+			System.out.println("밖 확인");
+			url="*.apos?cmd=bwork&subcmd=notice";
+			method=false;
 		}else if(subcmd != null && subcmd.equals("boardList")){
 			url="studybordList.jsp";
 			method=false;

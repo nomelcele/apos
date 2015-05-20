@@ -42,11 +42,11 @@ public class MyMap {
 			}
 
 		}
-		// System.out.println("자동 파라미터 받기 시작 : --------");
+		 System.out.println("자동 파라미터 받기 시작 : --------");
 		for (Map.Entry<String, String> e : parms.entrySet()) {
 			System.out.println(e.getKey() + ":" + e.getValue());
 		}
-		// System.out.println("자동 파라미터 받기 끝 : --------");
+		 System.out.println("자동 파라미터 받기 끝 : --------");
 		return parms;
 	}
 

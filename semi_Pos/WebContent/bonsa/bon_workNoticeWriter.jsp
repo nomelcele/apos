@@ -26,7 +26,7 @@
                                   <div class="panel-body">
                                       <div class="form">
                                           <form action="notice.apos" class="form-horizontal" id="nboard">
-                                          <input type="hidden" name="cmd" value="notice">
+                                          <input type="hidden" name="cmd" value="bwork">
                                           <input type="hidden" name="subcmd" value="insert">                  
                                               <div class="form-group">
                                                   <div class="col-sm-10">

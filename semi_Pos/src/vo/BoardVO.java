@@ -1,11 +1,8 @@
 package vo;
 
-import javax.inject.Named;
-
-@Named
 public class BoardVO {
 	private int no,hit,groupno;
-	private String title,writer,content,regdate;
+	private String title,writer,content,regdate,path;
 	public int getNo() {
 		return no;
 	}
@@ -14,6 +11,12 @@ public class BoardVO {
 	}
 	public int getHit() {
 		return hit;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
 	}
 	public void setHit(int hit) {
 		this.hit = hit;
