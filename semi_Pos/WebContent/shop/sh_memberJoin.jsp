@@ -6,7 +6,6 @@
 
 
 
-
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
     function sample4_execDaumPostcode() {
@@ -122,8 +121,8 @@
                                       <div class="form-group">
                                       <label for="cadr" class="control-label col-lg-2">주소 <span class="required">*</span></label>
                                       <div class="col-lg-10">
-                                     	    <input class="form-control2 " type="text" id="sample4_postcode1"> - 
-                                     	    <input class="form-control2 " type="text" id="sample4_postcode2">
+                                     	    <input class="form-control2 " type="text" id="sample4_postcode1" name="adr1"> - 
+                                     	    <input class="form-control2 " type="text" id="sample4_postcode2" name="adr2">
 						    				<input class="form-control4 " type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기 "><br>
 						    		  </div>
 						    		  </div>
@@ -133,8 +132,8 @@
 						    		  <div class="form-group">		
 						    		  <label for="cadrr" class="control-label col-lg-2">상세주소 <span class="required">*</span></label>
 									  <div class="col-lg-10">
-						      				<input class="form-control3 " type="text" id="sample4_roadAddress" placeholder="도로명주소">
-						      				<input class="form-control3 " type="text" id="sample4_jibunAddress" placeholder="지번주소">
+						      				<input class="form-control3 " type="text" id="sample4_roadAddress" placeholder="도로명주소" name="adr3">
+						      				<input class="form-control3 " type="text" id="sample4_jibunAddress" placeholder="지번주소" name="adr4">
 <!-- 						      				<span id="guide" style="color:#999"></span> -->
                                       </div>
                                       </div>
