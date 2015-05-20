@@ -1,14 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
-    <meta name="author" content="GeeksLabs">
-    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-    <link rel="shortcut icon" href="img/favicon.png">
-
- <!DOCTYPE html>
 <html lang="en">
 <head> 
     <meta charset="utf-8">
@@ -38,9 +30,21 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+		function goUrl(){
+				$('div.modal').modal({remote : 'sh_gethotkey.jsp'});
+				<%--bootstrap_theme.css의 4925번째 줄   left: 115%;--%>
+		};
+</script>
 
   <body class="login-img3-body">
-
+	 <div class="modal fade">
+  		<div class="modal-dialog" style="margin-left: 0;">
+    		<div class="modal-content"></div>
+	  	</div>
+  	</div>
     <div class="container">
 
       <form class="login-form" action="sh_index.jsp">        
@@ -58,13 +62,13 @@
                 <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
+            <label class="checkbox">
+                <span class="pull-right" > <a href="javascript:goUrl()" > Get HotKey</a></span>
+            </label>
             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
             <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
-        </div>
+        </div>   
       </form>
-
     </div>
-
-
   </body>
 </html>
