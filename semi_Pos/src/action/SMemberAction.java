@@ -30,8 +30,19 @@ public class SMemberAction implements Action {
 		} else if(subcmd.equals("insert")){
 			HashMap<String, String>maps = MyMap.getMaps().getMapList(request);
 			ShDao.getDao().insertMem(maps);
-			String str= request.getParameter("name");
-			System.out.println("test23"+str);
+			//String str= request.getParameter("name");
+			//System.out.println("test23"+str);
+			String testData = request.getParameter("name");
+			String [] charset = {"KSC5601", "8859_1", "ASCII", "UTF-8", "EUC-KR", "MS949"};
+			 
+			for( int i = 0 ; i < charset.length ; i++ ) {
+			  for( int j = 0 ; j < charset.length ; j ++ ) {
+			     try {
+			       System.out.println(charset[i] + " : " + charset[j] + " = " + new String(testData.getBytes(charset[i]), charset[j]));
+			     } catch (Exception e) {
+			     }
+			  }
+			}
 		}
 		return new ActionForward(url, false);
 	}
