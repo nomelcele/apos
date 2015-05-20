@@ -81,11 +81,16 @@
 <!--                           </header> -->
                           <div class="panel-body">
                               <div class="form">
+                              
                                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos">
+                                  <input type="hidden" name="cmd" value="smember">
+                                  <input type="hidden" name="subcmd" value="insert">
+                                  
+                                  
                                       <div class="form-group ">
                                           <label for="cname" class="control-label col-lg-2">이름 <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input class="form-control" id="sname" name="name" minlength="5" type="text" required />
+                                              <input class="form-control" id="sname" name="name" minlength="2" type="text" required />
                                           </div>
                                       </div>
                                       
@@ -94,7 +99,7 @@
                                       <div class="form-group ">
                                           <label for="cdate" class="control-label col-lg-2">생년월일 <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input class="form-control1 " id="date" type="date" name="date" />
+                                              <input class="form-control1 " id="date" type="date" name="date" required/>
                                           </div>
                                       </div>
 
