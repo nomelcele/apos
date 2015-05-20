@@ -41,7 +41,6 @@
 	<script src="../js/charts.js"></script>
 	<script src="../js/jquery.slimscroll.min.js"></script>
   <script>
-	<script>
 	function goUrl(str){
 		if(str == "notice"){
 			document.getElementById("notice").submit();
