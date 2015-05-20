@@ -41,7 +41,7 @@
 
   <body class="login-img3-body">
 	 <div class="modal fade">
-  		<div class="modal-dialog" style="margin-left: 0;">
+  		<div class="modal-dialog" style=" width:400px; text-align: center;">
     		<div class="modal-content"></div>
 	  	</div>
   	</div>
