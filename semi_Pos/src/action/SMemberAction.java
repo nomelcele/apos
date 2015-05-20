@@ -1,6 +1,7 @@
 package action;
 
 import java.io.IOException;
+import java.net.URLDecoder;
 import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import util.MyMap;
 import controller.ActionForward;
+import dao.ShDao;
 
 public class SMemberAction implements Action {
 
@@ -27,6 +29,9 @@ public class SMemberAction implements Action {
 			url="sh_memberOut.jsp";
 		} else if(subcmd.equals("insert")){
 			HashMap<String, String>maps = MyMap.getMaps().getMapList(request);
+			ShDao.getDao().insertMem(maps);
+			String str= request.getParameter("name");
+			System.out.println("test23"+str);
 		}
 		return new ActionForward(url, false);
 	}
