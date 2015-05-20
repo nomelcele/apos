@@ -1,10 +1,12 @@
 package action;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import util.MyMap;
 import controller.ActionForward;
 
 public class SMemberAction implements Action {
@@ -23,6 +25,8 @@ public class SMemberAction implements Action {
 			url="sh_memberChange.jsp";
 		} else if(subcmd.equals("out")){
 			url="sh_memberOut.jsp";
+		} else if(subcmd.equals("insert")){
+			HashMap<String, String>maps = MyMap.getMaps().getMapList(request);
 		}
 		return new ActionForward(url, false);
 	}
