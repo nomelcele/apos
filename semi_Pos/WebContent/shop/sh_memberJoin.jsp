@@ -70,16 +70,15 @@
 <section id="main-content">
  	<section class="wrapper">
  	
- 	<div class="row" style="font-family:'나눔바른고딕 Light'">
+ 	<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12">
 					<h3 class="page-header"><i class="fa fa-files-o"></i> 회원가입</h3>
  	
 <div class="row">
                   <div class="col-lg-12">
                       <section class="panel">
-                          <header class="panel-heading">
-                              	회원가입
-                          </header>
+<!--                           <header class="panel-heading"> -->
+<!--                           </header> -->
                           <div class="panel-body">
                               <div class="form">
                                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos">
