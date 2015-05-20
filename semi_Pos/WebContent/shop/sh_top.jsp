@@ -53,7 +53,7 @@
 
             <!--logo start-->
             <div style="margin:0 auto">
-            <a href="index.html" class="logo">
+            <a href="sh_index.jsp" class="logo">
             <img src ="../img/bg-20.jpg"><span class="lite"></span></a>
             </div>
             <!--logo end-->
