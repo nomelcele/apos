@@ -1616,7 +1616,7 @@ input[type="number"]::-webkit-inner-spin-button {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-.form-control4 {
+.form-control4 { 
   display: inherit;
   width: 99%;
   height: 32px;
