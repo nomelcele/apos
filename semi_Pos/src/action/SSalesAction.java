@@ -16,9 +16,9 @@ public class SSalesAction implements Action {
 		String url="sh_index.jsp";
 		boolean method= false;
 		if(subcmd.equals("table")){
-			url="sh_salesTable1.jsp";
+			url="sh_salesTable.jsp";
 		}else if(subcmd.equals("rank")){
-			url="sh_salesRank1.jsp";
+			url="sh_salesRank.jsp";
 		}
 		return new ActionForward(url, false);
 	}
