@@ -50,9 +50,11 @@
             <div class="toggle-nav">
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
             </div>
-
-            <!--logo start-->
-            <a href="bon_index.jsp" class="logo">Nice <span class="lite">Admin</span></a> 
+  <!--logo start-->
+            <div style="margin:0 auto">
+            <a href="bon_index.jsp" class="logo">
+            <img src ="../img/bg-20.jpg"><span class="lite"></span></a>
+            </div>
             <!--logo end-->
 
             <div class="nav search-row" id="top_menu">
@@ -271,7 +273,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="../img/avatar1_small.jpg">
+                                 <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
                             <span class="username">Jenifer Smith</span>
                             <b class="caret"></b>
