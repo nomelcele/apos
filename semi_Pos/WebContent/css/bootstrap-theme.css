@@ -1616,12 +1616,11 @@ input[type="number"]::-webkit-inner-spin-button {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-
 .form-control4 {
-  display: inline;
-  width: 120px;
-  height: 34px;
-  padding: 6px 12px;
+  display: inherit;
+  width: 99%;
+  height: 32px;
+  padding-right: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
   color: #8e8e93;
@@ -1632,9 +1631,6 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
-
-
-
 .form-control:focus {
   border-color: #007AFF;
   outline: 0;  
@@ -4942,6 +4938,7 @@ body.modal-open,
   z-index: 1050;
 }
 .modal-content {
+  left: 115%;
   position: relative;
   background-color: #ffffff;
   border: 1px solid #999999;
@@ -4984,6 +4981,13 @@ body.modal-open,
 .modal-body {
   position: relative;
   padding: 20px;
+}
+.modal-body2 {
+  height: 70px;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 15px;
 }
 .modal-footer {
   margin-top: 15px;
