@@ -3,6 +3,10 @@
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
 <!-- 매장의 업무관리 - 내부규정 페이지입니다. -->
+<style>
+.panel-title{font-size: 14pt;}
+.panel-body{font-size: 13pt;}
+</style>
 <section id="main-content">
 	<section class="wrapper">
 		<div class="panel-group m-bot20" id="accordion">
