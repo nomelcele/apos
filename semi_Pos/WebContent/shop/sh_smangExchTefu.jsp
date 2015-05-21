@@ -13,7 +13,7 @@
 					<div class="panel-body">
 						<form class="form-inline" role="form">
 							<div class="form-group">
-								<input type="password" class="form-control"
+								<input type="text" class="form-control"
 									id="exampleInputPassword2" placeholder="상품번호">
 							</div>
 							<button type="submit" class="btn btn-primary">검색</button>
