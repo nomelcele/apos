@@ -1,5 +1,5 @@
 package action;
-
+//semi
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -61,10 +61,33 @@ public class BoardAction implements Action{
 			
 		}else if(subcmd != null && subcmd.equals("boardIn")){
 		
-			//자동으로 파라미터를 받아서 처리해주는 주요 핵심 코드
-			HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
-			BoardDao.getDao().insert(maps);
-			System.out.println("밖 확인");
+			BoardVO vo = new BoardVO();
+			vo.setTitle(request.getParameter("title"));
+			String s = request.getParameter("content");
+			String filename="";
+		    String content="";
+		        String[] str = s.split(">");
+		         for(String e : str){
+		               System.out.println(e);
+		               if(!e.startsWith("<")){
+		                  content = e.substring(0, e.indexOf("<"));
+		               }
+		           }
+		        String[] ff = str[1].split("\"");
+
+		           System.out.println("---------------------------------------");
+		           for(String e : ff){
+		               System.out.println(e);
+		               if(e.startsWith("..")){
+		                   filename = e.substring(10);
+		               }
+		           }
+		            System.out.println("----------------------------");
+		            System.out.println(filename);
+		            System.out.println(content);
+		    vo.setContent(content);
+		    vo.setPath(filename);
+		    BoardDao.getDao().insert(vo);
 			url="*.apos?cmd=bwork&subcmd=notice";
 			method=false;
 		}else if(subcmd != null && subcmd.equals("boardList")){
@@ -89,9 +112,9 @@ public class BoardAction implements Action{
 				//Dao처리
 				BoardDao.getDao().insertComm(maps);
 				//why? no보내야 하는지....
-				url = "studyboardDetail.kosta?no="+no+"&cmd=board&subcmd=boardDetail&tar=t&page=1";
+				url = "studyboardDetail.kosta?no="+no+"&cmd=board&subcmd=boardDetail&page=1";
 				//댓글리스트의 페이지를 지정하기위해
-				method=true;
+				method=false;
 			}
 			//list와 commlist의 total값을 구분..
 			//commlist

@@ -5,16 +5,17 @@
 <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
 <script type="text/javascript" src="../js/myckeditor.js"></script>
 <script>
+	function ngoUrl(){
+			document.getElementById("nboard").submit();
+	};
+	
+</script>
+<script>
 	$(function(){
 		chkUpload();
-	})
+	});
 </script>
-  <script>
-	function goUrl(){
-	
-			document.getElementById("nboard").submit();
-	}
-	</script>
+
 <%-- 본사의 업무관리의 공지사항 글쓰기 페이지 입니다. --%>
 <section id="main-content">
 	<section class="wrapper">
@@ -27,7 +28,8 @@
                                       <div class="form">
                                           <form action="notice.apos" class="form-horizontal" id="nboard" method="post">
                                           <input type="hidden" name="cmd" value="bwork">
-                                          <input type="hidden" name="subcmd" value="insert">                  
+                                          <input type="hidden" name="subcmd" value="insert">            
+                                          <input type="hidden" name="url" id="url" value="">      
                                               <div class="form-group">
                                                   <div class="col-sm-10">
                                               	<div style="font-size: 15px;">제목
@@ -42,7 +44,7 @@
                                                       <textarea class="form-control ckeditor" id="content" name="content" rows="6"></textarea>
                                                   </div>
                                               </div>
-                                              <input type="button" value="글작성" class="btn" onclick="javascript:goUrl()">
+                                              <input type="button" value="글작성" class="btn" onclick="javascript:ngoUrl()">
                                               <input type="button" value="list" class="btn" onclick="">
                                           </form>
                                       </div>

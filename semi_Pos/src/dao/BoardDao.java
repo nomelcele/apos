@@ -1,5 +1,5 @@
 package dao;
-
+//semi용
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,8 +22,8 @@ public class BoardDao {
 		return dao;
 	}
 
-	public void insert(HashMap<String, String> map) {
-		System.out.println("DAO안");
+	public void insert(BoardVO vo) {
+
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
@@ -31,19 +31,14 @@ public class BoardDao {
 			System.out.println(con);
 			StringBuffer sql = new StringBuffer();
 			sql.append("insert into board values(");
-			sql.append("board_seq.nextVal,?,'본사',?,sysdate,'파일명',1,0001)");
-			System.out.println(map.get("title"));
+			sql.append("board_seq.nextVal,?,'본사',?,sysdate,?,0,0001)");
 			pstmt = con.prepareStatement(sql.toString());
-			System.out.println(sql);
-			pstmt.setString(1,map.get("title"));
+			pstmt.setString(1,vo.getTitle());
 		//	pstmt.setString(2,"본사");  //작성자 추후수정
-			pstmt.setString(2,map.get("content"));
-		//	pstmt.setString(4,"qwe"); //파일명
-		//	pstmt.setInt(5, 1); //조회수
+			pstmt.setString(2,vo.getContent());
+			pstmt.setString(3,vo.getPath()); //파일명
 		//	pstmt.setInt(6, 1); //본사원번호
-			System.out.println("123123");
 			pstmt.executeUpdate();
-			System.out.println("pstmt반응");
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -69,7 +64,7 @@ public class BoardDao {
 
 		StringBuffer sql = new StringBuffer();
 		sql.append("select * from (select rownum r_num, a.* from (");
-		sql.append("select * from board order by no desc) a");
+		sql.append("select * from board order by BO_NUM desc) a");
 		sql.append(") where r_num between ? and ?");
 		try {
 			con = MyJndiContext.getDs();
@@ -79,11 +74,13 @@ public class BoardDao {
 			rs = pstmt.executeQuery();
 			while(rs.next()){
 				BoardVO v = new BoardVO();
-				v.setTitle(rs.getString("title"));
-				v.setNo(rs.getInt("no"));
-				v.setWriter(rs.getString("writer"));
-				v.setRegdate(rs.getString("regdate"));
-				v.setHit(rs.getInt("hit"));
+				v.setTitle(rs.getString("BO_SUB"));
+				v.setNo(rs.getInt("BO_NUM"));
+				v.setWriter(rs.getString("BO_WRITER"));
+				v.setRegdate(rs.getString("BO_DATE"));
+				v.setHit(rs.getInt("BO_HIT"));
+				v.setPath(rs.getString("BO_IMG"));
+				v.setGroupno(rs.getInt("BO_BONNUM"));
 				list.add(v);
 			}
 		} catch (SQLException e) {

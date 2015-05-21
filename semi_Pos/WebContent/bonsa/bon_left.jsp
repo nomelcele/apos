@@ -76,6 +76,7 @@
 <form method="post" action="bon.apos" id="notice">
 <input type="hidden" name="cmd" value="bwork">
 <input type="hidden" name="subcmd" value="notice">
+<input type="hidden" name="page" value="1">
 </form>
 <form method="post" action="bon.apos" id="move">
 <input type="hidden" name="cmd" value="bwork">
