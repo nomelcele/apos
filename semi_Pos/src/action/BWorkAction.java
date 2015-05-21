@@ -108,7 +108,7 @@ public class BWorkAction implements Action{
 			
 		}else if(subcmd != null && subcmd.equals("boardDetail")){
 			int no = Integer.parseInt(request.getParameter("no"));
-			String childcmd = request.getParameter("childcmd");
+			//String childcmd = request.getParameter("childcmd");
 			String tar = request.getParameter("tar");
 			url = "studyboardDetail.jsp";
 			method = false;
