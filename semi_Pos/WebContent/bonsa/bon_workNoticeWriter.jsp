@@ -25,13 +25,13 @@
                                   </header>
                                   <div class="panel-body">
                                       <div class="form">
-                                          <form action="notice.apos" class="form-horizontal" id="nboard">
+                                          <form action="notice.apos" class="form-horizontal" id="nboard" method="post">
                                           <input type="hidden" name="cmd" value="bwork">
                                           <input type="hidden" name="subcmd" value="insert">                  
                                               <div class="form-group">
                                                   <div class="col-sm-10">
                                               	<div style="font-size: 15px;">제목
-                                              	<input type="text">
+                                              	<input type="text" name="title">
                                               	</div>
                                               	<p></p>
                                               	<div style="font-size: 15px;">내용</div>
