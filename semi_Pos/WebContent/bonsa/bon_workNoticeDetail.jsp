@@ -2,74 +2,82 @@
 	pageEncoding="UTF-8"%>
 <%@include file="bon_top.jsp"%>
 <%@include file="bon_left.jsp"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%-- 본사 업무관리의 공지사항 페이지 입니다. --%>
-<script>
-	function gourl3() {
-		document.getElementById("write").submit();
-	}
-</script>
-<script>
-	function gourl2() {
-		document.getElementById("notice").submit();
-	}
-</script>
-<form method="post" action="bon.apos" id=write>
-<input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="in">
-</form>
-<form method="post" action="bon.apos" id=notice>
-<input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="notice">
-<input type="hidden" name="page" value="1">
-</form>
+<%-- 본사의 업무관리의 공지사항 상세보기 페이지 입니다. --%>
 <section id="main-content">
 	<section class="wrapper">
+
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
-					<header class="panel-heading"> 공지사항 게시판 </header>
+					<header class="panel-heading"> 공지사항 게시글 </header>
+					<div class="panel-body">
+						<form class="form-horizontal " method="get">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">제목</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">날짜</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">작성자</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control round-input">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-2 control-label">내용</label>
+								<div id="editor" class="btn-toolbar" data-role="editor-toolbar"
+									data-target="#editor"></div>
 
-					<table class="table table-striped table-advance table-hover">
-						<tbody>
-							<tr>
-								<th>#</th>
-								<th><i class="icon_mail_alt"></i> 제목</th>
-								<th><i class="icon_profile"></i> 작성자</th>
-								<th><i class="icon_calendar"></i> 날짜</th>
-								<th><i class="icon_pin_alt"></i> 조회</th>
-							</tr>
-							<c:forEach var="stList" items="${list}">
-					<tr>
-						<td>${stList.no}</td>
-						<td>
-						<a href="stboard.kosta?cmd=board&subcmd=boardDetail&no=${stList.no}&page=1">
-						${stList.title}</a>
-						</td>
-						<td>${stList.writer}</td>
-						<td>${stList.regdate}
-						<td>${stList.hit}</td>
-					</tr>
-				</c:forEach>
-						</tbody>
-					</table>
+							</div>
+							<div class="col-sm-10" style="margin-left: 200px;">
+								<table class="table">
+									<thead>
+										<tr>
+											<th>작성자</th>
+											<th>내용</th>
+											<th>삭제</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>윤홍기 과장님</td>
+											<td>잘만들었네!! 훌륭하네</td>
+											<td><a class="btn btn-danger" href="#"><i
+													class="icon_close_alt2"></i></a></td>
+										</tr>
+
+									</tbody>
+								</table>
+							</div>
+
+							<div class="form-group">
+								<label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
+								<div class="col-lg-10">
+									<input type="password" class="form-control" id="inputPassword1"
+										placeholder="좋은 말씀 잘 들었습니다.">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-lg-offset-2 col-lg-10">
+									<button type="submit" class="btn btn-danger">댓글 작성</button>
+								</div>
+							</div>
+
+
+
+						</form>
+						</form>
+					</div>
 				</section>
 			</div>
 		</div>
-		<!-- page end-->
-		<section class="panel">
-        <div class="panel-body">
-		<c:set var="pageUrl" value="bon.apos?cmd=bwork&subcmd=notice"/>
-		<%@include file="page.jsp" %>
-		</div>
-		</section>
-		<div>
-			<tr align="right">
-				<td ><input type="button" value="글작성" 
-					onclick="gourl3()"></td>
-				<td ><input type="button" value="목록" 
-					onclick="gourl2()"></td>
-			</tr>
-		</div>
-		</div>
+
 	</section>
+</section>
