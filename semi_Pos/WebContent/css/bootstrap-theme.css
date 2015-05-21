@@ -1007,6 +1007,8 @@ pre code {
   .col-md-12 {
     width: 100%;
   }
+ 
+  
   .col-md-push-0 {
     left: auto;
   }
@@ -1602,7 +1604,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .form-control1 {
   display: inline;
-  width: 200px;
+  width: 163px;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
