@@ -60,7 +60,7 @@
 							<div class="form-group">
 								<label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
 								<div class="col-lg-10">
-									<input type="password" class="form-control" id="inputPassword1"
+									<input type="text" class="form-control" id="inputPassword1"
 										placeholder="좋은 말씀 잘 들었습니다.">
 								</div>
 							</div>
