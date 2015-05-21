@@ -79,7 +79,7 @@
 <!--                           <header class="panel-heading"> -->
 <!--                           </header> -->
                           <div class="panel-body">
-                              <div class="form">
+                              <div class="form" >
                               
                                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos">
                                   <input type="hidden" name="cmd" value="smember">
@@ -89,7 +89,7 @@
                                       <div class="form-group ">
                                           <label for="cname" class="control-label col-lg-1">이름 </label>
                                           <div class="col-lg-2">
-                                              <input class="form-control" id="sname_ps" name="name" minlength="2" onkeydown="startSuggest();" type="text" required />
+                                              <input class="form-control" id="sname_ps" name="name" minlength="2" onkeydown="startSuggest();" autocomplete="off" type="text" required />
                                               <div id="view"></div>
                                           </div>
                                           <input class="form-control6" type="button" id="btn" name="btn" value="조회">
