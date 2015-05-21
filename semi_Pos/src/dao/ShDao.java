@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 import conn.MyJndiContext;
 
@@ -19,45 +20,30 @@ public class ShDao {
 		return dao;
 	}
 
-	public ArrayList<String> suggestList(String check, String type) {
+	public ArrayList<String> suggestList(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		ArrayList<String> list = new ArrayList<String>();
-		type = type.toLowerCase();// 소문자로 세팅
+		
 		String str = "";
-		System.out.println("check :" + check + "type :" + type);
+		System.out.println("check :" + check );
 		try {
 			System.out.println("test");
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
-			if (type.equals("name")) {
-				sql.append("select mem_name from member where mem_name like ?");
-				pstmt = con.prepareStatement(sql.toString());
-				String str3 = check+"%";
-				pstmt.setString(1, str3);
-				rs = pstmt.executeQuery();
-				if (rs == null) {
-					list.add("선택한 글자가 없어요");
-				}
-				while (rs.next()) {
-					list.add(rs.getString("mem_name"));
-				}
+			sql.append("select mem_name, mem_tel from member where mem_name like ? or mem_tel like ?");
+			pstmt = con.prepareStatement(sql.toString());
+			String str3 = "%"+check +"%";
+			pstmt.setString(1, str3);
+			pstmt.setString(2, str3);
+			rs = pstmt.executeQuery();
 
-			} else if(type.equals("num")) {
-				System.out.println("test23");
-				sql.append("select mem_tel from member where mem_tel like ?");
-				pstmt = con.prepareStatement(sql.toString());
-				String sqllike ="%"+check+"%";
-				System.out.println(sqllike);
-				pstmt.setString(1, sqllike);
-				rs = pstmt.executeQuery();
-				while (rs.next()) {
-					str = rs.getString("mem_tel");
-					System.out.println(str);
-					list.add(str);
-				}
+			while (rs.next()) {
+				list.add(rs.getString("mem_name"));
+				list.add(rs.getString("mem_tel"));
 			}
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
