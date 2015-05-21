@@ -85,7 +85,7 @@
                                   
                                       <div class="form-group ">
                                           <label for="cname" class="control-label col-lg-2">이름 <span class="required">*</span></label>
-                                          <div class="col-lg-10">
+                                          <div class="col-lg-2">
                                               <input class="form-control" id="sname" name="name" minlength="2" type="text" required />
                                           </div>
                                       </div>
@@ -94,14 +94,14 @@
                                       
                                       <div class="form-group ">
                                           <label for="cdate" class="control-label col-lg-2">생년월일 <span class="required">*</span></label>
-                                          <div class="col-lg-10">
+                                          <div class="col-lg-2">
                                               <input class="form-control1 " id="date" type="date" name="date" required/>
                                           </div>
                                       </div>
 
                                       <div class="form-group ">
                                           <label for="cemail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
-                                          <div class="col-lg-10">
+                                          <div class="col-lg-4" style="width: 20%">
                                               <input class="form-control " id="smail" type="email" name="email" required />
                                           </div>
                                       </div>
@@ -109,8 +109,10 @@
                                       
                                       <div class="form-group ">
                                           <label for="ctel" class="control-label col-lg-2">연락처 <span class="required">*</span></label>
-                                          <div class="col-lg-10">
-                                              <input class="form-control" id="tel" name="tel" minlength="5" type="tel" required />
+                                          <div class="">
+                                              <input class="form-control"  style="width: 8%; margin-left: 15px;"  id="tel" name="tel" minlength="5" type="tel" required />-
+                                              <input class="form-control"  style="width: 8%" id="tel" name="tel" minlength="5" type="tel" required />-
+                                              <input class="form-control"  style="width: 8%" id="tel" name="tel" minlength="5" type="tel" required />
                                           </div>
                                       </div>
                                       
