@@ -1,43 +1,61 @@
 package vo;
 
 public class MemVO {
-	private String id,name,pwd,gender,edate;
-    private int num;
-	public String getId() {
-		return id;
+	int mem_num,mem_mileage,mem_shopnum;
+	String mem_name,mem_tel,mem_post,mem_addr
+	,mem_deaddr,mem_date;
+	public int getMem_num() {
+		return mem_num;
 	}
-	public void setId(String id) {
-		this.id = id;
+	public void setMem_num(int mem_num) {
+		this.mem_num = mem_num;
 	}
-	public String getName() {
-		return name;
+	public int getMem_mileage() {
+		return mem_mileage;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setMem_mileage(int mem_mileage) {
+		this.mem_mileage = mem_mileage;
 	}
-	public String getPwd() {
-		return pwd;
+	public int getMem_shopnum() {
+		return mem_shopnum;
 	}
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
+	public void setMem_shopnum(int mem_shopnum) {
+		this.mem_shopnum = mem_shopnum;
 	}
-	public String getGender() {
-		return gender;
+	public String getMem_name() {
+		return mem_name;
 	}
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setMem_name(String mem_name) {
+		this.mem_name = mem_name;
 	}
-	public String getEdate() {
-		return edate;
+	public String getMem_tel() {
+		return mem_tel;
 	}
-	public void setEdate(String edate) {
-		this.edate = edate;
+	public void setMem_tel(String mem_tel) {
+		this.mem_tel = mem_tel;
 	}
-	public int getNum() {
-		return num;
+	public String getMem_post() {
+		return mem_post;
 	}
-	public void setNum(int num) {
-		this.num = num;
+	public void setMem_post(String mem_post) {
+		this.mem_post = mem_post;
 	}
-    
+	public String getMem_addr() {
+		return mem_addr;
+	}
+	public void setMem_addr(String mem_addr) {
+		this.mem_addr = mem_addr;
+	}
+	public String getMem_deaddr() {
+		return mem_deaddr;
+	}
+	public void setMem_deaddr(String mem_deaddr) {
+		this.mem_deaddr = mem_deaddr;
+	}
+	public String getMem_date() {
+		return mem_date;
+	}
+	public void setMem_date(String mem_date) {
+		this.mem_date = mem_date;
+	}
 }
