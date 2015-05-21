@@ -42,13 +42,6 @@
 		});
 	});
 </script>
-<script type="text/javascript">
-	function showjoin() {
-		$('.showc').show();
-		$('.hidebtn').hide();
-		$('.block').attr('readonly', true).css('background', 'gray').css('color', 'white');
-	}
-</script>
   <body class="login-img3-body">
 
     <div class="container">
