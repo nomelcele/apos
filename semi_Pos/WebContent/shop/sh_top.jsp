@@ -45,6 +45,7 @@
   <body>
   <!-- container section start -->
   <section id="container" class="">
+
       
       <header class="header dark-bg">
             <div class="toggle-nav">
@@ -54,13 +55,13 @@
             <!--logo start-->
             <div style="margin:0 auto">
             <a href="sh_index.jsp" class="logo">
-            <img src ="../img/bg-20.jpg"><span class="lite"></span></a>
+            <img src ="../img/bg-20.jpg">
+            <span class="lite">ADress</span></a>
             </div>
             <!--logo end-->
-
             <div class="nav search-row" id="top_menu">
                 <!--  search form start -->
-               
+                 
                 <ul class="nav top-menu">                    
                     <li>
                         <form class="navbar-form">
@@ -68,10 +69,10 @@
                         </form>
                     </li>                    
                 </ul>
-                <!--  search form end -->                
+                <!--  search form end -->        
             </div>
-
-            <div class="top-nav notification-row">                
+            <div class="top-nav notification-row">   
+            
                 <!-- notificatoin dropdown start-->
                 <ul class="nav pull-right top-menu">
                     
