@@ -2,10 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
-<script>
-$('.target').toggle();
-</script>
-<%-- 매장의 판매관리 - 교환/환불 페이지입니다. --%>
+
+<%-- 매장의 판매관리 - 판매등록페이지입니다. --%>
 <%-- 고객검색 세션 시작 --%>
 <section id="main-content">
 	<section class="wrapper">
