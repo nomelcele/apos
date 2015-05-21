@@ -84,6 +84,7 @@
 <form method="post" action="sh.apos" id="check">
 <input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="check">
+<input type="hidden" name="page" value="1">
 </form>
 
 <form method="post" action="sh.apos" id="change">
