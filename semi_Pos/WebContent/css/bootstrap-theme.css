@@ -279,7 +279,7 @@ textarea {
   background-image: none;
 }
 a {
-  color: #007aff;
+  color: #000000;
   text-decoration: none;
 }
 a:hover,
@@ -1553,7 +1553,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #d7d7d7;
 }
 .form-control {
-  display: block;
+  display: inline;
   width: 100%;
   height: 34px;
   padding: 6px 12px;
@@ -1647,6 +1647,24 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
+
+.form-control6 {
+  display: inline;
+  width: 60px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #8e8e93;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #c7c7cc;
+  border-radius: 4px;  
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+
 
 
 
@@ -3941,7 +3959,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #ffffff;
+  border-color: #ededed;
 }
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
