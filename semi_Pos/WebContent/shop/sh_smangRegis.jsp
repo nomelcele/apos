@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
+
 
 <%-- 매장의 판매관리 - 판매등록페이지입니다. --%>
 <%-- 고객검색 세션 시작 --%>
@@ -151,4 +152,3 @@
 		</div>
 
 	</section>
-</section>
