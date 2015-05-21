@@ -15,7 +15,7 @@
 					<div class="panel-body">
 						<form class="form-inline" role="form">
 							<div class="form-group">
-								<input type="password" class="form-control"
+								<input type="text" class="form-control"
 									id="exampleInputPassword2" placeholder="고객성함">
 							</div>
 							<button type="submit" class="btn btn-primary">검색</button>
@@ -74,12 +74,12 @@
 					<div class="panel-body">
 						<form class="form-inline" role="form">
 							<div class="form-group">
-								<input type="password" class="form-control"
+								<input type="text" class="form-control"
 									id="exampleInputPassword2" placeholder="상품번호">
 							</div>
 							<button type="submit" class="btn btn-primary">검색</button>
 							<div class="form-group">
-								<input type="password" class="form-control"
+								<input type="text" class="form-control"
 									id="exampleInputPassword2" placeholder="마일리지">
 							</div>
 							<button type="submit" class="btn btn-primary">마일리지 사용</button>
