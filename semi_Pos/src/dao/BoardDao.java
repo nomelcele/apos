@@ -31,16 +31,16 @@ public class BoardDao {
 			System.out.println(con);
 			StringBuffer sql = new StringBuffer();
 			sql.append("insert into board values(");
-			sql.append("board_seq.nextVal,'제목','본사','내용',sysdate,'파일명',1,0001)");
+			sql.append("board_seq.nextVal,?,'본사',?,sysdate,'파일명',1,0001)");
 			System.out.println(map.get("title"));
 			pstmt = con.prepareStatement(sql.toString());
 			System.out.println(sql);
-//			pstmt.setString(1,map.get("title"));
-//		//	pstmt.setString(2,"본사");  //작성자 추후수정
-//			pstmt.setString(2,map.get("content"));
-//		//	pstmt.setString(4,"qwe"); //파일명
-//		//	pstmt.setInt(5, 1); //조회수
-//		//	pstmt.setInt(6, 1); //본사원번호
+			pstmt.setString(1,map.get("title"));
+		//	pstmt.setString(2,"본사");  //작성자 추후수정
+			pstmt.setString(2,map.get("content"));
+		//	pstmt.setString(4,"qwe"); //파일명
+		//	pstmt.setInt(5, 1); //조회수
+		//	pstmt.setInt(6, 1); //본사원번호
 			System.out.println("123123");
 			pstmt.executeUpdate();
 			System.out.println("pstmt반응");
