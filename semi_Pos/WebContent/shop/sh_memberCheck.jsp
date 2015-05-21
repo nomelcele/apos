@@ -9,7 +9,7 @@
 <section id="main-content">
  	<section class="wrapper">
  	
- 	<div class="row" style="font-size: 15px;">
+ 	<div class="row" style="font-size: 15px;"> 
 				<div class="col-lg-12">
 					<h3 class="page-header"><i class="fa fa-files-o"></i> 회원조회</h3>
  	
