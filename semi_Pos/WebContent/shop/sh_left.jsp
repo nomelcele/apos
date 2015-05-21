@@ -67,6 +67,12 @@
 		} else if(str == "rank"){
 			document.getElementById("rank").submit();
 		}
+		else if(str == "regis"){
+			document.getElementById("regis").submit();
+		}
+		else if(str == "exchRefu"){
+			document.getElementById("exchRefu").submit();
+		}
 	}
 </script>
 
@@ -141,8 +147,15 @@
 <input type="hidden" name="subcmd" value="rank">
 </form>
 
+<form method="post" action="sh.apos" id="rank">
+<input type="hidden" name="cmd" value="smang">
+<input type="hidden" name="subcmd" value="sregi">
+</form>
 
-
+<form method="post" action="sh.apos" id="rank">
+<input type="hidden" name="cmd" value="smang">
+<input type="hidden" name="subcmd" value="exchRefu">
+</form>
 
       <!--sidebar start-->
       <aside>
@@ -195,7 +208,17 @@
                           <li><a class="" href="javascript:goUrl('move')">상품이동요청</a></li>
                       </ul>
                   </li>
-                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_documents_alt"></i>
+                          <span>판매등록</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">                          
+                          <li><a class="" href="javascript:goUrl('regis')">판매등록</a></li>
+                          <li><a class="" href="javascript:goUrl('exchRefu')"><span>교환/환불</span></a></li>
+                      </ul>
+                  </li>
                   
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
