@@ -19,11 +19,11 @@
 	<form method="post" action="#" name="requesthot" id="requesthot">
 		<div style="width: 100%; height: 200px; margin: auto;">
 			<div class="modal-body2">성 명:
-			<input type="text" class="form-control4" placeholder="name" autofocus></div>
+			<input type="text" class="form-control4" name="name" placeholder="name" autofocus></div>
 			<div class="modal-body2">사업자 번호:
-			<input type="text" class="form-control4" placeholder="crnum" autofocus></div>
+			<input type="text" class="form-control4" name="crnum" placeholder="crnum" autofocus></div>
 			<div class="modal-body2">E-mail:
-			<input type="text" class="form-control4" placeholder="e-mail" autofocus></div>
+			<input type="text" class="form-control4" name="email" placeholder="e-mail" autofocus></div>
 		</div>
 		<!-- Footer -->
 		<div class="modal-footer">

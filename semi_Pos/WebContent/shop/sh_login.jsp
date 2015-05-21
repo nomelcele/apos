@@ -30,18 +30,28 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->
 </head>
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-		function goUrl(){
-				$('div.modal').modal({remote : 'sh_gethotkey.jsp'});
-				<%--bootstrap_theme.css의 4925번째 줄   left: 115%;--%>
-		};
+ 	$(function() {
+		$('#getHotkey').click(function(){
+				$('#modal1').modal({remote : 'sh_gethotkey.jsp'});
+		});
+		$('#SignUpBtn').click(function(){
+		        $('#modal2').modal({remote : 'sh_shopjoin.jsp'});
+		});
+ 	});
 </script>
-
   <body class="login-img3-body">
-	 <div class="modal fade">
+	 <div id="modal1" class="modal fade">
   		<div class="modal-dialog" style=" width:400px; text-align: center;">
+    		<div class="modal-content"></div>
+	  	</div>
+  	</div>
+  	
+  	<div id="modal2" class="modal fade">
+  		<div class="modal-dialog" style=" width:600px; text-align: center;">
     		<div class="modal-content"></div>
 	  	</div>
   	</div>
@@ -63,10 +73,10 @@
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
             <label class="checkbox">
-                <span class="pull-right" > <a href="javascript:goUrl()" > Get HotKey</a></span>
+                <span class="pull-right" id="getHotkey" style="cursor: pointer;">Get HotKey</span>
             </label>
             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-            <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
+            <input class="btn btn-info btn-lg btn-block" type="button" value="SingUp" id="SignUpBtn">
         </div>   
       </form>
     </div>
