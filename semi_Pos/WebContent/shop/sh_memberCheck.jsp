@@ -134,23 +134,7 @@
 		
 																</tr>
 															</c:forEach>
-															<tr>
-																<td>고객번호 입력창</td>
-																<td>Sung Carlson</td>
-																<td>ione.gisela@high.org</td>
-																<td>Robert Lee</td>
-																<td>724-639-4784</td>
-																<td>2011-01-10</td>
-															</tr>
-
-															<tr>
-																<td>고객번호 입력창</td>
-																<td>test용</td>
-																<td>내이멜비싸</td>
-																<td>주소쓰는곳입니다</td>
-																<td>112</td>
-																<td>2015-05-21</td>
-															</tr>
+															
 														</tbody>
 													</table>
 
