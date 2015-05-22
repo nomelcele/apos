@@ -3,7 +3,13 @@ package vo;
 public class MemVO {
 	int mem_num,mem_mileage,mem_shopnum;
 	String mem_name,mem_tel,mem_post,mem_addr
-	,mem_deaddr,mem_date;
+	,mem_deaddr,mem_date,mem_email;
+	public synchronized String getMem_email() {
+		return mem_email;
+	}
+	public synchronized void setMem_email(String mem_email) {
+		this.mem_email = mem_email;
+	}
 	public int getMem_num() {
 		return mem_num;
 	}
