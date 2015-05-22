@@ -38,7 +38,8 @@ public class Suggest {
 	}
 	public String[] getSuggest(String key){
 		ArrayList<String> sugList = new ArrayList<String>();
-		List<Element> list = root.getChildren("keyword");
+		List<Element> list = new ArrayList<Element>();
+				list=root.getChildren("keyword");
 		System.out.println("key :"+key);
 		Iterator<Element> it = list.iterator();
 		
