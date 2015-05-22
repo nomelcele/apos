@@ -8,7 +8,7 @@
     //비동기식으로 사용자로 부터 검색어를 받는다.
 	String key = request.getParameter("key");
 	ArrayList<String> list =new ArrayList<String>();
-	list=ShDao.getDao().suggestList(key);
+	list=ShDao.getDao().suggestListMember(key);
 	MakeXML.getMakexml().shSeggest(list);
 	// xml을 읽어 오기 위해서 만든 클래스의 메서드를 호출
 	%>
