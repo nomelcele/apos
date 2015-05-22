@@ -101,8 +101,8 @@ public class BoardAction implements Action{
 		}else if(subcmd != null && subcmd.equals("boardDetail")){
 			int no = Integer.parseInt(request.getParameter("no"));
 			String childcmd = request.getParameter("childcmd");
-			String tar = request.getParameter("tar");
-			url = "studyboardDetail.jsp";
+			System.out.println(childcmd);
+			url = "bon_workNoticeDetail.jsp";
 			method = false;
 			BoardVO v = BoardDao.getDao().getDetail(no);
 			request.setAttribute("v", v);
@@ -112,7 +112,7 @@ public class BoardAction implements Action{
 				//Dao처리
 				BoardDao.getDao().insertComm(maps);
 				//why? no보내야 하는지....
-				url = "studyboardDetail.kosta?no="+no+"&cmd=board&subcmd=boardDetail&page=1";
+				url = "bon.apos?no="+no+"&cmd=board&subcmd=boardDetail&page=1";
 				//댓글리스트의 페이지를 지정하기위해
 				method=false;
 			}
@@ -122,7 +122,6 @@ public class BoardAction implements Action{
 			map.put("no", no);
 			ArrayList<CommVO> clist = BoardDao.getDao().getCommList(map);
 			request.setAttribute("clist", clist);
-			request.setAttribute("tar", tar);
 		}
 		return  new ActionForward(url, method);
 	}

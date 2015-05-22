@@ -135,7 +135,7 @@ public class BoardDao {
 		ResultSet rs = null;
 		StringBuffer sql = new StringBuffer();
 		
-		sql.append("select bo_num, bo_sub, bo_writer, bo_cont, to_char(bo_date, 'yyyy-mm-dd'), ");
+		sql.append("select bo_num, bo_sub, bo_writer, bo_cont, bo_date, ");
 		sql.append("bo_img, bo_hit, bo_bonnum ");
 		sql.append("from board where bo_num=?");
 		BoardVO v = new BoardVO();
@@ -147,11 +147,11 @@ public class BoardDao {
 			if(rs.next()){
 				v.setNo(rs.getInt("bo_num"));
 				v.setHit(rs.getInt("bo_hit"));
-				v.setTitle("bo_sub");
+				v.setTitle(rs.getString("bo_sub"));
 				v.setWriter(rs.getString("bo_writer"));
 				v.setContent(rs.getString("bo_cont"));
 				v.setRegdate(rs.getString("bo_date"));
-				
+				System.out.println(v.getRegdate());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -180,13 +180,11 @@ public class BoardDao {
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
 			sql.append("insert into comm values(");
-			sql.append("comm_seq.nextVal,?,?,?,?,?,sysdate)");
+			sql.append("comm_seq.nextVal,?,?,?,sysdate)");
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, "±Ë±Êµø");
-			pstmt.setString(2, map.get("targetIcon"));
-			pstmt.setInt(3, Integer.parseInt(map.get("code")));
-			pstmt.setString(4, map.get("comm"));
-			pstmt.setString(5, map.get("reip"));
+			pstmt.setInt(1, Integer.parseInt(map.get("no")));
+			pstmt.setString(2, "±Ë±Êµø");
+			pstmt.setString(3, map.get("comm"));
 			pstmt.executeUpdate();
 
 		} catch (SQLException e) {
@@ -214,7 +212,7 @@ public class BoardDao {
 		ArrayList<CommVO> list = new ArrayList<CommVO>();
 		StringBuffer sql = new StringBuffer();
 		sql.append("select * from (select rownum r_num, a.* from (");
-		sql.append("select * from comm where code=? order by no desc) a");
+		sql.append("select * from comm where comm_bonum=? order by comm_num desc) a");
 		sql.append(") where r_num between ? and ?");
 		try {
 			con = MyJndiContext.getDs();
@@ -223,14 +221,14 @@ public class BoardDao {
 			pstmt.setInt(2, map.get("begin"));
 			pstmt.setInt(3, map.get("end"));
 			rs = pstmt.executeQuery();
+			System.out.println("»Æ¿Œ");
 			while(rs.next()){
-				//BoardVO v = new BoardVO();
 				CommVO v = new CommVO();
-				v.setNo(rs.getInt("no"));
-				v.setWriter(rs.getString("writer"));
-				v.setImgicon(rs.getString("imgicon"));
-				v.setRedate(rs.getString("regdate"));
-				v.setComm(rs.getString("comm"));
+				v.setNo(rs.getInt("comm_bonum"));
+				v.setWriter(rs.getString("comm_writer"));
+				v.setRedate(rs.getString("comm_date"));
+				v.setComm(rs.getString("comm_cont"));
+				System.out.println(rs.getString("comm_cont"));
 				list.add(v);
 			}
 		} catch (SQLException e) {
@@ -257,7 +255,7 @@ public class BoardDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		StringBuffer sql = new StringBuffer();
-		sql.append("select count(*) cnt from comm where code=?");
+		sql.append("select count(*) cnt from comm where comm_bonum=?");
 		int res = 0;
 		try {
 			con = MyJndiContext.getDs();

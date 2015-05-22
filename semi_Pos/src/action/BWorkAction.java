@@ -23,7 +23,6 @@ public class BWorkAction implements Action{
 	public ActionForward execute(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
 		String subcmd = request.getParameter("subcmd");
-		String childcmd = request.getParameter("childcmd");
 		String url="bon_index.jsp";
 		System.out.println(subcmd);
 		boolean method= false;
@@ -108,7 +107,7 @@ public class BWorkAction implements Action{
 			
 		}else if(subcmd != null && subcmd.equals("boardDetail")){
 			int no = Integer.parseInt(request.getParameter("no"));
-			//String childcmd = request.getParameter("childcmd");
+			String childcmd = request.getParameter("childcmd");
 			String tar = request.getParameter("tar");
 			url = "bon_workNoticeDetail.jsp";
 			method = false;
@@ -118,9 +117,10 @@ public class BWorkAction implements Action{
 			if(childcmd != null && childcmd.equals("in")){
 				HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
 				//Dao처리
+				System.out.println("확인");
 				BoardDao.getDao().insertComm(maps);
 				//why? no보내야 하는지....
-				url = "studyboardDetail.kosta?no="+no+"&cmd=board&subcmd=boardDetail&tar=t&page=1";
+				url = "bonsa.apos?no="+no+"&cmd=bwork&subcmd=boardDetail&page=1";
 				//댓글리스트의 페이지를 지정하기위해
 				method=true;
 			}
@@ -134,7 +134,7 @@ public class BWorkAction implements Action{
 		}else if(subcmd != null && subcmd.equals("move")){
 			url="bon_workMove.jsp";
 		}
-		return new ActionForward(url, false);
+		return new ActionForward(url, method);
 	}
 	
 	
@@ -179,7 +179,9 @@ public class BWorkAction implements Action{
 			
 		}else if(etc == 1){
 			int no = Integer.parseInt(request.getParameter("no"));
+			System.out.println(no);
 			totalRows = BoardDao.getDao().getTotalCommCount(no);
+			System.out.println(totalRows);
 		}
 		
 		int totalPages = 0;
@@ -211,6 +213,7 @@ public class BWorkAction implements Action{
 		map.put("begin", startRow);
 		map.put("end", endRow);
 		
+		System.out.println(startRow+"---"+endRow);
 		return map;
 	}
 

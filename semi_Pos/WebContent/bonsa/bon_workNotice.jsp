@@ -47,7 +47,7 @@
 						${stList.title}</a>
 						</td>
 						<td>${stList.writer}</td>
-						<td>${stList.regdate}
+						<td>${stList.regdate}</td>
 						<td>${stList.hit}</td>
 					</tr>
 				</c:forEach>

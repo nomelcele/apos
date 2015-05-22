@@ -102,7 +102,12 @@
 
                           </header>
                           <table class="table table-condensed">
+                          
                             <thead>
+<<<<<<< .mine
+                            
+=======
+>>>>>>> .r218
                               <tr>
                                 <th>#</th>
                                 <th>지점</th>
@@ -119,6 +124,88 @@
                                 <td>도하진</td>
                                 <td>02-367-0000</td>
                               </tr>
+<<<<<<< .mine
+                              <tr>
+                                <td>2</-td>
+                                <td>여의도점</td>
+                                <td>부점장</td>
+                                <td>윤두준</td>
+                                <td>02-387-9900</td>
+                              </tr>
+                               <tr>
+                                <td>3</td>
+                                <td>신도림점</td>
+                                <td>매니저</td>
+                                <td>윤두준</td>
+                                <td>02-367-0080</td>
+                                </tr>
+                     
+                              <tr>
+                                 <td>4</td>
+                                <td>아주대점</td>
+                                <td>매니저</td>
+                                <td>도하진</td>
+                                <td>031-219-7777</td>
+                              </tr>
+                               <tr>
+                                 <td>5</td>
+                                <td>가산점</td>
+                                <td>점장</td>
+                                <td>서경연</td>
+                                <td>02-367-0000</td>
+                             
+                                </tr>
+                                <tr>
+                                 <td>6</td>
+                                <td>죽전점</td>
+                                <td>점장</td>
+                                <td>윤홍기</td>
+                                <td>031-333-2222</td>
+                                </tr>
+                                 <tr>
+                                 <td>7</td>
+                                <td>광명역점</td>
+                                <td>부점장</td>
+                                <td>한광호</td>
+                                <td>031-367-0000</td>
+                                </tr>
+                                 <tr>
+                                 <td>8</td>
+                                <td>야탑점</td>
+                                <td>점장</td>
+                                <td>박경찬</td>
+                                <td>031-367-0000</td>
+                                </tr>
+                                 <tr>
+                                 <td>9</td>
+                                <td>왕십리점</td>
+                                <td>매니저</td>
+                                <td>윤성현</td>
+                                <td>02-555-2222</td>
+                                </tr>
+                                 <tr>
+                                 <td>10</td>
+                                <td>가산점</td>
+                                <td>점장</td>
+                                <td>서경연</td>
+                                <td>02-555-2222</td>
+                                </tr>
+                                 <tr>
+                                 <td>11</td>
+                                <td>용인점</td>
+                                <td>점장</td>
+                                <td>배수지</td>
+                                <td>031-555-2222</td>
+                                </tr>
+                                 <tr>
+                                 <td>12</td>
+                                <td>수원점</td>
+                                <td>점장</td>
+                                <td>이성연</td>
+                                <td>031-555-2222</td>
+                                </tr>
+                                   
+=======
               <c:forEach var="stList" items="${list}"> 
                <tr>
                   <td>${stList.shop_snum}</td>
@@ -129,7 +216,9 @@
                </tr>
                </c:forEach>
                                    
+>>>>>>> .r218
                             </tbody>
+                           
                           </table>
                       </section>
                   </div>
