@@ -7,7 +7,11 @@
 	<section class="wrapper">
 		<section class="panel">
 
-			
+			<div class="row" style="font-size: 15px;">
+			<div class="col-lg-12">
+				<h3 class="page-header">
+					<i class="fa fa-files-o"></i> 상품조회
+				</h3>
 
 			<header class="panel-heading tab-bg-primary ">
 			<div class="form-group ">
@@ -206,6 +210,8 @@
 					</div>
 					<%-- 키즈 끗--%>
 				</div>
+			</div>
+			</div>
 			</div>
 		</section>
 	</section>
