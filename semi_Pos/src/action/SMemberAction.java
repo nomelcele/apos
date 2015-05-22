@@ -40,8 +40,9 @@ public class SMemberAction implements Action {
 			url="sh_memberCheck.jsp";	
 			/*Page 처리 영역 */
 			Map<String, Integer> map = pageProcess(request, 0);
+			String name= request.getParameter("name");
 			/////////////////////////////////////////////////
-			ArrayList<MemVO>list = ShDao.getDao().getList(map);
+			ArrayList<MemVO>list = ShDao.getDao().getList(map,name);
 			request.setAttribute("list", list);
 		}
 		return new ActionForward(url, false);
