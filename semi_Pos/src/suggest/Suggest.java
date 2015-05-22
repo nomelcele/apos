@@ -16,15 +16,15 @@ import org.jdom2.input.SAXBuilder;
 //사용자의 검색어를 분석해서 xml의 자식요소의 값과 일치한 값들을 찾아서
 //돌려줘야 한다.
 public class Suggest {
-	private static Suggest suggest;
+	//private static Suggest suggest;
 	private Document doc;
 	private Element root;
 
-	public static synchronized Suggest getSuggest() {
-		if (suggest == null)
-			suggest = new Suggest();
-		return suggest;
-	}
+//	public static synchronized Suggest getSuggest() {
+//		if (suggest == null)
+//			suggest = new Suggest();
+//		return suggest;
+//	}
 
 	public Suggest() {
 		SAXBuilder sb = new SAXBuilder();
@@ -45,14 +45,16 @@ public class Suggest {
 		list = root.getChildren("keyword");
 		System.out.println("key :" + key);
 		Iterator<Element> it = list.iterator();
-
+		System.out.println("test");
 		key = key.toLowerCase();
 		while (it.hasNext()) {// 반복자가 위치한 곳에 다음칸에 요소가 있으면 true
 			String result = new String();
 	    	result=it.next().getText();
+	    	System.out.println("result:" + result);
 			String compare = result.toLowerCase();
 			// 사용자가 입력한 값으로 시작하는 것인지를 판별 하고 싶다면?
 			if (compare.startsWith(key)) {
+			
 				System.out.println("compare:" + compare);
 				sugList.add(result);
 			}
@@ -67,6 +69,7 @@ public class Suggest {
 			}
 			return sugList.toArray(sugArr);
 		}
+	
 		return null;
 	}
 }
