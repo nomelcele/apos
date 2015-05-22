@@ -22,7 +22,7 @@ public class ShDao {
 		}
 		return dao;
 	}
-	public ArrayList<MemVO> getList(Map<String, Integer> map) {
+	public ArrayList<MemVO> getList(Map<String, Integer> map,String name) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -30,22 +30,25 @@ public class ShDao {
 
 		StringBuffer sql = new StringBuffer();
 		sql.append("select * from (select rownum r_num, a.* from (");
-		sql.append("select * from member order by mem_NUM desc) a");
+		sql.append("select * from member where mem_name=? or mem_tel=?"
+				+ "order by mem_NUM desc) a");
 		sql.append(") where r_num between ? and ?");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setInt(1, map.get("begin"));
-			pstmt.setInt(2, map.get("end"));
+			pstmt.setString(1, name);
+			pstmt.setString(2, name);
+			pstmt.setInt(3, map.get("begin"));
+			pstmt.setInt(4, map.get("end"));
 			rs = pstmt.executeQuery();
 			while(rs.next()){
 				MemVO v= new MemVO();
 				v.setMem_num(rs.getInt("mem_num"));
 				v.setMem_name(rs.getString("mem_name"));
 				v.setMem_tel(rs.getString("mem_tel"));
-				v.setMem_addr(rs.getString("mem_addr"));
+				v.setMem_addr(rs.getString("mem_addr")+rs.getString("mem_deaddr"));
 				v.setMem_date(rs.getString("mem_date"));
-				//v.setMem_deaddr(rs.getString("mem_deaddr"));
+				v.setMem_deaddr(rs.getString("mem_email"));
 				//v.setMem
 //				BoardVO v = new BoardVO();
 //				v.setTitle(rs.getString("BO_SUB"));
