@@ -3,8 +3,10 @@ package dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.HashMap;
 
 import vo.BoardVO;
+import vo.ProductVO;
 import conn.MyJndiContext;
 
 public class ProductDao {
@@ -14,27 +16,21 @@ public class ProductDao {
 			dao = new ProductDao();
 		return dao;
 	}
-	public void insert(BoardVO vo) {
-
+	public void insert(HashMap<String, String> map) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
 			con = MyJndiContext.getDs();
-			System.out.println(con);
-			
 			StringBuffer sql = new StringBuffer();
-			sql.append("insert into board values(");
-			sql.append("board_seq.nextVal,?,'본사',?,sysdate,?,0,0001)");
+			sql.append("insert into product values(");
+			sql.append("product_seq.nextVal,?,?,?,0,?,sysdate)");
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1,vo.getTitle());
-		//	pstmt.setString(2,"본사");  //작성자 추후수정
-			pstmt.setString(2,vo.getContent());
-			pstmt.setString(3,vo.getPath()); //파일명
-		//	pstmt.setInt(6, 1); //본사원번호
+			pstmt.setString(1, map.get("name"));
+			pstmt.setString(2, map.get("code"));
+			pstmt.setString(3, map.get("size"));
+			pstmt.setString(4, map.get("img"));
 			pstmt.executeUpdate();
-
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			try {
