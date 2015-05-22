@@ -765,3 +765,97 @@ insert into sell values(123,5,0,2000,0,5,3,sysdate);
 insert into sell values(124,5,0,2260,0,5,4,sysdate);
 insert into sell values(125,5,0,2640,0,5,5,sysdate);
 
+
+--이곳은 staff table입니다.--
+
+
+create table staff(
+staff_num number constraint staff_staff_num_pk primary key,
+staff_name varchar2(20),
+staff_position varchar2(30),
+staff_tel varchar2(30),
+staff_shopnum number(10), constraint staff_staff_shopnum_fk foreign key (staff_shopnum)
+REFERENCES shop(shop_num) on delete cascade);
+
+insert into staff values(1,'도하진',1,'010-121-1234',1,'test0',1234);
+insert into staff values(2,'강은지',2,'123-1221-3000',1,'test1',1234);
+insert into staff values(3,'박은지',2,'123-123-1111',1,'test2',1234);
+
+insert into staff values(4,'윤과장',1,'123-124-2222',2,'test3',1234);
+insert into staff values(5,'륭과장',2,'123-125-3333',2,'test4',1234);
+insert into staff values(6,'석종현',2,'123-126-5555',2,'test5',1234);
+
+insert into staff values(7,'강은지',1,'123-127-6666',3,'test6',1234);
+insert into staff values(8,'김윤지',2,'123-128-7777',3,'test7',1234);
+insert into staff values(9,'김현정',2,'123-129-8888',3,'test8',1234);
+
+insert into staff values(10,'윤정아',1,'123-113-1111',4,'test9',1234);
+insert into staff values(11,'임수현',2,'123-123-9999',4,'test10',1234);
+insert into staff values(12,'임혜승',2,'123-123-2222',4,'test11',1234);
+
+insert into staff values(13,'박병준',1,'123-123-3333',5,'test12',1234);
+insert into staff values(14,'성동원',2,'123-123-5555',5,'test13',1234);
+insert into staff values(15,'최철녕',2,'123-123-6666',5,'test14',1234);
+
+insert into staff values(16,'서경연',1,'123-123-7777',6,'test15',1234);
+insert into staff values(17,'박경찬',2,'123-123-8888',6,'test16',1234);
+insert into staff values(18,'서경연',2,'123-123-9999',6,'test17',1234);
+
+insert into staff values(19,'윤홍기',1,'123-123-2222',7,'test18',1234);
+insert into staff values(20,'한광호',2,'123-123-1234',7,'test19',1234);
+insert into staff values(21,'윤성현',2,'123-123-5678',7,'test20',1234);
+
+
+insert into staff values(22,'김수환',1,'123-123-1111',8,'test21',1234);
+insert into staff values(23,'김영은',2,'123-123-2222',8,'test22',1234);
+insert into staff values(24,'모하람',2,'123-123-3333',8,'test23',1234);
+
+
+insert into staff values(25,'김성호',1,'123-123-6666',9,'test24',1234);
+insert into staff values(26,'홍명표',2,'123-123-7777',9,'test25',1234);
+insert into staff values(27,'김명준',2,'123-123-5555',9,'test26',1234);
+
+
+insert into staff values(28,'김주상',1,'123-123-3232',10,'test27',1234);
+insert into staff values(29,'신호석',2,'123-123-3333',10,'test28',1234);
+insert into staff values(30,'이수인',2,'123-123-7777',10,'test29',1234);
+
+
+insert into staff values(31,'안지영',1,'123-123-9999',11,'test30',1234);
+insert into staff values(32,'김영권',2,'123-123-0000',11,'test31',1234);
+insert into staff values(33,'이재흥',2,'123-123-2222',11,'test32',1234);
+
+
+insert into staff values(34,'이경석',1,'123-123-3333',12,'test33',1234);
+insert into staff values(35,'김남혁',2,'123-123-1111',12,'test34',1234);
+insert into staff values(36,'조민영',2,'123-123-2222',12,'test35',1234);
+
+
+insert into staff values(37,'정혜영',1,'123-123-3333',13,'test36',1234);
+insert into staff values(38,'엄성렬',2,'123-123-1111',13,'test37',1234);
+insert into staff values(39,'권혁민',2,'123-123-2222',13,'test38',1234);
+
+
+insert into staff values(40,'윤여환',1,'123-123-3333',14,'test39',1234);
+insert into staff values(41,'최영윤',2,'123-123-4444',14,'test40',1234);
+insert into staff values(42,'임현지',2,'123-123-5555',14,'test41',1234);
+
+
+insert into staff values(43,'경재욱',1,'123-123-6666',15,'test42',1234);
+insert into staff values(44,'이인의',2,'123-123-7777',15,'test43',1234);
+insert into staff values(45,'안주호',2,'123-123-8888',15,'test44',1234);
+
+alter table staff MODIFY  staff_position number(10);
+alter table staff add(staff_id varchar(30) constraint staff_staff_id_uq unique);
+alter table staff add(staff_pwd varchar(30));
+
+--사원들의 근무 대리점을 출력하시오.
+
+
+
+select a.staff_num,a.staff_name,a.staff_tel,s.shop_name,a.STAFF_POSITION from staff a , shop s
+where s.shop_num=a.staff_shopnum;
+commit;
+select a.staff_num,a.staff_name,a.staff_tel,s.shop_name,a.STAFF_POSITION from staff a , shop s where s.shop_num=a.staff_shopnum;
+select * from staff;
+
