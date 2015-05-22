@@ -12,4 +12,4 @@
 	MakeXML.getMakexml().shSeggest(list);
 	// xml을 읽어 오기 위해서 만든 클래스의 메서드를 호출
 	%>
-[<%String[] suggests = Suggest.getSuggest().getSuggest(key);if(suggests != null){for(int i=0; i<suggests.length;i++){%>"<%=suggests[i]%>"<%if(!(i == suggests.length-1)){out.print(",");}%><%}}%>]
+[<%String[] suggests = new Suggest().getSuggest(key);if(suggests != null){for(int i=0; i<suggests.length;i++){%>"<%=suggests[i]%>"<%if(!(i == suggests.length-1)){out.print(",");}%><%}}%>]
