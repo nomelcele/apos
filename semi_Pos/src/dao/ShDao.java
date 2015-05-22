@@ -130,7 +130,7 @@ public class ShDao {
 			StringBuffer sql = new StringBuffer();
 			StringBuffer post = new StringBuffer();
 			sql.append("insert into member values(");
-			sql.append("member_seq.nextval,?,?,?,?,?,0,sysdate,1)");
+			sql.append("member_seq.nextval,?,?,?,?,?,0,sysdate,1,?)");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, map.get("name"));
 			pstmt.setString(2, map.get("tel"));
@@ -140,6 +140,7 @@ public class ShDao {
 			pstmt.setString(5, map.get("adr4"));
 			// 나중에 세션처리 구현 하면 넣어야되 회원이 가입한 상점번호
 			// pstmt.setString(6,map.get("shopnum"));
+			pstmt.setString(6, map.get("email"));
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
