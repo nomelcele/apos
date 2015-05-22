@@ -48,7 +48,8 @@ public class Suggest {
 
 		key = key.toLowerCase();
 		while (it.hasNext()) {// 반복자가 위치한 곳에 다음칸에 요소가 있으면 true
-			String result = it.next().getText();
+			String result = new String();
+	    	result=it.next().getText();
 			String compare = result.toLowerCase();
 			// 사용자가 입력한 값으로 시작하는 것인지를 판별 하고 싶다면?
 			if (compare.startsWith(key)) {
