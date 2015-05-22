@@ -3,6 +3,7 @@
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
 <!-- 매장의 상품관리 - 상품조회 페이지입니다. -->
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <section id="main-content">
 	<section class="wrapper">
 		<section class="panel">
