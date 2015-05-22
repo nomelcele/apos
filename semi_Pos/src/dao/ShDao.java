@@ -22,7 +22,7 @@ public class ShDao {
 		}
 		return dao;
 	}
-	public ArrayList<MemVO> getList(Map<String, Integer> map,String name) {
+	public ArrayList<MemVO> getListMember(Map<String, Integer> map,String name) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -77,7 +77,7 @@ public class ShDao {
 		}
 		return list;
 	}
-	public ArrayList<String> suggestList(String check) {
+	public ArrayList<String> suggestListMember(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
