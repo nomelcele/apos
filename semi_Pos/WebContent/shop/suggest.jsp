@@ -2,14 +2,14 @@
 <%@page import="dao.ShDao"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="suggest.Suggest"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8"%>
     <% request.setCharacterEncoding("utf-8");
-    //ºñµ¿±â½ÄÀ¸·Î »ç¿ëÀÚ·Î ºÎÅÍ °Ë»ö¾î¸¦ ¹Ş´Â´Ù.
+    //ë¹„ë™ê¸°ì‹ìœ¼ë¡œ ì‚¬ìš©ìë¡œ ë¶€í„° ê²€ìƒ‰ì–´ë¥¼ ë°›ëŠ”ë‹¤.
 	String key = request.getParameter("key");
 	ArrayList<String> list =new ArrayList<String>();
 	list=ShDao.getDao().suggestList(key);
 	MakeXML.getMakexml().shSeggest(list);
-	// xmlÀ» ÀĞ¾î ¿À±â À§ÇØ¼­ ¸¸µç Å¬·¡½ºÀÇ ¸Ş¼­µå¸¦ È£Ãâ
+	// xmlì„ ì½ì–´ ì˜¤ê¸° ìœ„í•´ì„œ ë§Œë“  í´ë˜ìŠ¤ì˜ ë©”ì„œë“œë¥¼ í˜¸ì¶œ
 	%>
 [<%String[] suggests = Suggest.getSuggest().getSuggest(key);if(suggests != null){for(int i=0; i<suggests.length;i++){%>"<%=suggests[i]%>"<%if(!(i == suggests.length-1)){out.print(",");}%><%}}%>]
