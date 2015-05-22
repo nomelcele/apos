@@ -1,8 +1,8 @@
 package vo;
 
 public class ProductVO {
-	private int num, size, date;
-	private String name, code, barcode,img;
+	private int num, size;
+	private String name, code, barcode,img, date;
 	public int getNum() {
 		return num;
 	}
@@ -14,12 +14,6 @@ public class ProductVO {
 	}
 	public void setSize(int size) {
 		this.size = size;
-	}
-	public int getDate() {
-		return date;
-	}
-	public void setDate(int date) {
-		this.date = date;
 	}
 	public String getName() {
 		return name;
@@ -45,8 +39,13 @@ public class ProductVO {
 	public void setImg(String img) {
 		this.img = img;
 	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
 	
 	
-	
-	
+
 }
