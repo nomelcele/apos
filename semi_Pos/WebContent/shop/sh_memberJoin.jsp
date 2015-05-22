@@ -110,9 +110,9 @@
                                       <div class="form-group ">
                                           <label for="ctel" class="control-label col-lg-2">연락처 <span class="required">*</span></label>
                                           <div class="">
-                                              <input class="form-control"  style="width: 8%; margin-left: 15px;"  id="tel" name="tel" minlength="5" type="tel" required />-
-                                              <input class="form-control"  style="width: 8%" id="tel" name="tel" minlength="5" type="tel" required />-
-                                              <input class="form-control"  style="width: 8%" id="tel" name="tel" minlength="5" type="tel" required />
+                                              <input class="form-control"  style="width: 8%; margin-left: 15px;"  id="tel" name="tel" type="tel" required />-
+                                              <input class="form-control"  style="width: 8%" id="tel" name="tel"  type="tel" required />-
+                                              <input class="form-control"  style="width: 8%" id="tel" name="tel"  type="tel" required />
                                           </div>
                                       </div>
                                       
