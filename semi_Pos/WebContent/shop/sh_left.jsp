@@ -91,7 +91,7 @@
 <input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="change">
 </form>
-
+ 
 <form method="post" action="sh.apos" id="out">
 <input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="out">
