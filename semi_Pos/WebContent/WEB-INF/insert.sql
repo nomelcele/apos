@@ -305,3 +305,273 @@ insert into product values(13,'¾Æ±â ÄÚÄÚ¸ù ¹ÙÁö','15130003',95,'0110','23000',sy
 insert into product values(14,'¾Æ±â °ø·æ¿Ê','15130004',95,'0110','22000',sysdate);
 insert into product values(15,'¾Æ±â ÇÇÄ«Ãò¿Ê','15130005',95,'0110','25000',sysdate);
 commit;
+
+
+
+
+
+
+-- »óÇ°Ãß°¡ (stock)
+insert into stock values(stock_seq.nextval,1,100,1);
+insert into stock values(stock_seq.nextval,2,100,1);
+insert into stock values(stock_seq.nextval,3,100,1);
+insert into stock values(stock_seq.nextval,4,100,1);
+insert into stock values(stock_seq.nextval,5,100,1);
+insert into stock values(stock_seq.nextval,6,100,1);
+insert into stock values(stock_seq.nextval,7,100,1);
+insert into stock values(stock_seq.nextval,8,100,1);
+insert into stock values(stock_seq.nextval,9,100,1);
+insert into stock values(stock_seq.nextval,10,100,1);
+insert into stock values(stock_seq.nextval,11,100,1);
+insert into stock values(stock_seq.nextval,12,100,1);
+insert into stock values(stock_seq.nextval,13,100,1);
+insert into stock values(stock_seq.nextval,14,100,1);
+insert into stock values(stock_seq.nextval,15,100,1);
+
+
+
+insert into stock values(stock_seq.nextval,1,100,2);
+insert into stock values(stock_seq.nextval,2,100,2);
+insert into stock values(stock_seq.nextval,3,100,2);
+insert into stock values(stock_seq.nextval,4,100,2);
+insert into stock values(stock_seq.nextval,5,100,2);
+insert into stock values(stock_seq.nextval,6,100,2);
+insert into stock values(stock_seq.nextval,7,100,2);
+insert into stock values(stock_seq.nextval,8,100,2);
+insert into stock values(stock_seq.nextval,9,100,2);
+insert into stock values(stock_seq.nextval,10,100,2);
+insert into stock values(stock_seq.nextval,11,100,2);
+insert into stock values(stock_seq.nextval,12,100,2);
+insert into stock values(stock_seq.nextval,13,100,2);
+insert into stock values(stock_seq.nextval,14,100,2);
+insert into stock values(stock_seq.nextval,15,100,2);
+
+
+
+insert into stock values(stock_seq.nextval,1,100,3);
+insert into stock values(stock_seq.nextval,2,100,3);
+insert into stock values(stock_seq.nextval,3,100,3);
+insert into stock values(stock_seq.nextval,4,100,3);
+insert into stock values(stock_seq.nextval,5,100,3);
+insert into stock values(stock_seq.nextval,6,100,3);
+insert into stock values(stock_seq.nextval,7,100,3);
+insert into stock values(stock_seq.nextval,8,100,3);
+insert into stock values(stock_seq.nextval,9,100,3);
+insert into stock values(stock_seq.nextval,10,100,3);
+insert into stock values(stock_seq.nextval,11,100,3);
+insert into stock values(stock_seq.nextval,12,100,3);
+insert into stock values(stock_seq.nextval,13,100,3);
+insert into stock values(stock_seq.nextval,14,100,3);
+insert into stock values(stock_seq.nextval,15,100,3);
+
+
+
+insert into stock values(stock_seq.nextval,1,100,4);
+insert into stock values(stock_seq.nextval,2,100,4);
+insert into stock values(stock_seq.nextval,3,100,4);
+insert into stock values(stock_seq.nextval,4,100,4);
+insert into stock values(stock_seq.nextval,5,100,4);
+insert into stock values(stock_seq.nextval,6,100,4);
+insert into stock values(stock_seq.nextval,7,100,4);
+insert into stock values(stock_seq.nextval,8,100,4);
+insert into stock values(stock_seq.nextval,9,100,4);
+insert into stock values(stock_seq.nextval,10,100,4);
+insert into stock values(stock_seq.nextval,11,100,4);
+insert into stock values(stock_seq.nextval,12,100,4);
+insert into stock values(stock_seq.nextval,13,100,4);
+insert into stock values(stock_seq.nextval,14,100,4);
+insert into stock values(stock_seq.nextval,15,100,4);
+
+
+
+
+insert into stock values(stock_seq.nextval,1,100,5);
+insert into stock values(stock_seq.nextval,2,100,5);
+insert into stock values(stock_seq.nextval,3,100,5);
+insert into stock values(stock_seq.nextval,4,100,5);
+insert into stock values(stock_seq.nextval,5,100,5);
+insert into stock values(stock_seq.nextval,6,100,5);
+insert into stock values(stock_seq.nextval,7,100,5);
+insert into stock values(stock_seq.nextval,8,100,5);
+insert into stock values(stock_seq.nextval,9,100,5);
+insert into stock values(stock_seq.nextval,10,100,5);
+insert into stock values(stock_seq.nextval,11,100,5);
+insert into stock values(stock_seq.nextval,12,100,5);
+insert into stock values(stock_seq.nextval,13,100,5);
+insert into stock values(stock_seq.nextval,14,100,5);
+insert into stock values(stock_seq.nextval,15,100,5);
+
+
+
+insert into stock values(stock_seq.nextval,1,100,6);
+insert into stock values(stock_seq.nextval,2,100,6);
+insert into stock values(stock_seq.nextval,3,100,6);
+insert into stock values(stock_seq.nextval,4,100,6);
+insert into stock values(stock_seq.nextval,5,100,6);
+insert into stock values(stock_seq.nextval,6,100,6);
+insert into stock values(stock_seq.nextval,7,100,6);
+insert into stock values(stock_seq.nextval,8,100,6);
+insert into stock values(stock_seq.nextval,9,100,6);
+insert into stock values(stock_seq.nextval,10,100,6);
+insert into stock values(stock_seq.nextval,11,100,6);
+insert into stock values(stock_seq.nextval,12,100,6);
+insert into stock values(stock_seq.nextval,13,100,6);
+insert into stock values(stock_seq.nextval,14,100,6);
+insert into stock values(stock_seq.nextval,15,100,6);
+
+
+
+insert into stock values(stock_seq.nextval,1,100,7);
+insert into stock values(stock_seq.nextval,2,100,7);
+insert into stock values(stock_seq.nextval,3,100,7);
+insert into stock values(stock_seq.nextval,4,100,7);
+insert into stock values(stock_seq.nextval,5,100,7);
+insert into stock values(stock_seq.nextval,6,100,7);
+insert into stock values(stock_seq.nextval,7,100,7);
+insert into stock values(stock_seq.nextval,8,100,7);
+insert into stock values(stock_seq.nextval,9,100,7);
+insert into stock values(stock_seq.nextval,10,100,7);
+insert into stock values(stock_seq.nextval,11,100,7);
+insert into stock values(stock_seq.nextval,12,100,7);
+insert into stock values(stock_seq.nextval,13,100,7);
+insert into stock values(stock_seq.nextval,14,100,7);
+insert into stock values(stock_seq.nextval,15,100,7);
+
+
+
+insert into stock values(stock_seq.nextval,1,100,8);
+insert into stock values(stock_seq.nextval,2,100,8);
+insert into stock values(stock_seq.nextval,3,100,8);
+insert into stock values(stock_seq.nextval,4,100,8);
+insert into stock values(stock_seq.nextval,5,100,8);
+insert into stock values(stock_seq.nextval,6,100,8);
+insert into stock values(stock_seq.nextval,7,100,8);
+insert into stock values(stock_seq.nextval,8,100,8);
+insert into stock values(stock_seq.nextval,9,100,8);
+insert into stock values(stock_seq.nextval,10,100,8);
+insert into stock values(stock_seq.nextval,11,100,8);
+insert into stock values(stock_seq.nextval,12,100,8);
+insert into stock values(stock_seq.nextval,13,100,8);
+insert into stock values(stock_seq.nextval,14,100,8);
+insert into stock values(stock_seq.nextval,15,100,8);
+
+
+insert into stock values(stock_seq.nextval,1,100,9);
+insert into stock values(stock_seq.nextval,2,100,9);
+insert into stock values(stock_seq.nextval,3,100,9);
+insert into stock values(stock_seq.nextval,4,100,9);
+insert into stock values(stock_seq.nextval,5,100,9);
+insert into stock values(stock_seq.nextval,6,100,9);
+insert into stock values(stock_seq.nextval,7,100,9);
+insert into stock values(stock_seq.nextval,8,100,9);
+insert into stock values(stock_seq.nextval,9,100,9);
+insert into stock values(stock_seq.nextval,10,100,9);
+insert into stock values(stock_seq.nextval,11,100,9);
+insert into stock values(stock_seq.nextval,12,100,9);
+insert into stock values(stock_seq.nextval,13,100,9);
+insert into stock values(stock_seq.nextval,14,100,9);
+insert into stock values(stock_seq.nextval,15,100,9);
+
+
+
+insert into stock values(stock_seq.nextval,1,100,10);
+insert into stock values(stock_seq.nextval,2,100,10);
+insert into stock values(stock_seq.nextval,3,100,10);
+insert into stock values(stock_seq.nextval,4,100,10);
+insert into stock values(stock_seq.nextval,5,100,10);
+insert into stock values(stock_seq.nextval,6,100,10);
+insert into stock values(stock_seq.nextval,7,100,10);
+insert into stock values(stock_seq.nextval,8,100,10);
+insert into stock values(stock_seq.nextval,9,100,10);
+insert into stock values(stock_seq.nextval,10,100,10);
+insert into stock values(stock_seq.nextval,11,100,10);
+insert into stock values(stock_seq.nextval,12,100,10);
+insert into stock values(stock_seq.nextval,13,100,10);
+insert into stock values(stock_seq.nextval,14,100,10);
+insert into stock values(stock_seq.nextval,15,100,10);
+
+
+insert into stock values(stock_seq.nextval,1,100,11);
+insert into stock values(stock_seq.nextval,2,100,11);
+insert into stock values(stock_seq.nextval,3,100,11);
+insert into stock values(stock_seq.nextval,4,100,11);
+insert into stock values(stock_seq.nextval,5,100,11);
+insert into stock values(stock_seq.nextval,6,100,11);
+insert into stock values(stock_seq.nextval,7,100,11);
+insert into stock values(stock_seq.nextval,8,100,11);
+insert into stock values(stock_seq.nextval,9,100,11);
+insert into stock values(stock_seq.nextval,10,100,11);
+insert into stock values(stock_seq.nextval,11,100,11);
+insert into stock values(stock_seq.nextval,12,100,11);
+insert into stock values(stock_seq.nextval,13,100,11);
+insert into stock values(stock_seq.nextval,14,100,11);
+insert into stock values(stock_seq.nextval,15,100,11);
+
+
+insert into stock values(stock_seq.nextval,1,100,12);
+insert into stock values(stock_seq.nextval,2,100,12);
+insert into stock values(stock_seq.nextval,3,100,12);
+insert into stock values(stock_seq.nextval,4,100,12);
+insert into stock values(stock_seq.nextval,5,100,12);
+insert into stock values(stock_seq.nextval,6,100,12);
+insert into stock values(stock_seq.nextval,7,100,12);
+insert into stock values(stock_seq.nextval,8,100,12);
+insert into stock values(stock_seq.nextval,9,100,12);
+insert into stock values(stock_seq.nextval,10,100,12);
+insert into stock values(stock_seq.nextval,11,100,12);
+insert into stock values(stock_seq.nextval,12,100,12);
+insert into stock values(stock_seq.nextval,13,100,12);
+insert into stock values(stock_seq.nextval,14,100,12);
+insert into stock values(stock_seq.nextval,15,100,12);
+
+
+insert into stock values(stock_seq.nextval,1,100,13);
+insert into stock values(stock_seq.nextval,2,100,13);
+insert into stock values(stock_seq.nextval,3,100,13);
+insert into stock values(stock_seq.nextval,4,100,13);
+insert into stock values(stock_seq.nextval,5,100,13);
+insert into stock values(stock_seq.nextval,6,100,13);
+insert into stock values(stock_seq.nextval,7,100,13);
+insert into stock values(stock_seq.nextval,8,100,13);
+insert into stock values(stock_seq.nextval,9,100,13);
+insert into stock values(stock_seq.nextval,10,100,13);
+insert into stock values(stock_seq.nextval,11,100,13);
+insert into stock values(stock_seq.nextval,12,100,13);
+insert into stock values(stock_seq.nextval,13,100,13);
+insert into stock values(stock_seq.nextval,14,100,13);
+insert into stock values(stock_seq.nextval,15,100,13);
+
+
+insert into stock values(stock_seq.nextval,1,100,14);
+insert into stock values(stock_seq.nextval,2,100,14);
+insert into stock values(stock_seq.nextval,3,100,14);
+insert into stock values(stock_seq.nextval,4,100,14);
+insert into stock values(stock_seq.nextval,5,100,14);
+insert into stock values(stock_seq.nextval,6,100,14);
+insert into stock values(stock_seq.nextval,7,100,14);
+insert into stock values(stock_seq.nextval,8,100,14);
+insert into stock values(stock_seq.nextval,9,100,14);
+insert into stock values(stock_seq.nextval,10,100,14);
+insert into stock values(stock_seq.nextval,11,100,14);
+insert into stock values(stock_seq.nextval,12,100,14);
+insert into stock values(stock_seq.nextval,13,100,14);
+insert into stock values(stock_seq.nextval,14,100,14);
+insert into stock values(stock_seq.nextval,15,100,14);
+
+
+insert into stock values(stock_seq.nextval,1,100,15);
+insert into stock values(stock_seq.nextval,2,100,15);
+insert into stock values(stock_seq.nextval,3,100,15);
+insert into stock values(stock_seq.nextval,4,100,15);
+insert into stock values(stock_seq.nextval,5,100,15);
+insert into stock values(stock_seq.nextval,6,100,15);
+insert into stock values(stock_seq.nextval,7,100,15);
+insert into stock values(stock_seq.nextval,8,100,15);
+insert into stock values(stock_seq.nextval,9,100,15);
+insert into stock values(stock_seq.nextval,10,100,15);
+insert into stock values(stock_seq.nextval,11,100,15);
+insert into stock values(stock_seq.nextval,12,100,15);
+insert into stock values(stock_seq.nextval,13,100,15);
+insert into stock values(stock_seq.nextval,14,100,15);
+insert into stock values(stock_seq.nextval,15,100,15);
+
