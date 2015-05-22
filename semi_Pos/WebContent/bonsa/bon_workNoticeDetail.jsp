@@ -2,10 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@include file="bon_top.jsp"%>
 <%@include file="bon_left.jsp"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 본사의 업무관리의 공지사항 상세보기 페이지 입니다. --%>
 <section id="main-content">
 	<section class="wrapper">
-
+	<c:forEach var="ctlist" items="${clist}"> <!-- items는 컬렉션과 어레이리스트만 가능 -->
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
@@ -15,27 +16,26 @@
 							<div class="form-group">
 								<label class="col-sm-2 control-label">제목</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control">
+									${clist.title}
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">날짜</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control">
+									${clist.regdate}
 								</div>
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">작성자</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control round-input">
-								</div>
+									${clist.writer}
 							</div>
 							<div class="form-group">
 								<label class="col-sm-2 control-label">내용</label>
-								<div id="editor" class="btn-toolbar" data-role="editor-toolbar"
-									data-target="#editor"></div>
+								<div>${clist.content }</div>
 
 							</div>
+	</c:forEach>
 							<div class="col-sm-10" style="margin-left: 200px;">
 								<table class="table">
 									<thead>

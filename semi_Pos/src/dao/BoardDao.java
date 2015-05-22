@@ -134,9 +134,10 @@ public class BoardDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		StringBuffer sql = new StringBuffer();
-		sql.append("select no, hit, groupno, title, writer, content, ");
-		sql.append("to_char(regdate, 'yyyy-mm-dd') regdate ");
-		sql.append(" from board where no =?");
+		
+		sql.append("select bo_num, bo_sub, bo_writer, bo_cont, to_char(bo_date, 'yyyy-mm-dd'), ");
+		sql.append("bo_img, bo_hit, bo_bonnum ");
+		sql.append("from board where bo_num=?");
 		BoardVO v = new BoardVO();
 		try {
 			con = MyJndiContext.getDs();
@@ -144,13 +145,12 @@ public class BoardDao {
 			pstmt.setInt(1, no);
 			rs = pstmt.executeQuery();
 			if(rs.next()){
-				v.setNo(rs.getInt("no"));
-				v.setHit(rs.getInt("hit"));
-				v.setGroupno(rs.getInt("groupno"));
-				v.setTitle("title");
-				v.setWriter(rs.getString("writer"));
-				v.setContent(rs.getString("content"));
-				v.setRegdate(rs.getString("regdate"));
+				v.setNo(rs.getInt("bo_num"));
+				v.setHit(rs.getInt("bo_hit"));
+				v.setTitle("bo_sub");
+				v.setWriter(rs.getString("bo_writer"));
+				v.setContent(rs.getString("bo_cont"));
+				v.setRegdate(rs.getString("bo_date"));
 				
 			}
 		} catch (SQLException e) {

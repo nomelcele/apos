@@ -110,7 +110,7 @@ public class BWorkAction implements Action{
 			int no = Integer.parseInt(request.getParameter("no"));
 			//String childcmd = request.getParameter("childcmd");
 			String tar = request.getParameter("tar");
-			url = "studyboardDetail.jsp";
+			url = "bon_workNoticeDetail.jsp";
 			method = false;
 			BoardVO v = BoardDao.getDao().getDetail(no);
 			request.setAttribute("v", v);

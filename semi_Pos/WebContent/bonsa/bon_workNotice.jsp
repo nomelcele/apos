@@ -43,7 +43,7 @@
 					<tr>
 						<td>${stList.no}</td>
 						<td>
-						<a href="stboard.kosta?cmd=board&subcmd=boardDetail&no=${stList.no}&page=1">
+						<a href="bon.apos?cmd=bwork&subcmd=boardDetail&no=${stList.no}&page=1">
 						${stList.title}</a>
 						</td>
 						<td>${stList.writer}</td>
