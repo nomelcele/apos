@@ -13,9 +13,14 @@ public class SProductAction implements Action{
 	public ActionForward execute(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
 		String subcmd = request.getParameter("subcmd");
+		String childcmd = request.getParameter("childcmd");
+		System.out.println(subcmd);
 		String url="sh_index.jsp";
 		boolean method= false;
 		if(subcmd.equals("pcheck")){
+			if(childcmd != null && childcmd.equals("search")){
+				System.out.println(childcmd);
+			}
 			url="sh_productCheck.jsp";
 		}else if(subcmd.equals("move")){
 			url="sh_productMove.jsp";
