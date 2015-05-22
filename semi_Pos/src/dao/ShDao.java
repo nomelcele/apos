@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-import vo.BoardVO;
+
 import vo.MemVO;
 import conn.MyJndiContext;
 
@@ -77,13 +77,57 @@ public class ShDao {
 		}
 		return list;
 	}
+	
+	public ArrayList<String> suggestListProduct(String check) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<String> list = new ArrayList<String>();
+	
+		System.out.println("check :" + check );
+		try {
+			System.out.println("test");
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select pro_name, pro_code from product where pro_name like ? or pro_code like ?");
+			pstmt = con.prepareStatement(sql.toString());
+			String str3 = "%"+check +"%";
+			pstmt.setString(1, str3);
+			pstmt.setString(2, str3);
+			rs = pstmt.executeQuery();
+
+			while (rs.next()) {
+				list.add(rs.getString("pro_name"));
+				list.add(rs.getString("pro_code"));
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+				if (rs != null)
+					rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		return list;
+	}
+	
 	public ArrayList<String> suggestListMember(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		ArrayList<String> list = new ArrayList<String>();
 		
-		String str = "";
+
 		System.out.println("check :" + check );
 		try {
 			System.out.println("test");
