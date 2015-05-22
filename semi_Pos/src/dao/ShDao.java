@@ -48,7 +48,7 @@ public class ShDao {
 				v.setMem_tel(rs.getString("mem_tel"));
 				v.setMem_addr(rs.getString("mem_addr")+rs.getString("mem_deaddr"));
 				v.setMem_date(rs.getString("mem_date"));
-				v.setMem_deaddr(rs.getString("mem_email"));
+				v.setMem_email(rs.getString("mem_email"));
 				//v.setMem
 //				BoardVO v = new BoardVO();
 //				v.setTitle(rs.getString("BO_SUB"));
@@ -129,11 +129,13 @@ public class ShDao {
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
 			StringBuffer post = new StringBuffer();
+			StringBuffer tel = new StringBuffer();
 			sql.append("insert into member values(");
 			sql.append("member_seq.nextval,?,?,?,?,?,0,sysdate,1,?)");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, map.get("name"));
-			pstmt.setString(2, map.get("tel"));
+			tel.append(map.get("tel1")).append("-").append(map.get("tel2")).append("-").append(map.get("tel3"));
+			pstmt.setString(2, tel.toString());
 			post.append(map.get("adr1")).append("-").append(map.get("adr2"));
 			pstmt.setString(3, post.toString());
 			pstmt.setString(4, map.get("adr3"));
