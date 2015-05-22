@@ -88,6 +88,8 @@
 										method="post" action="sh.apos">
 										<input type="hidden" name="cmd" value="smember"> <input
 											type="hidden" name="subcmd" value="check">
+											<input type="hidden" name="page" value="1">
+										
 
 
 										<div class="form-group ">
@@ -99,7 +101,7 @@
 													autocomplete="off" type="text" required />
 												<div id="view"></div>
 											</div>
-											<input class="form-control6" type="button" id="btn"
+											<input class="form-control6" type="submit" id="btn"
 												name="btn" value="조회">
 										</div>
 
@@ -125,13 +127,13 @@
 																<tr>
 																	<td>${stList.mem_num}</td>
 																	<td>${stList.mem_name}</td>
-																	<td>ione.gisela@high.org</td>
-																	<td>${stList.addr}</td>
-																	<td>${stList.tel}</td>
-																	<td>${stListdate}</td>
+																	<td>${stList.mem_email}</td>
+																	<td>${stList.mem_addr}</td>
+																	<td>${stList.mem_tel}</td>
+																	<td>${stList.mem_date}</td>
+		
 																</tr>
 															</c:forEach>
-															F
 															<tr>
 																<td>고객번호 입력창</td>
 																<td>Sung Carlson</td>
