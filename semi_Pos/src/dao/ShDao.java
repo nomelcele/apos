@@ -22,6 +22,7 @@ public class ShDao {
 		}
 		return dao;
 	}
+	// 맴버 정보를 디비에서 빼옴 검색한 내용에 맞게 
 	public ArrayList<MemVO> getListMember(Map<String, Integer> map,String name) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -77,7 +78,7 @@ public class ShDao {
 		}
 		return list;
 	}
-	
+	//상품에 대한 정보를 suggest로 
 	public ArrayList<String> suggestListProduct(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
