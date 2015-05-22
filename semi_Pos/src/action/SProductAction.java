@@ -15,7 +15,7 @@ public class SProductAction implements Action{
 		String subcmd = request.getParameter("subcmd");
 		String url="sh_index.jsp";
 		boolean method= false;
-		if(subcmd.equals("check")){
+		if(subcmd.equals("pcheck")){
 			url="sh_productCheck.jsp";
 		}else if(subcmd.equals("move")){
 			url="sh_productMove.jsp";
