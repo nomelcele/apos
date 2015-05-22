@@ -21,3 +21,8 @@ REFERENCES shop(shop_num) on delete cascade);
 
 Create sequence staff_seq
 increment by 1 start with 1;
+
+--05.23staff ¼öÁ¤
+alter table staff MODIFY  staff_position number(10);
+alter table staff add(staff_id varchar(30) constraint staff_staff_id_uq unique);
+alter table staff add(staff_pwd varchar(30));
