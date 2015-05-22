@@ -8,3 +8,16 @@ alter table member add(mem_email varchar2(50)):
 alter table shop modify shop_adr varchar2(300);
 alter table member modify mem_addr varchar2(200);
 alter table member modify mem_deaddr varchar2(200);
+
+--05.22staff 테이블 추가
+create table staff(
+staff_num number constraint staff_staff_num_pk primary key,
+staff_name varchar2(20),
+staff_position varchar2(30),
+staff_tel varchar2(30),
+staff_shopnum number(10), constraint staff_staff_shopnum_fk foreign key (staff_shopnum)
+REFERENCES shop(shop_num) on delete cascade);
+
+
+Create sequence staff_seq
+increment by 1 start with 1;
