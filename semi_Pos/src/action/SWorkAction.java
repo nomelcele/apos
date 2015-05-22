@@ -1,11 +1,15 @@
 package action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import vo.StaffVO;
+import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 import controller.ActionForward;
+import dao.StaffDao;
 
 public class SWorkAction implements Action{
 
@@ -23,6 +27,10 @@ public class SWorkAction implements Action{
 			url="sh_workTerm.jsp";
 		} else if(subcmd.equals("tel")){
 			url="sh_workTel.jsp";
+			String name=request.getParameter("name");
+			System.out.println("»Æ¿Œ");
+			ArrayList<StaffVO> list = StaffDao.getDao().getList();
+			request.setAttribute("list",list);
 		}
 		return new ActionForward(url, false);
 	}
