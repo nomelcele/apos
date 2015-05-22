@@ -42,7 +42,7 @@ public class SMemberAction implements Action {
 			Map<String, Integer> map = pageProcess(request, 0);
 			String name= request.getParameter("name");
 			/////////////////////////////////////////////////
-			ArrayList<MemVO>list = ShDao.getDao().getList(map,name);
+			ArrayList<MemVO>list = ShDao.getDao().getListMember(map,name);
 			request.setAttribute("list", list);
 		}
 		return new ActionForward(url, false);
