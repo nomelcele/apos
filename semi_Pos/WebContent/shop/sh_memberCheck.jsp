@@ -8,7 +8,7 @@
 <!-- 매장의 회원관리 - 회원조회 페이지입니다. -->
 <script src="../js/http.js"></script>
 <script src="../js/json2.js"></script>
-<script src="../js/suggest_pk.js"></script>
+<script src="../js/suggestMem_pk.js"></script>
 <section id="main-content">
 	<section class="wrapper">
 

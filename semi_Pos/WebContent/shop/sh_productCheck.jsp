@@ -6,7 +6,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script src="../js/http.js"></script>
 <script src="../js/json2.js"></script>
-<script src="../js/suggest_pk.js"></script>
+<script src="../js/suggestProduct_pk.js"></script>
 <section id="main-content">
 	<section class="wrapper">
 		<section class="panel">
