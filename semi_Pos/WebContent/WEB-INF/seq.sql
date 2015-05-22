@@ -34,3 +34,4 @@ increment by 1 start with 1;
 
 Create Sequence discount_seq
 increment by 1 start with 1;
+
