@@ -58,8 +58,8 @@
 			document.getElementById("term").submit();
 		} else if(str == "tel"){
 			document.getElementById("tel").submit();
-		} else if(str == "check"){
-			document.getElementById("check").submit();
+		} else if(str == "pcheck"){
+			document.getElementById("pcheck").submit();
 		} else if(str == "move"){
 			document.getElementById("move").submit();
 		} else if(str == "table"){
@@ -125,9 +125,9 @@
 
 
 
-<form method="post" action="sh.apos" id="check">
+<form method="post" action="sh.apos" id="pcheck">
 <input type="hidden" name="cmd" value="sproduct">
-<input type="hidden" name="subcmd" value="check">
+<input type="hidden" name="subcmd" value="pcheck">
 </form>
 
 <form method="post" action="sh.apos" id="move">
@@ -205,7 +205,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="javascript:goUrl('check')">상품조회</a></li>
+                          <li><a class="" href="javascript:goUrl('pcheck')">상품조회</a></li>
                           <li><a class="" href="javascript:goUrl('move')">상품이동요청</a></li>
                       </ul>
                   </li>
