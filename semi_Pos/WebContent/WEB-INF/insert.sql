@@ -283,27 +283,25 @@ insert into member values(
 
 
 
-commit;
 
---=======
-
+--물품 업데이트
 
 
-insert into product values(product_seq.nextVal,'남성 검은색 자켓','15110001',95,'0110','25000',sysdate);
-insert into product values(product_seq.nextVal,'남성 흰색 티셔츠','15210002',95,'0110','12000',sysdate);
-insert into product values(product_seq.nextVal,'남성 흰색 티셔츠','15210005',100,'0110','8000',sysdate);
-insert into product values(product_seq.nextVal,'남성 보라색 셔츠','15110003',105,'0110','16000',sysdate);
-insert into product values(product_seq.nextVal,'남성 검은색 바지','15110004',95,'0110','19000',sysdate);
+insert into product values(1,'남성 검은색 자켓','15110001',95,'0110','25000',sysdate);
+insert into product values(2,'남성 흰색 티셔츠','15210002',95,'0110','12000',sysdate);
+insert into product values(3,'남성 흰색 티셔츠','15210005',100,'0110','8000',sysdate);
+insert into product values(4,'남성 보라색 셔츠','15110003',105,'0110','16000',sysdate);
+insert into product values(5,'남성 검은색 바지','15110004',95,'0110','19000',sysdate);
 
-insert into product values(product_seq.nextVal,'여성 흰색 자켓','15120001',95,'0110','13000',sysdate);
-insert into product values(product_seq.nextVal,'여성 청 베스트','15120002',95,'0110','11000',sysdate);
-insert into product values(product_seq.nextVal,'여성 흰색 티셔츠','15120003',95,'0110','10000',sysdate);
-insert into product values(product_seq.nextVal,'여성 분홍분홍 셔츠','15120005',95,'0110','13000',sysdate);
-insert into product values(product_seq.nextVal,'여성 분홍 바지','15120004',95,'0110','19000',sysdate);
+insert into product values(6,'여성 흰색 자켓','15120001',95,'0110','13000',sysdate);
+insert into product values(7,'여성 청 베스트','15120002',95,'0110','11000',sysdate);
+insert into product values(8,'여성 흰색 티셔츠','15120003',95,'0110','10000',sysdate);
+insert into product values(9,'여성 분홍분홍 셔츠','15120005',95,'0110','13000',sysdate);
+insert into product values(10,'여성 분홍 바지','15120004',95,'0110','19000',sysdate);
 
-insert into product values(product_seq.nextVal,'아기 디지몬 자켓','15130001',95,'0110','19000',sysdate);
-insert into product values(product_seq.nextVal,'아기 뽀로로 티셔츠','15130002',95,'0110','8500',sysdate);
-insert into product values(product_seq.nextVal,'아기 코코몽 바지','15130003',95,'0110','23000',sysdate);
-insert into product values(product_seq.nextVal,'아기 공룡옷','15130004',95,'0110','22000',sysdate);
-insert into product values(product_seq.nextVal,'아기 피카츄옷','15130005',95,'0110','25000',sysdate);
+insert into product values(11,'아기 디지몬 자켓','15130001',95,'0110','19000',sysdate);
+insert into product values(12,'아기 뽀로로 티셔츠','15130002',95,'0110','8500',sysdate);
+insert into product values(13,'아기 코코몽 바지','15130003',95,'0110','23000',sysdate);
+insert into product values(14,'아기 공룡옷','15130004',95,'0110','22000',sysdate);
+insert into product values(15,'아기 피카츄옷','15130005',95,'0110','25000',sysdate);
 commit;
