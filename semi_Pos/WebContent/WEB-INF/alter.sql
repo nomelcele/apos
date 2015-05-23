@@ -28,3 +28,6 @@ increment by 1 start with 1;
 alter table staff MODIFY  staff_position number(10);
 alter table staff add(staff_id varchar(30) constraint staff_staff_id_uq unique);
 alter table staff add(staff_pwd varchar(30));
+
+--05.23product 가격추가
+alter table product add(pro_price number(30));
