@@ -28,7 +28,8 @@
                                       <div class="form">
                                           <form action="notice.apos" class="form-horizontal" id="nboard" method="post">
                                           <input type="hidden" name="cmd" value="bwork">
-                                          <input type="hidden" name="subcmd" value="insert">            
+                                          <input type="hidden" name="subcmd" value="insert">      
+                                          <input type="hidden" name="page" value="1">           
                                           <input type="hidden" name="url" id="url" value="">      
                                               <div class="form-group">
                                                   <div class="col-sm-10">
