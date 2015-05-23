@@ -1,11 +1,14 @@
 package action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import vo.ProductVO;
 import controller.ActionForward;
+import dao.ShDao;
 
 public class SProductAction implements Action{
 
@@ -19,7 +22,11 @@ public class SProductAction implements Action{
 		boolean method= false;
 		if(subcmd.equals("pcheck")){
 			if(childcmd != null && childcmd.equals("search")){
-				System.out.println(childcmd);
+				String name =request.getParameter("name");
+				System.out.println("test"+name);
+				ArrayList<ProductVO>list = ShDao.getDao().getListProduct(name);
+				request.setAttribute("list", list);
+				System.out.println("test");
 			}
 			url="sh_productCheck.jsp";
 		}else if(subcmd.equals("move")){
