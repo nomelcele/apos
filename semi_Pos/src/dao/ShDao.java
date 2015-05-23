@@ -88,14 +88,15 @@ public class ShDao {
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 
 		StringBuffer sql = new StringBuffer();
-		sql.append("select *from(select p.*,s.sto_amount pro_amount from product p,stock s  ");
-		sql.append("where p.pro_num=s.sto_pronum  and (p.pro_num like '?' or p.pro_code like '?')and s.sto_shopnum='1')");
+		sql.append("select *from(select distinct p.pro_num pp, p.*,s.sto_amount pro_amount from product p,stock s  ");
+		sql.append("where p.pro_num=s.sto_pronum  and (p.pro_name like ? or p.pro_code like ?)and s.sto_shopnum='1')ORDER BY 1");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
 			String sqlcheck= check+"%";
 			pstmt.setString(1, sqlcheck);
 			pstmt.setString(2, sqlcheck);
+			System.out.println(sqlcheck);
 			//pstmt.setString(3, shopnum);
 			rs = pstmt.executeQuery();
 			while(rs.next()){
@@ -103,9 +104,10 @@ public class ShDao {
 				v.setPro_num(rs.getInt("pro_num"));
 				v.setPro_name(rs.getString("pro_name"));
 				v.setPro_price(rs.getInt("pro_price"));
-				v.setPro_code(rs.getString("pro_name"));
-				v.setPro_size(rs.getInt("pro_name"));
+				v.setPro_code(rs.getString("pro_code"));
+				v.setPro_size(rs.getInt("pro_size"));
 				v.setPro_amount(rs.getInt("pro_amount"));
+				v.setPro_img(rs.getString("pro_img"));
 				//v.setMem
 //				BoardVO v = new BoardVO();
 //				v.setTitle(rs.getString("BO_SUB"));
