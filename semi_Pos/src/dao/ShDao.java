@@ -10,7 +10,9 @@ import java.util.HashSet;
 import java.util.Map;
 
 
+
 import vo.MemVO;
+import vo.ProductVO;
 import conn.MyJndiContext;
 
 public class ShDao {
@@ -79,30 +81,31 @@ public class ShDao {
 		return list;
 	}
 	
-	public ArrayList<MemVO> getListProduct(String check) {
+	public ArrayList<ProductVO> getListProduct(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		ArrayList<MemVO> list = new ArrayList<MemVO>();
+		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 
 		StringBuffer sql = new StringBuffer();
-		sql.append("select * from (select rownum r_num, a.* from (");
-		sql.append("select * from member where mem_name=? or mem_tel=?"
-				+ "order by mem_NUM desc) a");
+		sql.append("select *from(select p.*,s.sto_amount pro_amount from product p,stock s  ");
+		sql.append("where p.pro_num=s.sto_pronum  and (p.pro_num like '?' or p.pro_code like '?')and s.sto_shopnum='1')");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, check);
-			pstmt.setString(2, check);
+			String sqlcheck= check+"%";
+			pstmt.setString(1, sqlcheck);
+			pstmt.setString(2, sqlcheck);
+			//pstmt.setString(3, shopnum);
 			rs = pstmt.executeQuery();
 			while(rs.next()){
-				MemVO v= new MemVO();
-				v.setMem_num(rs.getInt("mem_num"));
-				v.setMem_name(rs.getString("mem_name"));
-				v.setMem_tel(rs.getString("mem_tel"));
-				v.setMem_addr(rs.getString("mem_addr")+rs.getString("mem_deaddr"));
-				v.setMem_date(rs.getString("mem_date"));
-				v.setMem_email(rs.getString("mem_email"));
+				ProductVO v= new ProductVO();
+				v.setPro_num(rs.getInt("pro_num"));
+				v.setPro_name(rs.getString("pro_name"));
+				v.setPro_price(rs.getInt("pro_price"));
+				v.setPro_code(rs.getString("pro_name"));
+				v.setPro_size(rs.getInt("pro_name"));
+				v.setPro_amount(rs.getInt("pro_amount"));
 				//v.setMem
 //				BoardVO v = new BoardVO();
 //				v.setTitle(rs.getString("BO_SUB"));
