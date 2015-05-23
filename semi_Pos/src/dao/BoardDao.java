@@ -151,6 +151,7 @@ public class BoardDao {
 				v.setWriter(rs.getString("bo_writer"));
 				v.setContent(rs.getString("bo_cont"));
 				v.setRegdate(rs.getString("bo_date"));
+				v.setPath("..\\upload\\"+rs.getString("bo_img"));
 				System.out.println(v.getRegdate());
 			}
 		} catch (SQLException e) {

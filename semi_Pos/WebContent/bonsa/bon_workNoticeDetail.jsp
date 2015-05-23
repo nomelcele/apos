@@ -37,7 +37,7 @@
                         <div class="col-lg-10">
                         <textarea name="" id="" class="form-control" cols="30" rows="5" readonly="readonly">${v.content}</textarea>
                          </div>
-
+					<img src="${v.path}" style="width: 50px;">
                      </div>
                      <div class="col-sm-10" style="margin-left: 200px;">
                         <table class="table">
