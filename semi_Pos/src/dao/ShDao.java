@@ -22,7 +22,7 @@ public class ShDao {
 		}
 		return dao;
 	}
-	// 맴버 정보를 디비에서 빼옴 검색한 내용에 맞게 
+	// 맴버 정보를 디비에서 빼옴 검색한 내용에 맞게  
 	public ArrayList<MemVO> getListMember(Map<String, Integer> map,String name) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -41,6 +41,59 @@ public class ShDao {
 			pstmt.setString(2, name);
 			pstmt.setInt(3, map.get("begin"));
 			pstmt.setInt(4, map.get("end"));
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				MemVO v= new MemVO();
+				v.setMem_num(rs.getInt("mem_num"));
+				v.setMem_name(rs.getString("mem_name"));
+				v.setMem_tel(rs.getString("mem_tel"));
+				v.setMem_addr(rs.getString("mem_addr")+rs.getString("mem_deaddr"));
+				v.setMem_date(rs.getString("mem_date"));
+				v.setMem_email(rs.getString("mem_email"));
+				//v.setMem
+//				BoardVO v = new BoardVO();
+//				v.setTitle(rs.getString("BO_SUB"));
+//				v.setNo(rs.getInt("BO_NUM"));
+//				v.setWriter(rs.getString("BO_WRITER"));
+//				v.setRegdate(rs.getString("BO_DATE"));
+//				v.setHit(rs.getInt("BO_HIT"));
+//				v.setPath(rs.getString("BO_IMG"));
+//				v.setGroupno(rs.getInt("BO_BONNUM"));
+				list.add(v);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+				if(rs!=null)
+					rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+	
+	public ArrayList<MemVO> getListProduct(String check) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<MemVO> list = new ArrayList<MemVO>();
+
+		StringBuffer sql = new StringBuffer();
+		sql.append("select * from (select rownum r_num, a.* from (");
+		sql.append("select * from member where mem_name=? or mem_tel=?"
+				+ "order by mem_NUM desc) a");
+		try {
+			con = MyJndiContext.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, check);
+			pstmt.setString(2, check);
 			rs = pstmt.executeQuery();
 			while(rs.next()){
 				MemVO v= new MemVO();
@@ -121,7 +174,7 @@ public class ShDao {
 		}
 		return list;
 	}
-	
+	//suggest고객 정보를 이름과 전화번호로 뽑는다~
 	public ArrayList<String> suggestListMember(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
