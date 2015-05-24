@@ -48,7 +48,6 @@
 	});
 </script>
 <body class="login-img3-body">
-	
 	<div id="modal1" class="modal fade">
 		<div class="modal-dialog" style="width: 400px; text-align: center;">
 			<div class="modal-content"></div>
@@ -68,6 +67,8 @@
 				<div>
 				<!-- body -->
 				<form method="post" action="#" name="checkhot" id="checkhot">
+				<input type="hidden">
+				<input type="hidden">
 					<div style="width: 100%;">
 						<div class="modal-body2">
 							E-mail:<input type="text" class="form-control4 block" name="name" placeholder="name" autofocus>
