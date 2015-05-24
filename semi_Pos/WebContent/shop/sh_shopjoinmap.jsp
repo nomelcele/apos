@@ -217,13 +217,15 @@
     	   if (status === daum.maps.services.Status.OK) {
     	
     	      coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
-    	
+    	      document.getElementById("lat").value = result.addr[0].lat;
+       		  document.getElementById("lng").value = result.addr[0].lng;
     	      // 결과값으로 받은 위치를 마커로 표시합니다
     	      var marker = new daum.maps.Marker({
     	          map: map,
     	          position: coords
     	      });
     	      for ( var i=0; i<result.length; i++ ) {
+    	    	  
     		      var placePosition = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng),
     		      marker = addMarker(placePosition, i), 
     		      itemEl = getListItem(i, result[i], marker); // 검색 결과 항목 Element를 생성합니다

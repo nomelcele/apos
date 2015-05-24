@@ -317,6 +317,13 @@
 			document.getElementById("join").submit();
 		}
 	}
+	function resetFormElement(e) {
+	      e.wrap('<form>').closest('form').get(0).reset(); 
+	      //리셋하려는 폼양식 요소를 폼(<form>) 으로 감싸고 (wrap()) , 
+	      //요소를 감싸고 있는 가장 가까운 폼( closest('form')) 에서 Dom요소를 반환받고 ( get(0) ),
+	      //DOM에서 제공하는 초기화 메서드 reset()을 호출
+	      e.unwrap(); //감싼 <form> 태그를 제거
+	}
 	$(function(){
 		$('#changeMapModal').click(function(){
 			$('.showc').show();	
@@ -327,14 +334,31 @@
 			resetFormElement($('.modal-body'));
 			$('#map').css('display','none');
 		});
+		$('#selfimg').change(function(){
+			//확장자.기준으로 다음요소를 선택해서 소문자로 변경한 후에 ext에 저장한다.
+			// pop가져오는 명령, toLowerCase 소문자로...
+			var ext = $(this).val().split('.').pop().toLowerCase();
+			//alert(ext)
+			
+			//배열에 추출한 확장자가 존재하는지 체크
+			//alert($.inArray(ext, ['gif','png','jpg','jpeg']));
+			if($.inArray(ext, ['gif','png','jpg','jpeg'])==-1){ //있으면 1 없으면 -1
+				resetFormElement($(this));//폼 초기화
+				window.alert('이미지 파일이 아닙니다! (gif, png, jpg, jpeg 만 업로드 가능합니다.)')
+			}else{
+				var file = $(this).prop("files")[0]; //넘어오는 값이 files라는 배열의 형태로 불러옴
+				//file경로는 file://경로 이경로는 이미지 태그가 표현하지 못함.
+				var blobURL = window.URL.createObjectURL(file);
+				
+				$('#selfimgtarget img').attr('src', blobURL).css('width', '100');
+				$('#selfimgtarget').slideDown(); //업로드한 이미지 미리보기
+			}
+		});
+		$('#crnum').css('value','${request.crnum}');
+		$('#hotkey').css('value','${requst.hotkey}');
+		
 	});
-	function resetFormElement(e) {
-	      e.wrap('<form>').closest('form').get(0).reset(); 
-	      //리셋하려는 폼양식 요소를 폼(<form>) 으로 감싸고 (wrap()) , 
-	      //요소를 감싸고 있는 가장 가까운 폼( closest('form')) 에서 Dom요소를 반환받고 ( get(0) ),
-	      //DOM에서 제공하는 초기화 메서드 reset()을 호출
-	      e.unwrap(); //감싼 <form> 태그를 제거
-	}
+	
 </script>
 <form method="post" action="sh.apos" id="join">
 	<input type="hidden" name="cmd" value="sjoin"> 
@@ -376,7 +400,16 @@
                                   <input type="hidden" name="cmd" value="sjoin">
                                   <input type="hidden" name="subcmd" value="shopinsert">
                                   
-                                  
+                                  	  <div class="form-group ">
+                                          <label for="cSelfImg" class="control-label col-lg-2"> Self_IMG <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                          	  <div style="width: 124px; height: 164px; border: 1px solid black;" >
+                                          		  <div class="form-contro" style="width: 102px; height: 142px; margin: auto;" id="selfimgtarget"><img src="../img/selfimg_basic.PNG"></div>
+                                          	  </div>
+                                          		  <input class="form-control5" type="file" id="selfimg" name="selfimg" style="display: inline;">
+                                          </div>
+                                      </div>
+                                      
                                       <div class="form-group ">
                                           <label for="cId" class="control-label col-lg-2"> ID <span class="required">*</span></label>
                                           <div class="col-lg-10">
@@ -407,16 +440,16 @@
                                       
                                       
                                       <div class="form-group ">
-                                          <label for="ctel" class="control-label col-lg-2">연락처 <span class="required">*</span></label>
+                                          <label for="ctel" class="control-label col-lg-2">Tel <span class="required">*</span></label>
                                           <div class="col-lg-10">
 	                                          <select style="width: 8%" class="form-control">
 	                                          		<option>SKT</option>
 	                                          		<option>KT</option>
 	                                          		<option>LG</option>
 	                                          </select>-
-	                                          <input style="width: 7%" class="form-control" id="tel1" name="tel1" minlength="5" type="tel" required />-
-	                                          <input style="width: 7%" class="form-control" id="tel2" name="tel2" minlength="5" type="tel" required />-
-	                                          <input style="width: 7%" class="form-control" id="tel3" name="tel3" minlength="5" type="tel" required />
+	                                          <input style="width: 7%" class="form-control" id="tel1" name="tel1" minlength="3" type="tel" required />-
+	                                          <input style="width: 7%" class="form-control" id="tel2" name="tel2" minlength="4" type="tel" required />-
+	                                          <input style="width: 7%" class="form-control" id="tel3" name="tel3" minlength="4" type="tel" required />
                                           </div>
                                       </div>
                                       
@@ -440,11 +473,19 @@
 										  <div class="col-lg-10">
 							      				<input style="display: none" class="form-control3 showc" type="text" id="sample4_roadAddress_1" placeholder="도로명주소" name="adr3_1">
 							      				<input style="display: none" class="form-control3 showc" type="text" id="sample4_jibunAddress_1" placeholder="지번주소" name="adr4_1">
-							      				<span id="guide" style="color:#999"></span>
 	                                      </div>
                                       </div>
                                       
-                                                                            
+                                      <div class="form-group "style="display: none">		
+						    		  	<label for="cadrr" class="control-label col-lg-2 showc" style="display: none">좌표<span class="required" style="display: none">*</span></label>
+										  <div class="col-lg-10">
+							      				<input style="display: none" class="form-control3 " type="text" id="lat" placeholder="lat" name="lat">
+							      				<input style="display: none" class="form-control3 " type="text" id="lng" placeholder="lng" name="lng">
+							      				<input style="display: none" class="form-control3 " type="text" id="crnum" placeholder="crnum" name="crnum">
+							      				<input style="display: none" class="form-control3 " type="text" id="hotkey" placeholder="hotkey" name="hotkey">
+							      				
+	                                      </div>
+                                      </div>
                                       
                                       <div class="form-group">
                                           <div class="col-lg-offset-2 col-lg-10">
