@@ -20,6 +20,8 @@ public ActionForward execute(HttpServletRequest request,
 		url="bon_productSalesCheck.jsp";
 	}else if(subcmd.equals("outletsch")){
 		url="bon_outletSalesCheck.jsp";
+	}else if(subcmd.equals("termsch")){
+		url="bon_termSalesCheck.jsp";
 	}
 	return new ActionForward(url, false);
 }
