@@ -327,10 +327,12 @@
 	$(function(){
 		$('#changeMapModal').click(function(){
 			$('.showc').show();	
+			// modal-body class 부분의 input type을 초기화 시키기
 			resetFormElement($('.modal-body'));
 			$('#map').css('display','none');
 		});
 		$('#closeMapModal').click(function(){
+			// modal-body class 부분의 input type을 초기화 시키기
 			resetFormElement($('.modal-body'));
 			$('#map').css('display','none');
 		});
