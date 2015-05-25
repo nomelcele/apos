@@ -1,10 +1,14 @@
 package action;
 
 import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import vo.ShopVO;
 import controller.ActionForward;
+import dao.ShopDao;
+import dao.ShopHotkeyDao;
 
 public class SShopAction implements Action {
 	@Override
@@ -62,6 +66,28 @@ public class SShopAction implements Action {
 			vo.setImg(img);
 			vo.setCrnum(crnum);
 			
+			ShopDao.getDao().shopjoin(vo);
+			
+		}else if(subcmd.equals("shopgethotkey")){
+			// hotkey 발급시 
+			url="sh_login.jsp";
+			String name = request.getParameter("name");
+			String crnum = request.getParameter("crnum");
+			String email = request.getParameter("email");
+			System.out.println("---여기는 gethotkey영역 ---");
+			System.out.println("name : "+name);
+			System.out.println("crnum : "+crnum);
+			System.out.println("email : "+email);
+			
+			ShopHotkeyDao vo = new ShopHotkeyDao();
+			
+			vo.setName(name);
+			vo.setCrnum(crnum);
+			vo.setEmail(email);
+			
+			ShopDao.getDao().shoprequesthotkey(vo);;
+			
+			method=false;
 		}
 		return new ActionForward(url, method);
 	}
