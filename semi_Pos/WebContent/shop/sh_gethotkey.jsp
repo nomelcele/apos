@@ -6,6 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 </head>
+<script type="text/javascript">
+		$(function(){
+			$('#requesthotbtn').click(function(){
+				resetFormElement($('.modal-body2'));
+			});
+		});
+</script>
 <body>
 	<!-- header -->
 	<div class="modal-header">
@@ -16,7 +23,10 @@
 	</div>
 	
 	<!-- body -->
-	<form method="post" action="#" name="requesthot" id="requesthot">
+	<form method="post" action="sh.apos" name="requesthot" id="requesthot">
+		<input type="hidden" name="cmd" value="sjoin">
+		<input type="hidden" name="subcmd" value="shopgethotkey">
+		
 		<div style="width: 100%; height: 200px; margin: auto;">
 			<div class="modal-body2">성 명:
 			<input type="text" class="form-control4" name="name" placeholder="name" autofocus></div>
@@ -28,7 +38,7 @@
 		<!-- Footer -->
 		<div class="modal-footer">
 		승인 요청이 수락되면 mail로 hotkey를 발송해드립니다.
-			<button type="submit" class="btn btn-default" data-dismiss="modal">요청</button>
+			<input id="requesthotbtn" type="submit" class="btn btn-default" value="요청">
 		</div>
 	</form>
 </body>
