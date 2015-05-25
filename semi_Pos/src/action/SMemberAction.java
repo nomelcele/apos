@@ -1,3 +1,4 @@
+
 package action;
 
 import java.io.IOException;
@@ -44,6 +45,11 @@ public class SMemberAction implements Action {
 			/////////////////////////////////////////////////
 			ArrayList<MemVO>list = ShDao.getDao().getListMember(map,name);
 			request.setAttribute("list", list);
+		}else if(subcmd != null && subcmd.equals("detail")){
+			int num=Integer.parseInt(request.getParameter("num"));
+			MemVO v= ShDao.getDao().getDetail(num);
+			request.setAttribute("v", v);
+			url="sh_memberDetail.jsp";
 		}
 		return new ActionForward(url, false);
 	}
