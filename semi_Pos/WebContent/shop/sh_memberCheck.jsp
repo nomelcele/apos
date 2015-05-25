@@ -66,9 +66,12 @@
 																<th><i class="icon_calendar"></i> 가입날짜</th>
 															</tr>
 															<c:forEach var="stList" items="${list}">
+															<form id="" action="sh.apos" method="post">
+															<input type="hidden" id="cmd" name="cmd" value="smember">
+															</form>
 																<tr>
-																	<td>${stList.mem_num}</td>
-																	<td>${stList.mem_name}</td>
+																	<td>${stList.mem_num}</td>										
+																	<td><a href="sh.apos?cmd=smember&subcmd=detail&num=${stList.mem_num}&page=1">${stList.mem_name}</a></td>
 																	<td>${stList.mem_email}</td>
 																	<td>${stList.mem_addr}</td>
 																	<td>${stList.mem_tel}</td>
