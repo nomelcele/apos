@@ -11,6 +11,8 @@ import java.util.Map;
 
 
 
+
+import vo.BoardVO;
 import vo.MemVO;
 import vo.ProductVO;
 import conn.MyJndiContext;
@@ -262,6 +264,48 @@ public class ShDao {
 			}
 
 		}
+	}
+	
+	public MemVO getDetail(int no){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		StringBuffer sql = new StringBuffer();
+		
+		sql.append("select *");
+		sql.append("from member where mem_num=?");
+		MemVO v = new MemVO();
+		try {
+			con = MyJndiContext.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, no);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				v.setMem_num(rs.getInt("mem_num"));
+				v.setMem_name(rs.getString("mem_name"));
+				v.setMem_tel(rs.getString("mem_tel"));
+				v.setMem_addr(rs.getString("mem_addr")+rs.getString("mem_deaddr"));
+				v.setMem_date(rs.getString("mem_date"));
+				v.setMem_email(rs.getString("mem_email"));
+				v.setMem_mileage(rs.getInt("mem_mileage"));
+				System.out.println(v.getMem_name());
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				
+				if  (rs != null) rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return v;
 	}
 
 }
