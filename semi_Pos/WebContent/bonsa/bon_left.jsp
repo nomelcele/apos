@@ -68,6 +68,8 @@
 			document.getElementById("productsch").submit();
 		}else if(str == "outletsch"){
 			document.getElementById("outletsch").submit();
+		}else if(str == "termsch"){
+			document.getElementById("termsch").submit();
 		}
 	}
 </script>
@@ -123,6 +125,11 @@
 <form method="post" action="bon.apos" id="outletsch">
 <input type="hidden" name="cmd" value="bsales">
 <input type="hidden" name="subcmd" value="outletsch">
+</form>
+
+<form method="post" action="bon.apos" id="termsch">
+<input type="hidden" name="cmd" value="bsales">
+<input type="hidden" name="subcmd" value="termsch">
 </form>
 
       <!--sidebar start-->
@@ -182,6 +189,7 @@
                           <li><a class="" href="javascript:goUrl('brandsch')">브랜드 매출관리</a></li>
                           <li><a class="" href="javascript:goUrl('productsch')">품목별 매출순위</a></li>
                           <li><a class="" href="javascript:goUrl('outletsch')">대리점별 매출순위</a></li>
+                          <li><a class="" href="javascript:goUrl('termsch')">기간별 매출순위</a></li>
                       </ul>
                   </li>
                   
