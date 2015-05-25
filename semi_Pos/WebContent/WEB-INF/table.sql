@@ -106,13 +106,13 @@ references shop(shop_num) on delete cascade,
 constraint sell_sell_memnum_fk foreign key(sell_memnum)
 references member(mem_num) on delete cascade);
 
-
-
 create table hotkey(
 key_num number(10) constraint hotkey_key_num_pk primary key,
+key_name varchar2(30),
 ket_hot number(10),
 key_mail varchar2(30),
-key_crnum number(20) constraint hotkey_key_crnum_uq UNIQUE
+key_crnum number(20) constraint hotkey_key_crnum_uq UNIQUE,
+key_date date
 );
 
 create table stock(

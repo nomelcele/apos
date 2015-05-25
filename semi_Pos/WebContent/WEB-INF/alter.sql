@@ -35,4 +35,4 @@ alter table product add(pro_price number(30));
 alter table staff modify staff_id varchar2(30);
 alter table staff modify staff_pwd varchar2(30);
 
--- 05.25 hotket table 수정(alter 안되서 drop-create함)
+-- 05.25 hotket table 수정
