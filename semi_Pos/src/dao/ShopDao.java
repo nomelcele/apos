@@ -15,13 +15,12 @@ public class ShopDao {
 		return dao;
 	}
 	
-	public void shopjoin(){
+	public void shopjoin(ShopVO vo){
 		Connection con= null;
 		PreparedStatement pstmt = null;
 		try {
 			con=MyJndiContext.getDs();
 			StringBuffer sql= new StringBuffer();
-			ShopVO vo = new ShopVO();
 			//num, name, tel, adr, map_x, map_y, date, mail, master, img, crnum, bon_num, id, pwd
 			sql.append("insert into shop values(");
 			sql.append("shop_seq.nextval,?,?,?,?,?,sysdate,?,?,?,?,1,?,?)");
@@ -49,7 +48,43 @@ public class ShopDao {
 			}
 
 		}
-		
 	}
 	
+	public void shoprequesthotkey(ShopHotkeyDao vo ){
+		Connection con= null;
+		PreparedStatement pstmt = null;
+		try {
+			con=MyJndiContext.getDs();
+			StringBuffer sql= new StringBuffer();
+			int hotkey = createHotkey();
+			// num, hotkey, mail, crnum
+			System.out.println("여기는 HOTkey-DAO 입니다");
+			System.out.println("Hotkey : "+hotkey);
+			System.out.println("Email : "+ vo.getEmail());
+			System.out.println("CRNUM : "+ vo.getCrnum());
+			
+			sql.append("insert into hotkey values(");
+			sql.append("hotkey_seq.nextVal,?,?,?)");
+			pstmt= con.prepareStatement(sql.toString());
+			pstmt.setInt(1, hotkey);
+			pstmt.setString(2, vo.getEmail());
+			pstmt.setString(3, vo.getCrnum());
+			pstmt.executeUpdate();
+			
+		}catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+		}
+	}
+	private int createHotkey(){
+		int hotkey=(int)(Math.random()*666666)+111111;// 0~99까지
+		return hotkey;
+	}
 }
