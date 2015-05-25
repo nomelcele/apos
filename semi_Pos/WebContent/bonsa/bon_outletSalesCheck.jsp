@@ -15,16 +15,22 @@
 				</h3>
 
 
-				<div class="form-group ">
-					<div class="col-lg-2">
-						<input class="form-control" id="sname_ps" name="name"
-							minlength="2" onkeydown="startSuggest();" autocomplete="off"
-							type="text" required />
-						<div id="view"></div>
-					</div>
-					<input class="form-control6" type="submit" id="btn" name="btn"
-						value="조회">
+				<div class="form-group">
+				<div style="margin-left: 10px;">
+				
+				
+					<input id="date_ps" name="name" minlength="2"
+						onkeydown="startSuggest();" autocomplete="off" type="date"
+						required /> ~
+					<input id="date_ps" name="name" minlength="2"
+						onkeydown="startSuggest();" autocomplete="off" type="date"
+						required />
+				
+					<input class="form-control6" style="margin-left: 10px;" type="submit" id="btn" name="btn"
+					value="조회">
+					<div id="view"></div>
 				</div>
+			</div>
 
 
 
@@ -37,6 +43,7 @@
 							<th><i class="icon_pin_alt"></i>???</th>
 							<th><i class="icon_mobile"></i>???</th>
 							<th><i class="icon_calendar"></i> 가입날짜</th>
+							<th><i class="icon_profile"></i>총액</th>
 						</tr>
 						<c:forEach var="stList" items="${list}">
 							<tr>
@@ -54,16 +61,16 @@
 				</table>
 
 
-				<div class="form-group" style="margin-left: 700px;">
-					<label>총액</label>
-					<div class="col-lg-2">
-						<input class="form-control7" id="sname_ps" name="name"
-							minlength="2" onkeydown="startSuggest();" autocomplete="off"
-							type="text" style="margin-left: 120px;" required />
-						<div id="view"></div>
-					</div>
+<!-- 				<div class="form-group" style="margin-left: 700px;"> -->
+<!-- 					<label>총액</label> -->
+<!-- 					<div class="col-lg-2"> -->
+<!-- 						<input class="form-control7" id="sname_ps" name="name" -->
+<!-- 							minlength="2" onkeydown="startSuggest();" autocomplete="off" -->
+<!-- 							type="text" style="margin-left: 120px;" required /> -->
+<!-- 						<div id="view"></div> -->
+<!-- 					</div> -->
 						
-				</div>
+<!-- 				</div> -->
 
 
 
