@@ -110,9 +110,9 @@ references member(mem_num) on delete cascade);
 
 create table hotkey(
 key_num number(10) constraint hotkey_key_num_pk primary key,
-ket_hot number(10) ,
+ket_hot number(10),
 key_mail varchar2(30),
-key_crnum number(20)
+key_crnum number(20) constraint hotkey_key_crnum_uq UNIQUE
 );
 
 create table stock(
