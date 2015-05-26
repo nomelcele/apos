@@ -92,7 +92,7 @@ $(function(){
 									class="control-label col-lg-2">상세주소</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="deaddr"
-										name="deaddr" minlength="2" type="text" value="${v.mem_deaddr }"  readonly="readonly"/>
+										name="deaddr" minlength="2" type="text" value="${v.mem_deaddr}"  readonly="readonly"/>
 								</div>
 							</div>
 							<br />
