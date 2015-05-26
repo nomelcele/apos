@@ -18,7 +18,7 @@ public class SMangAction implements Action{
 		if(subcmd.equals("regis")){
 			url="sh_smangRegis.jsp";
 		}else if(subcmd.equals("exchRefu")){
-			url="sh_smangExchRefu.jsp";
+			url="sh_smangExchTefu.jsp";
 		}
 		return new ActionForward(url, false);
 	}
