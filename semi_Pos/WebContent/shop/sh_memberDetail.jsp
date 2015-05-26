@@ -72,7 +72,7 @@ $(function(){
 									<input class="form-control" style="width: 260px;" id="memtel"
 										name="memtel" minlength="2" type="text" value="${v.mem_tel }"  readonly="readonly"/>
 										
-		s						</div>
+							</div>
 								
 							</div>
 							<br />
