@@ -18,6 +18,20 @@
 				</h3>
 			</div>
 		</div>
+		<button type="submit" class="btn btn-primary"
+												style="margin-left: 100px;">1일</button>
+												
+												<button type="submit" class="btn btn-primary"
+												style="margin-left: 100px;">3개월</button>
+												
+												<button type="submit" class="btn btn-primary"
+												style="margin-left: 100px;">6개월</button>
+												
+												<button type="submit" class="btn btn-primary"
+												style="margin-left: 100px;">1년</button>
+												
+												<button type="submit" class="btn btn-primary"
+												style="margin-left: 100px;">3년</button>
 
 
 
@@ -59,6 +73,12 @@ function drawVisualization() {
 
 
 
+
+
+
+
+
+
 <!-- 파이형태 차트 -->
 
 
@@ -72,7 +92,7 @@ function drawVisualization() {
         var data = google.visualization.arrayToDataTable([
           ['Task', 'Hours per Day'],
           ['Work',     11],
-          ['Eat',      2],
+          ['Eat',      7],
           ['Commute',  2],
           ['Watch TV', 2],
           ['Sleep',    7]
@@ -90,6 +110,8 @@ function drawVisualization() {
   </head>
   <body>
     <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    
+    
   </body>
 </html>
 
