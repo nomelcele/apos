@@ -288,7 +288,7 @@ public class ShDao {
 				v.setMem_date(rs.getString("mem_date"));
 				v.setMem_email(rs.getString("mem_email"));
 				v.setMem_mileage(rs.getInt("mem_mileage"));
-				System.out.println(v.getMem_name());
+				System.out.println("getdetail: "+v.getMem_name());
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -297,6 +297,45 @@ public class ShDao {
 			try {
 				
 				if  (rs != null) rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return v;
+	}
+	
+	public MemVO getsecede(int no){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		StringBuffer sql = new StringBuffer();
+		/*update member set 
+mem_name='서경연님' ,
+mem_tel='010-7664-0585',
+mem_addr='야탑동',
+mem_mileage='1000'
+where mem_num='3';*/
+		sql.append("update member set");
+		sql.append("mem_tel=?,mem_addr=?,mem_mileage=?");
+		sql.append("where mem_num=?");
+		MemVO v = new MemVO();
+		try {
+			con = MyJndiContext.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, v.getMem_tel());
+			pstmt.setString(2, v.getMem_addr());
+			pstmt.setInt(3, v.getMem_mileage());
+			pstmt.setInt(4, no);
+			pstmt.executeUpdate();
+			System.out.println("num :"+no);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
 				if (pstmt != null)
 					pstmt.close();
 				if (con != null)
