@@ -1,11 +1,14 @@
+
 package action;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import util.MyMap;
 import vo.StaffVO;
 import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 import controller.ActionForward;
@@ -25,14 +28,32 @@ public class SWorkAction implements Action{
 			url="sh_workItr.jsp";
 		} else if(subcmd.equals("term")){
 			url="sh_workTerm.jsp";
-		} else if(subcmd.equals("tel")){
+		} else if(subcmd.equals("tel")){			
 			url="sh_workTel.jsp";
-			String name=request.getParameter("name");
+			String name = request.getParameter("name");
 			System.out.println("»Æ¿Œ");
-			ArrayList<StaffVO> list = StaffDao.getDao().getList();
+			ArrayList<StaffVO> list = StaffDao.getDao().suggestList(name);
 			request.setAttribute("list",list);
 		}
 		return new ActionForward(url, false);
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
