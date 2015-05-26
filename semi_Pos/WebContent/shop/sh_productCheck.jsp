@@ -9,40 +9,54 @@
 <script src="../js/suggestProduct_pk.js"></script>
 
 <script>
-		function Product(str){
-			var key = "key="+encodeURIComponent(str);
-			alert(key);
-			sendRequest("sh_AjaxProductSearch.jsp", key, res2, "post");
-		}
-		
-		var jsonObj = null;
-		
-		function res2() {
 
-			if (xhr.readyState == 4) {
-				if (xhr.status == 200) {
-					alert("succes");
-					document.getElementById("view_product").style.display = 'view';
-					//var response = xhr.responseText;
-					//jsonObj = JSON.parse(response);
-					
-					//viewTable();
-				} else {
-					document.getElementById("view_product").style.display = 'none';
-				}
+	var genderKey = null;
+	function Product(str) {
+		genderKey =str;
+		var key = "key=" + encodeURIComponent(str);
+		
+		sendRequest("sh_AjaxProductSearch.jsp", key, res2, "post");
+	}
+
+	var jsonObj = null;
+
+	function res2() {
+
+		if (xhr.readyState == 4) {
+			if (xhr.status == 200) {
+
+				if(genderKey ==1){
+				document.getElementById("view_product").style.display = 'view';
+				var response = xhr.responseText;
+				var str = response.trim();
+
+				document.getElementById("view_product").innerHTML = str;
+				} else if(genderKey ==2){
+					document.getElementById("view_product2").style.display = 'view';
+					var response = xhr.responseText;
+					var str = response.trim();
+	
+					document.getElementById("view_product2").innerHTML = str;
+					}else if(genderKey ==3){
+						document.getElementById("view_product3").style.display = 'view';
+						var response = xhr.responseText;
+						var str = response.trim();
+			
+						document.getElementById("view_product3").innerHTML = str;
+						}
+				//innerHTMLviewTable2();
+			} else {
+				document.getElementById("view_product").style.display = 'none';
 			}
 		}
-		function viewTable2() {
-			var vD = document.getElementById("view_product");
-			var htmlTxt = "<table>";
-			for (var i = 0; i < jsonObj.length; i++) {
-				htmlTxt += "<tr><td style='cursor:pointer;'onmouseover='this.style.background=\"silver\"'onmouseout='this.style.background=\"white\"' onclick='select("
-						+ i + ")'>" + jsonObj[i] + "</td></tr>";
-			}
-			htmlTxt += "</table>";
-			vD.innerHTML = htmlTxt;
-			vD.style.display = "block";
-		}
+	}
+	function viewTable2() {
+		var vD = document.getElementById("view_product");
+		var htmlTxt = jsonObj;
+
+		vD.innerHTML = response;
+		vD.style.display = "block";
+	}
 </script>
 <%-- 전체보기 위한 form --%>
 <!-- <form id="all"> -->
@@ -98,6 +112,7 @@
 										onkeydown="startSuggest();" autocomplete="off" type="text"
 										required />
 
+									<div id="view"></div>
 								</div>
 								<input class="form-control6" type="submit" id="btn1" name="btn1"
 									value="조회">
@@ -107,8 +122,8 @@
 						<ul class="nav nav-tabs">
 							<li class=""><a data-toggle="tab" href="#search" id="ajevery">search</a></li>
 							<li class="" id="ajman"><a data-toggle="tab" href="#man"onclick="javascript:Product(1)">man</a></li>
-							<li class=""><a data-toggle="tab" href="#woman">woman</a></li>
-							<li class=""><a data-toggle="tab" href="#kids">kids</a></li>
+							<li class=""><a data-toggle="tab" href="#woman" onclick="javascript:Product(2)">woman</a></li>
+							<li class=""><a data-toggle="tab" href="#kids" onclick="javascript:Product(3)">kids</a></li>
 						</ul>
 					</header>
 
@@ -169,21 +184,7 @@
 											</tr>
 										</thead>
 										<tbody id="view_product">
-											<%-- 반복 --%>
 											
-											<c:forEach var="stList" items="${list2}">
-												<tr>
-													<th>${stList.pro_num}</th>
-													<th>${stList.pro_code}</th>
-													<th>${stList.pro_name}</th>
-													<th>${stList.pro_size}</th>
-													<th>${stList.pro_amount}</th>
-													<th>${stList.pro_img}</th>
-
-												</tr>
-											</c:forEach>
-
-											<%-- 반복 --%>
 										</tbody>
 									</table>
 
@@ -207,18 +208,8 @@
 												<th>사진</th>
 											</tr>
 										</thead>
-										<tbody>
-											<%-- 반복 --%>
-											<tr>
-												<th>2</th>
-												<th>나이키운동화</th>
-												<th>사이즈많음</th>
-												<th>수량없어</th>
-												<th>판매가</th>
-												<th>사진</th>
-											</tr>
-
-											<%-- 반복 --%>
+										<tbody id="view_product2">
+											
 										</tbody>
 									</table>
 
@@ -242,18 +233,8 @@
 												<th>사진</th>
 											</tr>
 										</thead>
-										<tbody>
-											<%-- 반복 --%>
-											<tr>
-												<th>2</th>
-												<th>나이키운동화</th>
-												<th>사이즈많음</th>
-												<th>수량없어</th>
-												<th>판매가</th>
-												<th>사진</th>
-											</tr>
-
-											<%-- 반복 --%>
+										<tbody id="view_product3">
+											
 										</tbody>
 									</table>
 
