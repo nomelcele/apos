@@ -7,7 +7,7 @@
  	
  	
  	
- 	<div><img src="../img/bg-48.jpg"; width="1180"; align="center"></div>
+ 	<div><img src="../img/bg-50.jpg"; width="1180"; align="center"></div>
  </br>
  
 			<table align="center">
