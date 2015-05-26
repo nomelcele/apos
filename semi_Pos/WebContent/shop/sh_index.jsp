@@ -5,7 +5,7 @@
  <section id="main-content">
  	<section class="wrapper">
  	<div style=background-color:#766C6C;> 
- 		<div><img src="../img/bg-35.jpg"; width="1157";align="center"></div> 
+ 		<div><img src="../img/bg-35.jpg"; width="1180";align="center"></div> 
 
  		</div>
 
