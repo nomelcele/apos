@@ -265,7 +265,7 @@ table tr th { color: #688a7e;}
     width: 196px;
     height: 100%;
     position: fixed;
-    background: #766C6C;
+    background: #FFFFFF;
 }
 
 .nav-collapse.collapse {
@@ -345,10 +345,10 @@ ul.sidebar-menu li a span{
 }
 
 ul.sidebar-menu li a{
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     display: block;
-    padding: 15px 0 15px 10px;
+    padding: 20px 0 15px 10px;
     font-size: 16px;
     font-weight: 300;
     outline: none;
@@ -365,7 +365,7 @@ ul.sidebar-menu li a{
     top: 2px;
 }*/
 ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #766C6C;
+    background: #FFFFFF;
     color: #fff;
     display: block;
     /*border-radius: 4px;
