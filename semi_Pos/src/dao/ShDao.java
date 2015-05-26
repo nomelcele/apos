@@ -27,19 +27,24 @@ public class ShDao {
 		return dao;
 	}
 	// 맴버 정보를 디비에서 빼옴 검색한 내용에 맞게  
-	public ArrayList<MemVO> getListMember(String name) {
+	public ArrayList<MemVO> getListMember(Map<String, Integer> map,String name) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		ArrayList<MemVO> list = new ArrayList<MemVO>();
 
 		StringBuffer sql = new StringBuffer();
-		sql.append("select * from member where mem_name=? or mem_tel=?");
+		sql.append("select * from (select rownum r_num, a.* from (");
+		sql.append("select * from member where mem_name=? or mem_tel=?"
+				+ "order by mem_NUM desc) a");
+		sql.append(") where r_num between ? and ?");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, name);
 			pstmt.setString(2, name);
+			pstmt.setInt(3, map.get("begin"));
+			pstmt.setInt(4, map.get("end"));
 			rs = pstmt.executeQuery();
 			while(rs.next()){
 				MemVO v= new MemVO();
@@ -344,5 +349,34 @@ where mem_num='3';*/
 		}
 		return v;
 	}
+	public MemVO getsecede(int num){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		StringBuffer sql = new StringBuffer();
+// delete from member where mem_num='22';
+		sql.append("delete from member");
+		sql.append(" where mem_num=?");
+		MemVO v = new MemVO();
+		try {
+			con = MyJndiContext.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return v;
+	}
+
 
 }
