@@ -262,7 +262,7 @@ table tr th { color: #688a7e;}
 /*sidebar navigation*/
 
 #sidebar {
-    width: 196px;
+    width: 180px;
     height: 100%;
     position: fixed;
     background: #FFFFFF;
@@ -527,7 +527,7 @@ ul.sidebar-menu li.active a i {
 .wrapper {
     display: inline-block;
     margin-top: 50px;
-    padding: 15px;
+    padding: 1px;
     width: 100%;
 }
 
@@ -876,7 +876,7 @@ div[data-role="editor-toolbar"] {
 }
 /*----*/
 .page-header {
-  margin: 12px 0 20px;
+  margin: 60px 0 0px;
   border-bottom: none;
   opacity: 0.7;
   text-transform: uppercase;
@@ -1077,8 +1077,8 @@ div[data-role="editor-toolbar"] {
   margin-bottom: 30px;
 }
 .panel .panel-heading {
-  line-height: 34px;
-  padding: 0 15px;
+  line-height: 50px;
+  padding: 7 15px;
   min-height: 34px;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -1153,7 +1153,7 @@ div[data-role="editor-toolbar"] {
   margin: 10px;
 }
 .panel .panel-body {
-  border-width: 1px 1px 2px;
+  border-width: 1px 8px 2px;
   border-style: solid;
   border-top: none;
   border-right-color: #ccc!important;
