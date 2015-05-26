@@ -4,7 +4,7 @@
 <%@include file="sh_left.jsp"%>
 
 <script>
-   function goUrl(str){
+   function goindexterm(str){
       if(str == "term"){
          document.getElementById("term").submit();
       }
@@ -27,7 +27,7 @@
  
 			<table align="center">
 			<tr style="font-size: 1pt">
-			<td><a href="javascript:goUrl('term')">서비스이용약관</a></td> 
+			<td><a href="javascript:goindexterm('term')">서비스이용약관</a></td> 
 			<td>--</td>
 			<td>개인정보취급방침</td>
 			<td>--</td>
