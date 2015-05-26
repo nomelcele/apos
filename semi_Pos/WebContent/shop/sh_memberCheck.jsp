@@ -13,14 +13,14 @@
 	<section class="wrapper">
 
 		<div class="row" style="font-size: 15px;">
-			<div class="col-lg-12">
+			<div class="col-lg-12" style="width: 100%">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 회원조회
 				</h3>
 
-				<div class="row">
+				<div class="row" style="width: 100%">
 					<div class="col-lg-12">
-						<section class="panel">
+						<section class="panel" style="font-size: 8px;">
 							<!--                           <header class="panel-heading"> -->
 							<!--                           </header> -->
 							<div class="panel-body">
@@ -37,7 +37,7 @@
 										<div class="form-group ">
 											<label for="cname" class="control-label col-lg-1">이름
 											</label>
-											<div class="col-lg-2">
+											<div class="col-lg-2" style="margin-left: -5%;">
 												<input class="form-control" id="sname_ps" name="name"
 													minlength="2" onkeydown="startSuggest();"
 													autocomplete="off" type="text" required />
@@ -49,8 +49,8 @@
 
 
 
-										<div class="row">
-											<div class="col-lg-12">
+										<div class="row" style="width: 100%">
+											<div class="col-lg-12" >
 												<section class="panel">
 													<header class="panel-heading"> 회원정보 </header>
 
@@ -58,12 +58,12 @@
 														class="table table-striped table-advance table-hover">
 														<tbody>
 															<tr>
-																<th><i class="icon_profile"></i> 고객번호</th>
-																<th><i class="icon_profile"></i> 이름</th>
-																<th><i class="icon_mail_alt"></i> Email</th>
-																<th><i class="icon_pin_alt"></i> 주소</th>
-																<th><i class="icon_mobile"></i> 핸드폰번호</th>
-																<th><i class="icon_calendar"></i> 가입날짜</th>
+																<th><i class="icon_profile col-lg-2"></i> 고객번호</th>
+																<th><i class="icon_profile col-lg-2"></i> 이름</th>
+																<th><i class="icon_mail_alt col-lg-2"></i> Email</th>
+																<th><i class="icon_pin_alt col-lg-2"></i> 주소</th>
+																<th><i class="icon_mobile col-lg-2"></i> 핸드폰번호</th>
+																<th><i class="icon_calendar col-lg-2"></i> 가입날짜</th>
 															</tr>
 															<c:forEach var="stList" items="${list}">
 															<form id="" action="sh.apos" method="post">
