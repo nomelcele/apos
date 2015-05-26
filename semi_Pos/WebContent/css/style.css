@@ -624,7 +624,8 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     height: 30px;
     background: white url('../img/icons/search-line-icon.png') no-repeat 3px;
     padding-left: 20px;
-    margin-top: 6px;    
+    margin-top: 6px;  
+    margin-left:8px;  
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
