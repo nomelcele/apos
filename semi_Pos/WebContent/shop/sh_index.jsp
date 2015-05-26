@@ -2,6 +2,21 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
+
+<script>
+   function goUrl(str){
+      if(str == "term"){
+         document.getElementById("term").submit();
+      }
+   }
+</script>
+
+<form method="post" action="sh.apos" id="term">
+<input type="hidden" name="cmd" value="swork">
+<input type="hidden" name="subcmd" value="term">
+</form>
+
+
  <section id="main-content">
  	<section class="wrapper">
  	
@@ -12,7 +27,7 @@
  
 			<table align="center">
 			<tr style="font-size: 1pt">
-			<td>서비스이용약관</td> 
+			<td><a href="javascript:goUrl('term')">서비스이용약관</a></td> 
 			<td>--</td>
 			<td>개인정보취급방침</td>
 			<td>--</td>
