@@ -41,39 +41,39 @@
    <script src="../js/charts.js"></script>
    <script src="../js/jquery.slimscroll.min.js"></script>
 <script>
-	function goUrl(str){
-		if(str == "join"){
-			document.getElementById("join").submit();
-		}else if(str == "check"){
-			document.getElementById("check").submit();
-		} else if(str == "change"){
-			document.getElementById("change").submit();
-		} else if(str == "out"){
-			document.getElementById("out").submit();
-		} else if(str == "notice"){
-			document.getElementById("notice").submit();
-		} else if(str == "itr"){
-			document.getElementById("itr").submit();
-		} else if(str == "term"){
-			document.getElementById("term").submit();
-		} else if(str == "tel"){
-			document.getElementById("tel").submit();
-		} else if(str == "pcheck"){
-			document.getElementById("pcheck").submit();
-		} else if(str == "move"){
-			document.getElementById("move").submit();
-		} else if(str == "table"){
-			document.getElementById("table").submit();
-		} else if(str == "rank"){
-			document.getElementById("rank").submit();
-		}
-		else if(str == "regis"){
-			document.getElementById("regis").submit();
-		}
-		else if(str == "exchRefu"){
-			document.getElementById("exchRefu").submit();
-		}
-	}
+   function goUrl(str){
+      if(str == "join"){
+         document.getElementById("join").submit();
+      }else if(str == "check"){
+         document.getElementById("check").submit();
+      } else if(str == "change"){
+         document.getElementById("change").submit();
+      } else if(str == "out"){
+         document.getElementById("out").submit();
+      } else if(str == "notice"){
+         document.getElementById("notice").submit();
+      } else if(str == "itr"){
+         document.getElementById("itr").submit();
+      } else if(str == "term"){
+         document.getElementById("term").submit();
+      } else if(str == "tel"){
+         document.getElementById("tel").submit();
+      } else if(str == "pcheck"){
+         document.getElementById("pcheck").submit();
+      } else if(str == "move"){
+         document.getElementById("move").submit();
+      } else if(str == "table"){
+         document.getElementById("table").submit();
+      } else if(str == "rank"){
+         document.getElementById("rank").submit();
+      }
+      else if(str == "regis"){
+         document.getElementById("regis").submit();
+      }
+      else if(str == "exchRefu"){
+         document.getElementById("exchRefu").submit();
+      }
+   }
 </script>
 
 <form method="post" action="sh.apos" id="join">
@@ -148,30 +148,22 @@
 <input type="hidden" name="subcmd" value="rank">
 </form>
 
-<form method="post" action="sh.apos" id="regis">
+<form method="post" action="sh.apos" id="rank">
 <input type="hidden" name="cmd" value="smang">
-<input type="hidden" name="subcmd" value="regis">
+<input type="hidden" name="subcmd" value="sregi">
 </form>
 
-<form method="post" action="sh.apos" id="exchRefu">
+<form method="post" action="sh.apos" id="rank">
 <input type="hidden" name="cmd" value="smang">
 <input type="hidden" name="subcmd" value="exchRefu">
 </form>
 
       <!--sidebar start-->
       <aside>
-          <div id="sidebar"  class="nav-collapse " style="font-family:'바른나눔고딕'">
+          <div id="sidebar"  class="nav-collapse " style="font-family:'나눔바른고딕 Light'">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
-                 <!--  <li class="active">
-                      <a class="" href="sh_index.jsp">
-                          <i class="icon_house_alt"></i>
-                          <span>Main</span>
-                          
-                      </a>
-                  </li>
-                   -->
-                  
+               
                   
                     <li class="sub-menu">
                       <a href="javascript:;" class="">
