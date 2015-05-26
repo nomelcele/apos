@@ -163,12 +163,14 @@
           <div id="sidebar"  class="nav-collapse " style="font-family:'바른나눔고딕'">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
-                  <li class="active">
+                 <!--  <li class="active">
                       <a class="" href="sh_index.jsp">
                           <i class="icon_house_alt"></i>
                           <span>Main</span>
+                          
                       </a>
                   </li>
+                   -->
                   
                   
                     <li class="sub-menu">
