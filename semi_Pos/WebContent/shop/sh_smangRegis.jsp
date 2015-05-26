@@ -83,7 +83,31 @@
 									id="exampleInputPassword2" placeholder="마일리지">
 							</div>
 							<button type="submit" class="btn btn-primary">마일리지 사용</button>
+						
+						<div class="col-sm-6">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>이름</th>
+                                <th>전화번호</th>
+                                <th>마일리지</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="active">
+                                <td>1</td>
+                                <td>서경연님</td>
+                                <td>안알려줄꺼야</td>
+                                <td>1000000점</td>
+                              </tr>                              
+                              
+                            </tbody>
+                          </table>
+                  </div>
+						
 						</form>
+						
 						<div class="table-responsive">
 
 							<table class="table">
