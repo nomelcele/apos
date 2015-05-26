@@ -275,7 +275,7 @@
                             <span class="profile-ava">
                                  <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                            <span class="username" style="color: black">A-Dress</span>
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
