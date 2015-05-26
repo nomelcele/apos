@@ -160,7 +160,7 @@
 
       <!--sidebar start-->
       <aside>
-          <div id="sidebar"  class="nav-collapse " style="font-family:'나눔바른고딕 Light'">
+          <div id="sidebar"  class="nav-collapse " style="font-family:'1훈바람언덕'">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu">                
                
