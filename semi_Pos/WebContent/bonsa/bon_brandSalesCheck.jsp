@@ -7,17 +7,23 @@
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawVisualization);
-
+var res=[
+         ['Month', '남성', '여성', '유아', ],
+         ['2004/05',  165,      938,         522,           ],
+         ['2005/06',  135,      1120,        599,           ],
+         ['2006/07',  157,      1167,        587,           ],
+         ['2007/08',  139,      1110,        615,           ],
+         ['2008/09',  136,      691,         629,           ]
+       ] ;
+       var res2= [
+                  ['Month', '남성', '여성', '유아', ],
+                  ['2004/05',  165,      938,         522,           ],
+                  ['2005/06',  135,      1120,        599,           ],
+                  ['2006/07',  157,      1167,        587,           ]
+                ] ;
 function drawVisualization() {
   // Some raw data (not necessarily accurate)
-  var data = google.visualization.arrayToDataTable([
-    ['Month', '남성', '여성', '유아', ],
-    ['2004/05',  165,      938,         522,           ],
-    ['2005/06',  135,      1120,        599,           ],
-    ['2006/07',  157,      1167,        587,           ],
-    ['2007/08',  139,      1110,        615,           ],
-    ['2008/09',  136,      691,         629,           ]
-  ]);
+  var data = google.visualization.arrayToDataTable(res2);
 
   var options = {
     title : '매출관리를 해볼까?',
