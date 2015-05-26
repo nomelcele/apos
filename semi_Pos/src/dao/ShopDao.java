@@ -126,7 +126,82 @@ public class ShopDao {
 		}
 		return list;
 	}
-	
+	public ArrayList<ShopHotkeyVO> checkhotcrnumname(int crnum) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<ShopHotkeyVO> list = new ArrayList<ShopHotkeyVO>();
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from hotkey where key_crnum=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, crnum);
+			rs = pstmt.executeQuery();
+			
+			while (rs.next()) {
+				ShopHotkeyVO vo= new ShopHotkeyVO();
+				vo.setKey_num(rs.getInt("key_num"));
+				vo.setKey_name(rs.getString("key_name"));
+				vo.setKey_hotkey(rs.getInt("key_hot"));
+				vo.setKey_email(rs.getString("key_mail"));
+				vo.setKey_crnum(rs.getInt("key_crnum"));
+				vo.setKey_date(rs.getString("key_date"));
+				list.add(vo);	
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+				if (rs != null) rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		return list;
+	}
+	public boolean checkid(String id) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		boolean res= false;
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from shop where shop_id=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			String str="";
+			
+			while (rs.next()) {
+				str = rs.getString("shop_id");
+				if(str.equals(id)){
+					res=true; //같을때 true 발생
+				}
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+				if (rs != null) rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		return res;
+	}
 	private int createHotkey(){
 		int hotkey=(int)(Math.random()*666666)+111111;// 0~99까지
 		return hotkey;
