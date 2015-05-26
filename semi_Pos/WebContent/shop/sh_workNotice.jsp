@@ -8,7 +8,8 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
-					<header class="panel-heading"> 공지사항 게시판 </header>
+					<header class="panel-heading" style="font-size: 10pt"> 
+					</header>
 
 					<table class="table table-striped table-advance table-hover">
 						<tbody>
