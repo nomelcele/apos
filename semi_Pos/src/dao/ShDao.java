@@ -284,8 +284,10 @@ public class ShDao {
 				v.setMem_num(rs.getInt("mem_num"));
 				v.setMem_name(rs.getString("mem_name"));
 				v.setMem_tel(rs.getString("mem_tel"));
-				v.setMem_addr(rs.getString("mem_addr")+rs.getString("mem_deaddr"));
+				v.setMem_addr(rs.getString("mem_addr"));
+				v.setMem_deaddr(rs.getString("mem_deaddr"));
 				v.setMem_date(rs.getString("mem_date"));
+				
 				v.setMem_email(rs.getString("mem_email"));
 				v.setMem_mileage(rs.getInt("mem_mileage"));
 				System.out.println("getdetail: "+v.getMem_name());
@@ -321,7 +323,7 @@ mem_addr='¾ßÅ¾µ¿',
 mem_mileage='1000'
 where mem_num='3';*/
 		sql.append("update member set");
-		sql.append(" mem_tel=?,mem_addr=?,mem_mileage=?");
+		sql.append(" mem_tel=?,mem_addr=?,mem_deaddr=?,mem_mileage=?");
 		sql.append(" where mem_num=?");
 		MemVO v = new MemVO();
 		try {
@@ -331,8 +333,9 @@ where mem_num='3';*/
 			pstmt.setString(1, map.get("memtel"));
 			//post.append(map.get("adr1")).append("-").append(map.get("adr2"));
 			pstmt.setString(2, map.get("addr"));
-			pstmt.setString(3, map.get("mileage"));
-			pstmt.setString(4, map.get("num"));
+			pstmt.setString(3, map.get("deaddr"));
+			pstmt.setString(4, map.get("mileage"));
+			pstmt.setString(5, map.get("num"));
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
