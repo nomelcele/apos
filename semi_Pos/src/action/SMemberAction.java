@@ -38,9 +38,11 @@ public class SMemberAction implements Action {
 			
 		}else if(subcmd != null && subcmd.equals("check")){
 			url="sh_memberCheck.jsp";	
+			/*Page 처리 영역 */
+			Map<String, Integer> map = pageProcess(request, 0);
 			String name= request.getParameter("name");
 			/////////////////////////////////////////////////
-			ArrayList<MemVO>list = ShDao.getDao().getListMember(name);
+			ArrayList<MemVO>list = ShDao.getDao().getListMember(map,name);
 			request.setAttribute("list", list);
 		}else if(subcmd != null && subcmd.equals("detail")){
 			int num=Integer.parseInt(request.getParameter("num"));
@@ -50,7 +52,14 @@ public class SMemberAction implements Action {
 		}else if(subcmd != null && subcmd.equals("finish")){
 			HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
 			ShDao.getDao().getfinish(maps);
-			url="sh_memberCheck.jsp";
+			int num=Integer.parseInt(request.getParameter("num"));
+			MemVO v= ShDao.getDao().getDetail(num);
+			request.setAttribute("v", v);
+			url="sh_memberDetail.jsp";
+		}else if(subcmd != null && subcmd.equals("secede")){
+			int num=Integer.parseInt(request.getParameter("num"));
+			MemVO v= ShDao.getDao().getsecede(num);
+			url="sh_membercheck.jsp";
 		}
 		return new ActionForward(url, false);
 	}
