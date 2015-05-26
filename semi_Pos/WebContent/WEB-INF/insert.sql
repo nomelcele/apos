@@ -766,6 +766,41 @@ insert into sell values(124,5,0,2260,0,5,4,sysdate);
 insert into sell values(125,5,0,2640,0,5,5,sysdate);
 
 
+insert into sell values(126,6,0,1325,0,1,1,sysdate);
+insert into sell values(127,6,0,4949,0,2,2,sysdate);
+insert into sell values(128,6,0,5959,0,3,3,sysdate);
+insert into sell values(129,6,0,8282,0,4,4,sysdate);
+insert into sell values(130,6,0,6703,0,5,5,sysdate);
+
+
+insert into sell values(131,7,0,1325,0,1,1,sysdate);
+insert into sell values(132,7,0,4949,0,2,2,sysdate);
+insert into sell values(133,7,0,5959,0,3,3,sysdate);
+insert into sell values(134,7,0,8282,0,4,4,sysdate);
+insert into sell values(135,7,0,6703,0,5,5,sysdate);
+
+
+insert into sell values(136,8,0,1325,0,1,1,sysdate);
+insert into sell values(137,8,0,4949,0,2,2,sysdate);
+insert into sell values(138,8,0,5959,0,3,3,sysdate);
+insert into sell values(139,8,0,8282,0,4,4,sysdate);
+insert into sell values(140,8,0,6703,0,5,5,sysdate);
+
+
+insert into sell values(141,9,0,1325,0,1,1,sysdate);
+insert into sell values(142,9,0,4949,0,2,2,sysdate);
+insert into sell values(143,9,0,5959,0,3,3,sysdate);
+insert into sell values(144,9,0,8282,0,4,4,sysdate);
+insert into sell values(145,9,0,6703,0,5,5,sysdate);
+
+
+insert into sell values(146,10,0,1325,0,1,1,sysdate);
+insert into sell values(147,10,0,4949,0,2,2,sysdate);
+insert into sell values(148,10,0,5959,0,3,3,sysdate);
+insert into sell values(149,10,0,8282,0,4,4,sysdate);
+insert into sell values(150,10,0,6703,0,5,5,sysdate);
+
+
 --이곳은 staff table입니다.--
 
 
