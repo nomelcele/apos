@@ -5,10 +5,10 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import vo.ShopHotkeyVO;
 import vo.ShopVO;
 import controller.ActionForward;
 import dao.ShopDao;
-import dao.ShopHotkeyDao;
 
 public class SShopAction implements Action {
 	@Override
@@ -72,20 +72,20 @@ public class SShopAction implements Action {
 			// hotkey 발급시 
 			url="sh_login.jsp";
 			String name = request.getParameter("name");
-			String crnum = request.getParameter("crnum");
+			int crnum = Integer.parseInt(request.getParameter("crnum"));
 			String email = request.getParameter("email");
 			System.out.println("---여기는 gethotkey영역 ---");
 			System.out.println("name : "+name);
 			System.out.println("crnum : "+crnum);
 			System.out.println("email : "+email);
 			
-			ShopHotkeyDao vo = new ShopHotkeyDao();
+			ShopHotkeyVO vo = new ShopHotkeyVO();
 			
-			vo.setName(name);
-			vo.setCrnum(crnum);
-			vo.setEmail(email);
+			vo.setKey_name(name);
+			vo.setKey_crnum(crnum);
+			vo.setKey_email(email);
 			
-			ShopDao.getDao().shoprequesthotkey(vo);;
+			ShopDao.getDao().shoprequesthotkey(vo);
 			
 			method=false;
 		}
