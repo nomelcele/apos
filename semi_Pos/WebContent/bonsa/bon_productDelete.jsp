@@ -22,23 +22,23 @@
 			<div class="panel-body">
 				<div class="form">
 					<div class="col-lg-6">
-						<div class="form-group ">
-											<label style="width: 200px;" for="cname" class="control-label col-lg-2">이름
-											</label>
-											<div class="col-lg-4">
-												<input class="form-control" id="sname_ps" name="name"
-													minlength="2" onkeydown="startSuggest();"
-													autocomplete="off" type="text" >
-											</div>
-											<input class="form-control6" type="submit" id="btn"
-												name="btn" value="조회">
-										</div>
-						<div class="form-group ">
+							<div class="form-group ">
+								<label style="width: 200px;" for="cname"
+									class="control-label col-lg-2">이름 </label>
+								<div class="col-lg-4">
+									<input class="form-control" id="sname_ps" name="name"
+										minlength="2" onkeydown="startSuggest();" autocomplete="off"
+										type="text">
+								</div>
+								<input class="form-control6" type="submit" id="btn" name="btn"
+									value="조회">
+							</div>
+							<div class="form-group ">
 							<br /><br /> <label style="width: 200px;" for="cname"
 								class="control-label col-lg-2">물품명</label>
 							<div class="col-lg-2">
 								<input class="form-control" style="width: 260px;" id="name"
-									name="name" minlength="2" type="text" required />
+									name="name" minlength="2" type="text">
 							</div>
 						</div>
 						<br />
@@ -47,7 +47,7 @@
 								class="control-label col-lg-2">사이즈</label>
 							<div class="col-lg-2">
 								<input class="form-control" style="width: 260px;" id="name"
-									name="name" minlength="2" type="text" required />
+									name="name" minlength="2" type="text">
 							</div>
 						</div>
 						<br />
@@ -56,7 +56,7 @@
 								class="control-label col-lg-2">판매금액</label>
 							<div class="col-lg-2">
 								<input class="form-control" style="width: 260px;" id="name"
-									name="name" minlength="2" type="text" required />
+									name="name" minlength="2" type="text" >
 							</div>
 						</div>
 					</div>
@@ -78,8 +78,8 @@
 		<%-- form의 끗 --%>
 		<div class="row">
 		<br/>
-			<div class="col-sm-10">
-					<table class="table">
+			<div class="col-sm-8">
+					<table class="table" style="margin-left: 120px;">
 						<thead>
 							<tr>
 								<th>해당지점</th>
@@ -89,9 +89,24 @@
 						</thead>
 						<tbody>
 							<tr>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
+								<td>야탑점</td>
+								<td>95</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>야탑점</td>
+								<td>95</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>야탑점</td>
+								<td>95</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>야탑점</td>
+								<td>95</td>
+								<td>3</td>
 							</tr>
 						</tbody>
 					</table>
