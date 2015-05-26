@@ -83,12 +83,19 @@
 				<section class="panel">
 					<header class="panel-heading"> 구매정보 </header>
 					<div class="panel-body">
-						<form class="form-inline" role="form">
+						<form class="form-inline" role="form" action="sh.apos" method="post">
+						<input type="hidden" name="cmd" value="smang"> 
+						<input type="hidden" name="subcmd" value="pcheck">
 							<div class="form-group">
 								<input type="text" class="form-control"
-									id="exampleInputPassword2" placeholder="상품번호" name="pro_code">
+									id="p_num" placeholder="상품번호" name="pro_code">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control"
+									id="p_size" placeholder="사이즈" name="pro_size">
 							</div>
 							<button type="submit" class="btn btn-primary">검색</button>
+							</form>
 							<div class="form-group">
 								<input type="text" class="form-control"
 									id="usemileage" placeholder="마일리지" name="mem_mileage">
@@ -118,7 +125,7 @@
                           </table>
                   </div>
 						
-						</form>
+<!-- 						</form> -->
 						
 						<div class="table-responsive">
 
@@ -126,51 +133,25 @@
 								<thead>
 									<tr>
 										<th>no</th>
-										<th>고객번호</th>
-										<th>고객성명</th>
 										<th>상품번호</th>
 										<th>사이즈</th>
 										<th>수량</th>
 										<th>재고</th>
-										<th>할인가</th>
 										<th>판매가</th>
+										<th>할인가</th>
 									</tr>
 								</thead>
 								<tbody>
 								<%-- 반복 --%>
-									<tr>
-										<td>1</td>
-										<td>1111</td>
-										<td>서경연전하</td>
-										<td>비싼거임</td>
-										<td>엄청비싼거</td>
-										<td>하나밖없지롱</td>
-										<td>없어없어</td>
-										<td>할인안됨</td>
-										<td>짱비짱비</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>1111</td>
-										<td>서경연전하</td>
-										<td>비싼거임</td>
-										<td>엄청비싼거</td>
-										<td>하나밖없지롱</td>
-										<td>없어없어</td>
-										<td>할인안됨</td>
-										<td>짱비짱비</td>
-									</tr>
-									<tr>
-										<td>1</td>
-										<td>1111</td>
-										<td>서경연전하</td>
-										<td>비싼거임</td>
-										<td>엄청비싼거</td>
-										<td>하나밖없지롱</td>
-										<td>없어없어</td>
-										<td>할인안됨</td>
-										<td>짱비짱비</td>
-									</tr>
+									 <c:forEach var="ptlist" items="${plist}">
+									 	<tr>
+									 		<td>${ptlist.pro_code}</td>
+									 		<td>${ptlist.sto_size }</td>
+									 		<td>${ptlist.sto_amount }</td>
+									 		<td>${ptlist.pro_price }</td>
+									 		<td>할인가</td>
+									 	</tr>
+									 </c:forEach>
 									<%-- 반복 --%>
 								</tbody>
 								<tr>

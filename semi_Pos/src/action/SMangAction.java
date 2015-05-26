@@ -7,8 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import vo.MemVO;
+import vo.ProductVO;
+import vo.SmangVO;
 import controller.ActionForward;
 import dao.ShDao;
+import dao.SmangDao;
 
 public class SMangAction implements Action{
 
@@ -27,6 +30,12 @@ public class SMangAction implements Action{
 			String name = request.getParameter("name");
 			ArrayList<MemVO>list = ShDao.getDao().getListMember(name);
 			request.setAttribute("list", list);
+		}else if(subcmd.equals("pcheck")){
+			url="sh_smangRegis.jsp";
+			String code = request.getParameter("pro_code");
+			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
+			request.setAttribute("plist", list);
+			
 		}
 		return new ActionForward(url, false);
 	}
