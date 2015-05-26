@@ -38,7 +38,7 @@
 			</table>
 			
 			<P style="font-size: 1pt" align="center">경기도 성남시 분당구 삼평동 대왕판교로 670길 유스페이스2 B동 8층
-			E-mail : kosta@kosta.or.kr </P>
+			담당자: 박경찬 한광호 윤홍기 윤성현 서경연 도하진 </P>
  	
  	</section>
  	
