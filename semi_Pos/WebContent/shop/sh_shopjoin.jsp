@@ -356,8 +356,13 @@
 				$('#selfimgtarget').slideDown(); //업로드한 이미지 미리보기
 			}
 		});
-		$('#crnum').css('value','${request.crnum}');
-		$('#hotkey').css('value','${requst.hotkey}');
+// 		$('#crnum').css('value','${request.crnum}');
+// 		$('#hotkey').css('value','${requst.hotkey}');
+		
+		// 지금 추가중!!!!!!!!!!!!!!!!!!!!
+		$('#sid').keyup(function(){
+			$('#targetID').load("sh_shopjoincheck.jsp?id="+$('#sid').val());
+		});
 		
 	});
 	
@@ -415,7 +420,8 @@
                                       <div class="form-group ">
                                           <label for="cId" class="control-label col-lg-2"> ID <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input style="width: 20%" class="form-control" id="sid" name="id" minlength="5" type="text" required />
+                                              <input style="width: 20%;" class="form-control" id="sid" name="id" minlength="5" type="text" required />
+                                              <div id="targetID"></div>
                                           </div>
                                       </div>
                                       

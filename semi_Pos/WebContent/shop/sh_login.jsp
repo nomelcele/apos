@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="vo.ShopHotkeyVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.ShopDao"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +48,28 @@
 		$('#SignUpBtn').click(function() {
 				$('#modal2').modal('show');
 		});
+		
+		$('#nextJoinBtn').click(function(){
+            $.ajax({
+                   url: "sh_NCRHOTcheck.jsp?email="+$('#email').val()+"&crnum="+$('#crnum').val()+"&hotkey="+$('#hotkey').val(),
+                   type: "POST",
+                   dataType: "html",
+                   success: function(data) {
+                    if(data.trim() == "true"){
+                    	alert("success!")
+                    	$('#checkhot').submit();
+                    }else{
+                    	alert("입력된 정보가 잘 못 되었습니다.")
+                    }
+                   },
+                   error: function(a, b) {
+                       alert("Request: " + JSON.stringify(a));
+                   }
+               });
+		});
 	});
 </script>
+
 <body class="login-img3-body">
 	<div id="modal1" class="modal fade">
 		<div class="modal-dialog" style="width: 400px; text-align: center;">
@@ -66,21 +89,22 @@
 				</div>
 				<div>
 				<!-- body -->
-				<form method="post" action="#" name="checkhot" id="checkhot">
+				<form method="post" action="sh_shopjoin.jsp" name="checkhot" id="checkhot">
 				<input type="hidden">
 				<input type="hidden">
 					<div style="width: 100%;">
 						<div class="modal-body2">
-							E-mail:<input type="text" class="form-control4 block" name="name" placeholder="name" autofocus>
+							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
 						</div>
 						<div class="modal-body2">
-							사업자 번호:<input type="text" class="form-control4 block" name="crnum" placeholder="crnum" autofocus>
+							사업자 번호:<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="crnum" autofocus>
 						</div>
 						<div class="modal-body2">
-							HotKey:<input type="text" class="form-control4 block" name="hotkey" placeholder="hotkey" autofocus>
+							HotKey:<input type="text" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
+						<div id="target"></div>
 						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>
-						<button type="submit" class="btn btn-default hidebtn">다음</button>
+						<input type="button" id="nextJoinBtn" class="btn btn-default hidebtn" value="다음">
 					</div>
 				</form>
 				</div>
