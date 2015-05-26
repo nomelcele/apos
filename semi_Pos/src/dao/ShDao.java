@@ -308,10 +308,12 @@ public class ShDao {
 		return v;
 	}
 	
-	public MemVO getsecede(int no){
+	public MemVO getfinish(HashMap<String, String> map){
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		StringBuffer sql = new StringBuffer();
+		StringBuffer post = new StringBuffer();
+		StringBuffer tel = new StringBuffer();
 		/*update member set 
 mem_name='서경연님' ,
 mem_tel='010-7664-0585',
@@ -319,18 +321,19 @@ mem_addr='야탑동',
 mem_mileage='1000'
 where mem_num='3';*/
 		sql.append("update member set");
-		sql.append("mem_tel=?,mem_addr=?,mem_mileage=?");
-		sql.append("where mem_num=?");
+		sql.append(" mem_tel=?,mem_addr=?,mem_mileage=?");
+		sql.append(" where mem_num=?");
 		MemVO v = new MemVO();
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, v.getMem_tel());
-			pstmt.setString(2, v.getMem_addr());
-			pstmt.setInt(3, v.getMem_mileage());
-			pstmt.setInt(4, no);
+			tel.append(map.get("tel1")).append("-").append(map.get("tel2")).append("-").append(map.get("tel3"));
+			pstmt.setString(1, tel.toString());
+			post.append(map.get("adr1")).append("-").append(map.get("adr2"));
+			pstmt.setString(2, post.toString());
+			pstmt.setString(3, map.get("mileage"));
+			pstmt.setString(4, map.get("num"));
 			pstmt.executeUpdate();
-			System.out.println("num :"+no);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
