@@ -40,3 +40,7 @@ alter table staff modify staff_id varchar2(30);
 alter table staff modify staff_pwd varchar2(30);
 
 -- 05.25 hotket table 수정
+
+--05.26 product와 stock수정
+alter table product drop (pro_size);
+alter table stock add (sto_size number(10));
