@@ -66,7 +66,7 @@
 <!-- 		type="hidden" id="childcmd" name="check" value="%"> -->
 <!-- </form> -->
 <%-- <%-- 남자 상품 form --%>
---%>
+
 <!-- <form id="men"> -->
 <!-- 	<input type="hidden" id="cmd" name="cmd" value="sproduct"> <input -->
 <!-- 		type="hidden" id="subcmd" name="subcmd" value="pcheck"> <input -->
@@ -74,7 +74,7 @@
 <!-- 		type="hidden" id="childcmd" name="check" value="1"> -->
 <!-- </form> -->
 <%-- <%-- 여자 상품 form --%>
---%>
+
 <!-- <form id="woman"> -->
 <!-- 	<input type="hidden" id="cmd" name="cmd" value="sproduct"> <input -->
 <!-- 		type="hidden" id="subcmd" name="subcmd" value="pcheck"> <input -->
@@ -101,8 +101,8 @@
 						<div class="form-group ">
 							<form action="sh.apos" method="post">
 								<label for="cname" class="control-label col-lg-1"
-									style="font-size: 17px;">이름 </label>
-								<div class="col-lg-2">
+									style="font-size: 13px;">이름 </label>
+								<div class="col-lg-3" style="margin-left: -5%">
 
 									<input type="hidden" id="cmd" name="cmd" value="sproduct">
 									<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
