@@ -55,7 +55,7 @@ document.getElementById("view").style.display ='none'
 function viewTable() {
 var vD = document.getElementById("view");
 var htmlTxt = "<table>"
-for (var i = 0; i < jsonObj.length i++) {
+for (var i = 0; i < jsonObj.length; i++) {
 htmlTxt += "<tr><td style='cursor:pointer;'onmouseover='this.style.background=\"silver\"'onmouseout='this.style.background=\"white\"' onclick='select("
 + i + ")'>" + jsonObj[i] + "</td></tr>"
 }
@@ -134,7 +134,6 @@ style="margin-left: 20px">
                   </div>
                   </section>
                   </section>
-
 
 
 

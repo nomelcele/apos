@@ -68,6 +68,7 @@
          document.getElementById("rank").submit();
       }
       else if(str == "regis"){
+    	  alert("확인");
          document.getElementById("regis").submit();
       }
       else if(str == "exchRefu"){
@@ -148,7 +149,7 @@
 <input type="hidden" name="subcmd" value="rank">
 </form>
 
-<form method="post" action="sh.apos" id="rank">
+<form method="post" action="sh.apos" id="regis">
 <input type="hidden" name="cmd" value="smang">
 <input type="hidden" name="subcmd" value="sregi">
 </form>

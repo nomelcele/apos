@@ -2,10 +2,25 @@
    pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%-- 매장의 판매관리 - 판매등록페이지입니다. --%>
 <%-- 고객검색 세션 시작 --%>
+<script src="../js/http.js"></script>
+<script src="../js/json2.js"></script>
+<script src="../js/suggestMem_pk.js"></script>
+<script>
+	function usingmileage(){
+		
+	}
+
+	function ckcustomer(name, tel, mileage){
+		$('#name').val(name);
+		$('#phone').val(tel);
+		$('#mileage').val(mileage);
+	};
+
+</script>
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row">
@@ -13,10 +28,14 @@
 				<section class="panel">
 					<header class="panel-heading"> 고객 검색</header>
 					<div class="panel-body">
-						<form class="form-inline" role="form">
+						<form class="form-inline" role="form" method="post"  action="sh.apos">
+						<input type="hidden" name="cmd" value="smang"> 
+						<input type="hidden" name="subcmd" value="check">
 							<div class="form-group">
+							
 								<input type="text" class="form-control"
-									id="exampleInputPassword2" placeholder="고객성함">
+									id="exampleInputPassword2" placeholder="고객성함"
+									name="name" onkeydown="startSuggest()" autocomplete="off">
 							</div>
 							<button type="submit" class="btn btn-primary">검색</button>
 						</form>
@@ -24,35 +43,27 @@
 					<table class="table table-striped table-advance table-hover">
                            <tbody>
                               <tr>
-                                 <th><i class="icon_profile"></i> 고객 성명 </th>
-                                 <th><i class="icon_calendar"></i> 고객 번호 </th>
+                                 <th><i class="icon_profile"></i> 고객 번호 </th>
+                                 <th><i class="icon_calendar"></i> 고객 성명 </th>
                                  <th><i class="icon_pin_alt"></i> 주소</th>
                                  <th><i class="icon_mobile"></i> 전화번호</th>
                                  <th><i class="icon_cogs"></i> 선택</th>
                               </tr>
+                              <c:forEach var="stList" items="${list}">
                               <tr>
-                                 <td>서경연전하님이시당</td>
-                                 <td>1이지내가최고니까까르르까르르</td>
-                                 <td>지구가 내집이지</td>
-                                 <td>안알려준대도</td>
+                                 <td>${stList.mem_num}</td>										
+								 <td>${stList.mem_name}</td>
+							     <td>${stList.mem_addr}</td>
+								 <td>${stList.mem_tel}</td>
                                  <td>
                                   <div class="btn-group">
-                                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
-                                  </div>
-                                  </td>
-                              </tr>
-                              <tr>
-                                 <td>서경연마마님</td>
-                                 <td>2로하겠다</td>
-                                 <td>한국이 내집이지</td>
-                                 <td>안알려준대도</td>
-                                 <td>
-                                  <div class="btn-group">
+                                      <a class="btn btn-success" href="javascript:ckcustomer('${stList.mem_name }', '${stList.mem_tel}', '${stList.mem_mileage}')"
+                                      ><i class="icon_check_alt2""></i></a>
                                      
-                                      <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
                                   </div>
                                   </td>
                               </tr>
+                              </c:forEach>
                               
                            </tbody>
                         </table>
@@ -75,17 +86,18 @@
 						<form class="form-inline" role="form">
 							<div class="form-group">
 								<input type="text" class="form-control"
-									id="exampleInputPassword2" placeholder="상품번호">
+									id="exampleInputPassword2" placeholder="상품번호" name="pro_code">
 							</div>
 							<button type="submit" class="btn btn-primary">검색</button>
 							<div class="form-group">
 								<input type="text" class="form-control"
-									id="exampleInputPassword2" placeholder="마일리지">
+									id="usemileage" placeholder="마일리지" name="mem_mileage">
 							</div>
-							<button type="submit" class="btn btn-primary">마일리지 사용</button>
+							<button type="button" class="btn btn-primary" onclick="javascript:usingmileage">마일리지 사용</button>'
+							<button type="submit" class="btn btn-primary">완료</button>
 						
 						<div class="col-sm-6">
-                          <table class="table">
+                          <table class="table" style="width:800px;">
                             <thead>
                               <tr>
                                 <th>#</th>
@@ -97,9 +109,9 @@
                             <tbody>
                               <tr class="active">
                                 <td>1</td>
-                                <td>서경연님</td>
-                                <td>안알려줄꺼야</td>
-                                <td>1000000점</td>
+                                <td><input type="text" class="form-control" id="name" value="" readonly="readonly"></td>
+                                <td><input type="text" class="form-control" id="phone" value="" readonly="readonly"></td>
+                                <td><input type="text" class="form-control" id="mileage" value="" readonly="readonly"></td>
                               </tr>                              
                               
                             </tbody>
