@@ -7,16 +7,13 @@
 	<section class=" wrapper">
 	
 	
-		<div class="row">
-			<div class="col-lg-12">
-				<h3 class="page-header">
-					<i class="fa fa-tasks"></i>회원약관
-				</h3>
+		
 				<div class="row">
-					<div class="col-lg-12">
+				<padding top="5px">
+					<div class="col-lg-10">
 						<h4></h4>
 					</div>
-					<div class="col-lg-12">
+					<div class="col-lg-10">
 						<section class="panel">
 							<div class="panel-body">
 								<a style="font-size: 12px"> 회원약관은 다음과 같은 내용을 담고 있습니다.</a>
