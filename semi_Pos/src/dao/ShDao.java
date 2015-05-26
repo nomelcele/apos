@@ -327,10 +327,10 @@ where mem_num='3';*/
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
-			tel.append(map.get("tel1")).append("-").append(map.get("tel2")).append("-").append(map.get("tel3"));
-			pstmt.setString(1, tel.toString());
-			post.append(map.get("adr1")).append("-").append(map.get("adr2"));
-			pstmt.setString(2, post.toString());
+			//tel.append(map.get("tel1")).append("-").append(map.get("tel2")).append("-").append(map.get("tel3"));
+			pstmt.setString(1, map.get("memtel"));
+			//post.append(map.get("adr1")).append("-").append(map.get("adr2"));
+			pstmt.setString(2, map.get("addr"));
 			pstmt.setString(3, map.get("mileage"));
 			pstmt.setString(4, map.get("num"));
 			pstmt.executeUpdate();
