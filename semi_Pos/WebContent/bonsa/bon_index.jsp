@@ -5,9 +5,6 @@
  <section id="main-content">
  	<section class="wrapper">
  		
-
- 		
- 		
  	<div><img src="../img/bg-60.jpg"; width="1180"; align="center"></div>
  	</br>
  		<table align="center">
