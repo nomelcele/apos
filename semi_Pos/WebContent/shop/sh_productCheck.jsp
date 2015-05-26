@@ -98,7 +98,6 @@
 										onkeydown="startSuggest();" autocomplete="off" type="text"
 										required />
 
-									<div id="view"></div>
 								</div>
 								<input class="form-control6" type="submit" id="btn1" name="btn1"
 									value="조회">
