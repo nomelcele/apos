@@ -7,8 +7,6 @@
 <script>
 $(function(){
 	$('#memchange').click(function(){
-		$('#name').attr("readonly",false);
-		$('#num').attr("readonly",false);
 		$('#memtel').attr("readonly",false);
 		$('#addr').attr("readonly",false);
 		$('#mileage').attr("readonly",false);
@@ -21,16 +19,21 @@ $(function(){
 });
 $(function(){
 	$('#finish').click(function(){
-		
+		document.getElementById("finishbtn").submit();
 	});
 });
 </script>
+
 <section class="wrapper">
 	<section id="main-content">
-		<form class="form-validate form-horizontal" id="feedback_form"
-			method="post" action="sh.apos">
-			<input type="hidden" name="cmd" value="smember"> <input
-				type="hidden" name="subcmd" value="detail">
+<!-- 		<form class="form-validate form-horizontal" id="feedback_form" -->
+<!-- 			method="post" action="sh.apos"> -->
+<!-- 			<input type="hidden" name="cmd" value="smember"> <input -->
+<!-- 				type="hidden" name="subcmd" value="detail"> -->
+<!-- 	</form> -->
+<form method="post" action="sh.apos" id="finishbtn">
+<input type="hidden" name="cmd" value="smember">
+<input type="hidden" name="subcmd" value="finish">
 
 			<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12">
@@ -68,7 +71,9 @@ $(function(){
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="memtel"
 										name="memtel" minlength="2" type="text" value="${v.mem_tel }"  readonly="readonly"/>
-								</div>
+										
+		s						</div>
+								
 							</div>
 							<br />
 							<div class="form-group ">
@@ -105,7 +110,7 @@ $(function(){
 
 					</div>
 				</div>
-		</form>
+	</form>
 	</section>
 </section>
 
