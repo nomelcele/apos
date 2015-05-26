@@ -35,8 +35,7 @@ public class SMemberAction implements Action {
 		} else if (subcmd != null && subcmd.equals("insert")) {
 			HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
 			ShDao.getDao().insertMem(maps);
-			// String str= request.getParameter("name");
-			// System.out.println("test23"+str);
+			
 		}else if(subcmd != null && subcmd.equals("check")){
 			url="sh_memberCheck.jsp";	
 			/*Page 처리 영역 */
@@ -50,6 +49,10 @@ public class SMemberAction implements Action {
 			MemVO v= ShDao.getDao().getDetail(num);
 			request.setAttribute("v", v);
 			url="sh_memberDetail.jsp";
+		}else if(subcmd != null && subcmd.equals("finish")){
+			HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
+			ShDao.getDao().getfinish(maps);
+			url="sh_memberCheck.jsp";
 		}
 		return new ActionForward(url, false);
 	}
