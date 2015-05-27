@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import vo.ShopHotkeyVO;
 import vo.ShopVO;
@@ -22,6 +23,22 @@ public class SShopAction implements Action {
 			request.setAttribute("crnum", request.getParameter("crnum"));
 			System.out.println("여기에서의 crnum"+ request.getParameter("crnum"));
 			url="sh_shopjoin.jsp";
+		}else if(subcmd.equals("submithot")){
+			url="sh_login.jsp";
+			method=false;
+		}else if(subcmd.equals("login")){
+			url="sh_index.jsp";
+			String id = request.getParameter("id");
+			int shop_num =  ShopDao.getDao().getshopno(id);// shop_num;
+			HttpSession session = request.getSession();
+			session.setAttribute("shop_id", id);
+			session.setAttribute("shop_num", shop_num);
+			method=false;
+		}else if(subcmd.equals("logout")){
+			url="sh_login.jsp";
+			HttpSession session = request.getSession();
+			session.invalidate(); //모든 세션삭제
+			method=false;
 		}else if(subcmd.equals("shopinsert")){
 			url="sh_login.jsp";
 			// shop_num, shop_name, shop_tel, shop_adr,shop_map_x, shop_map_y
