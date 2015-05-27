@@ -3,8 +3,8 @@ package vo;
 public class ShopVO {
 	// 매장이 가입 할때 필요한 요소
 	// name, tel, adr, date, mail, master img, crnum
-	private String name, tel ,adr, date, mail, master, img, crnum, bon_num, id, pwd;
-	private int num;
+	private String name, tel ,adr, date, mail, master, img, id, pwd;
+	private int num, bon_num, crnum;
 	private float map_x, map_y;
 	public String getName() {
 		return name;
@@ -48,16 +48,16 @@ public class ShopVO {
 	public void setImg(String img) {
 		this.img = img;
 	}
-	public String getCrnum() {
+	public int getCrnum() {
 		return crnum;
 	}
-	public void setCrnum(String crnum) {
+	public void setCrnum(int crnum) {
 		this.crnum = crnum;
 	}
-	public String getBon_num() {
+	public int getBon_num() {
 		return bon_num;
 	}
-	public void setBon_num(String bon_num) {
+	public void setBon_num(int bon_num) {
 		this.bon_num = bon_num;
 	}
 	public String getId() {
