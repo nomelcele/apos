@@ -15,7 +15,6 @@ function goDel(str){
 		alert(pcode);
 		$('#bpcode').val(pcode);
 		
-		alert($('#bpcode').val());
 		document.getElementById("pcode").submit();
 	}
 }
@@ -85,14 +84,13 @@ function goDel(str){
 								</div>
 							</div>
 							<div class="form-group"
-								style="margin-left: 220px; margin-top: 30px;">
-								<div class="col-lg-offset-2 col-lg-10">
+								style="margin-left: 200px; margin-top: 30px;">
+								<div class="col-lg-2">
 									<button class="btn btn-default" type="submit" id="memchange">상품삭제</button>
 									<button class="btn btn-primary" type="button" id="finish">완료</button>
 								</div>
 							</div>
 						</div>
-						<%-- col-lg-6:1의 끗--%>
 						<div class="col-lg-6">
 
 							<div
