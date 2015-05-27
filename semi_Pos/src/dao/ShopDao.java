@@ -25,6 +25,9 @@ public class ShopDao {
 			con=MyJndiContext.getDs();
 			StringBuffer sql= new StringBuffer();
 			//num, name, tel, adr, map_x, map_y, date, mail, master, img, crnum, bon_num, id, pwd
+			// shop_num, shop_name, shop_tel, shop_adr,shop_map_x, shop_map_y
+			// shop_date, shop_mail, shop_master, shop_img, shop_crnum, shop_bonnum
+			// shop_id, shop_pwd
 			sql.append("insert into shop values(");
 			sql.append("shop_seq.nextval,?,?,?,?,?,sysdate,?,?,?,?,1,?,?)");
 			pstmt = con.prepareStatement(sql.toString());
@@ -36,7 +39,7 @@ public class ShopDao {
 			pstmt.setString(6, vo.getMail());
 			pstmt.setString(7, vo.getMaster());
 			pstmt.setString(8, vo.getImg());
-			pstmt.setString(9, vo.getCrnum());
+			pstmt.setInt(9, vo.getCrnum());
 			pstmt.setString(10, vo.getId());
 			pstmt.setString(11, vo.getPwd());
 			pstmt.executeUpdate();
@@ -186,6 +189,37 @@ public class ShopDao {
 					res=true; //같을때 true 발생
 				}
 			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+				if (rs != null) rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		return res;
+	}
+	public boolean checkidpwd(String id, String pwd) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		boolean res= false;
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from shop where shop_id=? and shop_pwd=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			rs = pstmt.executeQuery();
+			
+			res = rs.next();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
