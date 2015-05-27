@@ -107,8 +107,8 @@ $(function(){
 							</div>
 
 
-							<div class="form-group" style="margin-left: 220px; margin-top: 30px;" >
-								<div class="col-lg-offset-2 col-lg-10">
+							<div class="form-group" style="margin-left: 200px; margin-top: 30px;" >
+								<div class="col-lg-offset-2 col-lg-12">
 									<button class="btn btn-default" type="button" id="memchange">수정</button>
 									<button class="btn btn-default" type="submit" id="gosecede" >
 									<a href="javascript:gosecedeUrl('gosecede')">탈퇴</a></button>
