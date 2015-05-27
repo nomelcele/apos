@@ -18,6 +18,7 @@
 		res.append("<td>").append(v.getMem_name()).append("</td>");
 		res.append("<td>").append(v.getMem_addr()).append("</td>");
 		res.append("<td>").append(v.getMem_tel()).append("</td>");
+		res.append("<td>").append(v.getMem_mileage()).append("</td>");
 		res.append("<td>");
 		res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
 		res.append("href=\"javascript:ckcustomer('").append(v.getMem_name()).append("', '");

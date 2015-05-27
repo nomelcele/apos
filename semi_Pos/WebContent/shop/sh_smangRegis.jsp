@@ -12,11 +12,15 @@
 <script>
 	var price = 0;
 	var i = 0;
+	function usingmileage(){
+		price = price - $('#usemileage').val();
+		document.getElementById('total').innerHTML=price;
+	}
 	function insertproduct(pcode, psize, pamount, pprice){
 		i++;
 		var t = $('#p_num').val();
 		price = price + (t*pprice);
-		var str = "<tr><td>"+i+"</td>"+"<td>"+pcode+"</td>"+"<td>"+psize+"</td>"+"<td>"+pprice+"</td><tr>"
+		var str = "<tr><td>"+i+"</td>"+"<td>"+pcode+"</td>"+"<td>"+psize+"</td>"+"<td>"+t+"</td>"+"<td>"+(t*pprice)+"</td><tr>"
 		console.log(str);
 		document.getElementById('ftarget').innerHTML+=str;
 		document.getElementById('total').innerHTML=price;
@@ -25,8 +29,7 @@
 	function ckcustomer(name, tel, mileage){
 		$('#name').val(name);
 		$('#phone').val(tel);
-		$('#mileage').val(mileage);
-		
+		$('#mileage').attr("MAX", mileage);
 	};
 	
 	
@@ -83,6 +86,7 @@
                                  <th><i class="icon_calendar"></i> 고객 성명 </th>
                                  <th><i class="icon_pin_alt"></i> 주소</th>
                                  <th><i class="icon_mobile"></i> 전화번호</th>
+                                 <th><i class="icon_profile"></i> 마일리지 </th>
                                  <th><i class="icon_cogs"></i> 선택</th>
                               </tr>
                               </thead>
@@ -167,7 +171,7 @@
 								<input type="text" class="form-control"
 									id="usemileage" placeholder="마일리지" name="mem_mileage">
 							</div>
-							<button type="button" class="btn btn-primary" onclick="javascript:usingmileage">마일리지 사용</button>'
+							<button type="button" class="btn btn-primary" onclick="javascript:usingmileage()">마일리지 사용</button>'
 							<button type="submit" class="btn btn-primary">완료</button>
 						
 						<div class="col-sm-6">
@@ -186,7 +190,7 @@
                                 <td>1</td>
                                 <td><input type="text" class="form-control" name='name' id="name" value="" readonly="readonly"></td>
                                 <td><input type="text" class="form-control" name='id' id="phone" value="" readonly="readonly"></td>
-                                <td><input type="text" class="form-control" name='mileage' id="mileage" value="" readonly="readonly"></td>                            
+                                <td><input type="number" class="form-control" name='mileage' id="mileage" value=""></td>                            
                               </tr>     
                                                
                               
@@ -204,6 +208,7 @@
 										<th>no</th>
 										<th>상품번호</th>
 										<th>사이즈</th>
+										<th>수량</th>
 										<th>할인가</th>
 									</tr>
 								</thead>

@@ -49,6 +49,7 @@ public class ShDao {
 				v.setMem_addr(rs.getString("mem_addr")+rs.getString("mem_deaddr"));
 				v.setMem_date(rs.getString("mem_date"));
 				v.setMem_email(rs.getString("mem_email"));
+				v.setMem_mileage(rs.getInt("mem_mileage"));
 				//v.setMem
 //				BoardVO v = new BoardVO();
 //				v.setTitle(rs.getString("BO_SUB"));
