@@ -15,10 +15,7 @@
 					</div>
 					<div class="col-lg-10">
 						<section class="panel">
-							<div class="panel-body">
-								<a style="font-size: 12px"> 회원약관은 다음과 같은 내용을 담고 있습니다.</a>
-							</div>
-					
+							
 						</section>
 					</div>
 				</div>
