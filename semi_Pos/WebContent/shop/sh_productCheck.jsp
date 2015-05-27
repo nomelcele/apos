@@ -98,11 +98,13 @@
 					</h3>
 
 					<header class="panel-heading tab-bg-primary ">
-						<div class="form-group ">
+						<div class="form-group " style="margin-left:-3%">
 							<form action="sh.apos" method="post">
+							
+							<div style="margin-bottom: -1%">
 								<label for="cname" class="control-label col-lg-1"
 									style="font-size: 13px;">이름 </label>
-								<div class="col-lg-3" style="margin-left: -5%">
+								<div class="col-lg-3" style="margin-left:-5%">
 
 									<input type="hidden" id="cmd" name="cmd" value="sproduct">
 									<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
@@ -116,6 +118,7 @@
 								</div>
 								<input class="form-control6" type="submit" id="btn1" name="btn1"
 									value="조회">
+									</div>
 							</form>
 						</div>
 
