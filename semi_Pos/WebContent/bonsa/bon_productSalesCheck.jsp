@@ -51,12 +51,12 @@
 				</div>
 
 
-				<div class="form-group" style="margin-left: 550px;">
+				<div class="form-group" style="margin-left: 280px;">
 					<label>총액</label>
 					<div class="col-lg-2">
 						<input class="form-control7" id="sname_ps" name="name"
 							minlength="2" onkeydown="startSuggest();" autocomplete="off"
-							type="text" style="margin-left: 120px;" required />
+							type="text" style="margin-left: 115px;" required />
 						<div id="view"></div>
 					</div>
 						
