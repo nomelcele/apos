@@ -12,15 +12,27 @@
 <script>
 	var price = 0;
 	var i = 0;
+	var j = 0;
+	var mile = 0;
+	var chk = true;
 	function usingmileage(){
-		price = price - $('#usemileage').val();
-		document.getElementById('total').innerHTML=price;
+		if(chk){
+			price -= $('#mileage').val();
+			mile = mile - $('#mileage').val();
+			console.log("이차 : "+mile);
+			document.getElementById('total').innerHTML=price;
+			document.getElementById('miletotal').innerHTML=mile;
+			chk = false;
+		}	
 	}
 	function insertproduct(pcode, psize, pamount, pprice){
 		i++;
+		j++;
+		var s = "s"+j;
 		var t = $('#p_num').val();
 		price = price + (t*pprice);
 		var str = "<tr><td>"+i+"</td>"+"<td>"+pcode+"</td>"+"<td>"+psize+"</td>"+"<td>"+t+"</td>"+"<td>"+(t*pprice)+"</td><tr>"
+		var str2 = "<input type='hidden' name='"+s+"' value='"+
 		console.log(str);
 		document.getElementById('ftarget').innerHTML+=str;
 		document.getElementById('total').innerHTML=price;
@@ -29,6 +41,8 @@
 	function ckcustomer(name, tel, mileage){
 		$('#name').val(name);
 		$('#phone').val(tel);
+		mile = mileage;
+		console.log("일차 : "+mile);
 		$('#mileage').attr("MAX", mileage);
 	};
 	
@@ -64,6 +78,13 @@
 </script>
 <section id="main-content">
 	<section class="wrapper">
+	<div>
+	<form action="sh.apos" method="post" id="final">
+		<input type="hidden" name="cmd" value="smang">
+		<input type="hidden" name="subcmd" value="final">
+		
+	</form>
+	</div>
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
@@ -168,12 +189,9 @@
 						
 						
 							<div class="form-group">
-								<input type="text" class="form-control"
-									id="usemileage" placeholder="마일리지" name="mem_mileage">
-							</div>
 							<button type="button" class="btn btn-primary" onclick="javascript:usingmileage()">마일리지 사용</button>'
 							<button type="submit" class="btn btn-primary">완료</button>
-						
+						</div>
 						<div class="col-sm-6">
                           <table class="table" style="width:800px;">
                             <thead>
@@ -229,7 +247,7 @@
 									<td>합계 :</td>
 									<td id="total"></td>
 									<td>잔여 마일리지</td>
-									<td>얼마</td>
+									<td id="miletotal"></td>
 								</tr>
 							</table>
 						</div>

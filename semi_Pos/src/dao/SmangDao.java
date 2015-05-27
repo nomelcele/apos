@@ -18,6 +18,7 @@ public class SmangDao {
 		}
 		return dao;
 	}
+	public void insertsell()
 	public ArrayList<SmangVO> getListProduct2(int seq){
 		System.out.println(seq);
 		Connection con = null;
