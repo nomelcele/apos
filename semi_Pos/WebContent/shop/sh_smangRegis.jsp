@@ -18,8 +18,36 @@
 		$('#name').val(name);
 		$('#phone').val(tel);
 		$('#mileage').val(mileage);
+		
 	};
 
+	$(function(){
+		$("#ck").click(function(){
+			$.ajax({ //ajax로 보냄
+				type:"POST", //헤더에 넣어서보냄 (URL로 안보임)
+				url:"sh_smang_callback.jsp",
+				data:{name:$("#ckname").val()},
+				success:function(data){
+						$('#target').html(data);
+					}
+			});
+			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
+		});
+	});
+	
+	$(function(){
+		$("#p_numbtn").click(function(){
+			$.ajax({
+				type:"POST",
+				url:"sh_smang_callback2.jsp",
+				data:{pname:$("#p_num").val()},
+				success:function(data){
+					$('#target2').html(data);
+				}
+			});
+			return false;
+		});
+	})
 </script>
 <section id="main-content">
 	<section class="wrapper">
@@ -28,16 +56,14 @@
 				<section class="panel">
 					<header class="panel-heading"> 고객 검색</header>
 					<div class="panel-body">
-						<form class="form-inline" role="form" method="post"  action="sh.apos">
-						<input type="hidden" name="cmd" value="smang"> 
-						<input type="hidden" name="subcmd" value="check">
+						<form class="form-inline" role="form">
 							<div class="form-group">
 							
 								<input type="text" class="form-control"
-									id="exampleInputPassword2" placeholder="고객성함"
+									id="ckname" placeholder="고객성함"
 									name="name" onkeydown="startSuggest()" autocomplete="off">
 							</div>
-							<button type="submit" class="btn btn-primary">검색</button>
+							<button type="button" id="ck" class="btn btn-primary">검색</button>
 						</form>
 					
 					<table class="table table-striped table-advance table-hover">
@@ -49,7 +75,8 @@
                                  <th><i class="icon_mobile"></i> 전화번호</th>
                                  <th><i class="icon_cogs"></i> 선택</th>
                               </tr>
-                              <c:forEach var="stList" items="${list}">
+                              <tr id="target"></tr>
+                            <%--   <c:forEach var="stList" items="${list}">
                               <tr>
                                  <td>${stList.mem_num}</td>										
 								 <td>${stList.mem_name}</td>
@@ -63,8 +90,9 @@
                                   </div>
                                   </td>
                               </tr>
-                              </c:forEach>
+                              </c:forEach> -->
                               
+                              --%> 
                            </tbody>
                         </table>
 					</div>
@@ -83,19 +111,46 @@
 				<section class="panel">
 					<header class="panel-heading"> 구매정보 </header>
 					<div class="panel-body">
-						<form class="form-inline" role="form" action="sh.apos" method="post">
-						<input type="hidden" name="cmd" value="smang"> 
-						<input type="hidden" name="subcmd" value="pcheck">
+						
 							<div class="form-group">
 								<input type="text" class="form-control"
 									id="p_num" placeholder="상품번호" name="pro_code">
 							</div>
-							<div class="form-group">
-								<input type="text" class="form-control"
-									id="p_size" placeholder="사이즈" name="pro_size">
-							</div>
-							<button type="submit" class="btn btn-primary">검색</button>
-							</form>
+							<button type="button" id="p_numbtn" class="btn btn-primary">검색</button>
+						<div class="table-responsive">
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th>no</th>
+										<th>상품번호</th>
+										<th>사이즈</th>
+										<th>수량</th>
+										<th>재고</th>
+										<th>판매가</th>
+										<th>할인가</th>
+									</tr>
+								</thead>
+								<tbody>
+								<tr id="target2"></tr>
+								<%-- 반복 
+									 <c:forEach var="ptlist" items="${plist}">
+									 	<tr>
+									 		<td>${ptlist.pro_code}</td>
+									 		<td>${ptlist.sto_size }</td>
+									 		<td>${ptlist.sto_amount }</td>
+									 		<td>${ptlist.pro_price }</td>
+									 		<td>할인가</td>
+									 	</tr>
+									 </c:forEach>
+									 반복 --%>
+								</tbody>
+							</table>
+						</div>
+						
+						
+						
+						
 							<div class="form-group">
 								<input type="text" class="form-control"
 									id="usemileage" placeholder="마일리지" name="mem_mileage">
@@ -114,12 +169,14 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr class="active">
+                           
+                             <tr class="active">
                                 <td>1</td>
-                                <td><input type="text" class="form-control" id="name" value="" readonly="readonly"></td>
-                                <td><input type="text" class="form-control" id="phone" value="" readonly="readonly"></td>
-                                <td><input type="text" class="form-control" id="mileage" value="" readonly="readonly"></td>
-                              </tr>                              
+                                <td><input type="text" class="form-control" name='name' id="name" value="" readonly="readonly"></td>
+                                <td><input type="text" class="form-control" name='id' id="phone" value="" readonly="readonly"></td>
+                                <td><input type="text" class="form-control" name='mileage' id="mileage" value="" readonly="readonly"></td>                            
+                              </tr>     
+                                               
                               
                             </tbody>
                           </table>
