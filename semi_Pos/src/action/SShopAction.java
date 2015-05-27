@@ -28,12 +28,21 @@ public class SShopAction implements Action {
 			method=false;
 		}else if(subcmd.equals("login")){
 			url="sh_index.jsp";
+			String whocheck = request.getParameter("checkBox"); // 체크:master / non체크 : null?
 			String id = request.getParameter("id");
 			int shop_num =  ShopDao.getDao().getshopno(id);// shop_num;
 			HttpSession session = request.getSession();
-			session.setAttribute("shop_id", id);
 			session.setAttribute("shop_num", shop_num);
+			session.setAttribute("shop_id", id);
+			session.setAttribute("rank", whocheck); // master or null
 			method=false;
+			
+			
+			if(whocheck.equals("master")){
+				// 사장, 점장, 주인이 들어왔을때 = check를 하였을 때
+			}else{
+				// 점원, 알바가 들어왔을떄
+			}
 		}else if(subcmd.equals("logout")){
 			url="sh_login.jsp";
 			HttpSession session = request.getSession();

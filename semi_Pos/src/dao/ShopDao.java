@@ -107,7 +107,7 @@ public class ShopDao {
 				ShopHotkeyVO vo= new ShopHotkeyVO();
 				vo.setKey_num(rs.getInt("key_num"));
 				vo.setKey_name(rs.getString("key_name"));
-				vo.setKey_hotkey(rs.getInt("key_hot"));
+				vo.setKey_hotkey(rs.getInt("ket_hot"));
 				vo.setKey_email(rs.getString("key_mail"));
 				vo.setKey_crnum(rs.getInt("key_crnum"));
 				vo.setKey_date(rs.getString("key_date"));
@@ -244,12 +244,13 @@ public class ShopDao {
 		try {
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
-			sql.append("select * from shop where shop_id=?");
+			sql.append("select * from shop where shop_id=? ");
 			pstmt= con.prepareStatement(sql.toString());
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
-			
-			num =  rs.getInt("shop_num");
+			while(rs.next()){
+				num =  rs.getInt("shop_num");
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

@@ -113,12 +113,6 @@
 					});
 				})
 
-		// 그리고 captcha 인증 성공하면 로그인 시도하도록!
-		// ok시에 로그인시도 가능...
-// 		$("#captLogin").click(function() {
-			
-// 		});
-		
 		// --------------- captcha END --------------
 	});
 </script>
@@ -147,17 +141,17 @@
 					<!-- header title -->
 					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
 				</div>
-				<div>
+				<div >
 				<!-- body -->
-				<form method="post" action="*.apos" name="checkhot" id="checkhot">
+				<form method="post" action="*.apos" name="checkhot" id="checkhot" autocomplete="off">
 				<input type="hidden" name="cmd" value="sjoin">
 				<input type="hidden" name="subcmd" value="submithot">
-					<div style="width: 100%;">
+					<div style="width: 100%;" >
 						<div class="modal-body2">
 							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
 						</div>
 						<div class="modal-body2">
-							사업자 번호:<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="crnum" autofocus>
+							사업자 번호:<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="crnum"  autofocus>
 						</div>
 						<div class="modal-body2">
 							HotKey:<input type="text" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
@@ -182,18 +176,20 @@
 				</p>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="icon_profile"></i></span>
-					<input type="text" class="form-control" placeholder="User_id" id="id" autofocus>
+					<input type="text" class="form-control" placeholder="User_id" id="id" name="id" autofocus>
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="icon_key_alt"></i></span>
-					<input type="password" class="form-control" placeholder="Password" id="pwd">
+					<input type="password" class="form-control" placeholder="Password" id="pwd" name="pwd">
 				</div>
-				<label class="checkbox"> <input type="checkbox"
-					value="remember-me"> Remember me <span class="pull-right">
+				<label class="checkbox"><input type="checkbox" id="checkBox" name="checkBox" value="master"> Mastser/PartT <span class="pull-right">
 						<a href="sh_shopSearch.jsp"> Forgot Password?</a>
 				</span>
 				</label>
 				
+				<label class="checkbox">
+				<span class="pull-right" id="getHotkey" style="cursor: pointer;"> Get HotKey!!</span>
+				</label>
 				<%-- captcha Start --%>
 				<table id="captcha" style="width: 90%">
 					<tr>
