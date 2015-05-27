@@ -23,16 +23,13 @@ $(function(){
 
 <section class="wrapper">
 	<section id="main-content">
-<!-- 		<form class="form-validate form-horizontal" id="feedback_form" -->
-<!-- 			method="post" action="sh.apos"> -->
-<!-- 			<input type="hidden" name="cmd" value="smember"> <input -->
-<!-- 				type="hidden" name="subcmd" value="detail"> -->
-<!-- 	</form> -->
+
 <form method="post" action="sh.apos" id="secede">
 <input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="secede">
 <input type="hidden" name="num" value="${v.mem_num}" >
 </form>
+
 <form method="post" action="sh.apos" id="finishbtn">
 <input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="finish">
