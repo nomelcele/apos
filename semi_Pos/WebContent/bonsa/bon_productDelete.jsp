@@ -71,16 +71,16 @@
 									class="control-label col-lg-2">물품명</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="name"
-										name="name" minlength="2" type="text">
+										name="name" minlength="2" type="text" value="${v.pro_name}">
 								</div>
 							</div>
 							<br />
 							<div class="form-group ">
 								<label style="width: 200px;" for="cname"
-									class="control-label col-lg-2">사이즈</label>
+									class="control-label col-lg-2">물품코드</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="name"
-										name="name" minlength="2" type="text">
+										name="name" minlength="2" type="text" value="${v.pro_code}">
 								</div>
 							</div>
 							<br />
@@ -89,7 +89,7 @@
 									class="control-label col-lg-2">판매금액</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="name"
-										name="name" minlength="2" type="text">
+										name="name" minlength="2" type="text" value="${v.pro_img}">
 								</div>
 							</div>
 							<div class="form-group"
