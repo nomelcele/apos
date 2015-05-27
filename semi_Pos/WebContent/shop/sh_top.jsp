@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -41,12 +40,9 @@
       <script src="js/lte-ie7.js"></script>
     <![endif]-->
   </head>
-
-  <body>
+<body>
   <!-- container section start -->
   <section id="container" class="">
-
-      
       <header class="header dark-bg">
             <div class="toggle-nav">
                 <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
@@ -296,7 +292,7 @@
                                 <a href="#"><i class="icon_chat_alt"></i> Chats</a>
                             </li>
                             <li>
-                                <a href="sh_index.jsp"><i class="icon_key_alt"></i> Log Out</a>
+                               	<a href="*.apos?cmd=sjoin&subcmd=logout"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
                             <li>
                                 <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
@@ -310,5 +306,6 @@
                 </ul>
                 <!-- notificatoin dropdown end-->
             </div>
-      </header>      
+      </header>   
+      </section>   
       <!--header end-->

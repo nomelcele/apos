@@ -149,9 +149,9 @@
 				</div>
 				<div>
 				<!-- body -->
-				<form method="post" action="sh_shopjoin.jsp" name="checkhot" id="checkhot">
-				<input type="hidden">
-				<input type="hidden">
+				<form method="post" action="*.apos" name="checkhot" id="checkhot">
+				<input type="hidden" name="cmd" value="sjoin">
+				<input type="hidden" name="subcmd" value="submithot">
 					<div style="width: 100%;">
 						<div class="modal-body2">
 							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
@@ -173,7 +173,9 @@
 	</div>
 
 	<div class="container">
-		<form class="login-form" action="sh_index.jsp" id="loginForm" autocomplete="off">
+		<form class="login-form" action="*.apos" id="loginForm" autocomplete="off">
+		<input type="hidden" name="cmd" value="sjoin">
+		<input type="hidden" name="subcmd" value="login">
 			<div class="login-wrap">
 				<p class="login-img">
 					<i class="icon_lock_alt"></i>
