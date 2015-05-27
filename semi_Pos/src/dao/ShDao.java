@@ -27,24 +27,19 @@ public class ShDao {
 		return dao;
 	}
 	// 맴버 정보를 디비에서 빼옴 검색한 내용에 맞게  
-	public ArrayList<MemVO> getListMember(Map<String, Integer> map,String name) {
+	public ArrayList<MemVO> getListMember(String name) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		ArrayList<MemVO> list = new ArrayList<MemVO>();
 
 		StringBuffer sql = new StringBuffer();
-		sql.append("select * from (select rownum r_num, a.* from (");
-		sql.append("select * from member where mem_name=? or mem_tel=?"
-				+ "order by mem_NUM desc) a");
-		sql.append(") where r_num between ? and ?");
+		sql.append("select * from member where mem_name=? or mem_tel=?");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, name);
 			pstmt.setString(2, name);
-			pstmt.setInt(3, map.get("begin"));
-			pstmt.setInt(4, map.get("end"));
 			rs = pstmt.executeQuery();
 			while(rs.next()){
 				MemVO v= new MemVO();

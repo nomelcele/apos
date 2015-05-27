@@ -13,6 +13,7 @@
 	while(it.hasNext()){
 		MemVO v = new MemVO();
 		v = it.next();
+		res.append("<tr>");
 		res.append("<td>").append(v.getMem_num()).append("</td>");
 		res.append("<td>").append(v.getMem_name()).append("</td>");
 		res.append("<td>").append(v.getMem_addr()).append("</td>");
@@ -24,6 +25,7 @@
 		res.append(v.getMem_mileage()).append("')\">");
 		res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
 		res.append("</td>");
+		res.append("</tr>");
 		
 	}
 	String str = res.toString();

@@ -10,8 +10,16 @@
 <script src="../js/json2.js"></script>
 <script src="../js/suggestMem_pk.js"></script>
 <script>
-	function usingmileage(){
-		
+	var price = 0;
+	var i = 0;
+	function insertproduct(pcode, psize, pamount, pprice){
+		i++;
+		var t = $('#p_num').val();
+		price = price + (t*pprice);
+		var str = "<tr><td>"+i+"</td>"+"<td>"+pcode+"</td>"+"<td>"+psize+"</td>"+"<td>"+pprice+"</td><tr>"
+		console.log(str);
+		document.getElementById('ftarget').innerHTML+=str;
+		document.getElementById('total').innerHTML=price;
 	}
 
 	function ckcustomer(name, tel, mileage){
@@ -20,6 +28,8 @@
 		$('#mileage').val(mileage);
 		
 	};
+	
+	
 
 	$(function(){
 		$("#ck").click(function(){
@@ -40,7 +50,7 @@
 			$.ajax({
 				type:"POST",
 				url:"sh_smang_callback2.jsp",
-				data:{pname:$("#p_num").val()},
+				data:{pname:$("#pro_code").val()},
 				success:function(data){
 					$('#target2').html(data);
 				}
@@ -67,7 +77,7 @@
 						</form>
 					
 					<table class="table table-striped table-advance table-hover">
-                           <tbody>
+                           <thead>
                               <tr>
                                  <th><i class="icon_profile"></i> 고객 번호 </th>
                                  <th><i class="icon_calendar"></i> 고객 성명 </th>
@@ -75,7 +85,8 @@
                                  <th><i class="icon_mobile"></i> 전화번호</th>
                                  <th><i class="icon_cogs"></i> 선택</th>
                               </tr>
-                              <tr id="target"></tr>
+                              </thead>
+                              <tbody id="target">
                             <%--   <c:forEach var="stList" items="${list}">
                               <tr>
                                  <td>${stList.mem_num}</td>										
@@ -114,7 +125,7 @@
 						
 							<div class="form-group">
 								<input type="text" class="form-control"
-									id="p_num" placeholder="상품번호" name="pro_code">
+									id="pro_code" placeholder="상품번호" name="pro_code">
 							</div>
 							<button type="button" id="p_numbtn" class="btn btn-primary">검색</button>
 						<div class="table-responsive">
@@ -123,16 +134,17 @@
 								<thead>
 									<tr>
 										<th>no</th>
-										<th>상품번호</th>
+										<th>대리점</th>
+										<th>상품코드</th>
 										<th>사이즈</th>
 										<th>수량</th>
 										<th>재고</th>
-										<th>판매가</th>
+										<th>가격</th>
 										<th>할인가</th>
 									</tr>
 								</thead>
-								<tbody>
-								<tr id="target2"></tr>
+								<tbody id="target2">
+								
 								<%-- 반복 
 									 <c:forEach var="ptlist" items="${plist}">
 									 	<tr>
@@ -192,14 +204,11 @@
 										<th>no</th>
 										<th>상품번호</th>
 										<th>사이즈</th>
-										<th>수량</th>
-										<th>재고</th>
-										<th>판매가</th>
 										<th>할인가</th>
 									</tr>
 								</thead>
-								<tbody>
-								<%-- 반복 --%>
+								<tbody id="ftarget">
+								<%-- 반복 
 									 <c:forEach var="ptlist" items="${plist}">
 									 	<tr>
 									 		<td>${ptlist.pro_code}</td>
@@ -209,11 +218,11 @@
 									 		<td>할인가</td>
 									 	</tr>
 									 </c:forEach>
-									<%-- 반복 --%>
+									 반복 --%>
 								</tbody>
 								<tr>
 									<td>합계 :</td>
-									<td>얼마</td>
+									<td id="total"></td>
 									<td>잔여 마일리지</td>
 									<td>얼마</td>
 								</tr>

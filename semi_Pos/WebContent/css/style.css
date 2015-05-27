@@ -390,11 +390,15 @@ ul.sidebar-menu li a i {
 }
 
 ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
+<<<<<<< .mine
+    color: #ff80c0;
+=======
     color: #000000;
+>>>>>>> .r397
 }
 
 ul.sidebar-menu li.active a i {
-    color: #fff;
+    color: #ff80c0;
 }
 
 

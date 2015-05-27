@@ -25,8 +25,7 @@ public class SmangDao {
 		ResultSet rs = null;
 		ArrayList<SmangVO> list = new ArrayList<SmangVO>();
 		StringBuffer sql = new StringBuffer();
-		sql.append("select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount");
-		sql.append(" from product p, stock s, shop sh where p.pro_num = s.sto_pronum and p.pro_num = ? and sh.shop_num = 1");
+		sql.append("select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount from product p, stock s, shop sh where p.pro_num = s.sto_pronum and sh.shop_num=sto_shopnum and p.pro_num = ? and sh.shop_num = 1");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
@@ -37,9 +36,10 @@ public class SmangDao {
 				v.setPro_code(rs.getString("pro_code"));
 				v.setPro_name(rs.getString("pro_name"));
 				v.setPro_price(rs.getInt("pro_price"));
+				v.setSto_size(rs.getInt("sto_size"));
 				v.setShop_name(rs.getString("shop_name"));
 				v.setSto_amount(rs.getInt("sto_amount"));
-				v.setSto_size(rs.getInt("sto_size"));
+				
 				list.add(v);
 			}
 		} catch (SQLException e) {
@@ -78,7 +78,7 @@ public class SmangDao {
 			while(rs.next()){
 				seq = rs.getInt("pro_num");
 			}
-			list = getListProduct2(seq);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}finally {
@@ -94,6 +94,7 @@ public class SmangDao {
 			}
 			
 		}
+		list = getListProduct2(seq);
 		return list;
 	}
 }

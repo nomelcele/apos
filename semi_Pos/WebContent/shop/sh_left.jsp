@@ -68,7 +68,6 @@
          document.getElementById("rank").submit();
       }
       else if(str == "regis"){
-    	  alert("확인");
          document.getElementById("regis").submit();
       }
       else if(str == "exchRefu"){
