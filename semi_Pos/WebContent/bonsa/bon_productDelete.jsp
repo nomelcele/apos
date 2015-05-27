@@ -4,37 +4,44 @@
 <%@include file="bon_left.jsp"%>
 <!-- 본사 상품관리의 상품삭제 페이지입니다. -->
 <script>
-$(function(){
-	
-})
-function goDel(str){
-	if(str == "pcode"){
-		//alert("goDel실행됨!! :pcode");
-		
-		var productcode=$('#pcode').val();
-		alert(pcode);
-		$('#bpcode').val(productcode);
-		
-		document.getElementById("procode").submit();
-	}
-}
+	$(function() {
+		$('#pcodebtn').click(function() {
+			alert("goDel실행됨!! :pcode");
+
+			var productcode = $('#pcode').val();
+			alert(productcode);
+			$('#bpcode').val(productcode);
+			alert($('#bpcode').val());
+			document.getElementById("procode").submit();
+
+		})
+	})
+	// 		function goDel(str) {
+	// 			if (str == "pcode") {
+	// 				alert("goDel실행됨!! :pcode");
+	// 				alert("!!");
+	// 				var productcode = $('#pcode').val();
+	// 				alert(pcode);
+	// 				$('#bpcode').val(productcode);
+
+	// 				document.getElementById("procode").submit();
+	// 			}
+	// 		}
 </script>
 <section class="wrapper">
 	<section id="main-content">
-<form method="post" action="sh.apos" id="procode">
-<input type="hidden" name="cmd" id="cmd" value="bproduct">
-<input type="hidden" name="subcmd" id="subcmd" value="del">
-<input type="hidden" name="childcmd" id="childcmd" value="pcode">
-<input type="hidden" id ="bpcode" name="bpcode" value="" >
-</form>
+		<form method="post" action="sh.apos" id="procode">
+			<input type="hidden" name="cmd" id="cmd" value="bproduct"> <input
+				type="hidden" name="subcmd" id="subcmd" value="del"> <input
+				type="hidden" name="childcmd" id="childcmd" value="pcode"> <input
+				type="hidden" id="bpcode" name="bpcode" value="">
+		</form>
 
-		<form class="form-validate form-horizontal" id="ewoivjsd"
-			method="post" action="sh.apos">
-			<input type="hidden" name="cmd" value="bproduct"> 
-			<input type="hidden" name="subcmd" value="del">
-			<input type="hidden" name="childcmd" value="ppp">
-
-
+		<form class="form-validate form-horizontal" id="form" method="post"
+			action="sh.apos">
+			<input type="hidden" name="cmd" value="bproduct"> <input
+				type="hidden" name="subcmd" value="del"> <input
+				type="hidden" name="childcmd" value="">
 
 			<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12">
@@ -46,8 +53,8 @@ function goDel(str){
 				<div class="panel-body">
 					<div class="form">
 						<div class="col-lg-6">
-						
-							<div class="form-group ">
+
+							<div class="form-group">
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">상품코드 </label>
 								<div class="col-lg-4">
@@ -55,13 +62,12 @@ function goDel(str){
 										minlength="2" onkeydown="startSuggest();" autocomplete="off"
 										type="text">
 								</div>
-									<a onclick="goDel(str)"><input type="button" class="btn btn-default" type= id="pcodebtn" value="조회">
-									</input></a>
+								<button class="btn btn-default" type="button" id="pcodebtn"
+									onclick="javascript:goDel(str)">조회</button>
 							</div>
 
 							<div class="form-group ">
-								<br />
-								<br /> <label style="width: 200px;" for="cname"
+								<br /> <br /> <label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">물품명</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="name"
@@ -87,11 +93,9 @@ function goDel(str){
 								</div>
 							</div>
 							<div class="form-group"
-								style="margin-left: 200px; margin-top: 30px;">
-								<div class="col-lg-2">
-									<button class="btn btn-default" type="submit" id="memchange">상품삭제</button>
-									<button class="btn btn-primary" type="button" id="finish">완료</button>
-								</div>
+								style="margin-left: 300px; margin-top: 30px;">
+								<button class="btn btn-default" type="submit" id="memchange">상품삭제</button>
+								<button class="btn btn-primary" type="button" id="finish">완료</button>
 							</div>
 						</div>
 						<div class="col-lg-6">
