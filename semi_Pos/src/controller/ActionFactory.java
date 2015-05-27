@@ -24,7 +24,7 @@ public class ActionFactory {
 			String rPath = prop.getProperty(cmd);
 			System.out.println("kk:"+rPath);
 			if(rPath == null){
-				cmd = "index";
+				cmd = "login";
 				rPath = prop.getProperty(cmd);
 			}
 			Class<Action> handlerClass = 
