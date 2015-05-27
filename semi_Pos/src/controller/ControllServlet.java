@@ -14,7 +14,7 @@ import action.Action;
 
 //여기서 모델객체를 생성하면 서버를 다시 시작해주어야한다
 @WebServlet("*.apos")
-@MultipartConfig(maxFileSize=1024*1024*10, location="C:\\Users\\hg\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\semi_Pos\\upload\\")
+@MultipartConfig(maxFileSize=1024*1024*10, location="C:\\kosta97\\webapp\\service\\workspace\\.metadata\\.plugins\\org.eclipse.wst.server.core\\tmp0\\wtpwebapps\\semi_Pos\\upload\\")
 
 public class ControllServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
