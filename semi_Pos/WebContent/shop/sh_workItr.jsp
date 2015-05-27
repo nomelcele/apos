@@ -12,7 +12,7 @@
 <section id="main-content">
 	<section class="wrapper">
 		<div class="panel-group m-bot20" id="accordion">
-			<div class="panel panel-default">
+			<div class="panel panel-default" style="margin-top: 3%">
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse"
