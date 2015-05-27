@@ -6,7 +6,7 @@
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row">
-			<div class="col-lg-12" style="margin-top: 5%">
+			<div class="col-lg-12" style="margin-top: 5%; font-size: 15px;" >
 				<section class="panel">
 
 					
