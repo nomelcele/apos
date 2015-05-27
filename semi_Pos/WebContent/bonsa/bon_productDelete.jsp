@@ -13,9 +13,11 @@
 			$('#bpcode').val(productcode);
 			alert($('#bpcode').val());
 			document.getElementById("procode").submit();
-
-		})
-	})
+		$('#pdetbtn').click(function(){
+			alert("야호");
+		});
+		});
+	});
 	// 		function goDel(str) {
 	// 			if (str == "pcode") {
 	// 				alert("goDel실행됨!! :pcode");
@@ -94,7 +96,8 @@
 							</div>
 							<div class="form-group"
 								style="margin-left: 300px; margin-top: 30px;">
-								<button class="btn btn-default" type="submit" id="memchange">상품삭제</button>
+								<button class="btn btn-default" type="submit" id="pdetbtn"
+								onclick="javascript:goDel(str)">상품삭제</button>
 								<button class="btn btn-primary" type="button" id="finish">완료</button>
 							</div>
 						</div>
