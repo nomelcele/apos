@@ -1080,8 +1080,8 @@ div[data-role="editor-toolbar"] {
   line-height: 50px;
   padding: 7 15px;
   min-height: 34px;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;  
