@@ -5,7 +5,7 @@
 <!-- 매장의 정산관리 - 판매현황 페이지입니다. -->
 <section id="main-content">
    <section class="wrapper">
-      <section class="panel">
+      <section class="panel" style="font-size: 15px;">
          <header class="panel-heading tab-bg-primary ">
             <ul class="nav nav-tabs">
                <li class="active"><a data-toggle="tab" href="">every</a>
