@@ -5,9 +5,14 @@
 <%-- 매장의 업무관리 - 공지사항 페이지입니다. --%>
 <section id="main-content">
 	<section class="wrapper">
+<<<<<<< .mine
+		<div class="row">
+			<div class="col-lg-12" style="margin-top: 5%">
+				<section class="panel">
+=======
 		
-					<header class="panel-heading" style="font-size: 12pt"> 
-					</header>
+>>>>>>> .r369
+					
 
 					<table class="table table-striped table-advance table-hover">
 						<tbody>
