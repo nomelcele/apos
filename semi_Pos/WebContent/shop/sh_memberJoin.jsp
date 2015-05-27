@@ -84,14 +84,13 @@
                                   
                                   
                                       <div class="form-group ">
-                                          <label for="cname" class="control-label col-lg-2">이름 <span class="required">*</span></label>
+                                          <label for="cname" class="control-label col-lg-2">이름<span class="required">*</span></label>
                                           <div class="col-lg-2">
                                               <input class="form-control" id="sname" name="name" minlength="2" type="text" required />
                                           </div>
                                       </div>
                                       
-                                      
-                                      
+                        
                                       <div class="form-group ">
                                           <label for="cdate" class="control-label col-lg-2">생년월일 <span class="required">*</span></label>
                                           <div class="col-lg-2">
