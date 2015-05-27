@@ -59,7 +59,8 @@ public class SMemberAction implements Action {
 		}else if(subcmd != null && subcmd.equals("secede")){
 			int num=Integer.parseInt(request.getParameter("num"));
 			MemVO v= ShDao.getDao().getsecede(num);
-			url="sh_membercheck.jsp";
+			url="sh_index.jsp";
+			System.out.println("삭제성공!");
 		}
 		return new ActionForward(url, false);
 	}
