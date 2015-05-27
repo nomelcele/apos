@@ -42,6 +42,12 @@ public class SMangAction implements Action{
 			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
 			request.setAttribute("plist", list);
 			
+		}else if(subcmd.equals("insell")){
+			url="sh_smangRegis.jsp";
+			String code = request.getParameter("pro_code");
+			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
+			request.setAttribute("plist", list);
+			
 		}
 		return new ActionForward(url, false);
 	}
