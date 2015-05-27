@@ -219,7 +219,7 @@ public class ShopDao {
 			pstmt.setString(2, pwd);
 			rs = pstmt.executeQuery();
 			
-			res = rs.next();
+			res = rs.next(); // 있을때 true 없을때 false
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -235,6 +235,25 @@ public class ShopDao {
 
 		}
 		return res;
+	}
+	public int getshopno(String id){
+		Connection con= null;
+		PreparedStatement pstmt= null;
+		ResultSet rs = null;
+		int num=0;
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from shop where shop_id=?");
+			pstmt= con.prepareStatement(sql.toString());
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			num =  rs.getInt("shop_num");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return num;
 	}
 	private int createHotkey(){
 		int hotkey=(int)(Math.random()*666666)+111111;// 0~99까지
