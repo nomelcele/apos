@@ -132,9 +132,9 @@ $('#bimg').change(function(){
 											style="float: left; margin-right: 50px;">
 											<input type="file" id="pimg" name="pimg">
 											<button type="submit" class="btn btn-primary"
-												style="margin-left: 218px;">사진추가</button>
+												style="margin-left: 316px;">사진추가</button>
 											<div
-												style="width: 200px; height: 120px; border: 2px solid black; margin-top: 10px; margin-bottom: 10px; margin-left: 100px;"
+												style="width: 258px; height: 120px; border: 2px solid rgb(213,206,206); margin-top: 10px; margin-bottom: 10px; margin-left: 140px;"
 												id="pimgtarget"><img src=""></div>
 										</div>
 										<div style="float: left;"></div>
@@ -144,9 +144,9 @@ $('#bimg').change(function(){
 											style="float: left; margin-right: 300px;">
 											<input type="file" id="bimg" name="bimg">
 											<button type="submit" class="btn btn-primary"
-												style="margin-left: 205px;">바코드추가</button>
+												style="margin-left: 301px;">바코드추가</button>
 											<div
-												style="width: 200px; height: 120px; border: 2px solid black; margin-top: 10px; margin-left: 100px;"
+												style="width: 258px; height: 120px; border: 2px solid rgb(213,206,206); margin-top: 10px; margin-left: 140px;"
 												id="bimgtarget"><img src=""></div>
 										</div>
 										<div style="float: left;"></div>
