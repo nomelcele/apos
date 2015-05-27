@@ -316,7 +316,7 @@ ul.sidebar-menu li ul.sub li a {
 }
 
 ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
-    color: #fff;
+    color: #000000;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -366,7 +366,7 @@ ul.sidebar-menu li a{
 }*/
 ul.sidebar-menu li.active a, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
     background: #FFFFFF;
-    color: #fff;
+    color: #000000;
     display: block;
     /*border-radius: 4px;
     -webkit-border-radius: 4px;*/
@@ -386,7 +386,7 @@ ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
 ul.sidebar-menu li a i {
     font-size: 18px;
     padding-right: 6px;
-    /*color: #688a7e;*/
+    color: #688a7e;
 }
 
 ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
