@@ -56,20 +56,14 @@ public class BProductAction implements Action {
 			}
 
 		} else if (subcmd.equals("del")) {
-
 			url = "bon_productDelete.jsp";
-			System.out.println("¾å");
 			String childcmd = request.getParameter("childcmd");
-			
-			System.out.println(childcmd);
 			if (childcmd != null && childcmd.equals("pcode")) {
-				System.out.println("¾å¾å");
-				int num=Integer.parseInt(request.getParameter("bpcode"));
-				System.out.println(num);
-			}else{
-				System.out.println("¹¹¾ß¹¹¾ß¿Ö¾ÈµÅ?");
+				String code=request.getParameter("bpcode");
+				// numÀº »óÇ°ÄÚµå¿©
+				ProductVO v= ProductDao.getDao().getProduct(code);
+				request.setAttribute("v", v);
 			}
-			
 			
 		} else if (subcmd.equals("sale")) {
 			url = "bon_productSale.jsp";
