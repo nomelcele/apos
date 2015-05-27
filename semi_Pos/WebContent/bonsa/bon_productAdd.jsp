@@ -81,7 +81,7 @@ $('#bimg').change(function(){
 
 
 											<div class="form-group ">
-												<label style="width: 100px;" for="cname"
+												<label style="width: 115px;" for="cname"
 													class="control-label col-lg-2">물품명</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
@@ -93,7 +93,7 @@ $('#bimg').change(function(){
 
 
 											<div class="form-group ">
-												<label style="width: 100px;" for="cname"
+												<label style="width: 115px;" for="cname"
 													class="control-label col-lg-2">물품코드</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
@@ -104,7 +104,7 @@ $('#bimg').change(function(){
 
 
 											<div class="form-group ">
-												<label style="width: 100px;" for="cname"
+												<label style="width: 115px;" for="cname"
 													class="control-label col-lg-2">사이즈</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
@@ -115,14 +115,14 @@ $('#bimg').change(function(){
 
 
 											<div class="form-group ">
-												<label style="width: 100px;" for="cname"
+												<label style="width: 115px;" for="cname"
 													class="control-label col-lg-2">판매금액</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
 														id="price" name="price" minlength="2" type="text" required />
 												</div>
 											</div>
-											<div style="float: right; margin-right: 50px;">
+											<div style="float: right; margin-right: 2px;">
 												<button type="submit" class="btn btn-primary">추가</button>
 											</div>
 										</div>
@@ -132,7 +132,7 @@ $('#bimg').change(function(){
 											style="float: left; margin-right: 50px;">
 											<input type="file" id="pimg" name="pimg">
 											<button type="submit" class="btn btn-primary"
-												style="margin-left: 100px;">사진추가</button>
+												style="margin-left: 218px;">사진추가</button>
 											<div
 												style="width: 200px; height: 120px; border: 2px solid black; margin-top: 10px; margin-bottom: 10px; margin-left: 100px;"
 												id="pimgtarget"><img src=""></div>
@@ -144,7 +144,7 @@ $('#bimg').change(function(){
 											style="float: left; margin-right: 300px;">
 											<input type="file" id="bimg" name="bimg">
 											<button type="submit" class="btn btn-primary"
-												style="margin-left: 100px;">바코드추가</button>
+												style="margin-left: 205px;">바코드추가</button>
 											<div
 												style="width: 200px; height: 120px; border: 2px solid black; margin-top: 10px; margin-left: 100px;"
 												id="bimgtarget"><img src=""></div>
