@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="captchas.CaptchasDotNet"%>
+<%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="vo.ShopHotkeyVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="dao.ShopDao"%>
@@ -67,9 +68,68 @@
                    }
                });
 		});
+		
+		// --------------- captcha Start --------------
+		$("#captcha").hide();	// 첨에 captcha 숨겨놓는다.
+		
+		// count 수 증가시켜서 3이 되면 captcha 보이게!!
+		var count = 0;
+
+		$("#loginBtn").click(
+				function() {
+					$.ajax({
+						url : "sh_checkcaptcha.jsp?id="+$('#id').val() + "&pwd=" + $('#pwd').val(),
+						type : "POST",
+						dataType : "html",
+						success : function(res) {
+							console.log(res.trim());
+							// 실패했을떄
+							if (res.trim() == "false") {
+								alert("아이디와 비밀번호 확인하세요.");
+								count++;
+								if (count >= 3) {
+									$("#captcha").show();
+									//$("#loginBtn").hide();
+									$("#targetCapt").load("sh_checkcapt.jsp", {
+										password : encodeURIComponent($("#captchapwd").val())
+									}, function(res) {
+										var captcha = $("#targetCapt").text().trim();
+										console.log(captcha)
+										if (captcha == "ok") {
+											console.log("로그인가능");
+											// 여기서 location으로 보내주기 controller로 보내기?
+											// id랑 pw 보내줘야행
+											$('#loginForm').submit();
+										} else {
+											alert("보안문자 확인해주세요.");
+										}
+									});
+								}
+							} else {
+								// res.trim()== "true" 일때 (성공)
+								$('#loginForm').submit();
+							}
+						}
+					});
+				})
+
+		// 그리고 captcha 인증 성공하면 로그인 시도하도록!
+		// ok시에 로그인시도 가능...
+// 		$("#captLogin").click(function() {
+			
+// 		});
+		
+		// --------------- captcha END --------------
 	});
 </script>
-
+<%
+	// Construct the captchas object (Default Values)
+	CaptchasDotNet captchas = new captchas.CaptchasDotNet(
+			request.getSession(true), // Ensure session
+			"jtrip", // client
+			"3yNe6F7kItK5fHjFZtGCMey6d6PNtYfva6Uqht4i" // secret
+	);
+%>
 <body class="login-img3-body">
 	<div id="modal1" class="modal fade">
 		<div class="modal-dialog" style="width: 400px; text-align: center;">
@@ -113,28 +173,47 @@
 	</div>
 
 	<div class="container">
-		<form class="login-form" action="sh_index.jsp">
+		<form class="login-form" action="sh_index.jsp" id="loginForm" autocomplete="off">
 			<div class="login-wrap">
 				<p class="login-img">
 					<i class="icon_lock_alt"></i>
 				</p>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="icon_profile"></i></span>
-					<input type="text" class="form-control" placeholder="Username"
-						autofocus>
+					<input type="text" class="form-control" placeholder="User_id" id="id" autofocus>
 				</div>
 				<div class="input-group">
 					<span class="input-group-addon"><i class="icon_key_alt"></i></span>
-					<input type="password" class="form-control" placeholder="Password">
+					<input type="password" class="form-control" placeholder="Password" id="pwd">
 				</div>
 				<label class="checkbox"> <input type="checkbox"
 					value="remember-me"> Remember me <span class="pull-right">
 						<a href="sh_shopSearch.jsp"> Forgot Password?</a>
 				</span>
-				</label> <label class="checkbox"> <span class="pull-right"
-					id="getHotkey" style="cursor: pointer;">Get HotKey</span>
 				</label>
-				<button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+				
+				<%-- captcha Start --%>
+				<table id="captcha" style="width: 90%">
+					<tr>
+						<td></td>
+						<td>
+						<%-- 
+			            % it's possible to set a random in captchas.image("xyz"),
+			            % captchas.imageUrl("xyz") and captchas.audioUrl("xyz").
+			            % This is only needed at the first request
+			            --%> <%=captchas.image()%><br>
+						</td>
+					</tr>
+					<tr">
+						<td></td>
+						<td><input class="form-control" id="captchapwd" size="16" /></td>
+					</tr>
+					
+				</table>
+				<div id="targetCapt" style="display: none;"></div>
+				<%-- captcha END --%>
+				
+				<input type="button" class="btn btn-primary btn-lg btn-block" id="loginBtn" value="Login">
 				<input class="btn btn-info btn-lg btn-block" type="button" value="SignUp" id="SignUpBtn"> 
 					
 			</div>

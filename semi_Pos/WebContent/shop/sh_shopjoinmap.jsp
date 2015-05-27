@@ -115,7 +115,7 @@
 			<div class="modal-body">
 				<%-- 우편 번호  --%>
 				<div class="form-group" style="height: 50px;">
-					<label for="cadr" class="control-label col-lg-2">주소 <span class="required">*</span></label>
+					<label for="cadr" class="control-label col-lg-2" style="padding: 0;">주소 <span class="required">*</span></label>
 					<div class="col-lg-10">
 					    <input class="form-control2" type="text" id="sample4_postcode1_2" name="adr1_2"> - 
 						<input class="form-control2" type="text" id="sample4_postcode2_2" name="adr2_2">
@@ -124,10 +124,10 @@
 				</div>
 				  
 				<div class="form-group" style="height: 70px;">		
-				  	<label for="cadrr" class="control-label col-lg-2">상세주소 <span class="required">*</span></label>
+				  	<label for="cadrr" class="control-label col-lg-2" style="padding: 0;">상세주소 <span class="required">*</span></label>
 					<div class="col-lg-10">
-				 		<input class="form-control3 " type="text" id="sample4_roadAddress_2" placeholder="도로명주소" name="adr3_2">
-						<input class="form-control3 " type="text" id="sample4_jibunAddress_2" placeholder="지번주소" name="adr4_2">
+				 		<input class="form-control " type="text" id="sample4_roadAddress_2" placeholder="도로명주소" name="adr3_2">
+						<input class="form-control " type="text" id="sample4_jibunAddress_2" placeholder="지번주소" name="adr4_2">
 						<span id="guide" style="color:#999"></span>
 					</div>
 				</div>

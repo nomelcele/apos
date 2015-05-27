@@ -359,11 +359,18 @@
 // 		$('#crnum').css('value','${request.crnum}');
 // 		$('#hotkey').css('value','${requst.hotkey}');
 		
-		// 지금 추가중!!!!!!!!!!!!!!!!!!!!
+		// ID 중복체크
 		$('#sid').keyup(function(){
 			$('#targetID').load("sh_shopjoincheck.jsp?id="+$('#sid').val());
 		});
 		
+		$('#spwdchk').keyup(function(){
+			if($('#spwd').val() == $('#spwdchk').val()){
+				$('#targetPWD').text("비밀번호가 일치합니다");
+			}else{
+				$('#targetPWD').text("비밀번호가 일치하지 않습니다");
+			}
+		});
 	});
 	
 </script>
@@ -418,9 +425,16 @@
                                       </div>
                                       
                                       <div class="form-group ">
+                                          <label for="cName" class="control-label col-lg-2"> Name <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="sname" name="name" minlength="2" type="text" required />
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="form-group ">
                                           <label for="cId" class="control-label col-lg-2"> ID <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input style="width: 20%;" class="form-control" id="sid" name="id" minlength="5" type="text" required />
+                                              <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="sid" name="id" minlength="5" type="text" required />
                                               <div id="targetID"></div>
                                           </div>
                                       </div>
@@ -428,14 +442,22 @@
                                       <div class="form-group ">
                                           <label for="cPwd" class="control-label col-lg-2">PWD <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input style="width: 20%" class="form-control" id="sPwd" name="pwd" minlength="6" type="password" required />
+                                              <input style="width: 20%" class="form-control" id="spwd" name="pwd" minlength="6" type="password" required />
                                           </div>
                                       </div>
                                       
 									  <div class="form-group ">
                                           <label for="cPwdChk" class="control-label col-lg-2">PWDCHK <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input style="width: 20%" class="form-control" id="sPwd" name="pwdchk" minlength="6" type="password" required />
+                                              <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="spwdchk" name="pwdchk" minlength="6" type="password" required />
+                                          	  <div id="targetPWD"></div>
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="form-group ">
+                                          <label for="cCrnum" class="control-label col-lg-2">사업자 번호 <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="scrnum" name="crnum" minlength="6" type="password" required />
                                           </div>
                                       </div>
                                       
@@ -455,12 +477,18 @@
 	                                          		<option>KT</option>
 	                                          		<option>LG</option>
 	                                          </select>-
-	                                          <input style="width: 7%" class="form-control" id="tel1" name="tel1" minlength="3" type="tel" required />-
-	                                          <input style="width: 7%" class="form-control" id="tel2" name="tel2" minlength="4" type="tel" required />-
-	                                          <input style="width: 7%" class="form-control" id="tel3" name="tel3" minlength="4" type="tel" required />
+	                                          <input style="width: 7%" class="form-control" id="tel1" name="tel1" maxlength="3" type="tel" required />-
+	                                          <input style="width: 7%" class="form-control" id="tel2" name="tel2" maxlength="4" type="tel" required />-
+	                                          <input style="width: 7%" class="form-control" id="tel3" name="tel3" maxlength="4" type="tel" required />
                                           </div>
                                       </div>
                                       
+                                      <div class="form-group ">
+                                          <label for="cShopName" class="control-label col-lg-2"> ShopName <span class="required">*</span></label>
+                                          <div class="col-lg-10">
+                                              <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="sshopname" name="shopname" minlength="3" type="text" placeholder="ex) 죽전점" required />
+                                          </div>
+                                      </div>
                                       
                                       <div class="form-group">
 	                                      <label for="cadr" class="control-label col-lg-2">주소 <span class="required">*</span></label>
@@ -473,8 +501,6 @@
 							    		  		
 							    		  </div>
 						    		  </div>
-												
-						    		  
 						    		  
 						    		  <div class="form-group">		
 						    		  	<label for="cadrr" class="control-label col-lg-2 showc" style="display: none">상세주소 <span class="required">*</span></label>
@@ -489,8 +515,6 @@
 										  <div class="col-lg-10">
 							      				<input style="display: none" class="form-control3 " type="text" id="lat" placeholder="lat" name="lat">
 							      				<input style="display: none" class="form-control3 " type="text" id="lng" placeholder="lng" name="lng">
-							      				<input style="display: none" class="form-control3 " type="text" id="crnum" placeholder="crnum" name="crnum">
-							      				<input style="display: none" class="form-control3 " type="text" id="hotkey" placeholder="hotkey" name="hotkey">
 							      				
 	                                      </div>
                                       </div>
