@@ -11,25 +11,28 @@ function goDel(str){
 	if(str == "pcode"){
 		//alert("goDel실행됨!! :pcode");
 		
-		var pcode=$('#pcode').val();
+		var productcode=$('#pcode').val();
 		alert(pcode);
-		$('#bpcode').val(pcode);
+		$('#bpcode').val(productcode);
 		
-		document.getElementById("pcode").submit();
+		document.getElementById("procode").submit();
 	}
 }
 </script>
 <section class="wrapper">
 	<section id="main-content">
-<form method="post" action="sh.apos" id="code">
-<input type="hidden" name="cmd" value="bproduct">
-<input type="hidden" name="subcmd" value="pcode">
+<form method="post" action="sh.apos" id="procode">
+<input type="hidden" name="cmd" id="cmd" value="bproduct">
+<input type="hidden" name="subcmd" id="subcmd" value="del">
+<input type="hidden" name="childcmd" id="childcmd" value="pcode">
 <input type="hidden" id ="bpcode" name="bpcode" value="" >
 </form>
-		<form class="form-validate form-horizontal" id="feedback_form"
+
+		<form class="form-validate form-horizontal" id="ewoivjsd"
 			method="post" action="sh.apos">
 			<input type="hidden" name="cmd" value="bproduct"> 
 			<input type="hidden" name="subcmd" value="del">
+			<input type="hidden" name="childcmd" value="ppp">
 
 
 
@@ -52,8 +55,8 @@ function goDel(str){
 										minlength="2" onkeydown="startSuggest();" autocomplete="off"
 										type="text">
 								</div>
-									<button class="btn btn-default" type="submit" id="pcodebtn" onclick="goDel('pcode')">
-									조회</button>
+									<a onclick="goDel(str)"><input type="button" class="btn btn-default" type= id="pcodebtn" value="조회">
+									</input></a>
 							</div>
 
 							<div class="form-group ">
