@@ -4,6 +4,7 @@
 <%@include file="bon_left.jsp"%>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="../js/http.js"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawVisualization);
@@ -42,6 +43,23 @@ function drawVisualization() {
 	$(function(){
 		$('#oneday').click(function(){
 			alert("test");
+			$.ajax({
+                url: "bon_chartmoney.jsp?term="+"-6"+"&enddate="+"sysdate" ,
+                type: "POST",
+                dataType: "html",
+                success: function(data) {
+                	res=data;
+                 if(data.trim() == "true"){
+                 	alert("success!")
+                 	$('#checkhot').submit();
+                 }else{
+                 	alert("입력된 정보가 잘 못 되었습니다.")
+                 }
+                },
+                error: function(a, b) {
+                    alert("Request: " + JSON.stringify(a));
+                }
+            });
 			
 		});
 	});
