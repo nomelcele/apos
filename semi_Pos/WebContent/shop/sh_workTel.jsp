@@ -82,7 +82,7 @@ style="margin-left: 20px">
                       <section class="panel">
 <!--                           <header class="panel-heading"> -->
 <!--                           </header> -->
-                          <div class="panel-body">
+                          <div class="panel-body" style="margin-left: 20px; margin-top: 10px;">
                               <div class="form">
                               
                                   <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos">
