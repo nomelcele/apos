@@ -59,7 +59,7 @@
                            <tbody>
                               <%-- 반복 --%>
                               <tr>
-                                 <td><input type="checkbox" name="chk_info" value="HTML"></td>
+                                
                                  <td>1</td>
                                  <td>서경연님</td>
                                  <td>001</td>
@@ -117,7 +117,7 @@
                            <tbody>
                               <%-- 반복 --%>
                               <tr>
-                                 
+                                  <td>2</td>
                                  <td>서경연님</td>
                                  <td>001</td>
                                  <td>자켓</td>
@@ -174,7 +174,7 @@
                            <tbody>
                               <%-- 반복 --%>
                               <tr>
-                                 
+                                  <td>3</td>
                                  <td>서경연님</td>
                                  <td>001</td>
                                  <td>자켓</td>
