@@ -207,7 +207,7 @@
 			            --%> <%=captchas.image()%><br>
 						</td>
 					</tr>
-					<tr">
+					<tr>
 						<td></td>
 						<td><input class="form-control" id="captchapwd" size="16" /></td>
 					</tr>
