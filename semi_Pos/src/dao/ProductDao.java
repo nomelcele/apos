@@ -135,14 +135,12 @@ public class ProductDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		StringBuffer sql = new StringBuffer();
-		/* select * from stock;
-  select p.PRO_NAME ,sh.shop_name,st.sto_size,st.STO_AMOUNT 
-  from stock st, product p,shop sh where st.sto_shopnum = sh.SHOP_NUM and st.STO_PRONUM =p.pro_code
-  and st.sto_pronum='15110001' and sh.shop_name='魄背痢';*/
-		sql.append("select p.PRO_NAME ,sh.shop_name,st.sto_size,st.STO_AMOUNT ");
-		sql.append("from stock st, product p,shop sh where ");
-		sql.append("st.sto_shopnum = sh.SHOP_NUM and st.STO_PRONUM =p.pro_code ");
-		sql.append("and st.sto_pronum=? and sh.shop_name=?");
+		
+		sql.append("select p.pro_name pro_name,sh.shop_name shop_name,s.sto_size sto_size,s.sto_amount  sto_amount ");
+		sql.append("from product p, stock s, shop sh ");
+		sql.append("where p.pro_code = s.sto_pronum and  ");
+		sql.append("sh.shop_num=sto_shopnum and  ");
+		sql.append("p.pro_code = ? and sh.shop_num = ? ");
 		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
 		try {
 			con = MyJndiContext.getDs();
@@ -153,10 +151,10 @@ public class ProductDao {
 			while(rs.next()){
 				ProductVO v = new ProductVO();
 
-				v.setPro_name(rs.getString("p.PRO_NAME"));
-				v.setPro_code(rs.getString("sh.shop_name"));
-				v.setPro_date(rs.getString("st.sto_size"));
-				v.setPro_img(rs.getString("st.STO_AMOUNT"));
+				v.setPro_name(rs.getString("pro_name"));
+				v.setShop_name(rs.getString("shop_name"));
+				v.setSto_size(rs.getString("sto_size"));
+				v.setSto_amount(rs.getString("sto_amount"));
 				list.add(v);
 				System.out.println("构具构具");
 			}
