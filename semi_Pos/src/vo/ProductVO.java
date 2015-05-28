@@ -3,6 +3,25 @@ package vo;
 public class ProductVO {
 	private int pro_num, pro_size, pro_price,pro_amount;
 	private String pro_name, pro_code, pro_barcode, pro_img, pro_date, pro_shopname;
+	private String sto_amount,sto_size,shop_name;
+	public String getShop_name() {
+		return shop_name;
+	}
+	public void setShop_name(String shop_name) {
+		this.shop_name = shop_name;
+	}
+	public String getSto_amount() {
+		return sto_amount;
+	}
+	public void setSto_amount(String sto_amount) {
+		this.sto_amount = sto_amount;
+	}
+	public String getSto_size() {
+		return sto_size;
+	}
+	public void setSto_size(String sto_size) {
+		this.sto_size = sto_size;
+	}
 	public int getPro_amount() {
 		return pro_amount;
 	}
