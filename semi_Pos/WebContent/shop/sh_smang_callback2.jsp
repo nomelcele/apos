@@ -20,15 +20,16 @@
 		res.append("<td>").append(v.getShop_name()).append("</td>");
 		res.append("<td>").append(v.getPro_code()).append("</td>");
 		res.append("<td>").append(v.getSto_size()).append("</td>");
-		res.append("<td>").append("<input type=\"text\" class=\"form-control\" id=\"p_num\" value=\"1\">").append("</td>");
+		res.append("<td>").append("<input type=\"number\" class=\"form-control\" id=\"p_num"+i+"\" value=\"1\" max=\""+v.getSto_amount()+"\">").append("</td>");
 		res.append("<td>").append(v.getSto_amount()).append("</td>");
 		res.append("<td>").append(v.getPro_price()).append("</td>");
-		res.append("<td>"+0+"</td>");//추후 세일추가
+		res.append("<td><img src='../upload/"+v.getPro_img()+"' style=\"width: 100px;\"></td>");//추후 세일추가			
+		res.append("<td><img src='../upload/"+v.getPro_barcode()+"' style=\"width: 100px;\"></td>");
 		res.append("<td>");
 		res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
 		res.append("href=\"javascript:insertproduct('").append(v.getPro_code()).append("', '");
 		res.append(v.getSto_size()).append("', '").append(v.getSto_amount()).append("', '");
-		res.append(v.getPro_price()).append("')\">");
+		res.append(v.getPro_price()).append("', '"+i+"')\">");
 		res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
 		res.append("</td>");
 		res.append("</tr>");

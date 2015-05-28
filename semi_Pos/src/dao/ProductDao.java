@@ -28,14 +28,14 @@ public class ProductDao {
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
 			sql.append("insert into product values(");
-			sql.append("product_seq.nextVal,?,?,?,?,?,sysdate,?)");
+			sql.append("product_seq.nextVal,?,?,?,?,sysdate,?)");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, vo.getPro_name());
 			pstmt.setString(2, vo.getPro_code());
-			pstmt.setInt(3, vo.getPro_size());
-			pstmt.setString(4, vo.getPro_barcode());
-			pstmt.setString(5, vo.getPro_img());
-			pstmt.setInt(6, vo.getPro_price());
+			//pstmt.setInt(3, vo.getPro_size());
+			pstmt.setString(3, vo.getPro_barcode());
+			pstmt.setString(4, vo.getPro_img());
+			pstmt.setInt(5, vo.getPro_price());
 			pstmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -56,7 +56,7 @@ public class ProductDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		StringBuffer sql = new StringBuffer();
-		
+		System.out.println("瓽");
 		sql.append("select *");
 		sql.append("from product where pro_code=?");
 		ProductVO v = new ProductVO();
@@ -68,8 +68,10 @@ public class ProductDao {
 			if(rs.next()){
 				v.setPro_name(rs.getString("pro_name"));
 				v.setPro_code(rs.getString("pro_code"));
+				v.setPro_barcode(rs.getString("pro_barcode"));
 				v.setPro_img(rs.getString("pro_img"));
-				System.out.println("构具构具");
+				v.setPro_date(rs.getString("pro_date"));
+				v.setPro_price(rs.getInt("pro_price"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
