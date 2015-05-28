@@ -64,11 +64,6 @@ public class ShopDao {
 			StringBuffer sql= new StringBuffer();
 			int hotkey = createHotkey();
 			// num, hotkey, mail, crnum
-			System.out.println("여기는 HOTkey-DAO 입니다");
-			System.out.println("NAME : "+vo.getKey_name());
-			System.out.println("Hotkey : "+hotkey);
-			System.out.println("Email : "+ vo.getKey_email());
-			System.out.println("CRNUM : "+ vo.getKey_crnum());
 			
 			sql.append("insert into hotkey values(");
 			sql.append("hotkey_seq.nextVal,?,?,?,?,sysdate)");
