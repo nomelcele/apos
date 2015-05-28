@@ -22,8 +22,7 @@
 		res.append("<tr>");
 		res.append("<th>").append(v.getPro_num()).append("</th>");
 		res.append("<th>").append(v.getPro_code()).append("</th>");
-		res.append("<th>").append(v.getPro_name()).append("</th>");
-		res.append("<th>").append(v.getPro_size()).append("</th>");
+		res.append("<th>").append(v.getPro_name()).append("</th>");		
 		res.append("<th>").append(v.getPro_amount()).append("</th>");
 		res.append("<th>").append(v.getPro_img()).append("</th>");
 		res.append("</tr>");
