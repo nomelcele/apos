@@ -93,11 +93,13 @@ style="margin-left: 20px">
                                       <div class="form-group " style="margin-left: -5%">
                                           <label for="cname" class="control-label col-lg--6"></label>
                                           <div class="col-lg-4">
-                                              <input class="form-control" id="sname_ps" name="name" minlength="3" onkeydown="startSuggest();" type="text"required />
+                                              <input class="form-control" id="sname_ps" name="name" minlength="3" onkeydown="startSuggest();" type="text"required 
+                                              placeholder=지점명>
                                               <div id="view"></div>
                                           </div>
                                           </form>
-                                          <input class="form-control5" type="submit" id="btn" name="btn" value="조회">
+                                          <input class="form-control5" type="submit" id="btn" name="btn" value="조회" >
+                           
                                       </div>
 
 
