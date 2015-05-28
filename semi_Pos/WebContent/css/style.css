@@ -1164,6 +1164,7 @@ div[data-role="editor-toolbar"] {
   border-top: none;
   border-right-color: #ccc!important;
   border-bottom-color: #ccc!important;
+  border-left-color: #FFF!important;
   
 }
 .panel .panel-body-map {
