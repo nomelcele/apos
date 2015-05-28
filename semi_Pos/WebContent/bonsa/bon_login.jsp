@@ -1,3 +1,4 @@
+<%@page import="captchas.CaptchasDotNet"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,13 +39,77 @@
 		$('#SignUpBtn').click(function() {
 				$('#modal2').modal('show');
 		});
+		// ID 중복체크
+		$('#bon_id').keyup(function(){
+			$('#viewID').load("bon_sawonidcheck.jsp?id="+$('#bon_id').val());
+		});
+		
+		$('#bon_pwd_ck').keyup(function(){
+			if($('#bon_pwd').val() == $('#bon_pwd_ck').val()){
+				$('#viewPWD').css("color","green");
+				$('#viewPWD').text("비밀번호가 일치합니다");
+			}else{
+				$('#viewPWD').css("color","red");
+				$('#viewPWD').text("비밀번호가 일치하지 않습니다");
+			}
+		});
+		
+		$("#captcha").hide();	// 첨에 captcha 숨겨놓는다.
+		
+		// count 수 증가시켜서 3이 되면 captcha 보이게!!
+		var count = 0;
+		$("#loginBtn").click(
+				function() {
+					$('#radioHidden').submit();
+					$.ajax({
+						url : "bon_checkcaptcha.jsp?id="+$('#id').val() + "&pwd=" + $('#pwd').val(),
+						type : "POST",
+						dataType : "html",
+						success : function(res) {
+							console.log(res.trim());
+							// 실패했을떄
+							if (res.trim() == "false") {
+								alert("아이디와 비밀번호 확인하세요.");
+								count++;
+								if (count >= 3) {
+									$("#captcha").show();
+									$("#targetCapt").load("bon_checkcapt.jsp", {
+										password : encodeURIComponent($("#captchapwd").val())
+									}, function(res) {
+										var captcha = $("#targetCapt").text().trim();
+										console.log(captcha)
+										if (captcha == "ok") {
+											console.log("로그인가능");
+											// 여기서 location으로 보내주기 controller로 보내기?
+											// id랑 pw 보내줘야행
+											$('#loginForm').submit();
+										} else {
+											alert("보안문자 확인해주세요.");
+										}
+									});
+								}
+							} else {
+								// res.trim()== "true" 일때 (성공)
+								$('#loginForm').submit();
+							}
+						}
+					});
+				});
+		
 	});
 </script>
-  <body class="login-img4-body">
-
+<%
+	// Construct the captchas object (Default Values)
+	CaptchasDotNet captchas = new captchas.CaptchasDotNet(
+			request.getSession(true), // Ensure session
+			"jtrip", // client
+			"3yNe6F7kItK5fHjFZtGCMey6d6PNtYfva6Uqht4i" // secret
+	);
+%>
+<body class="login-img3-body">
     <div class="container">
 	<div id="modal2" class="modal fade">
-		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
+		<div class="modal-dialog" style="width: 500px; height:auto; text-align: center;">
 			<div class="modal-content">
 				<!-- header -->
 				<div class="modal-header">
@@ -56,33 +121,44 @@
 				<div>
 				<!-- body -->
 									
-				<form method="post" action="#" name="join" id="join">
+				<form method="post" action="*.apos" name="join" id="join" autocomplete="off">
+				<input type="hidden" name="cmd" value="bshop">
+				<input type="hidden" name="subcmd" value="sawonjoin">
 						<%-- ID 입력 --%>
 						<div class="modal-body2" ><span style="display: block;">아이디 :</span>
-								<input class="form-control" id="shop_id" name="shop_id" type="text"  required />	</div>
+								<input class="form-control" id="bon_id" name="bon_id" type="text" minlength="5" required />
+						</div>
 						<%-- ID 중복 확인 : ajax 사용 --%>
 						<div id="viewID"></div>
 						
 						<%-- 비밀번호  --%>
 						<div class="modal-body2" ><span style="display: block;">비밀번호 :</span>
-								<input class="form-control" id="shop_pwd" name="shop_pwd" type="text" required /></div>
+								<input class="form-control" id="bon_pwd" name="bon_pwd" type="password" minlength="6" required /></div>
 						<div class="modal-body2" ><span style="display: block;">비밀번호 확인 :</span>
-								<input class="form-control" id="shop_pwd" name="shop_pwd_ck" type="text" required /></div>
+								<input class="form-control" id="bon_pwd_ck" name="bon_pwd_ck" type="password" minlength="6" required /></div>
 						<%-- 비밀번호 확인 결과--%>
-						<div id="viewID"></div>	
+						<div id="viewPWD"></div>	
 										 	
 						<%-- 성명 --%>
 						<div class="modal-body2"><span style="display: block">성 명 :</span>
-							<input class="form-control" id="shop_name" name="shop_name" type="text" required /></div>
+							<input class="form-control" id="bon_name" name="bon_name" type="text" required /></div>
 						<%-- 연락처 --%>
 						<div class="modal-body2 "><span style="display: block">연락처 :</span>
-							<input class="form-control" id="shop_tel" name="shop_tel" type="text" required /></div>
+						 	<select style="width: 20%" class="form-control">
+	                                          		<option>SKT</option>
+	                                          		<option>KT</option>
+	                                          		<option>LG</option>
+                             </select>-
+							 <input style="width: 20%" class="form-control" id="bon_tel1" name="bon_tel1" maxlength="3" type="tel" required />-
+                             <input style="width: 20%" class="form-control" id="bon_tel2" name="bon_tel2" maxlength="4" type="tel" required />-
+                             <input style="width: 20%" class="form-control" id="bon_tel3" name="bon_tel3" maxlength="4" type="tel" required />
+						</div>
 						<!-- Footer -->
 						<div class="modal-footer" >
-							<button type="submit" class="btn btn-default" data-dismiss="modal">요청</button>
+							<button type="submit" class="btn btn-default" >요청</button>
 						</div>
-						
 				</form>
+				
 				</div>
 			</div>
 		</div>
@@ -99,9 +175,25 @@
                 <input type="password" class="form-control" placeholder="Password">
             </div>
             <label class="checkbox">
-                <input type="checkbox" value="remember-me"> Remember me
                 <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
             </label>
+            <table id="captcha" style="width: 90%">
+				<tr>
+					<td></td>
+					<td>
+					<%-- 
+		            % it's possible to set a random in captchas.image("xyz"),
+		            % captchas.imageUrl("xyz") and captchas.audioUrl("xyz").
+		            % This is only needed at the first request
+		            --%> <%=captchas.image()%><br>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input class="form-control" id="captchapwd" size="16" /></td>
+				</tr>
+			</table>
+			<div id="targetCapt" style="display: none;"></div>
             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
             <input class="btn btn-info btn-lg btn-block" type="button" value="SignUp" id="SignUpBtn">
         </div>
