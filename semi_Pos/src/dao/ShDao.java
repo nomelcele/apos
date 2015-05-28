@@ -12,9 +12,11 @@ import java.util.Map;
 
 
 
+
 import vo.BoardVO;
 import vo.MemVO;
 import vo.ProductVO;
+import vo.ShopVO;
 import conn.MyJndiContext;
 
 public class ShDao {
@@ -25,6 +27,44 @@ public class ShDao {
 			dao = new ShDao();
 		}
 		return dao;
+	}
+	public ArrayList<String> getListSuggestShop(String key){
+		Connection con = null;
+		PreparedStatement pstmt= null;
+		ResultSet rs = null;
+		ArrayList<String>list =new ArrayList<String>();
+		StringBuffer sql = new StringBuffer();
+		sql.append("select * from shop where shop_num like ? or shop_name like ?");
+		try {
+			con = MyJndiContext.getDs();
+			pstmt=con.prepareStatement(sql.toString());
+			String check=key+'%';
+			pstmt.setString(1, check);
+			pstmt.setString(2, check);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				list.add(rs.getString("shop_name"));
+				list.add(String.valueOf((rs.getInt("shop_num"))));
+	
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+				if(rs!=null)
+					rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return list;
+		
 	}
 	// 맴버 정보를 디비에서 빼옴 검색한 내용에 맞게  
 	public ArrayList<MemVO> getListMember(String name) {
