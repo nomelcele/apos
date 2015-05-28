@@ -48,6 +48,26 @@ public class SMangAction implements Action{
 			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
 			request.setAttribute("plist", list);
 			
+		}else if(subcmd.equals("final")){
+			url="sh_smangRegis.jsp";
+			int shopnum = Integer.parseInt(request.getParameter("fshopnum"));
+			int fmileage = Integer.parseInt(request.getParameter("fmileage"));
+			int cusnum = Integer.parseInt(request.getParameter("fcusnum"));
+			int s = Integer.parseInt(request.getParameter("fset"));
+			boolean chk = true;
+			for(int i=1 ; i<=s ; i++){
+				String fcode = "fcode"+i;
+				String fcash = "fcash"+i;
+				String fmany = "fmany"+i;
+				int code = Integer.parseInt(request.getParameter(fcode));
+				int cash = Integer.parseInt(request.getParameter(fcash));
+				int many = Integer.parseInt(request.getParameter(fmany));
+				SmangDao.getDao().insertsell(code, cash, many, shopnum, fmileage, cusnum, chk);
+				chk = false;
+			}
+			int mile = Integer.parseInt(request.getParameter("inmileage"));
+			SmangDao.getDao().inmile(mile, cusnum);
+			
 		}
 		return new ActionForward(url, false);
 	}

@@ -90,21 +90,30 @@ pro_barcode varchar2(50) constraint product_pro_barcode_nn not null,
 pro_img varchar2(50) constraint product_pro_img_nn not null,
 pro_date date
 );
+
+
+
+
+---------------------5/28----------------------------
 create table sell(
 sell_num number(10) constraint sell_sell_num_pk primary key,
-sell_pronum number(10),
+sell_pronum varchar2(50),
 sell_cash number(20) constraint sell_sell_cash_nn not null,
-sell_card number(20) constraint sell_sell_card_nn not null,
 sell_mileage number(20) constraint sell_sell_mileage_nn not null,
 sell_shopnum number(10) ,
 sell_memnum number(10),
 sell_date date,
+sell_sell number(10),
+sell_many number(10),
 constraint sell_sell_pronum_fk foreign key(sell_pronum)
-references product(pro_num) on delete cascade,
+references product(pro_code) on delete cascade,
 constraint sell_sell_shopnum_fk foreign key(sell_shopnum)
 references shop(shop_num) on delete cascade,
 constraint sell_sell_memnum_fk foreign key(sell_memnum)
 references member(mem_num) on delete cascade);
+------------------------------------------------------
+
+
 
 create table hotkey(
 key_num number(10) constraint hotkey_key_num_pk primary key,
@@ -114,18 +123,19 @@ key_mail varchar2(30),
 key_crnum number(20) constraint hotkey_key_crnum_uq UNIQUE,
 key_date date
 );
-
+-------------5/28¼öÁ¤---------------------------------------
 create table stock(
 sto_num number(10) constraint stock_sto_num_pk primary key,
-sto_pronum number(10),
+sto_pronum varchar2(50),
 sto_amount number(10),
 sto_shopnum number(10),
+sto_size number(10),
 constraint stock_sto_pronum_fk foreign key(sto_pronum)
-references product(pro_num) on delete cascade,
+references product(pro_code) on delete cascade,
 constraint stock_sto_shopnum_fk foreign key(sto_shopnum)
 references shop(shop_num) on delete cascade
 );
-
+----------------------------------------------------------
 create table discount(
 dis_num number(10) constraint discount_dis_num_pk primary key,
 dis_salerate float(10),
