@@ -47,7 +47,7 @@ public class BProductAction implements Action {
 				}
 				vo.setPro_name(request.getParameter("name"));
 				vo.setPro_code(request.getParameter("code"));
-				vo.setPro_size(Integer.parseInt(request.getParameter("size")));
+				//vo.setPro_size(Integer.parseInt(request.getParameter("size")));
 				vo.setPro_price(Integer.parseInt(request.getParameter("price")));
 				vo.setPro_img(pimgname);
 				vo.setPro_barcode(bimgname);

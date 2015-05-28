@@ -59,17 +59,22 @@ public class SMangAction implements Action{
 				String fcode = "fcode"+i;
 				String fcash = "fcash"+i;
 				String fmany = "fmany"+i;
+				String fsize = "fsize"+i;
 				int code = Integer.parseInt(request.getParameter(fcode));
 				int cash = Integer.parseInt(request.getParameter(fcash));
 				int many = Integer.parseInt(request.getParameter(fmany));
+				int size = Integer.parseInt(request.getParameter(fsize));
 				SmangDao.getDao().insertsell(code, cash, many, shopnum, fmileage, cusnum, chk);
+				SmangDao.getDao().editstock(code, many, size, shopnum);
 				chk = false;
 			}
 			int mile = Integer.parseInt(request.getParameter("inmileage"));
+			System.out.println(mile);
 			SmangDao.getDao().inmile(mile, cusnum);
+			method = true;
 			
 		}
-		return new ActionForward(url, false);
+		return new ActionForward(url, method);
 	}
 
 }

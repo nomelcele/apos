@@ -26,15 +26,16 @@
 			chk = false;
 		}	
 	}
-	function insertproduct(pcode, psize, pamount, pprice){
+	function insertproduct(pcode, psize, pamount, pprice, a){
 		//i++;
 		j++;
-		var t = $('#p_num').val();
+		var t = $('#p_num'+a).val();
 		price = price + (t*pprice);
 		var str = "<tr><td>"+j+"</td>"+"<td>"+pcode+"</td>"+"<td>"+psize+"</td>"+"<td>"+t+"</td>"+"<td>"+(t*pprice)+"</td><tr>"
 		var str2 = "<input type='hidden' name='fcode"+j+"' value='"+pcode+"'>";
 		var str3 = "<input type='hidden' name='fcash"+j+"' value='"+(t*pprice)+"'>";
 		var str4 = "<input type='hidden' name='fmany"+j+"' value='"+t+"'>";
+		var str9 = "<input type='hidden' name='fsize"+j+"' value='"+psize+"'>";
 		console.log(str);
 		console.log(str2);
 		console.log("셋 : "+j);
@@ -44,12 +45,13 @@
 		document.getElementById('final').innerHTML+=str2;
 		document.getElementById('final').innerHTML+=str3;
 		document.getElementById('final').innerHTML+=str4;
+		document.getElementById('final').innerHTML+=str9;
 	}
 	function gogo(){
-		var str5 = "<input type='hidden' name='fmileage' value='"+(price*0.1)+"'>";	
+		var str5 = "<input type='hidden' name='fmileage' value='"+$('#mileage').val()+"'>";	
 		var str6 = "<input type='hidden' name='fset' value='"+j+"'>";
 		var str7 = "<input type='hidden' name='fcusnum' value='"+cusnum+"'>";
-		var str8 = "<input type='hidden' name='inmileage' value='"+((price*0.1)+(mile))+"'>";
+		var str8 = "<input type='hidden' name='inmileage' value='"+((price*0.01)+(mile))+"'>";
 		document.getElementById('final').innerHTML+=str5;
 		document.getElementById('final').innerHTML+=str6;
 		document.getElementById('final').innerHTML+=str7;
@@ -190,7 +192,9 @@
 										<th>수량</th>
 										<th>재고</th>
 										<th>가격</th>
-										<th>할인가</th>
+										<th>상품사진</th>
+										<th>바코드</th>
+										<th>선택</th>
 									</tr>
 								</thead>
 								<tbody id="target2">
@@ -233,7 +237,7 @@
                                 <td>1</td>
                                 <td><input type="text" class="form-control" name='name' id="name" value="" readonly="readonly"></td>
                                 <td><input type="text" class="form-control" name='id' id="phone" value="" readonly="readonly"></td>
-                                <td><input type="number" class="form-control" name='mileage' id="mileage" value=""></td>                            
+                                <td><input type="number" class="form-control" name='mileage' id="mileage" value="0"></td>                            
                               </tr>     
                                                
                               
