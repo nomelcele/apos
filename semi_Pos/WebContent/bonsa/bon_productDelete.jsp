@@ -18,17 +18,7 @@
 		});
 		});
 	});
-	// 		function goDel(str) {
-	// 			if (str == "pcode") {
-	// 				alert("goDel실행됨!! :pcode");
-	// 				alert("!!");
-	// 				var productcode = $('#pcode').val();
-	// 				alert(pcode);
-	// 				$('#bpcode').val(productcode);
 
-	// 				document.getElementById("procode").submit();
-	// 			}
-	// 		}
 </script>
 <section class="wrapper">
 	<section id="main-content">
