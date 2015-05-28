@@ -54,8 +54,7 @@
 										minlength="2" onkeydown="startSuggest();" autocomplete="off"
 										type="text">
 								</div>
-								<button class="btn btn-default" type="button" id="pcodebtn"
-									onclick="javascript:goDel(str)">조회</button>
+								<button class="btn btn-default" type="button" id="pcodebtn">조회</button>
 							</div>
 
 							<div class="form-group ">
