@@ -146,7 +146,7 @@ public class ShopDao {
 				ShopHotkeyVO vo= new ShopHotkeyVO();
 				vo.setKey_num(rs.getInt("key_num"));
 				vo.setKey_name(rs.getString("key_name"));
-				vo.setKey_hotkey(rs.getInt("key_hot"));
+				vo.setKey_hotkey(rs.getInt("ket_hot"));
 				vo.setKey_email(rs.getString("key_mail"));
 				vo.setKey_crnum(rs.getInt("key_crnum"));
 				vo.setKey_date(rs.getString("key_date"));
@@ -205,7 +205,7 @@ public class ShopDao {
 		}
 		return res;
 	}
-	public boolean checkidpwd(String id, String pwd) {
+	public boolean checkMasteridpwd(String id, String pwd) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -214,6 +214,37 @@ public class ShopDao {
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
 			sql.append("select * from shop where shop_id=? and shop_pwd=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
+			rs = pstmt.executeQuery();
+			
+			res = rs.next(); // 있을때 true 없을때 false
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+				if (rs != null) rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+		return res;
+	}
+	public boolean checkStaffidpwd(String id, String pwd) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		boolean res= false;
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from Staff where staff_id=? and staff_pwd=?");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, id);
 			pstmt.setString(2, pwd);
