@@ -13,29 +13,30 @@
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 대리점별 매출순위
 				</h3>
+				</br>
+				<form action="*.apos" id="otsearch">
+					<div class="form-group">
+						<div style="margin-left: 10px;">
 
-
-				<div class="form-group">
-				<div style="margin-left: 10px;">
-				
-				
-					<input id="date_ps" name="name" minlength="2"
-						onkeydown="startSuggest();" autocomplete="off" type="date"
-						required /> ~
-					<input id="date_ps" name="name" minlength="2"
-						onkeydown="startSuggest();" autocomplete="off" type="date"
-						required />
-				
-					<input class="form-control6" style="margin-left: 10px;" type="submit" id="btn" name="btn"
-					value="조회">
-					<div id="view"></div>
-				</div>
-			</div>
-
+							매장이름 <input id="date_ps2" name="name" minlength="2"
+								autocomplete="off" type="text" onkeydown="startSuggest();"
+								required />
+							<div id="view"></div></br>
+							기 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 간&nbsp;<input
+								id="date_ps" name="name" minlength="2" autocomplete="off"
+								type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps" name="name"
+								minlength="2" autocomplete="off" type="date" required /> <input
+								class="form-control6" style="margin-left: 10px;" type="submit"
+								id="btn" name="btn" value="조회">
+							<div id="view"></div>
+						</div>
+					</div>
+				</form>
 
 
 				<table class="table table-striped table-advance table-hover">
 					<tbody>
+					<p></p>
 						<tr>
 							<th><i class="icon_profile"></i>품목</th>
 							<th><i class="icon_profile"></i>사이즈</th>
@@ -61,16 +62,16 @@
 				</table>
 
 
-<!-- 				<div class="form-group" style="margin-left: 700px;"> -->
-<!-- 					<label>총액</label> -->
-<!-- 					<div class="col-lg-2"> -->
-<!-- 						<input class="form-control7" id="sname_ps" name="name" -->
-<!-- 							minlength="2" onkeydown="startSuggest();" autocomplete="off" -->
-<!-- 							type="text" style="margin-left: 120px;" required /> -->
-<!-- 						<div id="view"></div> -->
-<!-- 					</div> -->
-						
-<!-- 				</div> -->
+				<!-- 				<div class="form-group" style="margin-left: 700px;"> -->
+				<!-- 					<label>총액</label> -->
+				<!-- 					<div class="col-lg-2"> -->
+				<!-- 						<input class="form-control7" id="sname_ps" name="name" -->
+				<!-- 							minlength="2" onkeydown="startSuggest();" autocomplete="off" -->
+				<!-- 							type="text" style="margin-left: 120px;" required /> -->
+				<!-- 						<div id="view"></div> -->
+				<!-- 					</div> -->
+
+				<!-- 				</div> -->
 
 
 
