@@ -2,8 +2,27 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:choose>
+	<c:when test="${sessionScope.radio == 'master'}"> 
+		<script>
+			alert("Master page");
+			$('#hideMenu').show();
+		</script>
+	</c:when>
+	<c:otherwise> 
+		<script>
+			alert("Staff page");
+		</script>
+	</c:otherwise>
+</c:choose>
 <script>
+// 	if(session.getAttribute("checkBox").equals("master")){
+// 		  alert("Master Page!!");
+// 		  $('#hideMenu').show();
+// 	}else{
+// 		  alert("Staff Page!!");
+// 	}
    function goindexterm(str){
       if(str == "term"){
          document.getElementById("term").submit();
