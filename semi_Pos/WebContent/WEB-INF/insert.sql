@@ -577,6 +577,12 @@ insert into stock values(stock_seq.nextval,15,100,15);
 
 
 
+
+
+
+
+
+
 -- stock (5/28) 수정
 
 -- 대리점 1호, 남성옷 1호
@@ -718,6 +724,39 @@ insert into stock values(stock_seq.nextval,'15130003',82,2,4);
 insert into stock values(stock_seq.nextval,'15130003',27,3,2);
 insert into stock values(stock_seq.nextval,'15130003',54,3,3);
 insert into stock values(stock_seq.nextval,'15130003',35,3,4);
+
+
+
+
+
+
+
+
+
+-- sell 수정 (5월 28일)
+
+insert into sell values(sell_seq.nextval, 15110001, 25000, 1000, 1, 1, '2015-05-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 50000, 1230, 2, 1, '2015-04-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 17000, 6825, 3, 1, '2015-03-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 20000, 3567, 4, 1, '2015-01-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 34000, 3663, 5, 1, '2014-12-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 32000, 1343, 2, 1, '2015-01-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 65000, 1224, 3, 1, '2014-12-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 79000, 8954, 1, 1, '2015-01-05', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 49000, 6433, 5, 1, '2014-11-30', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 51000, 8267, 4, 1, '2015-04-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 27000, 3583, 3, 1, '2015-05-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 29000, 5793, 3, 1, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 36000, 8433, 2, 1, '2015-02-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 3463, 2, 1, '2014-12-31', 6, 1);
+
+
+
+
+
+
+
+
 
 
 
