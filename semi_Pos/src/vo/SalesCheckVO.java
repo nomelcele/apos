@@ -2,8 +2,16 @@ package vo;
 
 public class SalesCheckVO {
 	private int count, sell_cash, sell_card;
-	private String date;
+	private String date,sell_shopname;
 
+
+	public synchronized String getSell_shopname() {
+		return sell_shopname;
+	}
+
+	public synchronized void setSell_shopname(String sell_shopname) {
+		this.sell_shopname = sell_shopname;
+	}
 
 	public synchronized String getDate() {
 		return date;
