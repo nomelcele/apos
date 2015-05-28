@@ -5,11 +5,13 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import vo.BonsaVO;
 import vo.ShopHotkeyVO;
 import controller.ActionForward;
 import dao.BonsaDao;
+import dao.LogTimeDao;
 import dao.ShopDao;
 
 public class BShopAction implements Action{
@@ -51,7 +53,24 @@ public ActionForward execute(HttpServletRequest request,
 		
 		BonsaDao.getDao().sawonjoin(vo);
 		method=false;
+	}else if(subcmd.equals("sawonlogin")){
+		// 본사 사원 로그인
+		url="bon_index.jsp";
+		String id =request.getParameter("bon_login_id");
+		LogTimeDao.getDao().logintime(id); // 로그인 시간 DB에 저장
+		HttpSession session = request.getSession();
+		session.setAttribute("bon_id", id);
+		method=false;
+	}else if(subcmd.equals("sawonlogout")){
+		// 본사 사원 로그 아웃
+		url="bon_login.jsp";
+		HttpSession session = request.getSession();
+		String bon_id =(String) session.getAttribute("bon_id");
+		LogTimeDao.getDao().logouttime(bon_id);
+		session.invalidate(); //모든 세션삭제
+		method=false;
 	}
+	
 	return new ActionForward(url, method);
 }
 }
