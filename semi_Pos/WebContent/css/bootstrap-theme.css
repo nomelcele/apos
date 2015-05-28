@@ -279,7 +279,7 @@ textarea {
   background-image: none;
 }
 a {
-  color: #000000;
+  color: ##002AFF;
   text-decoration: none;
 }
 a:hover,
@@ -1300,7 +1300,7 @@ th {
   padding: 8px;
   line-height: 1.428571429;
   vertical-align: top;
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #ffffff;
 }
 .table thead > tr > th {
   vertical-align: bottom;
