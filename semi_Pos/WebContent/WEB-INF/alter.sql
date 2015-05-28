@@ -47,6 +47,8 @@ alter table stock add (sto_size number(10));
 
 
 --------05.28 ¼öÁ¤º»
+alter table product add constraint product_pro_code_uq unique (pro_code);
+
 drop table sell;
 drop table stock;
 
