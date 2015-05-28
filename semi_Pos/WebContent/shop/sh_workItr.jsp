@@ -7,7 +7,7 @@
 <style>
 
 .panel-title{font-size: 10pt;}
-.panel-body{font-size: 8pt;}
+.panel-body{font-size: 9pt;}
 </style>
 <section id="main-content">
 	<section class="wrapper">
@@ -16,7 +16,7 @@
 				<div class="panel-heading">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse"
-							data-parent="#accordion" href="#collapseOne"> ADress의 내부규약 </a>
+							data-parent="#accordion" href="#collapseOne"> </a>
 					</h4>
 				</div>
 				<div id="collapseOne" class="panel-collapse collapse in">
