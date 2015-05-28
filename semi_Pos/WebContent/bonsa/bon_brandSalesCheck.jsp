@@ -6,21 +6,22 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script src="../js/http.js"></script>
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawVisualization);
+   
+     google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawVisualization);
 var res=[
-         ['Month', '남성', '여성', '유아', ],
-         ['2004/05',  165,      938,         522,           ],
-         ['2005/06',  135,      1120,        599,           ],
-         ['2006/07',  157,      1167,        587,           ],
-         ['2007/08',  139,      1110,        615,           ],
-         ['2008/09',  136,      691,         629,           ]
+         ['Month', '판매 금액', '판매량'  ],
+         ['2004/05',  165,      938                ],
+         ['2005/06',  135,      1120                ],
+         ['2006/07',  157,      1167                ],
+         ['2007/08',  139,      1110             ],
+         ['2008/09',  136,      691               ]
        ] ;
        var res2= [
                   ['Month', '남성', '여성', '유아', ],
-                  ['2004/05',  165,      938,         522,           ],
-                  ['2005/06',  135,      1120,        599,           ],
-                  ['2006/07',  157,      1167,        587,           ]
+                  ['2004-05',  165,      938,         522,           ],
+                  ['2005-06',  135,      1120,        599,           ],
+                  ['2006-07',  157,      1167,        587,           ]
                 ] ;
 function drawVisualization() {
   // Some raw data (not necessarily accurate)
@@ -45,20 +46,16 @@ function drawVisualization() {
 			alert("test");
 			$.ajax({
                 url: "bon_chartmoney.jsp?term="+"-6"+"&enddate="+"sysdate" ,
-                type: "POST",
-                dataType: "html",
+                type: "post",
+                dataType:"html",
                 success: function(data) {
-                	res=data;
-                 if(data.trim() == "true"){
-                 	alert("success!")
-                 	$('#checkhot').submit();
-                 }else{
-                 	alert("입력된 정보가 잘 못 되었습니다.")
-                 }
-                },
-                error: function(a, b) {
-                    alert("Request: " + JSON.stringify(a));
+                	alert("callback");
+                	res2=eval(data);
+                	var result= eval(res2);
+                	 alert(res2);
+                	 drawVisualization();
                 }
+			
             });
 			
 		});
