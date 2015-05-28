@@ -12,7 +12,9 @@ public class SlogAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request,
 			HttpServletResponse response) throws IOException {
+		
 		// 매장)외부에서 처음 접속 할때 ! 지정 URL에 없을때 
+		// cmd와 subcmd가 null일때!!!!
 		String subcmd =  request.getParameter("subcmd");
 		String url = null;
 		boolean method = false;
