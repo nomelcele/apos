@@ -67,7 +67,7 @@
 										<div class="col-lg-4">
 											<input class="form-control" id="pcode" name="pcode"
 												minlength="2" onkeydown="startSuggest();" autocomplete="off"
-												type="text" placeholder="지점번호">
+												type="text" placeholder="상품코드">
 										</div>
 
 										<div class="col-lg-4">
