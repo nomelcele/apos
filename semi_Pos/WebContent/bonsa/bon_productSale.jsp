@@ -87,10 +87,10 @@
 										</thead>
 										<tbody id ="view_product">
 										<tr>
-											<td>쀼요쀼요</td>
-											<td>아이셔</td>
-											<td>찰떡아이스</td>
-											<td>더위사냥</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
 										</tr>
 									</tbody>
 								</table>
@@ -124,24 +124,26 @@
 										<div class="col-lg-4">
 											<input class="form-control" id="pnum3" name="pnum3"
 												minlength="2" onkeydown="startSuggest();" autocomplete="off"
-												type="text" placeholder="지점명">
+												type="text" placeholder="지점번호">
 										</div>
 										<button class="btn btn-default" type="button" id="shnumbtn">조회</button>
 									</div>
 									<div class="col-lg-12" style="width: 700px;">
 										<table class="table table-striped table-advance table-hover">
-											<tbody>
+											<thaed>
 												<tr>
 													<th>상품명</th>
 													<th>지점</th>
 													<th>사이즈</th>
 													<th>수량</th>
 												</tr>
+												</thaed>
+												<tbody id ="view_product2">
 												<tr>
-													<td id="tpname">아이스슈맛있어</td>
-													<td>진짠데</td>
-													<td>먹고싶당</td>
-													<td><input type="number"></td>
+													<td id="tpname"></td>
+													<td></td>
+													<td></td>
+													<td></td>
 												</tr>
 											</tbody>
 										</table>
