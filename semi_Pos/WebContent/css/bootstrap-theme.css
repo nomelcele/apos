@@ -1386,14 +1386,14 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-  background-color: #dff8e3;
-  border-color: #caf4ca;
+  background-color: #C5CBC6;
+  border-color: #F3F7F3;
 }
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td {
-  background-color: #caf4d1;
-  border-color: #b5efb5;
+  background-color: #C5CBC6;
+  border-color: #F3F7F3;
 }
 .table > thead > tr > td.danger,
 .table > tbody > tr > td.danger,
@@ -1407,7 +1407,7 @@ table th[class*="col-"] {
 .table > thead > tr.danger > th,
 .table > tbody > tr.danger > th,
 .table > tfoot > tr.danger > th {
-  background-color: #ffe0e6;
+  background-color: #F0F0F0 ;
   border-color: #ffd0e1;
 }
 .table-hover > tbody > tr > td.danger:hover,
@@ -3456,7 +3456,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #8e8e93;
+  color: #9B9393;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
