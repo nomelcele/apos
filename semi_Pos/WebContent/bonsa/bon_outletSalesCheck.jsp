@@ -3,6 +3,10 @@
 <%@include file="bon_top.jsp"%>
 <%@include file="bon_left.jsp"%>
 <!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
+<script src="../js/http.js"></script>
+<script src="../js/json2.js"></script>
+<script src="../js/suggest_shop_pk.js"></script>
+
 
 <section id="main-content">
 	<section class="wrapper">
@@ -13,22 +17,31 @@
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 대리점별 매출순위
 				</h3>
-				</br>
+
 				<form action="*.apos" id="otsearch">
 					<div class="form-group">
 						<div style="margin-left: 10px;">
+							<label for="cname" class="control-label col-lg-2">매장검색 </label>
 
-							매장이름 <input id="date_ps2" name="name" minlength="2"
-								autocomplete="off" type="text" onkeydown="startSuggest();"
-								required />
-							<div id="view"></div></br>
-							기 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 간&nbsp;<input
-								id="date_ps" name="name" minlength="2" autocomplete="off"
-								type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps" name="name"
-								minlength="2" autocomplete="off" type="date" required /> <input
-								class="form-control6" style="margin-left: 10px;" type="submit"
-								id="btn" name="btn" value="조회">
-							<div id="view"></div>
+							<div class="col-lg-2" style="margin-left: -5%;">
+
+								<input id="shop_name" name="name" minlength="2"
+									autocomplete="off" type="text" onkeydown="startSuggest();"
+									required />
+
+								<div id="view"></div>
+							</div>
+						</div>
+						</br>
+						<div style="margin-left: 10px;">
+							기 간 <input id="date_ps" name="date_ps" minlength="2"
+								autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
+								name="date_ps2" minlength="2" autocomplete="off" type="date"
+								required /> <input class="form-control6"
+								style="margin-left: 10px;" type="submit" id="btn" name="btn"
+								value="조회">
+
 						</div>
 					</div>
 				</form>
@@ -36,7 +49,7 @@
 
 				<table class="table table-striped table-advance table-hover">
 					<tbody>
-					<p></p>
+						<p></p>
 						<tr>
 							<th><i class="icon_profile"></i>품목</th>
 							<th><i class="icon_profile"></i>사이즈</th>
