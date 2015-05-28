@@ -40,7 +40,7 @@
 		});
 	});
 </script>
-  <body class="login-img3-body">
+  <body class="login-img4-body">
 
     <div class="container">
 	<div id="modal2" class="modal fade">
