@@ -14,7 +14,7 @@
 					<i class="fa fa-files-o"></i> 품목별 매출순위
 				</h3>
 
-
+   </br>
 				<div class="form-group ">
 					<div class="col-lg-3">
 						<input class="form-control" id="sname_ps" name="name"
@@ -49,7 +49,7 @@
 						</table>
 					</div>
 				</div>
-
+  </br>
 
 				<div class="form-group" style="margin-left: 280px;">
 					<label>총액</label>
