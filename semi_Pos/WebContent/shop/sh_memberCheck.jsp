@@ -31,7 +31,8 @@
 											type="hidden" name="page" value="1">
 
 										<div class="form-group ">
-											<label for="cname" class="control-label col-lg-1">이름
+											<label for="cname" class="control-label col-lg-1"><p style=font-size:11pt>
+											이름</p> 
 											</label>
 											<div class="col-lg-2" style="margin-left: -5%;">
 												<input class="form-control" id="sname_ps" name="name"
