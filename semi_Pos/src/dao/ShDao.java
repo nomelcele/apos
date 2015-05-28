@@ -103,7 +103,6 @@ public class ShDao {
 				v.setPro_name(rs.getString("pro_name"));
 				v.setPro_price(rs.getInt("pro_price"));
 				v.setPro_code(rs.getString("pro_code"));
-				v.setPro_size(rs.getInt("pro_size"));
 				v.setPro_amount(rs.getInt("pro_amount"));
 				v.setPro_img(rs.getString("pro_img"));
 				//v.setMem
