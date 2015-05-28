@@ -44,3 +44,40 @@ alter table staff modify staff_pwd varchar2(30);
 --05.26 product와 stock수정
 alter table product drop (pro_size);
 alter table stock add (sto_size number(10));
+
+
+--------05.28 수정본
+drop table sell;
+drop table stock;
+
+
+create table sell(
+sell_num number(10) constraint sell_sell_num_pk primary key,
+sell_pronum varchar2(50),
+sell_cash number(20) constraint sell_sell_cash_nn not null,
+sell_mileage number(20) constraint sell_sell_mileage_nn not null,
+sell_shopnum number(10) ,
+sell_memnum number(10),
+sell_date date,
+sell_sell number(10),
+sell_many number(10),
+constraint sell_sell_pronum_fk foreign key(sell_pronum)
+references product(pro_code) on delete cascade,
+constraint sell_sell_shopnum_fk foreign key(sell_shopnum)
+references shop(shop_num) on delete cascade,
+constraint sell_sell_memnum_fk foreign key(sell_memnum)
+references member(mem_num) on delete cascade);
+
+create table stock(
+sto_num number(10) constraint stock_sto_num_pk primary key,
+sto_pronum varchar2(50),
+sto_amount number(10),
+sto_shopnum number(10),
+sto_size number(10),
+constraint stock_sto_pronum_fk foreign key(sto_pronum)
+references product(pro_code) on delete cascade,
+constraint stock_sto_shopnum_fk foreign key(sto_shopnum)
+references shop(shop_num) on delete cascade
+);
+
+commit;
