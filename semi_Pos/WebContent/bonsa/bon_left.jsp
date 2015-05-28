@@ -41,7 +41,7 @@
    <script src="../js/sparklines.js"></script>   
    <script src="../js/charts.js"></script>
    <script src="../js/jquery.slimscroll.min.js"></script>
-
+  
   <script>
 	function goUrl(str){
 		if(str == "notice"){
