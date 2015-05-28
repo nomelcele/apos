@@ -16,7 +16,7 @@
 
 
 				<div class="form-group ">
-					<div class="col-lg-2">
+					<div class="col-lg-3">
 						<input class="form-control" id="sname_ps" name="name"
 							minlength="2" onkeydown="startSuggest();" autocomplete="off"
 							type="text" required />
