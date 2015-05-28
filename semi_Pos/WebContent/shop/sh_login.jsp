@@ -77,8 +77,9 @@
 
 		$("#loginBtn").click(
 				function() {
+					$('#radioHidden').submit();
 					$.ajax({
-						url : "sh_checkcaptcha.jsp?id="+$('#id').val() + "&pwd=" + $('#pwd').val(),
+						url : "sh_checkcaptcha.jsp?id="+$('#id').val() + "&pwd=" + $('#pwd').val()+"&radio="+$(':radio[name="radio"]:checked').val(),
 						type : "POST",
 						dataType : "html",
 						success : function(res) {
@@ -111,10 +112,11 @@
 							}
 						}
 					});
-				})
-
+				});
 		// --------------- captcha END --------------
+		
 	});
+	
 </script>
 <%
 	// Construct the captchas object (Default Values)
@@ -182,8 +184,11 @@
 					<span class="input-group-addon"><i class="icon_key_alt"></i></span>
 					<input type="password" class="form-control" placeholder="Password" id="pwd" name="pwd">
 				</div>
-				<label class="checkbox"><input type="checkbox" id="checkBox" name="checkBox" value="master"> Mastser/PartT <span class="pull-right">
-						<a href="sh_shopSearch.jsp"> Forgot Password?</a>
+				<label class="checkbox" style="padding-left: 0; font-weight: bold;">
+					<input type="radio" id="radio1" name="radio" value="master" > Mastser
+					<input type="radio" id="radio2" name="radio" value="staff" > Staff 
+					
+				<span class="pull-right"><a href="sh_shopSearch.jsp"> Forgot Password?</a>
 				</span>
 				</label>
 				
