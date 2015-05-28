@@ -14,6 +14,7 @@
 	var i = 0;
 	var j = 0;
 	var mile = 0;
+	var cusnum = 0;
 	var chk = true;
 	function usingmileage(){
 		if(chk){
@@ -26,19 +27,38 @@
 		}	
 	}
 	function insertproduct(pcode, psize, pamount, pprice){
-		i++;
+		//i++;
 		j++;
-		var s = "s"+j;
 		var t = $('#p_num').val();
 		price = price + (t*pprice);
-		var str = "<tr><td>"+i+"</td>"+"<td>"+pcode+"</td>"+"<td>"+psize+"</td>"+"<td>"+t+"</td>"+"<td>"+(t*pprice)+"</td><tr>"
-		var str2 = "<input type='hidden' name='"+s+"' value='"+
+		var str = "<tr><td>"+j+"</td>"+"<td>"+pcode+"</td>"+"<td>"+psize+"</td>"+"<td>"+t+"</td>"+"<td>"+(t*pprice)+"</td><tr>"
+		var str2 = "<input type='hidden' name='fcode"+j+"' value='"+pcode+"'>";
+		var str3 = "<input type='hidden' name='fcash"+j+"' value='"+(t*pprice)+"'>";
+		var str4 = "<input type='hidden' name='fmany"+j+"' value='"+t+"'>";
 		console.log(str);
+		console.log(str2);
+		console.log("셋 : "+j);
 		document.getElementById('ftarget').innerHTML+=str;
 		document.getElementById('total').innerHTML=price;
+		////////////////////////////////////////////////
+		document.getElementById('final').innerHTML+=str2;
+		document.getElementById('final').innerHTML+=str3;
+		document.getElementById('final').innerHTML+=str4;
+	}
+	function gogo(){
+		var str5 = "<input type='hidden' name='fmileage' value='"+(price*0.1)+"'>";	
+		var str6 = "<input type='hidden' name='fset' value='"+j+"'>";
+		var str7 = "<input type='hidden' name='fcusnum' value='"+cusnum+"'>";
+		var str8 = "<input type='hidden' name='inmileage' value='"+((price*0.1)+(mile))+"'>";
+		document.getElementById('final').innerHTML+=str5;
+		document.getElementById('final').innerHTML+=str6;
+		document.getElementById('final').innerHTML+=str7;
+		document.getElementById('final').innerHTML+=str8;
+		document.getElementById('submitfinal').submit();
 	}
 
-	function ckcustomer(name, tel, mileage){
+	function ckcustomer(name, tel, mileage, num){
+		cusnum = num;
 		$('#name').val(name);
 		$('#phone').val(tel);
 		mile = mileage;
@@ -78,18 +98,23 @@
 </script>
 <section id="main-content">
 	<section class="wrapper">
-	<div>
-	<form action="sh.apos" method="post" id="final">
+	
+	<!-- 최종보낼 폼----------------------------------------------- -->
+	<form action="sh.apos" method="post" id="submitfinal">
+	<div id="final">
 		<input type="hidden" name="cmd" value="smang">
 		<input type="hidden" name="subcmd" value="final">
-		
-	</form>
+		<input type='hidden' name='fshopnum' value='1'>
 	</div>
+	</form>
+	<!-- --------------------------------------------------------- -->
+	
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
 					<header class="panel-heading"> 고객 검색</header>
 					<div class="panel-body">
+					
 						<form class="form-inline" role="form">
 							<div class="form-group">
 							
@@ -190,7 +215,7 @@
 						
 							<div class="form-group">
 							<button type="button" class="btn btn-primary" onclick="javascript:usingmileage()">마일리지 사용</button>'
-							<button type="submit" class="btn btn-primary">완료</button>
+							<button type="button" class="btn btn-primary" onclick="javascript:gogo()">완료</button>
 						</div>
 						<div class="col-sm-6">
                           <table class="table" style="width:800px;">

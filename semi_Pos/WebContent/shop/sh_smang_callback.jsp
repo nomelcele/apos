@@ -23,7 +23,7 @@
 		res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
 		res.append("href=\"javascript:ckcustomer('").append(v.getMem_name()).append("', '");
 		res.append(v.getMem_tel()).append("', '");
-		res.append(v.getMem_mileage()).append("')\">");
+		res.append(v.getMem_mileage()).append("', '"+v.getMem_num()+"')\">");
 		res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
 		res.append("</td>");
 		res.append("</tr>");

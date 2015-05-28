@@ -12,3 +12,6 @@ drop table member;
 drop table shop;
 drop table product;
 drop table bonsa;
+
+
+
