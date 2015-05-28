@@ -577,6 +577,149 @@ insert into stock values(stock_seq.nextval,15,100,15);
 
 
 
+-- stock (5/28) 수정
+
+-- 대리점 1호, 남성옷 1호
+insert into stock values(stock_seq.nextval,'15110001',50,1,95);
+insert into stock values(stock_seq.nextval,'15110001',20,1,100);
+insert into stock values(stock_seq.nextval,'15110001',25,1,105);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15110001',63,2,95);
+insert into stock values(stock_seq.nextval,'15110001',14,2,100);
+insert into stock values(stock_seq.nextval,'15110001',58,2,105);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15110001',43,3,95);
+insert into stock values(stock_seq.nextval,'15110001',32,3,100);
+insert into stock values(stock_seq.nextval,'15110001',85,3,105);
+
+
+-- 대리점 1호, 여성옷 1호
+insert into stock values(stock_seq.nextval,'15120001',32,1,55);
+insert into stock values(stock_seq.nextval,'15120001',54,1,66);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15120001',33,2,55);
+insert into stock values(stock_seq.nextval,'15120001',54,2,66);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15120001',43,3,55);
+insert into stock values(stock_seq.nextval,'15120001',22,3,66);
+
+
+-- 대리점 1호, 아기옷 1호
+insert into stock values(stock_seq.nextval,'15130001',37,1,2);
+insert into stock values(stock_seq.nextval,'15130001',34,1,3);
+insert into stock values(stock_seq.nextval,'15130001',62,1,4);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15130001',17,2,2);
+insert into stock values(stock_seq.nextval,'15130001',24,2,3);
+insert into stock values(stock_seq.nextval,'15130001',82,2,4);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15130001',27,3,2);
+insert into stock values(stock_seq.nextval,'15130001',54,3,3);
+insert into stock values(stock_seq.nextval,'15130001',35,3,4);
+
+
+
+
+
+-- 대리점 1호, 남성옷 2호
+insert into stock values(stock_seq.nextval,'15110002',50,1,95);
+insert into stock values(stock_seq.nextval,'15110002',20,1,100);
+insert into stock values(stock_seq.nextval,'15110002',25,1,105);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15110002',63,2,95);
+insert into stock values(stock_seq.nextval,'15110002',14,2,100);
+insert into stock values(stock_seq.nextval,'15110002',58,2,105);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15110002',43,3,95);
+insert into stock values(stock_seq.nextval,'15110002',32,3,100);
+insert into stock values(stock_seq.nextval,'15110002',85,3,105);
+
+
+-- 대리점 1호, 여성옷 2호
+insert into stock values(stock_seq.nextval,'15120002',32,1,55);
+insert into stock values(stock_seq.nextval,'15120002',54,1,66);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15120002',33,2,55);
+insert into stock values(stock_seq.nextval,'15120002',54,2,66);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15120002',43,3,55);
+insert into stock values(stock_seq.nextval,'15120002',22,3,66);
+
+
+-- 대리점 1호, 아기옷 2호
+insert into stock values(stock_seq.nextval,'15130002',37,1,2);
+insert into stock values(stock_seq.nextval,'15130002',34,1,3);
+insert into stock values(stock_seq.nextval,'15130002',62,1,4);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15130002',17,2,2);
+insert into stock values(stock_seq.nextval,'15130002',24,2,3);
+insert into stock values(stock_seq.nextval,'15130002',82,2,4);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15130002',27,3,2);
+insert into stock values(stock_seq.nextval,'15130002',54,3,3);
+insert into stock values(stock_seq.nextval,'15130002',35,3,4);
+
+
+
+
+
+-- 대리점 1호, 남성옷 3호
+insert into stock values(stock_seq.nextval,'15110003',50,1,95);
+insert into stock values(stock_seq.nextval,'15110003',20,1,100);
+insert into stock values(stock_seq.nextval,'15110003',25,1,105);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15110003',63,2,95);
+insert into stock values(stock_seq.nextval,'15110003',14,2,100);
+insert into stock values(stock_seq.nextval,'15110003',58,2,105);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15110003',43,3,95);
+insert into stock values(stock_seq.nextval,'15110003',32,3,100);
+insert into stock values(stock_seq.nextval,'15110003',85,3,105);
+
+
+-- 대리점 1호, 여성옷 3호
+insert into stock values(stock_seq.nextval,'15120003',32,1,55);
+insert into stock values(stock_seq.nextval,'15120003',54,1,66);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15120003',33,2,55);
+insert into stock values(stock_seq.nextval,'15120003',54,2,66);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15120003',43,3,55);
+insert into stock values(stock_seq.nextval,'15120003',22,3,66);
+
+
+-- 대리점 1호, 아기옷 3호
+insert into stock values(stock_seq.nextval,'15130003',37,1,2);
+insert into stock values(stock_seq.nextval,'15130003',34,1,3);
+insert into stock values(stock_seq.nextval,'15130003',62,1,4);
+
+-- 대리점 2호
+insert into stock values(stock_seq.nextval,'15130003',17,2,2);
+insert into stock values(stock_seq.nextval,'15130003',24,2,3);
+insert into stock values(stock_seq.nextval,'15130003',82,2,4);
+
+-- 대리점 3호
+insert into stock values(stock_seq.nextval,'15130003',27,3,2);
+insert into stock values(stock_seq.nextval,'15130003',54,3,3);
+insert into stock values(stock_seq.nextval,'15130003',35,3,4);
+
+
 
 -- sell 추가
 
