@@ -103,7 +103,7 @@
 							
 							<div style="margin-bottom: -1%">
 								<label for="cname" class="control-label col-lg-1"
-									style="font-size: 13px;">이름 </label>
+									style="font-size: 13px;"><p style=font-size:11pt>이름</p> </label>
 								<div class="col-lg-3" style="margin-left:-5%">
 
 									<input type="hidden" id="cmd" name="cmd" value="sproduct">
