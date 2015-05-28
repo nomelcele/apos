@@ -34,7 +34,7 @@
 											<label for="cname" class="control-label col-lg-1"><p style=font-size:11pt>
 											이름</p> 
 											</label>
-											<div class="col-lg-2" style="margin-left: -5%;">
+											<div class="col-lg-3" style="margin-left: -5%;">
 												<input class="form-control" id="sname_ps" name="name"
 													minlength="2" onkeydown="startSuggest();"
 													autocomplete="off" type="text" required />
