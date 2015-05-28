@@ -332,8 +332,6 @@
 				$('#selfimgtarget').slideDown(); //업로드한 이미지 미리보기
 			}
 		});
-// 		$('#crnum').css('value','${request.crnum}');
-// 		$('#hotkey').css('value','${requst.hotkey}');
 		
 		// ID 중복체크
 		$('#sid').keyup(function(){
@@ -342,8 +340,10 @@
 		
 		$('#spwdchk').keyup(function(){
 			if($('#spwd').val() == $('#spwdchk').val()){
+				$('#targetPWD').css("color","green");
 				$('#targetPWD').text("비밀번호가 일치합니다");
 			}else{
+				$('#targetPWD').css("color","red");
 				$('#targetPWD').text("비밀번호가 일치하지 않습니다");
 			}
 		});
@@ -386,7 +386,7 @@
                           <div class="panel-body">
                               <div class="form">
                               
-                                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos">
+                                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos" autocomplete="off">
                                   <input type="hidden" name="cmd" value="sjoin">
                                   <input type="hidden" name="subcmd" value="shopinsert">
                                   
@@ -433,7 +433,7 @@
                                       <div class="form-group ">
                                           <label for="cCrnum" class="control-label col-lg-2">사업자 번호 <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="scrnum" name="crnum" minlength="6" type="password" required />
+                                              <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="scrnum" name="crnum" minlength="6" type="text" required />
                                           </div>
                                       </div>
                                       
