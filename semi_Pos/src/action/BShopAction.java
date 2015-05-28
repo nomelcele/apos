@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import vo.BonsaVO;
 import vo.ShopHotkeyVO;
 import controller.ActionForward;
+import dao.BonsaDao;
 import dao.ShopDao;
 
 public class BShopAction implements Action{
@@ -18,6 +20,7 @@ public ActionForward execute(HttpServletRequest request,
 	String url="bon_index.jsp";
 	boolean method= false;
 	if(subcmd.equals("join")){
+		// 매장 가입 - 본사에서 YES/NO 
 		url="bon_shopJoin.jsp";
 		ArrayList<ShopHotkeyVO> list = ShopDao.getDao().getListRequestShop();
 		request.setAttribute("list", list);
@@ -28,6 +31,26 @@ public ActionForward execute(HttpServletRequest request,
 		url="bon_shopCheck.jsp";
 	}else if(subcmd.equals("scheck")){
 		url="bon_shopSalesCheck.jsp";
+	}else if(subcmd.equals("sawonjoin")){
+		// 본사 - 사원 가입
+		url="bon_login.jsp";
+		// 이름 ,비밀번호, 비밀번호 확인, 성명, 연락처
+		String bon_id = request.getParameter("bon_id");
+		String bon_name = request.getParameter("bon_name");
+		String bon_pwd = request.getParameter("bon_pwd");
+		String tel1 = request.getParameter("bon_tel1");
+		String tel2 = request.getParameter("bon_tel2");
+		String tel3 = request.getParameter("bon_tel3");
+		String bon_tel = tel1 +"-"+ tel2+"-"+tel3;
+		
+		BonsaVO vo = new BonsaVO();
+		vo.setBon_id(bon_id);
+		vo.setBon_name(bon_name);
+		vo.setBon_pwd(bon_pwd);
+		vo.setBon_tel(bon_tel);
+		
+		BonsaDao.getDao().sawonjoin(vo);
+		method=false;
 	}
 	return new ActionForward(url, method);
 }

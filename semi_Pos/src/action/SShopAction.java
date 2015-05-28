@@ -19,6 +19,7 @@ public class SShopAction implements Action {
 		String url="sh_index.jsp";
 		boolean method= false;
 		if(subcmd.equals("shopjoin")){
+			// 매장 hotkey 발급
 			request.setAttribute("hotkey", request.getParameter("hotkey"));
 			request.setAttribute("crnum", request.getParameter("crnum"));
 			System.out.println("여기에서의 crnum"+ request.getParameter("crnum"));
@@ -27,6 +28,7 @@ public class SShopAction implements Action {
 			url="sh_shopjoin.jsp";
 			method=false;
 		}else if(subcmd.equals("login")){
+			// 매장 로그인 
 			url="sh_index.jsp";
 			
 			String radio = request.getParameter("radio"); // master or staff?
@@ -40,11 +42,13 @@ public class SShopAction implements Action {
 			
 			
 		}else if(subcmd.equals("logout")){
+			// 매장 로그인
 			url="sh_login.jsp";
 			HttpSession session = request.getSession();
 			session.invalidate(); //모든 세션삭제
 			method=false;
 		}else if(subcmd.equals("shopinsert")){
+			// 매장 회원 가입- DB에 저장
 			url="sh_login.jsp";
 			// shop_num, shop_name, shop_tel, shop_adr,shop_map_x, shop_map_y
 			// shop_date, shop_mail, shop_master, shop_img, shop_crnum, shop_bonnum
