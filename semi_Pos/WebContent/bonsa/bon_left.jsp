@@ -175,7 +175,7 @@
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('add')">상품추가</a></li>
                           <li><a class="" href="javascript:goUrl('del')">상품삭제</a></li>
-                          <li><a class="" href="javascript:goUrl('sale')">상품세일</a></li>
+                          <li><a class="" href="javascript:goUrl('sale')">상품 재고 관리</a></li>
                       </ul>
                   </li>
                 <li class="sub-menu">
