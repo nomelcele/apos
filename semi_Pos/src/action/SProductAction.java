@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import vo.ProductVO;
+import vo.SmangVO;
 import controller.ActionForward;
 import dao.ShDao;
 
@@ -23,8 +24,9 @@ public class SProductAction implements Action{
 		if(subcmd.equals("pcheck")){
 			if(childcmd != null && childcmd.equals("search")){
 				String name =request.getParameter("name");
+				String shopnum= request.getParameter("shop_num");
 				System.out.println("test"+name);
-				ArrayList<ProductVO>list = ShDao.getDao().getListProduct(name);
+				ArrayList<SmangVO>list = ShDao.getDao().getListProduct(name,shopnum);
 				request.setAttribute("list", list);
 				System.out.println("test");
 			}
