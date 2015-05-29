@@ -127,8 +127,9 @@ $('#bimg').change(function(){
 												style="width: 258px; height: 120px; border: 2px solid rgb(213,206,206); margin-top: 10px; margin-bottom: 10px; margin-left: 140px;"
 												id="pimgtarget"><img src=""></div>
 										</div>
+									
 										<div style="float: left;"></div>
-
+	</br>
 
 										<div class=".col-md-1"
 											style="float: left; margin-right: 300px;">
