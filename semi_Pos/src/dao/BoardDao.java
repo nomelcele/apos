@@ -54,12 +54,12 @@ public class BoardDao {
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
 			sql.append("insert into board values(");
-			sql.append("board_seq.nextVal,?,'본사',?,sysdate,?,0,0001)");
+			sql.append("board_seq.nextVal,?,?,?,sysdate,?,0,0001)");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1,vo.getTitle());
-		//	pstmt.setString(2,"본사");  //작성자 추후수정
-			pstmt.setString(2,vo.getContent());
-			pstmt.setString(3,vo.getPath()); //파일명
+			pstmt.setString(2,vo.getWriter()); 
+			pstmt.setString(3,vo.getContent());
+			pstmt.setString(4,vo.getPath()); //파일명
 		//	pstmt.setInt(6, 1); //본사원번호
 			pstmt.executeUpdate();
 
