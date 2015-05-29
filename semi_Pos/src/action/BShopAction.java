@@ -8,10 +8,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import vo.BonsaVO;
+import vo.MemVO;
 import vo.ShopHotkeyVO;
+import vo.ShopVO;
 import controller.ActionForward;
 import dao.BonsaDao;
 import dao.LogTimeDao;
+import dao.ShDao;
 import dao.ShopDao;
 
 public class BShopAction implements Action{
@@ -30,13 +33,18 @@ public ActionForward execute(HttpServletRequest request,
 	}else if(subcmd.equals("infor")){
 		url="bon_shopInformation.jsp";
 	}else if(subcmd.equals("check")){
+		System.out.println("====================test==========");
 		url="bon_shopCheck.jsp";
+		ArrayList<ShopVO> list = ShopDao.getDao().getshopList();
+		request.setAttribute("list",list);
+		
 	}else if(subcmd.equals("scheck")){
 		url="bon_shopSalesCheck.jsp";
 	}else if(subcmd.equals("sawonjoin")){
 		// 본사 - 사원 가입
 		url="bon_login.jsp";
 		// 이름 ,비밀번호, 비밀번호 확인, 성명, 연락처
+		
 		String bon_id = request.getParameter("bon_id");
 		String bon_name = request.getParameter("bon_name");
 		String bon_pwd = request.getParameter("bon_pwd");
@@ -50,7 +58,6 @@ public ActionForward execute(HttpServletRequest request,
 		vo.setBon_name(bon_name);
 		vo.setBon_pwd(bon_pwd);
 		vo.setBon_tel(bon_tel);
-		
 		BonsaDao.getDao().sawonjoin(vo);
 		method=false;
 	}else if(subcmd.equals("sawonlogin")){
