@@ -93,9 +93,6 @@
 		<% System.out.println("체크1");%>
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
 		event.data+"</ul></div>";
-		var message = "<div class='padd sscroll'><ul class='chats'>"+
-		event.data+"</ul></div>";
-		console.log(message);
 // 		$("#target").html("<div class='panel-body'><div class='padd sscroll'><ul class='chats'>"+
 // 				event.data+"</ul></div>");
 		<% System.out.println("체크5");%>

@@ -75,12 +75,6 @@
 				   <a class="btn btn-danger btn-sm" href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
 					</td>
 					
-					
-				
-					 
-					 
-					 
-					 
 			</tr>
 		</div>
 		</div>

@@ -104,6 +104,7 @@
 <form method="post" action="sh.apos" id="notice">
 <input type="hidden" name="cmd" value="swork">
 <input type="hidden" name="subcmd" value="notice">
+<input type="hidden" name="page" value="1">
 </form>
 
 
