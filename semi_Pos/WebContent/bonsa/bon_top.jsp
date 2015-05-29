@@ -287,7 +287,7 @@
                             <span class="profile-ava">
                                  <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
-                            <span class="form-control" style="color: black"> [${sessionScope.bon_name}] 님 환영합니다  </span>&nbsp;
+                            <span class="form-control" style="color: black; font-family:'1훈바람언덕' "> [${sessionScope.bon_name}] 님 환영합니다  </span>&nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
