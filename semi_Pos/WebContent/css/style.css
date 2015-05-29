@@ -33,14 +33,14 @@ a, a:hover, a:focus {
     outline: 0;
 }
 input:focus, textarea:focus { outline: none; }
-table tr th { color: #7C7676;}
+table tr th { color: #688a7e;}
 *:focus {outline: none;}
 ::selection {
-    background: #000000;
+    background: #688a7e;
     color: #fff;
 }
 ::-moz-selection {
-    background: #000000;
+    background: #688a7e;
     color: #fff;
 }
 
@@ -84,7 +84,7 @@ table tr th { color: #7C7676;}
   background-size: cover;
 }
 .login-img2-body{
-  background: url('../img/bg-90.jpg') no-repeat center center fixed; 
+  background: url('../img/bg-10.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -97,13 +97,7 @@ table tr th { color: #7C7676;}
   -o-background-size: cover;
   background-size: cover;
 }
-.login-img4-body{
-  background: url('../img/bg-90.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 .login-form {
     max-width: 350px;
     margin: 200px auto 0;
@@ -124,7 +118,7 @@ table tr th { color: #7C7676;}
     background: rgba(213,215,222,0.9);
 }
 .login-form a{
-    color: #000000 !important;
+    color: #688a7e !important;
 }
 .login-form h2.login-form-heading {
     margin: 0;
@@ -339,7 +333,7 @@ ul.sidebar-menu li{
     
 }
 /*ul.sidebar-menu li:hover{
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #688a7e;
 }*/
 ul.sidebar-menu li.sub-menu{
     line-height: 15px;
@@ -392,19 +386,15 @@ ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
 ul.sidebar-menu li a i {
     font-size: 18px;
     padding-right: 6px;
-    color: #000000;
+    color: #688a7e;
 }
 
 ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
-<<<<<<< .mine
-    color: #ff80c0;
-=======
     color: #000000;
->>>>>>> .r397
 }
 
 ul.sidebar-menu li.active a i {
-    color: #ff80c0;
+    color: #fff;
 }
 
 
@@ -529,7 +519,7 @@ ul.sidebar-menu li.active a i {
 }
 .dark-bg {    
     background: rgba(54,66,74,1);
-    border-bottom:1px solid #E1E1E5;
+    border-bottom:1px solid #CED0DD;
 }
 .panel-content{
     padding: 10px;
@@ -794,13 +784,13 @@ div[data-role="editor-toolbar"] {
     width: 100%;
 }
 .dropdown-menu.extended.logout > li.eborder-top {
-    border-top: 2px solid #000000 !important;    
+    border-top: 2px solid #688a7e !important;    
 }
 .dropdown-menu.extended.logout > li:last-child {
     float: left;
     text-align: left;
     width: 100%;
-    background: #000000;    
+    background: #688a7e;    
 }
 
 .dropdown-menu.extended.logout > li:last-child > a, .dropdown-menu.extended.logout > li:last-child > a:hover {
@@ -1164,14 +1154,12 @@ div[data-role="editor-toolbar"] {
 }
 .panel .panel-body {
   border-width: 1px 1px 1px;
-
   padding-top:2;
   border-style: solid;
   border-top: none;
   border-right-color: #ccc!important;
   border-bottom-color: #ccc!important;
-  border-left-color: #FFF!important;
-  
+  border-left-color: #ccc!important;
 }
 .panel .panel-body-map {
   border-width: 1px 1px 2px;
