@@ -233,7 +233,7 @@
 	</div>
 
 	<div class="container">
-		<form class="login-form" action="*.apos" id="loginForm" autocomplete="off">
+		<form class="login-form" action="*.apos" id="loginForm" autocomplete="off" method="post">
 		<input type="hidden" name="cmd" value="sjoin">
 		<input type="hidden" name="subcmd" value="login">
 			<div class="login-wrap">
