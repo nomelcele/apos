@@ -22,7 +22,7 @@
 		<div class="col-lg-12">
                               <section class="panel">
                                   <header class="panel-heading">
-                                      CKEditor
+                                    
                                   </header>
                                   <div class="panel-body">
                                       <div class="form">
@@ -33,11 +33,11 @@
                                           <input type="hidden" name="url" id="url" value="">      
                                               <div class="form-group">
                                                   <div class="col-sm-10">
-                                              	<div style="font-size: 15px;">제목
+                                              	<div style="font-size: 15px;">제목:
                                               	<input type="text" name="title">
                                               	</div>
                                               	<p></p>
-                                              	<div style="font-size: 15px;">내용</div>
+                                              	<div style="font-size: 15px;"></div>
                                                   </div>
                                                   <label class="control-label col-sm-2" style="left: auto;"></label>
                                                    
