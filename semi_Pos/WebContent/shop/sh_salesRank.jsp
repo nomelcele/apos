@@ -8,9 +8,17 @@
 
    <div class="col-sm-6">
                       <section class="panel">
-                          <header class="panel-heading">
-                              <p style="font-size: 10pt">상품판매순위</p>
-                          </header>
+                         
+                          
+                          <div class="row" style="font-size: 15px; margin-top: -3%">
+         <div class="col-lg-12">
+            <h3 class="page-header">
+               <i class="fa fa-files-o"></i>상품판매순위
+            </h3>
+            </div>
+            </div>
+            
+                
                           <table class="table">
                             <thead>
                               <tr>
