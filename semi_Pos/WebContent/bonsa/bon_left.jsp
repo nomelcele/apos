@@ -230,10 +230,10 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="javascript:goUrl('brandsch')">브랜드 매출관리</a></li>
+                          
                           <li><a class="" href="javascript:goUrl('productsch')">품목별 매출순위</a></li>
                           <li><a class="" href="javascript:goUrl('outletsch')">대리점별 매출순위</a></li>
-                          <li><a class="" href="javascript:goUrl('termsch')">기간별 매출순위</a></li>
+                         
                       </ul>
                   </li>
                   
