@@ -156,8 +156,8 @@
 						<tr>
 							<th><i class="icon_profile"></i>날짜</th>
 							<th><i class="icon_profile"></i>대리점명</th>
-							<th><i class="icon_mail_alt"></i>판매 수량</th>
-							<th><i class="icon_pin_alt"></i>판매액</th>
+							<th><i class="icon_mail_alt"></i>판매 액</th>
+							<th><i class="icon_pin_alt"></i>판매 수량</th>
 						</tr>
 
 					</thead>
