@@ -11,12 +11,12 @@
 <%
 	request.setCharacterEncoding("utf-8");
 	//비동기식으로 사용자로 부터 검색어를 받는다.
-	String shop_name = request.getParameter("shop_name");
+	String pro_code = request.getParameter("pro_code");
 	String date_ps = request.getParameter("date_ps");
 	String date_ps2 = request.getParameter("date_ps2");
-	System.out.println(shop_name+date_ps+date_ps2);
+	System.out.println(pro_code+date_ps+date_ps2);
 	ArrayList<SalesCheckVO> list =new ArrayList<SalesCheckVO>();
-	list=SalesCheckDao.getDao().getList(shop_name, date_ps, date_ps2 );
+	list= SalesCheckDao.getDao().getProductList(pro_code, date_ps, date_ps2);
 	Iterator <SalesCheckVO> it = list.iterator();
 	StringBuffer res = new StringBuffer();
 	while (it.hasNext()) {
@@ -24,8 +24,8 @@
 		v = it.next();
 		res.append("<tr>");
 		res.append("<th>").append(v.getDate()).append("</th>");
-		res.append("<th>").append(v.getSell_shopname()).append("</th>");
-		res.append("<th>").append(v.getSell_card()).append("</th>");		
+		res.append("<th>").append(v.getSell_proname()).append("</th>");
+		res.append("<th>").append(v.getSell_cash()).append("</th>");		
 		res.append("<th>").append(v.getCount()).append("</th>");
 		res.append("</tr>");
 
