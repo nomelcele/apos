@@ -35,7 +35,10 @@
                      <div class="form-group">
                         <label class="col-sm-2 control-label">내용</label>
                         <div class="col-lg-10">
-                        <textarea name="" id="" class="form-control" cols="30" rows="5" readonly="readonly">${v.content}</textarea>
+                        <textarea name="" id="" class="form-control7" cols="30" rows="5" style="min-width: 350px; max-width: 700px; height:100px; float: left;" readonly="readonly">${v.content}</textarea>
+                        
+                          <!-- 이미지 크기 -->
+                         <img src="${v.path}" style="width: 350px; resize: none ">
                          </div>
                     <form action="bon.apos" method="post">
                     <input type="hidden" name="cmd" value="bwork">
@@ -44,8 +47,7 @@
                     <input type="hidden" name="page" value="1">
                     <button type="submit" class="btn btn-danger" style="margin-left: 21%; margin-top: 1%">글 삭제</button>
                     </form>
-                    <!-- 이미지 위치 수정 -->     
-					<img src="${v.path}" style="width: 50px;">
+                    
                      </div>
                      
                      <div class="col-sm-10" style="margin-left: 200px;">
