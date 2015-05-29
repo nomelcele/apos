@@ -276,7 +276,7 @@
                                 <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
                              <span class="form-control" id="master_span" style="color: black; display: none;"> [${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님 환영합니다  </span>&nbsp;
-                             <span class="form-control" id="staff_span" style="color: black; display: none;"> [${sessionScope.shop_id}] 님 환영합니다  </span>&nbsp;
+                             <span class="form-control" id="staff_span" style="color: black; font-family:'1훈바람언덕'; display: none"> [${sessionScope.shop_id}] 님 환영합니다  </span>&nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
