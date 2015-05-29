@@ -227,7 +227,7 @@
 			</div>
 		</div>
 	</div>
-      <form class="login-form" action="*.apos" id="bon_loginform" autocomplete="off">     
+      <form class="login-form" action="*.apos" id="bon_loginform" autocomplete="off" method="post">     
       			<input type="hidden" name="cmd" value="bshop">
 				<input type="hidden" name="subcmd" value="sawonlogin">
         <div class="login-wrap">
