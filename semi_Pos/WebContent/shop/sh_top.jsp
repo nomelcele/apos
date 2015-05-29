@@ -61,8 +61,13 @@
                  
                 <ul class="nav top-menu">                    
                     <li>
-                        <form class="navbar-form">
-                            <input class="form-control" placeholder="Search" type="text">
+                        <form class="navbar-form" action="sh.apos" method="post">
+                        <input type="hidden" id="cmd" name="cmd" value="sproduct">
+						<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
+						<input type="hidden" id="childcmd" name="childcmd" value="search_top">
+						<input type="hidden" id="top_shop_num" name="top_shop_num" value="${sessionScope.shop_num}">
+                        <input class="form-control" name="top_name_pk" placeholder="Search" type="text">
+                
                         </form>
                     </li>                    
                 </ul>
