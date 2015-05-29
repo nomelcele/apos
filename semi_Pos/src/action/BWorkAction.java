@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -39,7 +40,11 @@ public class BWorkAction implements Action{
 			url="bon_workNotice.jsp";
 			method=false;
 			int no = Integer.parseInt(request.getParameter("no"));
-			BoardDao.getDao().delete(no);
+			HttpSession session = request.getSession();
+			String ckwriter = (String) session.getAttribute("bon_id");
+			if(ckwriter.equals(request.getParameter("writer"))){
+				BoardDao.getDao().delete(no);
+			}
 			/*Page 처리 영역 */
 			Map<String, Integer> map = pageProcess(request, 0);
 			/////////////////////////////////////////////////
@@ -80,7 +85,6 @@ public class BWorkAction implements Action{
 			vo.setTitle(request.getParameter("title"));
 			String s = request.getParameter("content").trim();
 			HttpSession session = request.getSession();
-			
 			String writer = (String) session.getAttribute("bon_id");
 			vo.setWriter(writer);
 			String filename="";
@@ -133,6 +137,9 @@ public class BWorkAction implements Action{
 			if(childcmd != null && childcmd.equals("in")){
 				HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
 				//Dao처리
+				HttpSession session = request.getSession();
+				String writer = (String) session.getAttribute("bon_id");
+				maps.put("writer", writer);
 				System.out.println("확인");
 				BoardDao.getDao().insertComm(maps);
 				//why? no보내야 하는지....
@@ -146,9 +153,19 @@ public class BWorkAction implements Action{
 			map.put("no", no);
 			ArrayList<CommVO> clist = BoardDao.getDao().getCommList(map);
 			request.setAttribute("clist", clist);
-			request.setAttribute("tar", tar);
 		}else if(subcmd != null && subcmd.equals("move")){
 			url="bon_workMove.jsp";
+		}else if(subcmd != null && subcmd.equals("commdelete")){
+			int no = Integer.parseInt(request.getParameter("no"));
+			int bo_num = Integer.parseInt(request.getParameter("bo_num"));
+			HttpSession session = request.getSession();
+			String ckwriter = (String) session.getAttribute("bon_id");
+			if(ckwriter.equals(request.getParameter("writer"))){
+				BoardDao.getDao().deleteComm(no);
+			};
+			
+			url = "bonsa.apos?no="+bo_num+"&cmd=bwork&subcmd=boardDetail&page=1";
+			method = true;
 		}
 		return new ActionForward(url, method);
 	}

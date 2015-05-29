@@ -8,6 +8,12 @@
 	function goUrlshcin(){
 		document.getElementById("commin").submit();
 	}
+	function delteaction(){
+		document.getElementById("deleteform").submit();
+	}
+	function listaction(){
+		document.getElementById("listform").submit();
+	}
 </script>
 <section id="main-content">
    <section class="wrapper">
@@ -45,12 +51,19 @@
                           <%-- 이미지 크기 --%>
                          <img src="${v.path}" style="width: 350px; resize: none ">
                          </div>
-                    <form action="bon.apos" method="post">
+                    <form action="bon.apos" method="post" id="deleteform">
                     <input type="hidden" name="cmd" value="bwork">
                     <input type="hidden" name="subcmd" value="delete">
                     <input type="hidden" name="no" value="${v.no }">
+                    <input type="hidden" name="writer" value="${v.writer }">
                     <input type="hidden" name="page" value="1">
-                    <button type="submit" class="btn btn-danger" style="margin-left: 21%; margin-top: 1%">글 삭제</button>
+                    <button type="button" class="btn btn-danger" onclick="javascript:delteaction()" style="margin-left: 21%; margin-top: 1%">글 삭제</button>
+                    </form>
+                    <form action="bon.apos" method="post" id="listform">
+                    <input type="hidden" name="cmd" value="bwork">
+                    <input type="hidden" name="subcmd" value="notice">
+                    <input type="hidden" name="page" value="1">
+                    <button type="button" class="btn btn-danger" onclick="javascript:listaction()" style="margin-left: 21%; margin-top: 1%">목록</button>
                     </form>
                     
                      </div>
@@ -72,6 +85,8 @@
                                  <td>${ctlist.writer }</td>
                                  <td>${ctlist.comm}</td>
                                  <td>${ctlist.redate}</td>
+                                 <td><a href="bon.apos?cmd=bwork&subcmd=commdelete&no=${ctlist.no}&bo_num=${ctlist.bo_num}&writer=${ctlist.writer}&page=1">
+						X</a>
                               </tr>
                               </c:forEach>
                            </tbody>
