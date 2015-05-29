@@ -18,7 +18,17 @@
 		});
 		});
 	});
+	// 		function goDel(str) {
+	// 			if (str == "pcode") {
+	// 				alert("goDel실행됨!! :pcode");
+	// 				alert("!!");
+	// 				var productcode = $('#pcode').val();
+	// 				alert(pcode);
+	// 				$('#bpcode').val(productcode);
 
+	// 				document.getElementById("procode").submit();
+	// 			}
+	// 		}
 </script>
 <section class="wrapper">
 	<section id="main-content">
@@ -35,7 +45,7 @@
 				type="hidden" name="subcmd" value="del"> <input
 				type="hidden" name="childcmd" value="">
 
-			<div class="row" style="font-size: 15px;">
+			<div class="row" style="font-size: 15px; margin-top: -3%">
 				<div class="col-lg-12">
 					<h3 class="page-header">
 						<i class="fa fa-files-o">상품삭제</i>
@@ -44,9 +54,9 @@
 
 				<div class="panel-body">
 					<div class="form">
-						<div class="col-lg-6">
+						<div class="col-lg-6" style="margin-top: 3%">
 
-							<div class="form-group">
+							<div class="form-group" style="margin-bottom: -1%">
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">상품코드 </label>
 								<div class="col-lg-4">
@@ -54,12 +64,13 @@
 										minlength="2" onkeydown="startSuggest();" autocomplete="off"
 										type="text">
 								</div>
-								<button class="btn btn-default" type="button" id="pcodebtn">조회</button>
+								<button class="btn btn-default" type="button" id="pcodebtn"
+									onclick="javascript:goDel(str)">조회</button>
 							</div>
 
 							<div class="form-group ">
 								<br /> <br /> <label style="width: 200px;" for="cname"
-									class="control-label col-lg-2">물품명</label>
+									class="control-label col-lg-2">물품이름</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="name"
 										name="name" minlength="2" type="text" value="${v.pro_name}">
