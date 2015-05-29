@@ -25,7 +25,7 @@
 		v = it.next();
 		res.append("['");
 		res.append(v.getDate()).append("',");
-		res.append(v.getSell_card()).append(",");;		
+		res.append(v.getSell_cash()).append(",");;		
 		res.append(v.getCount()).append(",");
 		res.append("],");
 

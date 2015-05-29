@@ -25,7 +25,7 @@
 		res.append("<tr>");
 		res.append("<th>").append(v.getDate()).append("</th>");
 		res.append("<th>").append(v.getSell_shopname()).append("</th>");
-		res.append("<th>").append(v.getSell_card()).append("</th>");		
+		res.append("<th>").append(v.getSell_cash()).append("</th>");		
 		res.append("<th>").append(v.getCount()).append("</th>");
 		res.append("</tr>");
 
