@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="bon_top.jsp"%>
 <%@include file="bon_left.jsp"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 본사 매장관리의 매장 조회 페이지 입니다. -->
 
 
@@ -33,7 +34,7 @@
 								<th>${shlist.master}</th>
 								<th>${shlist.tel}</th>
 								<th>${shlist.mail}</th>
-								<th>${shlist.img}</th>
+								<th><img src="../upload/${shlist.img}" style="width: 50px;"></th>
 								
 							</tr>
 							</c:forEach>
