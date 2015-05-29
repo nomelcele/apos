@@ -8,11 +8,15 @@
 		<script>
 			alert("Master page");
 			$('#hideMenu').show();
+			$('#staff_span').hide();
+			$('#master_span').show();
 		</script>
 	</c:when>
 	<c:otherwise> 
 		<script>
 			alert("Staff page");
+			$('#master_span').hide();
+			$('#staff_span').show();
 		</script>
 	</c:otherwise>
 </c:choose>
@@ -29,6 +33,7 @@
       }
    }
 </script>
+
 
 <form method="post" action="sh.apos" id="term">
 <input type="hidden" name="cmd" value="swork">
