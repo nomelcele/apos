@@ -12,7 +12,7 @@
             <section class="panel">
                <header class="panel-heading"> 공지사항 게시글 </header>
                <div class="panel-body">
-                  <form class="form-horizontal " method="post">
+<!--                   <form class="form-horizontal " method="post"> -->
                   
                      <div class="form-group">
                         <label class="col-sm-2 control-label">제목</label>
@@ -37,8 +37,17 @@
                         <div class="col-lg-10">
                         <textarea name="" id="" class="form-control" cols="30" rows="5" readonly="readonly">${v.content}</textarea>
                          </div>
+                    <form action="bon.apos" method="post">
+                    <input type="hidden" name="cmd" value="bwork">
+                    <input type="hidden" name="subcmd" value="delete">
+                    <input type="hidden" name="no" value="${v.no }">
+                    <input type="hidden" name="page" value="1">
+                    <button type="submit" class="btn btn-danger" >글 삭제</button>
+                    </form>
+                    <!-- 이미지 위치 수정 -->     
 					<img src="${v.path}" style="width: 50px;">
                      </div>
+                     
                      <div class="col-sm-10" style="margin-left: 200px;">
                         <table class="table">
                            <thead>
@@ -51,7 +60,7 @@
                            </thead>
                            
                            <tbody>
-                         /  <c:forEach var="ctlist" items="${clist}">
+                           <c:forEach var="ctlist" items="${clist}">
                               <tr>
                                  <td>${ctlist.writer }</td>
                                  <td>${ctlist.comm}</td>
@@ -64,7 +73,7 @@
                         <c:set var="pageUrl" value="bonsa.apos?cmd=bwork&subcmd=boardDetail&no=${v.no}"/>
 						<%@include file="page.jsp" %>
                      </div>
-                     </form>
+<!--                      </form> -->
                      <form method="post" action="bon.apos">
                      <div class="form-group">
                         <label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
@@ -75,7 +84,7 @@
                      </div>
                      <div class="form-group">
                         <div class="col-lg-offset-2 col-lg-10" style="display:inline;">
-                           <button type="submit" class="btn btn-danger">댓글 작성</button>
+                           <button type="submit" class="btn btn-danger" >댓글 작성</button>
                         </div>
                      </div>
 				  <input type="hidden" name="cmd" value="bwork">

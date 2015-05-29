@@ -33,6 +33,17 @@ public class BWorkAction implements Action{
 				/////////////////////////////////////////////////
 				ArrayList<BoardVO> list = BoardDao.getDao().getList(map);
 				request.setAttribute("list", list);
+		}else if(subcmd != null && subcmd.equals("delete")){
+			System.out.println("1차확인");
+			url="bon_workNotice.jsp";
+			method=false;
+			int no = Integer.parseInt(request.getParameter("no"));
+			BoardDao.getDao().delete(no);
+			/*Page 처리 영역 */
+			Map<String, Integer> map = pageProcess(request, 0);
+			/////////////////////////////////////////////////
+			ArrayList<BoardVO> list = BoardDao.getDao().getList(map);
+			request.setAttribute("list", list);
 		}else if(subcmd != null && subcmd.equals("in")){
 				url="bon_workNoticeWriter.jsp";
 		}else if(subcmd != null && subcmd.equals("ckBoard")){
