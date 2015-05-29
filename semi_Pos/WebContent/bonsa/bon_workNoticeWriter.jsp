@@ -16,6 +16,18 @@
 	});
 </script>
 
+<script>
+	function gourl2(){
+			document.getElementById("notice").submit();
+	};
+	
+</script>
+
+<form method="post" action="bon.apos" id="notice">
+<input type="hidden" name="cmd" value="bwork">
+<input type="hidden" name="subcmd" value="notice">
+</form>
+
 <%-- 본사의 업무관리의 공지사항 글쓰기 페이지 입니다. --%>
 <section id="main-content">
 	<section class="wrapper">
@@ -45,8 +57,10 @@
                                                       <textarea class="form-control ckeditor" id="content" name="content" rows="6"></textarea>
                                                   </div>
                                               </div>
-                                              <input type="button" value="글작성" class="btn" onclick="javascript:ngoUrl()">
-                                              <input type="button" value="list" class="btn" onclick="">
+
+                                              <a class="btn btn-success btn-sm" href="javascript:ngoUrl()" title="Bootstrap 3 themes generator">글작성</a>
+                                                <a class="btn btn-success btn-sm" href="javascript:gourl2()" title="Bootstrap 3 themes generator">list</a>
+                                         
                                           </form>
                                       </div>
                                   </div>
