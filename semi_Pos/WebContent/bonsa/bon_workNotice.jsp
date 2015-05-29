@@ -69,10 +69,14 @@
 		</section>
 		<div>
 			<tr align="right">
-				<td ><input type="button" value="글작성" 
-					onclick="gourl3()"></td>
-				<td ><input type="button" value="목록" 
-					onclick="gourl2()"></td>
+				<td >
+					   <a class="btn btn-danger" href="javascript:gourl3()" title="Bootstrap 3 themes generator">글작성</a></td>
+				<td >
+				   <a class="btn btn-danger" href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
+					</td>
+					
+					
+					 
 			</tr>
 		</div>
 		</div>
