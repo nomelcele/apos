@@ -114,7 +114,13 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
-					<header class="panel-heading"> 고객 검색</header>
+				<div class="row" style="font-size: 15px; margin-top: -3%">
+         <div class="col-lg-12">
+            <h3 class="page-header">
+               <i class="fa fa-files-o"></i>고객검색
+            </h3>
+            </div>
+            </div>
 					<div class="panel-body">
 					
 						<form class="form-inline" role="form">
@@ -172,7 +178,13 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
-					<header class="panel-heading"> 구매정보 </header>
+					<div class="row" style="font-size: 15px; margin-top: -3%">
+         <div class="col-lg-12">
+            <h3 class="page-header">
+               <i class="fa fa-files-o"></i>구매정보
+            </h3>
+            </div>
+            </div>
 					<div class="panel-body">
 						
 							<div class="form-group">
