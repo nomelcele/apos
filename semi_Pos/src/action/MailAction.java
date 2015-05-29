@@ -160,7 +160,139 @@ public class MailAction implements Action{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
+		}else if(subcmd.equals("findid")){
+			// 메일 관련 정보
+						String mail = request.getParameter("mail");
+						String name = request.getParameter("name");
+						String id = request.getParameter("id");
+						
+						System.out.println("--------여기는 FIND ID 메일 보내는 곳--------");
+						System.out.println("MAIL : "+mail);
+						System.out.println("NAME : "+name);
+						System.out.println("ID : "+id);
+						
+						String host = "smtp.naver.com";
+				        final String username = "ama949@naver.com"; // 보내는 사람 네이버  ID
+				        final String password = "skdltm11a"; // 비밀번호
+				        int port=465;
+				         
+				        // 메일 내용
+				        String recipient = mail; // 받는 사람 E-Mail
+				        String subject = "APOS - ID 찾기 결과입니다.";
+				        String body = "\""+name+"\"님의" +"\n\r"+"ID는 : "+id+"\n\r"+"감사합니다";
+				         
+				        Properties props = System.getProperties();
+				         
+				         
+				        props.put("mail.smtp.host", host);
+				        props.put("mail.smtp.port", port);
+				        props.put("mail.smtp.auth", "true");
+				        props.put("mail.smtp.ssl.enable", "true");
+				        props.put("mail.smtp.starttls.enable","true");  
+				        props.put("mail.smtp.ssl.trust", host);
+				          
+				        Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+				            String un=username;
+				            String pw=password;
+				            protected PasswordAuthentication getPasswordAuthentication() {
+				                return new PasswordAuthentication(un, pw);
+				            }
+				        });
+				        session.setDebug(true); //for debug
+				          
+				        Message msg = new MimeMessage(session);
+				        try {
+							msg.setFrom(new InternetAddress(username));
+							msg.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+							msg.setSubject(subject);
+							msg.setSentDate(new Date());
+							// 파일 첨부시에는 BodyPart를 사용
+							// msg.setText(body);
+							
+							// 파일첨부를 위한 Multipart
+							Multipart multipart = new MimeMultipart();
+							
+							// BodyPart를 생성
+							BodyPart bodyPart = new MimeBodyPart();
+							bodyPart.setText(body);
+							
+							// 1. Multipart에 BodyPart를 붙인다.
+							multipart.addBodyPart(bodyPart);
+							
+							// 이메일 메시지의 내용에 Multipart를 붙인다.
+							msg.setContent(multipart);
+							Transport.send(msg);
+						} catch (MessagingException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+		}else if(subcmd.equals("findpwd")){
+			// 메일 관련 정보
+			String mail = request.getParameter("mail");
+			String name = request.getParameter("name");
+			String pwd = request.getParameter("pwd");
+			
+			System.out.println("--------여기는 FIND ID 메일 보내는 곳--------");
+			System.out.println("MAIL : "+mail);
+			System.out.println("NAME : "+name);
+			System.out.println("PWD : "+pwd);
+			
+			String host = "smtp.naver.com";
+	        final String username = "ama949@naver.com"; // 보내는 사람 네이버  ID
+	        final String password = "skdltm11a"; // 비밀번호
+	        int port=465;
+	         
+	        // 메일 내용
+	        String recipient = mail; // 받는 사람 E-Mail
+	        String subject = "APOS - ID 찾기 결과입니다.";
+	        String body = "\""+name+"\"님의" +"\n\r"+"PWD는 : "+pwd+"\n\r"+"감사합니다";
+	         
+	        Properties props = System.getProperties();
+	         
+	         
+	        props.put("mail.smtp.host", host);
+	        props.put("mail.smtp.port", port);
+	        props.put("mail.smtp.auth", "true");
+	        props.put("mail.smtp.ssl.enable", "true");
+	        props.put("mail.smtp.starttls.enable","true");  
+	        props.put("mail.smtp.ssl.trust", host);
+	          
+	        Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+	            String un=username;
+	            String pw=password;
+	            protected PasswordAuthentication getPasswordAuthentication() {
+	                return new PasswordAuthentication(un, pw);
+	            }
+	        });
+	        session.setDebug(true); //for debug
+	          
+	        Message msg = new MimeMessage(session);
+	        try {
+				msg.setFrom(new InternetAddress(username));
+				msg.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+				msg.setSubject(subject);
+				msg.setSentDate(new Date());
+				// 파일 첨부시에는 BodyPart를 사용
+				// msg.setText(body);
+				
+				// 파일첨부를 위한 Multipart
+				Multipart multipart = new MimeMultipart();
+				
+				// BodyPart를 생성
+				BodyPart bodyPart = new MimeBodyPart();
+				bodyPart.setText(body);
+				
+				// 1. Multipart에 BodyPart를 붙인다.
+				multipart.addBodyPart(bodyPart);
+				
+				// 이메일 메시지의 내용에 Multipart를 붙인다.
+				msg.setContent(multipart);
+				Transport.send(msg);
+			} catch (MessagingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+}
 		
 		
 		return new ActionForward(url, method);

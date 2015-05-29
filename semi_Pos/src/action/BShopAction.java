@@ -57,9 +57,11 @@ public ActionForward execute(HttpServletRequest request,
 		// 본사 사원 로그인
 		url="bon_index.jsp";
 		String id =request.getParameter("bon_login_id");
+		String bon_name = BonsaDao.getDao().getbonname(id);
 		LogTimeDao.getDao().logintime(id); // 로그인 시간 DB에 저장
 		HttpSession session = request.getSession();
 		session.setAttribute("bon_id", id);
+		session.setAttribute("bon_name", bon_name);
 		method=false;
 	}else if(subcmd.equals("sawonlogout")){
 		// 본사 사원 로그 아웃
@@ -69,6 +71,10 @@ public ActionForward execute(HttpServletRequest request,
 		LogTimeDao.getDao().logouttime(bon_id);
 		session.invalidate(); //모든 세션삭제
 		method=false;
+	}else if(subcmd.equals("findId")){
+		url="bon_login.jsp";
+	}else if(subcmd.equals("findPwd")){
+		url="bon_login.jsp";
 	}
 	
 	return new ActionForward(url, method);

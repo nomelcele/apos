@@ -1,6 +1,7 @@
 package action;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,13 +31,26 @@ public class SShopAction implements Action {
 		}else if(subcmd.equals("login")){
 			// 매장 로그인 
 			url="sh_index.jsp";
-			
+			String name = "";  // 매장명
+			String master =""; // 매장주인이름
 			String radio = request.getParameter("radio"); // master or staff?
-			String id = request.getParameter("id");
+			System.out.println("---Radio--- : "+ radio);
+			String id = request.getParameter("id"); // 접속 ID
 			int shop_num =  ShopDao.getDao().getshopno(id);// shop_num;
+			if(radio.equals("master")){
+				ArrayList<ShopVO> list =  ShopDao.getDao().getshopname(id);
+				for(ShopVO e : list){
+					name= e.getName();
+					master = e.getMaster();
+				}
+			}else if(radio.equals("staff")){
+				
+			}
 			HttpSession session = request.getSession();
-			session.setAttribute("shop_num", shop_num);
-			session.setAttribute("shop_id", id);
+			session.setAttribute("shop_num", shop_num); // 매장 NUM
+			session.setAttribute("shop_id", id); // 접속 ID
+			session.setAttribute("shop_name", name); // 매장명
+			session.setAttribute("shop_master", master); // 매장주 이름
 			session.setAttribute("radio", radio); // master or staff?
 			method=false;
 			
@@ -116,7 +130,12 @@ public class SShopAction implements Action {
 			ShopDao.getDao().shoprequesthotkey(vo);
 			
 			method=false;
+		}else if(subcmd.equals("findId")){
+			url="sh_login.jsp";
+		}else if(subcmd.equals("findPwd")){
+			url="sh_login.jsp";
 		}
+		
 		return new ActionForward(url, method);
 	}
 }

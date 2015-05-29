@@ -282,6 +282,106 @@ public class ShopDao {
 		}
 		return num;
 	}
+	// 매장명을 얻기위함
+	public ArrayList<ShopVO> getshopname(String id){
+		Connection con= null;
+		PreparedStatement pstmt=null;
+		ResultSet rs = null;
+		ArrayList<ShopVO> shop_info=new ArrayList<ShopVO>(); 
+		try {
+			con=MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from shop where shop_id=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1,id);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				ShopVO vo = new ShopVO();
+				vo.setName(rs.getString("shop_name"));
+				vo.setMaster(rs.getString("shop_master"));
+				shop_info.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if  (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return shop_info;
+	}
+	
+	// ID 찾기에서 쓰임
+	public String findid(String name, String tel){
+		Connection con= null;
+		PreparedStatement pstmt=null;
+		ResultSet rs = null;
+		String res = "";
+		try {
+			con=MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select shop_id from shop where shop_master=? and shop_tel=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1,name);
+			pstmt.setString(2,tel);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				res=rs.getString("shop_id");
+				System.out.println("=============shop_id====:"+res);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if  (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return res;
+	}
+	// PWD 찾기에서 쓰임
+	public String findpwd(String name, String id){
+		Connection con= null;
+		PreparedStatement pstmt=null;
+		ResultSet rs = null;
+		String res = "";
+		try {
+			con=MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select shop_pwd from shop where shop_name=? and shop_id=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1,name);
+			pstmt.setString(2,id);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				res=rs.getString("shop_pwd");
+				System.out.println("=============shop_pwd====:"+res);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if  (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return res;
+	}
+	
 	private int createHotkey(){
 		int hotkey=(int)(Math.random()*666666)+111111;// 0~99까지
 		return hotkey;
