@@ -70,12 +70,16 @@
 		<div>
 			<tr align="right">
 				<td >
-					   <a class="btn btn-danger" href="javascript:gourl3()" title="Bootstrap 3 themes generator">글작성</a></td>
+					   <a class="btn btn-danger btn-sm" href="javascript:gourl3()" title="Bootstrap 3 themes generator">글작성</a></td>
 				<td >
-				   <a class="btn btn-danger" href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
+				   <a class="btn btn-danger btn-sm" href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
 					</td>
 					
 					
+				
+					 
+					 
+					 
 					 
 			</tr>
 		</div>
