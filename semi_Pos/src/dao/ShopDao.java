@@ -407,6 +407,7 @@ public class ShopDao {
 				vo.setMail(rs.getString("shop_mail"));
 				vo.setImg(rs.getString("shop_img"));
 				shopList.add(vo);
+				System.out.println(rs.getString("shop_name"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
