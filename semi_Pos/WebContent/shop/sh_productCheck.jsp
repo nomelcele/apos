@@ -9,12 +9,13 @@
 <script src="../js/suggestProduct_pk.js"></script>
 
 <script>
-
+	var shop_num = "${sessionScope.shop_num}";
 	var genderKey = null;
 	function Product(str) {
-		genderKey =str;
-		var key = "key=" + encodeURIComponent(str);
-		
+		genderKey = str;
+		var key = "key=" + encodeURIComponent(str) + "&shop_num="
+				+ encodeURIComponent(shop_num);
+
 		sendRequest("sh_AjaxProductSearch.jsp", key, res2, "post");
 	}
 
@@ -25,25 +26,25 @@
 		if (xhr.readyState == 4) {
 			if (xhr.status == 200) {
 
-				if(genderKey ==1){
-				document.getElementById("view_product").style.display = 'view';
-				var response = xhr.responseText;
-				var str = response.trim();
+				if (genderKey == 1) {
+					document.getElementById("view_product").style.display = 'view';
+					var response = xhr.responseText;
+					var str = response.trim();
 
-				document.getElementById("view_product").innerHTML = str;
-				} else if(genderKey ==2){
+					document.getElementById("view_product").innerHTML = str;
+				} else if (genderKey == 2) {
 					document.getElementById("view_product2").style.display = 'view';
 					var response = xhr.responseText;
 					var str = response.trim();
-	
+
 					document.getElementById("view_product2").innerHTML = str;
-					}else if(genderKey ==3){
-						document.getElementById("view_product3").style.display = 'view';
-						var response = xhr.responseText;
-						var str = response.trim();
-			
-						document.getElementById("view_product3").innerHTML = str;
-						}
+				} else if (genderKey == 3) {
+					document.getElementById("view_product3").style.display = 'view';
+					var response = xhr.responseText;
+					var str = response.trim();
+
+					document.getElementById("view_product3").innerHTML = str;
+				}
 				//innerHTMLviewTable2();
 			} else {
 				document.getElementById("view_product").style.display = 'none';
@@ -98,35 +99,40 @@
 					</h3>
 
 					<header class="panel-heading tab-bg-primary ">
-						<div class="form-group " style="margin-left:-3%">
+						<div class="form-group " style="margin-left: -3%">
 							<form action="sh.apos" method="post">
-							
-							<div style="margin-bottom: -1%">
-								<label for="cname" class="control-label col-lg-1"
-									style="font-size: 13px;"><p style=font-size:11pt>이름</p> </label>
-								<div class="col-lg-3" style="margin-left:-5%">
 
-									<input type="hidden" id="cmd" name="cmd" value="sproduct">
-									<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
-									<input type="hidden" id="childcmd" name="childcmd"
-										value="search"> <input class="form-control"
-										id="sname_ps" name="name" minlength="2"
-										onkeydown="startSuggest();" autocomplete="off" type="text"
-										required />
+								<div style="margin-bottom: -1%">
+									<label for="cname" class="control-label col-lg-1"
+										style="font-size: 13px;">이름 </label>
+									<div class="col-lg-3" style="margin-left: -5%">
 
-									<div id="view"></div>
-								</div>
-								<input class="form-control6" type="submit" id="btn1" name="btn1"
-									value="조회">
+										<input type="hidden" id="cmd" name="cmd" value="sproduct">
+										<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
+										<input type="hidden" id="childcmd" name="childcmd"
+											value="search"> <input type="hidden" id="shop_num"
+											name="shop_num" value="${sessionScope.shop_num}"> <input
+											class="form-control" id="sname_ps" name="name" minlength="2"
+											onkeydown="startSuggest();" autocomplete="off" type="text"
+											required />
+
+										<div id="view"></div>
 									</div>
+									<input class="form-control6" type="submit" id="btn1"
+										name="btn1" value="조회">
+								</div>
 							</form>
 						</div>
 
 						<ul class="nav nav-tabs">
-							<li class=""><a data-toggle="tab" href="#search" id="ajevery">search</a></li>
-							<li class="" id="ajman"><a data-toggle="tab" href="#man"onclick="javascript:Product(1)">man</a></li>
-							<li class=""><a data-toggle="tab" href="#woman" onclick="javascript:Product(2)">woman</a></li>
-							<li class=""><a data-toggle="tab" href="#kids" onclick="javascript:Product(3)">kids</a></li>
+							<li class=""><a data-toggle="tab" href="#search"
+								id="ajevery">search</a></li>
+							<li class="" id="ajman"><a data-toggle="tab" href="#man"
+								onclick="javascript:Product(1)">man</a></li>
+							<li class=""><a data-toggle="tab" href="#woman"
+								onclick="javascript:Product(2)">woman</a></li>
+							<li class=""><a data-toggle="tab" href="#kids"
+								onclick="javascript:Product(3)">kids</a></li>
 						</ul>
 					</header>
 
@@ -138,31 +144,32 @@
 									<table class="table">
 										<thead>
 											<tr>
-
-												<th>상품번호</th>
+												<th>no</th>
+												<th>상품이름</th>
 												<th>상품코드</th>
-												<th>상품명</th>
 												<th>사이즈</th>
-												<th>수량</th>
-												<th>판매가</th>
-												<th>사진</th>
+												<th>재고</th>
+												<th>가격</th>
+												<th>상품사진</th>
+												<th>바코드</th>
 											</tr>
 										</thead>
 										<tbody>
 											<%-- 반복 --%>
-
 											<c:forEach var="stList" items="${list}">
 												<tr>
-													<th>${stList.pro_num}</th>
-													<th>${stList.pro_code}</th>
+													<th>0</th>
 													<th>${stList.pro_name}</th>
-													<th>${stList.pro_size}</th>
-													<th>${stList.pro_amount}</th>
-													<th>${stList.pro_img}</th>
+													<th>${stList.pro_code}</th>
+													<th>${stList.sto_size}</th>
+													<th>${stList.sto_amount}</th>
+													<th>${stList.pro_price}</th>
+													<th><img src='../upload/${stList.pro_img}'style="width: 100px;"></td></th>
+													<th><img src='../upload/${stList.pro_barcode}'style="width: 100px;"></th>
 
 												</tr>
 											</c:forEach>
-										
+
 
 											<%-- 반복 --%>
 										</tbody>
@@ -177,17 +184,18 @@
 									<table class="table">
 										<thead>
 											<tr>
-
-												<th>상품번호</th>
-												<th>상품명</th>
+												<th>no</th>
+												<th>상품이름</th>
+												<th>상품코드</th>
 												<th>사이즈</th>
-												<th>수량</th>
-												<th>판매가</th>
-												<th>사진</th>
+												<th>재고</th>
+												<th>가격</th>
+												<th>상품사진</th>
+												<th>바코드</th>
 											</tr>
 										</thead>
 										<tbody id="view_product">
-											
+
 										</tbody>
 									</table>
 
@@ -202,17 +210,18 @@
 									<table class="table">
 										<thead>
 											<tr>
-
-												<th>상품번호</th>
-												<th>상품명</th>
+												<th>no</th>
+												<th>상품이름</th>
+												<th>상품코드</th>
 												<th>사이즈</th>
-												<th>수량</th>
-												<th>판매가</th>
-												<th>사진</th>
+												<th>재고</th>
+												<th>가격</th>
+												<th>상품사진</th>
+												<th>바코드</th>
 											</tr>
 										</thead>
 										<tbody id="view_product2">
-											
+
 										</tbody>
 									</table>
 
@@ -227,17 +236,18 @@
 									<table class="table">
 										<thead>
 											<tr>
-
-												<th>상품번호</th>
-												<th>상품명</th>
+												<th>no</th>
+												<th>상품이름</th>
+												<th>상품코드</th>
 												<th>사이즈</th>
-												<th>수량</th>
-												<th>판매가</th>
-												<th>사진</th>
+												<th>재고</th>
+												<th>가격</th>
+												<th>상품사진</th>
+												<th>바코드</th>
 											</tr>
 										</thead>
 										<tbody id="view_product3">
-											
+
 										</tbody>
 									</table>
 
