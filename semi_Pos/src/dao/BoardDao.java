@@ -196,6 +196,30 @@ public class BoardDao {
 	}
 	
 	//commt
+	public void deleteComm(int no){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("delete comm where comm_num = ?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, no);
+			pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	public void insertComm(HashMap<String, String> map) {
 		System.out.println("확인");
 		Connection con = null;
@@ -207,7 +231,7 @@ public class BoardDao {
 			sql.append("comm_seq.nextVal,?,?,?,sysdate)");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setInt(1, Integer.parseInt(map.get("no")));
-			pstmt.setString(2, "김길동");
+			pstmt.setString(2, map.get("writer"));
 			pstmt.setString(3, map.get("comm"));
 			pstmt.executeUpdate();
 
@@ -248,7 +272,8 @@ public class BoardDao {
 			System.out.println("확인");
 			while(rs.next()){
 				CommVO v = new CommVO();
-				v.setNo(rs.getInt("comm_bonum"));
+				v.setNo(rs.getInt("comm_num"));
+				v.setBo_num(rs.getInt("comm_bonum"));
 				v.setWriter(rs.getString("comm_writer"));
 				v.setRedate(rs.getString("comm_date"));
 				v.setComm(rs.getString("comm_cont"));

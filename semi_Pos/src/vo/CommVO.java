@@ -1,7 +1,13 @@
 package vo;
 
 public class CommVO {
-	private int no;
+	private int no, bo_num;
+	public int getBo_num() {
+		return bo_num;
+	}
+	public void setBo_num(int bo_num) {
+		this.bo_num = bo_num;
+	}
 	private String writer, comm, reip, redate, imgicon;
 	public int getNo() {
 		return no;
