@@ -9,12 +9,10 @@
 	ArrayList<ChaVO> list = ChatDao.getDao().getList();
 	StringBuffer outs = new StringBuffer();
 	String ip = request.getRemoteAddr();
-	System.out.println(ip);
 	//outs.append("retry:2000\n");
 	outs.append("data:");
 	for(ChaVO e : list){
 		if(e.getReip().equals(ip)){
-			System.out.println("나확인");
 			outs.append("<li class=\"by-other\">");
 			outs.append("<div class=\"avatar pull-right\"><img src=\"../img/user22.png\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 			outs.append(e.getCdate());
@@ -25,7 +23,6 @@
 			outs.append("<div class=\"clearfix\"></div></div></li>");
 			
 		}else{
-			System.out.println("너너확인");
 			outs.append("<li class=\"by-me\">");
 			outs.append("<div class=\"avatar pull-left\"><img src=\"../img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 			outs.append(e.getU_id());
