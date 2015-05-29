@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.mail.Session;
+
 import conn.MyJndiContext;
 import vo.ChaVO;
 
@@ -57,7 +59,7 @@ public class ChatDao {
 			con =MyJndiContext.getDs();			
 			StringBuffer sql = new StringBuffer();
 			sql.append("select num, u_id, chat");
-			sql.append(",to_char(cdate,'yyyy-mm-dd') cdate ");
+			sql.append(",to_char(cdate,'hh-mi-ss') cdate ");
 			sql.append(",reip from croom order by 1 desc");
 			pstmt = con.prepareStatement(sql.toString());
 			rs = pstmt.executeQuery();
