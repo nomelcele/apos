@@ -386,4 +386,39 @@ public class ShopDao {
 		int hotkey=(int)(Math.random()*666666)+111111;// 0~99±îÁö
 		return hotkey;
 	}
+	public ArrayList<ShopVO> getshopList(){
+		Connection con= null;
+		PreparedStatement pstmt=null;
+		ResultSet rs = null;
+		ArrayList<ShopVO> shopList=new ArrayList<ShopVO>(); 
+		try {
+			con=MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from shop ");
+			pstmt = con.prepareStatement(sql.toString());
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				ShopVO vo = new ShopVO();
+				vo.setName(rs.getString("shop_name"));
+				vo.setAdr(rs.getString("shop_adr"));
+				vo.setNum(rs.getInt("shop_num"));
+				vo.setMaster(rs.getString("shop_master"));
+				vo.setTel(rs.getString("shop_tel"));
+				vo.setMail(rs.getString("shop_mail"));
+				vo.setImg(rs.getString("shop_img"));
+				shopList.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if  (rs != null) rs.close();
+				if (pstmt != null) pstmt.close();
+				if (con != null) con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return shopList;
+	}
 }
