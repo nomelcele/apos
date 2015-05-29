@@ -1030,3 +1030,82 @@ insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 3, 12, '2015-05
 insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 15, '2015-05-25', 6, 1);
 insert into sell values(sell_seq.nextval, 15310003, 13500, 2160, 3, 17, '2015-05-29', 6, 1);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+--05 29 ¼öÁ¤ from
+
+update product set pro_barcode ='ba_15110001.png'  where pro_code='15110001';
+update product set pro_img ='img_15110001.jpg' where pro_code='15110001';
+
+update product set pro_barcode ='ba_15210002.png'  where pro_code='15210002';
+update product set pro_img ='img_15210002.jpg' where pro_code='15210002';
+
+update product set pro_barcode ='ba_15210005.png'  where pro_code='15210005';
+update product set pro_img ='img_15210005.jpg' where pro_code='15210005';
+
+update product set pro_barcode ='ba_15110003.png'  where pro_code='15110003';
+update product set pro_img ='img_15110003.jpg' where pro_code='15110003';
+
+update product set pro_barcode ='ba_15110004.png'  where pro_code='15110004';
+update product set pro_img ='img_15110004.jpg' where pro_code='15110004';
+
+
+
+
+
+update product set pro_barcode ='ba_15120001.png'  where pro_code='15120001';
+update product set pro_img ='img_15120001.jpg' where pro_code='15120001';
+
+update product set pro_barcode ='ba_15120002.png'  where pro_code='15120002';
+update product set pro_img ='img_15120002.jpg' where pro_code='15120002';
+
+update product set pro_barcode ='ba_15120003.png'  where pro_code='15120003';
+update product set pro_img ='img_15120003.jpg' where pro_code='15120003';
+
+update product set pro_barcode ='ba_15120005.png'  where pro_code='15120005';
+update product set pro_img ='img_15120005.jpg' where pro_code='15120005';
+
+update product set pro_barcode ='ba_15120004.png'  where pro_code='15120004';
+update product set pro_img ='img_15120004.jpg' where pro_code='15120004';
+
+
+
+
+
+
+
+
+update product set pro_barcode ='ba_15130001.png'  where pro_code='15130001';
+update product set pro_img ='img_15130001.jpg' where pro_code='15130001';
+
+update product set pro_barcode ='ba_15130002.png'  where pro_code='15130002';
+update product set pro_img ='img_15130002.jpg' where pro_code='15130002';
+
+update product set pro_barcode ='ba_15130003.png'  where pro_code='15130003';
+update product set pro_img ='img_15130003.jpg' where pro_code='15130003';
+
+update product set pro_barcode ='ba_15130004.png'  where pro_code='15130004';
+update product set pro_img ='img_15130004.jpg' where pro_code='15130004';
+
+update product set pro_barcode ='ba_15130005.png'  where pro_code='15130005';
+update product set pro_img ='img_15130005.jpg' where pro_code='15130005';
+
+
+
+update product set pro_price ='100000';
+
+
+
+
+update shop set shop_master ='±èÇö¾Æ',shop_img='Dojun.PNG' where shop_num=1;
