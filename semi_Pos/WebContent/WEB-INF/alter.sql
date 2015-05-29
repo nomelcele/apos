@@ -85,3 +85,95 @@ references shop(shop_num) on delete cascade
 );
 
 commit;
+
+
+
+
+
+--05 29 ¼öÁ¤ from
+
+update product set pro_barcode ='ba_15110001.png'  where pro_code='15110001';
+update product set pro_img ='img_15110001.jpg' where pro_code='15110001';
+
+update product set pro_barcode ='ba_15210002.png'  where pro_code='15210002';
+update product set pro_img ='img_15210002.jpg' where pro_code='15210002';
+
+update product set pro_barcode ='ba_15210005.png'  where pro_code='15210005';
+update product set pro_img ='img_15210005.jpg' where pro_code='15210005';
+
+update product set pro_barcode ='ba_15110003.png'  where pro_code='15110003';
+update product set pro_img ='img_15110003.jpg' where pro_code='15110003';
+
+update product set pro_barcode ='ba_15110004.png'  where pro_code='15110004';
+update product set pro_img ='img_15110004.jpg' where pro_code='15110004';
+
+
+
+
+
+update product set pro_barcode ='ba_15120001.png'  where pro_code='15120001';
+update product set pro_img ='img_15120001.jpg' where pro_code='15120001';
+
+update product set pro_barcode ='ba_15120002.png'  where pro_code='15120002';
+update product set pro_img ='img_15120002.jpg' where pro_code='15120002';
+
+update product set pro_barcode ='ba_15120003.png'  where pro_code='15120003';
+update product set pro_img ='img_15120003.jpg' where pro_code='15120003';
+
+update product set pro_barcode ='ba_15120005.png'  where pro_code='15120005';
+update product set pro_img ='img_15120005.jpg' where pro_code='15120005';
+
+update product set pro_barcode ='ba_15120004.png'  where pro_code='15120004';
+update product set pro_img ='img_15120004.jpg' where pro_code='15120004';
+
+
+
+
+
+
+
+
+update product set pro_barcode ='ba_15130001.png'  where pro_code='15130001';
+update product set pro_img ='img_15130001.jpg' where pro_code='15130001';
+
+update product set pro_barcode ='ba_15130002.png'  where pro_code='15130002';
+update product set pro_img ='img_15130002.jpg' where pro_code='15130002';
+
+update product set pro_barcode ='ba_15130003.png'  where pro_code='15130003';
+update product set pro_img ='img_15130003.jpg' where pro_code='15130003';
+
+update product set pro_barcode ='ba_15130004.png'  where pro_code='15130004';
+update product set pro_img ='img_15130004.jpg' where pro_code='15130004';
+
+update product set pro_barcode ='ba_15130005.png'  where pro_code='15130005';
+update product set pro_img ='img_15130005.jpg' where pro_code='15130005';
+
+
+
+update product set pro_price ='100000';
+
+
+
+----------update
+update shop set shop_master ='±èÇö¾Æ',shop_img='Dojun.PNG' where shop_num=1;
+update shop set shop_master ='ÀüÁöÇö',shop_img='jihyun.PNG' where shop_num=2;
+update shop set shop_master ='ÀÌÁ¾¼®',shop_img='jong.PNG' where shop_num=3;
+update shop set shop_master ='¹è¼öÁö',shop_img='suzy.PNG' where shop_num=4;
+update shop set shop_master ='À±Áö¹Î',shop_img='suzy.PNG' where shop_num=5;
+update shop set shop_master ='À¯ÀÎ³ª',shop_img='jihyun.PNG' where shop_num=6;
+update shop set shop_master ='°­µ¿¿ø',shop_img='suzy.PNG' where shop_num=7;
+update shop set shop_master ='±è¹Î¼º',shop_img='ihyun.PNG' where shop_num=8;
+update shop set shop_master ='ÁÖ¿µ¹Ì',shop_img='jihyun.PNG' where shop_num=9;
+update shop set shop_master ='°­¹ÎÈ£',shop_img='jong.PNG' where shop_num=10;
+update shop set shop_master ='À¯¹ÌÇö',shop_img='jong.PNG' where shop_num=11;
+update shop set shop_master ='±è¼ö¿µ',shop_img='Dojun.PNG' where shop_num=12;
+update shop set shop_master ='¹ÌÀ±ÁÖ',shop_img='woo.PNG' where shop_num=13;
+update shop set shop_master ='¾È¿µÀÎ',shop_img='woo.PNG' where shop_num=14;
+update shop set shop_master ='°æ¹ÎÇý',shop_img='woo.PNG' where shop_num=15;
+update shop set shop_master ='±è¼®ÈÆ',shop_img='suzy.PNG' where shop_num=16;
+update shop set shop_master ='¼ÛÁß±â',shop_img='hyun.PNG' where shop_num=17;
+update shop set shop_master ='ÀÌ±¤¼ö',shop_img='Dojun.PNG' where shop_num=18;
+update shop set shop_master ='À¯Àç¼®',shop_img='hyun.PNG' where shop_num=19;
+update shop set shop_master ='±èÁ¾±¹',shop_img='Dojun.PNG' where shop_num=20;
+
+commit;
