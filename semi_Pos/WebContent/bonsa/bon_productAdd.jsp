@@ -56,7 +56,7 @@ $('#bimg').change(function(){
 <section id="main-content">
 	<section class="wrapper">
 
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px; margin-top: -3%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 상품추가
@@ -77,12 +77,12 @@ $('#bimg').change(function(){
 
 
 										<div
-											style="float: left; margin: 0; width: 300px; margin-top: 35px;">
+											style="float: left; margin: 0; width: 400px; margin-top: 1%;">
 
 
 											<div class="form-group ">
 												<label style="width: 115px;" for="cname"
-													class="control-label col-lg-2">물품이름</label>
+													class="control-label col-lg-2">물품명</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
 														id="name" name="name" minlength="2" type="text" required />
@@ -103,6 +103,15 @@ $('#bimg').change(function(){
 
 
 
+											<div class="form-group ">
+												<label style="width: 115px;" for="cname"
+													class="control-label col-lg-2">사이즈</label>
+												<div class="col-lg-2">
+													<input class="form-control" style="width: 260px;"
+														id="size" name="size" minlength="2" type="text" required />
+												</div>
+											</div>
+
 
 
 											<div class="form-group ">
@@ -113,36 +122,33 @@ $('#bimg').change(function(){
 														id="price" name="price" minlength="2" type="text" required />
 												</div>
 											</div>
-											</br>
-											</br>
-											
+											<div style="float: right; margin-right: 2px;">
+												<button type="submit" class="btn btn-primary">추가</button>
+											</div>
 										</div>
 
-                                  
+
 										<div class=".col-md-1"
 											style="float: left; margin-right: 50px;">
 											<input type="file" id="pimg" name="pimg">
-											<p style="text-align:right;">[사진추가]</p>
+											<button type="submit" class="btn btn-primary"
+												style="margin-left: 316px;">사진추가</button>
 											<div
 												style="width: 258px; height: 120px; border: 2px solid rgb(213,206,206); margin-top: 10px; margin-bottom: 10px; margin-left: 140px;"
 												id="pimgtarget"><img src=""></div>
 										</div>
-									
 										<div style="float: left;"></div>
-	</br>
+
 
 										<div class=".col-md-1"
 											style="float: left; margin-right: 300px;">
 											<input type="file" id="bimg" name="bimg">
-									  	<p style="text-align:right;">[바코드추가]</p>
-											
+											<button type="submit" class="btn btn-primary"
+												style="margin-left: 301px;">바코드추가</button>
 											<div
 												style="width: 258px; height: 120px; border: 2px solid rgb(213,206,206); margin-top: 10px; margin-left: 140px;"
 												id="bimgtarget"><img src=""></div>
 										</div>
-										<div style="float: right; margin-right: 2px;">
-												<button type="submit" class="btn btn-primary">추가</button>
-											</div>
 										<div style="float: left;"></div>
 
 
