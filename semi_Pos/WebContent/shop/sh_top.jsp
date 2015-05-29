@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -274,7 +275,8 @@
                             <span class="profile-ava">
                                 <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
-                            <span class="username">Jenifer Smith</span>
+                             <span class="form-control" id="master_span" style="color: black; display: none;"> [${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님 환영합니다  </span>&nbsp;
+                             <span class="form-control" id="staff_span" style="color: black; display: none;"> [${sessionScope.shop_id}] 님 환영합니다  </span>&nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
