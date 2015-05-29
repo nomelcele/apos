@@ -42,7 +42,7 @@
                     <input type="hidden" name="subcmd" value="delete">
                     <input type="hidden" name="no" value="${v.no }">
                     <input type="hidden" name="page" value="1">
-                    <button type="submit" class="btn btn-danger" >글 삭제</button>
+                    <button type="submit" class="btn btn-danger" style="margin-left: 21%; margin-top: 1%">글 삭제</button>
                     </form>
                     <!-- 이미지 위치 수정 -->     
 					<img src="${v.path}" style="width: 50px;">
@@ -83,8 +83,8 @@
                         </div>
                      </div>
                      <div class="form-group">
-                        <div class="col-lg-offset-2 col-lg-10" style="display:inline;">
                            <button type="submit" class="btn btn-danger" >댓글 작성</button>
+                        <div class="col-lg-offset-2 col-lg-10" style="display:block;">
                         </div>
                      </div>
 				  <input type="hidden" name="cmd" value="bwork">

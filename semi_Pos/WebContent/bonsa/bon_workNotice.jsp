@@ -37,7 +37,6 @@
 								<th><i class="icon_mail_alt"></i> 제목</th>
 								<th><i class="icon_profile"></i> 작성자</th>
 								<th><i class="icon_calendar"></i> 날짜</th>
-								<th><i class="icon_pin_alt"></i> 조회</th>
 							</tr>
 							<c:forEach var="stList" items="${list}">
 					<tr>
@@ -48,7 +47,6 @@
 						</td>
 						<td>${stList.writer}</td>
 						<td>${stList.regdate}</td>
-						<td>${stList.hit}</td>
 					</tr>
 				</c:forEach>
 						</tbody>
