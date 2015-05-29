@@ -121,7 +121,7 @@
 							<label for="cname" class="control-label col-lg-2"><p
 									align="left">매장검색</p> </label>
 
-							<div class="col-lg-2" style="margin-left: -3.5%;">
+							<div class="col-lg-2" style="margin-left: -5%;">
 
 								<input id="shop_name" name="name" minlength="2"
 									autocomplete="off" type="text" onkeydown="startSuggest();"
