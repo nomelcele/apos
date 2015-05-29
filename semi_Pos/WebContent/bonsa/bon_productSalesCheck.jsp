@@ -2,10 +2,9 @@
 	pageEncoding="UTF-8"%>
 <%@include file="bon_top.jsp"%>
 <%@include file="bon_left.jsp"%>
-<!-- 본사 정산관리의 품목별 매출순위 페이지 입니다. -->
+<!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
 <script src="../js/http.js"></script>
 <script src="../js/json2.js"></script>
-<script src="../js/suggest_shop_pk.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 	$(function() {
@@ -22,7 +21,7 @@
 									alert("test2");
 									$
 											.ajax({
-												url : "bon_ajaxproductsale.jsp?shop_name="
+												url : "bon_ajaxproductsale.jsp?pro_code="
 														+ $('#shop_name').val()
 														+ "&date_ps="
 														+ $('#date_ps').val()
@@ -47,12 +46,10 @@
 								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
 							}
 							$.ajax({
-								url : "bon_ajaxoutletChart.jsp?shop_name="
-									+ $('#shop_name').val()
-									+ "&date_ps="
-									+ $('#date_ps').val()
-									+ "&date_ps2="
-									+ $('#date_ps2').val(),
+								url : "bon_ajaxproductChart.jsp?pro_code="
+										+ $('#shop_name').val() + "&date_ps="
+										+ $('#date_ps').val() + "&date_ps2="
+										+ $('#date_ps2').val(),
 								type : "post",
 								dataType : "html",
 								success : function(data) {
@@ -61,7 +58,7 @@
 									var result = eval(res2);
 									alert(res2);
 									drawVisualization();
-									res2=null;
+									res2 = null;
 								}
 
 							});
@@ -119,7 +116,7 @@
 
 						<div style="margin-left: 10px;">
 							<label for="cname" class="control-label col-lg-2"><p
-									align="left">매장검색</p> </label>
+									align="left">물품코드번호 </p> </label>
 
 							<div class="col-lg-2" style="margin-left: -5%;">
 
@@ -129,8 +126,7 @@
 
 								<div id="view"></div>
 							</div>
-							</br>
-							</br>
+							</br> </br>
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2"><p
 										align="left">기간</p> </label> <input id="date_ps" name="date_ps"
@@ -155,9 +151,9 @@
 						<p></p>
 						<tr>
 							<th><i class="icon_profile"></i>날짜</th>
-							<th><i class="icon_profile"></i>대리점명</th>
-							<th><i class="icon_mail_alt"></i>판매 수량</th>
-							<th><i class="icon_pin_alt"></i>판매액</th>
+							<th><i class="icon_profile"></i>물품명</th>
+							<th><i class="icon_mail_alt"></i>판매 액</th>
+							<th><i class="icon_pin_alt"></i>판매 수량</th>
 						</tr>
 
 					</thead>
