@@ -141,8 +141,6 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-  background-color: gold;
-  font-size: 9pt;
 }
 button[disabled],
 html input[disabled] {
@@ -1302,7 +1300,7 @@ th {
   padding: 8px;
   line-height: 1.428571429;
   vertical-align: top;
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #dddddd;
 }
 .table thead > tr > th {
   vertical-align: bottom;
@@ -1388,14 +1386,14 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-  background-color: #C5CBC6;
-  border-color: #F3F7F3;
+  background-color: #dff8e3;
+  border-color: #caf4ca;
 }
 .table-hover > tbody > tr > td.success:hover,
 .table-hover > tbody > tr > th.success:hover,
 .table-hover > tbody > tr.success:hover > td {
-  background-color: #C5CBC6;
-  border-color: #F3F7F3;
+  background-color: #caf4d1;
+  border-color: #b5efb5;
 }
 .table > thead > tr > td.danger,
 .table > tbody > tr > td.danger,
@@ -1409,7 +1407,7 @@ table th[class*="col-"] {
 .table > thead > tr.danger > th,
 .table > tbody > tr.danger > th,
 .table > tfoot > tr.danger > th {
-  background-color: #F0F0F0 ;
+  background-color: #ffe0e6;
   border-color: #ffd0e1;
 }
 .table-hover > tbody > tr > td.danger:hover,
@@ -1430,8 +1428,8 @@ table th[class*="col-"] {
 .table > thead > tr.warning > th,
 .table > tbody > tr.warning > th,
 .table > tfoot > tr.warning > th {
-  background-color: #E5E3DC;
-  border-color: #EODCD4;
+  background-color: #fff0b3;
+  border-color: #ffdda3;
 }
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover,
@@ -1669,6 +1667,21 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 
+.form-control7 {
+  display: inline;
+  width: 60px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #8e8e93;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border: 1px solid #c7c7cc;
+  border-radius: 4px;  
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
 
 
 
@@ -3458,7 +3471,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-  color: #9B9393;
+  color: #8e8e93;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   border-bottom-color: transparent;
