@@ -311,271 +311,6 @@ commit;
 
 
 
--- 상품추가 (stock)
-insert into stock values(stock_seq.nextval,1,100,1);
-insert into stock values(stock_seq.nextval,2,100,1);
-insert into stock values(stock_seq.nextval,3,100,1);
-insert into stock values(stock_seq.nextval,4,100,1);
-insert into stock values(stock_seq.nextval,5,100,1);
-insert into stock values(stock_seq.nextval,6,100,1);
-insert into stock values(stock_seq.nextval,7,100,1);
-insert into stock values(stock_seq.nextval,8,100,1);
-insert into stock values(stock_seq.nextval,9,100,1);
-insert into stock values(stock_seq.nextval,10,100,1);
-insert into stock values(stock_seq.nextval,11,100,1);
-insert into stock values(stock_seq.nextval,12,100,1);
-insert into stock values(stock_seq.nextval,13,100,1);
-insert into stock values(stock_seq.nextval,14,100,1);
-insert into stock values(stock_seq.nextval,15,100,1);
-
-
-
-insert into stock values(stock_seq.nextval,1,100,2);
-insert into stock values(stock_seq.nextval,2,100,2);
-insert into stock values(stock_seq.nextval,3,100,2);
-insert into stock values(stock_seq.nextval,4,100,2);
-insert into stock values(stock_seq.nextval,5,100,2);
-insert into stock values(stock_seq.nextval,6,100,2);
-insert into stock values(stock_seq.nextval,7,100,2);
-insert into stock values(stock_seq.nextval,8,100,2);
-insert into stock values(stock_seq.nextval,9,100,2);
-insert into stock values(stock_seq.nextval,10,100,2);
-insert into stock values(stock_seq.nextval,11,100,2);
-insert into stock values(stock_seq.nextval,12,100,2);
-insert into stock values(stock_seq.nextval,13,100,2);
-insert into stock values(stock_seq.nextval,14,100,2);
-insert into stock values(stock_seq.nextval,15,100,2);
-
-
-
-insert into stock values(stock_seq.nextval,1,100,3);
-insert into stock values(stock_seq.nextval,2,100,3);
-insert into stock values(stock_seq.nextval,3,100,3);
-insert into stock values(stock_seq.nextval,4,100,3);
-insert into stock values(stock_seq.nextval,5,100,3);
-insert into stock values(stock_seq.nextval,6,100,3);
-insert into stock values(stock_seq.nextval,7,100,3);
-insert into stock values(stock_seq.nextval,8,100,3);
-insert into stock values(stock_seq.nextval,9,100,3);
-insert into stock values(stock_seq.nextval,10,100,3);
-insert into stock values(stock_seq.nextval,11,100,3);
-insert into stock values(stock_seq.nextval,12,100,3);
-insert into stock values(stock_seq.nextval,13,100,3);
-insert into stock values(stock_seq.nextval,14,100,3);
-insert into stock values(stock_seq.nextval,15,100,3);
-
-
-
-insert into stock values(stock_seq.nextval,1,100,4);
-insert into stock values(stock_seq.nextval,2,100,4);
-insert into stock values(stock_seq.nextval,3,100,4);
-insert into stock values(stock_seq.nextval,4,100,4);
-insert into stock values(stock_seq.nextval,5,100,4);
-insert into stock values(stock_seq.nextval,6,100,4);
-insert into stock values(stock_seq.nextval,7,100,4);
-insert into stock values(stock_seq.nextval,8,100,4);
-insert into stock values(stock_seq.nextval,9,100,4);
-insert into stock values(stock_seq.nextval,10,100,4);
-insert into stock values(stock_seq.nextval,11,100,4);
-insert into stock values(stock_seq.nextval,12,100,4);
-insert into stock values(stock_seq.nextval,13,100,4);
-insert into stock values(stock_seq.nextval,14,100,4);
-insert into stock values(stock_seq.nextval,15,100,4);
-
-
-
-
-insert into stock values(stock_seq.nextval,1,100,5);
-insert into stock values(stock_seq.nextval,2,100,5);
-insert into stock values(stock_seq.nextval,3,100,5);
-insert into stock values(stock_seq.nextval,4,100,5);
-insert into stock values(stock_seq.nextval,5,100,5);
-insert into stock values(stock_seq.nextval,6,100,5);
-insert into stock values(stock_seq.nextval,7,100,5);
-insert into stock values(stock_seq.nextval,8,100,5);
-insert into stock values(stock_seq.nextval,9,100,5);
-insert into stock values(stock_seq.nextval,10,100,5);
-insert into stock values(stock_seq.nextval,11,100,5);
-insert into stock values(stock_seq.nextval,12,100,5);
-insert into stock values(stock_seq.nextval,13,100,5);
-insert into stock values(stock_seq.nextval,14,100,5);
-insert into stock values(stock_seq.nextval,15,100,5);
-
-
-
-insert into stock values(stock_seq.nextval,1,100,6);
-insert into stock values(stock_seq.nextval,2,100,6);
-insert into stock values(stock_seq.nextval,3,100,6);
-insert into stock values(stock_seq.nextval,4,100,6);
-insert into stock values(stock_seq.nextval,5,100,6);
-insert into stock values(stock_seq.nextval,6,100,6);
-insert into stock values(stock_seq.nextval,7,100,6);
-insert into stock values(stock_seq.nextval,8,100,6);
-insert into stock values(stock_seq.nextval,9,100,6);
-insert into stock values(stock_seq.nextval,10,100,6);
-insert into stock values(stock_seq.nextval,11,100,6);
-insert into stock values(stock_seq.nextval,12,100,6);
-insert into stock values(stock_seq.nextval,13,100,6);
-insert into stock values(stock_seq.nextval,14,100,6);
-insert into stock values(stock_seq.nextval,15,100,6);
-
-
-
-insert into stock values(stock_seq.nextval,1,100,7);
-insert into stock values(stock_seq.nextval,2,100,7);
-insert into stock values(stock_seq.nextval,3,100,7);
-insert into stock values(stock_seq.nextval,4,100,7);
-insert into stock values(stock_seq.nextval,5,100,7);
-insert into stock values(stock_seq.nextval,6,100,7);
-insert into stock values(stock_seq.nextval,7,100,7);
-insert into stock values(stock_seq.nextval,8,100,7);
-insert into stock values(stock_seq.nextval,9,100,7);
-insert into stock values(stock_seq.nextval,10,100,7);
-insert into stock values(stock_seq.nextval,11,100,7);
-insert into stock values(stock_seq.nextval,12,100,7);
-insert into stock values(stock_seq.nextval,13,100,7);
-insert into stock values(stock_seq.nextval,14,100,7);
-insert into stock values(stock_seq.nextval,15,100,7);
-
-
-
-insert into stock values(stock_seq.nextval,1,100,8);
-insert into stock values(stock_seq.nextval,2,100,8);
-insert into stock values(stock_seq.nextval,3,100,8);
-insert into stock values(stock_seq.nextval,4,100,8);
-insert into stock values(stock_seq.nextval,5,100,8);
-insert into stock values(stock_seq.nextval,6,100,8);
-insert into stock values(stock_seq.nextval,7,100,8);
-insert into stock values(stock_seq.nextval,8,100,8);
-insert into stock values(stock_seq.nextval,9,100,8);
-insert into stock values(stock_seq.nextval,10,100,8);
-insert into stock values(stock_seq.nextval,11,100,8);
-insert into stock values(stock_seq.nextval,12,100,8);
-insert into stock values(stock_seq.nextval,13,100,8);
-insert into stock values(stock_seq.nextval,14,100,8);
-insert into stock values(stock_seq.nextval,15,100,8);
-
-
-insert into stock values(stock_seq.nextval,1,100,9);
-insert into stock values(stock_seq.nextval,2,100,9);
-insert into stock values(stock_seq.nextval,3,100,9);
-insert into stock values(stock_seq.nextval,4,100,9);
-insert into stock values(stock_seq.nextval,5,100,9);
-insert into stock values(stock_seq.nextval,6,100,9);
-insert into stock values(stock_seq.nextval,7,100,9);
-insert into stock values(stock_seq.nextval,8,100,9);
-insert into stock values(stock_seq.nextval,9,100,9);
-insert into stock values(stock_seq.nextval,10,100,9);
-insert into stock values(stock_seq.nextval,11,100,9);
-insert into stock values(stock_seq.nextval,12,100,9);
-insert into stock values(stock_seq.nextval,13,100,9);
-insert into stock values(stock_seq.nextval,14,100,9);
-insert into stock values(stock_seq.nextval,15,100,9);
-
-
-
-insert into stock values(stock_seq.nextval,1,100,10);
-insert into stock values(stock_seq.nextval,2,100,10);
-insert into stock values(stock_seq.nextval,3,100,10);
-insert into stock values(stock_seq.nextval,4,100,10);
-insert into stock values(stock_seq.nextval,5,100,10);
-insert into stock values(stock_seq.nextval,6,100,10);
-insert into stock values(stock_seq.nextval,7,100,10);
-insert into stock values(stock_seq.nextval,8,100,10);
-insert into stock values(stock_seq.nextval,9,100,10);
-insert into stock values(stock_seq.nextval,10,100,10);
-insert into stock values(stock_seq.nextval,11,100,10);
-insert into stock values(stock_seq.nextval,12,100,10);
-insert into stock values(stock_seq.nextval,13,100,10);
-insert into stock values(stock_seq.nextval,14,100,10);
-insert into stock values(stock_seq.nextval,15,100,10);
-
-
-insert into stock values(stock_seq.nextval,1,100,11);
-insert into stock values(stock_seq.nextval,2,100,11);
-insert into stock values(stock_seq.nextval,3,100,11);
-insert into stock values(stock_seq.nextval,4,100,11);
-insert into stock values(stock_seq.nextval,5,100,11);
-insert into stock values(stock_seq.nextval,6,100,11);
-insert into stock values(stock_seq.nextval,7,100,11);
-insert into stock values(stock_seq.nextval,8,100,11);
-insert into stock values(stock_seq.nextval,9,100,11);
-insert into stock values(stock_seq.nextval,10,100,11);
-insert into stock values(stock_seq.nextval,11,100,11);
-insert into stock values(stock_seq.nextval,12,100,11);
-insert into stock values(stock_seq.nextval,13,100,11);
-insert into stock values(stock_seq.nextval,14,100,11);
-insert into stock values(stock_seq.nextval,15,100,11);
-
-
-insert into stock values(stock_seq.nextval,1,100,12);
-insert into stock values(stock_seq.nextval,2,100,12);
-insert into stock values(stock_seq.nextval,3,100,12);
-insert into stock values(stock_seq.nextval,4,100,12);
-insert into stock values(stock_seq.nextval,5,100,12);
-insert into stock values(stock_seq.nextval,6,100,12);
-insert into stock values(stock_seq.nextval,7,100,12);
-insert into stock values(stock_seq.nextval,8,100,12);
-insert into stock values(stock_seq.nextval,9,100,12);
-insert into stock values(stock_seq.nextval,10,100,12);
-insert into stock values(stock_seq.nextval,11,100,12);
-insert into stock values(stock_seq.nextval,12,100,12);
-insert into stock values(stock_seq.nextval,13,100,12);
-insert into stock values(stock_seq.nextval,14,100,12);
-insert into stock values(stock_seq.nextval,15,100,12);
-
-
-insert into stock values(stock_seq.nextval,1,100,13);
-insert into stock values(stock_seq.nextval,2,100,13);
-insert into stock values(stock_seq.nextval,3,100,13);
-insert into stock values(stock_seq.nextval,4,100,13);
-insert into stock values(stock_seq.nextval,5,100,13);
-insert into stock values(stock_seq.nextval,6,100,13);
-insert into stock values(stock_seq.nextval,7,100,13);
-insert into stock values(stock_seq.nextval,8,100,13);
-insert into stock values(stock_seq.nextval,9,100,13);
-insert into stock values(stock_seq.nextval,10,100,13);
-insert into stock values(stock_seq.nextval,11,100,13);
-insert into stock values(stock_seq.nextval,12,100,13);
-insert into stock values(stock_seq.nextval,13,100,13);
-insert into stock values(stock_seq.nextval,14,100,13);
-insert into stock values(stock_seq.nextval,15,100,13);
-
-
-insert into stock values(stock_seq.nextval,1,100,14);
-insert into stock values(stock_seq.nextval,2,100,14);
-insert into stock values(stock_seq.nextval,3,100,14);
-insert into stock values(stock_seq.nextval,4,100,14);
-insert into stock values(stock_seq.nextval,5,100,14);
-insert into stock values(stock_seq.nextval,6,100,14);
-insert into stock values(stock_seq.nextval,7,100,14);
-insert into stock values(stock_seq.nextval,8,100,14);
-insert into stock values(stock_seq.nextval,9,100,14);
-insert into stock values(stock_seq.nextval,10,100,14);
-insert into stock values(stock_seq.nextval,11,100,14);
-insert into stock values(stock_seq.nextval,12,100,14);
-insert into stock values(stock_seq.nextval,13,100,14);
-insert into stock values(stock_seq.nextval,14,100,14);
-insert into stock values(stock_seq.nextval,15,100,14);
-
-
-insert into stock values(stock_seq.nextval,1,100,15);
-insert into stock values(stock_seq.nextval,2,100,15);
-insert into stock values(stock_seq.nextval,3,100,15);
-insert into stock values(stock_seq.nextval,4,100,15);
-insert into stock values(stock_seq.nextval,5,100,15);
-insert into stock values(stock_seq.nextval,6,100,15);
-insert into stock values(stock_seq.nextval,7,100,15);
-insert into stock values(stock_seq.nextval,8,100,15);
-insert into stock values(stock_seq.nextval,9,100,15);
-insert into stock values(stock_seq.nextval,10,100,15);
-insert into stock values(stock_seq.nextval,11,100,15);
-insert into stock values(stock_seq.nextval,12,100,15);
-insert into stock values(stock_seq.nextval,13,100,15);
-insert into stock values(stock_seq.nextval,14,100,15);
-insert into stock values(stock_seq.nextval,15,100,15);
-
-
 
 
 
@@ -854,5 +589,387 @@ insert into sell values(sell_seq.nextval, 15110001, 21000, 3463, 2, 1, '2014-12-
 
 
 
+---------------------------------------------------------------------------------------------------매장 1
+insert into sell values(sell_seq.nextval, 15110001, 21000, 1022, 1, 1, '2014-12-31', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 3463, 1, 2, '2014-12-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15220002, 17000, 1120, 1, 3, '2014-12-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 14000, 0, 1, 4, '2014-12-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15210002, 9000, 1250, 1, 3, '2014-12-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310002, 25000, 0, 1, 6, '2014-12-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 14000, 2000, 1, 9, '2014-12-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15210002, 9000, 0, 1, 7, '2014-12-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310002, 25000, 2210, 1, 5, '2014-12-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 14000, 2525, 1, 7, '2014-12-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15220002, 9000, 5020, 1, 2, '2014-12-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 24000, 1752, 1, 1, '2014-12-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 14000, 5959, 1, 9, '2014-12-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 11, '2014-12-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1100, 1, 10, '2014-12-16', 6, 1);
+insert into sell values(sell_seq.nextval, 15220002, 9000, 5020, 1, 2, '2014-12-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 24000, 1752, 1, 12, '2014-12-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 1, 13, '2014-12-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 17000, 0, 1, 14, '2014-12-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1100, 1, 17, '2014-12-26', 6, 1);
 
+insert into sell values(sell_seq.nextval, 15110001, 21000, 1022, 1, 3, '2015-01-29', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 1, 19, '2015-01-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15220002, 16000, 1120, 1, 3, '2015-01-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 18000, 0, 1, 4, '2015-01-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310002, 95000, 1250, 1, 13, '2015-01-15', 6, 1);
+insert into sell values(sell_seq.nextval, 15310002, 23500, 0, 1, 16, '2015-01-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 2000, 1, 19, '2015-01-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 17, '2015-01-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 34000, 210, 1, 5, '2015-01-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 3525, 1, 7, '2015-01-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 9000, 5959, 1, 2, '2015-01-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 1852, 1, 1, '2015-01-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 14000, 5959, 1, 9, '2015-01-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 11, '2015-01-18', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1250, 1, 10, '2015-01-16', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 5020, 1, 2, '2015-01-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 24000, 2052, 1, 12, '2015-01-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 1, 20, '2015-01-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 14, '2015-01-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1800, 1, 17, '2015-01-26', 6, 1);
+
+
+insert into sell values(sell_seq.nextval, 15110001, 21000, 2582, 1, 3, '2015-02-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 1, 17, '2015-02-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220002, 16000, 1135, 1, 3, '2015-02-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 18000, 0, 1, 4, '2015-02-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15310002, 95000, 1460, 1, 13, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 23500, 0, 1, 16, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 3500, 1, 9, '2015-02-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 17, '2015-02-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 34000, 2880, 1, 5, '2015-02-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 3865, 1, 7, '2015-02-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 9000, 5689, 1, 2, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 1, 1, '2015-02-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 14000, 5869, 1, 9, '2015-02-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 11, '2015-02-18', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-02-06', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 5020, 1, 19, '2015-02-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 24000, 2352, 1, 12, '2015-02-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 1, 20, '2015-02-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 4, '2015-02-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1860, 1, 17, '2015-02-26', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15110001, 21000, 2534, 1, 3, '2015-03-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 1, 17, '2015-03-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 1, 3, '2015-03-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 1, 14, '2015-03-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 35000, 646, 1, 23, '2015-03-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 1, 16, '2015-03-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 1, 9, '2015-03-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 7, '2015-03-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 34000, 659, 1, 15, '2015-03-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 1, 7, '2015-03-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 1, 2, '2015-03-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 1, 3, '2015-03-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 1, 9, '2015-03-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 1, 11, '2015-03-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-03-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 1, 19, '2015-03-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 1, 12, '2015-03-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 15000, 5959, 1, 22, '2015-03-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 15, '2015-03-10', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 22000, 1860, 1, 17, '2015-03-21', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15110001, 21000, 2534, 1, 13, '2015-04-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 1, 17, '2015-04-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 1, 21, '2015-04-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 1, 14, '2015-04-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 1, 23, '2015-04-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 1, 9, '2015-04-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 1, 27, '2015-04-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 7, '2015-04-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 21000, 659, 1, 11, '2015-04-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 1, 7, '2015-04-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 1, 22, '2015-04-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 1, 3, '2015-04-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 1, 9, '2015-04-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 1, 13, '2015-04-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-04-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 1, 19, '2015-04-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 1, 12, '2015-04-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 13000, 5959, 1, 22, '2015-04-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 18000, 0, 1, 15, '2015-04-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 26000, 1860, 1, 17, '2015-04-21', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15310001, 21000, 2534, 1, 13, '2015-05-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 1, 17, '2015-05-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 1, 21, '2015-05-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 2945, 1, 14, '2015-05-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 33000, 936, 1, 23, '2015-05-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 26000, 0, 1, 9, '2015-05-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 3144, 1, 27, '2015-05-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 7, '2015-05-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 21000, 1472, 1, 11, '2015-05-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 1180, 1, 7, '2015-05-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 9000, 1485, 1, 22, '2015-05-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 3852, 1, 3, '2015-05-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 12500, 5869, 1, 9, '2015-05-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 1, 13, '2015-05-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-05-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 1, 19, '2015-05-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 1, 12, '2015-05-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 1, 22, '2015-05-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 1, 15, '2015-05-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 2160, 1, 17, '2015-05-21', 6, 1);
+
+
+---------------------------------------------------------------------------------------------------매장 2
+insert into sell values(sell_seq.nextval, 15110001, 19000, 30, 2, 1, '2014-12-31', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 14500, 20, 2, 3, '2014-12-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 3500, 2, 8, '2014-12-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 4, '2014-12-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 26000, 3500, 2, 9, '2014-12-06', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 2160, 2, 6, '2014-12-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 2, 1, '2014-12-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 10, '2014-12-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 2, 15, '2014-12-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 7500, 210, 2, 12, '2014-12-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 2, 11, '2014-12-31', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 16000, 160, 2, 13, '2014-12-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 9000, 3500, 2, 8, '2014-12-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 18000, 260, 2, 14, '2014-12-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 15000, 3500, 2, 9, '2014-12-06', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 6, '2014-12-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 17000, 300, 2, 1, '2014-12-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 10, '2014-12-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 23000, 30, 2, 4, '2014-12-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 3, '2014-12-17', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15310003, 12000, 620, 2, 3, '2015-01-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 4154, 2, 12, '2015-01-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 2, 2, '2015-01-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 14, '2015-01-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 18000, 240, 2, 7, '2015-01-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 5, '2015-01-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 436, 2, 22, '2015-01-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5259, 2, 21, '2015-01-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-01-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 19, '2015-01-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-01-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 552, 2, 14, '2015-01-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 359, 2, 12, '2015-01-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-01-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 2, 7, '2015-01-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 5, '2015-01-29', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 1352, 2, 22, '2015-01-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 2, 21, '2015-01-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-01-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 2, 20, '2015-01-29', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15310003, 12000, 2320, 2, 3, '2015-02-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 4234, 2, 12, '2015-02-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 14000, 5349, 2, 2, '2015-02-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 14, '2015-02-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 19000, 2450, 2, 7, '2015-02-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 5, '2015-02-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 22000, 436, 2, 22, '2015-02-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 11000, 5259, 2, 21, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 24000, 0, 2, 18, '2015-02-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 19, '2015-02-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-02-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 552, 2, 14, '2015-02-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 359, 2, 12, '2015-02-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-02-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 2, 7, '2015-02-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 5, '2015-02-22', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 2332, 2, 22, '2015-02-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 2, 21, '2015-02-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-02-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 2, 20, '2015-02-27', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15310003, 12000, 2320, 2, 3, '2015-03-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 11000, 4344, 2, 14, '2015-03-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 14000, 5349, 2, 28, '2015-03-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-03-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 19000, 2420, 2, 3, '2015-03-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 5, '2015-03-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 21000, 436, 2, 11, '2015-03-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 11000, 5259, 2, 4, '2015-03-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 24000, 0, 2, 18, '2015-03-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 29, '2015-03-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-03-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 5152, 2, 14, '2015-03-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 13000, 1359, 2, 3, '2015-03-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-03-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15310001, 16000, 1114, 2, 7, '2015-03-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 5, '2015-03-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 2122, 2, 22, '2015-03-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 13000, 5234, 2, 21, '2015-03-22', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12500, 0, 2, 18, '2015-03-15', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 2169, 2, 22, '2015-03-23', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15110001, 21000, 2534, 2, 13, '2015-04-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 2, 27, '2015-04-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 2, 8, '2015-04-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 2, 14, '2015-04-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 2, 23, '2015-04-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 2, 10, '2015-04-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 2, 23, '2015-04-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 2, 17, '2015-04-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 21000, 659, 2, 21, '2015-04-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 2, 7, '2015-04-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 2, 22, '2015-04-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 2, 22, '2015-04-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 2, 19, '2015-04-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 2, 13, '2015-04-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 2, 10, '2015-04-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 2, 19, '2015-04-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 2, 12, '2015-04-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 13000, 5959, 2, 22, '2015-04-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 18000, 0, 2, 15, '2015-04-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 26000, 1860, 2, 27, '2015-04-21', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15310003, 12000, 6120, 2, 23, '2015-05-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 1224, 2, 12, '2015-05-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5029, 2, 2, '2015-05-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 17, '2015-05-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 18000, 240, 2, 7, '2015-05-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 15, '2015-05-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 436, 2, 12, '2015-05-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5259, 2, 21, '2015-05-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-05-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 17, '2015-05-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-05-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 1452, 2, 14, '2015-05-16', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 3520, 2, 12, '2015-05-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-05-15', 6, 1);
+insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 2, 30, '2015-05-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 345, 2, 5, '2015-05-29', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 142, 2, 2, '2015-05-18', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 2, 21, '2015-05-22', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-05-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 2, 20, '2015-05-19', 6, 1);
+
+
+---------------------------------------------------------------------------------------------------매장 3
+insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 3, 1, '2014-12-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 9, '2014-12-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 4, '2014-12-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 7500, 210, 3, 12, '2014-12-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 11, '2014-12-31', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 3, 1, '2014-12-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 200, 3, 10, '2014-12-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 6, '2014-12-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 7500, 230, 3, 4, '2014-12-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 3, '2014-12-31', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 3, 2, '2014-12-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 6, '2014-12-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 7, '2014-12-06', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 7500, 220, 3, 8, '2014-12-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 11, '2014-12-30', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 22000, 50, 3, 1, '2014-12-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 10, '2014-12-22', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 5, '2014-12-15', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 7500, 210, 3, 2, '2014-12-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 1, '2014-12-11', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15310003, 12000, 620, 3, 3, '2015-01-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 4154, 3, 12, '2015-01-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 3, 2, '2015-01-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 3, 14, '2015-01-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 18000, 240, 3, 7, '2015-01-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 3, 5, '2015-01-09', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 436, 3, 22, '2015-01-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5259, 3, 21, '2015-01-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 3, 18, '2015-01-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 3, 19, '2015-01-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 3, 19, '2015-01-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 10000, 552, 3, 14, '2015-01-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 359, 3, 12, '2015-01-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 3, 18, '2015-01-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 3, 7, '2015-01-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 3, 5, '2015-01-29', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 20000, 1352, 3, 22, '2015-01-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 3, 21, '2015-01-24', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 3, 18, '2015-01-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 3, 20, '2015-01-29', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15110001, 21000, 2582, 3, 3, '2015-02-22', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 3, 17, '2015-02-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220002, 16000, 1135, 3, 3, '2015-02-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 18000, 0, 3, 4, '2015-02-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310002, 35000, 1460, 3, 13, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 23500, 0, 3, 16, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 3500, 3, 19, '2015-02-21', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 17, '2015-02-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 34000, 2880, 3, 5, '2015-02-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 3865, 3, 7, '2015-02-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 9000, 5689, 3, 2, '2015-02-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 3, 11, '2015-02-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 16500, 5869, 3, 9, '2015-02-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 3, 11, '2015-02-18', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 3, 10, '2015-02-06', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 5020, 3, 19, '2015-02-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 24000, 2352, 3, 12, '2015-02-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 3, 20, '2015-02-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 3, 3, '2015-02-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1860, 3, 17, '2015-02-26', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15110001, 21000, 1534, 3, 11, '2015-03-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 1344, 3, 17, '2015-03-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 3, 3, '2015-03-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 3, 14, '2015-03-03', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 3, 23, '2015-03-16', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 3, 16, '2015-03-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 1587, 3, 9, '2015-03-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 7, '2015-03-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 33000, 659, 3, 15, '2015-03-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 3, 7, '2015-03-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 11000, 1459, 3, 2, '2015-03-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 3, 23, '2015-03-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 3, 9, '2015-03-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 3, 11, '2015-03-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 3, 10, '2015-03-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 3, 19, '2015-03-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 21000, 4352, 3, 12, '2015-03-13', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 14000, 2959, 3, 20, '2015-03-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 3, 23, '2015-03-10', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 22000, 1860, 3, 17, '2015-03-21', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15110001, 21000, 3634, 3, 13, '2015-04-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 1587, 3, 17, '2015-04-02', 6, 1);
+insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 3, 21, '2015-04-07', 6, 1);
+insert into sell values(sell_seq.nextval, 15120001, 14000, 2387, 3, 14, '2015-04-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 3, 23, '2015-04-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 3, 9, '2015-04-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 3, 27, '2015-04-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 7, '2015-04-28', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 21000, 2599, 3, 17, '2015-04-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 3, 7, '2015-04-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 3, 22, '2015-04-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 3, 23, '2015-04-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 3, 9, '2015-04-29', 6, 1);
+insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 3, 13, '2015-04-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 2580, 3, 10, '2015-04-27', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 3420, 3, 19, '2015-04-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 3, 12, '2015-04-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 13000, 5902, 3, 28, '2015-04-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15210003, 18000, 0, 3, 15, '2015-04-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 26000, 1860,03, 17, '2015-04-21', 6, 1);
+
+insert into sell values(sell_seq.nextval, 15310001, 21000, 2534, 3, 13, '2015-05-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 3, 17, '2015-05-12', 6, 1);
+insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 3, 21, '2015-05-06', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 2945, 3, 14, '2015-05-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 33000, 936, 3, 23, '2015-05-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15110002, 26000, 0, 3, 9, '2015-05-14', 6, 1);
+insert into sell values(sell_seq.nextval, 15130001, 12000, 3144, 3, 27, '2015-05-11', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 13, '2015-05-18', 6, 1);
+insert into sell values(sell_seq.nextval, 15310005, 21000, 1472, 3, 11, '2015-05-04', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 1180, 3, 7, '2015-05-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15210004, 9000, 1485, 3, 22, '2015-05-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 3852, 3, 3, '2015-05-20', 6, 1);
+insert into sell values(sell_seq.nextval, 15130005, 12500, 5869, 3, 9, '2015-05-23', 6, 1);
+insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 3, 18, '2015-05-19', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 3, 10, '2015-05-26', 6, 1);
+insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 3, 19, '2015-05-01', 6, 1);
+insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 3, 2, '2015-05-17', 6, 1);
+insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 3, 12, '2015-05-08', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 15, '2015-05-25', 6, 1);
+insert into sell values(sell_seq.nextval, 15310003, 13500, 2160, 3, 17, '2015-05-29', 6, 1);
 
