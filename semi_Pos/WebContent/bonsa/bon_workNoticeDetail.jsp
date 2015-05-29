@@ -37,7 +37,7 @@
                         <div class="col-lg-10">
                         <textarea name="" id="" class="form-control7" cols="30" rows="5" style="min-width: 350px; max-width: 700px; height:100px; float: left;" readonly="readonly">${v.content}</textarea>
                         
-                          <!-- 이미지 크기 -->
+                          <%-- 이미지 크기 --%>
                          <img src="${v.path}" style="width: 350px; resize: none ">
                          </div>
                     <form action="bon.apos" method="post">
