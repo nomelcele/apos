@@ -208,6 +208,7 @@
                           <li><a class="" href="javascript:goUrl('join')">매장 가입</a></li>                          
                           <li><a class="" href="javascript:goUrl('infor')">매장 정보 수정</a></li>
                           <li><a class="" href="javascript:goUrl('check')">매장 조회</a></li>
+                          <li><a class="" href="javascript:goUrl('scheck')">매장 매출 관리</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -229,27 +230,27 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          
+                          <li><a class="" href="javascript:goUrl('brandsch')">브랜드 매출관리</a></li>
                           <li><a class="" href="javascript:goUrl('productsch')">품목별 매출순위</a></li>
                           <li><a class="" href="javascript:goUrl('outletsch')">대리점별 매출순위</a></li>
-                         
+                          <li><a class="" href="javascript:goUrl('termsch')">기간별 매출순위</a></li>
                       </ul>
                   </li>
                   
                   
               </ul>
               <!-- sidebar menu end-->
-              <!-- chat--------------->
-              <div class="panel-body">
-		<form method="post" action="chat_add.jsp" name="cform"	id="cform" class="form-inline">
-		<div class="form-group">
-		<input type="text" class="form-control" id="u_id" name="u_id" required="required" placeholder="이름이나아이디">	
-		<input type="text" class="form-control" id="chat" name="chat" required="required" placeholder="대화내용">
-		</div>
-		<input type="submit" id="send" value="글작성" class="btn btn-info">
-	</form>
-	<div id="target"></div>
+     <!-- chat--------------->
+             <div class="panel-body">
+				<form method="post" action="chat_add.jsp" name="cform"	id="cform" class="form-inline">
+					<div class="form-group">
+					<input type="text" class="form-control" id="chat" name="chat" required="required" placeholder="대화내용">
+					</div>
+					<input type="submit" id="send" value="글작성" class="btn btn-info">
+				</form>
+			<div id="target"></div>
 	<!-- chat----------------------------------------------------------------------->
+
 </div>
           </div>
       </aside>
