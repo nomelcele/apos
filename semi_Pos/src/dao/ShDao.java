@@ -13,10 +13,12 @@ import java.util.Map;
 
 
 
+
 import vo.BoardVO;
 import vo.MemVO;
 import vo.ProductVO;
 import vo.ShopVO;
+import vo.SmangVO;
 import conn.MyJndiContext;
 
 public class ShDao {
@@ -119,41 +121,34 @@ public class ShDao {
 		return list;
 	}
 	
-	public ArrayList<ProductVO> getListProduct(String check) {
+	public ArrayList<SmangVO> getListProduct(String check,String shopnum) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
+		ArrayList<SmangVO> list = new ArrayList<SmangVO>();
 
 		StringBuffer sql = new StringBuffer();
-		sql.append("select *from(select distinct p.pro_num pp, p.*,s.sto_amount pro_amount from product p,stock s  ");
-		sql.append("where p.pro_num=s.sto_pronum  and (p.pro_name like ? or p.pro_code like ?)and s.sto_shopnum='1')ORDER BY 1");
+		sql.append("select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and( p.pro_code like ? or p.pro_name like ?) and sh.shop_num = ?");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
 			String sqlcheck= check+"%";
 			pstmt.setString(1, sqlcheck);
 			pstmt.setString(2, sqlcheck);
+			pstmt.setInt(3, Integer.parseInt(shopnum));
 			System.out.println(sqlcheck);
 			//pstmt.setString(3, shopnum);
 			rs = pstmt.executeQuery();
 			while(rs.next()){
-				ProductVO v= new ProductVO();
-				v.setPro_num(rs.getInt("pro_num"));
+				SmangVO v = new  SmangVO();
+				v.setPro_code(rs.getString("pro_code"));
 				v.setPro_name(rs.getString("pro_name"));
 				v.setPro_price(rs.getInt("pro_price"));
-				v.setPro_code(rs.getString("pro_code"));
-				v.setPro_amount(rs.getInt("pro_amount"));
+				v.setSto_size(rs.getInt("sto_size"));
+				v.setShop_name(rs.getString("shop_name"));
+				v.setSto_amount(rs.getInt("sto_amount"));
 				v.setPro_img(rs.getString("pro_img"));
-				//v.setMem
-//				BoardVO v = new BoardVO();
-//				v.setTitle(rs.getString("BO_SUB"));
-//				v.setNo(rs.getInt("BO_NUM"));
-//				v.setWriter(rs.getString("BO_WRITER"));
-//				v.setRegdate(rs.getString("BO_DATE"));
-//				v.setHit(rs.getInt("BO_HIT"));
-//				v.setPath(rs.getString("BO_IMG"));
-//				v.setGroupno(rs.getInt("BO_BONNUM"));
+				v.setPro_barcode(rs.getString("pro_barcode"));
 				list.add(v);
 			}
 		} catch (SQLException e) {
