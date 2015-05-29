@@ -240,18 +240,8 @@
                   
               </ul>
               <!-- sidebar menu end-->
-     <!-- chat--------------->
-             <div class="panel-body">
-				<form method="post" action="chat_add.jsp" name="cform"	id="cform" class="form-inline">
-					<div class="form-group">
-					<input type="text" class="form-control" id="chat" name="chat" required="required" placeholder="대화내용">
-					</div>
-					<input type="submit" id="send" value="글작성" class="btn btn-info">
-				</form>
-			<div id="target"></div>
-	<!-- chat----------------------------------------------------------------------->
+  
 
-</div>
-          </div>
+		</div>
       </aside>
       <!--sidebar end-->
