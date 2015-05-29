@@ -8,6 +8,7 @@ import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import util.MyMap;
@@ -78,6 +79,10 @@ public class BWorkAction implements Action{
 			BoardVO vo = new BoardVO();
 			vo.setTitle(request.getParameter("title"));
 			String s = request.getParameter("content").trim();
+			HttpSession session = request.getSession();
+			
+			String writer = (String) session.getAttribute("bon_id");
+			vo.setWriter(writer);
 			String filename="";
 		    String content="";
 		        String[] str = s.split(">");
