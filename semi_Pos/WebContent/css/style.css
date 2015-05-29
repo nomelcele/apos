@@ -97,6 +97,13 @@ table tr th { color: #7F8684;}
   -o-background-size: cover;
   background-size: cover;
 }
+.login-img4-body{
+  background: url('../img/bg-90.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 .login-form {
     max-width: 350px;
