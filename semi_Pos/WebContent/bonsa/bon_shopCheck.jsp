@@ -48,7 +48,7 @@
                                   <td>
                                   <p style="font-size:11pt;">대표사진</p>
                                   </br>
-                                  <img src="../img/bg-80.jpg"> </br></br>
+                                  <img src="../img/bg-81.jpg"> </br></br>
                                   </br></br>
                                 
                                   </td>
