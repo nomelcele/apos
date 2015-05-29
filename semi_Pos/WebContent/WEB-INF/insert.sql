@@ -287,31 +287,88 @@ insert into member values(
 --¹°Ç° ¾÷µ¥ÀÌÆ®
 
 
-insert into product values(1,'³²¼º °ËÀº»ö ÀÚÄÏ','15110001',95,'0110','25000',sysdate);
-insert into product values(2,'³²¼º Èò»ö Æ¼¼ÅÃ÷','15210002',95,'0110','12000',sysdate);
-insert into product values(3,'³²¼º Èò»ö Æ¼¼ÅÃ÷','15210005',100,'0110','8000',sysdate);
-insert into product values(4,'³²¼º º¸¶ó»ö ¼ÅÃ÷','15110003',105,'0110','16000',sysdate);
-insert into product values(5,'³²¼º °ËÀº»ö ¹ÙÁö','15110004',95,'0110','19000',sysdate);
 
-insert into product values(6,'¿©¼º Èò»ö ÀÚÄÏ','15120001',95,'0110','13000',sysdate);
-insert into product values(7,'¿©¼º Ã» º£½ºÆ®','15120002',95,'0110','11000',sysdate);
-insert into product values(8,'¿©¼º Èò»ö Æ¼¼ÅÃ÷','15120003',95,'0110','10000',sysdate);
-insert into product values(9,'¿©¼º ºÐÈ«ºÐÈ« ¼ÅÃ÷','15120005',95,'0110','13000',sysdate);
-insert into product values(10,'¿©¼º ºÐÈ« ¹ÙÁö','15120004',95,'0110','19000',sysdate);
 
-insert into product values(11,'¾Æ±â µðÁö¸ó ÀÚÄÏ','15130001',95,'0110','19000',sysdate);
-insert into product values(12,'¾Æ±â »Ç·Î·Î Æ¼¼ÅÃ÷','15130002',95,'0110','8500',sysdate);
-insert into product values(13,'¾Æ±â ÄÚÄÚ¸ù ¹ÙÁö','15130003',95,'0110','23000',sysdate);
-insert into product values(14,'¾Æ±â °ø·æ¿Ê','15130004',95,'0110','22000',sysdate);
-insert into product values(15,'¾Æ±â ÇÇÄ«Ãò¿Ê','15130005',95,'0110','25000',sysdate);
+
+insert into product values(product_seq.nextval,'³²¼º °ËÀº»ö ÀÚÄÏ','15110001','0','0110',sysdate,'25000');
+insert into product values(product_seq.nextval,'³²¼º Èò»ö Æ¼¼ÅÃ÷','15210002','0','0110',sysdate,'12000');
+insert into product values(product_seq.nextval,'³²¼º Èò»ö Æ¼¼ÅÃ÷','15210005','0','0110',sysdate,'8000');
+insert into product values(product_seq.nextval,'³²¼º º¸¶ó»ö ¼ÅÃ÷','15110003','0','0110',sysdate,'16000');
+insert into product values(product_seq.nextval,'³²¼º °ËÀº»ö ¹ÙÁö','15110004','0','0110',sysdate,'19000');
+
+insert into product values(product_seq.nextval,'¿©¼º Èò»ö ÀÚÄÏ','15120001','0','0110',sysdate,'13000');
+insert into product values(product_seq.nextval,'¿©¼º Ã» º£½ºÆ®','15120002','0','0110',sysdate,'11000');
+insert into product values(product_seq.nextval,'¿©¼º Èò»ö Æ¼¼ÅÃ÷','15120003','0','0110',sysdate,'10000');
+insert into product values(product_seq.nextval,'¿©¼º ºÐÈ«ºÐÈ« ¼ÅÃ÷','15120005','0','0110',sysdate,'13000');
+insert into product values(product_seq.nextval,'¿©¼º ºÐÈ« ¹ÙÁö','15120004','0','0110',sysdate,'19000');
+
+insert into product values(product_seq.nextval,'¾Æ±â µðÁö¸ó ÀÚÄÏ','15130001','0','0110',sysdate,'19000');
+insert into product values(product_seq.nextval,'¾Æ±â »Ç·Î·Î Æ¼¼ÅÃ÷','15130002','0','0110',sysdate,'8500');
+insert into product values(product_seq.nextval,'¾Æ±â ÄÚÄÚ¸ù ¹ÙÁö','15130003','0','0110',sysdate,'23000');
+insert into product values(product_seq.nextval,'¾Æ±â °ø·æ¿Ê','15130004','0','0110',sysdate,'22000');
+insert into product values(product_seq.nextval,'¾Æ±â ÇÇÄ«Ãò¿Ê','15130005','0','0110',sysdate,'25000');
+
+
+
 commit;
 
 
 
+update product set pro_barcode ='ba_15110001.png'  where pro_code='15110001';
+update product set pro_img ='img_15110001.jpg' where pro_code='15110001';
+
+update product set pro_barcode ='ba_15210002.png'  where pro_code='15210002';
+update product set pro_img ='img_15210002.jpg' where pro_code='15210002';
+
+update product set pro_barcode ='ba_15210005.png'  where pro_code='15210005';
+update product set pro_img ='img_15210005.jpg' where pro_code='15210005';
+
+update product set pro_barcode ='ba_15110003.png'  where pro_code='15110003';
+update product set pro_img ='img_15110003.jpg' where pro_code='15110003';
+
+update product set pro_barcode ='ba_15110004.png'  where pro_code='15110004';
+update product set pro_img ='img_15110004.jpg' where pro_code='15110004';
 
 
 
 
+
+update product set pro_barcode ='ba_15120001.png'  where pro_code='15120001';
+update product set pro_img ='img_15120001.jpg' where pro_code='15120001';
+
+update product set pro_barcode ='ba_15120002.png'  where pro_code='15120002';
+update product set pro_img ='img_15120002.jpg' where pro_code='15120002';
+
+update product set pro_barcode ='ba_15120003.png'  where pro_code='15120003';
+update product set pro_img ='img_15120003.jpg' where pro_code='15120003';
+
+update product set pro_barcode ='ba_15120005.png'  where pro_code='15120005';
+update product set pro_img ='img_15120005.jpg' where pro_code='15120005';
+
+update product set pro_barcode ='ba_15120004.png'  where pro_code='15120004';
+update product set pro_img ='img_15120004.jpg' where pro_code='15120004';
+
+
+
+
+
+
+
+
+update product set pro_barcode ='ba_15130001.png'  where pro_code='15130001';
+update product set pro_img ='img_15130001.jpg' where pro_code='15130001';
+
+update product set pro_barcode ='ba_15130002.png'  where pro_code='15130002';
+update product set pro_img ='img_15130002.jpg' where pro_code='15130002';
+
+update product set pro_barcode ='ba_15130003.png'  where pro_code='15130003';
+update product set pro_img ='img_15130003.jpg' where pro_code='15130003';
+
+update product set pro_barcode ='ba_15130004.png'  where pro_code='15130004';
+update product set pro_img ='img_15130004.jpg' where pro_code='15130004';
+
+update product set pro_barcode ='ba_15130005.png'  where pro_code='15130005';
+update product set pro_img ='img_15130005.jpg' where pro_code='15130005';
 
 
 
