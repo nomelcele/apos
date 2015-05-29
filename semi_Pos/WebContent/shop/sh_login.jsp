@@ -77,7 +77,6 @@
 
 		$("#loginBtn").click(
 				function() {
-					$('#radioHidden').submit();
 					$.ajax({
 						url : "sh_checkcaptcha.jsp?id="+$('#id').val() + "&pwd=" + $('#pwd').val()+"&radio="+$(':radio[name="radio"]:checked').val(),
 						type : "POST",
@@ -115,6 +114,71 @@
 				});
 		// --------------- captcha END --------------
 		
+		
+		// ID/PWD 찾기 버튼- 모달열기
+		$('#find').click(function() {
+			$('#find_modal').modal('show');
+		});
+		// ID 찾기 버튼을 눌렀을때
+		$('#findid').click(function(){
+			$('#findidform').show();
+			$('#findpwdform').hide();
+			// 찾기 버튼 
+			$('#findBtn').click(function(){
+				$.ajax({
+					url : "sh_findid.jsp?name=" + $('#find_name1').val()+ "&tel1=" + $('#find_tel1').val()+ "&tel2=" + $('#find_tel2').val()+ "&tel3=" + $('#find_tel3').val()
+					+"&radio="+$(':radio[name="radio"]:checked').val(),
+					type : "POST",
+					dataType : "html",
+					success : function(res) {
+						// 실패 했을 때
+						if (res.trim() == "") {
+							alert("아이디와 비밀번호 확인하세요.");
+						} else {
+							alert("입력하신 E-mail로  ID가 전송되었습니다.");
+							$.ajax({
+									url : "*.apos?cmd=mailSelect&subcmd=findid&mail=" +$('#find_email1').val()+"&name="+$('#find_name1').val()+ "&tel2=" + "&id="+res.trim(),
+									type : "POST",
+									dataType : "html",
+									success : function() {
+									}
+								});
+							$('#findidform').submit();
+						}
+					}
+				});
+			});
+		});
+		// PWD 찾기 버튼을 눌렀을때
+		$('#findpwd').click(function(){
+			$('#findpwdform').show();
+			$('#findidform').hide();
+			// 찾기 버튼 
+			$('#findBtn').click(function(){
+				$.ajax({
+					url : "sh_findpwd.jsp?name="+$('#find_name2').val()+"&id=" + $('#find_id').val()+"&radio="+$(':radio[name="radio"]:checked').val(),
+					type : "POST",
+					dataType : "html",
+					success : function(res) {
+						// res는 pwd
+						if (res.trim()=="") {
+							alert("입력한 정보가 없습니다.");
+						} else {
+							alert("입력하신 E-mail로  PWD가 전송되었습니다.");
+							$.ajax({
+								url : "*.apos?cmd=mailSelect&subcmd=findpwd&mail="+$('#find_email2').val()+"&name="+$('#find_name2').val()+"&pwd="+res.trim(),
+								type : "POST",
+								dataType : "html",
+								success : function() {
+								}
+							});
+							$('#findpwdform').submit();
+						}
+					}
+				});
+				
+			});
+		});
 	});
 	
 </script>
@@ -126,7 +190,7 @@
 			"3yNe6F7kItK5fHjFZtGCMey6d6PNtYfva6Uqht4i" // secret
 	);
 %>
-<body class="login-img4-body">
+<body class="login-img3-body">
 	<div id="modal1" class="modal fade">
 		<div class="modal-dialog" style="width: 400px; text-align: center;">
 			<div class="modal-content"></div>
@@ -188,7 +252,7 @@
 					<input type="radio" id="radio1" name="radio" value="master" > Mastser
 					<input type="radio" id="radio2" name="radio" value="staff" > Staff 
 					
-				<span class="pull-right"><a href="sh_shopSearch.jsp"> Forgot Password?</a>
+				<span class="pull-right" id="find"><a href="#"> Find ID/PWD</a>
 				</span>
 				</label>
 				
@@ -222,5 +286,76 @@
 			</div>
 		</form>
 	</div>
+	<%--Modal2 ID/PWD 찾기  : START --%>
+	<div class="container">
+	<div id="find_modal" class="modal fade">
+		<div class="modal-dialog" style="width: 500px; height:auto; text-align: center;">
+			<div class="modal-content">
+			<!-- header -->
+				<div class="modal-header">
+				<!-- 닫기(x) 버튼 -->
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<!-- header title -->
+					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+				</div>
+				<div>
+				<!-- body -->
+					<input type="radio" id="findid" name="radioIDPWD" value="findid" > ID &nbsp;
+					<input type="radio" id="findpwd" name="radioIDPWD" value="findpwd" > PWD
+					&nbsp;<span> // </span>&nbsp;
+					<input type="radio" id="findMaster" name="radio" value="master" > Master &nbsp;
+					<input type="radio" id="findStaff" name="radio" value="staff" > Staff
+					<%-- ID 찾기 --%>
+					<form method="post" action="*.apos" name="findidform" id="findidform" autocomplete="off" style="display: none">
+					<input type="hidden" name="cmd" value="sjoin">
+					<input type="hidden" name="subcmd" value="findId">
+						<div class="modal-body2" ><span style="display: block;">E-mail</span>
+								<input class="form-control" id="find_email1" name="find_email1" type="email"  required />
+						</div>
+										 	
+						<div class="modal-body2"><span style="display: block">성 명 :</span>
+							<input class="form-control" id="find_name1" name="find_name1" type="text" required /></div>
+
+						<div class="modal-body2 "><span style="display: block">연락처 :</span>
+						 	<select style="width: 20%" class="form-control">
+	                                          		<option>SKT</option>
+	                                          		<option>KT</option>
+	                                          		<option>LG</option>
+                             </select>-
+							 <input style="width: 20%" class="form-control" id="find_tel1" name="find_tel1" maxlength="3" type="tel" required />-
+                             <input style="width: 20%" class="form-control" id="find_tel2" name="find_tel2" maxlength="4" type="tel" required />-
+                             <input style="width: 20%" class="form-control" id="find_tel3" name="find_tel3" maxlength="4" type="tel" required />
+						</div>
+						<div id="findid_res"></div>
+					</form>
+
+					<%-- PWD 찾기 --%>
+					<form method="post" action="*.apos" name="findpwdform" id="findpwdform" autocomplete="off" style="display: none">
+					<input type="hidden" name="cmd" value="sjoin">
+					<input type="hidden" name="subcmd" value="findPwd">
+						<div class="modal-body2" ><span style="display: block;">ID</span>
+								<input class="form-control" id="find_id" name="find_id" type="text"  required />
+						</div>
+						
+						<div class="modal-body2" ><span style="display: block;">E-mail</span>
+								<input class="form-control" id="find_email2" name="find_email2" type="email"  required />
+						</div>
+										 	
+						<div class="modal-body2"><span style="display: block">성 명 :</span>
+							<input class="form-control" id="find_name2" name="find_name2" type="text" required />
+						</div>
+						<div id="findid_res"></div>
+					</form>
+					
+						<!-- Footer -->
+						<div class="modal-footer" >
+							<input type="button" id="findBtn" class="btn btn-default" value="찾기">
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<%--Modal2 ID/PWD 찾기  : END --%>
 </body>
 </html>
