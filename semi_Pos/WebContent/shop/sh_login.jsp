@@ -126,7 +126,7 @@
 			"3yNe6F7kItK5fHjFZtGCMey6d6PNtYfva6Uqht4i" // secret
 	);
 %>
-<body class="login-img3-body">
+<body class="login-img4-body">
 	<div id="modal1" class="modal fade">
 		<div class="modal-dialog" style="width: 400px; text-align: center;">
 			<div class="modal-content"></div>
