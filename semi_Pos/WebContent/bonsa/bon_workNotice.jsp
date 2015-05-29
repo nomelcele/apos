@@ -28,9 +28,15 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<section class="panel">
-					<header class="panel-heading"> 공지사항 게시판 </header>
+					<div class="row" style="font-size: 15px; margin-top: -3%">
+			<div class="col-lg-12">
+				<h3 class="page-header">
+					<i class="fa fa-files-o"></i> 공지사항
+				</h3>
+				</div>
+				</div>
 
-					<table class="table table-striped table-advance table-hover">
+					<table class="table table-striped table-advance table-hover" style="font-size: 15px;">
 						<tbody>
 							<tr>
 								<th>#</th>
@@ -70,4 +76,5 @@
 			</tr>
 		</div>
 		</div>
+	</section>
 	</section>
