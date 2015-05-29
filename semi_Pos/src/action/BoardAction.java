@@ -90,6 +90,12 @@ public class BoardAction implements Action{
 		    BoardDao.getDao().insert(vo);
 			url="*.apos?cmd=bwork&subcmd=notice";
 			method=false;
+		}else if(subcmd != null && subcmd.equals("delete")){
+			System.out.println("1Â÷È®ÀÎ");
+			url="studybordList.jsp";
+			method=false;
+			int no = Integer.parseInt(request.getParameter("no"));
+			BoardDao.getDao().delete(no);
 		}else if(subcmd != null && subcmd.equals("boardList")){
 			url="studybordList.jsp";
 			method=false;

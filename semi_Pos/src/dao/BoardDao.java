@@ -21,14 +21,37 @@ public class BoardDao {
 			dao = new BoardDao();
 		return dao;
 	}
+	public void delete(int no){
+		System.out.println("delete체크");
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("delete board where bo_num = ?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, no);
+			pstmt.executeUpdate();
 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	public void insert(BoardVO vo) {
 
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
 			con = MyJndiContext.getDs();
-			System.out.println(con);
 			StringBuffer sql = new StringBuffer();
 			sql.append("insert into board values(");
 			sql.append("board_seq.nextVal,?,'본사',?,sysdate,?,0,0001)");
