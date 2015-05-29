@@ -38,6 +38,7 @@ public ActionForward execute(HttpServletRequest request,
 		ArrayList<ShopVO> list = ShopDao.getDao().getshopList();
 		request.setAttribute("list",list);
 		
+
 	}else if(subcmd.equals("scheck")){
 		url="bon_shopSalesCheck.jsp";
 	}else if(subcmd.equals("sawonjoin")){
