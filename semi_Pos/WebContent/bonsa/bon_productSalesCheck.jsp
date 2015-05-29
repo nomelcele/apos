@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="bon_top.jsp"%>
 <%@include file="bon_left.jsp"%>
-<!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
+<!-- 본사 정산관리의 품목별 매출순위 페이지 입니다. -->
 <script src="../js/http.js"></script>
 <script src="../js/json2.js"></script>
 <script src="../js/suggest_shop_pk.js"></script>
