@@ -536,7 +536,7 @@ ul.sidebar-menu li.active a i {
 }
 .wrapper {
     display: inline-block;
-    margin-top: 50px;
+    margin-top: 0px;
     padding: 1px;
     width: 100%;
 }
