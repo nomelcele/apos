@@ -208,7 +208,6 @@
                           <li><a class="" href="javascript:goUrl('join')">매장 가입</a></li>                          
                           <li><a class="" href="javascript:goUrl('infor')">매장 정보 수정</a></li>
                           <li><a class="" href="javascript:goUrl('check')">매장 조회</a></li>
-                          <li><a class="" href="javascript:goUrl('scheck')">매장 매출 관리</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
