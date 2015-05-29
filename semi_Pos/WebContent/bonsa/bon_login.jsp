@@ -169,7 +169,7 @@
 			"3yNe6F7kItK5fHjFZtGCMey6d6PNtYfva6Uqht4i" // secret
 	);
 %>
-<body class="login-img3-body">
+<body class="login-img4-body">
 	<%-- MODAL  --%>
     <div class="container">
 	<div id="modal2" class="modal fade">
