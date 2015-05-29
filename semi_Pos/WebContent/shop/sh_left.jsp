@@ -187,9 +187,8 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('join')">회원가입</a></li>                          
-                          <li><a class="" href="javascript:goUrl('check')">회원조회</a></li>
-                          <li><a class="" href="javascript:goUrl('change')">회원수정</a></li>
-                          <li><a class="" href="javascript:goUrl('out')">회원탈퇴</a></li>
+                          <li><a class="" href="javascript:goUrl('check')">회원수정</a></li>
+                        
                       </ul>
                   </li>       
                   <li class="sub-menu">
