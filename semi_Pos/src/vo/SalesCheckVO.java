@@ -5,27 +5,27 @@ public class SalesCheckVO {
 	private String date,sell_shopname,sell_proname;
 
 
-	public synchronized String getSell_proname() {
+	public String getSell_proname() {
 		return sell_proname;
 	}
 
-	public synchronized void setSell_proname(String sell_proname) {
+	public  void setSell_proname(String sell_proname) {
 		this.sell_proname = sell_proname;
 	}
 
-	public synchronized String getSell_shopname() {
+	public String getSell_shopname() {
 		return sell_shopname;
 	}
 
-	public synchronized void setSell_shopname(String sell_shopname) {
+	public  void setSell_shopname(String sell_shopname) {
 		this.sell_shopname = sell_shopname;
 	}
 
-	public synchronized String getDate() {
+	public  String getDate() {
 		return date;
 	}
 
-	public synchronized void setDate(String date) {
+	public  void setDate(String date) {
 		this.date = date;
 	}
 
