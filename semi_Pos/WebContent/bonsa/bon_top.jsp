@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -272,10 +273,11 @@
                     <!-- user login dropdown start-->
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        	
                             <span class="profile-ava">
                                  <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
-                            <span class="username" style="color: black">A-Dress</span>
+                            <span class="form-control" style="color: black"> [${sessionScope.bon_name}] 님 환영합니다  </span>&nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
