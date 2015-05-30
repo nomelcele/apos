@@ -4,13 +4,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%
-	// bon쪽
+	//shop쪽
 	response.setHeader("cache-control", "no-cache");
 	response.setContentType("text/event-stream");
-	String id = (String) session.getAttribute("bon_id");
+	String id = (String) session.getAttribute("shop_id");
 	ArrayList<ChaVO> list = ChatDao.getDao().getList();
 	StringBuffer outs = new StringBuffer();
-	//String id = request.getRemoteAddr();
 	//outs.append("retry:2000\n");
 	outs.append("data:");
 	for(ChaVO e : list){
