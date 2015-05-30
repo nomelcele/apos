@@ -2,35 +2,71 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
-<%@include file="logsession.jsp" %>
-<%-- 매장의 업무관리 - 공지사항 페이지입니다. --%>
+ <%@include file="logsession.jsp" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%-- 매장 업무관리의 공지사항 페이지 입니다. --%>
+
+<script>
+	function gourl2() {
+		document.getElementById("notice").submit();
+	}
+</script>
+<form method="post" action="bon.apos" id=notice>
+<input type="hidden" name="cmd" value="bwork">
+<input type="hidden" name="subcmd" value="notice">
+<input type="hidden" name="page" value="1">
+</form>
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row">
-			<div class="col-lg-12" style="margin-top: 5%; font-size: 15px;" >
+			<div class="col-lg-12">
 				<section class="panel">
+					<div class="row" style="font-size: 15px; margin-top: -3%">
+			<div class="col-lg-12">
+				<h3 class="page-header">
+					<i class="fa fa-files-o"></i> 공지사항
+				</h3>
+				</div>
+				</div>
 
-					
-
-					<table class="table table-striped table-advance table-hover">
+					<table class="table table-striped table-advance table-hover" style="font-size: 15px;">
 						<tbody>
 							<tr>
+								<th>#</th>
 								<th><i class="icon_mail_alt"></i> 제목</th>
-								<th><i class="icon_profile"></i> 작성자 </th>
+								<th><i class="icon_profile"></i> 작성자</th>
 								<th><i class="icon_calendar"></i> 날짜</th>
-								<th><i class="icon_pin_alt"></i> 조회</th>
 							</tr>
-							<tr>
-								<td>첫공지사항이다.</td>
-								<td>서경연회장님</td>
-								<td>2015-05-20</td>
-								<td>10000</td>
-							</tr>
+							<c:forEach var="stList" items="${list}">
+					<tr>
+						<td>${stList.no}</td>
+						<td>
+						<a href="bon.apos?cmd=swork&subcmd=boardDetail&no=${stList.no}&page=1">
+						${stList.title}</a>
+						</td>
+						<td>${stList.writer}</td>
+						<td>${stList.regdate}</td>
+					</tr>
+				</c:forEach>
 						</tbody>
 					</table>
 				</section>
 			</div>
 		</div>
 		<!-- page end-->
+		<section class="panel">
+        <div class="panel-body">
+		<c:set var="pageUrl" value="bon.apos?cmd=swork&subcmd=notice"/>
+		<%@include file="page.jsp" %>
+		</div>
+		</section>
+		<div>
+			<tr align="right">
+				<td >
+				   <a class="btn btn-danger btn-sm" href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
+					</td>
+			</tr>
+		</div>
+		</div>
 	</section>
-</section>
+	</section>
