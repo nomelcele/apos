@@ -29,24 +29,34 @@ public class SMangAction implements Action{
 		}else if(subcmd.equals("check")){
 			url="sh_smangRegis.jsp";
 			String name = request.getParameter("name");
+			HttpSession session = request.getSession();
+			int shopnum =  (int) session.getAttribute("shop_num");
+			System.out.println("세션의 샵넘 확인 : "+shopnum);
 			ArrayList<MemVO>list = ShDao.getDao().getListMember(name);
 			request.setAttribute("list", list);
 		}else if(subcmd.equals("pcheck")){
 			url="sh_smangRegis.jsp";
 			String code = request.getParameter("pro_code");
-			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
+			HttpSession session = request.getSession();
+			int shopnum =  (int) session.getAttribute("shop_num");
+			System.out.println("세션의 샵넘 확인 : "+shopnum);
+			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code, shopnum);
 			request.setAttribute("plist", list);
 			
 		}else if(subcmd.equals("incus")){
 			url="sh_smangRegis.jsp";
 			String code = request.getParameter("pro_code");
-			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
+			HttpSession session = request.getSession();
+			int shopnum =  (int) session.getAttribute("shop_num");
+			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code, shopnum);
 			request.setAttribute("plist", list);
 			
 		}else if(subcmd.equals("insell")){
 			url="sh_smangRegis.jsp";
 			String code = request.getParameter("pro_code");
-			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
+			HttpSession session = request.getSession();
+			int shopnum =  (int) session.getAttribute("shop_num");
+			ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code, shopnum);
 			request.setAttribute("plist", list);
 			
 		}else if(subcmd.equals("final")){

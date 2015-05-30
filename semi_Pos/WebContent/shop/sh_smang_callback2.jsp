@@ -6,8 +6,9 @@
     pageEncoding="utf-8"%>
 <% 
 	String code = request.getParameter("pname");
+	int shop_num = (int) session.getAttribute("shop_num");
 	System.out.println(code);
-	ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code);
+	ArrayList<SmangVO> list = SmangDao.getDao().getListProduct(code, shop_num);
 	Iterator<SmangVO> it = list.iterator();
 	StringBuffer res = new StringBuffer();
 	int i = 0;
