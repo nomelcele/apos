@@ -161,7 +161,7 @@
                     <li id="mail_notificatoin_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <i class="icon-envelope-l"></i>
-                            <span class="badge bg-important">5</span>
+                            <span class="badge bg-important"><img src="../img/bg-86.JPG"></span>
                         </a>
               <!--  확인체크체츸체크쳌츠케ㅡㅊ케츠케츠케츠케ㅡㅊ케츠ㅔㅋ츠케츠ㅏㅔ -->
                         <ul class="dropdown-menu extended inbox">
