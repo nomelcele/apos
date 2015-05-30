@@ -1,5 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+   <c:choose>
+	<c:when test="${sessionScope.radio == 'master'}"> 
+		<script>
+			alert("Master page");
+			$('#hideMenu').show();
+			$('#staff_span').hide();
+			$('#master_span').show();
+		</script>
+	</c:when>
+	<c:when test="${sessionScope.radio == 'staff'}"> 
+		<script>
+			alert("Staff page");
+			$('#master_span').hide();
+			$('#staff_span').show();
+		</script>
+	</c:when>
+	<c:otherwise> 
+		
+	</c:otherwise>
+</c:choose>
            <!-- javascripts -->
     <script src="../js/jquery.js"></script>
    <script src="../js/jquery-ui-1.10.4.min.js"></script>
@@ -104,7 +125,6 @@
 <form method="post" action="sh.apos" id="notice">
 <input type="hidden" name="cmd" value="swork">
 <input type="hidden" name="subcmd" value="notice">
-<input type="hidden" name="page" value="1">
 </form>
 
 
@@ -188,8 +208,9 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('join')">회원가입</a></li>                          
-                          <li><a class="" href="javascript:goUrl('check')">회원수정</a></li>
-                        
+                          <li><a class="" href="javascript:goUrl('check')">회원조회</a></li>
+                          <li><a class="" href="javascript:goUrl('change')">회원수정</a></li>
+                          <li><a class="" href="javascript:goUrl('out')">회원탈퇴</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -215,7 +236,7 @@
                       </ul>
                   </li>
                   
-                  <li class="sub-menu">
+                  <li class="sub-menu" id="hideMenu" style="display: none;">
                       <a href="javascript:;" class="">
                           <i class="icon_documents_alt"></i>
                           <span>정산관리</span>
