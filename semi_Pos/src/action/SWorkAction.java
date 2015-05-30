@@ -8,6 +8,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import util.MyMap;
 import vo.BoardVO;
@@ -46,6 +47,9 @@ public class SWorkAction implements Action{
 			if(childcmd != null && childcmd.equals("in")){
 				HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
 				//Dao처리
+				HttpSession session = request.getSession();
+				String writer = (String) session.getAttribute("shop_id");
+				maps.put("writer", writer);
 				System.out.println("확인");
 				BoardDao.getDao().insertComm(maps);
 				//why? no보내야 하는지....
@@ -70,6 +74,17 @@ public class SWorkAction implements Action{
 			System.out.println("확인");
 			ArrayList<StaffVO> list = StaffDao.getDao().suggestList(name);
 			request.setAttribute("list",list);
+		}else if(subcmd != null && subcmd.equals("commdelete")){
+			int no = Integer.parseInt(request.getParameter("no"));
+			int bo_num = Integer.parseInt(request.getParameter("bo_num"));
+			HttpSession session = request.getSession();
+			String ckwriter = (String) session.getAttribute("shop_id");
+			if(ckwriter.equals(request.getParameter("writer"))){
+				BoardDao.getDao().deleteComm(no);
+			};
+			
+			url = "sh.apos?no="+bo_num+"&cmd=swork&subcmd=boardDetail&page=1";
+			method = true;
 		}
 		return new ActionForward(url, method);
 	}
