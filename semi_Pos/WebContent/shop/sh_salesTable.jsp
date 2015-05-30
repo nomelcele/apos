@@ -8,16 +8,16 @@
 <script src="../js/suggest_shop_pk.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
-	var shop_name="${sessionScope.shop_name}";
+	var shop_name = "${sessionScope.shop_name}";
 	$(function() {
 
 		$('#btn_out')
 				.click(
 						function() {
 							alert(shop_name);
-							alert("shopname=" + shop_name
-									+ "date_ps=" + $('#date_ps').val()
-									+ "&date_ps2=" + $('#date_ps2').val());
+							alert("shopname=" + shop_name + "date_ps="
+									+ $('#date_ps').val() + "&date_ps2="
+									+ $('#date_ps2').val());
 
 							if ($('#date_ps').val() != ""
 									&& $('#date_ps2').val() != "") {
@@ -51,11 +51,9 @@
 							}
 							$.ajax({
 								url : "sh_ajaxoutletChart.jsp?shop_name="
-									+ shop_name
-									+ "&date_ps="
-									+ $('#date_ps').val()
-									+ "&date_ps2="
-									+ $('#date_ps2').val(),
+										+ shop_name + "&date_ps="
+										+ $('#date_ps').val() + "&date_ps2="
+										+ $('#date_ps2').val(),
 								type : "post",
 								dataType : "html",
 								success : function(data) {
@@ -64,7 +62,7 @@
 									var result = eval(res2);
 									alert(res2);
 									drawVisualization();
-									res2=null;
+									res2 = null;
 								}
 
 							});
@@ -120,25 +118,24 @@
 					onsubmit="return false;">
 					<div class="form-group">
 
-				
-							
-							
-							<div style="margin-left: 10px;">
-								<label for="cname" class="control-label col-lg-2"><p
-										align="left">기간</p> </label> <input id="date_ps" name="date_ps"
-									minlength="2" autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
-									name="date_ps2" minlength="2" autocomplete="off" type="date"
-									required /> <input class="form-control6"
-									style="margin-left: 10px;" type="button" id="btn_out"
-									name="btn" value="조회">
 
-							</div>
+
+
+						<div style="margin-left: 10px;">
+							<label for="cname" class="control-label col-lg-2"><p
+									align="left">기간</p> </label> <input id="date_ps" name="date_ps"
+								minlength="2" autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
+								name="date_ps2" minlength="2" autocomplete="off" type="date"
+								required /> <input class="form-control6"
+								style="margin-left: 10px;" type="button" id="btn_out" name="btn"
+								value="조회">
 
 						</div>
-						</br> </br>
 
 					</div>
+					</br> </br>
+
 				</form>
 
 
@@ -172,9 +169,8 @@
 				<!-- 				</div> -->
 
 
-
-
 			</div>
+
 		</div>
 	</section>
 </section>
