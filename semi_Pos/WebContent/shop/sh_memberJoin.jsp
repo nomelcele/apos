@@ -54,6 +54,11 @@
             }
         }).open();
     }
+    
+    
+    function joinaction(){
+    	document.getElementById("member_form").submit();
+    }
 </script>
 
 
@@ -78,7 +83,7 @@
                           <div class="panel-body">
                               <div class="form">
                               
-                                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos">
+                                  <form class="form-validate form-horizontal" id="member_form" method="post" action="sh.apos">
                                   <input type="hidden" name="cmd" value="smember">
                                   <input type="hidden" name="subcmd" value="insert">
                                   
@@ -140,7 +145,7 @@
                                       
                                       <div class="form-group">
                                           <div class="col-lg-offset-2 col-lg-10">
-                                              <button class="btn btn-primary" type="submit">Save</button>
+                                              <button class="btn btn-primary" type="button" onclick="javascript:joinaction()">Save</button>
                                               <button class="btn btn-default" type="button">Cancel</button>
                                           </div>
                                       </div>
