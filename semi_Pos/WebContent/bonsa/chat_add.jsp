@@ -4,8 +4,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
-	HttpSession session1 = request.getSession();
-	String u_id = URLDecoder.decode(session1.getAttribute("bon_id").toString(),"utf-8");
+	//º»»ç
+	String u_id = URLDecoder.decode(session.getAttribute("bon_id").toString(),"utf-8");
 	String chat = URLDecoder.decode(request.getParameter("chat"),"utf-8");
 	String reip = request.getRemoteAddr();
 	System.out.println("Log:"+u_id);
