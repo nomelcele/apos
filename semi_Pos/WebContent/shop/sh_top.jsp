@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,13 +60,8 @@
                  
                 <ul class="nav top-menu">                    
                     <li>
-                        <form class="navbar-form" action="sh.apos" method="post">
-                        <input type="hidden" id="cmd" name="cmd" value="sproduct">
-						<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
-						<input type="hidden" id="childcmd" name="childcmd" value="search_top">
-						<input type="hidden" id="top_shop_num" name="top_shop_num" value="${sessionScope.shop_num}">
-                        <input class="form-control" name="top_name_pk" placeholder="Search" type="text">
-                
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
                         </form>
                     </li>                    
                 </ul>
@@ -281,7 +275,7 @@
                                 <img alt="" src="../img/dress1.JPG" align="center">
                             </span>
                              <span class="form-control" id="master_span" style="color: black; display: none;"> [${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님 환영합니다  </span>&nbsp;
-                             <span class="form-control" id="staff_span" style="color: black; font-family:'1훈바람언덕'; display: none"> [${sessionScope.shop_id}] 님 환영합니다  </span>&nbsp;
+                             <span class="form-control" id="staff_span" style="color: black; display: none;"> [${sessionScope.shop_id}] 님 환영합니다  </span>&nbsp;
                             <b class="caret"></b>
                         </a>
                         <ul class="dropdown-menu extended logout">
