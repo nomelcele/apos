@@ -2,6 +2,7 @@
    pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
+<%@include file="logsession.jsp" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%-- 매장의 판매관리 - 판매등록페이지입니다. --%>
