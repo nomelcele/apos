@@ -312,6 +312,8 @@
 			resetFormElement($('.modal-body'));
 			$('#map').css('display','none');
 		});
+		
+		
 		$('#selfimg').change(function(){
 			//확장자.기준으로 다음요소를 선택해서 소문자로 변경한 후에 ext에 저장한다.
 			// pop가져오는 명령, toLowerCase 소문자로...
@@ -332,6 +334,9 @@
 				$('#selfimgtarget').slideDown(); //업로드한 이미지 미리보기
 			}
 		});
+		
+		
+		
 		
 		// ID 중복체크
 		$('#sid').keyup(function(){
@@ -386,7 +391,7 @@
                           <div class="panel-body">
                               <div class="form">
                               
-                                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos" autocomplete="off">
+                                  <form class="form-validate form-horizontal" enctype="multipart/form-data" id="feedback_form" method="post" action="sh.apos" autocomplete="off">
                                   <input type="hidden" name="cmd" value="sjoin">
                                   <input type="hidden" name="subcmd" value="shopinsert">
                                   
