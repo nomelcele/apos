@@ -1,7 +1,15 @@
 package vo;
 
 public class SalesCheckVO {
-	private int count, sell_cash, sell_card;
+	private int count, sell_cash, sell_card,sell_pronum;
+	public int getSell_pronum() {
+		return sell_pronum;
+	}
+
+	public void setSell_pronum(int sell_pronum) {
+		this.sell_pronum = sell_pronum;
+	}
+
 	private String date,sell_shopname,sell_proname;
 
 
