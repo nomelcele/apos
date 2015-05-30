@@ -70,6 +70,10 @@ document.getElementById("view").style.display = 'none'
 check = false
 loopKey = false
 }
+
+function telaction(){
+	document.getElementById("telform").submit();
+}
 </script>
 
  <div class="row" style="font-size: 12px"> 
@@ -86,7 +90,7 @@ style="margin-left: 20px">
                           <div class="panel-body" style="margin-left: 20px; margin-top: 10px;">
                               <div class="form">
                               
-                                  <form class="form-validate form-horizontal" id="feedback_form" method="post" action="sh.apos">
+                                  <form class="form-validate form-horizontal" id="telform" method="post" action="sh.apos">
                                   <input type="hidden" name="cmd" value="swork">
                                   <input type="hidden" name="subcmd" value="tel">
                    
@@ -99,7 +103,7 @@ style="margin-left: 20px">
                                               <div id="view"></div>
                                           </div>
                                           </form>
-                                          <input class="form-control5" type="submit" id="btn" name="btn" value="조회" >
+                                          <input class="form-control5" type="button" onclick="javascript:telaction()" id="btn" name="btn" value="조회" >
                            
                                       </div>
 
