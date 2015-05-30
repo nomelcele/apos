@@ -48,7 +48,9 @@
 		document.getElementById('final').innerHTML+=str9;
 	}
 	function gogo(){
-		var temp = price*0.01+mile; 
+		var temp1 = parseInt(mile, 10);
+		alert(parseInt(mile, 10));
+		var temp = (price*0.01)+temp1;
 		alert(temp);
 		var str5 = "<input type='hidden' name='fmileage' value='"+$('#mileage').val()+"'>";	
 		var str6 = "<input type='hidden' name='fset' value='"+j+"'>";
