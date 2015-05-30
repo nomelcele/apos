@@ -1,26 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
-   <c:choose>
-	<c:when test="${sessionScope.radio == 'master'}"> 
-		<script>
-			alert("Master page");
-			$('#hideMenu').show();
-			$('#staff_span').hide();
-			$('#master_span').show();
-		</script>
-	</c:when>
-	<c:when test="${sessionScope.radio == 'staff'}"> 
-		<script>
-			alert("Staff page");
-			$('#master_span').hide();
-			$('#staff_span').show();
-		</script>
-	</c:when>
-	<c:otherwise> 
-		
-	</c:otherwise>
-</c:choose>
+
            <!-- javascripts -->
     <script src="../js/jquery.js"></script>
    <script src="../js/jquery-ui-1.10.4.min.js"></script>
@@ -125,6 +105,7 @@
 <form method="post" action="sh.apos" id="notice">
 <input type="hidden" name="cmd" value="swork">
 <input type="hidden" name="subcmd" value="notice">
+<input type="hidden" name="page" value="1">
 </form>
 
 
