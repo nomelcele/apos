@@ -249,7 +249,7 @@
 					<input type="password" class="form-control" placeholder="Password" id="pwd" name="pwd">
 				</div>
 				<label class="checkbox" style="padding-left: 0; font-weight: bold;">
-					<input type="radio" id="radio1" name="radio" value="master" > Mastser
+					<input type="radio" id="radio1" name="radio" value="master" checked="checked" > Mastser
 					<input type="radio" id="radio2" name="radio" value="staff" > Staff 
 					
 				<span class="pull-right" id="find"><a href="#"> Find ID/PWD</a>
