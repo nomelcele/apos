@@ -203,6 +203,7 @@ table tr th { color: #7F8684;}
     color: #b6b6b6;
     font-size: 16px;
     font-weight: 300;
+    style='filter: Alpha(Opacity=40)
 }
 .login-img3-body .login-form p,.login-img2-body .login-form p {
     color: #34aadc;
