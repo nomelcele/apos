@@ -40,8 +40,16 @@ alter table staff modify staff_id varchar2(30);
 alter table staff modify staff_pwd varchar2(30);
 
 -- 05.25 hotket table 수정
+drop table hotkey;
 
-
+create table hotkey(
+key_num number(10) constraint hotkey_key_num_pk primary key,
+key_name varchar2(30),
+key_hot number(10),
+key_mail varchar2(30),
+key_crnum number(20) constraint hotkey_key_crnum_uq UNIQUE,
+key_date date
+);
 
 --05.26 product와 stock수정
 alter table product drop (pro_size);
