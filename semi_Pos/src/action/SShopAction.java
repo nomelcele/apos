@@ -3,9 +3,11 @@ package action;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 import vo.ShopHotkeyVO;
 import vo.ShopVO;
@@ -67,6 +69,17 @@ public class SShopAction implements Action {
 			// shop_num, shop_name, shop_tel, shop_adr,shop_map_x, shop_map_y
 			// shop_date, shop_mail, shop_master, shop_img, shop_crnum, shop_bonnum
 			// shop_id, shop_pwd
+			String selfimg = "";
+			try {
+				Part part = request.getPart("selfimg");
+				selfimg = getFileName(part);
+				if (selfimg != null && selfimg.length() != 0) {
+					part.write(selfimg);
+				}
+			} catch (ServletException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			
 			String name = request.getParameter("shopname");
 			String tel1 = request.getParameter("tel1");
@@ -78,7 +91,7 @@ public class SShopAction implements Action {
 			float lng = Float.parseFloat(request.getParameter("lng"));
 			String mail = request.getParameter("email");
 			String master = request.getParameter("name");
-			String img = request.getParameter("selfimg");
+			//String img = request.getParameter("selfimg");
 			int crnum =Integer.parseInt(request.getParameter("crnum"));
 			String id = request.getParameter("id");
 			String pwd = request.getParameter("pwd");
@@ -90,7 +103,7 @@ public class SShopAction implements Action {
 			System.out.println("ADRRESS : "+adr);
 			System.out.println("LAT : "+lat);
 			System.out.println("LNG : "+lng);
-			System.out.println("IMG: "+img);
+			System.out.println("IMG: "+selfimg);
 			System.out.println("CRNUM : "+crnum);
 
 			
@@ -102,7 +115,7 @@ public class SShopAction implements Action {
 			vo.setMap_y(lng);
 			vo.setMail(mail);
 			vo.setMaster(master);
-			vo.setImg(img);
+			vo.setImg(selfimg);
 			vo.setCrnum(crnum);
 			vo.setId(id);
 			vo.setPwd(pwd);
@@ -138,4 +151,30 @@ public class SShopAction implements Action {
 		
 		return new ActionForward(url, method);
 	}
+	
+	private String getFileName(Part part) {
+		// 파일 이름을 저장할 변수
+		String fileName = "";
+
+		// 헤더의 모든 내용 가져오기
+		String header = part.getHeader("content-disposition");
+		System.out.println(header);
+		// header의 내용을 ; 을 기준으로 분할해서 배열로 저장
+		String[] elements = header.split(";");
+
+		// elements에서 filename에 해당하는 데이터 찾기
+		for (String element : elements) {
+			// filename으로 시작하는 elements를 찾으면 거기에서 다음의 문자열만 fileName
+			if (element.trim().startsWith("filename")) {
+				fileName = element.substring(element.indexOf('=') + 1);
+
+				// fileName에 [\"] ["]가 있다면 제거
+				// "는 직접 기재가 불가능 하기 떄문에 \" 표현한것임
+				fileName = fileName.trim().replace("\"", "");
+			}
+		}
+		return fileName;
+	}
+	
+	
 }
