@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
+<%@include file="logsession.jsp" %>
 <!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
 <script src="../js/http.js"></script>
 <script src="../js/json2.js"></script>
