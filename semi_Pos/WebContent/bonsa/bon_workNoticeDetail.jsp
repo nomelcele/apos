@@ -86,7 +86,7 @@
                                  <td>${ctlist.comm}</td>
                                  <td>${ctlist.redate}</td>
                                  <td><a href="bon.apos?cmd=bwork&subcmd=commdelete&no=${ctlist.no}&bo_num=${ctlist.bo_num}&writer=${ctlist.writer}&page=1">
-						X</a>
+						X</a></td>
                               </tr>
                               </c:forEach>
                            </tbody>

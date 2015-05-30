@@ -48,10 +48,13 @@
 		document.getElementById('final').innerHTML+=str9;
 	}
 	function gogo(){
+		var temp = price*0.01+mile; 
+		alert(temp);
 		var str5 = "<input type='hidden' name='fmileage' value='"+$('#mileage').val()+"'>";	
 		var str6 = "<input type='hidden' name='fset' value='"+j+"'>";
 		var str7 = "<input type='hidden' name='fcusnum' value='"+cusnum+"'>";
-		var str8 = "<input type='hidden' name='inmileage' value='"+((price*0.01)+(mile))+"'>";
+		var str8 = "<input type='hidden' name='inmileage' value='"+temp+"'>";
+		
 		document.getElementById('final').innerHTML+=str5;
 		document.getElementById('final').innerHTML+=str6;
 		document.getElementById('final').innerHTML+=str7;
@@ -106,7 +109,7 @@
 	<div id="final">
 		<input type="hidden" name="cmd" value="smang">
 		<input type="hidden" name="subcmd" value="final">
-		<input type='hidden' name='fshopnum' value='1'>
+<!-- 		<input type='hidden' name='fshopnum' value='1'> -->
 	</div>
 	</form>
 	<!-- --------------------------------------------------------- -->

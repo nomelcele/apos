@@ -4,6 +4,11 @@
 <%@include file="sh_left.jsp"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 본사의 업무관리의 공지사항 상세보기 페이지 입니다. --%>
+<script>
+	function comminaction(){
+		document.getElementById("comminform").submit();
+	}
+</script>
 <section id="main-content">
    <section class="wrapper">
 
@@ -59,6 +64,8 @@
                                  <td>${ctlist.writer }</td>
                                  <td>${ctlist.comm}</td>
                                  <td>${ctlist.redate}</td>
+                                 <td><a href="sh.apos?cmd=swork&subcmd=commdelete&no=${ctlist.no}&bo_num=${ctlist.bo_num}&writer=${ctlist.writer}&page=1">
+						X</a></td>
                               </tr>
                               </c:forEach>
                            </tbody>
@@ -68,7 +75,7 @@
 						<%@include file="page.jsp" %>
                      </div>
 <!--                      </form> -->
-                     <form method="post" action="sh.apos">
+                     <form method="post" action="sh.apos" id="comminform">
                      <div class="form-group">
                         <label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
                         <div class="col-lg-6">
@@ -77,7 +84,7 @@
                         </div>
                      </div>
                      <div class="form-group">
-                           <button type="submit" class="btn btn-danger" >댓글 작성</button>
+                           <button type="button" onclick="javascript:comminaction()"class="btn btn-danger" >댓글 작성</button>
                         <div class="col-lg-offset-2 col-lg-10" style="display:block;">
                         </div>
                      </div>

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import vo.MemVO;
 import vo.ProductVO;
@@ -50,7 +51,10 @@ public class SMangAction implements Action{
 			
 		}else if(subcmd.equals("final")){
 			url="sh_smangRegis.jsp";
-			int shopnum = Integer.parseInt(request.getParameter("fshopnum"));
+			HttpSession session = request.getSession();
+			int shopnum =  (int) session.getAttribute("shop_num");
+			System.out.println("세션의 샵넘 확인 : "+shopnum);
+			//int shopnum = Integer.parseInt(request.getParameter("fshopnum"));
 			int fmileage = Integer.parseInt(request.getParameter("fmileage"));
 			int cusnum = Integer.parseInt(request.getParameter("fcusnum"));
 			int s = Integer.parseInt(request.getParameter("fset"));
