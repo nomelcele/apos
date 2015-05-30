@@ -1,6 +1,6 @@
+<%@page import="vo.SmangVO"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="dao.SmangDao"%>
-<%@page import="vo.SmangVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
