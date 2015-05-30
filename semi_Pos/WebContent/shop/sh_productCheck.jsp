@@ -59,6 +59,10 @@
 		vD.innerHTML = response;
 		vD.style.display = "block";
 	}
+	
+	function productcheckaction(){
+		document.getElementById("productcheckform").submit();
+	}
 </script>
 <%-- 전체보기 위한 form --%>
 <!-- <form id="all"> -->
@@ -101,7 +105,7 @@
 
 					<header class="panel-heading tab-bg-primary ">
 						<div class="form-group " style="margin-left: -3%">
-							<form action="sh.apos" method="post">
+							<form action="sh.apos" method="post" id="productcheckform">
 
 								<div style="margin-bottom: -1%">
 									<label for="cname" class="control-label col-lg-1"
@@ -119,7 +123,7 @@
 
 										<div id="view"></div>
 									</div>
-									<input class="form-control6" type="submit" id="btn1"
+									<input class="form-control6" type="button" onclick="javascript:productcheckaction()" id="btn1"
 										name="btn1" value="조회">
 								</div>
 							</form>

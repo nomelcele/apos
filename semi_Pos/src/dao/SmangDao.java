@@ -172,18 +172,19 @@ public class SmangDao {
 		
 		
 	}
-	public ArrayList<SmangVO> getListProduct(String seq){
+	public ArrayList<SmangVO> getListProduct(String seq, int shop_num){
 		System.out.println(seq);
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		ArrayList<SmangVO> list = new ArrayList<SmangVO>();
 		StringBuffer sql = new StringBuffer();
-		sql.append("select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and p.pro_code = ? and sh.shop_num = 1");
+		sql.append("select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and p.pro_code = ? and sh.shop_num = ?");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, seq);
+			pstmt.setInt(2, shop_num);
 			rs = pstmt.executeQuery();
 			while(rs.next()){
 				SmangVO v = new  SmangVO();

@@ -83,7 +83,7 @@
 				url:"sh_smang_callback.jsp",
 				data:{name:$("#ckname").val()},
 				success:function(data){
-						$('#target').html(data);
+						$('#custarget').html(data);
 					}
 			});
 			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
@@ -150,7 +150,7 @@
                                  <th><i class="icon_cogs"></i> 선택</th>
                               </tr>
                               </thead>
-                              <tbody id="target">
+                              <tbody id="custarget">
                             <%--   <c:forEach var="stList" items="${list}">
                               <tr>
                                  <td>${stList.mem_num}</td>										

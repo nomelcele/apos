@@ -176,7 +176,7 @@
 									<input type="submit" id="send" value="글작성" class="btn btn-info" style="width: 55px; padding-left: 5px;">
 									<div style="height: 30px;"></div>
 								</form>
-								<div id="target"></div>
+								<div id="target" style="color: black;"></div>
 								<!-- chat----------------------------------------------------------------------->
                         
                             
@@ -244,8 +244,6 @@
 
 
                         </ul>
-                        확인용 체킃케ㅡㅊ케츠케츠케ㅡㅊ케츠케츠케ㅡㅊ케츠케츠케ㅡㅊ케ㅡ
-                        
                         
                         
                         
