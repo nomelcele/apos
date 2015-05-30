@@ -10,6 +10,11 @@
 <script src="../js/http.js"></script>
 <script src="../js/json2.js"></script>
 <script src="../js/suggestMem_pk.js"></script>
+<script>
+	function membercheckaction(){
+		document.getElementById("membercheckform").submit();
+	}
+</script>
 <section id="main-content">
 	<section class="wrapper">
 
@@ -25,7 +30,7 @@
 							<div class="panel-body">
 								<div class="form">
 
-									<form class="form-validate form-horizontal" id="feedback_form"
+									<form class="form-validate form-horizontal" id="membercheckform"
 										method="post" action="sh.apos">
 										<input type="hidden" name="cmd" value="smember"> <input
 											type="hidden" name="subcmd" value="check"> <input
@@ -41,7 +46,7 @@
 													autocomplete="off" type="text" required />
 												<div id="view"></div>
 											</div>
-											<input class="form-control6" type="submit" id="btn"
+											<input class="form-control6" type="button" onclick="javascript:membercheckaction()" id="btn"
 												name="btn" value="조회">
 										</div>
 
@@ -86,17 +91,17 @@
 													<!--pagination start(페이지)-->
 													<!--                           <div class="panel-body"> -->
 
-													<div class="text-center">
-														<ul class="pagination">
-															<li><a href="#">«</a></li>
-															<li><a href="#">1</a></li>
-															<li><a href="#">2</a></li>
-															<li><a href="#">3</a></li>
-															<li><a href="#">4</a></li>
-															<li><a href="#">5</a></li>
-															<li><a href="#">»</a></li>
-														</ul>
-													</div>
+<!-- 													<div class="text-center"> -->
+<!-- 														<ul class="pagination"> -->
+<!-- 															<li><a href="#">«</a></li> -->
+<!-- 															<li><a href="#">1</a></li> -->
+<!-- 															<li><a href="#">2</a></li> -->
+<!-- 															<li><a href="#">3</a></li> -->
+<!-- 															<li><a href="#">4</a></li> -->
+<!-- 															<li><a href="#">5</a></li> -->
+<!-- 															<li><a href="#">»</a></li> -->
+<!-- 														</ul> -->
+<!-- 													</div> -->
 											</div>
 										</div>
 									</form>
