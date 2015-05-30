@@ -3,6 +3,7 @@
    pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
+<%@include file="logsession.jsp" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 매장의업무관리- 연락처페이지입니다. -->
 <section id="main-content">

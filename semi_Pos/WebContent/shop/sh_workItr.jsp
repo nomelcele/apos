@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
+<%@include file="logsession.jsp" %>
 <!-- 매장의 업무관리 - 내부규정 페이지입니다. -->
 
 <style>

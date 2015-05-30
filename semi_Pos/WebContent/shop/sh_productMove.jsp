@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
+<%@include file="logsession.jsp" %>
 <!-- 매장의 상품관리 - 상품이동요청 페이지입니다. -->
 <section id="main-content">
 	<section class="wrapper">
