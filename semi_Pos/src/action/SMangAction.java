@@ -26,7 +26,8 @@ public class SMangAction implements Action{
 			url="sh_smangRegis.jsp";
 		}else if(subcmd.equals("exchRefu")){
 			url="sh_smangExchTefu.jsp";
-		}else if(subcmd.equals("check")){
+		}
+		else if(subcmd.equals("check")){
 			url="sh_smangRegis.jsp";
 			String name = request.getParameter("name");
 			HttpSession session = request.getSession();
