@@ -70,6 +70,52 @@ public class SalesCheckDao {
 		return list;
 
 	}
+	public ArrayList<SalesCheckVO> getonday(String shopnum,String day){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<SalesCheckVO> list = new ArrayList<SalesCheckVO>();
+		System.out.println("map" + shopnum);
+		System.out.println("gender" +day);
+
+		StringBuffer sql = new StringBuffer();
+		sql.append("select sell_pronum ,sell_cash, sell_memnum, to_char(sell_date,'yyyy_MM-dd-hh-MI') sedate,sell_many");
+		sql.append(" from sell where sell_shopnum=? and sell_date = to_date(?,'yy-MM-dd')");
+
+		try {
+			con = MyJndiContext.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, shopnum);
+			pstmt.setString(2, day);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				SalesCheckVO v = new SalesCheckVO();
+				System.out.println("test34" + rs.getInt("sell_cash"));
+				v.setDate(rs.getString("sedate"));
+				v.setSell_cash(rs.getInt("sell_cash"));
+				v.setSell_many(rs.getInt("sell_many"));
+				v.setSell_pronum(rs.getInt("sell_pronum"));
+				v.setSell_memnum(rs.getInt("sell_memnum"));
+				list.add(v);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+
+	}
+		
+	
 
 	public ArrayList<SalesCheckVO> getList(String shopname, String startdate,
 			String enddate) {
