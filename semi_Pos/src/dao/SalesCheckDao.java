@@ -80,7 +80,7 @@ public class SalesCheckDao {
 
 		StringBuffer sql = new StringBuffer();
 		sql.append("select sell_pronum ,sell_cash, sell_memnum, to_char(sell_date,'yyyy_MM-dd-hh-MI') sedate,sell_many");
-		sql.append(" from sell where sell_shopnum=? and sell_date = to_date(?,'yy-MM-dd')");
+		sql.append(" from sell where sell_shopnum=? and sell_date like to_date(?,'yy-MM-dd')");
 
 		try {
 			con = MyJndiContext.getDs();
