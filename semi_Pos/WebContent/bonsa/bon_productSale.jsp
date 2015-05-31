@@ -51,6 +51,24 @@
 		});
 		
 	});
+	
+	
+	$(function(){
+		$("#bon_p_numbtn").click(function(){
+			$.ajax({
+				type:"POST",
+				url:"bon_productSale_callback.jsp",
+				data:{pcode:$("#pcode3").val(),
+					  shopnum:$("#pnum3")},
+				success:function(data){
+					$('#target2').html(data);
+				}
+			});
+			return false;
+		});
+	})
+	
+	
 
 </script>
 <section id="main-content">
