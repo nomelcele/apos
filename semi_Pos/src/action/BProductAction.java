@@ -67,7 +67,15 @@ public class BProductAction implements Action {
 			
 		} else if (subcmd.equals("sale")) {
 			url = "bon_productSale.jsp";
+		}else if (subcmd.equals("stoedit")){
+			url = "bon_productSale.jsp";
+			int pamount = Integer.parseInt(request.getParameter("pamount"));
+			String pronum = request.getParameter("pcode");
+			int shopnum = Integer.parseInt(request.getParameter("shop"));
+			int psize = Integer.parseInt(request.getParameter("psize"));
+			ProductDao.getDao().stockedit(pamount, pronum, shopnum, psize);
 		}
+		
 		return new ActionForward(url, false);
 	}
 

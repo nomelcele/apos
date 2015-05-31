@@ -55,20 +55,31 @@
 	
 	$(function(){
 		$("#bon_p_numbtn").click(function(){
+			
 			$.ajax({
 				type:"POST",
 				url:"bon_productSale_callback.jsp",
 				data:{pcode:$("#pcode3").val(),
-					  shopnum:$("#pnum3")},
+					  shopnum:$("#pnum3").val()},
 				success:function(data){
 					$('#target2').html(data);
 				}
 			});
 			return false;
 		});
-	})
+	});
 	
 	
+	function proset(shopname, pcode, psize, pamount){
+		$("#shop").val(shopname);
+		$("#pcode").val(pcode);
+		$("#psize").val(psize);
+		$("#pamount").val(pamount);
+	}
+	
+	function pstoeditaction(){
+		document.getElementById("productstockedit").submit();
+	}
 
 </script>
 <section id="main-content">
@@ -84,7 +95,7 @@
 					<div class="col-lg-12">
 						<section class="panel">
 							<div class="panel-body">
-								<div class="form-group">
+						<!--  		<div class="form-group">
 									<label style="width: 100px;" for="cname"
 										class="control-label col-lg-2">상품명</label>
 									<div class="col-lg-4">
@@ -127,7 +138,7 @@
 											style="margin-left: 250px;">완료</button>
 									</div>
 								</div>
-
+-->
 
 
 								<div class="row" style="font-size: 15px;">
@@ -144,30 +155,103 @@
 												minlength="2" onkeydown="startSuggest();" autocomplete="off"
 												type="text" placeholder="지점번호">
 										</div>
-										<button class="btn btn-default" type="button" id="shnumbtn">조회</button>
+										<button class="btn btn-default" type="button" id="bon_p_numbtn">조회</button>
 									</div>
-									<div class="col-lg-12" style="width: 700px;">
-										<table class="table table-striped table-advance table-hover">
-											<thaed>
-												<tr>
-													<th>상품명</th>
-													<th>지점</th>
-													<th>사이즈</th>
-													<th>수량</th>
-												</tr>
-												</thaed>
-												<tbody id ="view_product2">
-												<tr>
-													<td id="tpname"></td>
-													<td></td>
-													<td></td>
-													<td></td>
-												</tr>
-											</tbody>
-										</table>
-										<button class="btn btn-default" type="button" id="ptablebtn"
-											style="margin-left: 500px;">완료</button>
-									</div>
+									
+									
+									
+									
+									
+									
+<!-- 									<div class="col-lg-12" style="width: 700px;"> -->
+<!-- 										<table class="table table-striped table-advance table-hover"> -->
+<!-- 											<thaed> -->
+<!-- 												<tr> -->
+<!-- 													<th>상품명</th> -->
+<!-- 													<th>지점</th> -->
+<!-- 													<th>사이즈</th> -->
+<!-- 													<th>수량</th> -->
+<!-- 												</tr> -->
+<!-- 												</thaed> -->
+<!-- 												<tbody id ="view_product2"> -->
+<!-- 												<tr> -->
+<!-- 													<td id="tpname"></td> -->
+<!-- 													<td></td> -->
+<!-- 													<td></td> -->
+<!-- 													<td></td> -->
+<!-- 												</tr> -->
+<!-- 											</tbody> -->
+<!-- 										</table> -->
+<!-- 										<button class="btn btn-default" type="button" id="ptablebtn" -->
+<!-- 											style="margin-left: 500px;">완료</button> -->
+<!-- 									</div> -->
+									
+									
+									
+									
+									
+									
+									<div class="table-responsive">
+
+							<table class="table">
+								<thead>
+									<tr>
+										<th>no</th>
+										<th>대리점</th>
+										<th>상품코드</th>
+										<th>사이즈</th>
+										<th>재고</th>
+										<th>가격</th>
+										<th>상품사진</th>
+										<th>바코드</th>
+										<th>선택</th>
+									</tr>
+								</thead>
+								<tbody id="target2">
+								
+								<%-- 반복 
+									 <c:forEach var="ptlist" items="${plist}">
+									 	<tr>
+									 		<td>${ptlist.pro_code}</td>
+									 		<td>${ptlist.sto_size }</td>
+									 		<td>${ptlist.sto_amount }</td>
+									 		<td>${ptlist.pro_price }</td>
+									 		<td>할인가</td>
+									 	</tr>
+									 </c:forEach>
+									 반복 --%>
+								</tbody>
+							</table>
+						</div>
+						
+						
+						
+						 <table class="table" style="width:800px;">
+                            <thead>
+                              <tr>
+                                <th>대리점</th>
+                                <th>상품코드</th>
+                                <th>사이즈</th>
+                                <th>수량</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                           
+                           <form action="bon.apos" method="post" id="productstockedit">
+                             <tr class="active">
+                                <td><input type="text" class="form-control" name='shop' id="shop" value="" readonly="readonly"></td>
+                                <td><input type="text" class="form-control" name='pcode' id="pcode" value="" readonly="readonly"></td>
+                                <td><input type="text" class="form-control" name='psize' id="psize" value="" readonly="readonly"></td>
+                                <td><input type="number" class="form-control" name='pamount' id="pamount" value="0"></td>                            
+                              </tr> 
+                              <input type="hidden" name="cmd" value="bproduct">
+                              <input type="hidden" name="subcmd" value="stoedit">
+                            </form>                   
+                              
+                            </tbody>
+                          </table>
+                          
+                          <button class="btn btn-default" type="button" onclick="javascript:pstoeditaction()">완료</button>
 
 
 								</div>

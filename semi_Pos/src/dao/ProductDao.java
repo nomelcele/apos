@@ -21,6 +21,33 @@ public class ProductDao {
 			dao = new ProductDao();
 		return dao;
 	}
+	public void stockedit(int pamount, String pronum, int shopnum, int psize){
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		try {
+			con = MyJndiContext.getDs();
+			StringBuffer sql = new StringBuffer();
+			sql.append("update stock set sto_amount=? where sto_pronum=? and sto_shopnum=? and sto_size=?");
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, pamount);
+			pstmt.setString(2, pronum);
+			pstmt.setInt(3, shopnum);
+			pstmt.setInt(4, psize);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 	public void insert(ProductVO vo) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
