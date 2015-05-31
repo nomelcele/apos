@@ -290,5 +290,7 @@ shop_map_y=127.07846688436801
 where shop_num =20;
 
 
-
+--0531 체팅 추가 
+create table croom (num number(10) constraint cromm_num_pk primary key,u_id varchar2(50),chat varchar2(400),cdate date,reip varchar2(100));
+create SEQUENCE croot_seq increment by 1 start with 1;
 commit
