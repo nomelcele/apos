@@ -9,29 +9,24 @@
 <script src="../js/suggest_shop_pk.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
-	var shop_name = "${sessionScope.shop_name}";
+	var shop_num = "${sessionScope.shop_num}";
 	$(function() {
 
-		$('#btn_out')
+		$('#btn_out2')
 				.click(
 						function() {
-							alert(shop_name);
-							alert("shopname=" + shop_name + "date_ps="
-									+ $('#date_ps').val() + "&date_ps2="
-									+ $('#date_ps2').val());
+							alert(shop_num);
+							alert("shopnum=" + shop_num + "date_ps="
+									+ $('#date_ps').val());
 
-							if ($('#date_ps').val() != ""
-									&& $('#date_ps2').val() != "") {
-								if ($('#date_ps').val() < $('#date_ps2').val()) {
+							
 									alert("test2");
 									$
 											.ajax({
-												url : "sh_ajaxoutletsale.jsp?shop_name="
-														+ shop_name
+												url : "sh_ajaxsaletable.jsp?shop_num="
+														+ shop_num
 														+ "&date_ps="
-														+ $('#date_ps').val()
-														+ "&date_ps2="
-														+ $('#date_ps2').val(),
+														+ $('#date_ps').val(),
 												type : "post",
 												dataType : "html",
 												success : function(data) {
@@ -42,67 +37,10 @@
 												}
 
 											});
-								} else {
-									alert("날짜선택을 잘못하셧습니다.시작날짜가 마지막 날짜보다 큽니다.");
-								}
-							} else
-
-							{
-								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
-							}
-							$.ajax({
-								url : "sh_ajaxoutletChart.jsp?shop_name="
-										+ shop_name + "&date_ps="
-										+ $('#date_ps').val() + "&date_ps2="
-										+ $('#date_ps2').val(),
-								type : "post",
-								dataType : "html",
-								success : function(data) {
-									alert("callback");
-									res2 = eval(data);
-									var result = eval(res2);
-									alert(res2);
-									drawVisualization();
-									res2 = null;
-								}
-
-							});
+							
 						})
 	})
 
-	google.load("visualization", "1", {
-		packages : [ "corechart" ]
-	});
-	google.setOnLoadCallback(drawVisualization);
-	var res = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 165, 938 ],
-			[ '2005/06', 135, 1120 ], [ '2006/07', 157, 1167 ],
-			[ '2007/08', 139, 1110 ], [ '2008/09', 136, 691 ] ];
-	var res2 = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
-			[ '2005-06', 135, 1120, 599, ], [ '2006-07', 157, 1167, 587, ] ];
-	function drawVisualization() {
-		// Some raw data (not necessarily accurate)
-		var data = google.visualization.arrayToDataTable(res2);
-
-		var options = {
-			title : '매출관리',
-			vAxis : {
-				title : "금액"
-			},
-			hAxis : {
-				title : "Month"
-			},
-			seriesType : "bars",
-			series : {
-				5 : {
-					type : "line"
-				}
-			}
-		};
-
-		var chart = new google.visualization.ComboChart(document
-				.getElementById('chart_div'));
-		chart.draw(data, options);
-	}
 </script>
 
 <section id="main-content">
@@ -124,12 +62,9 @@
 
 						<div style="margin-left: 10px;">
 							<label for="cname" class="control-label col-lg-2"><p
-									align="left">기간</p> </label> <input id="date_ps" name="date_ps"
-								minlength="2" autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
-								name="date_ps2" minlength="2" autocomplete="off" type="date"
-								required /> <input class="form-control6"
-								style="margin-left: 10px;" type="button" id="btn_out" name="btn"
+									align="left">날짜</p> </label> <input id="date_ps" name="date_ps"
+								minlength="2" autocomplete="off" type="date" required /> <input class="form-control6"
+								style="margin-left: 10px;" type="button" id="btn_out2" name="btn2"
 								value="조회">
 
 						</div>
@@ -145,9 +80,10 @@
 						<p></p>
 						<tr>
 							<th><i class="icon_profile"></i>날짜</th>
-							<th><i class="icon_profile"></i>대리점명</th>
+							<th><i class="icon_profile"></i>상품번호</th>
 							<th><i class="icon_mail_alt"></i>판매 액</th>
 							<th><i class="icon_pin_alt"></i>판매 수량</th>
+							<th><i class="icon_profile"></i>구매 고객 번호</th>
 						</tr>
 
 					</thead>
