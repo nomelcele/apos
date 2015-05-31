@@ -4,7 +4,6 @@
 <c:choose>
 	<c:when test="${sessionScope.radio == 'master'}"> 
 		<script>
-			alert("Master page");
 			$('#hideMenu').show(); // 정산관리 보이게 하기 display:none
 			$('#staff_span').hide();
 			$('#master_span').show();
@@ -12,7 +11,6 @@
 	</c:when>
 	<c:when test="${sessionScope.radio == 'staff'}"> 
 		<script>
-			alert("Staff page");
 			$('#master_span').hide();
 			$('#staff_span').show();
 		</script>
