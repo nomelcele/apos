@@ -72,7 +72,7 @@
          document.getElementById("regis").submit();
       }
       else if(str == "exchRefu"){
-         document.getElementById("exchRefu").submit();
+    	  document.getElementById("exchRefu").submit();
       }
    }
    
@@ -198,10 +198,12 @@
 <input type="hidden" name="subcmd" value="sregi">
 </form>
 
-<form method="post" action="sh.apos" id="rank">
+<form method="post" action="sh.apos" id="exchRefu">
 <input type="hidden" name="cmd" value="smang">
 <input type="hidden" name="subcmd" value="exchRefu">
 </form>
+
+
 
       <!--sidebar start-->
       <aside>
