@@ -76,7 +76,7 @@ public class ShDao {
 		ArrayList<MemVO> list = new ArrayList<MemVO>();
 
 		StringBuffer sql = new StringBuffer();
-		sql.append("select * from member where mem_name=? or mem_tel=?");
+		sql.append("select * from member where mem_name like ? or mem_tel like ?");
 		try {
 			con = MyJndiContext.getDs();
 			pstmt = con.prepareStatement(sql.toString());
