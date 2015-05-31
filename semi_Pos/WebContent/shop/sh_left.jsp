@@ -127,6 +127,7 @@
 <form method="post" action="sh.apos" id="check">
 <input type="hidden" name="cmd" value="smember">
 <input type="hidden" name="subcmd" value="check">
+<input type="hidden" name ="name" value="">
 <input type="hidden" name="page" value="1">
 </form>
 
