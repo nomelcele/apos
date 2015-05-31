@@ -90,12 +90,12 @@
 	// onopen : 서버가 연결이 되었을 때 발생
 	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
 		
-		<% System.out.println("체크1");%>
+		
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
 		event.data+"</ul></div>";
 //		$("#target").html("<div class='panel-body'><div class='padd sscroll'><ul class='chats'>"+
 //				event.data+"</ul></div>");
-		<% System.out.println("체크5");%>
+		
 	};
 	}else{
 		$("#target").html("해당 브라우저는 지원이 안됩니다.")
