@@ -39,6 +39,8 @@ public class SMemberAction implements Action {
 		}else if(subcmd != null && subcmd.equals("check")){
 			url="sh_memberCheck.jsp";
 			String name= request.getParameter("name");
+			name +='%';
+			System.out.println("========================== ==========test:"+name);
 			ArrayList<MemVO>list = ShDao.getDao().getListMember(name);
 			request.setAttribute("list", list);
 		}else if(subcmd != null && subcmd.equals("detail")){
