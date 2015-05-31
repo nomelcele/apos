@@ -71,7 +71,7 @@ public class SWorkAction implements Action{
 		} else if(subcmd.equals("tel")){			
 			url="sh_workTel.jsp";
 			String name = request.getParameter("name");
-			System.out.println("확인");
+			System.out.println("확인 :"+name);
 			ArrayList<StaffVO> list = StaffDao.getDao().suggestList(name);
 			request.setAttribute("list",list);
 		}else if(subcmd != null && subcmd.equals("commdelete")){

@@ -77,14 +77,21 @@ public class StaffDao {
 			System.out.println("test");
 			con = MyJndiContext.getDs();
 			StringBuffer sql = new StringBuffer();
-			sql.append("select st.staff_num stn, sh.shop_name shn, st.staff_tel stt, st.staff_position stp, st.staff_name stna from staff st,shop sh where st.staff_shopnum=sh.shop_num and sh.shop_name like ? or staff_tel like ?");
+			if(check == null || check.equals("")){
+				System.out.println("없음");
+				sql.append("select st.staff_num stn, sh.shop_name shn, st.staff_tel stt, st.staff_position stp, st.staff_name stna from staff st,shop sh where st.staff_shopnum=sh.shop_num");
+				pstmt = con.prepareStatement(sql.toString());
+				rs = pstmt.executeQuery();
+			}else{
+				System.out.println("있음");
+				sql.append("select st.staff_num stn, sh.shop_name shn, st.staff_tel stt, st.staff_position stp, st.staff_name stna from staff st,shop sh where st.staff_shopnum=sh.shop_num and sh.shop_name like ? or staff_tel like ?");
+				pstmt = con.prepareStatement(sql.toString());
+				String str3 = "%" + check + "%";
+				pstmt.setString(1, str3);
+				pstmt.setString(2, str3);
+				rs = pstmt.executeQuery();
 
-			pstmt = con.prepareStatement(sql.toString());
-			String str3 = "%" + check + "%";
-			pstmt.setString(1, str3);
-			pstmt.setString(2, str3);
-			rs = pstmt.executeQuery();
-
+			}
 			while (rs.next()) {
 				StaffVO v = new StaffVO();
 				v.setShop_snum(Integer.parseInt(rs.getString("stn")));
