@@ -13,7 +13,7 @@ function gosecedeUrl(str){
 	}
 }
 $(function(){
-	$('#memchange').click(function(){
+	$('#memchange2').click(function(){
 		$('#memtel').attr("readonly",false);
 		$('#addr').attr("readonly",false);
 		$('#deaddr').attr("readonly",false);
@@ -110,7 +110,7 @@ $(function(){
 
 							<div class="form-group" style="margin-left: 200px; margin-top: 30px;" >
 								<div class="col-lg-offset-2 col-lg-12">
-									<button class="btn btn-default" type="button" id="memchange">수정</button>
+									<button class="btn btn-default" type="button" id="memchange2">수정</button>
 									<button class="btn btn-default" type="submit" id="gosecede" >
 									<a href="javascript:gosecedeUrl('gosecede')">탈퇴</a></button>
 									<button class="btn btn-primary" type="submit" id="finish">완료</button>
