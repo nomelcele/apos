@@ -119,19 +119,19 @@
 	
 // Ajax로 사용자의 데이터를 보내는 쪽 
 //사용자가 입력한 내용을 서버에 저장
-	$(function(){
-		$("form").submit(function(){
-			var fdata = {
-					u_id:encodeURIComponent($("#u_id").val()),
-					chat:encodeURIComponent($("#chat").val())};
-			$.ajax({ //ajax로 보냄
-				type:"POST", //헤더에 넣어서보냄 (URL로 안보임)
-				url:"chat_add.jsp",
-				data:fdata
-			});
-			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
-		});
-	});
+// 	$(function(){
+// 		$("form").submit(function(){
+// 			var fdata = {
+// 					u_id:encodeURIComponent($("#u_id").val()),
+// 					chat:encodeURIComponent($("#chat").val())};
+// 			$.ajax({ //ajax로 보냄
+// 				type:"POST", //헤더에 넣어서보냄 (URL로 안보임)
+// 				url:"chat_add.jsp",
+// 				data:fdata
+// 			});
+// 			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
+// 		});
+// 	});
 </script>
 
 
