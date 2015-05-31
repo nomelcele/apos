@@ -49,7 +49,9 @@
                         <textarea name="" id="" class="form-control7" cols="30" rows="5" style="min-width: 350px; max-width: 700px; height:100px; float: left;" readonly="readonly">${v.content}</textarea>
                         
                           <%-- 이미지 크기 --%>
-                         <img src="${v.path}" style="width: 350px; resize: none ">
+                          <c:set var="chkpath" value="..\upload\null" />
+                          <c:if test="${v.path ne chkpath }"> <img src="${v.path}" style="width: 350px; resize: none "></c:if>
+                        
                          </div>
                     <form action="bon.apos" method="post" id="deleteform">
                     <input type="hidden" name="cmd" value="bwork">
@@ -92,8 +94,11 @@
                            </tbody>
                            
                         </table>
-                        <c:set var="pageUrl" value="bonsa.apos?cmd=bwork&subcmd=boardDetail&no=${v.no}"/>
-						<%@include file="page.jsp" %>
+<%--                         <c:set var="pageUrl" value="bonsa.apos?cmd=bwork&subcmd=boardDetail&no=${v.no}"/> --%>
+<%--                         <c:set var="chkcomm" value=""/> --%>
+<%--                         <input type="text" value="${ctlist.writer}"> --%>
+<%--                         <c:if test="${ctlist.writer ne chkcomm}"><%@include file="page.jsp" %></c:if> --%>
+						
                      </div>
 <!--                      </form> -->
                      <form method="post" action="bon.apos" id="commin">
