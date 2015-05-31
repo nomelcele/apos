@@ -1,7 +1,25 @@
 package vo;
 
 public class SalesCheckVO {
-	private int count, sell_cash, sell_card,sell_pronum,sell_many,sell_memnum;
+	private String sell_memname;
+
+
+	private int count, sell_cash, sell_card,sell_pronum,sell_many,sell_memnum,sell_num;
+	public int getSell_num() {
+		return sell_num;
+	}
+
+	public void setSell_num(int sell_num) {
+		this.sell_num = sell_num;
+	}
+
+	public String getSell_memname() {
+		return sell_memname;
+	}
+
+	public void setSell_memname(String sell_memname) {
+		this.sell_memname = sell_memname;
+	}
 	public int getSell_memnum() {
 		return sell_memnum;
 	}
