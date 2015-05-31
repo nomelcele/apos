@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
-<%@include file="logsession.jsp" %>
+<%@include file="logsession.jsp"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%-- 주석은 이런식으로? --%>
@@ -11,7 +11,7 @@
 <script src="../js/json2.js"></script>
 <script src="../js/suggestMem_pk.js"></script>
 <script>
-	function membercheckaction(){
+	function membercheckaction() {
 		document.getElementById("membercheckform").submit();
 	}
 </script>
@@ -30,24 +30,24 @@
 							<div class="panel-body">
 								<div class="form">
 
-									<form class="form-validate form-horizontal" id="membercheckform"
-										method="post" action="sh.apos">
+									<form class="form-validate form-horizontal"
+										id="membercheckform" method="post" action="sh.apos">
 										<input type="hidden" name="cmd" value="smember"> <input
 											type="hidden" name="subcmd" value="check"> <input
 											type="hidden" name="page" value="1">
 
 										<div class="form-group ">
-											<label for="cname" class="control-label col-lg-1"><p style=font-size:11pt>
-											이름</p> 
-											</label>
+											<label for="cname" class="control-label col-lg-1"><p
+													style="font-size: 11pt">이름</p> </label>
 											<div class="col-lg-3" style="margin-left: -5%;">
 												<input class="form-control" id="sname_ps" name="name"
 													minlength="2" onkeydown="startSuggest();"
 													autocomplete="off" type="text" required />
 												<div id="view"></div>
 											</div>
-											<input class="form-control6" type="button" onclick="javascript:membercheckaction()" id="btn"
-												name="btn" value="조회">
+											<input class="form-control6" type="button"
+												onclick="javascript:membercheckaction()" id="btn" name="btn"
+												value="조회">
 										</div>
 
 
@@ -57,33 +57,40 @@
 												<section class="panel">
 													<table
 														class="table table-striped table-advance table-hover">
-														<tbody>
-															<tr>
-																<th><i class="icon_profile col-lg-2"></i> 고객번호</th>
-																<th><i class="icon_profile col-lg-2"></i> 이름</th>
-																<th><i class="icon_mail_alt col-lg-2"></i> Email</th>
-																<th><i class="icon_pin_alt col-lg-2"></i> 주소</th>
-																<th><i class="icon_mobile col-lg-2"></i> 핸드폰번호</th>
-																<th><i class="icon_calendar col-lg-2"></i> 가입날짜</th>
-															</tr>
-															<c:forEach var="stList" items="${list}">
-																<form id="" action="sh.apos" method="post">
-																	<input type="hidden" id="cmd" name="cmd"
-																		value="smember">
-																</form>
+														<table class="table">
+															<thead>
 																<tr>
-																	<td>${stList.mem_num}</td>
-																	<td><a
-																		href="sh.apos?cmd=smember&subcmd=detail&num=${stList.mem_num}&page=1">${stList.mem_name}</a></td>
-																	<td>${stList.mem_email}</td>
-																	<td>${stList.mem_addr}</td>
-																	<td>${stList.mem_tel}</td>
-																	<td>${stList.mem_date}</td>
-
+																	<th>고객번호</th>
+																	<th>이름</th>
+																	<th>Email</th>
+																	<th>주소</th>
+																	<th>핸드폰번호</th>
+																	<th>가입날짜</th>
 																</tr>
+															</thead>
+															<tbody>
+															<c:forEach var="stList" items="${list}">
+																<!-- 																<form id="" action="sh.apos" method="post"> -->
+																<!-- 																	<input type="hidden" id="cmd" name="cmd" -->
+																<!-- 																		value="smember"> -->
+																<!-- 
+																															</form> -->
+
+																
+																	<tr>
+																		<th>${stList.mem_num}</th>
+																		<th><a
+																			href="sh.apos?cmd=smember&subcmd=detail&num=${stList.mem_num}&page=1">${stList.mem_name}</a></th>
+																		<th>${stList.mem_email}</th>
+																		<th>${stList.mem_addr}</th>
+																		<th>${stList.mem_tel}</th>
+																		<th>${stList.mem_date}</th>
+
+																	</tr>
 															</c:forEach>
 
-														</tbody>
+															</tbody>
+														</table>
 													</table>
 
 
@@ -91,17 +98,17 @@
 													<!--pagination start(페이지)-->
 													<!--                           <div class="panel-body"> -->
 
-<!-- 													<div class="text-center"> -->
-<!-- 														<ul class="pagination"> -->
-<!-- 															<li><a href="#">«</a></li> -->
-<!-- 															<li><a href="#">1</a></li> -->
-<!-- 															<li><a href="#">2</a></li> -->
-<!-- 															<li><a href="#">3</a></li> -->
-<!-- 															<li><a href="#">4</a></li> -->
-<!-- 															<li><a href="#">5</a></li> -->
-<!-- 															<li><a href="#">»</a></li> -->
-<!-- 														</ul> -->
-<!-- 													</div> -->
+													<!-- 													<div class="text-center"> -->
+													<!-- 														<ul class="pagination"> -->
+													<!-- 															<li><a href="#">«</a></li> -->
+													<!-- 															<li><a href="#">1</a></li> -->
+													<!-- 															<li><a href="#">2</a></li> -->
+													<!-- 															<li><a href="#">3</a></li> -->
+													<!-- 															<li><a href="#">4</a></li> -->
+													<!-- 															<li><a href="#">5</a></li> -->
+													<!-- 															<li><a href="#">»</a></li> -->
+													<!-- 														</ul> -->
+													<!-- 													</div> -->
 											</div>
 										</div>
 									</form>
