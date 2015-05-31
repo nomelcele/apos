@@ -207,8 +207,7 @@
                       </a>
                       <ul class="sub">                          
                           <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
-                          <li><a class="" href="javascript:goUrl('move')">상품이동</a></li>
-                      </ul>
+                           </ul>
                   </li>
               <li class="sub-menu">
                       <a href="javascript:;" class="">
