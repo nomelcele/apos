@@ -165,5 +165,46 @@ public class SalesCheckDao {
 		return list;
 
 	}
+	public ArrayList<SalesCheckVO> searchSellnum(int sellnum){
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<SalesCheckVO> list = new ArrayList<SalesCheckVO>();
+		System.out.println("map" + sellnum);
 
+		StringBuffer sql = new StringBuffer();
+		sql.append("select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m");
+		sql.append(" where s.sell_memnum = m.mem_num and sell_num =?");
+
+		try {
+			con = MyJndiContext.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setInt(1, sellnum);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				SalesCheckVO v = new SalesCheckVO();
+				System.out.println("test34" + rs.getInt("sell_cash"));
+				v.setSell_num(rs.getInt("sell_num"));
+				v.setSell_memname(rs.getString("sell_memname"));
+				v.setSell_cash(rs.getInt("sell_cash"));
+				v.setSell_many(rs.getInt("sell_many"));
+				v.setSell_pronum(rs.getInt("sell_pronum"));
+				list.add(v);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+
+	}
 }
