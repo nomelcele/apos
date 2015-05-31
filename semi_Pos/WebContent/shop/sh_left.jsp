@@ -232,9 +232,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('join')">회원가입</a></li>                          
-                          <li><a class="" href="javascript:goUrl('check')">회원조회</a></li>
-                          <li><a class="" href="javascript:goUrl('change')">회원수정</a></li>
-                          <li><a class="" href="javascript:goUrl('out')">회원탈퇴</a></li>
+                          <li><a class="" href="javascript:goUrl('check')">회원조회/수정</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -268,7 +266,7 @@
                       </a>
                       <ul class="sub">                          
                           <li><a class="" href="javascript:goUrl('table')">판매현황</a></li>
-                          <li><a class="" href="javascript:goUrl('rank')"><span>상품판매순위</span></a></li>
+                          <li><a class="" href="javascript:goUrl('rank')"><span>기간별 판매현황</span></a></li>
                       </ul>
                   </li>
               </ul>
