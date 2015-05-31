@@ -112,7 +112,10 @@
 			$.ajax({ //ajax로 보냄
 				type:"POST", //헤더에 넣어서보냄 (URL로 안보임)
 				url:"chat_add.jsp",
-				data:fdata
+				data:fdata,
+				success:function(){
+					$("#chat").val("");
+				}
 			});
 			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
 		});
