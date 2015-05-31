@@ -243,7 +243,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('pcheck')">상품조회</a></li>
-                          <li><a class="" href="javascript:goUrl('move')">상품이동요청</a></li>
+                          
                       </ul>
                   </li>
                   <li class="sub-menu">
