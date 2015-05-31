@@ -41,8 +41,23 @@
    <script src="../js/sparklines.js"></script>   
    <script src="../js/charts.js"></script>
    <script src="../js/jquery.slimscroll.min.js"></script>
-  
   <script>
+	$(function(){
+		$("#send").click(function(){
+			$.ajax({
+				type:"POST",
+				url:"chat_add.jsp",
+				data:{chat:$("#chat").val()},
+				success:function(){
+					$("#chat").val("");
+				}
+			});
+			return false;
+		});
+	});
+</script>
+  <script>
+  
 	function goUrl(str){
 		if(str == "notice"){
 			document.getElementById("notice").submit();

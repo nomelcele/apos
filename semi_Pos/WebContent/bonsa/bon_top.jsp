@@ -172,7 +172,7 @@
 									<div class="form-group" >
 									<input type="text" class="form-control" id="chat" name="chat" required="required" placeholder="대화내용" style="float:left;">
 									</div>
-									<input type="submit" id="send" value="글작성" class="btn btn-info" style="width: 55px; padding-left: 5px;">
+									<input type="button" id="send" value="글작성" class="btn btn-info" style="width: 55px; padding-left: 5px;">
 									<div style="height: 30px;"></div>
 								</form>
 								<div id="target"></div>
