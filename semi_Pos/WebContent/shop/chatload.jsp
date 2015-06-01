@@ -7,7 +7,7 @@
 	//shop쪽
 	response.setHeader("cache-control", "no-cache");
 	response.setContentType("text/event-stream");
-	String id = (String) session.getAttribute("shop_id");
+	String id = (String) session.getAttribute("shop_name");
 	ArrayList<ChaVO> list = ChatDao.getDao().getList();
 	StringBuffer outs = new StringBuffer();
 	//outs.append("retry:2000\n");
