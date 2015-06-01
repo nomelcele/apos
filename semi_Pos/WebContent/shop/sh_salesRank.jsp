@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="sh_top.jsp"%>
 <%@include file="sh_left.jsp"%>
-<%@include file="logsession.jsp" %>
+<%@include file="logsession.jsp"%>
 <!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
 <script src="../js/http.js"></script>
 <script src="../js/json2.js"></script>
@@ -15,15 +15,13 @@
 		$('#btn_out')
 				.click(
 						function() {
-							alert(shop_name);
-							alert("shopname=" + shop_name + "date_ps="
-									+ $('#date_ps').val() + "&date_ps2="
-									+ $('#date_ps2').val());
+							//alert(shop_name);
+							//alert("shopname=" + shop_name + "date_ps="+ $('#date_ps').val() + "&date_ps2="+ $('#date_ps2').val());
 
 							if ($('#date_ps').val() != ""
 									&& $('#date_ps2').val() != "") {
 								if ($('#date_ps').val() < $('#date_ps2').val()) {
-									alert("test2");
+									//alert("test2");
 									$
 											.ajax({
 												url : "sh_ajaxoutletsale.jsp?shop_name="
@@ -35,7 +33,7 @@
 												type : "post",
 												dataType : "html",
 												success : function(data) {
-													alert(data);
+													//alert(data);
 													str = data.trim();
 													document
 															.getElementById("view_product").innerHTML = str;
@@ -58,10 +56,10 @@
 								type : "post",
 								dataType : "html",
 								success : function(data) {
-									alert("callback");
+									//alert("callback");
 									res2 = eval(data);
 									var result = eval(res2);
-									alert(res2);
+									//alert(res2);
 									drawVisualization();
 									res2 = null;
 								}
@@ -74,10 +72,10 @@
 		packages : [ "corechart" ]
 	});
 	google.setOnLoadCallback(drawVisualization);
-	var res = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 165, 938 ],
-			[ '2005/06', 135, 1120 ], [ '2006/07', 157, 1167 ],
-			[ '2007/08', 139, 1110 ], [ '2008/09', 136, 691 ] ];
-	var res2 = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
+	var res2 = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 5, 0 ],
+			[ '2005/06', 5, 0 ], [ '2006/07', 5, 0 ],
+			[ '2007/08', 5, 0 ], [ '2008/09', 5, 0 ] ];
+	var res = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
 			[ '2005-06', 135, 1120, 599, ], [ '2006-07', 157, 1167, 587, ] ];
 	function drawVisualization() {
 		// Some raw data (not necessarily accurate)

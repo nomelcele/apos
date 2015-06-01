@@ -15,12 +15,12 @@
 		$('#btn_out2')
 				.click(
 						function() {
-							alert(shop_num);
-							alert("shopnum=" + shop_num + "date_ps="
-									+ $('#date_ps').val());
+							//alert(shop_num);
+// 							alert("shopnum=" + shop_num + "date_ps="
+// 									+ $('#date_ps').val());
 
 							
-									alert("test2");
+									//alert("test2");
 									$
 											.ajax({
 												url : "sh_ajaxsaletable.jsp?shop_num="
@@ -30,7 +30,7 @@
 												type : "post",
 												dataType : "html",
 												success : function(data) {
-													alert(data);
+													//alert(data);
 													str = data.trim();
 													document
 															.getElementById("view_product").innerHTML = str;
