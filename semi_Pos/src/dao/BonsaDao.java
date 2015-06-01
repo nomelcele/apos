@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import vo.BonsaVO;
+import vo.ShopVO;
 import conn.MyJndiContext;
 
 public class BonsaDao {
@@ -215,5 +216,34 @@ public class BonsaDao {
 		}
 		return bon_name;
 	}
+	
+	
+	public ShopVO detailmap(int shop_num){
+	      Connection con= null;
+	      PreparedStatement pstmt=null;
+	      ResultSet rs = null;
+	      ShopVO vo =null;
+
+	      try {
+	         con=MyJndiContext.getDs();
+	         StringBuffer sql = new StringBuffer();
+	         sql.append("select * from shop where shop_num=?");
+	         pstmt = con.prepareStatement(sql.toString());
+	         pstmt.setInt(1,shop_num);
+	         rs = pstmt.executeQuery();
+	         while(rs.next()){
+	            vo = new ShopVO();
+	            vo.setAdr(rs.getString("shop_adr"));
+	            vo.setMap_x(rs.getFloat("shop_map_x"));
+	            vo.setMap_y(rs.getFloat("shop_map_y"));
+	            vo.setName(rs.getString("shop_name"));
+	            vo.setMaster(rs.getString("shop_master"));
+	         }
+	         
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	      }
+	      return vo;
+	   }
 	
 }
