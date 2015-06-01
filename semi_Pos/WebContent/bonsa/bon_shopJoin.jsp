@@ -9,7 +9,7 @@
 <!-- 본사 매장관리의 매장가입 페이지 입니다.-->
 <section id="main-content">
 	<section class="wrapper">
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px; width:1500px;">
 			<div class="col-lg-12">
 
 				<h3 class="page-header">
