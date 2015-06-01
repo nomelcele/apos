@@ -90,7 +90,7 @@
 <section id="main-content">
 	<section class="wrapper">
 
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px; width:1200px;">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 재고조정
@@ -98,7 +98,7 @@
 
 
 				<div class="row">
-					<div class="col-lg-12">
+					<div class="col-lg-12" >
 						<section class="panel">
 							<div class="panel-body">
 
