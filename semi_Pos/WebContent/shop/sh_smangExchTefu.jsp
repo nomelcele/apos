@@ -9,7 +9,7 @@ var receipNo ;
 $(function(){
 	$("#sh_exc").click(function(){
 		receipNo = $("#receiptno").val();
-		alert("test");
+		//alert("test");
 		$.ajax({ //ajax로 보냄
 			type:"POST", //헤더에 넣어서보냄 (URL로 안보임)
 			url:"sh_ajaxsmangexc.jsp",
