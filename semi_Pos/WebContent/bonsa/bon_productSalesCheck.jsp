@@ -11,14 +11,14 @@
 		$('#btn_out')
 				.click(
 						function() {
-							alert("shopname=" + $('#shop_name').val()
-									+ "date_ps=" + $('#date_ps').val()
-									+ "&date_ps2=" + $('#date_ps2').val());
+// 							alert("shopname=" + $('#shop_name').val()
+// 									+ "date_ps=" + $('#date_ps').val()
+// 									+ "&date_ps2=" + $('#date_ps2').val());
 
 							if ($('#date_ps').val() != ""
 									&& $('#date_ps2').val() != "") {
 								if ($('#date_ps').val() < $('#date_ps2').val()) {
-									alert("test2");
+									//alert("test2");
 									$
 											.ajax({
 												url : "bon_ajaxproductsale.jsp?pro_code="
@@ -30,7 +30,7 @@
 												type : "post",
 												dataType : "html",
 												success : function(data) {
-													alert(data);
+													//alert(data);
 													str = data.trim();
 													document
 															.getElementById("view_product").innerHTML = str;
@@ -53,10 +53,10 @@
 								type : "post",
 								dataType : "html",
 								success : function(data) {
-									alert("callback");
+									//alert("callback");
 									res2 = eval(data);
 									var result = eval(res2);
-									alert(res2);
+									//alert(res2);
 									drawVisualization();
 									res2 = null;
 								}
@@ -69,10 +69,10 @@
 		packages : [ "corechart" ]
 	});
 	google.setOnLoadCallback(drawVisualization);
-	var res = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 165, 938 ],
-			[ '2005/06', 135, 1120 ], [ '2006/07', 157, 1167 ],
-			[ '2007/08', 139, 1110 ], [ '2008/09', 136, 691 ] ];
-	var res2 = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
+	var res2 = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 165,0 ],
+			[ '2005/06', 135, 0 ], [ '2006/07', 157, 0],
+			[ '2007/08', 139, 0 ], [ '2008/09', 136, 0 ] ];
+	var res = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
 			[ '2005-06', 135, 1120, 599, ], [ '2006-07', 157, 1167, 587, ] ];
 	function drawVisualization() {
 		// Some raw data (not necessarily accurate)
