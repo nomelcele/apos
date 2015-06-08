@@ -33,9 +33,17 @@ public class SMemberAction implements Action {
 		} else if (subcmd != null && subcmd.equals("out")) {
 			url = "sh_memberOut.jsp";
 		} else if (subcmd != null && subcmd.equals("insert")) {
-			HashMap<String, String> maps = MyMap.getMaps().getMapList(request);
-			ShDao.getDao().insertMem(maps);
-			
+			MemVO vo = new MemVO();
+			vo.setMem_name(request.getParameter("name"));
+			vo.setMem_tel(request.getParameter("tel1")+"-"+request.getParameter("tel2")+"-"+request.getParameter("tel3"));
+			vo.setMem_date(request.getParameter("date"));
+			vo.setMem_post(request.getParameter("adr1")+"-"+request.getParameter("adr2"));
+			vo.setMem_addr(request.getParameter("adr3"));
+			vo.setMem_deaddr(request.getParameter("adr4"));
+			vo.setMem_shopnum(1);
+			vo.setMem_email(request.getParameter("email"));
+			ShDao.getDao().insertMem(vo);
+			url = "sh_memberCheck.jsp";
 		}else if(subcmd != null && subcmd.equals("check")){
 			url="sh_memberCheck.jsp";
 			String name= request.getParameter("name");
