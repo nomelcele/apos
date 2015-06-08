@@ -9,7 +9,7 @@
 		<typeAlias type="vo.BoardVO" alias="bvo" />
 		<typeAlias type="vo.BonsaVO" alias="bonvo" />
 		<typeAlias type="vo.ChaVO" alias="chavo" />
-		<typeAlias type="vo.CommVO" alias="Commvo" />
+		<typeAlias type="vo.CommVO" alias="commvo" />
 		<typeAlias type="vo.MemVO" alias="memvo" />
 		<typeAlias type="vo.PageVO" alias="pagevo" />
 		<typeAlias type="vo.ProductVO" alias="provo" />
