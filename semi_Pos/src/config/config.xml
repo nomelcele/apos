@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- <configuration> :  -->
+<configuration>
+<!-- <typeAliases> : vo객체의 이름을 짧게 할려고 함  -->
+   <typeAliases>
+      <typeAlias type="vo.BbsVO" alias="bvo"/>
+      <typeAlias type="vo.Bbs1CommVO" alias="cvo"/>
+   </typeAliases>
+   <!-- defailt와 id를 비워둘수는 있지만 지울수는 없다 -->
+   <environments default="">
+      <environment id="">
+         <transactionManager type="JDBC"/>
+         <dataSource type="JNDI">
+            <property name="data_source" value="java:comp/env/jdbc/myora"/>
+         </dataSource>
+      </environment>
+   </environments>
+   <mappers>
+      <mapper resource="mapper/bbssql.xml"/>
+      <mapper resource="mapper/bbscomm.xml"/>
+   </mappers>
+</configuration>
