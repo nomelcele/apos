@@ -6,8 +6,18 @@
 <configuration>
 	<!-- <typeAliases> : vo객체의 이름을 짧게 할려고 함 -->
 	<typeAliases>
-		<typeAlias type="vo.BbsVO" alias="bvo" />
-		<typeAlias type="vo.Bbs1CommVO" alias="cvo" />
+		<typeAlias type="vo.BoardVO" alias="bvo" />
+		<typeAlias type="vo.BonsaVO" alias="bonvo" />
+		<typeAlias type="vo.ChaVO" alias="chavo" />
+		<typeAlias type="vo.CommVO" alias="Commvo" />
+		<typeAlias type="vo.MemVO" alias="memvo" />
+		<typeAlias type="vo.PageVO" alias="pagevo" />
+		<typeAlias type="vo.ProductVO" alias="provo" />
+		<typeAlias type="vo.SalesCheckVO" alias="schkvo" />
+		<typeAlias type="vo.ShopHotkeyVO" alias="shotvo" />
+		<typeAlias type="vo.ShopVO" alias="shvo" />
+		<typeAlias type="vo.SmangVO" alias="smangvo" />
+		<typeAlias type="vo.StaffVO" alias="staffvo" />
 	</typeAliases>
 	<!-- defailt와 id를 비워둘수는 있지만 지울수는 없다 -->
 	<environments default="">
