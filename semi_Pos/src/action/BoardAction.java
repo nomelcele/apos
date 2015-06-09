@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -102,7 +103,7 @@ public class BoardAction implements Action{
 			/*Page 처리 영역 */
 			Map<String, Integer> map = pageProcess(request, 0);
 			/////////////////////////////////////////////////
-			ArrayList<BoardVO> list = BoardDao.getDao().getList(map);
+			List<BoardVO> list = BoardDao.getDao().getList(map);
 			request.setAttribute("list", list);
 		}else if(subcmd != null && subcmd.equals("boardDetail")){
 			int no = Integer.parseInt(request.getParameter("no"));

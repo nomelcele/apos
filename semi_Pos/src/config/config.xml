@@ -2,9 +2,7 @@
 <!DOCTYPE configuration
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
-<!-- <configuration> : -->
 <configuration>
-	<!-- <typeAliases> : vo객체의 이름을 짧게 할려고 함 -->
 	<typeAliases>
 		<typeAlias type="vo.BoardVO" alias="bvo" />
 		<typeAlias type="vo.BonsaVO" alias="bonvo" />
@@ -19,7 +17,6 @@
 		<typeAlias type="vo.SmangVO" alias="smangvo" />
 		<typeAlias type="vo.StaffVO" alias="staffvo" />
 	</typeAliases>
-	<!-- defailt와 id를 비워둘수는 있지만 지울수는 없다 -->
 	<environments default="">
 		<environment id="">
 			<transactionManager type="JDBC" />
@@ -30,8 +27,5 @@
 	</environments>
 	<mappers>
 		<mapper resource="mapper/boardsql.xml" />
-		<mapper resource="mapper/commsql.xml" />
-		<mapper resource="mapper/membersql.xml" />
-		<mapper resource="mapper/shopcomm.xml" />
 	</mappers>
 </configuration>
