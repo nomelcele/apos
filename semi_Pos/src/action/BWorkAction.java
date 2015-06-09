@@ -3,6 +3,7 @@ package action;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -33,7 +34,7 @@ public class BWorkAction implements Action{
 				/*Page 贸府 康开 */
 				Map<String, Integer> map = pageProcess(request, 0);
 				/////////////////////////////////////////////////
-				ArrayList<BoardVO> list = BoardDao.getDao().getList(map);
+				List<BoardVO> list = BoardDao.getDao().getList(map);
 				request.setAttribute("list", list);
 		}else if(subcmd != null && subcmd.equals("delete")){
 			System.out.println("1瞒犬牢");
@@ -48,7 +49,7 @@ public class BWorkAction implements Action{
 			/*Page 贸府 康开 */
 			Map<String, Integer> map = pageProcess(request, 0);
 			/////////////////////////////////////////////////
-			ArrayList<BoardVO> list = BoardDao.getDao().getList(map);
+			List<BoardVO> list = BoardDao.getDao().getList(map);
 			request.setAttribute("list", list);
 		}else if(subcmd != null && subcmd.equals("in")){
 				url="bon_workNoticeWriter.jsp";
