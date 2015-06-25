@@ -10,7 +10,7 @@
 
 			<!--logo start-->
 			<div style="margin: 0 auto">
-				<a href="sh_index.jsp" class="logo"> <img src="../img/bg-20.jpg">
+				<a href="sh_index.jsp" class="logo"> <img src="resources/img/bg-20.jpg">
 					<span class="lite">ADress</span></a>
 			</div>
 			<!--logo end-->
@@ -121,7 +121,7 @@
 					<li id="mail_notificatoin_bar" class="dropdown"><a
 						data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
 							class="icon-envelope-l"></i> <span class="badge bg-important"><img
-								src="../img/bg-86.JPG"></span>
+								src="resources/img/bg-86.JPG"></span>
 					</a>
 
 						<ul class="dropdown-menu extended inbox">
@@ -154,7 +154,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Greg  Martin</span> -->
 							<!--                                     <span class="time">1 min</span> -->
@@ -166,7 +166,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini2.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini2.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Bob   Mckenzie</span> -->
 							<!--                                     <span class="time">5 mins</span> -->
@@ -178,7 +178,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini3.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini3.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Phillip   Park</span> -->
 							<!--                                     <span class="time">2 hrs</span> -->
@@ -190,7 +190,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini4.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini4.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Ray   Munoz</span> -->
 							<!--                                     <span class="time">1 day</span> -->
@@ -240,7 +240,7 @@
 					<!-- user login dropdown start-->
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" href="#"> <span class="profile-ava">
-								<img alt="" src="../img/dress1.JPG" align="center">
+								<img alt="" src="resources/img/dress1.JPG" align="center">
 						</span> <span class="form-control" id="master_span"
 							style="color: black; display: none;">
 								[${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님
