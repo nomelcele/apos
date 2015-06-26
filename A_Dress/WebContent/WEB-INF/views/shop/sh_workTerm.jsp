@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="sh_top.jsp"%>
-<%@include file="sh_left.jsp"%>
-<%@include file="logsession.jsp" %>
+
 <!-- 매장의 업무관리 - 약관 페이지입니다. -->
 <section id="main-content">
 	<section class=" wrapper">
@@ -27,7 +25,7 @@
 	</div>
   	
 	<div style="margin-left: 5px; padding-left: 30px;  padding-top:15px;">
-   <img src=../img/zdd.JPG><p style="font-size: 13pt; font-weight: bold; color:#2426F9"></p>
+   <img src=resources/img/zdd.JPG><p style="font-size: 13pt; font-weight: bold; color:#2426F9"></p>
 	
 	<p>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------</p>

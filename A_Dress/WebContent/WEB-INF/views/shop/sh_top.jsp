@@ -9,37 +9,37 @@
 <meta name="author" content="GeeksLabs">
 <meta name="keyword"
 	content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
-<link rel="shortcut icon" href="../img/favicon.png">
+<link rel="shortcut icon" href="resources/img/favicon.png">
 
 <title>Creative - Bootstrap Admin Template</title>
 
 <!-- Bootstrap CSS -->
-<link href="../css/bootstrap.min.css" rel="stylesheet">
+<link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <!-- bootstrap theme -->
-<link href="../css/bootstrap-theme.css" rel="stylesheet">
+<link href="resources/css/bootstrap-theme.css" rel="stylesheet">
 <!--external css-->
 <!-- font icon -->
-<link href="../css/elegant-icons-style.css" rel="stylesheet" />
-<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="resources/css/elegant-icons-style.css" rel="stylesheet" />
+<link href="resources/css/font-awesome.min.css" rel="stylesheet" />
 <!-- full calendar css-->
 <link
-	href="../assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css"
+	href="resources/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css"
 	rel="stylesheet" />
-<link href="../assets/fullcalendar/fullcalendar/fullcalendar.css"
+<link href="resources/assets/fullcalendar/fullcalendar/fullcalendar.css"
 	rel="stylesheet" />
 <!-- easy pie chart-->
-<link href="../assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css"
+<link href="resources/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css"
 	rel="stylesheet" type="text/css" media="screen" />
 <!-- owl carousel -->
-<link rel="stylesheet" href="../css/owl.carousel.css" type="text/css">
-<link href="../css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+<link rel="stylesheet" href="resources/css/owl.carousel.css" type="text/css">
+<link href="resources/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
 <!-- Custom styles -->
-<link rel="stylesheet" href="../css/fullcalendar.css">
-<link href="../css/widgets.css" rel="stylesheet">
-<link href="../css/style.css" rel="stylesheet">
-<link href="../css/style-responsive.css" rel="stylesheet" />
-<link href="../css/xcharts.min.css" rel=" stylesheet">
-<link href="../css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+<link rel="stylesheet" href="resources/css/fullcalendar.css">
+<link href="resources/css/widgets.css" rel="stylesheet">
+<link href="resources/css/style.css" rel="stylesheet">
+<link href="resources/css/style-responsive.css" rel="stylesheet" />
+<link href="resources/css/xcharts.min.css" rel=" stylesheet">
+<link href="resources/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
 <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -58,7 +58,7 @@
 
 			<!--logo start-->
 			<div style="margin: 0 auto">
-				<a href="sh_index.jsp" class="logo"> <img src="../img/bg-20.jpg">
+				<a href="sh_index.jsp" class="logo"> <img src="resources/img/bg-20.jpg">
 					<span class="lite">ADress</span></a>
 			</div>
 			<!--logo end-->
@@ -169,7 +169,7 @@
 					<li id="mail_notificatoin_bar" class="dropdown"><a
 						data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
 							class="icon-envelope-l"></i> <span class="badge bg-important"><img
-								src="../img/bg-86.JPG"></span>
+								src="resources/img/bg-86.JPG"></span>
 					</a>
 
 						<ul class="dropdown-menu extended inbox">
@@ -202,7 +202,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Greg  Martin</span> -->
 							<!--                                     <span class="time">1 min</span> -->
@@ -214,7 +214,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini2.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini2.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Bob   Mckenzie</span> -->
 							<!--                                     <span class="time">5 mins</span> -->
@@ -226,7 +226,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini3.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini3.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Phillip   Park</span> -->
 							<!--                                     <span class="time">2 hrs</span> -->
@@ -238,7 +238,7 @@
 							<!--                             </li> -->
 							<!--                             <li> -->
 							<!--                                 <a href="#"> -->
-							<!--                                     <span class="photo"><img alt="avatar" src="../img/avatar-mini4.jpg"></span> -->
+							<!--                                     <span class="photo"><img alt="avatar" src="resources/img/avatar-mini4.jpg"></span> -->
 							<!--                                     <span class="subject"> -->
 							<!--                                     <span class="from">Ray   Munoz</span> -->
 							<!--                                     <span class="time">1 day</span> -->
@@ -288,7 +288,7 @@
 					<!-- user login dropdown start-->
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" href="#"> <span class="profile-ava">
-								<img alt="" src="../img/dress1.JPG" align="center">
+								<img alt="" src="resources/img/dress1.JPG" align="center">
 						</span> <span class="form-control" id="master_span"
 							style="color: black; display: none;">
 								[${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님

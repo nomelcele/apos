@@ -3,8 +3,7 @@
 <%@page import="vo.ShopHotkeyVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="bon_top.jsp"%>
-<%@include file="bon_left.jsp"%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 본사 매장관리의 매장가입 페이지 입니다.-->
 <section id="main-content">

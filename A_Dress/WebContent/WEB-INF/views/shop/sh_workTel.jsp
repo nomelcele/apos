@@ -1,17 +1,15 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-<%@include file="sh_top.jsp"%>
-<%@include file="sh_left.jsp"%>
-<%@include file="logsession.jsp" %>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 매장의업무관리- 연락처페이지입니다. -->
 <section id="main-content">
 <section class="wrapper">
 
 
-<script src="../js/http.js"></script>
-<script src="../js/json2.js"></script>
+<script src="resources/js/http.js"></script>
+<script src="resources/js/json2.js"></script>
 <script>
 var lastKey = ''
 var check = false

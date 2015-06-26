@@ -23,8 +23,8 @@ table {
 	font-size: 12px
 }
 </style>
-<script src="../js/http.js"></script>
-<script src="../js/json2.js"></script>
+<script src="resources/js/http.js"></script>
+<script src="resources/js/json2.js"></script>
 <script>
 	var lastKey = '';
 	var check = false;

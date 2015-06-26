@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="bon_top.jsp"%>
-<%@include file="bon_left.jsp"%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <style>
 	.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
@@ -223,7 +222,7 @@
 								<th><span id="list_master">${shlist.master}</span></th>
 								<th>${shlist.tel}</th>
 								<th>${shlist.mail}</th>
-								<th><img src="../upload/${shlist.img}" style="width: 50px;"></th>
+								<th><img src="resources/upload/${shlist.img}" style="width: 50px;"></th>
 								<th><input onclick="shopcdetialmap(${shlist.num})" type="button" class="form-control4 block" id="detailBtn" value="상세보기"></th>								
 								
 							</tr>
