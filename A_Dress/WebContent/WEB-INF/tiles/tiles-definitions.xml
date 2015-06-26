@@ -2,11 +2,28 @@
 <!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
+
+	<!-- shop에 붙일 jsp 지정 -->
 	<definition name="shopTemplate" template="/WEB-INF/template/shop/template.jsp">
-	<put-attribute name="top" value="/WEB-INF/template/shop/sh_top.jsp"/>
-	<put-attribute name="left" value="/WEB-INF/template/shop/sh_left.jsp"/>
+		<put-attribute name="top" value="/WEB-INF/template/shop/sh_top.jsp" />
+		<put-attribute name="left" value="/WEB-INF/template/shop/sh_left.jsp" />
 	</definition>
-	<definition name= "shop/*" extends="shopTemplate">
-	<put-attribute name="body" value="/WEB-INF/views/shop/{1}.jsp">
-	</put-attribute></definition>
+	
+	<!-- bonsa에 붙일 jsp 지정 -->
+	<definition name="bonsaTemplate" template="/WEB-INF/template/bonsa/template.jsp">
+		<put-attribute name="top"
+			value="/WEB-INF/template/bonsa/bon_top.jsp" />
+		<put-attribute name="left"
+			value="/WEB-INF/template/bonsa/bon_left.jsp" />
+	</definition>
+ 	
+	<definition name="shop/*" extends="shopTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/shop/{1}.jsp">
+		</put-attribute>
+	</definition>
+	
+	<definition name="bonsa/*" extends="bonsaTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/bonsa/{1}.jsp">
+		</put-attribute>
+	</definition>
 </tiles-definitions>
