@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="bon_top.jsp"%>
-<%@include file="bon_left.jsp"%>
+
 <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
-<script type="text/javascript" src="../js/myckeditor.js"></script>
+<script type="text/javascript" src="resources/js/myckeditor.js"></script>
 <script>
 	function ngoUrl(){
 			document.getElementById("nboard").submit();

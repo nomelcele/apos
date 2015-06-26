@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@include file="sh_shopjoinmap.jsp" %>
+
 <html>
 <head></head>
 <body>
@@ -12,7 +12,7 @@
             <!--logo start-->
             <div style="margin:0 auto">
             <a href="#" class="logo">
-            <img src ="../img/bg-20.jpg">
+            <img src ="resources/img/bg-20.jpg">
             <span class="lite">ADress</span></a>
             </div>
             <!--logo end-->
@@ -131,7 +131,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../img/avatar-mini.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="resources/img/avatar-mini.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Greg  Martin</span>
                                     <span class="time">1 min</span>
@@ -143,7 +143,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../img/avatar-mini2.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="resources/img/avatar-mini2.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Bob   Mckenzie</span>
                                     <span class="time">5 mins</span>
@@ -155,7 +155,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../img/avatar-mini3.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="resources/img/avatar-mini3.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Phillip   Park</span>
                                     <span class="time">2 hrs</span>
@@ -167,7 +167,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="photo"><img alt="avatar" src="../img/avatar-mini4.jpg"></span>
+                                    <span class="photo"><img alt="avatar" src="resources/img/avatar-mini4.jpg"></span>
                                     <span class="subject">
                                     <span class="from">Ray   Munoz</span>
                                     <span class="time">1 day</span>
@@ -233,7 +233,7 @@
                     <li class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="profile-ava">
-                                <img alt="" src="../img/dress1.JPG" align="center">
+                                <img alt="" src="resources/img/dress1.JPG" align="center">
                             </span>
                             <span class="username">Hello Customer</span>
                             <b class="caret"></b>
@@ -399,7 +399,7 @@
                                           <label for="cSelfImg" class="control-label col-lg-2"> Self_IMG <span class="required">*</span></label>
                                           <div class="col-lg-10">
                                           	  <div style="width: 124px; height: 164px; border: 1px solid black;" >
-                                          		  <div class="form-contro" style="width: 102px; height: 142px; margin: auto;" id="selfimgtarget"><img src="../img/selfimg_basic.PNG"></div>
+                                          		  <div class="form-contro" style="width: 102px; height: 142px; margin: auto;" id="selfimgtarget"><img src="resources/img/selfimg_basic.PNG"></div>
                                           	  </div>
                                           		  <input class="form-control5" type="file" id="selfimg" name="selfimg" style="display: inline;">
                                           </div>

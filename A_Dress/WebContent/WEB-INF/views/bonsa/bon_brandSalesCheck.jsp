@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="bon_top.jsp"%>
-<%@include file="bon_left.jsp"%>
+
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script src="../js/http.js"></script>
+<script src="resources/js/http.js"></script>
     <script type="text/javascript">
    
      google.load("visualization", "1", {packages:["corechart"]});

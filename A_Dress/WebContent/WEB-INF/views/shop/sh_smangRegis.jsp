@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-<%@include file="sh_top.jsp"%>
-<%@include file="sh_left.jsp"%>
-<%@include file="logsession.jsp" %>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <%-- 매장의 판매관리 - 판매등록페이지입니다. --%>
 <%-- 고객검색 세션 시작 --%>
-<script src="../js/http.js"></script>
-<script src="../js/json2.js"></script>
-<script src="../js/suggestMem_pk.js"></script>
+<script src="resources/js/http.js"></script>
+<script src="resources/js/json2.js"></script>
+<script src="resources/js/suggestMem_pk.js"></script>
 <script>
 	var price = 0;
 	var i = 0;

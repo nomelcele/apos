@@ -1,13 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="sh_top.jsp"%>
-<%@include file="sh_left.jsp"%>
-<%@include file="logsession.jsp" %>
+
 <!-- 매장의 상품관리 - 상품조회 페이지입니다. -->
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<script src="../js/http.js"></script>
-<script src="../js/json2.js"></script>
-<script src="../js/suggestProduct_pk.js"></script>
+<script src="resources/js/http.js"></script>
+<script src="resources/js/json2.js"></script>
+<script src="resources/js/suggestProduct_pk.js"></script>
 
 <script>
 	var shop_num = "${sessionScope.shop_num}";
@@ -169,8 +167,8 @@
 													<th>${stList.sto_size}</th>
 													<th>${stList.sto_amount}</th>
 													<th>${stList.pro_price}</th>
-													<th><img src='../upload/${stList.pro_img}'style="width: 100px;"></td></th>
-													<th><img src='../upload/${stList.pro_barcode}'style="width: 100px;"></th>
+													<th><img src='resources/upload/${stList.pro_img}'style="width: 100px;"></td></th>
+													<th><img src='resources/upload/${stList.pro_barcode}'style="width: 100px;"></th>
 
 												</tr>
 											</c:forEach>
