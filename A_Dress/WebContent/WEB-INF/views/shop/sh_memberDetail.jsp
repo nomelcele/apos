@@ -47,9 +47,8 @@
 			<div class="panel-body" style="margin-top: 30px;">
 				<div class="form">
 					<div class="col-lg-6">
-						<form method="post" action="sh.apos" id="finishbtn">
-							<input type="hidden" name="cmd" value="smember"> <input
-								type="hidden" name="subcmd" value="finish"> <br />
+						<form method="post" action="sh_memdetail_change" id="finishbtn">
+							 <br />
 							<div class="form-group ">
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">이름</label>
