@@ -14,13 +14,13 @@
 	}
 </script>
 <form method="post" action="bon.apos" id=write>
-<input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="in">
+	<input type="hidden" name="cmd" value="bwork"> <input
+		type="hidden" name="subcmd" value="in">
 </form>
 <form method="post" action="bon.apos" id=notice>
-<input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="notice">
-<input type="hidden" name="page" value="1">
+	<input type="hidden" name="cmd" value="bwork"> <input
+		type="hidden" name="subcmd" value="notice"> <input
+		type="hidden" name="page" value="1">
 </form>
 <section id="main-content">
 	<section class="wrapper">
@@ -28,14 +28,15 @@
 			<div class="col-lg-12">
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%">
-			<div class="col-lg-12">
-				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 공지사항
-				</h3>
-				</div>
-				</div>
+						<div class="col-lg-12">
+							<h3 class="page-header">
+								<i class="fa fa-files-o"></i> 공지사항
+							</h3>
+						</div>
+					</div>
 
-					<table class="table table-striped table-advance table-hover" style="font-size: 15px;">
+					<table class="table table-striped table-advance table-hover"
+						style="font-size: 15px;">
 						<tbody>
 							<tr>
 								<th>#</th>
@@ -44,38 +45,42 @@
 								<th><i class="icon_calendar"></i> 날짜</th>
 							</tr>
 							<c:forEach var="stList" items="${list}">
-					<tr>
-						<td>${stList.no}</td>
-						<td>
-						<a href="bon.apos?cmd=bwork&subcmd=boardDetail&no=${stList.no}&page=1">
-						${stList.title}</a>
-						</td>
-						<td>${stList.writer}</td>
-						<td>${stList.regdate}</td>
-					</tr>
-				</c:forEach>
+								<tr>
+									<td>${stList.no}</td>
+									<td><a
+										href="bon.apos?cmd=bwork&subcmd=boardDetail&no=${stList.no}&page=1">
+											${stList.title}</a></td>
+									<td>${stList.writer}</td>
+									<td>${stList.regdate}</td>
+								</tr>
+							</c:forEach>
 						</tbody>
 					</table>
+					<!-- page end-->
+					<section class="panel">
+
+						<c:set var="pageUrl" value="bon.apos?cmd=bwork&subcmd=notice" />
+						<%@include file="page.jsp"%>
+
+						<div>
+
+							<table>
+								<tr>
+									<td><a class="btn btn-danger btn-sm"
+										href="javascript:gourl3()"
+										title="Bootstrap 3 themes generator">글작성</a></td>
+									<td><a class="btn btn-danger btn-sm"
+										href="javascript:gourl2()"
+										title="Bootstrap 3 themes generator">목록</a></td>
+
+								</tr>
+							</table>
+
+						</div>
+
+					</section>
 				</section>
 			</div>
 		</div>
-		<!-- page end-->
-		<section class="panel">
-        <div class="panel-body">
-		<c:set var="pageUrl" value="bon.apos?cmd=bwork&subcmd=notice"/>
-		<%@include file="page.jsp" %>
-		</div>
-		</section>
-		<div>
-			<tr align="right">
-				<td >
-					   <a class="btn btn-danger btn-sm" href="javascript:gourl3()" title="Bootstrap 3 themes generator">글작성</a></td>
-				<td >
-				   <a class="btn btn-danger btn-sm" href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
-					</td>
-					
-			</tr>
-		</div>
-		</div>
 	</section>
-	</section>
+</section>

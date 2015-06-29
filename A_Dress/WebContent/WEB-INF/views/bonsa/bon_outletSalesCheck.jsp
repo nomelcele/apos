@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@include file="bon_top.jsp"%>
-<%@include file="bon_left.jsp"%>
 <!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
 <script src="resources/js/http.js"></script>
 <script src="resources/js/json2.js"></script>
@@ -107,7 +105,7 @@
 	<section class="wrapper">
 
 
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px; width: 100%;height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 대리점별 매출순위
@@ -118,19 +116,18 @@
 					<div class="form-group">
 
 						<div style="margin-left: 10px;">
-							<label for="cname" class="control-label col-lg-2"><p
-									align="left">매장검색</p> </label>
-
-							<div class="col-lg-2" style="margin-left: -5%;">
-
-								<input id="shop_name" name="name" minlength="2"
+							<label for="cname" class="control-label col-lg-2"><p>매장검색</p> </label>
+							<input id="shop_name" name="name" 
 									autocomplete="off" type="text" onkeydown="startSuggest();"
 									required />
 
 								<div id="view"></div>
-							</div>
+							
+							<div class="col-lg-2" style="margin-left: -5%;">
+
+								</div>
 							</br>
-							</br>
+							
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2"><p
 										align="left">기간</p> </label> <input id="date_ps" name="date_ps"
@@ -150,7 +147,7 @@
 				</form>
 
 
-				<table class="table table-striped table-advance table-hover">
+				<table class="table table-striped table-advance table-hover" style="width: 100%; height: 100%">
 					<thead>
 						<p></p>
 						<tr>
@@ -165,7 +162,7 @@
 
 					</tbody>
 				</table>
-				<div id="chart_div" style="width: 900px; height: 500px;"></div>
+				<div id="chart_div" style="width: 80%; height: 100%;"></div>
 
 
 				<!-- 				<div class="form-group" style="margin-left: 700px;"> -->

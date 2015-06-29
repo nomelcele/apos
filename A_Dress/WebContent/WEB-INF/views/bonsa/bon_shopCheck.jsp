@@ -195,10 +195,12 @@
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-12" style="width: 100%; height: 100%;">
 				<section class="panel">
-					<header class="panel-heading"></header>
-					<table class="table">
+					<h3 class="page-header">
+					<i class="fa fa-files-o"></i> 매장 조회
+				</h3>
+					<table class="table" style="width: 100%; height: 100%;">
 						<thead>
 							<tr>
 								

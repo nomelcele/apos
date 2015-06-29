@@ -10,9 +10,9 @@
 		$('#btn_out')
 				.click(
 						function() {
-// 							alert("shopname=" + $('#shop_name').val()
-// 									+ "date_ps=" + $('#date_ps').val()
-// 									+ "&date_ps2=" + $('#date_ps2').val());
+							// 							alert("shopname=" + $('#shop_name').val()
+							// 									+ "date_ps=" + $('#date_ps').val()
+							// 									+ "&date_ps2=" + $('#date_ps2').val());
 
 							if ($('#date_ps').val() != ""
 									&& $('#date_ps2').val() != "") {
@@ -68,8 +68,8 @@
 		packages : [ "corechart" ]
 	});
 	google.setOnLoadCallback(drawVisualization);
-	var res2 = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 165,0 ],
-			[ '2005/06', 135, 0 ], [ '2006/07', 157, 0],
+	var res2 = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 165, 0 ],
+			[ '2005/06', 135, 0 ], [ '2006/07', 157, 0 ],
 			[ '2007/08', 139, 0 ], [ '2008/09', 136, 0 ] ];
 	var res = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
 			[ '2005-06', 135, 1120, 599, ], [ '2006-07', 157, 1167, 587, ] ];
@@ -103,7 +103,7 @@
 	<section class="wrapper">
 
 
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px; width: 100%; height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 품목별 매출순위
@@ -114,24 +114,18 @@
 					<div class="form-group">
 
 						<div style="margin-left: 10px;">
-							<label for="cname" class="control-label col-lg-2"><p
-									align="left">물품코드번호 </p> </label>
+							<label for="cname" class="control-label col-lg-2">물품코드번호
+							</label> <input id="shop_name" name="name" width="80%" autocomplete="off"
+								type="text" onkeydown="startSuggest();" required />
 
-							<div class="col-lg-2" style="margin-left: -5%;">
-
-								<input id="shop_name" name="name" minlength="2"
-									autocomplete="off" type="text" onkeydown="startSuggest();"
-									required />
-
-								<div id="view"></div>
-							</div>
+							<div id="view"></div>
 							</br> </br>
 							<div style="margin-left: 10px;">
-								<label for="cname" class="control-label col-lg-2"><p
-										align="left">기간</p> </label> <input id="date_ps" name="date_ps"
-									minlength="2" autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<label for="cname" class="control-label col-lg-2"><p>기간</p>
+								</label> <input id="date_ps" name="date_ps" autocomplete="off"
+									type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
-									name="date_ps2" minlength="2" autocomplete="off" type="date"
+									name="date_ps2" autocomplete="off" type="date"
 									required /> <input class="form-control6"
 									style="margin-left: 10px;" type="button" id="btn_out"
 									name="btn" value="조회">
@@ -147,7 +141,7 @@
 
 				<table class="table table-striped table-advance table-hover">
 					<thead>
-						<p></p>
+						
 						<tr>
 							<th><i class="icon_profile"></i>날짜</th>
 							<th><i class="icon_profile"></i>물품명</th>
@@ -160,7 +154,7 @@
 
 					</tbody>
 				</table>
-				<div id="chart_div" style="width: 900px; height: 500px;"></div>
+				<div id="chart_div" style="width: 80%; height: 100%;"></div>
 
 
 				<!-- 				<div class="form-group" style="margin-left: 700px;"> -->
