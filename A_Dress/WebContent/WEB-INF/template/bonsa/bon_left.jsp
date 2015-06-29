@@ -61,17 +61,25 @@
 	function goUrl(str){
 		if(str == "notice"){
 			document.getElementById("notice").submit();
+		}else if(str == "move"){
+			document.getElementById("move").submit();
 		}else if(str == "join"){
 			document.getElementById("join").submit();
 		}else if(str == "infor"){
 			document.getElementById("infor").submit();
 		}else if(str == "check"){
 			document.getElementById("check").submit();
+		}else if(str == "scheck"){
+			document.getElementById("scheck").submit();
 		}else if(str == "add"){
 			document.getElementById("add").submit();
+		}else if(str == "del"){
+			document.getElementById("del").submit();
 		}else if(str == "sale"){
 			document.getElementById("sale").submit();
-		}}else if(str == "productsch"){
+		}else if(str == "brandsch"){
+			document.getElementById("brandsch").submit();
+		}else if(str == "productsch"){
 			document.getElementById("productsch").submit();
 		}else if(str == "outletsch"){
 			document.getElementById("outletsch").submit();
