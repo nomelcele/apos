@@ -17,10 +17,68 @@ public class Shopcon {
 		mav.setViewName("shop/sh_index");
 		return mav;
 	}
+	// 업무관리 - 공지사항
 	@RequestMapping(value="/sh_workNotice")
 	public ModelAndView sh_workNotice(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("shop/sh_workNotice");
+		return mav;
+	}
+	// 업무관리 - 내부규정
+	@RequestMapping(value="/sh_workItr")
+	public ModelAndView sh_workItr(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_workItr");
+		return mav;
+	}
+	// 업무관리 - 약관 (안됨)
+	@RequestMapping(value="/sh_workTerm")
+	public ModelAndView sh_workTerm(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_workTerm");
+		return mav;
+	}
+	// 업무관리 - 연락처
+	@RequestMapping(value="/sh_workTel")
+	public ModelAndView sh_workTel(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_workTel");
+		return mav;
+	}
+	// 회원관리 - 회원가입
+	@RequestMapping(value="/sh_memberJoin")
+	public ModelAndView sh_memberJoin(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_memberJoin");
+		return mav;
+	}
+	// 회원관리 - 회원조회/수정
+	@RequestMapping(value="/sh_memberDetail")
+	public ModelAndView sh_memberDetail(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_memberDetail");
+		return mav;
+	}
+	// 상품관리 - 상품조회
+	@RequestMapping(value="/sh_productCheck")
+	public ModelAndView sh_productCheck(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_productCheck");
+		return mav;
+	}
+	
+	// 판매등록 - 판매등록 (안됨)
+	@RequestMapping(value="/sh_smangRegis")
+	public ModelAndView sh_smangRegis(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_smangRegis");
+		return mav;
+	}
+	// 판매등록 - 교환/환불 (안됨)
+	@RequestMapping(value="/sh_smangExchTefu")
+	public ModelAndView sh_smangExchTefu(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_smangExchTefu");
 		return mav;
 	}
 }
