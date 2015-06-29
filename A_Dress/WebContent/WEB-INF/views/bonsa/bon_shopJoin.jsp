@@ -1,5 +1,5 @@
 <%@page import="java.util.ArrayList"%>
-<%@page import="dao.ShopDao"%>
+<%-- ---<%@page import="dao.ShopDao"%>--%>
 <%@page import="vo.ShopHotkeyVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
