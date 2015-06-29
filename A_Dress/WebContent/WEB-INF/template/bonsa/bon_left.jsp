@@ -135,10 +135,9 @@
 </script>
 
 
-<form method="post" action="bon.apos" id="notice">
+<form method="post" action="bon_workNotice" id="notice">
 <input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="notice">
-<input type="hidden" name="page" value="1">
+<input type="hidden" name="subcmd" value="move">
 </form>
 <form method="post" action="bon.apos" id="move">
 <input type="hidden" name="cmd" value="bwork">
