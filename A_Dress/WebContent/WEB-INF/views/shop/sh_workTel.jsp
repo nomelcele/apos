@@ -1,11 +1,9 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 매장의업무관리- 연락처페이지입니다. -->
-<section id="main-content">
-<section class="wrapper">
 
 
 <script src="resources/js/http.js"></script>
@@ -73,72 +71,82 @@ function telaction(){
 	document.getElementById("telform").submit();
 }
 </script>
+<section id="main-content">
+	<section class="wrapper">
+		<div class="col-lg-12">
+			<h3 class="page-header">
+				<i class="fa fa-files-o"></i> 연락처
+			</h3>
 
- <div class="row" style="font-size: 12px"> 
-<div class="col-lg-21"
-style="margin-left: 20px">
-
- 
-<div class="row">
-                  <div class="col-lg-21"
-                   style="margin-left: 2px">>
-                      <section class="panel">
-<!--                           <header class="panel-heading"> -->
-<!--                           </header> -->
-                          <div class="panel-body" style="margin-left: 20px; margin-top: 10px;">
-                              <div class="form">
-                              
-                                  <form class="form-validate form-horizontal" id="telform" method="post" action="sh.apos">
-                                  <input type="hidden" name="cmd" value="swork">
-                                  <input type="hidden" name="subcmd" value="tel">
-                   
-                                  
-                                      <div class="form-group " style="margin-left: -5%">
-                                          <label for="cname" class="control-label col-lg--6"></label>
-                                          <div class="col-lg-4">
-                                              <input class="form-control" id="sname_ps" name="name" minlength="3" onkeydown="startSuggest();" type="text"required 
-                                              placeholder=지점명>
-                                              <div id="view"></div>
-                                          </div>
-                                          </form>
-                                          <input class="form-control5" type="button" onclick="javascript:telaction()" id="btn" name="btn" value="조회" >
-                           
-                                      </div>
+			<div class="row" style="font-size: 12px; width: 100%; height: 100%;">
+				<div class="col-lg-21" style="margin-left: 20px">
 
 
-                          </header>
-                          <table class="table table-condensed">
-                          
-                            <thead>
+					<div class="row">
+						<div class="col-lg-21" style="margin-left: 2px">
+							>
+							<section class="panel">
+								<!--                           <header class="panel-heading"> -->
+								<!--                           </header> -->
+								<div class="panel-body"
+									style="margin-left: 20px; margin-top: 10px;">
+									<div >
 
-                              <tr>
-                                <th>#</th>
-                                <th>지점</th>
-                                <th>직급</th>
-                                <th>이름</th>
-                                <th>연락처</th>
-                              </tr>
-                            </thead>
-                            <tbody id="teltarget">
-                              
-           
-              <c:forEach var="stList" items="${list}">
-               <tr>
-                  <td>${stList.shop_snum}</td>
-                  <td>${stList.shop_name}</td>
-                  <td>${stList.shop_sposition}</td>
-                  <td>${stList.shop_sname}</td>
-                  <td>${stList.shop_stel}</td>
-               </tr>
-               </c:forEach>
-                            </tbody>
-                           
-                          </table>
-                      </section>
-                  </div>
-                  </div>
-                  </section>
-                  </section>
+										<form id="telform" method="post" action="sh.apos"
+											style="display: inline;">
+											<input type="hidden" name="cmd" value="swork"> <input
+												type="hidden" name="subcmd" value="tel"> <input
+												class="form-control" id="sname_ps" name="name"
+												onkeydown="startSuggest();" type="text" required
+												placeholder=지점명>
+											<div id="view"></div>
+											<input class="form-control5" type="button"
+												onclick="javascript:telaction()" id="btn" name="btn"
+												value="조회">
+										</form>
+
+
+
+									</div>
+
+
+
+									<table class="table table-condensed">
+
+										<thead>
+
+											<tr>
+												<th>#</th>
+												<th>지점</th>
+												<th>직급</th>
+												<th>이름</th>
+												<th>연락처</th>
+											</tr>
+										</thead>
+										<tbody id="teltarget">
+
+
+											<c:forEach var="stList" items="${list}">
+												<tr>
+													<td>${stList.shop_snum}</td>
+													<td>${stList.shop_name}</td>
+													<td>${stList.shop_sposition}</td>
+													<td>${stList.shop_sname}</td>
+													<td>${stList.shop_stel}</td>
+												</tr>
+											</c:forEach>
+										</tbody>
+
+									</table>
+								</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
 
 
 
