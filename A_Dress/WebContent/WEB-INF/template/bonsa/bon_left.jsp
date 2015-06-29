@@ -61,25 +61,17 @@
 	function goUrl(str){
 		if(str == "notice"){
 			document.getElementById("notice").submit();
-		}else if(str == "move"){
-			document.getElementById("move").submit();
 		}else if(str == "join"){
 			document.getElementById("join").submit();
 		}else if(str == "infor"){
 			document.getElementById("infor").submit();
 		}else if(str == "check"){
 			document.getElementById("check").submit();
-		}else if(str == "scheck"){
-			document.getElementById("scheck").submit();
 		}else if(str == "add"){
 			document.getElementById("add").submit();
-		}else if(str == "del"){
-			document.getElementById("del").submit();
 		}else if(str == "sale"){
 			document.getElementById("sale").submit();
-		}else if(str == "brandsch"){
-			document.getElementById("brandsch").submit();
-		}else if(str == "productsch"){
+		}}else if(str == "productsch"){
 			document.getElementById("productsch").submit();
 		}else if(str == "outletsch"){
 			document.getElementById("outletsch").submit();
@@ -134,62 +126,21 @@
 // 	});
 </script>
 
+<!--본사 - 업무관리 - 공지사항 -->
+<form method="post" action="bon_workNotice" id="notice"></form>
+<!--본사 - 매장관리 - 매장가입 -->
+<form method="post" action="bon_shopJoin" id="join"></form>
+<!--본사 - 매장관리 - 매장조회 -->
+<form method="post" action="bon_shopCheck" id="check"></form>
+<!-- 본사 상품관리 상품추가 -->
+<form method="post" action="bon_productAdd" id="add"></form>
+<!-- 본사 상품관리 상품재고관리 -->
+<form method="post" action="bon_productSale" id="sale"></form>
+<!-- 품목별 매출순위 -->
+<form method="post" action="bon_termSalesCheck" id="productsch"></form>
+<!--  대리점별 매출순위-->
+<form method="post" action="bon_productSalesCheck" id="outletsch"></form>
 
-<form method="post" action="bon_workNotice" id="notice">
-<input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="move">
-</form>
-<form method="post" action="bon.apos" id="move">
-<input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="move">
-</form>
-<form method="post" action="bon.apos" id="join">
-<input type="hidden" name="cmd" value="bshop">
-<input type="hidden" name="subcmd" value="join">
-</form>
-<form method="post" action="bon.apos" id="infor">
-<input type="hidden" name="cmd" value="bshop">
-<input type="hidden" name="subcmd" value="infor">
-</form>
-<form method="post" action="bon.apos" id="check">
-<input type="hidden" name="cmd" value="bshop">
-<input type="hidden" name="subcmd" value="check">
-</form>
-<form method="post" action="bon.apos" id="scheck">
-<input type="hidden" name="cmd" value="bshop">
-<input type="hidden" name="subcmd" value="scheck">
-</form>
-<form method="post" action="bon.apos" id="add">
-<input type="hidden" name="cmd" value="bproduct">
-<input type="hidden" name="subcmd" value="add">
-</form>
-<form method="post" action="bon.apos" id="del">
-<input type="hidden" name="cmd" value="bproduct">
-<input type="hidden" name="subcmd" value="del">
-</form>
-<form method="post" action="bon.apos" id="sale">
-<input type="hidden" name="cmd" value="bproduct">
-<input type="hidden" name="subcmd" value="sale">
-</form>
-<form method="post" action="bon.apos" id="brandsch">
-<input type="hidden" name="cmd" value="bsales">
-<input type="hidden" name="subcmd" value="brandsch">
-</form>
-
-<form method="post" action="bon.apos" id="productsch">
-<input type="hidden" name="cmd" value="bsales">
-<input type="hidden" name="subcmd" value="productsch">
-</form>
-
-<form method="post" action="bon.apos" id="outletsch">
-<input type="hidden" name="cmd" value="bsales">
-<input type="hidden" name="subcmd" value="outletsch">
-</form>
-
-<form method="post" action="bon.apos" id="termsch">
-<input type="hidden" name="cmd" value="bsales">
-<input type="hidden" name="subcmd" value="termsch">
-</form>
 
       <!--sidebar start-->
       <aside>
