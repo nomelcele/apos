@@ -48,15 +48,15 @@ public class Bonsacon {
 		return mav;
 	}
 	// bon_termSalesCheck 품목별 매출순위
-		@RequestMapping(value = "/bon_termSalesCheck")
+		@RequestMapping(value = "/bon_productSalesCheck")
 		public ModelAndView bon_termSalesCheck() {
 			ModelAndView mav = new ModelAndView();
 			mav.setViewName("bonsa/bon_termSalesCheck");
 			return mav;
 		}
 	
-	// bon_productSalesCheck 대리점별 매출순위
-	@RequestMapping(value = "/bon_productSalesCheck")
+	// bon_productSalesCheck 대리점별 매출순위 bon_outletSalesCheck
+	@RequestMapping(value = "/bon_outletSalesCheck")
 	public ModelAndView bon_productSalesCheck() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("bonsa/bon_productSalesCheck");
