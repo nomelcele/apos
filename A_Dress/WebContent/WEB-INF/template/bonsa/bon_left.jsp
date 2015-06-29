@@ -147,7 +147,7 @@
 <!-- 품목별 매출순위 -->
 <form method="post" action="bon_productSalesCheck" id="productsch"></form>
 <!--  대리점별 매출순위-->
-<form method="post" action="bon_termSalesCheck" id="outletsch"></form>
+<form method="post" action="bon_outletSalesCheck" id="outletsch"></form>
 
 
       <!--sidebar start-->
