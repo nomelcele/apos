@@ -51,7 +51,7 @@ public class Bonsacon {
 		@RequestMapping(value = "/bon_productSalesCheck")
 		public ModelAndView bon_termSalesCheck() {
 			ModelAndView mav = new ModelAndView();
-			mav.setViewName("bonsa/bon_termSalesCheck");
+			mav.setViewName("bonsa/bon_productSalesCheck");
 			return mav;
 		}
 	
@@ -59,7 +59,7 @@ public class Bonsacon {
 	@RequestMapping(value = "/bon_outletSalesCheck")
 	public ModelAndView bon_productSalesCheck() {
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("bonsa/bon_productSalesCheck");
+		mav.setViewName("bonsa/bon_outletSalesCheck");
 		return mav;
 	}
 }
