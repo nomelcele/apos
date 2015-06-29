@@ -31,7 +31,7 @@ public class Shopcon {
 		mav.setViewName("shop/sh_workItr");
 		return mav;
 	}
-	// 업무관리 - 약관 (안됨)
+	// 업무관리 - 약관
 	@RequestMapping(value="/sh_workTerm")
 	public ModelAndView sh_workTerm(){
 		ModelAndView mav = new ModelAndView();
@@ -53,10 +53,10 @@ public class Shopcon {
 		return mav;
 	}
 	// 회원관리 - 회원조회/수정
-	@RequestMapping(value="/sh_memberDetail")
+	@RequestMapping(value="/sh_memberCheck")
 	public ModelAndView sh_memberDetail(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("shop/sh_memberDetail");
+		mav.setViewName("shop/sh_memberCheck");
 		return mav;
 	}
 	// 상품관리 - 상품조회
@@ -67,14 +67,14 @@ public class Shopcon {
 		return mav;
 	}
 	
-	// 판매등록 - 판매등록 (안됨)
+	// 판매등록 - 판매등록
 	@RequestMapping(value="/sh_smangRegis")
 	public ModelAndView sh_smangRegis(){
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("shop/sh_smangRegis");
 		return mav;
 	}
-	// 판매등록 - 교환/환불 (안됨)
+	// 판매등록 - 교환/환불
 	@RequestMapping(value="/sh_smangExchTefu")
 	public ModelAndView sh_smangExchTefu(){
 		ModelAndView mav = new ModelAndView();
