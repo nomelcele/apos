@@ -43,36 +43,36 @@
    <script src="resources/js/jquery.slimscroll.min.js"></script>
 <script>
    function goUrl(str){
-      if(str == "join"){
-         document.getElementById("join").submit();
-      }else if(str == "check"){
-         document.getElementById("check").submit();
+      if(str == "memberJoin"){
+         document.getElementById("memberJoin").submit();
+      }else if(str == "productCheck"){
+         document.getElementById("productCheck").submit();
       } else if(str == "change"){
          document.getElementById("change").submit();
       } else if(str == "out"){
          document.getElementById("out").submit();
       } else if(str == "notice"){
          document.getElementById("notice").submit();
-      } else if(str == "itr"){
-         document.getElementById("itr").submit();
-      } else if(str == "term"){
-         document.getElementById("term").submit();
-      } else if(str == "tel"){
-         document.getElementById("tel").submit();
+      } else if(str == "workitr"){
+         document.getElementById("workitr").submit();
+      } else if(str == "workterm"){
+         document.getElementById("workterm").submit();
+      } else if(str == "workTel"){
+         document.getElementById("workTel").submit();
       } else if(str == "pcheck"){
          document.getElementById("pcheck").submit();
       } else if(str == "move"){
          document.getElementById("move").submit();
-      } else if(str == "table"){
-         document.getElementById("table").submit();
+      } else if(str == "memberCheck"){
+         document.getElementById("memberCheck").submit();
       } else if(str == "rank"){
          document.getElementById("rank").submit();
       }
-      else if(str == "regis"){
-         document.getElementById("regis").submit();
+      else if(str == "smangRegis"){
+         document.getElementById("smangRegis").submit();
       }
-      else if(str == "exchRefu"){
-    	  document.getElementById("exchRefu").submit();
+      else if(str == "smangExchTefu"){
+    	  document.getElementById("smangExchTefu").submit();
       }
    }
    
@@ -122,89 +122,46 @@
 	});
 </script>
 
-<form method="post" action="sh.apos" id="join">
-<input type="hidden" name="cmd" value="smember">
-<input type="hidden" name="subcmd" value="join">
-</form>
 
-<form method="post" action="sh.apos" id="check">
-<input type="hidden" name="cmd" value="smember">
-<input type="hidden" name="subcmd" value="check">
-<input type="hidden" name ="name" value="">
-<input type="hidden" name="page" value="1">
-</form>
+<!-- 공지사항 -->
+<form method="post" action="sh_workNotice" id=notice></form>
 
-<form method="post" action="sh.apos" id="change">
-<input type="hidden" name="cmd" value="smember">
-<input type="hidden" name="subcmd" value="change">
-</form>
- 
-<form method="post" action="sh.apos" id="out">
-<input type="hidden" name="cmd" value="smember">
-<input type="hidden" name="subcmd" value="out">
-</form>
+<!-- 내부규정 -->
+<form method="post" action="sh_workItr" id=workitr></form>
 
+<!-- 약관 -->
+<form method="post" action="sh_workTerm" id=workterm></form>
 
+<!-- 연락처 -->
+<form method="post" action="sh_workTel" id=workTel></form>
 
+<!-- 회원가입 -->
+<form method="post" action="sh_memberJoin" id=memberJoin></form>
 
+<!-- 회원조회/수정 -->
+<form method="post" action="sh_memberCheck" id=memberCheck></form>
 
-<form method="post" action="sh.apos" id="notice">
-<input type="hidden" name="cmd" value="swork">
-<input type="hidden" name="subcmd" value="notice">
-<input type="hidden" name="page" value="1">
-</form>
+<!-- 상품조회 -->
+<form method="post" action="sh_productCheck" id=productCheck></form>
 
+<!-- 판매등록 -->
+<form method="post" action="sh_smangRegis" id=smangRegis></form>
 
-<form method="post" action="sh.apos" id="itr">
-<input type="hidden" name="cmd" value="swork">
-<input type="hidden" name="subcmd" value="itr">
-</form>
-
-<form method="post" action="sh.apos" id="term">
-<input type="hidden" name="cmd" value="swork">
-<input type="hidden" name="subcmd" value="term">
-</form>
-
-<form method="post" action="sh.apos" id="tel">
-<input type="hidden" name="cmd" value="swork">
-<input type="hidden" name="subcmd" value="tel">
-</form>
+<!-- 교환/환불 -->
+<form method="post" action="sh_smangExchTefu" id=smangExchTefu></form>
 
 
 
 
-<form method="post" action="sh.apos" id="pcheck">
-<input type="hidden" name="cmd" value="sproduct">
-<input type="hidden" name="subcmd" value="pcheck">
-</form>
-
-<form method="post" action="sh.apos" id="move">
-<input type="hidden" name="cmd" value="sproduct">
-<input type="hidden" name="subcmd" value="move">
-</form>
 
 
 
 
-<form method="post" action="sh.apos" id="table">
-<input type="hidden" name="cmd" value="ssales">
-<input type="hidden" name="subcmd" value="table">
-</form>
 
-<form method="post" action="sh.apos" id="rank">
-<input type="hidden" name="cmd" value="ssales">
-<input type="hidden" name="subcmd" value="rank">
-</form>
 
-<form method="post" action="sh.apos" id="regis">
-<input type="hidden" name="cmd" value="smang">
-<input type="hidden" name="subcmd" value="sregi">
-</form>
 
-<form method="post" action="sh.apos" id="exchRefu">
-<input type="hidden" name="cmd" value="smang">
-<input type="hidden" name="subcmd" value="exchRefu">
-</form>
+
+
 
 
 
@@ -223,9 +180,9 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
-                          <li><a class="" href="javascript:goUrl('itr')">내부 규정</a></li>
-                          <li><a class="" href="javascript:goUrl('term')">약관</a></li>
-                          <li><a class="" href="javascript:goUrl('tel')">연락처</a></li>
+                          <li><a class="" href="javascript:goUrl('workitr')">내부 규정</a></li>
+                          <li><a class="" href="javascript:goUrl('workterm')">약관</a></li>
+                          <li><a class="" href="javascript:goUrl('workTel')">연락처</a></li>
                       </ul>
                   </li>
                   
@@ -236,8 +193,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="javascript:goUrl('join')">회원가입</a></li>                          
-                          <li><a class="" href="javascript:goUrl('check')">회원조회/수정</a></li>
+                          <li><a class="" href="javascript:goUrl('memberJoin')">회원가입</a></li>                          
+                          <li><a class="" href="javascript:goUrl('memberCheck')">회원조회/수정</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -247,7 +204,7 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="javascript:goUrl('pcheck')">상품조회</a></li>
+                          <li><a class="" href="javascript:goUrl('productCheck')">상품조회</a></li>
                           
                       </ul>
                   </li>
@@ -258,8 +215,8 @@
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">                          
-                          <li><a class="" href="javascript:goUrl('regis')">판매등록</a></li>
-                          <li><a class="" href="javascript:goUrl('exchRefu')"><span>교환/환불</span></a></li>
+                          <li><a class="" href="javascript:goUrl('smangRegis')">판매등록</a></li>
+                          <li><a class="" href="javascript:goUrl('smangExchTefu')"><span>교환/환불</span></a></li>
                       </ul>
                   </li>
                   
