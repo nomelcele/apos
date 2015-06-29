@@ -145,9 +145,9 @@
 <!-- 본사 상품관리 상품재고관리 -->
 <form method="post" action="bon_productSale" id="sale"></form>
 <!-- 품목별 매출순위 -->
-<form method="post" action="bon_termSalesCheck" id="productsch"></form>
+<form method="post" action="bon_productSalesCheck" id="productsch"></form>
 <!--  대리점별 매출순위-->
-<form method="post" action="bon_productSalesCheck" id="outletsch"></form>
+<form method="post" action="bon_termSalesCheck" id="outletsch"></form>
 
 
       <!--sidebar start-->
