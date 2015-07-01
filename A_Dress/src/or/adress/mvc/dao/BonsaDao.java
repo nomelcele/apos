@@ -41,7 +41,7 @@ public class BonsaDao { // 본사 Dao 입니다.
 	
 	public void sawonjoin(BonsaVO vo){
 		// 본사 사원 회원가입
-		ss.insert("bonsa.sawon_jain",vo);
+		ss.insert("bonsa.sawon_join",vo);
 	}
 	// Session에서 쓰일 매장명과 매장주인 이름 을 뽑기
 	public String getbonname(String id){
