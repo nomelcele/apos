@@ -24,6 +24,30 @@
 		<property name="suffix" value=".jsp" />
 		<property name="order" value="1"></property>
 	</bean>
+	
+	
+	
+
+   <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+      <property name="jndiName" value="java:comp/env/jdbc/myora" />
+   </bean>
+   <!-- MyBatis 설정 -->
+   <bean id="factoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSource" />
+      <property name="configLocation" value="classpath:or/kosta/config/config.xml" />
+      <property name="mapperLocations" value="classpath*:or/kosta/mapper/*.xml" />
+   </bean>
+   <!-- Spring이 제공해주는 myBatis템플릿 객체의 빈설정 -->
+   <bean id="ss" class="org.mybatis.spring.SqlSessionTemplate">
+      <constructor-arg ref="factoryBean"></constructor-arg>
+   </bean>
+   <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+   <property name="dataSource" ref="dataSource"></property></bean>
+
+   <!-- transaction annotation 방식 설정 -->
+   <tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	
 
 	<!-- Tiles -->
 	<!-- tilesconfigurer랑 연동  -->
