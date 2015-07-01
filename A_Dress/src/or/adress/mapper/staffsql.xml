@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="staff">
+ 	<select id="get_list" resultType="staffvo">
+ 		select a.staff_num,a.staff_name,a.staff_tel,
+ 		s.shop_name,a.STAFF_POSITION from staff a , 
+ 		shop s where s.shop_num=a.staff_shopnum
+ 	</select>
+ 	<select id="suggest_list" resultType="staffvo">
+ 		
+ 	</select>
+ 	<insert id="inset_mem" parameterType="map" >
+ 		insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,sysdate,1,#{mem_email})
+ 	</insert>
+ </mapper>
