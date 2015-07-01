@@ -4,10 +4,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="logtime">
 	<insert id="login_time" parameterType="String">
-		insert into loginout values( loginout_seq.nextval , sysdate , null ,#{id} )
+		insert into loginout values( loginout_seq.nextval , sysdate , null ,#{u_id} )
 	</insert>
 	<insert id="logout_time" parameterType="String">
-		insert into loginout values(loginout_seq.nextval , null , sysdate , #{id})
+		insert into loginout values(loginout_seq.nextval , null , sysdate , #{u_id})
 	</insert>
 </mapper>
   
