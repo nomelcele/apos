@@ -25,46 +25,18 @@ public class BoardDao {
 	@Autowired
 	private SqlSessionTemplate ss;
 	
-	private static BoardDao dao;
 
-	public static synchronized BoardDao getDao() {
-		if (dao == null)
-			dao = new BoardDao();
-		return dao;
-	}
 	public void delete(int no){
-		System.out.println("deleteüũ");
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		try {
-			con = MyJndiContext.getDs();
-			StringBuffer sql = new StringBuffer();
-			sql.append("delete board where bo_num = ?");
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setInt(1, no);
-			pstmt.executeUpdate();
-
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
+		ss.delete("notice.notice_delete", no);
 	}
 	public void insert(BoardVO vo) {
-		SqlSession ss = FactoryService.getFactory().openSession(true);
+		
 		ss.insert("notice.notice_in", vo);
 
 	}
 
 	public List<BoardVO> getList(Map<String, Integer> map) {
-		SqlSession ss = FactoryService.getFactory().openSession();
+		
 		List<BoardVO> list = ss.selectList("notice.notice_list", map);
 		
 		return list;

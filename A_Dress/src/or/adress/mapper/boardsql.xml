@@ -11,4 +11,8 @@
   	<select id="notice_list" parameterType="map" resultType="bvo">
   		select bo_num no, bo_sub title, bo_writer writer, bo_cont content, bo_date regdate, bo_img path, bo_hit hit, bo_bonnum groupno from (select rownum r_num, a.* from (select * from board order by BO_NUM desc) a) where r_num between #{begin} and #{end}
   	</select>
+  	
+  	<delete id="notice_delete" parameterType="int">
+  	delete board where bo_num = #{no}
+  	</delete>
 </mapper>
