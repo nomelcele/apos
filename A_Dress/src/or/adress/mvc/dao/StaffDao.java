@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -22,57 +23,11 @@ public class StaffDao {
 	@Autowired
 	private SqlSessionTemplate ss;
 	
-	private static StaffDao dao;
-
-	public static synchronized StaffDao getDao() {
-		if (dao == null) {
-			dao = new StaffDao();
-		}
-		return dao;
-	}
-
-	public ArrayList<StaffVO> getList() {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		ArrayList<StaffVO> list = new ArrayList<StaffVO>();
-
-		StringBuffer sql = new StringBuffer();
-		sql.append("select a.staff_num,a.staff_name,a.staff_tel,s.shop_name,a.STAFF_POSITION from staff a , shop s where s.shop_num=a.staff_shopnum");
-
-		try {
-			con = MyJndiContext.getDs();
-			pstmt = con.prepareStatement(sql.toString());
-
-			rs = pstmt.executeQuery();
-			while (rs.next()) {
-				StaffVO v = new StaffVO();
-				v.setShop_snum(rs.getInt("staff_num"));
-				v.setShop_sname(rs.getString("staff_name"));
-				v.setShop_sposition(rs.getString("STAFF_POSITION"));
-				v.setShop_stel(rs.getString("staff_tel"));
-				v.setShop_name(rs.getString("shop_name"));
-
-				list.add(v);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-				if (rs != null)
-					rs.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
+		public List<StaffVO> getList() {
+		List<StaffVO> list = ss.selectList("staff.get_list");
 		return list;
 	}
-
+	// 경찬이 오빠가 나중에 한답니다. select("staff.suggest_list",check)
 	public ArrayList<StaffVO> suggestList(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -131,44 +86,7 @@ public class StaffDao {
 	}
 
 	public void insertMem(HashMap<String, String> map) {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		System.out.println("확인");
-		try {
-			con = MyJndiContext.getDs();
-			StringBuffer sql = new StringBuffer();
-			StringBuffer post = new StringBuffer();
-			StringBuffer tel = new StringBuffer();
-			sql.append("insert into member values(");
-			sql.append("member_seq.nextval,?,?,?,?,?,0,sysdate,1,?)");
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, map.get("name"));
-			tel.append(map.get("tel1")).append("-").append(map.get("tel2"))
-					.append("-").append(map.get("tel3"));
-			pstmt.setString(2, tel.toString());
-			post.append(map.get("adr1")).append("-").append(map.get("adr2"));
-			pstmt.setString(3, post.toString());
-			pstmt.setString(4, map.get("adr3"));
-			pstmt.setString(5, map.get("adr4"));
-			// 나중에세션처리구현하면넣어야되회원이가입한상점번호
-			// pstmt.setString(6,map.get("shopnum"));
-			pstmt.setString(6, map.get("email"));
-			pstmt.executeUpdate();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-		}
+		ss.insert("staff.insert_mem",map);
 	}
 
 	public void getListName(HashMap<String, String> map) {
