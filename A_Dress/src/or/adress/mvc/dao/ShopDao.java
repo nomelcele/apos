@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -358,6 +359,8 @@ public class ShopDao {
 	}
 	// PWD 찾기에서 쓰임
 	public String findpwd(String name, String id){
+		
+		
 		Connection con= null;
 		PreparedStatement pstmt=null;
 		ResultSet rs = null;
