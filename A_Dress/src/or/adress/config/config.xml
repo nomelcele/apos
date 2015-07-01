@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="vo.BoardVO" alias="bvo" />
+		<typeAlias type="vo.BonsaVO" alias="bonvo" />
+		<typeAlias type="vo.ChaVO" alias="chavo" />
+		<typeAlias type="vo.CommVO" alias="commvo" />
+		<typeAlias type="vo.MemVO" alias="memvo" />
+		<typeAlias type="vo.PageVO" alias="pagevo" />
+		<typeAlias type="vo.ProductVO" alias="provo" />
+		<typeAlias type="vo.SalesCheckVO" alias="schkvo" />
+		<typeAlias type="vo.ShopHotkeyVO" alias="shotvo" />
+		<typeAlias type="vo.ShopVO" alias="shvo" />
+		<typeAlias type="vo.SmangVO" alias="smangvo" />
+		<typeAlias type="vo.StaffVO" alias="staffvo" />
+	</typeAliases>
+	<environments default="">
+		<environment id="">
+			<transactionManager type="JDBC" />
+			<dataSource type="JNDI">
+				<property name="data_source" value="java:comp/env/jdbc/myora" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="mapper/boardsql.xml" />
+	</mappers>
+</configuration>
