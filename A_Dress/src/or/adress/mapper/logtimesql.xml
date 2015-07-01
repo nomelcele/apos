@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="logtime">
+	<insert id="login_time" parameterType="String">
+		insert into loginout values( loginout_seq.nextval , sysdate , null ,#{id} )
+	</insert>
+	<insert id="logout_time" parameterType="String">
+		insert into loginout values(loginout_seq.nextval , null , sysdate , #{id})
+	</insert>
+</mapper>
+  
