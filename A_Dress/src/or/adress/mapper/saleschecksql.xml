@@ -20,7 +20,7 @@
   	</select>
   	
   	
-  	<!-- 보류 -->
+  	<!-- 완료 -->
   	<select id="salescheck_list" parameterType="map" resultType="schkvo">
   	select  to_char(sell_date,'yyyy-MM') sedate,count(*) cnt  ,sum(s.sell_cash) sell_cash, sh.SHOP_NAME sell_shopname  from sell s, shop sh  where s.SELL_SHOPNUM = sh.shop_num and sh.SHOP_NAME like #{shopname}   and( sell_date >= to_date(#{startdate},'yyyy-MM-dd')  and sell_Date <= to_date(#{enddate},'yyyy-MM-dd'))   group by to_char(sell_date,'yyyy-MM') ,sh.SHOP_NAME ORDER BY 1
   	</select>
@@ -35,7 +35,7 @@
 
 	<!-- join이라서 물어볼 것.. -->
 	<!-- 완료 -->
-	<select id="salescheck_list" parameterType="map" resultType="bvo">
+	<select id="salescheck_searchSellnum" parameterType="map" resultType="schkvo">
   		select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m
   		where s.sell_memnum = m.mem_num and sell_num =#{sellnum}
   	</select>
