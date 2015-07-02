@@ -5,6 +5,9 @@
 
 <mapper namespace="smang">
 
+	<!-- 홍기형이 짠 쿼리문이라서 -->
+	<!-- 홍기형이 하신다함 -->
+	<!-- 아무도 건들지 말 것 ㅋㅋ -->
 	<select id="smang_editstock" parameterType="map">
 	select sto_amount from stock where sto_pronum = {#pro_num} and sto_size = #{size} and sto_shopnum = #{shopnum}
 	</select>
