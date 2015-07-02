@@ -102,7 +102,7 @@ public class SalesCheckDao {
 	// 완료 확인요망
 	public List<SalesCheckVO> searchSellnum(int sellnum){
 		
-		return ss.selectList("salescheck_searchSellnum", sellnum);
+		return ss.selectList("ssalescheck.salescheck_searchSellnum", sellnum);
 
 	}
 }
