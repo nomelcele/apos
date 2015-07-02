@@ -139,8 +139,8 @@ public class ShopDao {
 
 	// 맴버 정보를 디비에서 빼옴 검색한 내용에 맞게
 
-	public List<MemVO> getListMember(String name) {
-		return ss.selectList("shop.listmember", name);
+	public List<MemVO> getListMember(String mem_name) {
+		return ss.selectList("shop.memberlist", mem_name);
 	}
 
 	// 인자값 두개니까 물어 볼 것
