@@ -1,5 +1,6 @@
 package vo;
 
+// ÄÃ·³¸í : staff_num, staff_name, staff_position, staff_tel, staff_shopnum, staff_id, staff_pwd
 public class StaffVO {
 private int shop_snum,shop_num;
 private String shop_sname,shop_sposition,shop_stel,shop_name;

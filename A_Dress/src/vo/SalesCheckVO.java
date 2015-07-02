@@ -1,5 +1,6 @@
 package vo;
 
+// sell_mileage, sell_shopnum ¾øÀ½!!
 public class SalesCheckVO {
 	private String sell_memname;
 	private String sell_date;

@@ -1,5 +1,6 @@
 package vo;
 
+// key_hot, key_mailÀÓ
 public class ShopHotkeyVO {
 	public int key_num, key_hotkey,key_crnum;
 	public String key_name, key_email, key_date;

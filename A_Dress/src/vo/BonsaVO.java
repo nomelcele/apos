@@ -1,5 +1,6 @@
 package vo;
 
+// 컬럼명 일치!
 public class BonsaVO {
 	private int bon_num;
 	private String bon_name, bon_id, bon_pwd, bon_job, bon_tel, bon_date;
