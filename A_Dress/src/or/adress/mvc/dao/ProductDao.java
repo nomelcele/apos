@@ -24,6 +24,10 @@ public class ProductDao {
 	private SqlSessionTemplate ss;
 	
 	// 보류 / 물어볼 것
+	// 완료 확인요망
+	// 이거 해쉬맵 String하고 int가 섞여있어서
+	// 일단 obJect로 해놨는데
+	// 만약 오류나면 여기가 안되는 거임
 	public void stockedit(int pamount, String pronum, int shopnum, int psize){
 		
 		HashMap<String, Object> map = new HashMap<String, Object>();
@@ -39,6 +43,7 @@ public class ProductDao {
 	
 	// product_insert
 	// 완료 확인요망
+	// 반환값이 리절트, 인자값이 파라미터
 	public void insert(ProductVO vo) {
 		ss.insert("product.product_insert", vo);
 	}
