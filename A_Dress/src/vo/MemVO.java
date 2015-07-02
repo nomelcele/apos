@@ -1,15 +1,9 @@
 package vo;
 
 public class MemVO {
-	int mem_num,mem_mileage,mem_shopnum;
-	String mem_name,mem_tel,mem_post,mem_addr
+	private int mem_num,mem_mileage,mem_shopnum;
+	private String mem_name,mem_tel,mem_post,mem_addr
 	,mem_deaddr,mem_date,mem_email;
-	public synchronized String getMem_email() {
-		return mem_email;
-	}
-	public synchronized void setMem_email(String mem_email) {
-		this.mem_email = mem_email;
-	}
 	public int getMem_num() {
 		return mem_num;
 	}
@@ -64,4 +58,13 @@ public class MemVO {
 	public void setMem_date(String mem_date) {
 		this.mem_date = mem_date;
 	}
+	public String getMem_email() {
+		return mem_email;
+	}
+	public void setMem_email(String mem_email) {
+		this.mem_email = mem_email;
+	}
+	
+	
+	
 }
