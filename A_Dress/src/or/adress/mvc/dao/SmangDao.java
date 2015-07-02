@@ -10,7 +10,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import conn.MyJndiContext;
+
 import vo.SmangVO;
 
 @Repository
@@ -39,7 +39,7 @@ public class SmangDao {
 		StringBuffer sql1 = new StringBuffer();
 		sql1.append("select sto_amount from stock where sto_pronum = ? and sto_size = ? and sto_shopnum = ?");
 		try {
-			con = MyJndiContext.getDs();
+			
 			pstmt = con.prepareStatement(sql1.toString());
 			pstmt.setInt(1, pro_num);
 			pstmt.setInt(2, size);
@@ -69,7 +69,7 @@ public class SmangDao {
 		StringBuffer sql2 = new StringBuffer();
 		sql2.append("update stock set sto_amount = ? where sto_pronum = ? and sto_size = ? and sto_shopnum = ?");
 		try {
-			con = MyJndiContext.getDs();
+			
 			pstmt = con.prepareStatement(sql2.toString());
 			pstmt.setInt(1, (camount-many));
 			pstmt.setInt(2, pro_num);
@@ -98,7 +98,7 @@ public class SmangDao {
 		StringBuffer sql = new StringBuffer();
 		sql.append("update member set mem_mileage = ? where mem_num = ?");
 		try {
-			con = MyJndiContext.getDs();
+		
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setInt(1, mile);
 			pstmt.setInt(2, cusnum);
@@ -131,7 +131,7 @@ public class SmangDao {
 		
 			try {
 				System.out.println("여기까지는 오나");
-				con = MyJndiContext.getDs();
+				
 				pstmt = con.prepareStatement(sql1.toString());
 				rs1 = pstmt.executeQuery();
 				System.out.println("여기오면 성공");
@@ -190,7 +190,7 @@ public class SmangDao {
 		StringBuffer sql = new StringBuffer();
 		sql.append("select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and p.pro_code = ? and sh.shop_num = ?");
 		try {
-			con = MyJndiContext.getDs();
+		
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, seq);
 			pstmt.setInt(2, shop_num);

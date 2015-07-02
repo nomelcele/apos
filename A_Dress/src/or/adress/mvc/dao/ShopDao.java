@@ -154,8 +154,8 @@ public class ShopDao {
 	}
 
 	// ¸É¹ö Ãß°¡
-	public void insertMem(HashMap<String, String> map) {
-		ss.insert("shop.insertMem", map);
+	public void insertMem(MemVO vo) {
+		ss.insert("shop.insertMem", vo);
 	}
 
 	public MemVO getDetail(int no) {
