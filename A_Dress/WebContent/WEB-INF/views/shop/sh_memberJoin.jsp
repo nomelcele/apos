@@ -59,7 +59,20 @@
 	}
 
 	function joinaction() {
+		postsum();
+		telsum();
 		document.getElementById("member_form").submit();
+	}
+	function telsum() {
+		$("#mem_tel").val(
+				$("#tel1").val() + "-" + $("#tel2").val() + "-"
+						+ $("#tel3").val());
+
+	}
+	function postsum() {
+		$("#mem_post").val(
+				$("#sample4_postcode1").val() + "-"
+						+ $("#sample4_postcode2").val());
 	}
 </script>
 
@@ -73,7 +86,7 @@
 <section id="main-content">
 	<section class="wrapper">
 
-		<div class="row" style="font-size: 15px;width: 100%;height: 100%">
+		<div class="row" style="font-size: 15px; width: 100%; height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 회원가입
@@ -88,17 +101,13 @@
 								<div class="form">
 
 									<form class="form-validate form-horizontal" id="member_form"
-										method="post" action="sh.apos">
-										<input type="hidden" name="cmd" value="smember"> <input
-											type="hidden" name="subcmd" value="insert">
-
-
+										method="post" action="sh_memberjoinjoin">
 										<div class="form-group ">
 											<label for="cname" class="control-label col-lg-2">이름<span
 												class="required">*</span></label>
 											<div class="col-lg-2">
-												<input class="form-control"  style="width: 20%" id="sname" name="name"
-													type="text" required />
+												<input class="form-control" style="width: 50%" id="sname"
+													name="mem_name" type="text" required />
 											</div>
 										</div>
 
@@ -109,7 +118,7 @@
 											</label>
 											<div class="col-lg-2">
 												<input class="form-control1 " id="date" type="date"
-													name="date" required />
+													style="width: 50%" name="mem_date" required />
 											</div>
 										</div>
 
@@ -117,9 +126,9 @@
 											<label for="cemail" class="control-label col-lg-2">E-Mail
 												<span class="required">*</span>
 											</label>
-											<div class="col-lg-4" >
+											<div class="col-lg-4">
 												<input class="form-control " id="smail" type="email"
-													name="email"  required />
+													name="mem_email" style="width: 80%" required />
 											</div>
 										</div>
 
@@ -130,11 +139,13 @@
 											</label>
 											<div class="">
 												<input class="form-control"
-													style="width: 8%; margin-left: 40px;" id="tel" name="tel1"
-													type="tel" required />- <input class="form-control"
-													style="width: 8%" id="tel" name="tel2" type="tel" required />-
-												<input class="form-control" style="width: 8%" id="tel"
-													name="tel3" type="tel" required />
+													style="width: 20%; margin-left: 40px;" id="tel1"
+													maxlength="3" type="tel" required />- <input
+													class="form-control" style="width: 20%" id="tel2"
+													type="tel" required maxlength="4" />- <input
+													class="form-control" style="width: 20%" id="tel3"
+													type="tel" required maxlength="4" /> <input type="hidden"
+													name="mem_tel" id="mem_tel">
 											</div>
 										</div>
 
@@ -144,11 +155,12 @@
 												class="required">*</span></label>
 											<div class="col-lg-10">
 												<input class="form-control2 " type="text"
-													id="sample4_postcode1" name="adr1"> - <input
+													id="sample4_postcode1" style="width: 30%"> - <input
 													class="form-control2 " type="text" id="sample4_postcode2"
-													name="adr2"> <input class="form-control5 "
+													style="width: 30%"> <input class="form-control5 "
 													type="button" onclick="sample4_execDaumPostcode()"
-													value="우편번호 찾기 "><br>
+													value="우편번호 찾기 "><br> <input type="hidden"
+													id="mem_post" name="mem_post">
 											</div>
 										</div>
 
@@ -159,11 +171,12 @@
 												<span class="required">*</span>
 											</label>
 											<div class="col-lg-10">
-												<input class="form-control3 " type="text"
-													id="sample4_roadAddress" placeholder="도로명주소" name="adr3">
-												<input class="form-control3 " type="text"
-													id="sample4_jibunAddress" placeholder="지번주소" name="adr4">
-												<span id="guide" style="color: #999"></span>
+												<input class="form-control3 " type="text" style="width: 80%"
+													id="sample4_roadAddress" placeholder="도로명주소"
+													name="mem_addr"> <input class="form-control3 "
+													style="width: 80%" type="text" id="sample4_jibunAddress"
+													placeholder="지번주소" name="mem_deaddr"> <span
+													id="guide" style="color: #999"></span>
 											</div>
 										</div>
 
