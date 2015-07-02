@@ -12,14 +12,11 @@
 		document.getElementById("notice").submit();
 	}
 </script>
-<form method="post" action="bon.apos" id=write>
-	<input type="hidden" name="cmd" value="bwork"> <input
-		type="hidden" name="subcmd" value="in">
+<form method="post" action="bon_noticein" id=write>
 </form>
-<form method="post" action="bon.apos" id=notice>
-	<input type="hidden" name="cmd" value="bwork"> <input
-		type="hidden" name="subcmd" value="notice"> <input
-		type="hidden" name="page" value="1">
+
+<form method="post" action="bon_workNotice" id=notice>
+	<input type="hidden" name="page" value="1">
 </form>
 <section id="main-content">
 	<section class="wrapper">
@@ -47,7 +44,7 @@
 								<tr>
 									<td>${stList.no}</td>
 									<td><a
-										href="bon.apos?cmd=bwork&subcmd=boardDetail&no=${stList.no}&page=1">
+										href="bon_workNoticedetail?no=${stList.no}&page=1">
 											${stList.title}</a></td>
 									<td>${stList.writer}</td>
 									<td>${stList.regdate}</td>
@@ -58,7 +55,7 @@
 					<!-- page end-->
 					<section class="panel">
 
-						<c:set var="pageUrl" value="bon.apos?cmd=bwork&subcmd=notice" />
+						<c:set var="pageUrl" value="bon_workNotice" />
 						<%@include file="page.jsp"%>
 
 						<div>

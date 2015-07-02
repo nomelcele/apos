@@ -31,7 +31,7 @@
   		insert into comm values(comm_seq.nextVal,#{no},#{writer},#{comm},sysdate)
   	</insert>
   	
-  	<select id="notice_getcommlist" parameterType="map">
+  	<select id="notice_getcommlist" parameterType="map" resultType="commvo">
   		select * from (select rownum r_num, a.* from (select * from comm where comm_bonum=#{no} order by comm_num desc) a) where r_num between #{begin} and #{end}
   	</select>
   	
