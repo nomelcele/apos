@@ -19,15 +19,15 @@ import vo.StaffVO;
 import conn.MyJndiContext;
 
 @Repository
-public class StaffDao {
+public class StaffDao { // 서경연
 	@Autowired
 	private SqlSessionTemplate ss;
-	
+		// staff의 정보를 list로 반환 합니다. staff, shop 둘다 씁니다.
 		public List<StaffVO> getList() {
 		List<StaffVO> list = ss.selectList("staff.get_list");
 		return list;
 	}
-	// 경찬이 오빠가 나중에 한답니다. select("staff.suggest_list",check)
+	// 경찬이 오빠가 나중에 한답니다. 
 	public ArrayList<StaffVO> suggestList(String check) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -88,78 +88,24 @@ public class StaffDao {
 	public void insertMem(HashMap<String, String> map) {
 		ss.insert("staff.insert_mem",map);
 	}
-
+	// 미완성된 코드 같아서 이대로 둡니다. mapper에 만들지 않았습니다.
 	public void getListName(HashMap<String, String> map) {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		ArrayList<StaffVO> list = new ArrayList<StaffVO>();
-
+//		/*Connection con = null;
+//		PreparedStatement pstmt = null;
+//		ResultSet rs = null;
+//		ArrayList<StaffVO> list = new ArrayList<StaffVO>();
+*/
 	}
 		// ID 찾기에서 쓰임 - 광호
-		public String findid(String name, String tel){
-			Connection con= null;
-			PreparedStatement pstmt=null;
-			ResultSet rs = null;
-			String res = "";
-			try {
-				con=MyJndiContext.getDs();
-				StringBuffer sql = new StringBuffer();
-				sql.append("select staff_id from shop where staff_name=? and staff_tel=?");
-				pstmt = con.prepareStatement(sql.toString());
-				pstmt.setString(1,name);
-				pstmt.setString(2,tel);
-				
-				rs = pstmt.executeQuery();
-				
-				while(rs.next()){
-					res=rs.getString("staff_id");
-					System.out.println("=============staff_id====:"+res);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}finally {
-				try {
-					if  (rs != null) rs.close();
-					if (pstmt != null) pstmt.close();
-					if (con != null) con.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
+		// staff name,tel으로 id(snamd)찾기
+		public String findid(StaffVO vo){
+			String res = ss.selectOne("staff.find_id",vo);
 			return res;
 		}
 		// PWD 찾기에서 쓰임
-		public String findpwd(String name, String id){
-			Connection con= null;
-			PreparedStatement pstmt=null;
-			ResultSet rs = null;
-			String res = "";
-			try {
-				con=MyJndiContext.getDs();
-				StringBuffer sql = new StringBuffer();
-				sql.append("select staff_pwd from staff where staff_name=? and staff_id=?");
-				pstmt = con.prepareStatement(sql.toString());
-				pstmt.setString(1,name);
-				pstmt.setString(2,id);
-				
-				rs = pstmt.executeQuery();
-				
-				while(rs.next()){
-					res=rs.getString("staff_pwd");
-					System.out.println("=============staff_pwd====:"+res);
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}finally {
-				try {
-					if  (rs != null) rs.close();
-					if (pstmt != null) pstmt.close();
-					if (con != null) con.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-				}
-			}
+		// staff_name,id로 staff_pwd찾기
+		public String findpwd(StaffVO vo){
+			String res = ss.selectOne("staff.find_pwd",vo);
 			return res;
 		}
 		
