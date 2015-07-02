@@ -8,10 +8,18 @@
  		s.shop_name,a.STAFF_POSITION from staff a , 
  		shop s where s.shop_num=a.staff_shopnum
  	</select>
- 	<select id="suggest_list" resultType="staffvo">
- 		
- 	</select>
  	<insert id="inset_mem" parameterType="map" >
  		insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,sysdate,1,#{mem_email})
  	</insert>
+ 	<select id="find_id" parameterType="staffvo" resultType="String">
+ 		select shop_sname from shop where staff_name=#{shop_name}and staff_tel=#{shop_stel}
+ 	</select>
+ 	<select id="find_pwd" parameterMap="staffvo" resultType="String">
+ 		select staff_pwd from staff where staff_name=#{staff_name} and staff_id=#{staff_id}
+ 	</select>
  </mapper>
+ 
+ 
+ 
+ 
+ 
