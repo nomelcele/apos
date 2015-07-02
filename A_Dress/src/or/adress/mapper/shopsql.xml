@@ -53,4 +53,30 @@
 	select *from shop
 	</select>
 
+	<select id="memberlist" parameterType="map" resultType="memvo">
+		select * from member where mem_name like %#{mem_name}% or mem_tel like %#{mem_tel}%
+	</select>
+	
+	<select id="listproduct" parameterType="map" resultMap="map">
+	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and( p.pro_code like %#{check}% or p.pro_name like %#{check}%) and sh.shop_num = #{shopnum}
+	</select>
+	
+	<insert id="insertMem" parameterType="map">
+	insert into member values(member_seq.nextval,#{name},#{tel},#{post},#{adr3},#{adr4},0,sysdate,1,#{email})
+	</insert>
+	
+	<select id="memdetail" parameterType="int" resultType="memvo">
+	select * from member where mem_num=#{no}
+	</select>
+	
+	<!-- 물어볼것! -->
+	<update id="memupdate" parameterType="map">
+	update member set mem_tel=#{memtel},mem_addr=#{addr},mem_deaddr=#{deaddr},mem_mileage=#{mileage} where mem_num=#{num}
+	</update>
+	
+	<delete id="memdelete" parameterType="memvo">
+	delete from member where mem_num=#{num}
+  	</delete>
+	
+	
 </mapper>
