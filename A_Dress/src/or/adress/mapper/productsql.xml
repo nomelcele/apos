@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="product">
+
+	<insert id="product_insert" parameterType="provo">
+	insert into product values(product_seq.nextVal,#{pro_name},#{pro_code},#{pro_barcode},#{pro_img},sysdate,#{pro_price})
+	</insert>
+	
+	<!-- 모르겠음 / 물어볼 것 -->
+	<select id="product_product" parameterType="provo" resultType="provo">
+  		select * from product where pro_code=#{code}
+  	</select>
+  	
+  	<!-- 이것도 물어볼것 / 위의 거랑 비슷 -->
+  	<select id="product_list1" parameterType="provo" resultType="provo">
+  		select * from product where pro_name like ?
+  	</select>
+  	
+  	<!-- 이것도 물어볼것 / 위의 거랑 비슷 / 이건 보류 인자값이 2개임 -->
+  	<select id="product_list2" parameterType="provo" resultType="provo">
+  		select * from product where pro_name like ?
+  	</select>
+  	
+	
+	
+</mapper>

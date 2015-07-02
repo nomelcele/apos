@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="salescheck">
+
+	<!-- 이거 고대로 옮긴건데 왜 오류가 나는지?? 물어볼 것 -->
+	<select id="salescheck_productlist" parameterType="map" resultType="schkvo">
+	select to_char(sell_date,'yyyy-MM') sedate, count(*) cnt, sum(s.sell_cash) sell_cash, p.PRO_NAME 
+	sell_proname from sell s, shop sh,product p  where s.SELL_pronum = p.pro_code and s.SELL_PRONUM = 
+	#{procode} and( sell_date >= to_date(#{startdate}, 'yyyy-MM-dd')  
+	and sell_Date <= to_date(#{enddate}, 'yyyy-MM-dd')) group by to_char(sell_date, 'yyyy-MM'), p.PRO_NAME ORDER BY 1
+  	</select>
+  	
+  	
+  	<!-- 완료 -->
+  	<select id="salescheck_onday" parameterType="map" resultType="schkvo">
+  	select sell_pronum ,sell_cash, sell_memnum, to_char(sell_date,'yyyy_MM-dd-hh-MI') sedate,sell_many from sell where sell_shopnum=#{shopnum} and sell_date like to_date(#{day},'yy-MM-dd')
+  	</select>
+  	
+  	
+  	<!-- 보류 -->
+  	<select id="salescheck_list" parameterType="map" resultType="schkvo">
+  	select  to_char(sell_date,'yyyy-MM') sedate,count(*) cnt  ,sum(s.sell_cash) sell_cash, sh.SHOP_NAME sell_shopname  from sell s, shop sh  where s.SELL_SHOPNUM = sh.shop_num and sh.SHOP_NAME like #{shopname}   and( sell_date >= to_date(#{startdate},'yyyy-MM-dd')  and sell_Date <= to_date(#{enddate},'yyyy-MM-dd'))   group by to_char(sell_date,'yyyy-MM') ,sh.SHOP_NAME ORDER BY 1
+  	</select>
+  	
+  	
+  	<select id="salescheck_searchSellnum" parameterType="schkvo" resultType="schkvo">
+  	select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m where s.sell_memnum = m.mem_num and sell_num =#{sellnum}
+  	</select>
+
+
+
+
+	<!-- join이라서 물어볼 것.. -->
+	<!-- 완료 -->
+	<select id="salescheck_list" parameterType="map" resultType="bvo">
+  		select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m
+  		where s.sell_memnum = m.mem_num and sell_num =#{sellnum}
+  	</select>
+
+</mapper>
