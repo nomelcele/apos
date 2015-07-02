@@ -111,7 +111,7 @@
 
 										<input type="hidden" id="shop_num" name="shop_num"
 											value="${sessionScope.shop_num}"> <label for="cname"
-											class="control-label col-lg-1" style="font-size: 13px;">이름
+											class="control-label col-lg-6" style="font-size: 13px;">이름
 										</label><input class="form-control" id="sname_ps" name="name"
 											style="width: 50%" onkeydown="startSuggest();"
 											autocomplete="off" type="text" required />
