@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -21,17 +23,20 @@ public class SalesCheckDao {
 	@Autowired
 	private SqlSessionTemplate ss;
 	
-	private static SalesCheckDao dao;
-
-	public static synchronized SalesCheckDao getDao() {
-		if (dao == null)
-			dao = new SalesCheckDao();
-		return dao;
-
-	}
-
-	public ArrayList<SalesCheckVO> getProductList(String procode,
+	
+	// 인자값 3개 / 물어볼 것
+	public List<SalesCheckVO> getProductList(String procode,
 			String startdate, String enddate) {
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("procode", procode);
+		map.put("startdate", startdate);
+		map.put("enddate", enddate);
+		
+		return ss.selectList("salescheck.salescheck_productlist", map);
+		
+		
+		
+		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -78,55 +83,34 @@ public class SalesCheckDao {
 		return list;
 
 	}
-	public ArrayList<SalesCheckVO> getonday(String shopnum,String day){
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		ArrayList<SalesCheckVO> list = new ArrayList<SalesCheckVO>();
-		System.out.println("map" + shopnum);
-		System.out.println("gender" +day);
-
-		StringBuffer sql = new StringBuffer();
-		sql.append("select sell_pronum ,sell_cash, sell_memnum, to_char(sell_date,'yyyy_MM-dd-hh-MI') sedate,sell_many");
-		sql.append(" from sell where sell_shopnum=? and sell_date like to_date(?,'yy-MM-dd')");
-
-		try {
-			con = MyJndiContext.getDs();
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, shopnum);
-			pstmt.setString(2, day);
-			rs = pstmt.executeQuery();
-			while (rs.next()) {
-				SalesCheckVO v = new SalesCheckVO();
-				System.out.println("test34" + rs.getInt("sell_cash"));
-				v.setDate(rs.getString("sedate"));
-				v.setSell_cash(rs.getInt("sell_cash"));
-				v.setSell_many(rs.getInt("sell_many"));
-				v.setSell_pronum(rs.getInt("sell_pronum"));
-				v.setSell_memnum(rs.getInt("sell_memnum"));
-				list.add(v);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return list;
+	
+	// 인자값 2개 물어볼 것
+	// 완료 확인요망
+	public List<SalesCheckVO> getonday(String shopnum,String day){
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("shopnum", shopnum);
+		map.put("day", day);
+		
+		return ss.selectList("salescheck.salescheck_onday", map);
 
 	}
 		
 	
-
-	public ArrayList<SalesCheckVO> getList(String shopname, String startdate,
+	// 인자값 3개.. 물어볼 것
+	public List<SalesCheckVO> getList(String shopname, String startdate,
 			String enddate) {
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("shopname", shopname);
+		map.put("startdate", startdate);
+		map.put("enddate", enddate);
+		
+		return ss.selectList("salescheck.salescheck_list", map);
+		
+		
+		
+		
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -137,8 +121,8 @@ public class SalesCheckDao {
 		StringBuffer sql = new StringBuffer();
 		sql.append("select  to_char(sell_date,'yyyy-MM') sedate,count(*) cnt ");
 		sql.append(" ,sum(s.sell_cash) sell_cash, sh.SHOP_NAME sell_shopname ");
-		sql.append(" from sell s, shop sh  where s.SELL_SHOPNUM = sh.shop_num and sh.SHOP_NAME like ?  ");
-		sql.append(" and( sell_date >= to_date(?,'yyyy-MM-dd')  and sell_Date <= to_date(?,'yyyy-MM-dd')) ");
+		sql.append(" from sell s, shop sh  where s.SELL_SHOPNUM = sh.shop_num and sh.SHOP_NAME like #{shopname}  ");
+		sql.append(" and( sell_date >= to_date(#{startdate},'yyyy-MM-dd')  and sell_Date <= to_date(#{enddate},'yyyy-MM-dd')) ");
 		sql.append("  group by to_char(sell_date,'yyyy-MM') ,sh.SHOP_NAME ORDER BY 1");
 
 		try {
@@ -173,46 +157,12 @@ public class SalesCheckDao {
 		return list;
 
 	}
-	public ArrayList<SalesCheckVO> searchSellnum(int sellnum){
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		ArrayList<SalesCheckVO> list = new ArrayList<SalesCheckVO>();
-		System.out.println("map" + sellnum);
-
-		StringBuffer sql = new StringBuffer();
-		sql.append("select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m");
-		sql.append(" where s.sell_memnum = m.mem_num and sell_num =?");
-
-		try {
-			con = MyJndiContext.getDs();
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setInt(1, sellnum);
-			rs = pstmt.executeQuery();
-			while (rs.next()) {
-				SalesCheckVO v = new SalesCheckVO();
-				System.out.println("test34" + rs.getInt("sell_cash"));
-				v.setSell_num(rs.getInt("sell_num"));
-				v.setSell_memname(rs.getString("sell_memname"));
-				v.setSell_cash(rs.getInt("sell_cash"));
-				v.setSell_many(rs.getInt("sell_many"));
-				v.setSell_pronum(rs.getInt("sell_pronum"));
-				list.add(v);
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return list;
+	
+	// join이라서 물어봐야 할듯...
+	// 완료 확인요망
+	public List<SalesCheckVO> searchSellnum(int sellnum){
+		
+		return ss.selectList("salescheck_searchSellnum", sellnum);
 
 	}
 }
