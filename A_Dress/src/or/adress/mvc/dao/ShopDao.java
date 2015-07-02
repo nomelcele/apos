@@ -158,13 +158,13 @@ public class ShopDao {
 		ss.insert("shop.insertMem", vo);
 	}
 
-	public MemVO getDetail(int no) {
-		return ss.selectOne("shop.memdetail", no);
+	public MemVO getDetail(int mem_num) {
+		return ss.selectOne("shop.memdetail", mem_num);
 	}
 
 	// 물어볼것 / 헷갈리네..
-	public void getfinish(HashMap<String, String> map) {
-		ss.update("shop.memupdate", map);
+	public void getfinish(MemVO vo) {
+		ss.update("shop.memupdate", vo);
 	}
 	public void getsecede(int num) {
 		ss.delete("shop.memdelete", num);
