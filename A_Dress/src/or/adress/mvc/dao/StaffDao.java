@@ -15,8 +15,8 @@ public class StaffDao { // 서경연
 	@Autowired
 	private SqlSessionTemplate ss;
 		// staff의 정보를 list로 반환 합니다. staff, shop 둘다 씁니다.
-		public List<StaffVO> getList() {
-		List<StaffVO> list = ss.selectList("staff.get_list");
+	public List<StaffVO> getList(String shop_name) {
+		List<StaffVO> list = ss.selectList("staff.get_list",shop_name);
 		return list;
 	}
 	// 경찬이 오빠가 나중에 한답니다. 
