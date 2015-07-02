@@ -66,7 +66,7 @@
 															<c:forEach var="stList" items="${stList}">											
 																	<tr>
 																		<th>${stList.mem_num}</th>
-																		<th><a href="sh.apos?cmd=smember&subcmd=detail&num=${stList.mem_num}&page=1">${stList.mem_name}</a></th>
+																		<th><a href="sh_memberDetail?num=${stList.mem_num}">${stList.mem_name}</a></th>
 																		<th>${stList.mem_email}</th>
 																		<th>${stList.mem_addr}</th>
 																		<th>${stList.mem_tel}</th>
