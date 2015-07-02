@@ -16,10 +16,10 @@
 	}
 	$(function() {
 		$('#memchange2').click(function() {
-			$('#memtel').attr("readonly", false);
-			$('#addr').attr("readonly", false);
-			$('#deaddr').attr("readonly", false);
-			$('#mileage').attr("readonly", false);
+			$('#mem_tel').attr("readonly", false);
+			$('#mem_addr').attr("readonly", false);
+			$('#mem_deaddr').attr("readonly", false);
+			$('#mem_mileage').attr("readonly", false);
 		});
 	});
 </script>
@@ -27,10 +27,8 @@
 <section class="wrapper">
 	<section id="main-content">
 
-		<form method="post" action="sh.apos" id="secede">
-			<input type="hidden" name="cmd" value="smember"> <input
-				type="hidden" name="subcmd" value="secede"> <input
-				type="hidden" name="num" value="${v.mem_num}">
+		<form method="post" action="sh_memberDetail_del" id="secede">
+		<input type="hidden" name="num" value="${v.mem_num}">
 		</form>
 
 
@@ -51,8 +49,8 @@
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">이름</label>
 								<div class="col-lg-2">
-									<input class="form-control" style="width: 260px;" id="name"
-										name="name" minlength="2" type="text" value="${v.mem_name}"
+									<input class="form-control" style="width: 260px;" id="mem_name"
+										name="mem_name" minlength="2" type="text" value="${v.mem_name}"
 										readonly="readonly" />
 								</div>
 							</div>
@@ -61,8 +59,8 @@
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">회원번호</label>
 								<div class="col-lg-2">
-									<input class="form-control" style="width: 260px;" id="num"
-										name="num" minlength="2" type="text" value="${v.mem_num }"
+									<input class="form-control" style="width: 260px;" id="mem_num"
+										name="mem_num" minlength="2" type="text" value="${v.mem_num }"
 										readonly="readonly" />
 								</div>
 							</div>
@@ -71,8 +69,8 @@
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">전화번호</label>
 								<div class="col-lg-2">
-									<input class="form-control" style="width: 260px;" id="memtel"
-										name="memtel" minlength="2" type="text" value="${v.mem_tel }"
+									<input class="form-control" style="width: 260px;" id="mem_tel"
+										name="mem_tel" minlength="2" type="text" value="${v.mem_tel }"
 										readonly="readonly" />
 
 								</div>
@@ -83,8 +81,8 @@
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">주소</label>
 								<div class="col-lg-2">
-									<input class="form-control" style="width: 260px;" id="addr"
-										name="addr" minlength="2" type="text" value="${v.mem_addr }"
+									<input class="form-control" style="width: 260px;" id="mem_addr"
+										name="mem_addr" minlength="2" type="text" value="${v.mem_addr }"
 										readonly="readonly" />
 								</div>
 							</div>
@@ -93,8 +91,8 @@
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">상세주소</label>
 								<div class="col-lg-2">
-									<input class="form-control" style="width: 260px;" id="deaddr"
-										name="deaddr" minlength="2" type="text"
+									<input class="form-control" style="width: 260px;" id="mem_deaddr"
+										name="mem_deaddr" minlength="2" type="text"
 										value="${v.mem_deaddr}" readonly="readonly" />
 								</div>
 							</div>
@@ -104,8 +102,8 @@
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">마일리지</label>
 								<div class="col-lg-2">
-									<input class="form-control" style="width: 260px;" id="mileage"
-										name="mileage" minlength="2" type="text"
+									<input class="form-control" style="width: 260px;" id="mem_mileage"
+										name="mem_mileage" minlength="2" type="text"
 										value="${v.mem_mileage }" readonly="readonly" />
 								</div>
 								<br /> <br />
@@ -115,7 +113,8 @@
 						<div class="form-group"
 							style="margin-left: 200px; margin-top: 30px;">
 							<div class="col-lg-offset-2 col-lg-12">
-								<button class="btn btn-default" type="button" id="memchange2">수정</button>
+								<button class="btn btn-default" type="button" id="memchange2">
+								수정</button>
 								<button class="btn btn-default" type="button" id="gosecede">
 									<a href="javascript:gosecedeUrl('gosecede')">탈퇴</a>
 								</button>
