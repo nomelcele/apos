@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -90,24 +89,23 @@ function telaction(){
 								<!--                           </header> -->
 								<div class="panel-body"
 									style="margin-left: 20px; margin-top: 10px;">
-									<div >
-
-										<form id="telform" method="post" action="sh.apos"
-											style="display: inline;">
-											<input type="hidden" name="cmd" value="swork"> <input
-												type="hidden" name="subcmd" value="tel"> <input
-												class="form-control" id="sname_ps" name="name"
-												onkeydown="startSuggest();" type="text" required
-												placeholder=지점명>
-											<div id="view"></div>
-											<input class="form-control5" type="button"
-												onclick="javascript:telaction()" id="btn" name="btn"
-												value="조회">
-										</form>
 
 
+									<form id="telform" method="post" action="sh_workTelSearch">
+										<input class="form-control" id="sname_ps" name="shop_name"
+											style="width: 80%" onkeydown="startSuggest();" 
+											onkeypress="if(event.keyCode==13){javascript:telaction(); return false;}"
+											type="text"
+											placeholder=지점명>
+										<button type="button" id="btn"
+											onclick="javascript:telaction()" class="btn btn-primary">검색</button>
 
-									</div>
+									</form>
+									<div id="view" class="form-control" style="display: none"></div>
+
+
+
+
 
 
 
