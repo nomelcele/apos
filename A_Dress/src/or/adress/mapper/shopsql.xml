@@ -2,3 +2,55 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop">
+	<insert id="shopjoin" parameterType="shvo">
+		insert into shop values(
+		shop_seq.nextval,#{shop_name},#{shop_tel},#{shop_adr},#{shop_map_x},
+		#{shop_map_y},sysdate,#{shop_mail}, #{shop_master},
+		#{shop_img},#{shop_crnum},1,#{shop_id},#{shop_pwd})
+	</insert>
+	<insert id="shoprequesthotkey" parameterType="shotvo">
+		insert into hotkey
+		values(hotkey_seq.nextVal,#{key_name},#{key_hotkey},#{key_email},#{key_crum},sysdate)
+	</insert>
+
+	<select id="getListRequestShop" resultType="shotvo">
+		select * from hotkey
+	</select>
+
+	<select id="checkhotcrnumname" parameterType="int" resultType="shotvo">
+		select * from hotkey where key_crnum=#{crnum}
+	</select>
+
+	<select id="checkid" parameterType="String" resultType="shvo">
+		select * from shop where shop_id=#{shop_id}
+	</select>
+
+	<select id="checkMasteridpwd" parameterType="map" resultType="shvo">
+		select * from shop where shop_id=#{id} and shop_pwd=#{pwd}
+	</select>
+
+	<select id="checkStaffidpwd" parameterType="map" resultType="shvo">
+		select * from Staff where staff_id=#{id} and staff_pwd=#{pwd}
+	</select>
+
+	<select id=" getshopno" parameterType="String" resultType="int">
+		select shop_num from Shop where shop_id=#{id}
+	</select>
+
+	<select id="getshopname" parameterType="string" resultType="shvo">
+		select * from shop where shop_id=#{id}
+	</select>
+
+	<select id="findid" parameterType="map" resultType="String">
+		select shop_id from shop where shop_master=#{name} and shop_tel=#{tel}
+
+	</select>
+	<select id="findpwd" parameterType="map" resultType="String">
+	select shop_pwd from shop where shop_name=#{shop_name} and shop_id=#{shop_id}
+	</select>
+	<select id="shopList" parameterType="shvo">
+	select *from shop
+	</select>
+
+</mapper>
