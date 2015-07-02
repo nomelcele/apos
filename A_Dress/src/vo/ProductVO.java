@@ -1,5 +1,6 @@
 package vo;
 
+// 컬럼명 일치
 public class ProductVO {
 	private int pro_num, pro_size, pro_price,pro_amount;
 	private String pro_name, pro_code, pro_barcode, pro_img, pro_date, pro_shopname;

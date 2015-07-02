@@ -1,5 +1,6 @@
 package vo;
 
+// 컬럼명 일치!!
 public class MemVO {
 	private int mem_num,mem_mileage,mem_shopnum;
 	private String mem_name,mem_tel,mem_post,mem_addr
