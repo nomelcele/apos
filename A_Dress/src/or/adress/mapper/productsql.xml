@@ -19,14 +19,14 @@
 	
 	<!-- 모르겠음 / 물어볼 것 -->
 	<!-- 완료 -->
-	<select id="product_product" parameterType="provo" resultType="provo">
+	<select id="product_product" parameterType="String" resultType="provo">
   		select * from product where pro_code=#{code}
   	</select>
   	
   	
   	<!-- 완료 -->
-  	<select id="product_bon" parameterType="provo" resultType="provo">
-  		select * from product where pro_name like #{key}
+  	<select id="product_bon" parameterType="String" resultType="provo">
+  		select * from product where pro_name like #{name}
   	</select>
   	
   	<!-- 완료 -->
