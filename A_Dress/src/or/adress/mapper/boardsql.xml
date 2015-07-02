@@ -28,7 +28,7 @@
   	</delete>
   	
   	<insert id="notice_insertcomm" parameterType="map">
-  		insert into comm values(comm_seq.nextVal,#{no},#{writer},#{comm},sysdate)
+  		insert into comm values(comm_seq.nextVal,#{no},#{writer},#{cont},sysdate)
   	</insert>
   	
   	<select id="notice_getcommlist" parameterType="map" resultType="commvo">
