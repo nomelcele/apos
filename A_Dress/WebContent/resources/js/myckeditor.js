@@ -7,7 +7,7 @@ function chkUpload(){
 		width:'80%',
 		height:'350px',
 		//여기 경로로 파일을 전달하여 업로드 시킨다.
-		filebrowserImageUploadUrl: 'notice.apos?cmd=bwork&subcmd=ckBoard'
+		filebrowserImageUploadUrl: 'bon_ckboard'
 	});
 	CKEDITOR.on('dialogDefinition', function( ev ){
 		var dialogName = ev.data.name;

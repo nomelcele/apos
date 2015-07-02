@@ -5,7 +5,7 @@
   
 <mapper namespace="notice">
   	 <insert id="notice_in"  parameterType="bvo">
-  insert into Board values(Board_seq.nextval,#{BO_NUM},#{BO_SUB},#{BO_WRITER},#{BO_CONT},sysdate,#{BO_IMG},#{BO_IMG},0,#{BO_BONNUM})
+  insert into Board values(Board_seq.nextval,#{title},#{writer},#{content},sysdate,#{path},0,1)
   </insert>
   	
   	<select id="notice_list" parameterType="map" resultType="bvo">
@@ -20,7 +20,7 @@
   	</select>
   	
   	<select id="notice_detail" parameterType="int" resultType="bvo">
-  		select bo_num, bo_sub, bo_writer, bo_cont, bo_date, bo_img, bo_hit, bo_bonnum from board where bo_num=#{no}
+  		select bo_num no, bo_sub title, bo_writer writer, bo_cont content, bo_date regdate, bo_img path, bo_hit hit, bo_bonnum groupno from board where bo_num=#{no}
   	</select>
   	
   	<delete id="notice_deletecomm" parameterType="int">

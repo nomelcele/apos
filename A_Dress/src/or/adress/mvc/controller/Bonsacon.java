@@ -6,15 +6,20 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.servlet.http.Part;
 
 import or.adress.mvc.dao.BoardDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import vo.BoardVO;
@@ -27,13 +32,21 @@ public class Bonsacon {
 	private BoardDao bdao;
 	
 	@RequestMapping(value = "/bon_index")
-	public ModelAndView bon_index() {
+	public ModelAndView bon_index(HttpSession session) {
+		///////////////임시세션
+		session.setAttribute("bon_id", "yoon");
+		session.setAttribute("bon_name", "윤홍기");
+		/////////////////
+		
+		
+		
+		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("bonsa/bon_index");
 		return mav;
 	}
 	// 본사 업무관리 공지사항 cmd=bwork subcmd=notice
-	@RequestMapping(value = "/bon_workNotice")
+	@RequestMapping(value = "/bon_workNotice", method=RequestMethod.POST)
 	public ModelAndView bon_workNotice(int page) {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("bonsa/bon_workNotice");
@@ -59,7 +72,7 @@ public class Bonsacon {
 	//본사 공지사항 디테일 cmd=bwork subcmd=boardDetail
 	@RequestMapping(value="/bon_workNoticedetail")
 	public ModelAndView bon_workNoticedetail(int no, int page){
-		ModelAndView mav = new ModelAndView("bon_workNoticeDetail");
+		ModelAndView mav = new ModelAndView("bonsa/bon_workNoticeDetail");
 		//페이징처리 (댓글)
 			PageVO pageInfo = pageProcess(page, no, 1);
 			HashMap<String, Integer> map = new HashMap<>();
@@ -69,6 +82,8 @@ public class Bonsacon {
 			map.put("no", no);
 		List<CommVO> clist = bdao.getCommList(map);
 		BoardVO v = bdao.getDetail(no);
+		v.setPath("upload/"+v.getPath());
+		System.out.println(v.getPath());
 		mav.addObject("clist", clist);
 		mav.addObject("v", v);
 		return mav;
@@ -76,7 +91,7 @@ public class Bonsacon {
 	
 	//본사 공지사항 글쓰기
 	@RequestMapping(value="/bon_workNoticewrite", method=RequestMethod.POST)
-	public void bon_workNoticewrite(BoardVO vo, HttpSession session){
+	public ModelAndView bon_workNoticewrite(BoardVO vo, HttpSession session){
 		vo.setWriter(session.getAttribute("bon_id").toString());
 		String s = vo.getContent();
 		String filename="";
@@ -110,23 +125,45 @@ public class Bonsacon {
 	            System.out.println(content);
 	    vo.setContent(content);
 	    vo.setPath(filename);
+	    System.out.println("인서트전");
 	    bdao.insert(vo);
-	    bon_workNotice(1);
+	    System.out.println("인서트후");
+	    return bon_workNotice(1);
 	}
 	//본사 공지사항 파일업로드 cmd=bwork subcmd=ckBoard
 	@RequestMapping(value="/bon_ckboard", method=RequestMethod.POST)
-	public ModelAndView bon_ckboard(BoardVO vo, HttpSession session){
-		String path = session.getServletContext().getRealPath("/img/")+vo.getMultipartFile().getOriginalFilename();
-		File f = new File(path);
+	public ModelAndView bon_ckboard(BoardVO vo,HttpServletRequest request, HttpSession session){
+		ModelAndView mav = new ModelAndView();
+		Part part = null;
 		try {
-			vo.getMultipartFile().transferTo(f);
-		} catch (IllegalStateException | IOException e) {
+			part = request.getPart("upload");
+		} catch (ServletException | IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		vo.setPath(vo.getMultipartFile().getOriginalFilename());
+		System.out.println("-------------------------");
+		System.out.println("Part : "+part);
+		//파일이름 가져오기
+		String fileName = getFileName(part);
+		System.out.println("name123123 : "+fileName);
+		//파일 이름이 있으면 업로드
+		if(fileName != null && fileName.length() != 0){
+			try {
+				part.write(fileName);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		//chk callback설정 : Ajax로 넘어온 요청을 response 해주기 위한 설정
+		String callback = request.getParameter("CKEditorFuncNum");
+
+		String fileUrl = "upload/"+fileName;
 		
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("callback");
+		mav.addObject("callback", callback);
+		mav.addObject("fileUrl", fileUrl);
+		
+		mav.setViewName("bonsa/callback");
 		return mav;
 		
 	}
@@ -277,4 +314,18 @@ public class Bonsacon {
 			System.out.println(startRow+"---"+endRow);
 			return pageInfo;
 		}
+		
+		private String getFileName(Part part){
+	    	String fileName="";
+	    	String header = part.getHeader("content-disposition");
+	    	System.out.println(header);
+	    	String[] elements = header.split(";");
+	    	for(String element : elements){
+	    		if(element.trim().startsWith("filename")){
+	    			fileName = element.substring(element.indexOf('=')+1);
+	    			fileName = fileName.trim().replace("\"", "");
+	    		}
+	    	}
+	    	return fileName;
+	    }
 }

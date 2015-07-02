@@ -135,7 +135,9 @@
 </script>
 
 <!--본사 - 업무관리 - 공지사항 -->
-<form method="post" action="bon_workNotice" id="notice"></form>
+<form method=post action="bon_workNotice" id="notice">
+	<input type="hidden" name="page" value="1">
+</form>
 <!--본사 - 매장관리 - 매장가입 -->
 <form method="post" action="bon_shopJoin" id="join"></form>
 <!--본사 - 매장관리 - 매장조회 -->

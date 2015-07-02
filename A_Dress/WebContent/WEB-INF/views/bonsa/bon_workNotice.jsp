@@ -12,6 +12,15 @@
 		document.getElementById("notice").submit();
 	}
 </script>
+<script>
+	function gourl31(page){
+		alert(page);
+// 		$("qwer")
+// 		$("qwer").submit();
+		document.getElementById("qwer").innerHTML="<input type='hidden' name='page' value='"+page+"'>";
+		document.getElementById("qwer").submit();
+	}
+</script>
 <form method="post" action="bon_noticein" id=write>
 </form>
 
@@ -56,7 +65,47 @@
 					<section class="panel">
 
 						<c:set var="pageUrl" value="bon_workNotice" />
-						<%@include file="page.jsp"%>
+						<form action="${pageUrl }" method="post" id="qwer">
+	
+</form>
+<div class="text-center">
+<ul class="pagination">
+					<c:choose>
+							<c:when test="${pageInfo.currentBlock eq 1}">
+               				<li><a href="">&lt;&lt;</a></li>
+                           </c:when>
+							<c:otherwise>
+							<li><a
+									href="${pageUrl}&page=${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock }">«</a></li>
+							</c:otherwise>
+				     </c:choose> 
+				     
+					<c:choose>
+							<c:when test="${pageInfo.currentBlock ne pageInfo.totalBlocks}">
+								<c:forEach begin="1" end="${pageInfo.pagesPerBlock}"
+									varStatus="num">
+                        <li><a href="javascript:gourl31('${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }')">${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }</a></li>
+                    			</c:forEach>
+							</c:when>
+							<c:otherwise>
+								<c:forEach
+									begin="${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock + 1}"
+									end="${pageInfo.totalPages}" varStatus="num">
+                        <li><a href="javascript:gourl31('${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }')">${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }</a></li>
+                    </c:forEach>
+							</c:otherwise>
+						</c:choose> <c:choose>
+							<c:when test="${pageInfo.currentBlock eq pageInfo.totalBlocks}">
+                <li><a href="">&gt;&gt;</a></li>
+                </c:when>
+							<c:otherwise>
+								<li><a
+									href="javascript:gourl31('${pageInfo.currentBlock * pageInfo.pagesPerBlock + 1 }')">»</a></li>
+							</c:otherwise>
+						</c:choose></td>
+						
+</ul>
+</div>
 
 						<div>
 
