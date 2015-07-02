@@ -6,12 +6,14 @@
 <mapper namespace="salescheck">
 
 	<!-- 이거 고대로 옮긴건데 왜 오류가 나는지?? 물어볼 것 -->
-	<select id="salescheck_productlist" parameterType="map" resultType="schkvo">
-	select to_char(sell_date,'yyyy-MM') sedate, count(*) cnt, sum(s.sell_cash) sell_cash, p.PRO_NAME 
-	sell_proname from sell s, shop sh,product p  where s.SELL_pronum = p.pro_code and s.SELL_PRONUM = 
-	#{procode} and( sell_date >= to_date(#{startdate}, 'yyyy-MM-dd')  
-	and sell_Date <= to_date(#{enddate}, 'yyyy-MM-dd')) group by to_char(sell_date, 'yyyy-MM'), p.PRO_NAME ORDER BY 1
-  	</select>
+<!-- 	<select id="salescheck_productlist" parameterType="map" resultType="schkvo"> -->
+<!-- 	select to_char(sell_date,'yyyy-MM') sedate, count(*) cnt,  -->
+<!-- 	sum(s.sell_cash) sell_cash, p.PRO_NAME sell_proname  -->
+<!-- 	from sell s,shop sh,product p   -->
+<!-- 	where s.SELL_pronum = p.pro_code and s.SELL_PRONUM = #{procode}  -->
+<!-- 	and( sell_date >= to_date(#{startdate}, 'yyyy-MM-dd')   -->
+<!-- 	and sell_Date <= to_date(#{enddate}, 'yyyy-MM-dd')) group by to_char(sell_date, 'yyyy-MM'), p.PRO_NAME ORDER BY 1 -->
+<!--   	</select> -->
   	
   	
   	<!-- 완료 -->
