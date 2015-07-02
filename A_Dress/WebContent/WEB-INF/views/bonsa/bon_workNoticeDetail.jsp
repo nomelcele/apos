@@ -78,10 +78,10 @@
                            <tbody>
                            <c:forEach var="ctlist" items="${clist}">
                               <tr>
-                                 <td>${ctlist.writer }</td>
-                                 <td>${ctlist.comm}</td>
-                                 <td>${ctlist.redate}</td>
-                                 <td><a href="bon_commdelete?no=${ctlist.no}&bo_num=${ctlist.bo_num}&writer=${ctlist.writer}&page=1">
+                                 <td>${ctlist.comm_writer }</td>
+                                 <td>${ctlist.comm_cont}</td>
+                                 <td>${ctlist.comm_date}</td>
+                                 <td><a href="bon_commdelete?no=${ctlist.comm_num}&bo_num=${ctlist.comm_bonum}&writer=${ctlist.comm_writer}&page=1">
 						X</a></td>
                               </tr>
                               </c:forEach>

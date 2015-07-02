@@ -1,10 +1,16 @@
 package vo;
 
 public class CommVO {
-	int r_num, comm_num;
+	int r_num, comm_num, comm_bonum;
 	String comm_writer, comm_cont, comm_date;
 	public int getR_num() {
 		return r_num;
+	}
+	public int getComm_bonum() {
+		return comm_bonum;
+	}
+	public void setComm_bonum(int comm_bonum) {
+		this.comm_bonum = comm_bonum;
 	}
 	public void setR_num(int r_num) {
 		this.r_num = r_num;

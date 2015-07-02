@@ -6,6 +6,15 @@ public class BoardVO {
 	private int no,hit,groupno;
 	private String title,writer,content,regdate,path;
 	private MultipartFile multipartFile;
+	private int bo_num;
+	
+	
+	public int getBo_num() {
+		return bo_num;
+	}
+	public void setBo_num(int bo_num) {
+		this.bo_num = bo_num;
+	}
 	public MultipartFile getMultipartFile() {
 		return multipartFile;
 	}
