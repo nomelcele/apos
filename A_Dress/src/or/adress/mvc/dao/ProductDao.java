@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.http.Part;
 
@@ -25,6 +26,14 @@ public class ProductDao {
 	
 	// º¸·ù / ¹°¾îº¼ °Í
 	public void stockedit(int pamount, String pronum, int shopnum, int psize){
+		
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("code", code);
+		map.put("num", num);
+		
+		return ss.selectList("product.product_bon2", map);
+		
+		
 		
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -53,139 +62,34 @@ public class ProductDao {
 	}
 	
 	// product_insert
+	// ¿Ï·á È®ÀÎ¿ä¸Á
 	public void insert(ProductVO vo) {
 		ss.insert("product.product_insert", vo);
 	}
 	
 	// ¸ð¸£°ÚÀ½ where pro_code=? ÀÎµ¥ ÆÄ¶ó¹ÌÅÍ°¡ ¸¹À½..
+	// ¿Ï·á È®ÀÎ¿ä¸Á
 	public ProductVO getProduct(String code){
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		StringBuffer sql = new StringBuffer();
-		System.out.println("®G");
-		sql.append("select *");
-		sql.append("from product where pro_code=?");
-		ProductVO v = new ProductVO();
-		try {
-			con = MyJndiContext.getDs();
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, code);
-			rs = pstmt.executeQuery();
-			if(rs.next()){
-				v.setPro_name(rs.getString("pro_name"));
-				v.setPro_code(rs.getString("pro_code"));
-				v.setPro_barcode(rs.getString("pro_barcode"));
-				v.setPro_img(rs.getString("pro_img"));
-				v.setPro_date(rs.getString("pro_date"));
-				v.setPro_price(rs.getInt("pro_price"));
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally{
-			try {
-				
-				if  (rs != null) rs.close();
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return v;
+		
+		return ss.selectOne("product.product_product", code);
+		
 	}
 	
 	// º¸·ù / À§¿¡°Å¶û ºñ½Á ¹°¾îº¼ °Í
-	public ArrayList<ProductVO> getListProduct_bon(String name){
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		StringBuffer sql = new StringBuffer();
+	// ¿Ï·á È®ÀÎ¿ä¸Á
+	public List<ProductVO> getListProduct_bon(String name){
 		
-		sql.append("select *");
-		sql.append("from product where pro_name like ?");
-		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
-		try {
-			con = MyJndiContext.getDs();
-			String key = name+'%';
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, key);
-			rs = pstmt.executeQuery();
-			while(rs.next()){
-				ProductVO v = new ProductVO();
-
-				v.setPro_name(rs.getString("pro_name"));
-				v.setPro_code(rs.getString("pro_code"));
-				v.setPro_date(rs.getString("pro_date"));
-				v.setPro_img(rs.getString("pro_img"));
-				list.add(v);
-				System.out.println("¹¹¾ß¹¹¾ß");
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally{
-			try {
-				
-				if  (rs != null) rs.close();
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return list;
+		return ss.selectList("product.product_bon", name);
 	}
 	
 	// ÀÎÀÚ°ª 2°³¶ó¼­ ÀÏ´Ü º¸·ù
-	public ArrayList<ProductVO> getListProduct_bon2(String code,String num){
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		StringBuffer sql = new StringBuffer();
+	// ¿Ï·á È®ÀÎ¿ä¸Á
+	public List<ProductVO> getListProduct_bon2(String code,String num){
 		
-		sql.append("select p.pro_name pro_name,sh.shop_name shop_name,s.sto_size sto_size,s.sto_amount  sto_amount ");
-		sql.append("from product p, stock s, shop sh ");
-		sql.append("where p.pro_code = s.sto_pronum and  ");
-		sql.append("sh.shop_num=sto_shopnum and  ");
-		sql.append("p.pro_code = ? and sh.shop_num = ? ");
-		ArrayList<ProductVO> list = new ArrayList<ProductVO>();
-		try {
-			con = MyJndiContext.getDs();
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, code);
-			pstmt.setString(2, num);
-			rs = pstmt.executeQuery();
-			while(rs.next()){
-				ProductVO v = new ProductVO();
-
-				v.setPro_name(rs.getString("pro_name"));
-				v.setShop_name(rs.getString("shop_name"));
-				v.setSto_size(rs.getString("sto_size"));
-				v.setSto_amount(rs.getString("sto_amount"));
-				list.add(v);
-				System.out.println("¹¹¾ß¹¹¾ß");
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}finally{
-			try {
-				
-				if  (rs != null) rs.close();
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return list;
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("code", code);
+		map.put("num", num);
+		
+		return ss.selectList("product.product_bon2", map);
 	}
 }
