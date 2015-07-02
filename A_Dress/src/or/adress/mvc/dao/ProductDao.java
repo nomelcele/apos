@@ -28,10 +28,12 @@ public class ProductDao {
 	public void stockedit(int pamount, String pronum, int shopnum, int psize){
 		
 		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("code", code);
-		map.put("num", num);
+		map.put("pamount", pamount);
+		map.put("pronum", pronum);
+		map.put("shopnum", shopnum);
+		map.put("psize", psize);
 		
-		return ss.selectList("product.product_bon2", map);
+		return ss.selectList("product.product_stockedit", map);
 		
 		
 		
