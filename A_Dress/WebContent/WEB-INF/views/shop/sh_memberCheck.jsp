@@ -30,22 +30,21 @@
 
 									<form class="form-validate form-horizontal"
 										id="membercheckform" method="post" action="sh.apos">
-										<input type="hidden" name="cmd" value="smember"> <input
-											type="hidden" name="subcmd" value="check"> <input
-											type="hidden" name="page" value="1">
+										<input type="hidden" name="cmd" value="smember"> 
+										<input type="hidden" name="subcmd" value="check">
+										 <input type="hidden" name="page" value="1">
 
 										<div class="form-group ">
-											<label for="cname" class="control-label col-lg-1"><p
-													style="font-size: 11pt">이름</p> </label>
-											<div class="col-lg-3" style="margin-left: -5%;">
+											<label for="cname" >
+											<label for="cname"
+											class="control-label col-lg-1" style="font-size: 13px;">이름
+										</label>
 												<input class="form-control" id="sname_ps" name="name"
-													minlength="2" onkeydown="startSuggest();"
-													autocomplete="off" type="text" required />
-												<div id="view"></div>
-											</div>
-											<input class="form-control6" type="button"
-												onclick="javascript:membercheckaction()" id="btn" name="btn"
-												value="조회">
+													onkeydown="startSuggest();" autocomplete="off" 
+													type="text" required 	style="width: 50%"/>
+												
+												<button class="btn btn-primary" onclick="javascript:membercheckaction()" id="btn" name="btn">조회</button>
+											<div id="view"></div>
 										</div>
 
 
@@ -67,14 +66,7 @@
 																</tr>
 															</thead>
 															<tbody>
-															<c:forEach var="stList" items="${list}">
-																<!-- 																<form id="" action="sh.apos" method="post"> -->
-																<!-- 																	<input type="hidden" id="cmd" name="cmd" -->
-																<!-- 																		value="smember"> -->
-																<!-- 
-																															</form> -->
-
-																
+															<c:forEach var="stList" items="${list}">											
 																	<tr>
 																		<th>${stList.mem_num}</th>
 																		<th><a
@@ -90,23 +82,6 @@
 															</tbody>
 														</table>
 													</table>
-
-
-
-													<!--pagination start(페이지)-->
-													<!--                           <div class="panel-body"> -->
-
-													<!-- 													<div class="text-center"> -->
-													<!-- 														<ul class="pagination"> -->
-													<!-- 															<li><a href="#">«</a></li> -->
-													<!-- 															<li><a href="#">1</a></li> -->
-													<!-- 															<li><a href="#">2</a></li> -->
-													<!-- 															<li><a href="#">3</a></li> -->
-													<!-- 															<li><a href="#">4</a></li> -->
-													<!-- 															<li><a href="#">5</a></li> -->
-													<!-- 															<li><a href="#">»</a></li> -->
-													<!-- 														</ul> -->
-													<!-- 													</div> -->
 											</div>
 										</div>
 									</form>
