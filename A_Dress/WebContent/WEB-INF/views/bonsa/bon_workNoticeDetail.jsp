@@ -52,17 +52,12 @@
                           <c:if test="${v.path ne chkpath }"> <img src="${v.path}" style="width: 350px; resize: none "></c:if>
                         
                          </div>
-                    <form action="bon.apos" method="post" id="deleteform">
-                    <input type="hidden" name="cmd" value="bwork">
-                    <input type="hidden" name="subcmd" value="delete">
+                    <form action="bon_noticedelte" method="post" id="deleteform">
                     <input type="hidden" name="no" value="${v.no }">
                     <input type="hidden" name="writer" value="${v.writer }">
-                    <input type="hidden" name="page" value="1">
                     <button type="button" class="btn btn-danger" onclick="javascript:delteaction()" style="margin-left: 21%; margin-top: 1%">글 삭제</button>
                     </form>
-                    <form action="bon.apos" method="post" id="listform">
-                    <input type="hidden" name="cmd" value="bwork">
-                    <input type="hidden" name="subcmd" value="notice">
+                    <form action="bon_workNotice" method="post" id="listform">
                     <input type="hidden" name="page" value="1">
                     <button type="button" class="btn btn-danger" onclick="javascript:listaction()" style="margin-left: 21%; margin-top: 1%">목록</button>
                     </form>
@@ -86,7 +81,7 @@
                                  <td>${ctlist.writer }</td>
                                  <td>${ctlist.comm}</td>
                                  <td>${ctlist.redate}</td>
-                                 <td><a href="bon.apos?cmd=bwork&subcmd=commdelete&no=${ctlist.no}&bo_num=${ctlist.bo_num}&writer=${ctlist.writer}&page=1">
+                                 <td><a href="bon_commdelete?no=${ctlist.no}&bo_num=${ctlist.bo_num}&writer=${ctlist.writer}&page=1">
 						X</a></td>
                               </tr>
                               </c:forEach>
@@ -100,12 +95,12 @@
 						
                      </div>
 <!--                      </form> -->
-                     <form method="post" action="bon.apos" id="commin">
+                     <form method="post" action="bon_commin" id="commin">
                      <div class="form-group">
                         <label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
                         <div class="col-lg-6">
                            <input type="text" class="form-control" id="inputPassword1"
-                              placeholder="댓글을 입력하세요." name="comm">
+                              placeholder="댓글을 입력하세요." name="comm_cont">
                         </div>
                      </div>
                      <div class="form-group">
@@ -113,12 +108,8 @@
                         <div class="col-lg-offset-2 col-lg-10" style="display:block;">
                         </div>
                      </div>
-				  <input type="hidden" name="cmd" value="bwork">
-                  <input type="hidden" name="subcmd" value="boardDetail">
-				  <input type="hidden" name="childcmd" value="in">
-				  <input type="hidden" name="page" value="1">
-				  <input type="hidden" name="code" value="${v.no}">
-				  <input type="hidden" name="no" value="${v.no}">
+				
+				  <input type="hidden" name="comm_bonum" value="${v.no}">
                   </form>
                </div>
             </section>

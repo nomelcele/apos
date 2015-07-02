@@ -22,9 +22,8 @@
 	
 </script>
 
-<form method="post" action="bon.apos" id="notice">
-<input type="hidden" name="cmd" value="bwork">
-<input type="hidden" name="subcmd" value="notice">
+<form action="bon_workNotice" id="notice">
+	<input type="hidden" name="page" value="1">
 </form>
 
 <%-- 본사의 업무관리의 공지사항 글쓰기 페이지 입니다. --%>
@@ -37,9 +36,7 @@
                                   </header>
                                   <div class="panel-body">
                                       <div class="form">
-                                          <form action="notice.apos" class="form-horizontal" id="nboard" method="post">
-                                          <input type="hidden" name="cmd" value="bwork">
-                                          <input type="hidden" name="subcmd" value="insert">      
+                                          <form action="bon_workNoticewrite" class="form-horizontal" id="nboard" method="post">       
                                           <input type="hidden" name="page" value="1">           
                                           <input type="hidden" name="url" id="url" value="">      
                                               <div class="form-group">
