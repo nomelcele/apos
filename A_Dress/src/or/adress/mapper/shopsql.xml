@@ -43,7 +43,7 @@
 	</select>
 
 	<select id="findid" parameterType="map" resultType="String">
-		select shop_id from shop where shop_master=#{name} and shop_tel=#{tel}
+		select shop_id from shop where shop_master=#{shop_master} and shop_tel=#{shop_tel}
 
 	</select>
 	<select id="findpwd" parameterType="map" resultType="String">
@@ -66,12 +66,12 @@
 	</insert>
 	
 	<select id="memdetail" parameterType="int" resultType="memvo">
-	select * from member where mem_num=#{no}
+	select * from member where mem_num=#{mem_num}
 	</select>
 	
 	<!-- 물어볼것! -->
-	<update id="memupdate" parameterType="map">
-	update member set mem_tel=#{memtel},mem_addr=#{addr},mem_deaddr=#{deaddr},mem_mileage=#{mileage} where mem_num=#{num}
+	<update id="memupdate" parameterType="memvo">
+	update member set mem_tel=#{mem_tel},mem_addr=#{mem_addr},mem_deaddr=#{mem_deaddr},mem_mileage=#{mem_mileage} where mem_num=#{mem_num}
 	</update>
 	
 	<delete id="memdelete" parameterType="memvo">
