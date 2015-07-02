@@ -14,8 +14,6 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import conn.MyJndiContext;
-import service.FactoryService;
 import vo.BoardVO;
 import vo.CommVO;
 
