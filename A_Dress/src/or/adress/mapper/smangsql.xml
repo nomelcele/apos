@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="smang">
+
+	<select id="smang_editstock" parameterType="map">
+	select sto_amount from stock where sto_pronum = {#pro_num} and sto_size = #{size} and sto_shopnum = #{shopnum}
+	</select>
+
+
+</mapper>
