@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import vo.BoardVO;
@@ -132,8 +134,9 @@ public class Bonsacon {
 	}
 	//본사 공지사항 파일업로드 cmd=bwork subcmd=ckBoard
 	@RequestMapping(value="/bon_ckboard", method=RequestMethod.POST)
-	public ModelAndView bon_ckboard(BoardVO vo,HttpServletRequest request, HttpSession session){
+	public ModelAndView bon_ckboard(BoardVO vo, MultipartHttpServletRequest request, HttpSession session){
 		ModelAndView mav = new ModelAndView();
+		//파일 업로드를 위해서 Part를 생성
 		Part part = null;
 		try {
 			part = request.getPart("upload");
@@ -141,7 +144,7 @@ public class Bonsacon {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("-------------------------");
+		System.out.println("-----SpringMVC multipartresolver--------");
 		System.out.println("Part : "+part);
 		//파일이름 가져오기
 		String fileName = getFileName(part);
@@ -157,9 +160,7 @@ public class Bonsacon {
 		}
 		//chk callback설정 : Ajax로 넘어온 요청을 response 해주기 위한 설정
 		String callback = request.getParameter("CKEditorFuncNum");
-
-		String fileUrl = "upload/"+fileName;
-		
+		String fileUrl = "upload/"+fileName;//url경로
 		mav.addObject("callback", callback);
 		mav.addObject("fileUrl", fileUrl);
 		

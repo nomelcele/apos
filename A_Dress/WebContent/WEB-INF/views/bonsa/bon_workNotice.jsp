@@ -35,7 +35,7 @@
 					<div class="row" style="font-size: 15px; margin-top: -3%">
 						<div class="col-lg-12">
 							<h3 class="page-header">
-								<i class="fa fa-files-o"></i> 공지사항
+								<i class="fa fa-files-o"></i> 공지사항 
 							</h3>
 						</div>
 					</div>
