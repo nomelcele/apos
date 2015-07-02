@@ -28,9 +28,9 @@ public class ProductDao {
 	// 이거 해쉬맵 String하고 int가 섞여있어서
 	// 일단 obJect로 해놨는데
 	// 만약 오류나면 여기가 안되는 거임
-	public void stockedit(int pamount, String pronum, int shopnum, int psize){
+	public void stockedit(String pamount, String pronum, String shopnum, String psize){
 		
-		HashMap<String, Object> map = new HashMap<String, Object>();
+		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("pamount", pamount);
 		map.put("pronum", pronum);
 		map.put("shopnum", shopnum);
