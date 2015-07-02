@@ -23,12 +23,7 @@ public class ProductDao {
 	@Autowired
 	private SqlSessionTemplate ss;
 	
-	private static ProductDao dao;
-	public static synchronized ProductDao getDao() {
-		if (dao == null)
-			dao = new ProductDao();
-		return dao;
-	}
+	// 보류 / 물어볼 것
 	public void stockedit(int pamount, String pronum, int shopnum, int psize){
 		
 		Connection con = null;
@@ -56,36 +51,13 @@ public class ProductDao {
 			}
 		}
 	}
+	
+	// product_insert
 	public void insert(ProductVO vo) {
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		try {
-			con = MyJndiContext.getDs();
-			StringBuffer sql = new StringBuffer();
-			sql.append("insert into product values(");
-			sql.append("product_seq.nextVal,?,?,?,?,sysdate,?)");
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setString(1, vo.getPro_name());
-			pstmt.setString(2, vo.getPro_code());
-			//pstmt.setInt(3, vo.getPro_size());
-			pstmt.setString(3, vo.getPro_barcode());
-			pstmt.setString(4, vo.getPro_img());
-			pstmt.setInt(5, vo.getPro_price());
-			pstmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-
+		ss.insert("product.product_insert", vo);
 	}
+	
+	// 모르겠음 where pro_code=? 인데 파라미터가 많음..
 	public ProductVO getProduct(String code){
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -125,6 +97,8 @@ public class ProductDao {
 		}
 		return v;
 	}
+	
+	// 보류 / 위에거랑 비슷 물어볼 것
 	public ArrayList<ProductVO> getListProduct_bon(String name){
 		Connection con = null;
 		PreparedStatement pstmt = null;
@@ -167,6 +141,8 @@ public class ProductDao {
 		}
 		return list;
 	}
+	
+	// 인자값 2개라서 일단 보류
 	public ArrayList<ProductVO> getListProduct_bon2(String code,String num){
 		Connection con = null;
 		PreparedStatement pstmt = null;
