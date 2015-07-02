@@ -53,8 +53,8 @@
 	select *from shop
 	</select>
 
-	<select id="memberlist" parameterType="map" resultType="memvo">
-		select * from member where mem_name like %#{mem_name}% or mem_tel like %#{mem_tel}%
+	<select id="memberlist" parameterType="String" resultType="memvo">
+		select * from member where mem_name like '%'||#{mem_name}||'%' 
 	</select>
 	
 	<select id="listproduct" parameterType="map" resultType="map">
