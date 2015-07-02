@@ -170,32 +170,37 @@ public class Bonsacon {
 	
 	//본사 공지사항 삭제 cmd = bwork subcmd=delete
 	@RequestMapping(value="/bon_noticedelte", method=RequestMethod.POST)
-	public void bon_noticedelte(int no, String writer, HttpSession session){
+	public ModelAndView bon_noticedelte(int no, String writer, HttpSession session){
 		String bon_id = session.getAttribute("bon_id").toString();
+		
 		if(bon_id.equals(writer)){
+			
 			bdao.delete(no);
+			
 		}
-		bon_workNotice(1);
+		return bon_workNotice(1);
 	}
 	//본사 공지사항 댓글 삭제 cmd=bwork subcmd=commdelete
 	@RequestMapping(value="/bon_commdelete")
-	public void bon_commdelete(int no, int bo_num, String writer, int page, HttpSession session){
+	public ModelAndView bon_commdelete(int no, int bo_num, String writer, int page, HttpSession session){
+		String bon_id = session.getAttribute("bon_id").toString();
 		
-		if(session.getAttribute("bon_id").toString().equals(writer)){
+		if(bon_id.equals(writer)){
+			
 			bdao.deleteComm(no);
 		}
-		bon_workNotice(page);
+		return bon_workNoticedetail(bo_num, page);
 	}
 	//본사 공지사항 댓글 입력 cmd=bwork subcmd=boardDetail childcmd=in
 	@RequestMapping(value="/bon_commin", method=RequestMethod.POST)
-	public void bon_commin(String comm_bonum, String comm_cont, HttpSession session){
+	public ModelAndView bon_commin(String comm_bonum, String comm_cont, HttpSession session){
 		int page = 1;
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("no", comm_bonum);
 		map.put("cont", comm_cont);
 		map.put("writer", session.getAttribute("bon_id").toString());
 		bdao.insertComm(map);
-		bon_workNoticedetail(Integer.parseInt(comm_bonum), 1);
+		return bon_workNoticedetail(Integer.parseInt(comm_bonum), 1);
 	}
 	
 	// 본사 매장관리 매장가입

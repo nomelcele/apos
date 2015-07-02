@@ -50,7 +50,7 @@ public class BoardDao {
 	
 	//commt
 	public void deleteComm(int no){
-		ss.delete("notice.notice_delete", no);
+		ss.delete("notice.notice_deletecomm", no);
 	}
 	public void insertComm(HashMap<String, String> map) {
 		ss.insert("notice.notice_insertcomm", map);
