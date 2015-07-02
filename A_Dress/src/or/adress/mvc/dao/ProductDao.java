@@ -17,7 +17,6 @@ import org.springframework.stereotype.Repository;
 import vo.BoardVO;
 import vo.MemVO;
 import vo.ProductVO;
-import conn.MyJndiContext;
 
 @Repository
 public class ProductDao {
@@ -33,34 +32,9 @@ public class ProductDao {
 		map.put("shopnum", shopnum);
 		map.put("psize", psize);
 		
-		return ss.selectList("product.product_stockedit", map);
+		ss.selectList("product.product_stockedit", map);
 		
 		
-		
-		Connection con = null;
-		PreparedStatement pstmt = null;
-		try {
-			con = MyJndiContext.getDs();
-			StringBuffer sql = new StringBuffer();
-			sql.append("update stock set sto_amount=? where sto_pronum=? and sto_shopnum=? and sto_size=?");
-			pstmt = con.prepareStatement(sql.toString());
-			pstmt.setInt(1, pamount);
-			pstmt.setString(2, pronum);
-			pstmt.setInt(3, shopnum);
-			pstmt.setInt(4, psize);
-			pstmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				if (pstmt != null)
-					pstmt.close();
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
 	}
 	
 	// product_insert
