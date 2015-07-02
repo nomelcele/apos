@@ -35,18 +35,11 @@
 <!--   	</select> -->
   	
   	
-  	<select id="salescheck_searchSellnum" parameterType="schkvo" resultType="schkvo">
-  	select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m where s.sell_memnum = m.mem_num and sell_num =#{sellnum}
+  	<select id="salescheck_searchSellnum" parameterType="int" resultType="schkvo">
+  	select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m where s.sell_memnum = m.mem_num and sell_num =#{sellnum}
   	</select>
 
 
 
-
-	<!-- join이라서 물어볼 것.. -->
-	<!-- 완료 -->
-	<select id="salescheck_searchSellnum" parameterType="map" resultType="schkvo">
-  		select s.sell_num sell_num,m.mem_name sell_memname,s.sell_pronum,s.sell_cash sell_cash,sell_many from sell s, member m
-  		where s.sell_memnum = m.mem_num and sell_num =#{sellnum}
-  	</select>
-
+	
 </mapper>

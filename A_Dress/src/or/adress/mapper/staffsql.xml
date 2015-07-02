@@ -2,19 +2,21 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- private int shop_snum,shop_num;
+private String shop_sname,shop_sposition,shop_stel,shop_name; -->
  <mapper namespace="staff">
- 	<select id="get_list" resultType="staffvo">
- 		select a.staff_num,a.staff_name,a.staff_tel,
- 		s.shop_name,a.STAFF_POSITION from staff a , 
- 		shop s where s.shop_num=a.staff_shopnum
+ 	<select id="get_list" resultType="staffvo" parameterType="String">
+ 		select a.staff_num shop_snum,a.staff_name shop_sname,a.staff_tel shop_stel ,
+ 		s.shop_name shop_name,a.STAFF_POSITION  shop_sposition from staff a , 
+ 		shop s where s.shop_name like '%'||#{shop_name}||'%'
  	</select>
- 	<insert id="inset_mem" parameterType="map" >
+ 	<insert id="inset_mem" parameterType="Hashmap" >
  		insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,sysdate,1,#{mem_email})
  	</insert>
  	<select id="find_id" parameterType="staffvo" resultType="String">
  		select shop_sname from shop where staff_name=#{shop_name}and staff_tel=#{shop_stel}
  	</select>
- 	<select id="find_pwd" parameterMap="staffvo" resultType="String">
+ 	<select id="find_pwd" parameterType="staffvo" resultType="String">
  		select staff_pwd from staff where staff_name=#{staff_name} and staff_id=#{staff_id}
  	</select>
  </mapper>
