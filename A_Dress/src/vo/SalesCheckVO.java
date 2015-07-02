@@ -2,13 +2,19 @@ package vo;
 
 public class SalesCheckVO {
 	private String sell_memname;
-
-
+	private String sell_date;
 	private int count, sell_cash, sell_card,sell_pronum,sell_many,sell_memnum,sell_num;
+	
 	public int getSell_num() {
 		return sell_num;
 	}
+	public String getSell_date() {
+		return sell_date;
+	}
 
+	public void setSell_date(String sell_date) {
+		this.sell_date = sell_date;
+	}
 	public void setSell_num(int sell_num) {
 		this.sell_num = sell_num;
 	}
