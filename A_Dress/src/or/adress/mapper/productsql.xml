@@ -5,24 +5,37 @@
   
 <mapper namespace="product">
 
+
+	<!-- 완료 -->
+	<update id="product_stockedit" parameterType="map">
+	update stock set sto_amount=#{pamount} where sto_pronum=#{pronum} and sto_shopnum=#{shopnum} and sto_size=#{psize}
+	</update>
+
+
+	<!-- 완료 -->
 	<insert id="product_insert" parameterType="provo">
 	insert into product values(product_seq.nextVal,#{pro_name},#{pro_code},#{pro_barcode},#{pro_img},sysdate,#{pro_price})
 	</insert>
 	
 	<!-- 모르겠음 / 물어볼 것 -->
+	<!-- 완료 -->
 	<select id="product_product" parameterType="provo" resultType="provo">
   		select * from product where pro_code=#{code}
   	</select>
   	
-  	<!-- 이것도 물어볼것 / 위의 거랑 비슷 -->
-  	<select id="product_list1" parameterType="provo" resultType="provo">
-  		select * from product where pro_name like ?
+  	
+  	<!-- 완료 -->
+  	<select id="product_bon" parameterType="provo" resultType="provo">
+  		select * from product where pro_name like #{key}
   	</select>
   	
-  	<!-- 이것도 물어볼것 / 위의 거랑 비슷 / 이건 보류 인자값이 2개임 -->
-  	<select id="product_list2" parameterType="provo" resultType="provo">
-  		select * from product where pro_name like ?
+  	<!-- 완료 -->
+  	<select id="product_bon2" parameterType="provo" resultType="provo">
+  		select p.pro_name pro_name,sh.shop_name shop_name,s.sto_size sto_size,s.sto_amount  sto_amount from product p, stock s, shop sh where p.pro_code = s.sto_pronum and  sh.shop_num=sto_shopnum and  p.pro_code = #{code} and sh.shop_num = #{num} 
   	</select>
+  	
+  	
+  
   	
 	
 	
