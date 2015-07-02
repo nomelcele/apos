@@ -57,8 +57,8 @@
 		vD.innerHTML = response;
 		vD.style.display = "block";
 	}
-	
-	function productcheckaction(){
+
+	function productcheckaction() {
 		document.getElementById("productcheckform").submit();
 	}
 </script>
@@ -96,7 +96,7 @@
 		<section class="panel">
 
 			<div class="row" style="font-size: 15px;">
-				<div class="col-lg-12">
+				<div class="col-lg-12" style="width: 100%">
 					<h3 class="page-header">
 						<i class="fa fa-files-o"></i> 상품조회
 					</h3>
@@ -106,23 +106,21 @@
 							<form action="sh.apos" method="post" id="productcheckform">
 
 								<div style="margin-bottom: -1%">
-									<label for="cname" class="control-label col-lg-1"
-										style="font-size: 13px;">이름 </label>
+
 									<div class="col-lg-3" style="margin-left: -5%">
 
-										<input type="hidden" id="cmd" name="cmd" value="sproduct">
-										<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
-										<input type="hidden" id="childcmd" name="childcmd"
-											value="search"> <input type="hidden" id="shop_num"
-											name="shop_num" value="${sessionScope.shop_num}"> <input
-											class="form-control" id="sname_ps" name="name" minlength="2"
-											onkeydown="startSuggest();" autocomplete="off" type="text"
-											required />
-
+										<input type="hidden" id="shop_num" name="shop_num"
+											value="${sessionScope.shop_num}"> <label for="cname"
+											class="control-label col-lg-1" style="font-size: 13px;">이름
+										</label><input class="form-control" id="sname_ps" name="name"
+											style="width: 50%" onkeydown="startSuggest();"
+											autocomplete="off" type="text" required />
+										<button class="form-control6" type="button"
+											onclick="javascript:productcheckaction()" id="btn1"
+											name="btn1">조회</button>
 										<div id="view"></div>
 									</div>
-									<input class="form-control6" type="button" onclick="javascript:productcheckaction()" id="btn1"
-										name="btn1" value="조회">
+
 								</div>
 							</form>
 						</div>
@@ -167,8 +165,12 @@
 													<th>${stList.sto_size}</th>
 													<th>${stList.sto_amount}</th>
 													<th>${stList.pro_price}</th>
-													<th><img src='resources/upload/${stList.pro_img}'style="width: 100px;"></td></th>
-													<th><img src='resources/upload/${stList.pro_barcode}'style="width: 100px;"></th>
+													<th><img src='resources/upload/${stList.pro_img}'
+														style="width: 100px;">
+													</td>
+													</th>
+													<th><img src='resources/upload/${stList.pro_barcode}'
+														style="width: 100px;"></th>
 
 												</tr>
 											</c:forEach>
