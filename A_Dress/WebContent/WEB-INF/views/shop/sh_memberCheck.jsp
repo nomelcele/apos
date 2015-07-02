@@ -29,22 +29,19 @@
 								<div class="form">
 
 									<form class="form-validate form-horizontal"
-										id="membercheckform" method="post" action="sh.apos">
+										id="membercheckform" method="post" action="sh_memberChecksr">
 										<input type="hidden" name="cmd" value="smember"> 
 										<input type="hidden" name="subcmd" value="check">
 										 <input type="hidden" name="page" value="1">
-
 										<div class="form-group ">
-											<label for="cname" >
-											<label for="cname"
-											class="control-label col-lg-1" style="font-size: 13px;">이름
+										<label for="cname" class="control-label col-lg-2" style="font-size: 11px;">이름
 										</label>
-												<input class="form-control" id="sname_ps" name="name"
+										<input class="form-control" id="mem_name" name="mem_name"
 													onkeydown="startSuggest();" autocomplete="off" 
 													type="text" required 	style="width: 50%"/>
 												
-												<button class="btn btn-primary" onclick="javascript:membercheckaction()" id="btn" name="btn">조회</button>
-											<div id="view"></div>
+										<button class="btn btn-primary" onclick="javascript:membercheckaction()" id="btn" name="btn">조회</button>
+										<div id="view"></div>
 										</div>
 
 
@@ -66,11 +63,10 @@
 																</tr>
 															</thead>
 															<tbody>
-															<c:forEach var="stList" items="${list}">											
+															<c:forEach var="stList" items="${stList}">											
 																	<tr>
 																		<th>${stList.mem_num}</th>
-																		<th><a
-																			href="sh.apos?cmd=smember&subcmd=detail&num=${stList.mem_num}&page=1">${stList.mem_name}</a></th>
+																		<th><a href="sh.apos?cmd=smember&subcmd=detail&num=${stList.mem_num}&page=1">${stList.mem_name}</a></th>
 																		<th>${stList.mem_email}</th>
 																		<th>${stList.mem_addr}</th>
 																		<th>${stList.mem_tel}</th>
