@@ -96,7 +96,7 @@
 		<section class="panel">
 
 			<div class="row" style="font-size: 15px;">
-				<div class="col-lg-12" style="width: 100%">
+				<div class="col-lg-12" style="width: 125%">
 					<h3 class="page-header">
 						<i class="fa fa-files-o"></i> 상품조회
 					</h3>
@@ -138,11 +138,11 @@
 						</ul>
 					</header>
 
-					<div class="panel-body">
-						<div class="tab-content">
+					<div class="panel-body"  style="width: 100%">
+						<div class="tab-content"  style="width: 100%">
 
-							<div id="search" class="tab-pane active">
-								<div class="table-responsive">
+							<div id="search" class="tab-pane active" >
+								<div class="table-responsive" style="width: 100%">
 									<table class="table">
 										<thead>
 											<tr>
@@ -160,7 +160,7 @@
 											<%-- 반복 --%>
 											<c:forEach var="stList" items="${list}">
 												<tr>
-													<th>0</th>
+													<th>i</th>
 													<th>${stList.pro_name}</th>
 													<th>${stList.pro_code}</th>
 													<th>${stList.sto_size}</th>
