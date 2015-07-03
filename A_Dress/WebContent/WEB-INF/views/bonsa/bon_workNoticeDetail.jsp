@@ -14,6 +14,12 @@
 		document.getElementById("listform").submit();
 	}
 </script>
+<script>
+	function gourl31(page){
+		document.getElementById("movepage").innerHTML="<input type='hidden' name='page' value='"+page+"'>";
+		document.getElementById("movepage").submit();
+	}
+</script>
 <section id="main-content">
    <section class="wrapper">
 
@@ -88,10 +94,8 @@
                            </tbody>
                            
                         </table>
-<%--                         <c:set var="pageUrl" value="bonsa.apos?cmd=bwork&subcmd=boardDetail&no=${v.no}"/> --%>
-<%--                         <c:set var="chkcomm" value=""/> --%>
-<%--                         <input type="text" value="${ctlist.writer}"> --%>
-<%--                         <c:if test="${ctlist.writer ne chkcomm}"><%@include file="page.jsp" %></c:if> --%>
+                        <c:set var="pageUrl" value="bon_workNoticedetail?no=${v.no }"/>
+           			  <%@include file="page.jsp" %>
 						
                      </div>
 <!--                      </form> -->
