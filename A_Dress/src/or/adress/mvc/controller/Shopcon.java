@@ -3,9 +3,11 @@ package or.adress.mvc.controller;
 import java.util.HashMap;
 import java.util.List;
 
+import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.StaffDao;
 
+import org.apache.ibatis.javassist.compiler.MemberResolver.Method;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import vo.MemVO;
+import vo.ProductVO;
 import vo.ShopVO;
 import vo.StaffVO;
 
@@ -22,6 +25,8 @@ public class Shopcon {
 	private StaffDao staffdao;
 	@Autowired
 	private ShopDao shopdao;
+	@Autowired
+	private ProductDao productdao;
 
 	@RequestMapping(value = "/sh_index")
 	public String index() {
@@ -153,8 +158,9 @@ public class Shopcon {
 	
 	
 	
+	//--경연---------------------------------------
 	
-	
+	// 처음 화면
 	// 상품관리 - 상품조회
 	@RequestMapping(value = "/sh_productCheck")
 	public ModelAndView sh_productCheck() {
@@ -162,7 +168,25 @@ public class Shopcon {
 		mav.setViewName("shop/sh_productCheck");
 		return mav;
 	}
-
+	
+	// 검색
+	@RequestMapping(value="/sh_productsaerch", method =RequestMethod.POST )
+	public ModelAndView sh_productsaerch(String pro_name){
+		ModelAndView mav = new ModelAndView();
+		List<ProductVO> list = productdao.getListProduct_bon(pro_name);
+		mav.setViewName("shop/sh_productCheck");
+		mav.addObject("list", list);
+		return mav;
+	}
+	
+	//--경연---------------------------------------
+	
+	
+	
+	
+	
+	
+	
 	// 판매등록 - 판매등록
 	@RequestMapping(value = "/sh_smangRegis")
 	public ModelAndView sh_smangRegis() {
