@@ -41,6 +41,7 @@ public class Shopcon {
 	      /////////임시세션
 	      session.setAttribute("sh_id", "dodi");
 	      session.setAttribute("sh_name", "도하진");
+	      session.setAttribute("shop_num", 1);
 	      ///////////////
 	      
 	      System.out.println("index 시작");
