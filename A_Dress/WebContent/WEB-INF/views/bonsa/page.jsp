@@ -15,11 +15,11 @@
 <ul class="pagination">
 					<c:choose>
 							<c:when test="${pageInfo.currentBlock eq 1}">
-               				<li><a href="">&lt;&lt;</a></li>
+               				<li><a>&lt;&lt;</a></li>
                            </c:when>
 							<c:otherwise>
 							<li><a
-									href="javascript:gourl31('${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock }')">«</a></li>
+									href="javascript:gourl31('${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock }')">&lt;&lt;</a></li>
 							</c:otherwise>
 				     </c:choose> 
 				     
@@ -39,11 +39,11 @@
 							</c:otherwise>
 						</c:choose> <c:choose>
 							<c:when test="${pageInfo.currentBlock eq pageInfo.totalBlocks}">
-                <li><a href="">&gt;&gt;</a></li>
+                <li><a>&gt;&gt;</a></li>
                 </c:when>
 							<c:otherwise>
 								<li><a
-									href="javascript:gourl31('${pageInfo.currentBlock * pageInfo.pagesPerBlock + 1 }')">»</a></li>
+									href="javascript:gourl31('${pageInfo.currentBlock * pageInfo.pagesPerBlock + 1 }')">&gt;&gt;</a></li>
 							</c:otherwise>
 						</c:choose></td>
 						

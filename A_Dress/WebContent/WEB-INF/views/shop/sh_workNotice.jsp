@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 매장 업무관리의 공지사항 페이지 입니다. --%>
-
 <script>
 	function gourl2() {
 		document.getElementById("notice").submit();
@@ -16,12 +14,17 @@
 	}
 </script>
 <script>
-	function godetail(){
+	function godetail(dno){
+		document.getElementById("dno").value=dno;
 		document.getElementById("godetail").submit();
 	}
 </script>
 <form method="post" action="sh_workNotice" id=notice>
 <input type="hidden" name="page" value="1">
+</form>
+<form action="sh_workNoticedetail" method="post" id="godetail">
+	<input type="hidden" name="no" value="" id="dno">
+	<input type="hidden" name="page" value="1">
 </form>
 <section id="main-content">
 	<section class="wrapper">
@@ -49,12 +52,9 @@
 								<tr>
 									<td>${stList.no}</td>
 									<td><a
-										href="javascript:godetail()">
+										href="javascript:godetail('${stList.no}')">
 											${stList.title}</a></td>
-									<form action="sh_workNoticedetail" method="post" id="godetail">
-										<input type="hidden" name="no" value="${stList.no}">
-										<input type="hidden" name="page" value="1">
-									</form>
+									
 									<td>${stList.writer}</td>
 									<td>${stList.regdate}</td>
 								</tr>

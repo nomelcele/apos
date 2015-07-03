@@ -19,7 +19,8 @@
 	}
 </script>
 <script>
-	function godetail(){
+	function godetail(dno){
+		document.getElementById("dno").value=dno;
 		document.getElementById("godetail").submit();
 	}
 </script>
@@ -55,10 +56,10 @@
 								<tr>
 									<td>${stList.no}</td>
 									<td><a
-										href="javascript:godetail()">
+										href="javascript:godetail('${stList.no}')">
 											${stList.title}</a></td>
 									<form action="bon_workNoticedetail" method="post" id="godetail">
-										<input type="hidden" name="no" value="${stList.no}">
+										<input type="hidden" name="no" value="" id="dno">
 										<input type="hidden" name="page" value="1">
 									</form>
 									<td>${stList.writer}</td>
