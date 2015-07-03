@@ -97,7 +97,7 @@
 		$("#p_numbtn").click(function() {
 			$.ajax({
 				type : "POST",
-				url : "sh_smang_callback2.jsp",
+				url : "sh_smang_callback2",
 				data : {
 					pname : $("#pro_code").val()
 				},
@@ -107,7 +107,7 @@
 			});
 			return false;
 		});
-	})
+	});
 </script>
 <section id="main-content">
 	<section class="wrapper">

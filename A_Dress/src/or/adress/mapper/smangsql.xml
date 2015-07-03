@@ -11,6 +11,15 @@
 	<select id="smang_editstock" parameterType="map">
 	select sto_amount from stock where sto_pronum = {#pro_num} and sto_size = #{size} and sto_shopnum = #{shopnum}
 	</select>
-
+	<select id="smang_getlistproduct" parameterType="map" resultType="smangvo">
+	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and p.pro_code = #{pname} and sh.shop_num = #{shop_num}
+	</select>
+	<select id="smang_editstock" parameterType="map" resultType="int">
+	select sto_amount from stock where sto_pronum = #{code} and sto_size = #{size} and sto_shopnum = #{shopnum}
+	</select>
+	<update id="smang_editstock2" parameterType="map">
+	update stock set sto_amount = #{amount} where sto_pronum = #{code} and sto_size = #{size} and sto_shopnum = #{shopnum}
+	</update>
+	
 
 </mapper>
