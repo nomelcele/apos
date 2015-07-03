@@ -2,7 +2,8 @@
 	pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <%-- 매장의 판매관리 - 판매등록페이지입니다. --%>
 <%-- 고객검색 세션 시작 --%>
 <script src="resources/js/http.js"></script>
@@ -80,7 +81,7 @@
 		$("#ck").click(function() {
 			$.ajax({ //ajax로 보냄
 				type : "POST", //헤더에 넣어서보냄 (URL로 안보임)
-				url : "sh_smang_callback.jsp",
+				url : "sh_smang_callback",
 				data : {
 					name : $("#ckname").val()
 				},
@@ -140,7 +141,7 @@
 									placeholder="고객성함" name="name" onkeydown="startSuggest()"
 									autocomplete="off">
 							</div>
-							<button type="button" id="ck" class="btn btn-primary">검색</button>
+							<button type="button" id="ck" class="btn btn-primary" onclick="javasript:ckbtn()">검색</button>
 						</form>
 
 						<table class="table table-striped table-advance table-hover">
