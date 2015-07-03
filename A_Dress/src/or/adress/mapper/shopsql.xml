@@ -57,9 +57,7 @@
 		select * from member where mem_name like '%'||#{mem_name}||'%' 
 	</select>
 	
-	<select id="listproduct" parameterType="map" resultType="map">
-	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and( p.pro_code like %#{check}% or p.pro_name like %#{check}%) and sh.shop_num = #{shopnum}
-	</select>
+	
 	
 	<insert id="insertMem" parameterType="memvo">
 	insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,sysdate,1,#{mem_email})

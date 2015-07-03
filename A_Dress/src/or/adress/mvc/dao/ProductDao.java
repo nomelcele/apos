@@ -62,6 +62,10 @@ public class ProductDao {
 	public List<ProductVO> getListProduct_bon(String pro_name){
 		return ss.selectList("product.product_bon", pro_name);
 	}
+	public List<ProductVO> getListProduct(HashMap<String, String> map){
+		return ss.selectList("product.listproduct",map);
+		
+	}
 	
 	// 인자값 2개라서 일단 보류
 	// 완료 확인요망
