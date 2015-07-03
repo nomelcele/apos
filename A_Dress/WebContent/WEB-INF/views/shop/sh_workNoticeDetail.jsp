@@ -7,6 +7,15 @@
 	function comminaction(){
 		document.getElementById("comminform").submit();
 	}
+	function listaction(){
+		document.getElementById("listform").submit();
+	}
+</script>
+<script>
+	function gourl31(page){
+		document.getElementById("movepage").innerHTML="<input type='hidden' name='page' value='"+page+"'>";
+		document.getElementById("movepage").submit();
+	}
 </script>
 <section id="main-content">
    <section class="wrapper">
@@ -48,7 +57,11 @@
 <%--                          <img src="${v.path}" style="width: 350px; resize: none "> --%>
                          </div>
                      </div>
-                     
+                     <form action="sh_workNotice" method="post" id="listform">
+                    <input type="hidden" name="page" value="1">
+                    <button type="button" class="btn btn-danger" onclick="javascript:listaction()" style="margin-left: 21%; margin-top: 1%">목록</button>
+                    </form>
+                    
                      <div class="col-sm-10" style="margin-left: 200px;">
                         <table class="table">
                            <thead>
@@ -63,26 +76,26 @@
                            <tbody>
                            <c:forEach var="ctlist" items="${clist}">
                               <tr>
-                                 <td>${ctlist.writer }</td>
-                                 <td>${ctlist.comm}</td>
-                                 <td>${ctlist.redate}</td>
-                                 <td><a href="sh.apos?cmd=swork&subcmd=commdelete&no=${ctlist.no}&bo_num=${ctlist.bo_num}&writer=${ctlist.writer}&page=1">
+                                 <td>${ctlist.comm_writer }</td>
+                                 <td>${ctlist.comm_cont}</td>
+                                 <td>${ctlist.comm_date}</td>
+                                 <td><a href="sh_commdelete?no=${ctlist.comm_num}&bo_num=${ctlist.comm_bonum}&writer=${ctlist.comm_writer}&page=1">
 						X</a></td>
                               </tr>
                               </c:forEach>
                            </tbody>
                            
                         </table>
-<%--                         <c:set var="pageUrl" value="sh.apos?cmd=swork&subcmd=boardDetail&no=${v.no}"/> --%>
-<%-- 						<%@include file="page.jsp" %> --%>
+                        <c:set var="pageUrl" value="sh_workNoticedetail?no=${v.no }"/>
+						<%@include file="page.jsp" %>
                      </div>
 <!--                      </form> -->
-                     <form method="post" action="sh.apos" id="comminform">
+                     <form method="post" action="sh_commin" id="comminform">
                      <div class="form-group">
                         <label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
                         <div class="col-lg-6">
                            <input type="text" class="form-control" id="inputPassword1"
-                              placeholder="댓글을 입력하세요." name="comm">
+                              placeholder="댓글을 입력하세요." name="comm_cont">
                         </div>
                      </div>
                      <div class="form-group">
@@ -90,12 +103,7 @@
                         <div class="col-lg-offset-2 col-lg-10" style="display:block;">
                         </div>
                      </div>
-				  <input type="hidden" name="cmd" value="swork">
-                  <input type="hidden" name="subcmd" value="boardDetail">
-				  <input type="hidden" name="childcmd" value="in">
-				  <input type="hidden" name="page" value="1">
-				  <input type="hidden" name="code" value="${v.no}">
-				  <input type="hidden" name="no" value="${v.no}">
+				  <input type="hidden" name="comm_bonum" value="${v.no}">
                   </form>
                </div>
             </section>

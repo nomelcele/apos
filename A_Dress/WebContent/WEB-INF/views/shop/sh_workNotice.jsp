@@ -9,10 +9,19 @@
 		document.getElementById("notice").submit();
 	}
 </script>
-<form method="post" action="bon.apos" id=notice>
-	<input type="hidden" name="cmd" value="bwork"> <input
-		type="hidden" name="subcmd" value="notice"> <input
-		type="hidden" name="page" value="1">
+<script>
+	function gourl31(page){
+		document.getElementById("movepage").innerHTML="<input type='hidden' name='page' value='"+page+"'>";
+		document.getElementById("movepage").submit();
+	}
+</script>
+<script>
+	function godetail(){
+		document.getElementById("godetail").submit();
+	}
+</script>
+<form method="post" action="sh_workNotice" id=notice>
+<input type="hidden" name="page" value="1">
 </form>
 <section id="main-content">
 	<section class="wrapper">
@@ -40,8 +49,12 @@
 								<tr>
 									<td>${stList.no}</td>
 									<td><a
-										href="bon.apos?cmd=swork&subcmd=boardDetail&no=${stList.no}&page=1">
+										href="javascript:godetail()">
 											${stList.title}</a></td>
+									<form action="sh_workNoticedetail" method="post" id="godetail">
+										<input type="hidden" name="no" value="${stList.no}">
+										<input type="hidden" name="page" value="1">
+									</form>
 									<td>${stList.writer}</td>
 									<td>${stList.regdate}</td>
 								</tr>
@@ -50,8 +63,8 @@
 					</table>
 					<!-- page end-->
 
-					<c:set var="pageUrl" value="bon.apos?cmd=swork&subcmd=notice" />
-					<%@include file="page.jsp"%>
+					<c:set var="pageUrl" value="sh_workNotice" />
+						<%@include file="page.jsp" %>
 
 					<div>
 						<table>
