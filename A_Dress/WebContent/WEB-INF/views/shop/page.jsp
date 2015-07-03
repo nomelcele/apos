@@ -8,6 +8,9 @@
 <!-- <input type="hidden" name="subcmd" value="notice"> -->
 <!-- <input type="hidden" name="page" value="1"> -->
 <!-- </form> -->
+         
+<form action="${pageUrl }" method="post" id="movepage">
+</form>
 <div class="text-center">
 <ul class="pagination">
 					<c:choose>
@@ -16,7 +19,7 @@
                            </c:when>
 							<c:otherwise>
 							<li><a
-									href="${pageUrl}&page=${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock }">«</a></li>
+									href="javascript:gourl31('${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock }')">«</a></li>
 							</c:otherwise>
 				     </c:choose> 
 				     
@@ -24,14 +27,14 @@
 							<c:when test="${pageInfo.currentBlock ne pageInfo.totalBlocks}">
 								<c:forEach begin="1" end="${pageInfo.pagesPerBlock}"
 									varStatus="num">
-                        <li><a href="${pageUrl}&page=${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }">${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }</a></li>
+                        <li><a href="javascript:gourl31('${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }')">${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }</a></li>
                     			</c:forEach>
 							</c:when>
 							<c:otherwise>
 								<c:forEach
 									begin="${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock + 1}"
 									end="${pageInfo.totalPages}" varStatus="num">
-                        <li><a href="${pageUrl}&page=${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }">${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }</a></li>
+                        <li><a href="javascript:gourl31('${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }')">${(pageInfo.currentBlock - 1) * pageInfo.pagesPerBlock + num.count }</a></li>
                     </c:forEach>
 							</c:otherwise>
 						</c:choose> <c:choose>
@@ -40,7 +43,7 @@
                 </c:when>
 							<c:otherwise>
 								<li><a
-									href="${pageUrl}&page=${pageInfo.currentBlock * pageInfo.pagesPerBlock + 1 }">»</a></li>
+									href="javascript:gourl31('${pageInfo.currentBlock * pageInfo.pagesPerBlock + 1 }')">»</a></li>
 							</c:otherwise>
 						</c:choose></td>
 						

@@ -124,7 +124,9 @@
 
 
 <!-- 공지사항 -->
-<form method="post" action="sh_workNotice" id=notice></form>
+<form method="post" action="sh_workNotice" id=notice>
+<input type="hidden" name="page" value="1">
+</form>
 
 <!-- 내부규정 -->
 <form method="post" action="sh_workItr" id=workitr></form>
