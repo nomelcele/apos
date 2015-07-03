@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.SmangDao;
@@ -17,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import vo.MemVO;
 import vo.ProductVO;
+import vo.SmangVO;
 
 @Controller
 public class Ajaxcon {
@@ -102,8 +105,48 @@ public class Ajaxcon {
 		}
 		String str = res.toString();
 		System.out.println(str);
-		ModelAndView mav = new ModelAndView("shop/sh_smang_callback");
+		ModelAndView mav = new ModelAndView("sh_smang_callback");
 		mav.addObject("cuscont", str);
+		return mav;
+	}
+	
+	@RequestMapping(value="sh_smang_callback2", method=RequestMethod.POST)
+	public ModelAndView sh_smang_callback2(String pname, HttpSession session){
+		String shop_num =  session.getAttribute("shop_num").toString();
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("pname", pname);
+		map.put("shop_num", shop_num);
+		List<SmangVO> list = smdao.getListProduct(map);
+		Iterator<SmangVO> it = list.iterator();
+		StringBuffer res = new StringBuffer();
+		int i = 0;
+		while(it.hasNext()){
+			i++;
+			SmangVO v = new SmangVO();
+			v = it.next();
+			res.append("<tr>");
+			res.append("<td>"+i+"</td>");
+			res.append("<td>").append(v.getShop_name()).append("</td>");
+			res.append("<td>").append(v.getPro_code()).append("</td>");
+			res.append("<td>").append(v.getSto_size()).append("</td>");
+			res.append("<td>").append("<input type=\"number\" class=\"form-control\" id=\"p_num"+i+"\" value=\"1\" max=\""+v.getSto_amount()+"\">").append("</td>");
+			res.append("<td>").append(v.getSto_amount()).append("</td>");
+			res.append("<td>").append(v.getPro_price()).append("</td>");
+			res.append("<td><img src='upload/"+v.getPro_img()+"' style=\"width: 100px;\"></td>");//추후 세일추가			
+			res.append("<td><img src='upload/"+v.getPro_barcode()+"' style=\"width: 100px;\"></td>");
+			res.append("<td>");
+			res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
+			res.append("href=\"javascript:insertproduct('").append(v.getPro_code()).append("', '");
+			res.append(v.getSto_size()).append("', '").append(v.getSto_amount()).append("', '");
+			res.append(v.getPro_price()).append("', '"+i+"')\">");
+			res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
+			res.append("</td>");
+			res.append("</tr>");
+				
+		}
+		String str2 = res.toString();
+		ModelAndView mav = new ModelAndView("sh_smang_callback2");
+		mav.addObject("procont", str2);
 		return mav;
 	}
 	
