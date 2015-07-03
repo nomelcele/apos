@@ -103,7 +103,7 @@
 
 					<header class="panel-heading tab-bg-primary ">
 						<div class="form-group " style="margin-left: -3%">
-							<form action="sh.apos" method="post" id="productcheckform">
+							<form action="sh_productsaerch" method="post" id="productcheckform">
 
 								<div style="margin-bottom: -1%">
 
@@ -112,7 +112,8 @@
 										<input type="hidden" id="shop_num" name="shop_num"
 											value="${sessionScope.shop_num}"> <label for="cname"
 											class="control-label col-lg-6" style="font-size: 13px;">이름
-										</label><input class="form-control" id="sname_ps" name="name"
+										</label>
+										<input class="form-control" id="pro_name" name="pro_name"
 											style="width: 50%" onkeydown="startSuggest();"
 											autocomplete="off" type="text" required />
 										<button class="form-control6" type="button"
@@ -165,11 +166,11 @@
 													<th>${stList.sto_size}</th>
 													<th>${stList.sto_amount}</th>
 													<th>${stList.pro_price}</th>
-													<th><img src='resources/upload/${stList.pro_img}'
+													<th><img src='upload/${stList.pro_img}'
 														style="width: 100px;">
 													</td>
 													</th>
-													<th><img src='resources/upload/${stList.pro_barcode}'
+													<th><img src='upload/${stList.pro_barcode}'
 														style="width: 100px;"></th>
 
 												</tr>
