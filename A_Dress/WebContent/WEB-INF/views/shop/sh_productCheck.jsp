@@ -11,11 +11,12 @@
 	var shop_num = "${sessionScope.shop_num}";
 	var genderKey = null;
 	function Product(str) {
+		
 		genderKey = str;
 		var key = "key=" + encodeURIComponent(str) + "&shop_num="
 				+ encodeURIComponent(shop_num);
-
-		sendRequest("sh_AjaxProductSearch.jsp", key, res2, "post");
+		
+		sendRequest("sh_AjaxProductSearch", key, res2, "post");
 	}
 
 	var jsonObj = null;
