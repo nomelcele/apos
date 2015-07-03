@@ -26,7 +26,7 @@
   	
   	<!-- 완료 -->
   	<select id="product_bon" parameterType="String" resultType="provo">
-  		select * from product where pro_name like #{name}
+  		select * from product where pro_name like '%'||#{pro_name}||'%' 
   	</select>
   	
   	<!-- 완료 -->
