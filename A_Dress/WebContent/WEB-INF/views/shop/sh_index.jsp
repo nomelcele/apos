@@ -21,7 +21,7 @@
  	
  	
  	
- 	<div><img src="resources/img/bg-50.jpg"; width="1180"; align="center"></div>
+ 	<div><video autoplay="autoplay"  style="width: 100%"><source src="resources/video/c.mp4"  type="video/mp4"></div>
  </br>
  
 			<table align="center">
