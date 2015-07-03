@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import vo.MemVO;
+import vo.ShopVO;
 import vo.StaffVO;
 
 @Controller
@@ -28,12 +29,6 @@ public class Shopcon {
 		return "shop/sh_index";
 	}
 
-	@RequestMapping(value = "/sh_memdetail_change")
-	public ModelAndView memdetail_change() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("shop/sh_index");
-		return mav;
-	}
 
 	// 업무관리 - 공지사항
 	@RequestMapping(value = "/sh_workNotice")
@@ -98,15 +93,68 @@ public class Shopcon {
 		mav.setViewName("shop/sh_index");
 		return mav;
 	}
-
-	// 회원관리 - 회원조회/수정
-	@RequestMapping(value = "/sh_memberCheck")
-	public ModelAndView sh_memberDetail() {
+	
+	
+	
+	
+	//---------경연
+	@RequestMapping(value = "/sh_memberCheck", method =RequestMethod.POST)
+	public ModelAndView sh_memberCheck() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("shop/sh_memberCheck");
 		return mav;
 	}
-
+	// 회원관리 - 회원조회/수정 
+	@RequestMapping(value = "/sh_memberChecksr", method =RequestMethod.POST)
+	public ModelAndView sh_memberChecksr(String mem_name) {
+		ModelAndView mav = new ModelAndView();
+		System.out.println(mem_name);
+		List<MemVO> list =shopdao.getListMember(mem_name);
+		mav.setViewName("shop/sh_memberCheck");
+		mav.addObject("stList", list);
+		return mav;
+	}
+	
+	// 회원관리 - 회원정보수정
+	// 처음 화면
+	@RequestMapping(value="/sh_memberDetail")
+	public ModelAndView sh_memberDetail(String num){
+		ModelAndView mav = new ModelAndView();
+		int mem_num= Integer.parseInt(num);
+		System.out.println("num: "+mem_num);
+		mav.setViewName("shop/sh_memberDetail");
+		MemVO vo = shopdao.getDetail(mem_num);
+		mav.addObject("v", vo);
+		return mav;
+	}
+	// 탈퇴
+	@RequestMapping(value="/sh_memberDetail_del")
+	public ModelAndView sh_memberDetail_del(String num){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_memberCheck");
+		int mem_num = Integer.parseInt(num);
+		System.out.println("mem_num"+mem_num);
+		System.out.println("탈퇴가 완료되었습니다.");
+		shopdao.getsecede(mem_num);
+		return mav;
+	}
+	// 수정
+	@RequestMapping(value = "/sh_memdetail_change")
+	public ModelAndView memdetail_change(MemVO vo) {
+		ModelAndView mav = new ModelAndView();
+		shopdao.getfinish(vo);
+		System.out.println("수정이 완료되었습니당");
+		System.out.println(mav);
+		return mav;
+	}
+	
+	//---------경연
+	
+	
+	
+	
+	
+	
 	// 상품관리 - 상품조회
 	@RequestMapping(value = "/sh_productCheck")
 	public ModelAndView sh_productCheck() {
