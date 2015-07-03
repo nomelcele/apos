@@ -72,7 +72,7 @@ public class Bonsacon {
 		return mav;
 	}
 	//본사 공지사항 디테일 cmd=bwork subcmd=boardDetail
-	@RequestMapping(value="/bon_workNoticedetail")
+	@RequestMapping(value="/bon_workNoticedetail", method=RequestMethod.POST)
 	public ModelAndView bon_workNoticedetail(int no, int page){
 		ModelAndView mav = new ModelAndView("bonsa/bon_workNoticeDetail");
 		//페이징처리 (댓글)
@@ -82,12 +82,15 @@ public class Bonsacon {
 			map.put("end", pageInfo.getEndRow());
 		//
 			map.put("no", no);
+			System.out.println("시작"+pageInfo.getStartRow());
+			System.out.println("끝"+pageInfo.getEndRow());
 		List<CommVO> clist = bdao.getCommList(map);
 		BoardVO v = bdao.getDetail(no);
 		v.setPath("upload/"+v.getPath());
 		System.out.println(v.getPath());
 		mav.addObject("clist", clist);
 		mav.addObject("v", v);
+		mav.addObject("pageInfo", pageInfo);
 		return mav;
 	}
 	
@@ -162,11 +165,9 @@ public class Bonsacon {
 		String callback = request.getParameter("CKEditorFuncNum");
 		String fileUrl = "upload/"+fileName;//url경로
 		mav.addObject("callback", callback);
-		mav.addObject("fileUrl", fileUrl);
-		
+		mav.addObject("fileUrl", fileUrl);	
 		mav.setViewName("bonsa/callback");
-		return mav;
-		
+		return mav;	
 	}
 	
 	//본사 공지사항 삭제 cmd = bwork subcmd=delete

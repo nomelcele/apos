@@ -8,8 +8,8 @@
 <!-- <input type="hidden" name="subcmd" value="notice"> -->
 <!-- <input type="hidden" name="page" value="1"> -->
 <!-- </form> -->
-<form action="${pageUrl }" method="post" id="qwer">
-	
+         
+<form action="${pageUrl }" method="post" id="movepage">
 </form>
 <div class="text-center">
 <ul class="pagination">
@@ -19,7 +19,7 @@
                            </c:when>
 							<c:otherwise>
 							<li><a
-									href="${pageUrl}&page=${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock }">«</a></li>
+									href="javascript:gourl31('${(pageInfo.currentBlock-1)*pageInfo.pagesPerBlock }')">«</a></li>
 							</c:otherwise>
 				     </c:choose> 
 				     
