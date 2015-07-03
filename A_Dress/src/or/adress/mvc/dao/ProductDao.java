@@ -1,21 +1,14 @@
 package or.adress.mvc.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.List;
 
-import javax.servlet.http.Part;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import vo.BoardVO;
-import vo.MemVO;
 import vo.ProductVO;
 
 @Repository
@@ -62,10 +55,16 @@ public class ProductDao {
 	public List<ProductVO> getListProduct_bon(String pro_name){
 		return ss.selectList("product.product_bon", pro_name);
 	}
+	//매장별 상품 검색
 	public List<ProductVO> getListProduct(HashMap<String, String> map){
 		return ss.selectList("product.listproduct",map);
 		
 	}
+	
+	//매장별 성별에 따라 다른 옷 출력
+		public List<ProductVO> getListProductGender(HashMap<String, String> map) {
+			return ss.selectList("product.listproductGender", map);
+		}
 	
 	// 인자값 2개라서 일단 보류
 	// 완료 확인요망

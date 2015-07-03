@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import vo.MemVO;
+import vo.ProductVO;
 import vo.ShopHotkeyVO;
 import vo.ShopVO;
 import vo.SmangVO;
@@ -143,8 +144,7 @@ public class ShopDao {
 		return ss.selectList("shop.memberlist", mem_name);
 	}
 
-	// 인자값 두개니까 물어 볼 것
-	// 완료 확인요망
+	
 	public List<SmangVO> getListProduct(String check, String shopnum) {
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("check", check);
@@ -152,7 +152,8 @@ public class ShopDao {
 
 		return ss.selectList("shop.listproduct", map);
 	}
-
+	
+	
 	// 맴버 추가
 	public void insertMem(MemVO vo) {
 		ss.insert("shop.insertMem", vo);
