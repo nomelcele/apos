@@ -58,9 +58,9 @@ public class ProductDao {
 	
 	// 보류 / 위에거랑 비슷 물어볼 것
 	// 완료 확인요망
-	public List<ProductVO> getListProduct_bon(String name){
-		
-		return ss.selectList("product.product_bon", name);
+	// 상품 검색
+	public List<ProductVO> getListProduct_bon(String pro_name){
+		return ss.selectList("product.product_bon", pro_name);
 	}
 	
 	// 인자값 2개라서 일단 보류
