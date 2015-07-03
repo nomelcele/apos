@@ -14,6 +14,6 @@
 	v.setU_id(u_id);
 	v.setChat(chat);
 	v.setReip(reip);
-	ChatDao.getDao().insertChat(v);
+// 	ChatDao.getDao().insertChat(v);
 	System.out.println("üũ3");
 %>
