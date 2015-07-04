@@ -29,7 +29,7 @@ public class SmangDao {
 		int camount = ss.selectOne("smang.smang_editstock", map);
 		int many = map.get("many");
 		map.put("amount", camount-many);
-		ss.update("smang.smang_editstock", map);	
+		ss.update("smang.smang_editstock2", map);	
 	}
 	
 	public void inmile(HashMap<String, Integer> map){
