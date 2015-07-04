@@ -144,7 +144,6 @@ public class Bonsacon {
 		try {
 			part = request.getPart("upload");
 		} catch (ServletException | IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		System.out.println("-----SpringMVC multipartresolver--------");
