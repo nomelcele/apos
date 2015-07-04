@@ -77,6 +77,9 @@
       else if(str == "productStock"){
     	  document.getElementById("productStock").submit();
       }
+      else if(str == "productRequestState"){
+    	  document.getElementById("productRequestState").submit();
+      }
    }
    
    
@@ -152,6 +155,9 @@
 <!-- 상품재고관리 -->
 <form method="post" action="sh_productStock" id=productStock></form>
 
+<!-- 상품신청현황 -->
+<form method="post" action="sh_productRequestState" id=productRequestState></form>
+
 <!-- 판매등록 -->
 <form method="post" action="sh_smangRegis" id=smangRegis></form>
 
@@ -214,6 +220,7 @@
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('productCheck')">상품조회</a></li>
                           <li><a class="" href="javascript:goUrl('productStock')">상품재고관리</a></li>
+                          <li><a class="" href="javascript:goUrl('productRequestState')">상품신청현황</a></li>
                           
                       </ul>
                   </li>
