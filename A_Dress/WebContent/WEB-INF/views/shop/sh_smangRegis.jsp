@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <%-- 매장의 판매관리 - 판매등록페이지입니다. --%>
 <%-- 고객검색 세션 시작 --%>
 <script src="resources/js/http.js"></script>
@@ -113,10 +110,9 @@
 	<section class="wrapper">
 
 		<!-- 최종보낼 폼----------------------------------------------- -->
-		<form action="sh.apos" method="post" id="submitfinal">
+		<form action="sh_smangRegising" method="post" id="submitfinal">
 			<div id="final">
-				<input type="hidden" name="cmd" value="smang"> <input
-					type="hidden" name="subcmd" value="final">
+				
 				<!-- 		<input type='hidden' name='fshopnum' value='1'> -->
 			</div>
 		</form>

@@ -34,7 +34,7 @@ public class Shopcon {
 	@Autowired
 	private ShopDao shopdao;
 	@Autowired
-	private ProductDao productdao;
+	private ProductDao pdao;
 	@Autowired
 	private BoardDao bdao;
 	@Autowired
@@ -249,7 +249,7 @@ public class Shopcon {
 		map.put("pro_check", pro_name);
 		map.put("shop_num", "1");
 		// List<ProductVO> list = productdao.getListProduct_bon(pro_name);
-		List<ProductVO> list = productdao.getListProduct(map);
+		List<ProductVO> list = pdao.getListProduct(map);
 		mav.setViewName("shop/sh_productCheck");
 		mav.addObject("list", list);
 		return mav;
@@ -274,6 +274,7 @@ public class Shopcon {
 		int fmileage = Integer.parseInt(request.getParameter("fmileage"));
 		int cusnum = Integer.parseInt(request.getParameter("fcusnum"));
 		int s = Integer.parseInt(request.getParameter("fset"));
+		System.out.println("고객번호 : "+cusnum);
 		boolean chk = true;
 		for(int i=1 ; i<=s ; i++){
 			String fcode = "fcode"+i;
@@ -297,9 +298,12 @@ public class Shopcon {
 			chk = false;
 		}
 		int mile = Integer.parseInt(request.getParameter("inmileage"));
+		HashMap<String, Integer> map = new HashMap<String, Integer>();
+		map.put("mile", mile);
+		map.put("cusnum", cusnum);
 		System.out.println(mile);
-		SmangDao.getDao().inmile(mile, cusnum);
-		method = true;
+		smdao.inmile(map);
+		return sh_smangRegis();
 	}
 
 	// 판매등록 - 교환/환불
