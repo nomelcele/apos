@@ -218,14 +218,14 @@
 						<tbody>
 						<c:forEach var="shlist" items="${list}"  >
 							<tr class="warning">
-								<th><span id="list_name">${shlist.name}</span></th>
-								<th><span id="list_adr">${shlist.adr}</span></th>
-								<th>${shlist.num}</th>
-								<th><span id="list_master">${shlist.master}</span></th>
-								<th>${shlist.tel}</th>
-								<th>${shlist.mail}</th>
-								<th><img src="resources/upload/${shlist.img}" style="width: 50px;"></th>
-								<th><input onclick="shopcdetialmap(${shlist.num})" type="button" class="form-control4 block" id="detailBtn" value="상세보기"></th>								
+								<th><span id="list_name">${shlist.shop_name}</span></th>
+								<th><span id="list_adr">${shlist.shop_adr}</span></th>
+								<th>${shlist.shop_num}</th>
+								<th><span id="list_master">${shlist.shop_master}</span></th>
+								<th>${shlist.shop_tel}</th>
+								<th>${shlist.shop_mail}</th>
+								<th><img src="resources/upload/${shlist.shop_img}" style="width: 50px;"></th>
+								<th><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="상세보기"></th>								
 								
 							</tr>
 						</c:forEach>

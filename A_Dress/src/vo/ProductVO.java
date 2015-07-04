@@ -1,11 +1,33 @@
 package vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 // 컬럼명 일치
 public class ProductVO {
 	private int pro_num, pro_size, pro_price,pro_amount;
 	private String pro_name, pro_code, pro_barcode, pro_img,
 	pro_date, pro_shopname;
 	private String sto_amount,sto_size,shop_name;
+	private MultipartFile bimg,pimg;
+	private String bimgpath,pimgpath;
+	public String getBimgpath() {
+		return bimgpath;
+	}
+	public void setBimgpath(String bimgpath) {
+		this.bimgpath = bimgpath;
+	}
+	public String getPimgpath() {
+		return pimgpath;
+	}
+	public void setPimgpath(String pimgpath) {
+		this.pimgpath = pimgpath;
+	}
+	public MultipartFile getPimg() {
+		return pimg;
+	}
+	public void setPimg(MultipartFile pimg) {
+		this.pimg = pimg;
+	}
 	public String getShop_name() {
 		return shop_name;
 	}
@@ -83,6 +105,12 @@ public class ProductVO {
 	}
 	public void setPro_shopname(String pro_shopname) {
 		this.pro_shopname = pro_shopname;
+	}
+	public MultipartFile getBimg() {
+		return bimg;
+	}
+	public void setBimg(MultipartFile bimg) {
+		this.bimg = bimg;
 	}
 
 

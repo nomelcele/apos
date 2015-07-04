@@ -49,7 +49,7 @@
 	<select id="findpwd" parameterType="map" resultType="String">
 	select shop_pwd from shop where shop_name=#{shop_name} and shop_id=#{shop_id}
 	</select>
-	<select id="shopList" parameterType="shvo">
+	<select id="shopList" resultType="shvo">
 	select *from shop
 	</select>
 

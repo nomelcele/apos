@@ -69,10 +69,8 @@ $('#bimg').change(function(){
 								<div class="form">
 
 									<form class="form-validate form-horizontal" id="feedback_form"
-										method="post" action="sh.apos" enctype="multipart/form-data">
-										<input type="hidden" name="cmd" value="bproduct">
-										<input type="hidden" name="subcmd" value="add">
-										<input type="hidden" name="childcmd" value="in">
+										method="post" action="bon_productAdding" enctype="multipart/form-data">
+										
 
 
 										<div
@@ -84,7 +82,7 @@ $('#bimg').change(function(){
 													class="control-label col-lg-2">물품명</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
-														id="name" name="name" minlength="2" type="text" required />
+														id="name" name="pro_name" minlength="2" type="text" required />
 												</div>
 											</div>
 
@@ -96,20 +94,10 @@ $('#bimg').change(function(){
 													class="control-label col-lg-2">물품코드</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
-														id="code" name="code" minlength="2" type="text" required />
+														id="code" name="pro_code" minlength="2" type="text" required />
 												</div>
 											</div>
 
-
-
-											<div class="form-group ">
-												<label style="width: 115px;" for="cname"
-													class="control-label col-lg-2">사이즈</label>
-												<div class="col-lg-2">
-													<input class="form-control" style="width: 260px;"
-														id="size" name="size" minlength="2" type="text" required />
-												</div>
-											</div>
 
 
 
@@ -118,7 +106,7 @@ $('#bimg').change(function(){
 													class="control-label col-lg-2">판매금액</label>
 												<div class="col-lg-2">
 													<input class="form-control" style="width: 260px;"
-														id="price" name="price" minlength="2" type="text" required />
+														id="price" name=" pro_price" minlength="2" type="text" required />
 												</div>
 											</div>
 											<div style="float: right; margin-right: 2px;">

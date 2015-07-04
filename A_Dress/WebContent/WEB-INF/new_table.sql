@@ -40,6 +40,8 @@ mem_mileage number(10),
 mem_date date,
 mem_shopnum number(10),
 mem_email varchar2(50),
+mem_id varchar2(10),
+mem_pwd  varchar2(20),
 
 constraint member_memb_shopnum_fk foreign key(mem_shopnum)
 references shop(shop_num) on delete cascade
@@ -93,8 +95,8 @@ pro_name varchar2(50) constraint product_pro_name_nn not null,
 pro_code varchar2(50) constraint product_pro_code_nn not null,
 pro_barcode varchar2(50) constraint product_pro_barcode_nn not null,
 pro_img varchar2(50) constraint product_pro_img_nn not null,
-constraint product_pro_code_uq unique (pro_code);
 pro_date date,
+constraint product_pro_code_uq unique (pro_code);
 pro_price number(30)
 );
 ---------------------5/28----------------------------
@@ -108,6 +110,7 @@ sell_memnum number(10),
 sell_date date,
 sell_sell number(10),
 sell_many number(10),
+sell_size number(5),
 constraint sell_sell_pronum_fk foreign key(sell_pronum)
 references product(pro_code) on delete cascade,
 constraint sell_sell_shopnum_fk foreign key(sell_shopnum)
@@ -132,7 +135,7 @@ sto_num number(10) constraint stock_sto_num_pk primary key,
 sto_pronum varchar2(50),
 sto_amount number(10),
 sto_shopnum number(10),
-sto_size number(10),
+sto_size number(5),
 constraint stock_sto_pronum_fk foreign key(sto_pronum)
 references product(pro_code) on delete cascade,
 constraint stock_sto_shopnum_fk foreign key(sto_shopnum)
