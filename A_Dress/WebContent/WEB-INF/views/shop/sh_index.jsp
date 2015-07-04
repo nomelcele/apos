@@ -21,7 +21,7 @@
  	
  	
  	
- 	<div><video autoplay="autoplay"  style="width: 100%"><source src="resources/video/c.mp4"  type="video/mp4"></div>
+ 	<div><video autoplay="autoplay"  style="width: 100%"><source src="resources/video/c_3.mp4"  type="video/mp4"></div>
  </br>
  
 			<table align="center">
