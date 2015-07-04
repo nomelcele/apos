@@ -64,6 +64,9 @@
 						url : "bon_checkcaptcha.jsp?id="+$('#bon_login_id').val() + "&pwd=" + $('#bon_login_pwd').val(),
 						type : "POST",
 						dataType : "html",
+						data : {
+							id : 
+						}
 						success : function(res) {
 							// 실패했을떄
 							if (res.trim() == "false") {
@@ -107,6 +110,12 @@
 				$.ajax({
 					url : "bon_findid.jsp?name=" + $('#find_name1').val()+ "&tel1=" + $('#find_tel1').val()+ "&tel2=" + $('#find_tel2').val()+ "&tel3=" + $('#find_tel3').val(),
 					type : "POST",
+					data : {
+						name : $('#find_name1').val(),
+						tel1 : $('#find_tel1').val(),
+						tel2 : $('#find_tel2').val(),
+						tel3 : $('#find_tel3').val()
+					}
 					dataType : "html",
 					success : function(res) {
 						// 실패 했을 때
