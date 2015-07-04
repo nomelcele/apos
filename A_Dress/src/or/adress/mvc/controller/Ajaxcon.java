@@ -33,7 +33,7 @@ public class Ajaxcon {
 	@RequestMapping(value = "sh_AjaxProductSearch")
 	public ModelAndView sh_AjaxProductSearch(String shop_num,
 			String key) {
-		ModelAndView mav = new ModelAndView("sh_AjaxProductSearch");
+		ModelAndView mav = new ModelAndView("ajax/sh_AjaxProductSearch");
 		
 		
 		System.out.println("ajax Test");
@@ -77,6 +77,7 @@ public class Ajaxcon {
 		return mav;
 	}
 	
+	//판매등록 고객검색콜백
 	@RequestMapping(value="sh_smang_callback", method=RequestMethod.POST)
 	public ModelAndView sh_smang_callback(String name){
 		//String name = request.getParameter("name");
@@ -105,11 +106,12 @@ public class Ajaxcon {
 		}
 		String str = res.toString();
 		System.out.println(str);
-		ModelAndView mav = new ModelAndView("sh_smang_callback");
+		ModelAndView mav = new ModelAndView("ajax/sh_smang_callback");
 		mav.addObject("cuscont", str);
 		return mav;
 	}
 	
+	//판매등록 상품검색 콜백
 	@RequestMapping(value="sh_smang_callback2", method=RequestMethod.POST)
 	public ModelAndView sh_smang_callback2(String pname, HttpSession session){
 		String shop_num =  session.getAttribute("shop_num").toString();
@@ -145,15 +147,20 @@ public class Ajaxcon {
 				
 		}
 		String str2 = res.toString();
-		ModelAndView mav = new ModelAndView("sh_smang_callback2");
+		ModelAndView mav = new ModelAndView("ajax/sh_smang_callback2");
 		mav.addObject("procont", str2);
 		return mav;
+	}
+	
+	@RequestMapping(value="bon_checkcaptcha")
+	public ModelAndView bon_checkcaptcha(){
+		
 	}
 	
 	@RequestMapping(value="sh_ajaxsaletable")
 	public ModelAndView sh_ajaxsaletable(){
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("sh_ajaxsaletable");
+		mav.setViewName("ajax/sh_ajaxsaletable");
 		return mav;
 		
 	}
