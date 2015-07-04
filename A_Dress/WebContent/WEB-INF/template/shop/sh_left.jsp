@@ -74,6 +74,9 @@
       else if(str == "smangExchTefu"){
     	  document.getElementById("smangExchTefu").submit();
       }
+      else if(str == "productStock"){
+    	  document.getElementById("productStock").submit();
+      }
    }
    
    
@@ -146,6 +149,9 @@
 <!-- 상품조회 -->
 <form method="post" action="sh_productCheck" id=productCheck></form>
 
+<!-- 상품재고관리 -->
+<form method="post" action="sh_productStock" id=productStock></form>
+
 <!-- 판매등록 -->
 <form method="post" action="sh_smangRegis" id=smangRegis></form>
 
@@ -207,6 +213,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('productCheck')">상품조회</a></li>
+                          <li><a class="" href="javascript:goUrl('productStock')">상품재고관리</a></li>
                           
                       </ul>
                   </li>
