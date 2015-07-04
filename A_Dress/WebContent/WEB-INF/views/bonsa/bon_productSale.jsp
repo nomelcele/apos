@@ -30,6 +30,8 @@
 									<th>상품 사진</th>
 									<th>바코드</th>
 									<th>신청 수량</th>
+									<th>Yes/</th>
+									<th>No</th>
 								</tr>
 							</thead>
 							<tbody>
