@@ -1,232 +1,70 @@
+<%@page import="java.util.ArrayList"%>
+<%-- ---<%@page import="dao.ShopDao"%>--%>
+<%@page import="vo.ShopHotkeyVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<script>
-	$(function() {
-		$('#pnamebtn').click(function() {
-			//alert($('#pname1').val());
-			$.ajax({
-				url : "bon_product_ajax.jsp?pname1=" + $('#pname1').val(),
-				type : "POST",
-				dataType : "html",
-				success : function(data) {
-					//alert(data);
-					var str = data.trim();
-					document.getElementById("view_product").innerHTML = str;
-					//                  if(data.trim() == "true"){
-					//                  	alert("success!")
-					//                  	$('#checkhot').submit();
-					//                  }else{
-					//                  	alert("입력된 정보가 잘 못 되었습니다.")
-					//                  }
-				},
-				error : function(a, b) {
-					// alert("Request: " + JSON.stringify(a));
-				}
-			});
-
-		});
-		$('#shbtn').click(function() {
-			//alert("shbtn");
-		});
-		$('#shnumbtn')
-				.click(
-						function() {
-							//alert($('#pcode3').val()+" , "+$('#pnum3').val());
-							$
-									.ajax({
-										url : "bon_product_ajax2.jsp?pcode3="
-												+ $('#pcode3').val()
-												+ "&pnum3=" + $('#pnum3').val(),
-										type : "POST",
-										dataType : "html",
-										success : function(data) {
-											//alert(data);
-											var str = data.trim();
-											document
-													.getElementById("view_product2").innerHTML = str;
-										},
-										error : function(a, b) {
-											//alert("Request: " + JSON.stringify(a));
-										}
-									});
-						});
-		$('#ptablebtn').click(function() {
-			//alert("ptablebtn");
-		});
-
-	});
-
-	$(function() {
-		$("#bon_p_numbtn").click(function() {
-
-			$.ajax({
-				type : "POST",
-				url : "bon_productSale_callback.jsp",
-				data : {
-					pcode : $("#pcode3").val(),
-					shopnum : $("#pnum3").val()
-				},
-				success : function(data) {
-					$('#target2').html(data);
-				}
-			});
-			return false;
-		});
-	});
-
-	function proset(shopname, pcode, psize, pamount) {
-		$("#shop").val(shopname);
-		$("#pcode").val(pcode);
-		$("#psize").val(psize);
-		$("#pamount").val(pamount);
-	}
-
-	function pstoeditaction() {
-		document.getElementById("productstockedit").submit();
-	}
-</script>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- 본사 상품관리의 상품재고관리 페이지 입니다.-->
 <section id="main-content">
 	<section class="wrapper">
-
-		<div class="row" style="font-size: 15px; width: 100%; height: 100%">
+		<div class="row" style="font-size: 15px; width:100%; height:100%">
 			<div class="col-lg-12">
+
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 재고조정
+					<i class="fa fa-files-o"></i> 매장 재고관리
 				</h3>
 
-
 				<div class="row">
-					<div class="col-lg-12">
-						<section class="panel">
-							<div class="panel-body">
+					<br />
+					<div class="col-sm-10" style="width: 100%;height: 100%">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>순 번</th>
+									<th>매장명</th>
+									<th>상품 이름</th>
+									<th>코드</th>
+									<th>사이즈</th>
+									<th>가격</th>
+									<th>상품 사진</th>
+									<th>바코드</th>
+									<th>신청 수량</th>
+								</tr>
+							</thead>
+							<tbody>
+								<%-- Hidden submit --%>
+								<%-- YES --%>
+<!-- 								<form method="post" action="sh.apos" id="reqOk"> -->
+<!-- 									<input type="hidden" name="cmd" value="mailSelect">  -->
+<!-- 									<input type="hidden" name="subcmd" value="yes"> <input -->
+<%-- 										type="hidden" name="child" value="${shopinfo.key_email}"> --%>
+<!-- 								</form> -->
+				
+<%-- 								NO --%>
+<!-- 								<form method="post" action="sh.apos" id="reqNo"> -->
+<!-- 									<input type="hidden" name="cmd" value="mailSelect"> <input -->
+<!-- 										type="hidden" name="subcmd" value="no"> -->
+<!-- 								</form> -->
+								<%-- Hidden End --%>
 
+								<c:forEach var="shopinfo" items="${list}">
+									<tr>
+										<td>${shopinfo.key_num}</td>
+										<td>${shopinfo.key_name}</td>
+										<td>${shopinfo.key_crnum}</td>
+										<td>${shopinfo.key_email}</td>
+										<td>${shopinfo.key_date}</td>
+										<td>${shopinfo.key_hotkey}</td>
 
-
-
-
-								<div class="form-group"
-									style="width: 80%; vertical-align: middle;">
-									<table>
-										<tr>
-											<td><input class="form-control" id="pcode3"
-												name="pcode3" onkeydown="startSuggest();" autocomplete="off"
-												type="text" placeholder="상품코드"></td>
-											<td><input class="form-control" id="pnum3" name="pnum3"
-												onkeydown="startSuggest();" autocomplete="off" type="text"
-												placeholder="지점번호"></td>
-
-											<td>
-												<button class="btn btn-default" type="button"
-													id="bon_p_numbtn">조회</button>
-											</td>
-										</tr>
-									</table>
-								</div>
-
-
-
-
-
-
-								<!-- 									<div class="col-lg-12" style="width: 700px;"> -->
-								<!-- 										<table class="table table-striped table-advance table-hover"> -->
-								<!-- 											<thaed> -->
-								<!-- 												<tr> -->
-								<!-- 													<th>상품명</th> -->
-								<!-- 													<th>지점</th> -->
-								<!-- 													<th>사이즈</th> -->
-								<!-- 													<th>수량</th> -->
-								<!-- 												</tr> -->
-								<!-- 												</thaed> -->
-								<!-- 												<tbody id ="view_product2"> -->
-								<!-- 												<tr> -->
-								<!-- 													<td id="tpname"></td> -->
-								<!-- 													<td></td> -->
-								<!-- 													<td></td> -->
-								<!-- 													<td></td> -->
-								<!-- 												</tr> -->
-								<!-- 											</tbody> -->
-								<!-- 										</table> -->
-								<!-- 										<button class="btn btn-default" type="button" id="ptablebtn" -->
-								<!-- 											style="margin-left: 500px;">완료</button> -->
-								<!-- 									</div> -->
-
-
-
-
-								<div class="table-responsive" style="height: 100%; width: 100%">
-
-									<table class="table">
-										<thead>
-											<tr>
-												<th>no</th>
-												<th>대리점</th>
-												<th>상품코드</th>
-												<th>사이즈</th>
-												<th>재고</th>
-												<th>가격</th>
-												<th>상품사진</th>
-												<th>바코드</th>
-												<th>선택</th>
-											</tr>
-										</thead>
-									</table>
-									<table class="table">
-										<tbody id="target2">
-
-											<%-- 반복 
-									 <c:forEach var="ptlist" items="${plist}">
-									 	<tr>
-									 		<td>${ptlist.pro_code}</td>
-									 		<td>${ptlist.sto_size }</td>
-									 		<td>${ptlist.sto_amount }</td>
-									 		<td>${ptlist.pro_price }</td>
-									 		<td>할인가</td>
-									 	</tr>
-									 </c:forEach>
-									 반복 --%>
-										</tbody>
-									</table>
-								</div>
-
-
-
-								<table class="table" style="width: 100%; height: 100%">
-									<thead>
-										<tr>
-											<th>대리점</th>
-											<th>상품코드</th>
-											<th>사이즈</th>
-											<th>수량</th>
-										</tr>
-									</thead>
-									<tbody>
-
-										<form action="bon.apos" method="post" id="productstockedit">
-											<tr class="active">
-												<td><input type="text" class="form-control" name='shop'
-													id="shop" value="" readonly="readonly"></td>
-												<td><input type="text" class="form-control"
-													name='pcode' id="pcode" value="" readonly="readonly"></td>
-												<td><input type="text" class="form-control"
-													name='psize' id="psize" value="" readonly="readonly"></td>
-												<td><input type="number" class="form-control"
-													name='pamount' id="pamount" value="0"></td>
-											</tr>
-										<input type="hidden" name="cmd" value="bproduct">
-										<input type="hidden" name="subcmd" value="stoedit">
-										</form>
-
-									</tbody>
-								</table>
-
-								<button class="btn btn-default" type="button"
-									onclick="javascript:pstoeditaction()">완료</button>
-
-							</div>
-
-						</section>
+										<td><input type="button" class="form-control" id="yes" value="YES" onclick="location='*.apos?cmd=mailSelect&subcmd=ok&mail=${shopinfo.key_email}&hotkey=${shopinfo.key_hotkey}&name=${shopinfo.key_name}'" /></td>
+											<%--location='*.apos?cmd=mailSelect&subcmd=ok&child=${shopinfo.key_email}' --%>
+											<%--javascript:goUrl('YES') --%>
+										<td><input type="button" class="form-control" id="no" value="NO" onclick="location='*.apos?cmd=mailSelect&subcmd=no&mail=${shopinfo.key_email}&name=${shopinfo.key_name}'" /></td>
+									</tr>
+								</c:forEach>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
