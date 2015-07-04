@@ -61,7 +61,9 @@
          document.getElementById("tel").submit();
       } else if(str == "pcheck"){
          document.getElementById("pcheck").submit();
-      } else if(str == "move"){
+      } else if(str == "stock"){
+         document.getElementById("stock").submit();
+      }else if(str == "move"){
          document.getElementById("move").submit();
       } else if(str == "table"){
          document.getElementById("table").submit();
@@ -144,7 +146,10 @@
 <input type="hidden" name="subcmd" value="out">
 </form>
 
-
+<form method="post" action="sh.apos" id="stock">
+<input type="hidden" name="cmd" value="smember">
+<input type="hidden" name="subcmd" value="stock">
+</form>
 
 
 
@@ -248,6 +253,7 @@
                       </a>
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('pcheck')">상품조회</a></li>
+                          <li><a class="" href="javascript:goUrl('stock')">상품재고관리</a></li>
                           
                       </ul>
                   </li>
