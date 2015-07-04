@@ -6,6 +6,7 @@
   <insert id="mem_in" parameterType="memvo">
   insert into member values(member_seq.nextval,
   #{mem_name},#{mem_tel},#{mem_post},#{mem_addr},
-  #{mem_deaddr},0, #{mem_date} ,#{mem_shopnum},#{mem_email})
+  #{mem_deaddr},0, #{mem_date} ,#{mem_shopnum},#{mem_email},#{mem_id},
+  #{mem_pwd})
   </insert>
   </mapper>
