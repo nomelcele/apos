@@ -13,10 +13,13 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import or.adress.mvc.dao.BoardDao;
+import or.adress.mvc.dao.ProductDao;
+import or.adress.mvc.dao.ShopDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestPart;
@@ -27,11 +30,19 @@ import org.springframework.web.servlet.ModelAndView;
 import vo.BoardVO;
 import vo.CommVO;
 import vo.PageVO;
+import vo.ProductVO;
+import vo.ShopVO;
 
 @Controller
 public class Bonsacon {
 	@Autowired
 	private BoardDao bdao;
+	@Autowired
+    private ShopDao shdao;
+	@Autowired
+	private ProductDao pdao;
+	
+
 	
 	@RequestMapping(value = "/bon_index")
 	public ModelAndView bon_index(HttpSession session) {
@@ -211,20 +222,8 @@ public class Bonsacon {
 		mav.setViewName("bonsa/bon_shopJoin");
 		return mav;
 	}
-	// 본사 매장관리 매장조회
-	@RequestMapping(value = "/bon_shopCheck")
-	public ModelAndView bon_shopCheck() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("bonsa/bon_shopCheck");
-		return mav;
-	}
-	// 본사 상품관리 상품추가
-	@RequestMapping(value = "/bon_productAdd")
-	public ModelAndView bon_productAdd() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("bonsa/bon_productAdd");
-		return mav;
-	}
+	
+	
 	// 본사 상품관리 상품재고관리
 	@RequestMapping(value = "/bon_productSale")
 	public ModelAndView bon_productSale() {
@@ -247,6 +246,69 @@ public class Bonsacon {
 		mav.setViewName("bonsa/bon_outletSalesCheck");
 		return mav;
 	}
+	
+
+
+	// 본사 매장관리 매장조회 
+		@RequestMapping(value = "/bon_shopCheck")
+		public ModelAndView bon_shopCheck() {
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("bonsa/bon_shopCheck");
+		    List<ShopVO>list=shdao.getshopList();
+		    mav.addObject("list",list);
+			return mav;
+		}
+		
+		// 본사 상품관리 상품추가
+		@RequestMapping(value ="/bon_productAdd",method=RequestMethod.POST)
+		public ModelAndView bon_productAdd( ProductVO  vo)
+			{
+		
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("bonsa/bon_productAdd");
+			
+			return mav;
+		}
+		
+		
+		//본사 상품관리 추가버튼
+		@RequestMapping(value="/bon_productAdding", method=RequestMethod.POST)
+		public ModelAndView bon_productAdding(@ModelAttribute  ProductVO  vo,
+				HttpSession session){
+			System.out.println(vo.getPro_name());
+			ModelAndView mav = new ModelAndView();
+			String path = 
+					session.getServletContext()
+					.getRealPath("/upload/")+vo.getBimg().getOriginalFilename();
+			       
+			System.out.println(path);
+			File f = new File(path);
+			try{
+				vo.getBimg().transferTo(f);
+				
+			}catch(IllegalStateException | IOException e) {
+					e.printStackTrace();
+			}
+			vo.setPro_barcode(vo.getBimg().getOriginalFilename());
+		
+			String path2 = 
+					session.getServletContext()
+					.getRealPath("/upload/")+vo.getPimg().getOriginalFilename();
+			        
+			System.out.println(path2);
+			File f2 = new File(path2);
+			try{
+				vo.getPimg().transferTo(f2);
+				
+			}catch(IllegalStateException | IOException e) {
+					e.printStackTrace();
+			}
+			vo.setPro_img(vo.getPimg().getOriginalFilename());
+			
+			mav.setViewName("bonsa/bon_productAdd");
+			pdao.insert(vo);
+			return mav;
+		}
 	
 	
 	
