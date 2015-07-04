@@ -18,11 +18,11 @@
 
 							if ($('#date_ps').val() != ""
 									&& $('#date_ps2').val() != "") {
-								if ($('#date_ps').val() < $('#date_ps2').val()) {
+								if ($('#date_ps').val() <=  $('#date_ps2').val()) {
 									//alert("test2");
 									$
 											.ajax({
-												url : "sh_ajaxoutletsale.jsp?shop_name="
+												url : "sh_ajaxoutletsale?shop_name="
 														+ shop_name
 														+ "&date_ps="
 														+ $('#date_ps').val()

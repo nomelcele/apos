@@ -21,7 +21,7 @@
 									//alert("test2");
 									$
 											.ajax({
-												url : "sh_ajaxsaletable.jsp?shop_num="
+												url : "sh_ajaxsaletable?shop_num="
 														+ shop_num
 														+ "&date_ps="
 														+ $('#date_ps').val(),
