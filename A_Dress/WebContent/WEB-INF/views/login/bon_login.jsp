@@ -61,12 +61,12 @@
 		$("#bon_login").click(
 				function() {
 					$.ajax({
-						url : "bon_checkcaptcha.jsp?id="+$('#bon_login_id').val() + "&pwd=" + $('#bon_login_pwd').val(),
+						url : "bon_checkcaptcha",
 						type : "POST",
-						dataType : "html",
 						data : {
-							id : 
-						}
+							id : $('#bon_login_id').val(),
+							pwd : $('#bon_login_pwd').val()
+						},
 						success : function(res) {
 							// 실패했을떄
 							if (res.trim() == "false") {
@@ -108,15 +108,14 @@
 			// 찾기 버튼 
 			$('#findBtn').click(function(){
 				$.ajax({
-					url : "bon_findid.jsp?name=" + $('#find_name1').val()+ "&tel1=" + $('#find_tel1').val()+ "&tel2=" + $('#find_tel2').val()+ "&tel3=" + $('#find_tel3').val(),
+					url : "bon_findid",
 					type : "POST",
 					data : {
 						name : $('#find_name1').val(),
 						tel1 : $('#find_tel1').val(),
 						tel2 : $('#find_tel2').val(),
 						tel3 : $('#find_tel3').val()
-					}
-					dataType : "html",
+					},
 					success : function(res) {
 						// 실패 했을 때
 						if (res.trim() == "") {
@@ -124,9 +123,13 @@
 						} else {
 							alert("입력하신 E-mail로  ID가 전송되었습니다.");
 							$.ajax({
-									url : "*.apos?cmd=mailSelect&subcmd=findid&mail=" +$('#find_email1').val()+"&name="+$('#find_name1').val()+ "&tel2=" + "&id="+res.trim(),
+									url : "bon_findid2",
 									type : "POST",
-									dataType : "html",
+									data : {
+										mail : $('#find_email1').val(),
+										name : $('#find_name1').val(),
+										id : res.trim()
+									},
 									success : function() {
 									}
 								});
@@ -143,9 +146,12 @@
 			// 찾기 버튼 
 			$('#findBtn').click(function(){
 				$.ajax({
-					url : "bon_findpwd.jsp?name="+$('#find_name2').val()+"&id=" + $('#find_id').val(),
+					url : "bon_findpwd",
 					type : "POST",
-					dataType : "html",
+					data : {
+						name : $('#find_name2').val(),
+						id : $('#find_id').val()
+					},
 					success : function(res) {
 						// res는 pwd
 						if (res.trim()=="") {
@@ -153,9 +159,13 @@
 						} else {
 							alert("입력하신 E-mail로  PWD가 전송되었습니다.");
 							$.ajax({
-								url : "*.apos?cmd=mailSelect&subcmd=findpwd&mail="+$('#find_email2').val()+"&name="+$('#find_name2').val()+"&pwd="+res.trim(),
+								url : "bon_findpwd2",
 								type : "POST",
-								dataType : "html",
+								data : {
+									mail : $('#find_email2').val(),
+									name : $('#find_name2').val(),
+									pwd : res.trim()
+								},
 								success : function() {
 								}
 							});
@@ -194,9 +204,8 @@
 				<div>
 				<!-- body -->
 									
-				<form method="post" action="*.apos" name="bon_joinForm" id="bon_joinForm" autocomplete="off">
-				<input type="hidden" name="cmd" value="bshop">
-				<input type="hidden" name="subcmd" value="sawonjoin">
+				<form method="post" action="bon_sawonjoin" name="bon_joinForm" id="bon_joinForm" autocomplete="off">
+				
 						<%-- ID 입력 --%>
 						<div class="modal-body2" ><span style="display: block;">아이디 :</span>
 								<input class="form-control" id="bon_id" name="bon_id" type="text" minlength="5" required />
@@ -236,9 +245,7 @@
 			</div>
 		</div>
 	</div>
-      <form class="login-form" action="*.apos" id="bon_loginform" autocomplete="off" method="post">     
-      			<input type="hidden" name="cmd" value="bshop">
-				<input type="hidden" name="subcmd" value="sawonlogin">
+      <form class="login-form" action="bon_sawonlogin" id="bon_loginform" autocomplete="off" method="post">     
         <div class="login-wrap">
             <p class="login-img"><i class="icon_lock_alt"></i></p>
             <div class="input-group">
@@ -294,10 +301,8 @@
 					<input type="radio" id="findpwd" name="radio" value="findpwd" > /PWD
 					
 					<%-- ID 찾기 --%>
-					<form method="post" action="*.apos" name="findidform" id="findidform" autocomplete="off" style="display: none">
-					<input type="hidden" name="cmd" value="bshop">
-					<input type="hidden" name="subcmd" value="findId">
-						<div class="modal-body2" ><span style="display: block;">E-mail</span>
+					<form method="post" action="bon_findidform" name="findidform" id="findidform" autocomplete="off" style="display: none">
+											<div class="modal-body2" ><span style="display: block;">E-mail</span>
 								<input class="form-control" id="find_email1" name="find_email1" type="email"  required />
 						</div>
 										 	
@@ -318,10 +323,8 @@
 					</form>
 
 					<%-- PWD 찾기 --%>
-					<form method="post" action="*.apos" name="findpwdform" id="findpwdform" autocomplete="off" style="display: none">
-					<input type="hidden" name="cmd" value="bshop">
-					<input type="hidden" name="subcmd" value="findPwd">
-						<div class="modal-body2" ><span style="display: block;">ID</span>
+					<form method="post" action="bon_findpwdform" name="findpwdform" id="findpwdform" autocomplete="off" style="display: none">
+											<div class="modal-body2" ><span style="display: block;">ID</span>
 								<input class="form-control" id="find_id" name="find_id" type="text"  required />
 						</div>
 						

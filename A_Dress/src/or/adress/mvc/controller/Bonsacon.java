@@ -47,8 +47,8 @@ public class Bonsacon {
 	@RequestMapping(value = "/bon_index")
 	public ModelAndView bon_index(HttpSession session) {
 		///////////////烙矫技记
-		session.setAttribute("bon_id", "yoon");
-		session.setAttribute("bon_name", "辣全扁");
+		//session.setAttribute("bon_id", "yoon");
+		//session.setAttribute("bon_name", "辣全扁");
 		/////////////////
 		
 		

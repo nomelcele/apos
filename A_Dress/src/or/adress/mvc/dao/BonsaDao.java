@@ -1,5 +1,7 @@
 package or.adress.mvc.dao;
 
+import java.util.HashMap;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -13,9 +15,9 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 	private SqlSessionTemplate ss;
 	
 	// bon_id,pwd로 bon_in 찾기
-	public boolean logincheck(BonsaVO vo){
+	public String logincheck(HashMap<String, String> map){
 		// 로그인시 id/pwd 확인
-		boolean res = ss.selectOne("bonsa.login_check", vo);
+		String res = ss.selectOne("bonsa.login_check", map);
 		return res;
 	}
 	
@@ -26,13 +28,13 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 	}
 	
 	// bon_name, tel 로 bon_id찾기
-	public String findid(BonsaVO vo){
-		String res = ss.selectOne("bonsa.find_id",vo);
+	public String findid(HashMap<String, String> map){
+		String res = ss.selectOne("bonsa.find_id",map);
 		return res;
 	}
 	// bon_name,id로 bon_pwd 찾기
-	public String findpwd(BonsaVO vo){
-		String res = ss.selectOne("bonsa.find_pwd",vo);
+	public String findpwd(HashMap<String, String> map){
+		String res = ss.selectOne("bonsa.find_pwd",map);
 		return res;
 	}
 	// bon_id로 bon_num 찾기

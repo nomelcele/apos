@@ -1,4 +1,5 @@
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
   <!-- container section start -->
   <section id="container" class="">
       
@@ -258,7 +259,7 @@
                                 <a href="#"><i class="icon_chat_alt"></i> Chats</a>
                             </li>
                             <li>
-                                <a href="*.apos?cmd=bshop&subcmd=sawonlogout"><i class="icon_key_alt"></i> Log Out</a>
+                                <a href="bon_sawonlogout"><i class="icon_key_alt"></i> Log Out</a>
                             </li>
                             <li>
                                 <a href="documentation.html"><i class="icon_key_alt"></i> Documentation</a>
