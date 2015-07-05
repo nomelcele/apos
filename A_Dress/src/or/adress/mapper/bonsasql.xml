@@ -3,17 +3,17 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="bonsa">
-	<select id="login_check" parameterType="bonvo" resultType="boolean">
-		select bon_id from bonsa where bon_id=#{bon_id} and bon_pwd=#{bon_pwd}
+	<select id="login_check" parameterType="map" resultType="String">
+		select bon_id from bonsa where bon_id=#{id} and bon_pwd=#{pwd}
 	</select>
 	<select id="chk_id" parameterType="String" resultType="boolean">
 		select bon_id from bonsa where bon_id=#{bon_id}
 	</select>
-	<select id="find_id" parameterType="bonvo" resultType="String">
-		select bon_id from bonsa where bon_name=#{bon_name} and bon_tel=#{bon_tel}
+	<select id="find_id" parameterType="map" resultType="String">
+		select bon_id from bonsa where bon_name=#{name} and bon_tel=#{tel}
 	</select>
-	<select id="find_pwd" parameterType="bonvo" resultType="String">
-		select bon_pwd from bonsa where bon_name=#{bon_name} and bon_id=#{bon_id}
+	<select id="find_pwd" parameterType="map" resultType="String">
+		select bon_pwd from bonsa where bon_name=#{name} and bon_id=#{id}
 	</select>
 	<select id="get_bonnum" parameterType="String" resultType="int">
 		select bon_num from bonsa where bon_id=#{bon_id}
