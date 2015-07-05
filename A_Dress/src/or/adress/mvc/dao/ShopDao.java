@@ -27,7 +27,7 @@ public class ShopDao {
 		int hotkey = createHotkey();
 		// num, hotkey, mail, crnum
 		vo.setKey_hotkey(hotkey);
-
+		ss.insert("shop.shoprequesthotkey", vo);
 		// sql.append("insert into hotkey values(");
 		// sql.append("hotkey_seq.nextVal,?,?,?,?,sysdate)");
 		// pstmt= con.prepareStatement(sql.toString());
@@ -59,9 +59,9 @@ public class ShopDao {
 	}
 
 	public boolean checkid(String id) {
-		ShopVO vo = ss.selectOne("shop.checkid", id);
+		String resid = ss.selectOne("shop.checkid", id);
 		boolean res;
-		if (vo.getShop_id() != null) {
+		if (resid == null) {
 			res = true;
 		} else {
 			res = false;

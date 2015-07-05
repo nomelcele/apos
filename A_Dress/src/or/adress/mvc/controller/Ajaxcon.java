@@ -34,6 +34,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import vo.MemVO;
 import vo.ProductVO;
+import vo.ShopHotkeyVO;
 import vo.SmangVO;
 
 @Controller
@@ -377,7 +378,42 @@ public class Ajaxcon {
 	}
 	
 	
+	//샵 회원가입 (ajax)
+		@RequestMapping(value="/sh_NCRHOTcheck", method=RequestMethod.POST)
+		public ModelAndView sh_NCRHOTcheck(String email, int crnum, int hotkey){
+			List<ShopHotkeyVO> list = shdao.checkhotcrnumname(crnum);
+			System.out.println("Request Email : "+email);
+			System.out.println("Request Crnum : "+crnum);
+			System.out.println("Request hotkey :"+hotkey);
+			boolean res = false;
+			
+			for(ShopHotkeyVO e : list){
+			System.out.println("DB key_email :"+e.key_email);
+			System.out.println("DB key_crnum :"+e.key_crnum);
+			System.out.println("DB key_hotkey :"+e.key_hotkey);
+				if((e.key_email).equals(email)){
+					if( e.key_crnum == crnum ){
+						if(e.key_hotkey == hotkey){
+							res = true;
+							System.out.println("결과 :"+res);
+						}
+					}
+				}
+			}
+			ModelAndView mav = new ModelAndView("ajax/sh_NCRHOTcheck");
+			mav.addObject("res", res);
+			return mav;
+		}
 	
+		//아이디중복체크
+		@RequestMapping(value="/sh_shopjoincheck")
+		public ModelAndView sh_shopjoincheck(String id){
+			ModelAndView mav = new ModelAndView("ajax/sh_shopjoincheck");
+			System.out.println(id);
+			boolean res = shdao.checkid(id);
+			mav.addObject("res", res);
+			return mav;
+		}
 	
 	
 	@RequestMapping(value="sh_ajaxsaletable")
