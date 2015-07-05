@@ -23,17 +23,16 @@
 	</div>
 	
 	<!-- body -->
-	<form method="post" action="sh.apos" name="requesthot" id="requesthot">
-		<input type="hidden" name="cmd" value="sjoin">
-		<input type="hidden" name="subcmd" value="shopgethotkey">
+	<form method="post" action="sh_requesthot" name="requesthot" id="requesthot">
+		
 		
 		<div style="width: 100%; height: 200px; margin: auto;">
 			<div class="modal-body2">성 명:
-			<input type="text" class="form-control4" name="name" placeholder="name" autofocus></div>
+			<input type="text" class="form-control4" name="key_name" placeholder="name" autofocus></div>
 			<div class="modal-body2">사업자 번호:
-			<input type="text" class="form-control4" name="crnum" placeholder="crnum" autofocus></div>
+			<input type="text" class="form-control4" name="key_crnum" placeholder="crnum" autofocus></div>
 			<div class="modal-body2">E-mail:
-			<input type="text" class="form-control4" name="email" placeholder="e-mail" autofocus></div>
+			<input type="text" class="form-control4" name="key_email" placeholder="e-mail" autofocus></div>
 		</div>
 		<!-- Footer -->
 		<div class="modal-footer">

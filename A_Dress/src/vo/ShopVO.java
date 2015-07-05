@@ -1,5 +1,7 @@
 package vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 // 컬럼명 일치!
 public class ShopVO {
 	// 매장이 가입 할때 필요한 요소
@@ -7,13 +9,42 @@ public class ShopVO {
 	private String shop_name, shop_tel ,shop_adr, shop_date, shop_mail, shop_master, shop_img, shop_id, shop_pwd;
 	private int shop_num, shop_bonnum, shop_crnum;
 	private float shop_map_x, shop_map_y;
+	private String tel1, tel2, tel3;
+	private MultipartFile selfimg;
+	
+	
+	public MultipartFile getSelfimg() {
+		return selfimg;
+	}
+	public void setSelfimg(MultipartFile selfimg) {
+		this.selfimg = selfimg;
+	}
 	public String getShop_name() {
 		return shop_name;
+	}
+	public String getTel1() {
+		return tel1;
+	}
+	public void setTel1(String tel1) {
+		this.tel1 = tel1;
+	}
+	public String getTel2() {
+		return tel2;
+	}
+	public void setTel2(String tel2) {
+		this.tel2 = tel2;
+	}
+	public String getTel3() {
+		return tel3;
+	}
+	public void setTel3(String tel3) {
+		this.tel3 = tel3;
 	}
 	public void setShop_name(String shop_name) {
 		this.shop_name = shop_name;
 	}
 	public String getShop_tel() {
+		shop_tel = tel1+"-"+tel2+"-"+tel3;
 		return shop_tel;
 	}
 	public void setShop_tel(String shop_tel) {

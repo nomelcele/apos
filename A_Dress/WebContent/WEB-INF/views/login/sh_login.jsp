@@ -2,7 +2,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="vo.ShopHotkeyVO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="dao.ShopDao"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +42,7 @@
 	$(function() {
 		$('#getHotkey').click(function() {
 			$('#modal1').modal({
-				remote : 'sh_gethotkey.jsp'
+				remote : 'sh_gethotkey'
 			});
 		});
 		$('#SignUpBtn').click(function() {
@@ -52,9 +51,13 @@
 		
 		$('#nextJoinBtn').click(function(){
             $.ajax({
-                   url: "sh_NCRHOTcheck.jsp?email="+$('#email').val()+"&crnum="+$('#crnum').val()+"&hotkey="+$('#hotkey').val(),
+                   url: "sh_NCRHOTcheck",
                    type: "POST",
-                   dataType: "html",
+                   data : {
+                	   email : $('#email').val(),
+                	   crnum : $('#crnum').val(),
+                	   hotkey : $('#hotkey').val()
+                   },
                    success: function(data) {
                     if(data.trim() == "true"){
                     	alert("success!")
@@ -209,10 +212,8 @@
 				</div>
 				<div >
 				<!-- body -->
-				<form method="post" action="*.apos" name="checkhot" id="checkhot" autocomplete="off">
-				<input type="hidden" name="cmd" value="sjoin">
-				<input type="hidden" name="subcmd" value="submithot">
-					<div style="width: 100%;" >
+				<form method="post" action="submithot" name="checkhot" id="checkhot" autocomplete="off">
+						<div style="width: 100%;" >
 						<div class="modal-body2">
 							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
 						</div>

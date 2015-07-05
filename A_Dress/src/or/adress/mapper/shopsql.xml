@@ -11,7 +11,7 @@
 	</insert>
 	<insert id="shoprequesthotkey" parameterType="shotvo">
 		insert into hotkey
-		values(hotkey_seq.nextVal,#{key_name},#{key_hotkey},#{key_email},#{key_crum},sysdate)
+		values(hotkey_seq.nextVal,#{key_name},#{key_hotkey},#{key_email},#{key_crnum},sysdate)
 	</insert>
 
 	<select id="getListRequestShop" resultType="shotvo">
@@ -22,8 +22,8 @@
 		select * from hotkey where key_crnum=#{crnum}
 	</select>
 
-	<select id="checkid" parameterType="String" resultType="shvo">
-		select * from shop where shop_id=#{shop_id}
+	<select id="checkid" parameterType="String" resultType="String">
+		select shop_id from shop where shop_id=#{shop_id}
 	</select>
 
 	<select id="checkMasteridpwd" parameterType="map" resultType="shvo">
