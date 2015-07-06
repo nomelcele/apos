@@ -105,8 +105,14 @@
 	// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
 	// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
 	// onopen : 서버가 연결이 되었을 때 발생
+	var str = "";
 	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
 		
+		if(str != event.data){
+			str = event.data;
+			showNotification();
+			window.webkitNotifications.requestPermission();
+		}
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
 		event.data+"</ul></div>";
 // 		$("#target").html("<div class='panel-body'><div class='padd sscroll'><ul class='chats'>"+
@@ -133,6 +139,38 @@
 // 			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
 // 		});
 // 	});
+////////////////////////////notification////////////////////////////////
+function showNotification(){
+if(!!window.webkitNotifications) { //notification 이 다 되는 것이 아니에요.
+		if(window.webkitNotifications.checkPermission() == 0 ){ 
+//처음에 승인 요구를 받음.
+
+			var logo= 'http://sstatic.naver.net/search/2015/h_logo.png'; //삽입될 그림
+			var sub = 'new Message';//타이틀
+			var con = 'HTML5 notification';    //내용  
+			var n = window.webkitNotifications.createNotification(logo, sub, con);
+//글을 보여줌.
+			n.show();
+			var n2 = window.webkitNotifications.createHTMLNotification("http://192.168.0.2:8080/A_Dress");//브라우저를 보여줌.
+
+			n2.show();      
+		}
+		else{
+			requestPermission(showNotification);//승인 요구를 함.
+			//Notification.requestPermission();
+			//window.webkitNotifications.requestPermission(showNotification);
+		}   
+	}
+	else{
+		alert("지원을 안합니다.");
+	}
+}
+
+
+function requestPermission (callback) {
+	alert("이거호출댐?");
+	window.webkitNotifications.requestPermission(callback);
+}
 </script>
 
 <!--본사 - 업무관리 - 공지사항 -->
