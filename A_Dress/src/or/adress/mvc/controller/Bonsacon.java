@@ -143,12 +143,12 @@ public class Bonsacon {
 		System.out.println("---------------------------------------");
 		for (String e : ff) {
 			System.out.println(e);
-			if (e.startsWith("..")) {
-				filename = e.substring(10);
+			if (e.startsWith("upload")) {
+				filename = e.substring(7);
 			}
 		}
 		System.out.println("----------------------------");
-		System.out.println(filename);
+		System.out.println("파일명"+filename);
 		System.out.println(content);
 		vo.setContent(content);
 		vo.setPath(filename);
@@ -162,14 +162,23 @@ public class Bonsacon {
 	@RequestMapping(value = "/bon_ckboard", method = RequestMethod.POST)
 	public ModelAndView bon_ckboard(BoardVO vo, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
-		String path = session.getServletContext().getRealPath("/");
-		
+		String path = session.getServletContext().getRealPath("/upload/")
+				+vo.getUpload().getOriginalFilename();
+		MultipartFile upload = vo.getUpload();
+		System.out.println(path);
+		File f = new File(path);
+		try {
+			vo.getUpload().transferTo(f);
+
+		} catch (IllegalStateException | IOException e) {
+			e.printStackTrace();
+		}
 		// chk callback설정 : Ajax로 넘어온 요청을 response 해주기 위한 설정
 		//String callback = request.getParameter("CKEditorFuncNum");
-		//String fileUrl = "upload/" + fileName;// url경로
-		//mav.addObject("callback", callback);
-		//mav.addObject("fileUrl", fileUrl);
-		mav.setViewName("bonsa/callback");
+		String fileUrl = "upload/" + vo.getUpload().getOriginalFilename();// url경로
+		mav.addObject("callback", vo.getCKEditorFuncNum());
+		mav.addObject("fileUrl", fileUrl);
+		mav.setViewName("ajax/callback");
 		return mav;
 	}
 

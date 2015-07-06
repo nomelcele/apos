@@ -43,12 +43,14 @@
    <script src="resources/js/jquery.slimscroll.min.js"></script>
   <script>
 	$(function(){
-		$("#send").click(function(){
+		$('#send').click(function(){
 			$.ajax({
-				type:"POST",
-				url:"chat_add.jsp",
-				data:{chat:$("#chat").val()},
-				success:function(){
+				url : "bon_add_chat",
+				type : "POST",
+				data : {
+					chat : $('#chat').val()
+				},
+				success : function(){
 					$("#chat").val("");
 				}
 			});
@@ -98,13 +100,12 @@
 	//push Client설정
 	console.log("typeof:"+typeof(EventSource));
 	if(typeof(EventSource) != "undefined"){ //push를 받을 수 있는 브라우저인지 판단 (타입오브 -> 객체의 타입확인)
-	var eventSource = new EventSource("chatload.jsp");
+	var eventSource = new EventSource("bon_chatload");
 	// EventSource EventListener의 종류
 	// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
 	// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
 	// onopen : 서버가 연결이 되었을 때 발생
 	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
-		
 		
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
 		event.data+"</ul></div>";
