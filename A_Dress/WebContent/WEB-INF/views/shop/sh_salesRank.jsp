@@ -7,7 +7,7 @@
 <script src="resources/js/suggest_shop_pk.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
-	var shop_name = "${sessionScope.shop_num}";
+	var shop_num = "${sessionScope.shop_num}";
 	$(function() {
 
 		$('#btn_out')
@@ -18,11 +18,11 @@
 
 							if ($('#date_ps').val() != ""
 									&& $('#date_ps2').val() != "") {
-								if ($('#date_ps').val() <=  $('#date_ps2').val()) {
-									//alert("test2");
+								if ($('#date_ps').val() <= $('#date_ps2').val()) {
+									alert("test2");
 									$
 											.ajax({
-												url : "sh_ajaxoutletsale?shop_num="
+												url : "sh_ajax_outletsale?shop_num="
 														+ shop_num
 														+ "&startdate="
 														+ $('#date_ps').val()
@@ -46,23 +46,23 @@
 							{
 								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
 							}
-							$.ajax({
-								url : "sh_ajaxoutletChart.jsp?shop_name="
-										+ shop_name + "&date_ps="
-										+ $('#date_ps').val() + "&date_ps2="
-										+ $('#date_ps2').val(),
-								type : "post",
-								dataType : "html",
-								success : function(data) {
-									//alert("callback");
-									res2 = eval(data);
-									var result = eval(res2);
-									//alert(res2);
-									drawVisualization();
-									res2 = null;
-								}
+							// 							$.ajax({
+							// 								url : "sh_ajaxoutletChart.jsp?shop_name="
+							// 										+ shop_name + "&date_ps="
+							// 										+ $('#date_ps').val() + "&date_ps2="
+							// 										+ $('#date_ps2').val(),
+							// 								type : "post",
+							// 								dataType : "html",
+							// 								success : function(data) {
+							// 									//alert("callback");
+							// 									res2 = eval(data);
+							// 									var result = eval(res2);
+							// 									//alert(res2);
+							// 									drawVisualization();
+							// 									res2 = null;
+							// 								}
 
-							});
+							// 							});
 						})
 	})
 
@@ -71,8 +71,8 @@
 	});
 	google.setOnLoadCallback(drawVisualization);
 	var res2 = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 5, 0 ],
-			[ '2005/06', 5, 0 ], [ '2006/07', 5, 0 ],
-			[ '2007/08', 5, 0 ], [ '2008/09', 5, 0 ] ];
+			[ '2005/06', 5, 0 ], [ '2006/07', 5, 0 ], [ '2007/08', 5, 0 ],
+			[ '2008/09', 5, 0 ] ];
 	var res = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
 			[ '2005-06', 135, 1120, 599, ], [ '2006-07', 157, 1167, 587, ] ];
 	function drawVisualization() {
