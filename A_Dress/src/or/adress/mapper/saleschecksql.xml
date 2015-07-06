@@ -28,8 +28,7 @@
   	 sh.SHOP_NAME sell_shopname  from sell s, shop sh  
   	 where s.SELL_SHOPNUM = sh.shop_num 
   	 and sh.SHOP_num like #{shop_num}   
-  	 and( sell_date >= to_date(#{startdate},'yyyy-MM-dd')  
-  	 and sell_Date <= to_date(#{enddate},'yyyy-MM-dd'))   
+  	 and( sell_date <![CDATA[>=]]> to_date(#{startdate},'yyyy-MM-dd') and sell_Date <![CDATA[<=]]> to_date(#{enddate},'yyyy-MM-dd'))   
   	 group by to_char(sell_date,'yyyy-MM-dd') ,sh.SHOP_NAME ORDER BY 1
   	</select>
   	
