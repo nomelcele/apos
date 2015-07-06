@@ -22,17 +22,16 @@
   	</select>
   	
   	
-  	<!-- 완료 : 오류나서 주석-->
-<!--   	<select id="salescheck_list" parameterType="map" resultType="schkvo"> -->
-<!--   	select  to_char(sell_date,'yyyy-MM') sedate, -->
-<!--   	count(*) cnt  ,sum(s.sell_cash) sell_cash, -->
-<!--   	 sh.SHOP_NAME sell_shopname  from sell s, shop sh   -->
-<!--   	 where s.SELL_SHOPNUM = sh.shop_num  -->
-<!--   	 and sh.SHOP_NAME like #{shopname}    -->
-<!--   	 and( sell_date >= to_date(#{startdate},'yyyy-MM-dd')   -->
-<!--   	 and sell_Date <= to_date(#{enddate},'yyyy-MM-dd'))    -->
-<!--   	 group by to_char(sell_date,'yyyy-MM') ,sh.SHOP_NAME ORDER BY 1 -->
-<!--   	</select> -->
+  	<select id="salescheck_list" parameterType="map" resultType="schkvo">
+  	select  to_char(sell_date,'yyyy-MM-dd') sedate,
+  	count(*) cnt  ,sum(s.sell_cash) sell_cash,
+  	 sh.SHOP_NAME sell_shopname  from sell s, shop sh  
+  	 where s.SELL_SHOPNUM = sh.shop_num 
+  	 and sh.SHOP_num like #{shop_num}   
+  	 and( sell_date >= to_date(#{startdate},'yyyy-MM-dd')  
+  	 and sell_Date <= to_date(#{enddate},'yyyy-MM-dd'))   
+  	 group by to_char(sell_date,'yyyy-MM-dd') ,sh.SHOP_NAME ORDER BY 1
+  	</select>
   	
   	
   	<select id="salescheck_searchSellnum" parameterType="int" resultType="schkvo">
