@@ -7,7 +7,7 @@
 <script src="resources/js/suggest_shop_pk.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
-	var shop_name = "${sessionScope.shop_name}";
+	var shop_name = "${sessionScope.shop_num}";
 	$(function() {
 
 		$('#btn_out')
@@ -22,8 +22,8 @@
 									//alert("test2");
 									$
 											.ajax({
-												url : "sh_ajaxoutletsale?shop_name="
-														+ shop_name
+												url : "sh_ajaxoutletsale?shop_num="
+														+ shop_num
 														+ "&date_ps="
 														+ $('#date_ps').val()
 														+ "&date_ps2="
