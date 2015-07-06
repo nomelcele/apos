@@ -62,7 +62,7 @@
 
 			$.ajax({
 				type : "POST",
-				url : "bon_productSale_callback.jsp",
+				url : "sh_productStock_callback",
 				data : {
 					pcode : $("#pcode3").val(),
 					shopnum : $("#pnum3").val()
