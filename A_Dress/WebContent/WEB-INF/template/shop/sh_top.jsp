@@ -243,12 +243,13 @@
 						class="dropdown-toggle" href="#"> <span class="profile-ava">
 								<img alt="" src="resources/img/dress1.JPG" align="center">
 						</span> <span class="form-control" id="master_span"
-							style="color: black; display: none;">
+							style="color: black;">
 								[${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님
-								환영합니다 </span>&nbsp; <span class="form-control" id="staff_span"
-							style="color: black; display: none;">
-								[${sessionScope.shop_id}] 님 환영합니다 </span>&nbsp; <b class="caret"></b>
-					</a>
+								환영합니다 </span>&nbsp; 
+<!-- 								<span class="form-control" id="staff_span" -->
+<!-- 							style="color: black; display: none;"> -->
+<%-- 								[${sessionScope.shop_id}] 님 환영합니다 </span>&nbsp; <b class="caret"></b> --%>
+<!-- 					</a> -->
 						<ul class="dropdown-menu extended logout">
 							<div class="log-arrow-up"></div>
 							<li class="eborder-top"><a href="#"><i
@@ -257,7 +258,7 @@
 							<li><a href="#"><i class="icon_clock_alt"></i> Timeline</a>
 							</li>
 							<li><a href="#"><i class="icon_chat_alt"></i> Chats</a></li>
-							<li><a href="*.apos?cmd=sjoin&subcmd=logout"><i
+							<li><a href="sh_logout"><i
 									class="icon_key_alt"></i> Log Out</a></li>
 							<li><a href="documentation.html"><i class="icon_key_alt"></i>
 									Documentation</a></li>

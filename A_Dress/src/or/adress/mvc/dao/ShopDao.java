@@ -12,6 +12,7 @@ import vo.ProductVO;
 import vo.ShopHotkeyVO;
 import vo.ShopVO;
 import vo.SmangVO;
+import vo.StaffVO;
 
 @Repository
 public class ShopDao {
@@ -72,6 +73,7 @@ public class ShopDao {
 
 	public boolean checkMasteridpwd(HashMap<String, String> map) {
 		String resid = ss.selectOne("shop.checkMasteridpwd", map);
+		System.out.println(resid);
 		boolean res = false;
 		if (resid == null) {
 			res = false;
@@ -95,11 +97,16 @@ public class ShopDao {
 	}
 
 	public int getshopno(String id) {
+		System.out.println(id);
 		return ss.selectOne("shop.getshopno", id);
 	}
 
 	public List<ShopVO> getshopname(String id) {
 		return ss.selectList("shop.getshopname", id);
+	}
+	
+	public String getshopnameone(int shop_num){
+		return ss.selectOne("shop.getshopnameone", shop_num);
 	}
 
 	// shop id Ã£±â
@@ -164,6 +171,10 @@ public class ShopDao {
 	public void getsecede(int num) {
 		ss.delete("shop.memdelete", num);
 		
+	}
+	
+	public StaffVO getshopno_staff(String id){
+		return ss.selectOne("shop.getshopno_staff", id);
 	}
 
 }

@@ -2,43 +2,49 @@ package vo;
 
 // ÄÃ·³¸í : staff_num, staff_name, staff_position, staff_tel, staff_shopnum, staff_id, staff_pwd
 public class StaffVO {
-private int shop_snum,shop_num;
-private String shop_sname,shop_sposition,shop_stel,shop_name;
-public int getShop_snum() {
-	return shop_snum;
-}
-public void setShop_snum(int shop_snum) {
-	this.shop_snum = shop_snum;
-}
-public String getShop_name() {
-	return shop_name;
-}
-public void setShop_name(String shop_name) {
-	this.shop_name = shop_name;
-}
-public int getShop_num() {
-	return shop_num;
-}
-public void setShop_num(int shop_num) {
-	this.shop_num = shop_num;
-}
-public String getShop_sname() {
-	return shop_sname;
-}
-public void setShop_sname(String shop_sname) {
-	this.shop_sname = shop_sname;
-}
-public String getShop_sposition() {
-	return shop_sposition;
-}
-public void setShop_sposition(String shop_sposition) {
-	this.shop_sposition = shop_sposition;
-}
-public String getShop_stel() {
-	return shop_stel;
-}
-public void setShop_stel(String shop_stel) {
-	this.shop_stel = shop_stel;
-}
-
+	private int staff_num, staff_position, staff_shopnum;
+	private String staff_name, staff__tel, staff_id, staff_pwd;
+	public int getStaff_num() {
+		return staff_num;
+	}
+	public void setStaff_num(int staff_num) {
+		this.staff_num = staff_num;
+	}
+	public int getStaff_position() {
+		return staff_position;
+	}
+	public void setStaff_position(int staff_position) {
+		this.staff_position = staff_position;
+	}
+	public int getStaff_shopnum() {
+		return staff_shopnum;
+	}
+	public void setStaff_shopnum(int staff_shopnum) {
+		this.staff_shopnum = staff_shopnum;
+	}
+	public String getStaff_name() {
+		return staff_name;
+	}
+	public void setStaff_name(String staff_name) {
+		this.staff_name = staff_name;
+	}
+	public String getStaff__tel() {
+		return staff__tel;
+	}
+	public void setStaff__tel(String staff__tel) {
+		this.staff__tel = staff__tel;
+	}
+	public String getStaff_id() {
+		return staff_id;
+	}
+	public void setStaff_id(String staff_id) {
+		this.staff_id = staff_id;
+	}
+	public String getStaff_pwd() {
+		return staff_pwd;
+	}
+	public void setStaff_pwd(String staff_pwd) {
+		this.staff_pwd = staff_pwd;
+	}
+	
 }
