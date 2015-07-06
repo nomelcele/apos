@@ -416,6 +416,33 @@ public class Ajaxcon {
 		}
 	
 	
+	@RequestMapping(value="sh_checkcaptcha", method=RequestMethod.POST)
+	public ModelAndView sh_checkcaptcha(String id, String pwd, String radio){
+//		String id = request.getParameter("id");
+//		String pwd = request.getParameter("pwd");
+//		String radio = request.getParameter("radio");
+//		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("id", id);
+		map.put("pwd", pwd);
+		System.out.println("-----------sh_checkcaptcha---------");
+		System.out.println("Request ID : " + id);
+		System.out.println("Request PWD : " + pwd);
+		System.out.println("Request checkBox : " +radio);
+		boolean res= false;
+		
+		if(radio.equals("master")){
+			System.out.println("--------Master Table 검색중---------");
+			res = shdao.checkMasteridpwd(map);
+		}else{
+			System.out.println("--------Staff Table 검색중---------");
+			res = shdao.checkStaffidpwd(map);
+		}
+		ModelAndView mav = new ModelAndView("ajax/sh_checkcaptcha");
+		mav.addObject("res", res);
+		return mav;
+	}
+		
 	@RequestMapping(value="sh_ajaxsaletable")
 	public ModelAndView sh_ajaxsaletable(){
 		ModelAndView mav = new ModelAndView();

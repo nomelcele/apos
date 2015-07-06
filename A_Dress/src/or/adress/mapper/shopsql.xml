@@ -26,12 +26,12 @@
 		select shop_id from shop where shop_id=#{shop_id}
 	</select>
 
-	<select id="checkMasteridpwd" parameterType="map" resultType="shvo">
-		select * from shop where shop_id=#{id} and shop_pwd=#{pwd}
+	<select id="checkMasteridpwd" parameterType="map" resultType="String">
+		select shop_id from shop where shop_id=#{id} and shop_pwd=#{pwd}
 	</select>
 
-	<select id="checkStaffidpwd" parameterType="map" resultType="shvo">
-		select * from Staff where staff_id=#{id} and staff_pwd=#{pwd}
+	<select id="checkStaffidpwd" parameterType="map" resultType="String">
+		select staff_id from Staff where staff_id=#{id} and staff_pwd=#{pwd}
 	</select>
 
 	<select id=" getshopno" parameterType="String" resultType="int">

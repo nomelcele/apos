@@ -81,7 +81,7 @@
 		$("#loginBtn").click(
 				function() {
 					$.ajax({
-						url : "sh_checkcaptcha.jsp?id="+$('#id').val() + "&pwd=" + $('#pwd').val()+"&radio="+$(':radio[name="radio"]:checked').val(),
+						url : "sh_checkcaptcha",
 						type : "POST",
 						data : {
 							id : $('#id').val(),

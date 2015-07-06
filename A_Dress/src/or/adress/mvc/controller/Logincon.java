@@ -2,6 +2,7 @@ package or.adress.mvc.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
 
 
 
@@ -125,6 +127,36 @@ public class Logincon {
 	}
 	
 	
+	//로그인성공
+	@RequestMapping(value="/sh_loginok", method=RequestMethod.POST)
+	public ModelAndView sh_loginok(String id, String radio, HttpSession session){
+		ModelAndView mav = new ModelAndView("shop/sh_index");
+		String name = "";  // 매장명
+		String master =""; // 매장주인이름
+		//String radio = request.getParameter("radio"); // master or staff?
+		System.out.println("---Radio--- : "+ radio);
+		//String id = request.getParameter("id"); // 접속 ID
+		int shop_num =  sdao.getshopno(id);// shop_num;
+		if(radio.equals("master")){
+			List<ShopVO> list =  sdao.getshopname(id);
+			for(ShopVO e : list){
+				name= e.getShop_name();
+				master = e.getShop_master();
+			}
+		}else if(radio.equals("staff")){
+			
+		}
+		//HttpSession session = request.getSession();
+		session.setAttribute("shop_num", shop_num); // 매장 NUM
+		session.setAttribute("shop_id", id); // 접속 ID
+		session.setAttribute("shop_name", name); // 매장명
+		session.setAttribute("shop_master", master); // 매장주 이름
+		session.setAttribute("radio", radio); // master or staff?
+		return mav;
+	}
+	
+	
+	
 	@RequestMapping(value="/submithot", method=RequestMethod.POST)
 	public ModelAndView submithot(){
 		ModelAndView mav = new ModelAndView("login/sh_shopjoin");
@@ -173,11 +205,12 @@ public class Logincon {
 	
 	//본사로그인 (화면전환, 세션저장) (아이디/비번체크는 캡챠에서)
 	@RequestMapping(value="bon_sawonlogin", method=RequestMethod.POST)
-	public ModelAndView bon_sawonlogin(HttpServletRequest request){
-		String id =request.getParameter("bon_login_id");
+	public ModelAndView bon_sawonlogin(String bon_login_id, HttpSession session){
+		//String id =request.getParameter("bon_login_id");
+		String id = bon_login_id;
 		String bon_name = bdao.getbonname(id);
 		ldao.logintime(bdao.getbonnum(id)); // 로그인 시간 DB에 저장
-		HttpSession session = request.getSession();
+		//HttpSession session = request.getSession();
 		session.setAttribute("bon_id", id);
 		session.setAttribute("bon_name", bon_name);
 		ModelAndView mav = new ModelAndView("bonsa/bon_index");

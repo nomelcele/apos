@@ -70,31 +70,25 @@ public class ShopDao {
 		return res;
 	}
 
-	public boolean checkMasteridpwd(String id, String pwd) {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("id", id);
-		map.put("pwd", pwd);
-		ShopVO vo = ss.selectOne("ShopVO", map);
-		boolean res;
-		if (vo.getShop_id() != null) {
-			res = true;
-		} else {
+	public boolean checkMasteridpwd(HashMap<String, String> map) {
+		String resid = ss.selectOne("shop.checkMasteridpwd", map);
+		boolean res = false;
+		if (resid == null) {
 			res = false;
+		} else {
+			res = true;
 		}
 
 		return res;
 	}
 
-	public boolean checkStaffidpwd(String id, String pwd) {
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("id", id);
-		map.put("pwd", pwd);
-		ShopVO vo = ss.selectOne("shop.checkStaffidpwd", map);
-		boolean res;
-		if (vo.getShop_id() != null) {
-			res = true;
-		} else {
+	public boolean checkStaffidpwd(HashMap<String, String> map) {
+		String resid = ss.selectOne("shop.checkStaffidpwd", map);
+		boolean res=false;
+		if (resid == null) {
 			res = false;
+		} else {
+			res = true;
 		}
 
 		return res;
