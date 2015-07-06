@@ -56,10 +56,10 @@
 										<td>${shopinfo.key_date}</td>
 										<td>${shopinfo.key_hotkey}</td>
 
-										<td><input type="button" class="form-control" id="yes" value="YES" onclick="location='*.apos?cmd=mailSelect&subcmd=ok&mail=${shopinfo.key_email}&hotkey=${shopinfo.key_hotkey}&name=${shopinfo.key_name}'" /></td>
+										<td><input type="button" class="form-control" id="yes" value="YES" onclick="location='bon_shopJoinOK?ok&mail=${shopinfo.key_email}&hotkey=${shopinfo.key_hotkey}&name=${shopinfo.key_name}'" /></td>
 											<%--location='*.apos?cmd=mailSelect&subcmd=ok&child=${shopinfo.key_email}' --%>
 											<%--javascript:goUrl('YES') --%>
-										<td><input type="button" class="form-control" id="no" value="NO" onclick="location='*.apos?cmd=mailSelect&subcmd=no&mail=${shopinfo.key_email}&name=${shopinfo.key_name}'" /></td>
+										<td><input type="button" class="form-control" id="no" value="NO" onclick="location='bon_shopJoinNO?no&mail=${shopinfo.key_email}&name=${shopinfo.key_name}'" /></td>
 									</tr>
 								</c:forEach>
 							</tbody>
