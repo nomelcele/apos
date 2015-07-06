@@ -242,6 +242,20 @@ public class Shopcon {
 		mav.setViewName("shop/sh_productCheck");
 		return mav;
 	}
+	  //상품관리 - 재고조회
+	   @RequestMapping(value="/sh_productStock")
+	   public ModelAndView sh_productStock(){
+	      ModelAndView mav = new ModelAndView();
+	      mav.setViewName("shop/sh_productStock");
+	        return mav;
+	   }
+	  //상품관리 -상품신청현황
+	   @RequestMapping(value="/sh_productRequestState")
+	   public ModelAndView sh_productRequestState(){
+	      ModelAndView mav = new ModelAndView();
+	      mav.setViewName("shop/sh_productRequestState");
+	      return mav;
+	   }
 
 	// 시큐리티때 추가 세션
 	@RequestMapping(value = "/sh_productsaerch", method = RequestMethod.POST)
