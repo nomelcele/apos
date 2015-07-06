@@ -59,7 +59,7 @@
 
 	$(function() {
 		$("#bon_p_numbtn").click(function() {
-
+			alert($("#pnum3").val())
 			$.ajax({
 				type : "POST",
 				url : "sh_productStock_callback",
@@ -75,8 +75,7 @@
 		});
 	});
 
-	function proset(shopname, pcode, psize, pamount) {
-		$("#shop").val(shopname);
+	function proset(pcode, psize, pamount) {
 		$("#pcode").val(pcode);
 		$("#psize").val(psize);
 		$("#pamount").val(pamount);
@@ -168,8 +167,7 @@
 												<th>선택</th>
 											</tr>
 										</thead>
-									</table>
-									<table class="table">
+									
 										<tbody id="target2">
 
 											<%-- 반복 
@@ -184,7 +182,6 @@
 									 </c:forEach>
 									 반복 --%>
 										</tbody>
-									</table>
 								</div>
 
 
@@ -201,9 +198,10 @@
 									<tbody>
 
 										<form action="bon.apos" method="post" id="productstockedit">
+										<input type="hidden" name="shop_num" value="${sessionScope.shop_num}" id="pnum3">
 											<tr class="active">
 												<td><input type="text" class="form-control" name='shop'
-													id="shop" value="" readonly="readonly"></td>
+													id="shop" value="${sessionScope.shop_name}" readonly="readonly"></td>
 												<td><input type="text" class="form-control"
 													name='pcode' id="pcode" value="" readonly="readonly"></td>
 												<td><input type="text" class="form-control"
@@ -220,7 +218,6 @@
 
 								<button class="btn btn-default" type="button"
 									onclick="javascript:pstoeditaction()">신청</button>
-
 							</div>
 
 						</section>
