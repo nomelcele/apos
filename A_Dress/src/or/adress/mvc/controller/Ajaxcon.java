@@ -22,6 +22,7 @@ import javax.servlet.http.HttpSession;
 
 import or.adress.mvc.dao.BonsaDao;
 import or.adress.mvc.dao.ProductDao;
+import or.adress.mvc.dao.SalesCheckDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.SmangDao;
 
@@ -34,6 +35,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import vo.MemVO;
 import vo.ProductVO;
+import vo.SalesCheckVO;
 import vo.ShopHotkeyVO;
 import vo.SmangVO;
 
@@ -47,6 +49,8 @@ public class Ajaxcon {
 	private ShopDao shdao;
 	@Autowired
 	private BonsaDao bdao;
+	@Autowired
+	private SalesCheckDao skdao;
 	//성별 물건 검색 ajax
 	@RequestMapping(value = "sh_AjaxProductSearch")
 	public ModelAndView sh_AjaxProductSearch(String shop_num,
@@ -496,6 +500,55 @@ public class Ajaxcon {
 	}
 	
 	
+	@RequestMapping(value="sh_salesGetTable_ajax",method=RequestMethod.POST)
+	   public ModelAndView sh_ajaxsaletable(String shop_num,String date_ps){
+	      
+	      List<SalesCheckVO> list = skdao.getonday(shop_num, date_ps);
+	      Iterator <SalesCheckVO> it = list.iterator();
+	      StringBuffer res = new StringBuffer();
+	      while (it.hasNext()) {
+	         SalesCheckVO v= new SalesCheckVO();
+	         v = it.next();
+	         res.append("<tr>");
+	         res.append("<th>").append(v.getSell_date()).append("</th>");
+	         res.append("<th>").append(v.getSell_pronum()).append("</th>");
+	         res.append("<th>").append(v.getSell_cash()).append("</th>");      
+	         res.append("<th>").append(v.getSell_many()).append("</th>");   
+	         res.append("<th>").append(v.getSell_memnum()).append("</th>");
+	         res.append("</tr>");
+
+	      }
+	      ModelAndView mav = new ModelAndView();
+	      mav.setViewName("ajax/sh_ajaxsaletable");
+	      mav.addObject("res", res);
+	      return mav;
+	      
+	   }
+
+	// 매장 기간별 정산관리 ajax
+	   @RequestMapping(value="sh_ajax_outletsale",method=RequestMethod.POST)
+	   public ModelAndView sh_ajaxoutletsale(String shop_num, String startdate,
+	         String enddate) {
+	      ModelAndView mav = new ModelAndView();
+	      System.out.println(shop_num +":"+ startdate +":"+ enddate);
+	      List<SalesCheckVO> list = skdao.getList(shop_num, startdate, enddate);
+	      Iterator<SalesCheckVO> it = list.iterator();
+	      StringBuffer res = new StringBuffer();
+	      while (it.hasNext()) {
+	         SalesCheckVO v = new SalesCheckVO();
+	         v = it.next();
+	         res.append("<tr>");
+	         res.append("<th>").append(v.getSell_date()).append("</th>");
+	         res.append("<th>").append(v.getSell_shopname()).append("</th>");
+	         res.append("<th>").append(v.getSell_cash()).append("</th>");
+	         res.append("<th>").append(v.getCount()).append("</th>");
+	         res.append("</tr>");
+	         
+	      }
+	      mav.setViewName("ajax/sh_ajaxoutletsale");
+	      mav.addObject("list", res);
+	      return mav;
+	   }
 	// 매장  기간별 정산관리 ajax
 //	@RequestMapping(value="sh_ajaxoutletsale")
 //	public ModelAndView sh_ajaxoutletsale(){

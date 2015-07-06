@@ -209,8 +209,6 @@
 												<td><input type="number" class="form-control"
 													name='pamount' id="pamount" value="0"></td>
 											</tr>
-										<input type="hidden" name="cmd" value="bproduct">
-										<input type="hidden" name="subcmd" value="stoedit">
 										</form>
 
 									</tbody>

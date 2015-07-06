@@ -4,22 +4,29 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class BoardVO {
 	private int no,hit,groupno;
-	private String title,writer,content,regdate,path;
-	private MultipartFile multipartFile;
+	private String title,writer,content,regdate,path, CKEditorFuncNum;
+	private MultipartFile upload;
 	private int bo_num;
 	
 	
+	public String getCKEditorFuncNum() {
+		return CKEditorFuncNum;
+	}
+	public void setCKEditorFuncNum(String cKEditorFuncNum) {
+		CKEditorFuncNum = cKEditorFuncNum;
+	}
 	public int getBo_num() {
 		return bo_num;
 	}
 	public void setBo_num(int bo_num) {
 		this.bo_num = bo_num;
 	}
-	public MultipartFile getMultipartFile() {
-		return multipartFile;
+	
+	public MultipartFile getUpload() {
+		return upload;
 	}
-	public void setMultipartFile(MultipartFile multipartFile) {
-		this.multipartFile = multipartFile;
+	public void setUpload(MultipartFile upload) {
+		this.upload = upload;
 	}
 	public int getNo() {
 		return no;
