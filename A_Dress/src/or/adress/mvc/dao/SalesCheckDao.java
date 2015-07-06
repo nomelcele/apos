@@ -72,12 +72,13 @@ public class SalesCheckDao {
 //	}
 	
 	// 인자값 2개 물어볼 것
-	// 완료 확인요망
-	public List<SalesCheckVO> getonday(String shopnum,String day){
+	// 완료 확인요망 
+	// 판매현
+	public List<SalesCheckVO> getonday(String shop_num,String date_ps){
 		
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("shopnum", shopnum);
-		map.put("day", day);
+		map.put("shop_num", shop_num);
+		map.put("date_ps", date_ps);
 		
 		return ss.selectList("salescheck.salescheck_onday", map);
 
