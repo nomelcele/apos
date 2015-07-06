@@ -83,7 +83,11 @@
 					$.ajax({
 						url : "sh_checkcaptcha.jsp?id="+$('#id').val() + "&pwd=" + $('#pwd').val()+"&radio="+$(':radio[name="radio"]:checked').val(),
 						type : "POST",
-						dataType : "html",
+						data : {
+							id : $('#id').val(),
+							pwd : $('#pwd').val(),
+							radio : $(':radio[name="radio"]:checked').val()
+						},
 						success : function(res) {
 							console.log(res.trim());
 							// 실패했을떄
