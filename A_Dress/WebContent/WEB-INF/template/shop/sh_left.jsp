@@ -88,7 +88,7 @@
 	//push Client설정
 	console.log("typeof:" + typeof (EventSource));
 	if (typeof (EventSource) != "undefined") { //push를 받을 수 있는 브라우저인지 판단 (타입오브 -> 객체의 타입확인)
-		var eventSource = new EventSource("chatload.jsp");
+		var eventSource = new EventSource("sh_chatload");
 		// EventSource EventListener의 종류
 		// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
 		// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
@@ -107,21 +107,36 @@
 
 	//Ajax로 사용자의 데이터를 보내는 쪽 
 	//사용자가 입력한 내용을 서버에 저장
-	$(function() {
-		$("form").submit(function() {
-			var fdata = {
-				u_id : encodeURIComponent($("#u_id").val()),
-				chat : encodeURIComponent($("#chat").val())
-			};
-			$.ajax({ //ajax로 보냄
-				type : "POST", //헤더에 넣어서보냄 (URL로 안보임)
-				url : "chat_add.jsp",
-				data : fdata,
-				success : function() {
+// 	$(function() {
+// 		$("form").submit(function() {
+// 			var fdata = {
+// 				u_id : encodeURIComponent($("#u_id").val()),
+// 				chat : encodeURIComponent($("#chat").val())
+// 			};
+// 			$.ajax({ //ajax로 보냄
+// 				type : "POST", //헤더에 넣어서보냄 (URL로 안보임)
+// 				url : "chat_add.jsp",
+// 				data : fdata,
+// 				success : function() {
+// 					$("#chat").val("");
+// 				}
+// 			});
+// 			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
+// 		});
+// 	});
+	$(function(){
+		$('#send').click(function(){
+			$.ajax({
+				url : "sh_add_chat",
+				type : "POST",
+				data : {
+					chat : $('#chat').val()
+				},
+				success : function(){
 					$("#chat").val("");
 				}
 			});
-			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
+			return false;
 		});
 	});
 </script>

@@ -1,5 +1,7 @@
 package or.adress.mvc.controller;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -18,9 +20,11 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import or.adress.mvc.dao.BonsaDao;
+import or.adress.mvc.dao.ChatDao;
 import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.SalesCheckDao;
 import or.adress.mvc.dao.ShopDao;
@@ -33,6 +37,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import vo.ChaVO;
 import vo.MemVO;
 import vo.ProductVO;
 import vo.SalesCheckVO;
@@ -51,6 +56,8 @@ public class Ajaxcon {
 	private BonsaDao bdao;
 	@Autowired
 	private SalesCheckDao skdao;
+	@Autowired
+	private ChatDao chdao;
 	//성별 물건 검색 ajax
 	@RequestMapping(value = "sh_AjaxProductSearch")
 	public ModelAndView sh_AjaxProductSearch(String shop_num,
@@ -524,6 +531,142 @@ public class Ajaxcon {
 	      return mav;
 	      
 	   }
+	
+	//본사채팅입력
+	@RequestMapping(value="bon_add_chat", method=RequestMethod.POST)
+	public String bon_add_chat(HttpServletRequest request, HttpSession session){
+		String u_id="";
+		String chat="";
+		try {
+			u_id = URLDecoder.decode(session.getAttribute("bon_id").toString(),"utf-8");
+			chat = URLDecoder.decode(request.getParameter("chat"),"utf-8");
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String reip = request.getRemoteAddr();
+		System.out.println("Log:"+u_id);
+		System.out.println("Log:"+chat);
+		System.out.println("Log:"+reip);
+		ChaVO v = new ChaVO();
+		v.setU_id(u_id);
+		v.setChat(chat);
+		v.setReip(reip);
+		chdao.insertChat(v);
+		System.out.println("체크3");
+		return "ajax/NewFile";
+	}
+	
+	//샵채팅입력
+		@RequestMapping(value="sh_add_chat", method=RequestMethod.POST)
+		public String sh_add_chat(HttpServletRequest request, HttpSession session){
+			String u_id="";
+			String chat="";
+			try {
+				u_id = URLDecoder.decode(session.getAttribute("shop_id").toString(),"utf-8");
+				chat = URLDecoder.decode(request.getParameter("chat"),"utf-8");
+			} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			String reip = request.getRemoteAddr();
+			System.out.println("Log:"+u_id);
+			System.out.println("Log:"+chat);
+			System.out.println("Log:"+reip);
+			ChaVO v = new ChaVO();
+			v.setU_id(u_id);
+			v.setChat(chat);
+			v.setReip(reip);
+			chdao.insertChat(v);
+			System.out.println("체크3");
+			return "ajax/NewFile";
+		}
+	
+	//본사채팅로드
+	@RequestMapping(value="bon_chatload")
+	public ModelAndView bon_chatload(HttpServletResponse response, HttpSession session){
+		
+//		response.setHeader("cache-control", "no-cache");
+//		response.setContentType("text/event-stream");
+		String id = (String) session.getAttribute("bon_id");
+		List<ChaVO> list = chdao.getList();
+		StringBuffer outs = new StringBuffer();
+		//String id = request.getRemoteAddr();
+		//outs.append("retry:2000\n");
+		outs.append("data:");
+		for(ChaVO e : list){
+			if(e.getU_id().equals(id)){
+				outs.append("<li class=\"by-other\">");
+				outs.append("<div class=\"avatar pull-right\"><img src=\"resources/img/user22.png\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append(e.getCdate());
+				outs.append("<span class=\"pull-right\">");
+				outs.append(e.getU_id());
+				outs.append("</span></div>");
+				outs.append(e.getChat());
+				outs.append("<div class=\"clearfix\"></div></div></li>");
+				
+			}else{
+				outs.append("<li class=\"by-me\">");
+				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append(e.getU_id());
+				outs.append("<span class=\"pull-right\">");
+				outs.append(e.getCdate());
+				outs.append("</span></div>");
+				outs.append(e.getChat());
+				outs.append("<div class=\"clearfix\"></div></div></li>");
+				
+			}
+			
+		}
+		outs.append("\n\n");
+		String str = outs.toString();
+		ModelAndView mav = new ModelAndView("ajax/chatload");
+		mav.addObject("str", str);
+		return mav;
+	}
+	
+	//샵채팅로드
+		@RequestMapping(value="sh_chatload")
+		public ModelAndView sh_chatload(HttpServletResponse response, HttpSession session){
+			
+//			response.setHeader("cache-control", "no-cache");
+//			response.setContentType("text/event-stream");
+			String id = (String) session.getAttribute("shop_id");
+			List<ChaVO> list = chdao.getList();
+			StringBuffer outs = new StringBuffer();
+			//String id = request.getRemoteAddr();
+			//outs.append("retry:2000\n");
+			outs.append("data:");
+			for(ChaVO e : list){
+				if(e.getU_id().equals(id)){
+					outs.append("<li class=\"by-other\">");
+					outs.append("<div class=\"avatar pull-right\"><img src=\"resources/img/user22.png\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+					outs.append(e.getCdate());
+					outs.append("<span class=\"pull-right\">");
+					outs.append(e.getU_id());
+					outs.append("</span></div>");
+					outs.append(e.getChat());
+					outs.append("<div class=\"clearfix\"></div></div></li>");
+					
+				}else{
+					outs.append("<li class=\"by-me\">");
+					outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+					outs.append(e.getU_id());
+					outs.append("<span class=\"pull-right\">");
+					outs.append(e.getCdate());
+					outs.append("</span></div>");
+					outs.append(e.getChat());
+					outs.append("<div class=\"clearfix\"></div></div></li>");
+					
+				}
+				
+			}
+			outs.append("\n\n");
+			String str = outs.toString();
+			ModelAndView mav = new ModelAndView("ajax/chatload");
+			mav.addObject("str", str);
+			return mav;
+		}
 
 	// 매장 기간별 정산관리 ajax
 	   @RequestMapping(value="sh_ajax_outletsale",method=RequestMethod.POST)

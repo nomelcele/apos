@@ -1,7 +1,5 @@
 package or.adress.mvc.dao;
 
-import java.sql.Connection;
-
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
