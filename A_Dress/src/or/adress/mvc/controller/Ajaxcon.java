@@ -423,6 +423,8 @@ public class Ajaxcon {
 		return mav;
 		
 	}
+	
+	
 	// 매장  기간별 정산관리 ajax
 //	@RequestMapping(value="sh_ajaxoutletsale")
 //	public ModelAndView sh_ajaxoutletsale(){
