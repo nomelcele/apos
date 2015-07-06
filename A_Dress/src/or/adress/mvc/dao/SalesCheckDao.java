@@ -75,7 +75,7 @@ public class SalesCheckDao {
 	// 완료 확인요망 
 	// 판매현
 	public List<SalesCheckVO> getonday(String shop_num,String date_ps){
-		
+		System.out.println("ㅗㅗㅗㅗ"+shop_num+date_ps);
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("shop_num", shop_num);
 		map.put("date_ps", date_ps);
@@ -87,11 +87,11 @@ public class SalesCheckDao {
 	
 	// 인자값 3개.. 물어볼 것
 	// 완료 확인요망
-	public List<SalesCheckVO> getList(String shopname, String startdate,
+	public List<SalesCheckVO> getList(String shop_num, String startdate,
 			String enddate) {
 		
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("shopname", shopname);
+		map.put("shop_num", shop_num);
 		map.put("startdate", startdate);
 		map.put("enddate", enddate);
 		
