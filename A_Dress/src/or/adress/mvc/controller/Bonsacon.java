@@ -160,35 +160,15 @@ public class Bonsacon {
 
 	// 본사 공지사항 파일업로드 cmd=bwork subcmd=ckBoard
 	@RequestMapping(value = "/bon_ckboard", method = RequestMethod.POST)
-	public ModelAndView bon_ckboard(BoardVO vo,
-			MultipartHttpServletRequest request, HttpSession session) {
+	public ModelAndView bon_ckboard(BoardVO vo, HttpSession session) {
 		ModelAndView mav = new ModelAndView();
-		// 파일 업로드를 위해서 Part를 생성
-		Part part = null;
-		try {
-			part = request.getPart("upload");
-		} catch (ServletException | IOException e) {
-			e.printStackTrace();
-		}
-		System.out.println("-----SpringMVC multipartresolver--------");
-		System.out.println("Part : " + part);
-		// 파일이름 가져오기
-		String fileName = getFileName(part);
-		System.out.println("name123123 : " + fileName);
-		// 파일 이름이 있으면 업로드
-		if (fileName != null && fileName.length() != 0) {
-			try {
-				part.write(fileName);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
+		String path = session.getServletContext().getRealPath("/");
+		
 		// chk callback설정 : Ajax로 넘어온 요청을 response 해주기 위한 설정
-		String callback = request.getParameter("CKEditorFuncNum");
-		String fileUrl = "upload/" + fileName;// url경로
-		mav.addObject("callback", callback);
-		mav.addObject("fileUrl", fileUrl);
+		//String callback = request.getParameter("CKEditorFuncNum");
+		//String fileUrl = "upload/" + fileName;// url경로
+		//mav.addObject("callback", callback);
+		//mav.addObject("fileUrl", fileUrl);
 		mav.setViewName("bonsa/callback");
 		return mav;
 	}

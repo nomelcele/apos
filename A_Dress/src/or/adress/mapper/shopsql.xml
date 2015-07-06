@@ -77,6 +77,8 @@
 	
 	
 	
+	
+	
 	<!-- 물어볼것! -->
 	<update id="memupdate" parameterType="memvo">
 	update member set mem_tel=#{mem_tel},mem_addr=#{mem_addr},mem_deaddr=#{mem_deaddr},mem_mileage=#{mem_mileage} where mem_num=#{mem_num}
