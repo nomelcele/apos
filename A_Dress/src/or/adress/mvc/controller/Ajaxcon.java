@@ -434,6 +434,7 @@ public class Ajaxcon {
 		if(radio.equals("master")){
 			System.out.println("--------Master Table 검색중---------");
 			res = shdao.checkMasteridpwd(map);
+			System.out.println(res);
 		}else{
 			System.out.println("--------Staff Table 검색중---------");
 			res = shdao.checkStaffidpwd(map);

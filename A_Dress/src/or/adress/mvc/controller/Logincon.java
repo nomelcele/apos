@@ -32,9 +32,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 
+
 import vo.BonsaVO;
 import vo.ShopHotkeyVO;
 import vo.ShopVO;
+import vo.StaffVO;
 
 @Controller
 public class Logincon {
@@ -136,25 +138,39 @@ public class Logincon {
 		//String radio = request.getParameter("radio"); // master or staff?
 		System.out.println("---Radio--- : "+ radio);
 		//String id = request.getParameter("id"); // 접속 ID
-		int shop_num =  sdao.getshopno(id);// shop_num;
+		int shop_num=0;
 		if(radio.equals("master")){
+			shop_num =  sdao.getshopno(id);// shop_num;
+			System.out.println(shop_num);
 			List<ShopVO> list =  sdao.getshopname(id);
 			for(ShopVO e : list){
 				name= e.getShop_name();
 				master = e.getShop_master();
 			}
+			session.setAttribute("shop_master", master); // 매장주 이름
 		}else if(radio.equals("staff")){
-			
+			StaffVO vo = new StaffVO();
+			vo = sdao.getshopno_staff(id);
+			shop_num = vo.getStaff_shopnum();
+			name = sdao.getshopnameone(shop_num);
+			session.setAttribute("shop_master", vo.getStaff_name());
 		}
+		System.out.println(name);
+		System.out.println(master);
 		//HttpSession session = request.getSession();
 		session.setAttribute("shop_num", shop_num); // 매장 NUM
 		session.setAttribute("shop_id", id); // 접속 ID
 		session.setAttribute("shop_name", name); // 매장명
-		session.setAttribute("shop_master", master); // 매장주 이름
 		session.setAttribute("radio", radio); // master or staff?
 		return mav;
 	}
 	
+	//샵로그아웃
+	@RequestMapping(value="/sh_logout")
+	public ModelAndView sh_logout(HttpSession session){
+		session.invalidate(); //모든 세션삭제
+		return sh_login();
+	}
 	
 	
 	@RequestMapping(value="/submithot", method=RequestMethod.POST)

@@ -238,9 +238,7 @@
 	</div>
 
 	<div class="container">
-		<form class="login-form" action="*.apos" id="loginForm" autocomplete="off" method="post">
-		<input type="hidden" name="cmd" value="sjoin">
-		<input type="hidden" name="subcmd" value="login">
+		<form class="login-form" action="sh_loginok" id="loginForm" autocomplete="off" method="post">
 			<div class="login-wrap">
 				<p class="login-img">
 					<i class="icon_lock_alt"></i>

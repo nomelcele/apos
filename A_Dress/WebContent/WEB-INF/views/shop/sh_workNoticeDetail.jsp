@@ -5,7 +5,7 @@
 <%-- 본사의 업무관리의 공지사항 상세보기 페이지 입니다. --%>
 <script>
 	function comminaction(){
-		document.getElementById("comminform").submit();
+		document.getElementById("comminform").submit();3
 	}
 	function listaction(){
 		document.getElementById("listform").submit();
