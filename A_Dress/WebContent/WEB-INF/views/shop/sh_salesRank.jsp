@@ -24,9 +24,9 @@
 											.ajax({
 												url : "sh_ajaxoutletsale?shop_num="
 														+ shop_num
-														+ "&date_ps="
+														+ "&startdate="
 														+ $('#date_ps').val()
-														+ "&date_ps2="
+														+ "&enddate="
 														+ $('#date_ps2').val(),
 												type : "post",
 												dataType : "html",
