@@ -40,13 +40,13 @@ public class Shopcon {
    @Autowired
    private SmangDao smdao;
 
-   @RequestMapping(value = "/sh_index")
-   public String index(HttpSession session) {
-      // ///////임시세션
-      session.setAttribute("sh_id", "dodi");
-      session.setAttribute("sh_name", "도하진");
-      session.setAttribute("shop_num", 1);
-      // /////////////
+	@RequestMapping(value = "/sh_index")
+	public String index() {
+		// ///////임시세션
+//		session.setAttribute("sh_id", "dodi");
+//		session.setAttribute("sh_name", "도하진");
+//		session.setAttribute("shop_num", 1);
+		// /////////////
 
       System.out.println("index 시작");
       return "shop/sh_index";
@@ -107,18 +107,19 @@ public class Shopcon {
       return bon_workNoticedetail(bo_num, page);
    }
 
-   // 업무관리 - 공지사항 - 댓글입력
-   @RequestMapping(value = "/sh_commin", method = RequestMethod.POST)
-   public ModelAndView bon_commin(String comm_bonum, String comm_cont,
-         HttpSession session) {
-      int page = 1;
-      HashMap<String, String> map = new HashMap<String, String>();
-      map.put("no", comm_bonum);
-      map.put("cont", comm_cont);
-      map.put("writer", session.getAttribute("sh_id").toString());
-      bdao.insertComm(map);
-      return bon_workNoticedetail(Integer.parseInt(comm_bonum), 1);
-   }
+	// 업무관리 - 공지사항 - 댓글입력
+	@RequestMapping(value = "/sh_commin", method = RequestMethod.POST)
+	public ModelAndView bon_commin(String comm_bonum, String comm_cont,
+			HttpSession session) {
+		int page = 1;
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("no", comm_bonum);
+		map.put("cont", comm_cont);
+		map.put("writer", session.getAttribute("shop_id").toString());
+		bdao.insertComm(map);
+		return bon_workNoticedetail(Integer.parseInt(comm_bonum), 1);
+	}
+
 
    // 업무관리 - 내부규정
    @RequestMapping(value = "/sh_workItr")
