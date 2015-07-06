@@ -23,8 +23,8 @@
   	
   	
   	<select id="salescheck_list" parameterType="map" resultType="schkvo">
-  	select  to_char(sell_date,'yyyy-MM-dd') sedate,
-  	count(*) cnt  ,sum(s.sell_cash) sell_cash,
+  	select  to_char(sell_date,'yyyy-MM-dd') sell_date,
+  	count(*) count  ,sum(s.sell_cash) sell_cash,
   	 sh.SHOP_NAME sell_shopname  from sell s, shop sh  
   	 where s.SELL_SHOPNUM = sh.shop_num 
   	 and sh.SHOP_num like #{shop_num}   
