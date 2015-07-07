@@ -159,7 +159,7 @@ staff_name varchar2(20),
 staff_position number(10),
 staff_tel varchar2(30),
 staff_shopnum number(10),
-staff_id varchar2(30) constraint staff_staff_id_uq unique),
+staff_id varchar2(30) constraint staff_staff_id_uq unique,
 staff_pwd varchar2(30),
 constraint staff_staff_shopnum_fk foreign key (staff_shopnum)
 REFERENCES shop(shop_num) on delete cascade
