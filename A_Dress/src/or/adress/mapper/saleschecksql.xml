@@ -21,7 +21,7 @@
 	<!-- 완료 -->
 	<select id="salescheck_onday" parameterType="map" resultType="schkvo">
 		select sell_pronum ,sell_cash, sell_memnum,
-		to_char(sell_date,'yyyy-MM-dd') sell_date,sell_many from sell where
+		to_char(sell_date,'yyyy-MM-dd/hh:mi') sell_date,sell_many from sell where
 		sell_shopnum=#{shop_num} and sell_date like
 		to_date(#{date_ps},'yyyy-MM-dd')
 	</select>

@@ -11,11 +11,11 @@
 	var shop_num = "${sessionScope.shop_num}";
 	var genderKey = null;
 	function Product(str) {
-		
+
 		genderKey = str;
 		var key = "key=" + encodeURIComponent(str) + "&shop_num="
 				+ encodeURIComponent(shop_num);
-		
+
 		sendRequest("sh_AjaxProductSearch", key, res2, "post");
 	}
 
@@ -104,7 +104,8 @@
 
 					<header class="panel-heading tab-bg-primary ">
 						<div class="form-group " style="margin-left: -3%">
-							<form action="sh_productsaerch" method="post" id="productcheckform">
+							<form action="sh_productsaerch" method="post"
+								id="productcheckform">
 
 								<div style="margin-bottom: -1%">
 
@@ -113,8 +114,7 @@
 										<input type="hidden" id="shop_num" name="shop_num"
 											value="${sessionScope.shop_num}"> <label for="cname"
 											class="control-label col-lg-6" style="font-size: 13px;">이름
-										</label>
-										<input class="form-control" id="pro_name" name="pro_name"
+										</label> <input class="form-control" id="pro_name" name="pro_name"
 											style="width: 50%" onkeydown="startSuggest();"
 											autocomplete="off" type="text" required />
 										<button class="form-control6" type="button"
@@ -126,23 +126,24 @@
 								</div>
 							</form>
 						</div>
-
-						<ul class="nav nav-tabs">
-							<li class=""><a data-toggle="tab" href="#search"
-								id="ajevery">search</a></li>
-							<li class="" id="ajman"><a data-toggle="tab" href="#man"
-								onclick="javascript:Product(1)">man</a></li>
-							<li class=""><a data-toggle="tab" href="#woman"
-								onclick="javascript:Product(2)">woman</a></li>
-							<li class=""><a data-toggle="tab" href="#kids"
-								onclick="javascript:Product(3)">kids</a></li>
-						</ul>
+						<div>
+							<ul class="nav nav-tabs">
+								<li class=""><a data-toggle="tab" href="#search"
+									id="ajevery">search</a></li>
+								<li class="" id="ajman"><a data-toggle="tab" href="#man"
+									onclick="javascript:Product(1)">man</a></li>
+								<li class=""><a data-toggle="tab" href="#woman"
+									onclick="javascript:Product(2)">woman</a></li>
+								<li class=""><a data-toggle="tab" href="#kids"
+									onclick="javascript:Product(3)">kids</a></li>
+							</ul>
+						</div>
 					</header>
 
-					<div class="panel-body"  style="width: 100%">
-						<div class="tab-content"  style="width: 100%">
+					<div class="panel-body" style="width: 100%">
+						<div class="tab-content" style="width: 100%">
 
-							<div id="search" class="tab-pane active" >
+							<div id="search" class="tab-pane active">
 								<div class="table-responsive" style="width: 100%">
 									<table class="table">
 										<thead>
