@@ -7,8 +7,15 @@ public class BoardVO {
 	private String title,writer,content,regdate,path, CKEditorFuncNum;
 	private MultipartFile upload;
 	private int bo_num;
+	private int cnt;
 	
 	
+	public int getCnt() {
+		return cnt;
+	}
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
 	public String getCKEditorFuncNum() {
 		return CKEditorFuncNum;
 	}
