@@ -53,7 +53,7 @@
 									<td>${stList.no}</td>
 									<td><a
 										href="javascript:godetail('${stList.no}')">
-											${stList.title}</a></td>
+											${stList.title}[${stList.cnt }]</a></td>
 									
 									<td>${stList.writer}</td>
 									<td>${stList.regdate}</td>
