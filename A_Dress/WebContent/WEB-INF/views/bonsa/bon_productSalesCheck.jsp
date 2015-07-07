@@ -7,9 +7,7 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 	$(function() {
-		$('#btn_out')
-				.click(
-						function() {
+		$('#btn').click(function() {
 							// 							alert("shopname=" + $('#shop_name').val()
 							// 									+ "date_ps=" + $('#date_ps').val()
 							// 									+ "&date_ps2=" + $('#date_ps2').val());
@@ -18,13 +16,12 @@
 									&& $('#date_ps2').val() != "") {
 								if ($('#date_ps').val() < $('#date_ps2').val()) {
 									//alert("test2");
-									$
-											.ajax({
-												url : "bon_ajaxproductsale.jsp?pro_code="
+									$.ajax({
+												url : "bon_ajaxproductsale?pro_code="
 														+ $('#shop_name').val()
-														+ "&date_ps="
+														+ "&startdate="
 														+ $('#date_ps').val()
-														+ "&date_ps2="
+														+ "&enddate="
 														+ $('#date_ps2').val(),
 												type : "post",
 												dataType : "html",
@@ -127,7 +124,7 @@
 								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
 									name="date_ps2" autocomplete="off" type="date"
 									required /> <input class="form-control6"
-									style="margin-left: 10px;" type="button" id="btn_out"
+									style="margin-left: 10px;" type="button" id="btn"
 									name="btn" value="조회">
 
 							</div>
