@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
+<!-- 매장 정산관리의 매출현황 매출순위 페이지 입니다. -->
 <script src="resources/js/http.js"></script>
 <script src="resources/js/json2.js"></script>
 <script src="resources/js/suggest_shop_pk.js"></script>
@@ -42,7 +42,7 @@
 	<section class="wrapper">
 
 
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px;width: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 판매현황
@@ -70,6 +70,7 @@
 						<tr>
 							<th><i class="icon_profile"></i>날짜</th>
 							<th><i class="icon_profile"></i>상품번호</th>
+							<th><i class="icon_profile"></i>상품 사진</th>
 							<th><i class="icon_mail_alt"></i>판매 액</th>
 							<th><i class="icon_pin_alt"></i>판매 수량</th>
 							<th><i class="icon_profile"></i>구매 고객 번호</th>

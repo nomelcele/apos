@@ -20,10 +20,10 @@
 	<!-- 매장 정산관리 매출 관리  -->
 	<select id="salescheck_onday" parameterType="map" resultType="schkvo">
 		select sell_pronum,product.PRO_IMG sell_proimg ,sell_cash, sell_memnum,
-			to_char(sell_date,'yyyy-MM-dd/hh:mi') sell_date,sell_many 
+			to_char(sell_date,'yyyy-MM-dd/hh24:mi') sell_date,sell_many 
 			from sell,product where sell.SELL_PRONUM =product.PRO_CODE and
 			sell_shopnum=#{shop_num} and sell_date like
-		to_date(#{date_ps},'yyyy-MM-dd') order by 1
+		to_date(#{date_ps},'yyyy-MM-dd') order by 5
 	</select>
 
 	<!-- 정산관리 기간별 판매 리스트 날짜 (년-월-일) 까지 나옴  -->

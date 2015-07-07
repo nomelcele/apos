@@ -506,7 +506,7 @@ public class Ajaxcon {
 		
 	}
 	
-	
+	//매장 정산관리 판매현황 - 
 	@RequestMapping(value="sh_salesGetTable_ajax",method=RequestMethod.POST)
 	   public ModelAndView sh_ajaxsaletable(String shop_num,String date_ps){
 	      
@@ -519,6 +519,7 @@ public class Ajaxcon {
 	         res.append("<tr>");
 	         res.append("<th>").append(v.getSell_date()).append("</th>");
 	         res.append("<th>").append(v.getSell_pronum()).append("</th>");
+	         res.append("<th><img src='upload/").append(v.getSell_proimg()).append("' style=\"width: 100px;\"></td>");
 	         res.append("<th>").append(v.getSell_cash()).append("</th>");      
 	         res.append("<th>").append(v.getSell_many()).append("</th>");   
 	         res.append("<th>").append(v.getSell_memnum()).append("</th>");
