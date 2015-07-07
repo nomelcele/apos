@@ -772,4 +772,33 @@ public class Ajaxcon {
 		mav.addObject("list", res);
 		return mav;
 	}
+	@RequestMapping(value="bon_ajaxproductChart")
+	public ModelAndView bon_ajaxproductChart(String pro_code, String startdate,
+			String enddate){
+		System.out.println(pro_code + startdate +enddate);
+		List<SalesCheckVO> list = skdao.getProductList(pro_code, startdate,
+				enddate);
+		Iterator<SalesCheckVO> it = list.iterator();
+		StringBuffer res = new StringBuffer();
+		res.append("[ ['Month', '판매 금액'],");
+		while (it.hasNext()) {
+			SalesCheckVO v= new SalesCheckVO();
+			v = it.next();
+			res.append("['");;
+			res.append(v.getSell_date()).append("',");
+			//res.append(v.getSell_proname()).append(",");
+			res.append(v.getSell_cash()).append(",");;		
+			res.append("],");
+			System.out.println("========================"+"ttest"+v.getDate()+v.getSell_cash());
+
+		}
+		res.append("]");
+		//res.append("</tr>");
+		String strString = res.toString();
+		System.out.println(strString);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("ajax/bon_ajaxproductChart");
+		mav.addObject("res",res);
+		return mav;
+	}
 }
