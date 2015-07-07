@@ -105,15 +105,16 @@
 	// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
 	// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
 	// onopen : 서버가 연결이 되었을 때 발생
-	var str = "";
+	str = "";
 	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
 		
-		if(str != event.data){
-			str = event.data;
+		var spl = event.data.split("<@>");
+		if(spl[1] != "i" && str != spl[0]){
+			str = spl[0];
 			showNotification();
 		}
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
-		event.data+"</ul></div>";
+		spl[0]+"</ul></div>";
 // 		$("#target").html("<div class='panel-body'><div class='padd sscroll'><ul class='chats'>"+
 // 				event.data+"</ul></div>");
 		

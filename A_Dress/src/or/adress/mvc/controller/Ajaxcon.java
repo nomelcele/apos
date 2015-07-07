@@ -42,6 +42,7 @@ import vo.MemVO;
 import vo.ProductVO;
 import vo.SalesCheckVO;
 import vo.ShopHotkeyVO;
+import vo.ShopVO;
 import vo.SmangVO;
 
 @Controller
@@ -612,6 +613,7 @@ public class Ajaxcon {
 		StringBuffer outs = new StringBuffer();
 		// String id = request.getRemoteAddr();
 		// outs.append("retry:2000\n");
+		String iu = "";
 		outs.append("data:");
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
@@ -623,7 +625,7 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-
+				iu="i";
 			} else {
 				outs.append("<li class=\"by-me\">");
 				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
@@ -633,11 +635,11 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-
+				iu="you";
 			}
 
 		}
-		outs.append("\n\n");
+		outs.append("<@>"+iu+"\n\n");
 		String str = outs.toString();
 		ModelAndView mav = new ModelAndView("ajax/chatload");
 		mav.addObject("str", str);
@@ -656,6 +658,7 @@ public class Ajaxcon {
 		StringBuffer outs = new StringBuffer();
 		// String id = request.getRemoteAddr();
 		// outs.append("retry:2000\n");
+		String iu = "";
 		outs.append("data:");
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
@@ -667,7 +670,7 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-
+				iu="i";
 			} else {
 				outs.append("<li class=\"by-me\">");
 				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
@@ -677,11 +680,11 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-
+				iu="you";
 			}
 
 		}
-		outs.append("\n\n");
+		outs.append("<@>"+iu+"\n\n");
 		String str = outs.toString();
 		ModelAndView mav = new ModelAndView("ajax/chatload");
 		mav.addObject("str", str);
@@ -857,6 +860,23 @@ public class Ajaxcon {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/bon_ajaxoutletChart");
 		mav.addObject("res",res);
+		return mav;
+	}
+	//본사 매장조회 상세보기
+	@RequestMapping(value="bon_shopdetailmap", method=RequestMethod.POST)
+	public ModelAndView bon_shopdetailmap(int shop_num){
+		//int shop_num = Integer.parseInt(request.getParameter("shop_num"));
+		System.out.println("-----------bon_shopdetailmaps.jsp---------");
+		System.out.println("Request SHOP_NUM : " +shop_num);
+		
+		ShopVO res= bdao.detailmap(shop_num);
+		
+		//System.out.println("Request RES1 : " + 	res.getName());
+		//System.out.println("Request RES2 : " + 	res.getMaster());
+		//System.out.println("Request RES3 : " + 	res.getAdr());
+		String result = res.getShop_name()+"/"+res.getShop_master()+"/"+res.getShop_adr();
+		ModelAndView mav= new ModelAndView("ajax/bon_shopdetailmap");
+		mav.addObject("result", result);
 		return mav;
 	}
 	
