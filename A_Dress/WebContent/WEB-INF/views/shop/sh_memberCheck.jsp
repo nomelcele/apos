@@ -12,6 +12,67 @@
 	function membercheckaction() {
 		document.getElementById("membercheckform").submit();
 	}
+
+	var lastKey = '';
+	var check = false;
+	var loopKey = false;
+
+	function startSuggest() {
+
+		if (check == false) {
+			setTimeout("sendKeyword();", 500);
+			loopKey = true;
+		}
+		check = true;
+	}
+	function sendKeyword() {
+
+		if (loopKey == false) {
+			return;
+		}
+		var key = sname_ps.value;
+		if (key == '' || key == ' ') {
+			lastKey = '';
+			document.getElementById("view").style.display = 'none';
+		} else if (key != lastKey) {
+			lastKey = key;
+			var param = "key=" + encodeURIComponent(key);
+			sendRequest("sg_member", param, res, "post");
+		}
+		setTimeout("sendKeyword();", 1000);
+	}
+
+	var jsonObj = null;
+	function res() {
+
+		if (xhr.readyState == 4) {
+			if (xhr.status == 200) {
+				var response = xhr.responseText;
+				jsonObj = JSON.parse(response);
+				viewTable();
+			} else {
+				alert("test2");
+				document.getElementById("view").style.display = 'none';
+			}
+		}
+	}
+	function viewTable() {
+		var vD = document.getElementById("view");
+		var htmlTxt = "<table>";
+		for (var i = 0; i < jsonObj.length; i++) {
+			htmlTxt += "<tr><td style='cursor:pointer;'onmouseover='this.style.background=\"silver\"'onmouseout='this.style.background=\"white\"' onclick='select("
+					+ i + ")'>" + jsonObj[i] + "</td></tr>";
+		}
+		htmlTxt += "</table>";
+		vD.innerHTML = htmlTxt;
+		vD.style.display = "block";
+	}
+	function select(index) {
+		sname_ps.value = jsonObj[index];
+		document.getElementById("view").style.display = 'none';
+		check = false;
+		loopKey = false;
+	}
 </script>
 <section id="main-content">
 	<section class="wrapper">
@@ -30,19 +91,24 @@
 
 									<form class="form-validate form-horizontal"
 										id="membercheckform" method="post" action="sh_memberChecksr">
-										<input type="hidden" name="cmd" value="smember"> 
-										<input type="hidden" name="subcmd" value="check">
-										 <input type="hidden" name="page" value="1">
+										<input type="hidden" name="cmd" value="smember"> <input
+											type="hidden" name="subcmd" value="check"> <input
+											type="hidden" name="page" value="1">
 										<div class="form-group ">
-										<label for="cname" class="control-label col-lg-2" style="font-size: 11px;">이름
-										</label>
-										<input class="form-control" id="mem_name" name="mem_name"
-													onkeydown="startSuggest();" autocomplete="off" 
-													type="text" required 	style="width: 50%"/>
-												
-										<button class="btn btn-primary" onclick="javascript:membercheckaction()" id="btn" name="btn">조회</button>
-										<div id="view"></div>
+											<label for="cname" class="control-label col-lg-2"
+												style="font-size: 11px; float: left">이름 </label>
+											<div style="float: left; position: relative;">
+												<input class="form-control" id="sname_ps" name="mem_name"
+													onkeydown="startSuggest();" autocomplete="off" type="text"
+													required style="width: 90%; " /> <span id="view"
+													></span>
+											</div>
+											<button class="btn btn-primary"
+												onclick="javascript:membercheckaction()" id="btn" name="btn">조회</button>
+
 										</div>
+										<span id="view" style="position: absolute; float: left"></span>
+
 
 
 
@@ -63,17 +129,18 @@
 																</tr>
 															</thead>
 															<tbody>
-															<c:forEach var="stList" items="${stList}">											
+																<c:forEach var="stList" items="${stList}">
 																	<tr>
 																		<th>${stList.mem_num}</th>
-																		<th><a href="sh_memberDetail?num=${stList.mem_num}">${stList.mem_name}</a></th>
+																		<th><a
+																			href="sh_memberDetail?num=${stList.mem_num}">${stList.mem_name}</a></th>
 																		<th>${stList.mem_email}</th>
 																		<th>${stList.mem_addr}</th>
 																		<th>${stList.mem_tel}</th>
 																		<th>${stList.mem_date}</th>
 
 																	</tr>
-															</c:forEach>
+																</c:forEach>
 
 															</tbody>
 														</table>

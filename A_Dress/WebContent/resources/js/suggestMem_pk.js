@@ -6,6 +6,7 @@
 	var loopKey = false;
 
 	function startSuggest() {
+		alert("test")
 		if (check == false) {
 			setTimeout("sendKeyword();", 500);
 			loopKey = true;
@@ -23,7 +24,7 @@
 		} else if (key != lastKey) {
 			lastKey = key;
 			var param = "key=" + encodeURIComponent(key);
-			sendRequest("../shop/suggest.jsp", param, res, "post");
+			sendRequest("sg_member", param, res, "post");
 		}
 		setTimeout("sendKeyword();", 1000);
 	}
