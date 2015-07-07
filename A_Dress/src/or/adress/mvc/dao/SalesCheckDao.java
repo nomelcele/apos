@@ -43,7 +43,7 @@ public class SalesCheckDao {
 	}
 		
 	
-	//정산관리 - 기간별 매출 리스트 
+	//매장 - 정산관리 - 기간별 매출 리스트 
 	public List<SalesCheckVO> getList(String shop_num, String startdate,
 			String enddate) {
 		
@@ -75,4 +75,17 @@ public class SalesCheckDao {
 		return ss.selectList("ssalescheck.salescheck_searchSellnum", sellnum);
 
 	}
+	
+	//본사 - 정산관리 - 대리별 매출 리스트 
+		public List<SalesCheckVO> get_shopList(String shop_name, String startdate,
+				String enddate) {
+			
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("shop_name", shop_name);
+			map.put("startdate", startdate);
+			map.put("enddate", enddate);
+			
+			return ss.selectList("salescheck.salescheck_shoplist", map);
+
+		}
 }
