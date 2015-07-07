@@ -130,6 +130,7 @@ public class Logincon {
 	
 	
 	//로그인성공
+	//transaction
 	@RequestMapping(value="/sh_loginok", method=RequestMethod.POST)
 	public ModelAndView sh_loginok(String id, String radio, HttpSession session){
 		ModelAndView mav = new ModelAndView("shop/sh_index");
@@ -220,6 +221,7 @@ public class Logincon {
 	
 	
 	//본사로그인 (화면전환, 세션저장) (아이디/비번체크는 캡챠에서)
+	//transaction
 	@RequestMapping(value="bon_sawonlogin", method=RequestMethod.POST)
 	public ModelAndView bon_sawonlogin(String bon_login_id, HttpSession session){
 		//String id =request.getParameter("bon_login_id");

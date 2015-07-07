@@ -94,6 +94,7 @@ public class Bonsacon {
 	}
 
 	// 본사 공지사항 디테일 cmd=bwork subcmd=boardDetail
+	//transaction
 	@RequestMapping(value = "/bon_workNoticedetail", method = RequestMethod.POST)
 	public ModelAndView bon_workNoticedetail(int no, int page) {
 		ModelAndView mav = new ModelAndView("bonsa/bon_workNoticeDetail");
