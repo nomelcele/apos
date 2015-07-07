@@ -173,3 +173,15 @@ create table croom (num number(10) constraint cromm_num_pk primary key,u_id varc
 create SEQUENCE croot_seq increment by 1 start with 1;
 commit;
 
+----------------------------------------------------------------------------
+create table stockreq(
+sto_num number(10) constraint stockreq_stockreq_seq_pk primary key,
+shopname varchar2(50),
+pro_code varchar2(10),
+pro_size number(10),
+pro_amount number(10));
+
+create sequence stockreq_seq
+increment by 1
+start with 1;
+
