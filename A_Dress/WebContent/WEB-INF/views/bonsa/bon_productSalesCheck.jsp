@@ -18,7 +18,7 @@
 									//alert("test2");
 									$.ajax({
 												url : "bon_ajaxproductsale?pro_code="
-														+ $('#shop_name').val()
+														+ $('#pro_code').val()
 														+ "&startdate="
 														+ $('#date_ps').val()
 														+ "&enddate="
@@ -33,6 +33,24 @@
 												}
 
 											});
+
+									$.ajax({
+										url : "bon_ajaxproductChart?pro_code="
+												+ $('#pro_code').val() + "&startdate="
+												+ $('#date_ps').val() + "&enddate="
+												+ $('#date_ps2').val(),
+										type : "post",
+										dataType : "html",
+										success : function(data) {
+											//alert("callback");
+											res2 = eval(data);
+											var result = eval(res2);
+											//alert(res2);
+											drawVisualization();
+											res2 = null;
+										}
+
+									});
 								} else {
 									alert("날짜선택을 잘못하셧습니다.시작날짜가 마지막 날짜보다 큽니다.");
 								}
@@ -41,23 +59,6 @@
 							{
 								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
 							}
-							$.ajax({
-								url : "bon_ajaxproductChart.jsp?pro_code="
-										+ $('#shop_name').val() + "&date_ps="
-										+ $('#date_ps').val() + "&date_ps2="
-										+ $('#date_ps2').val(),
-								type : "post",
-								dataType : "html",
-								success : function(data) {
-									//alert("callback");
-									res2 = eval(data);
-									var result = eval(res2);
-									//alert(res2);
-									drawVisualization();
-									res2 = null;
-								}
-
-							});
 						})
 	})
 
@@ -112,7 +113,7 @@
 
 						<div style="margin-left: 10px;">
 							<label for="cname" class="control-label col-lg-2">물품코드번호
-							</label> <input id="shop_name" name="name" width="80%" autocomplete="off"
+							</label> <input id="pro_code" name="name" width="80%" autocomplete="off"
 								type="text" onkeydown="startSuggest();" required />
 
 							<div id="view"></div>
