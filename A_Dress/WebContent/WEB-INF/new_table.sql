@@ -96,7 +96,7 @@ pro_code varchar2(50) constraint product_pro_code_nn not null,
 pro_barcode varchar2(50) constraint product_pro_barcode_nn not null,
 pro_img varchar2(50) constraint product_pro_img_nn not null,
 pro_date date,
-constraint product_pro_code_uq unique (pro_code);
+constraint product_pro_code_uq unique (pro_code)
 pro_price number(30)
 );
 ---------------------5/28----------------------------
