@@ -119,7 +119,7 @@
 		<!-- --------------------------------------------------------- -->
 
 		<div class="row" >
-			<div class="col-lg-12" style="width: 100%" >
+			<div class="col-lg-12" style="width: 125%" >
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%">
 						<div class="col-lg-12">
@@ -183,7 +183,7 @@
 
 
 		<div class="row">
-			<div class="col-lg-12" style="width: 100%">
+			<div class="col-lg-12" style="width: 125%">
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%" >
 						<div class="col-lg-12">
@@ -195,10 +195,11 @@
 					<div class="panel-body" style="width: 100%;">
 
 						<div class="form-group">
-							<input type="text" class="form-control" id="pro_code"
+							<input type="text" class="form-control" id="pro_code" style="float: left; width: 23%; "
 								placeholder="상품번호" name="pro_code">
+						<button type="button" id="p_numbtn" class="btn btn-primary" style="float: left; margin-left: 0.5%;">검색</button>
+						
 						</div>
-						<button type="button" id="p_numbtn" class="btn btn-primary">검색</button>
 						<div class="table-responsive">
 
 							<table class="table">
