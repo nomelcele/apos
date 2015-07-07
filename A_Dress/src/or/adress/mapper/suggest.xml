@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- private int shop_snum,shop_num;
+private String shop_sname,shop_sposition,shop_stel,shop_name; -->
+ <mapper namespace="suggest">
+ 	<select id="member" parameterType="String" resultType="memvo">
+ 	select mem_name,mem_tel from member where mem_name like #{key}||'%' or mem_tel like #{key}||'%'
+ 	</select>
+ </mapper>
+ 
+ 
+ 
+ 
+ 
