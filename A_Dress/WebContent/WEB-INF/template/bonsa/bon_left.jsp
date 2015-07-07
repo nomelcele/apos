@@ -111,7 +111,6 @@
 		if(str != event.data){
 			str = event.data;
 			showNotification();
-			window.webkitNotifications.requestPermission();
 		}
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
 		event.data+"</ul></div>";
@@ -141,36 +140,35 @@
 // 	});
 ////////////////////////////notification////////////////////////////////
 function showNotification(){
-if(window.webkitNotifications) { //notification 이 다 되는 것이 아니에요.
-		if(window.webkitNotifications.checkPermission() == 0 ){ 
-//처음에 승인 요구를 받음.
+	// Let's check if the browser supports notifications
+	  if (!("Notification" in window)) {
+	    alert("This browser does not support desktop notification");
+	  }
 
-			var logo= 'http://sstatic.naver.net/search/2015/h_logo.png'; //삽입될 그림
-			var sub = 'new Message';//타이틀
-			var con = 'HTML5 notification';    //내용  
-			var n = window.webkitNotifications.createNotification(logo, sub, con);
-//글을 보여줌.
-			n.show();
-			var n2 = window.webkitNotifications.createHTMLNotification("http://192.168.0.2:8080/A_Dress");//브라우저를 보여줌.
+	  // Let's check whether notification permissions have alredy been granted
+	  else if (Notification.permission === "granted") {
+	    // If it's okay let's create a notification
+	    var notification = new Notification("Hi there!", options);
+	  }
 
-			n2.show();      
-		}
-		else{
-			requestPermission(showNotification);//승인 요구를 함.
-			//Notification.requestPermission();
-			//window.webkitNotifications.requestPermission(showNotification);
-		}   
-	}
-	else{
-		alert("지원을 안합니다.");
-	}
+	  // Otherwise, we need to ask the user for permission
+	  else if (Notification.permission !== 'denied') {
+	    Notification.requestPermission(function (permission) {
+	      // If the user accepts, let's create a notification
+	      if (permission === "granted") {
+	        var notification = new Notification("Hi there!", options);
+	      }
+	    });
+	  }
 }
+	 //var noty = new notification(titleText)
+	 //setTimeout(noty.close.bind(noty), 5000); 
 
-
-function requestPermission (callback) {
-	alert("이거호출댐?");
-	window.webkitNotifications.requestPermission(callback);
-}
+	var options = {
+		      body: 'new Message',
+		      tag: 'notificationPopup',
+		      icon: 'http://localhost/A_Dress/resources/img/bg-86.JPG'
+		  }
 </script>
 
 <!--본사 - 업무관리 - 공지사항 -->
