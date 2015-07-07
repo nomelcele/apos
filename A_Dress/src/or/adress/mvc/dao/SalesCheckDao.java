@@ -1,20 +1,14 @@
 package or.adress.mvc.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Date;
+
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import vo.BoardVO;
 import vo.SalesCheckVO;
 
 @Repository
@@ -40,7 +34,7 @@ public class SalesCheckDao {
 	// 완료 확인요망 
 	// 판매현
 	public List<SalesCheckVO> getonday(String shop_num,String date_ps){
-		System.out.println("ㅗㅗㅗㅗ"+shop_num+date_ps);
+		System.out.println("상품 넘버 데이터 표시:"+shop_num+date_ps);
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("shop_num", shop_num);
 		map.put("date_ps", date_ps);
@@ -50,8 +44,7 @@ public class SalesCheckDao {
 	}
 		
 	
-	// 인자값 3개.. 물어볼 것
-	// 완료 확인요망
+	//정산관리 - 기간별 매출 리스트 
 	public List<SalesCheckVO> getList(String shop_num, String startdate,
 			String enddate) {
 		
@@ -61,6 +54,18 @@ public class SalesCheckDao {
 		map.put("enddate", enddate);
 		
 		return ss.selectList("salescheck.salescheck_list", map);
+
+	}
+	//정산관리 - 기간별 매출 리스트 차트
+	public List<SalesCheckVO> getListChart(String shop_num, String startdate,
+			String enddate) {
+		
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("shop_num", shop_num);
+		map.put("startdate", startdate);
+		map.put("enddate", enddate);
+		
+		return ss.selectList("salescheck.salescheck_chart", map);
 
 	}
 	
