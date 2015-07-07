@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<!-- 본사 정산관리의 대리점별 매출순위 페이지 입니다. -->
+<!-- 매장 정산관리의 기간별 매출순위 페이지 입니다. -->
 <script src="resources/js/http.js"></script>
 <script src="resources/js/json2.js"></script>
 <script src="resources/js/suggest_shop_pk.js"></script>
