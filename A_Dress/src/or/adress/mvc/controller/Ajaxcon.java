@@ -743,7 +743,7 @@ public class Ajaxcon {
 		return mav;
 	}
 
-	// ================ 본사 - 정산관리 - 품목별 매출순위 - 검색
+	// 본사 - 정산관리 - 품목별 매출순위 - 테이블 검색
 	@RequestMapping(value = "bon_ajaxproductsale", method = RequestMethod.POST)
 	public ModelAndView bon_ajaxproductsale(String pro_code, String startdate,
 			String enddate) {
@@ -772,7 +772,8 @@ public class Ajaxcon {
 		mav.addObject("list", res);
 		return mav;
 	}
-	@RequestMapping(value="bon_ajaxproductChart")
+	// 본사 - 정산관리 - 품목별 매출순위 - 차트
+	@RequestMapping(value="bon_ajaxproductChart", method = RequestMethod.POST)
 	public ModelAndView bon_ajaxproductChart(String pro_code, String startdate,
 			String enddate){
 		System.out.println(pro_code + startdate +enddate);
@@ -801,4 +802,62 @@ public class Ajaxcon {
 		mav.addObject("res",res);
 		return mav;
 	}
+	// 본사 - 정산관리 - 대리점별 매출순위 - 검색
+	@RequestMapping(value="bon_ajaxoutletsale", method = RequestMethod.POST)
+	public ModelAndView bon_ajaxoutletsale(String shop_name, String startdate,
+			String enddate){
+		System.out.println(shop_name+startdate+enddate);
+		List<SalesCheckVO> list = skdao.get_shopList(shop_name, startdate, enddate);
+		Iterator <SalesCheckVO> it = list.iterator();
+		StringBuffer res = new StringBuffer();
+		while (it.hasNext()) {
+			SalesCheckVO v= new SalesCheckVO();
+			v = it.next();
+			res.append("<tr>");
+			res.append("<th>").append(v.getSell_date()).append("</th>");
+			res.append("<th>").append(v.getSell_shopname()).append("</th>");
+			res.append("<th>").append(v.getSell_cash()).append("</th>");		
+			res.append("<th>").append(v.getCount()).append("</th>");
+			res.append("</tr>");
+
+		}
+		//res.append("</tr>");
+		String strString = res.toString();
+		System.out.println(strString);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("ajax/bon_ajaxoutletsale");
+		mav.addObject("res",res);
+		return mav;
+	}
+	
+	// 본사 - 정산관리 - 대리점별 매출순위 -챠트
+	// bon_ajaxoutletChart
+	@RequestMapping(value="bon_ajaxoutletChart", method = RequestMethod.POST)
+	public ModelAndView bon_ajaxoutletChart(String shop_name, String startdate,
+			String enddate){
+		System.out.println("챠트"+shop_name+startdate+enddate);
+		List<SalesCheckVO> list = skdao.get_shopList(shop_name, startdate, enddate);
+		Iterator <SalesCheckVO> it = list.iterator();
+		StringBuffer res = new StringBuffer();
+		res.append("[ ['Month', '판매 금액', '판매량' ],");
+		while (it.hasNext()) {
+			SalesCheckVO v= new SalesCheckVO();
+			v = it.next();
+			res.append("['");
+			res.append(v.getSell_date()).append("',");
+			res.append(v.getSell_cash()).append(",");;		
+			res.append(v.getCount()).append(",");
+			res.append("],");
+
+		}
+		res.append("]");
+		String strString = res.toString();
+		System.out.println(strString);
+		
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("ajax/bon_ajaxoutletChart");
+		mav.addObject("res",res);
+		return mav;
+	}
+	
 }
