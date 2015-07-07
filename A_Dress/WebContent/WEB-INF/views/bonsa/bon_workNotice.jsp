@@ -57,7 +57,7 @@
 									<td>${stList.no}</td>
 									<td><a
 										href="javascript:godetail('${stList.no}')">
-											${stList.title}</a></td>
+											${stList.title}[${stList.cnt }]</a></td>
 									<form action="bon_workNoticedetail" method="post" id="godetail">
 										<input type="hidden" name="no" value="" id="dno">
 										<input type="hidden" name="page" value="1">
