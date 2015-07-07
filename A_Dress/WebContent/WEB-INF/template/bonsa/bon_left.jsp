@@ -141,7 +141,7 @@
 // 	});
 ////////////////////////////notification////////////////////////////////
 function showNotification(){
-if(!!window.webkitNotifications) { //notification 이 다 되는 것이 아니에요.
+if(window.webkitNotifications) { //notification 이 다 되는 것이 아니에요.
 		if(window.webkitNotifications.checkPermission() == 0 ){ 
 //처음에 승인 요구를 받음.
 
