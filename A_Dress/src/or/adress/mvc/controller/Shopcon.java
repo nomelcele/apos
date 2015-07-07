@@ -11,6 +11,7 @@ import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.SmangDao;
 import or.adress.mvc.dao.StaffDao;
+import or.adress.mvc.service.ShopService;
 
 import org.apache.ibatis.javassist.compiler.MemberResolver.Method;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,8 @@ public class Shopcon {
    private BoardDao bdao;
    @Autowired
    private SmangDao smdao;
+   @Autowired
+   private ShopService shservice;
 
 	@RequestMapping(value = "/sh_index")
 	public String index() {
@@ -73,6 +76,7 @@ public class Shopcon {
    }
 
    // 업무관리 - 공지사항 - 디테일
+   //transaction
    @RequestMapping(value = "/sh_workNoticedetail", method = RequestMethod.POST)
    public ModelAndView bon_workNoticedetail(int no, int page) {
       ModelAndView mav = new ModelAndView("shop/sh_workNoticeDetail");
@@ -283,6 +287,8 @@ public class Shopcon {
       return mav;
    }
 
+   //판매등록ing
+   //transaction
    @RequestMapping(value = "/sh_smangRegising", method = RequestMethod.POST)
    public ModelAndView sh_smangRegising(HttpServletRequest request,
          HttpSession session) {
@@ -312,8 +318,9 @@ public class Shopcon {
          map.put("fmileage", fmileage);
          map.put("cusnum", cusnum);
          map.put("shopnum", shopnum);
-         smdao.insertsell(map, chk);
-         smdao.editstock(map);
+//         smdao.insertsell(map, chk);
+//         smdao.editstock(map);
+         shservice.sh_smangRegising(map, chk);
          chk = false;
       }
       int mile = Integer.parseInt(request.getParameter("inmileage"));
