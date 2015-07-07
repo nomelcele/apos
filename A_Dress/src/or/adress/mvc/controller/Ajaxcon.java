@@ -692,33 +692,33 @@ public class Ajaxcon {
 	      mav.addObject("list", res);
 	      return mav;
 	   }
-	// 매장  기간별 정산관리 ajax
-//	@RequestMapping(value="sh_ajaxoutletsale")
-//	public ModelAndView sh_ajaxoutletsale(){
-//		ModelAndView mav= new ModelAndView("sh_ajaxoutletsale");
-//		
-//		
-//		String shop_name =request.getParameter("shop_name");
-//		String date_ps = request.getParameter("date_ps");
-//		String date_ps2 = request.getParameter("date_ps2");
-//		System.out.println(shop_name+date_ps+date_ps2);
-//		ArrayList<SalesCheckVO> list =new ArrayList<SalesCheckVO>();
-//		list=SalesCheckDao.getDao().getList(shop_name, date_ps, date_ps2 );
-//		Iterator <SalesCheckVO> it = list.iterator();
-//		StringBuffer res = new StringBuffer();
-//		while (it.hasNext()) {
-//			SalesCheckVO v= new SalesCheckVO();
-//			v = it.next();
-//			res.append("<tr>");
-//			res.append("<th>").append(v.getDate()).append("</th>");
-//			res.append("<th>").append(v.getSell_shopname()).append("</th>");
-//			res.append("<th>").append(v.getSell_cash()).append("</th>");		
-//			res.append("<th>").append(v.getCount()).append("</th>");
-//			res.append("</tr>");
-//
-//		
-//		return mav;
-//	}
-	
+		@RequestMapping(value="sh_ajaxoutletChart",method=RequestMethod.POST)
+		public ModelAndView sh_ajaxoutletChart(String shop_num,String startdate,String enddate){
+			
+			System.out.println(shop_num+startdate+enddate);
+			List<SalesCheckVO> list = skdao.getProductList(shop_num, startdate, enddate);
+			
+			Iterator <SalesCheckVO> it = list.iterator();
+			StringBuffer res = new StringBuffer();
+			res.append("[ ['Month', '판매 금액', '판매량' ],");
+			while (it.hasNext()) {
+				SalesCheckVO v= new SalesCheckVO();
+				v = it.next();
+				res.append("['");
+				res.append(v.getDate()).append("',");
+				res.append(v.getSell_cash()).append(",");;		
+				res.append(v.getCount()).append(",");
+				res.append("],");
+
+			}
+			res.append("]");
+			String strString = res.toString();
+			System.out.println(strString);
+			
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("ajax/sh_ajaxoutletChart");
+			mav.addObject("res", res);
+			return mav;
+		}
 	
 }
