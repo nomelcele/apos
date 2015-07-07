@@ -38,6 +38,25 @@
 												}
 
 											});
+
+									$.ajax({
+										url : "sh_ajaxoutletChart?shop_num="
+												+ shop_num + "&date_ps="
+												+ $('#date_ps').val()
+												+ "&date_ps2="
+												+ $('#date_ps2').val(),
+										type : "post",
+										dataType : "html",
+										success : function(data) {
+											//alert("callback");
+											res2 = eval(data);
+											var result = eval(res2);
+											alert(res2);
+											drawVisualization();
+											res2 = null;
+										}
+
+									});
 								} else {
 									alert("날짜선택을 잘못하셧습니다.시작날짜가 마지막 날짜보다 큽니다.");
 								}
@@ -46,23 +65,7 @@
 							{
 								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
 							}
-							// 							$.ajax({
-							// 								url : "sh_ajaxoutletChart.jsp?shop_name="
-							// 										+ shop_name + "&date_ps="
-							// 										+ $('#date_ps').val() + "&date_ps2="
-							// 										+ $('#date_ps2').val(),
-							// 								type : "post",
-							// 								dataType : "html",
-							// 								success : function(data) {
-							// 									//alert("callback");
-							// 									res2 = eval(data);
-							// 									var result = eval(res2);
-							// 									//alert(res2);
-							// 									drawVisualization();
-							// 									res2 = null;
-							// 								}
 
-							// 							});
 						})
 	})
 
@@ -137,6 +140,7 @@
 
 
 				<table class="table table-striped table-advance table-hover">
+					<div id="chart_div" style="width: 100%; height: 50%;"></div>
 					<thead>
 						<p></p>
 						<tr>
@@ -147,11 +151,12 @@
 						</tr>
 
 					</thead>
+					
 					<tbody id="view_product">
 
 					</tbody>
 				</table>
-				<div id="chart_div" style="width: 900px; height: 500px;"></div>
+				
 
 
 				<!-- 				<div class="form-group" style="margin-left: 700px;"> -->

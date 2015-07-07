@@ -22,7 +22,7 @@
 					<i class="fa fa-files-o"></i> 회원수정
 				</h3>
 
-				<div class="row" style="width: 100%">
+				<div class="row" style="width: 125%">
 					<div class="col-lg-12">
 						<section class="panel" style="font-size: 8px;">
 							<div class="panel-body">
