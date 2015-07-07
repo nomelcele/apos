@@ -26,10 +26,10 @@
 		to_date(#{date_ps},'yyyy-MM-dd')
 	</select>
 
-
+	<!-- 정산관리 기간별 판매 리스트 날짜 (년-월-일) 까지 나옴  -->
 	<select id="salescheck_list" parameterType="map" resultType="schkvo">
 		select to_char(sell_date,'yyyy-MM-dd') sell_date,
-		count(*) count ,sum(s.sell_cash) sell_cash,
+		count(sell_many) count ,sum(s.sell_cash) sell_cash,
 		sh.SHOP_NAME sell_shopname from sell s, shop sh
 		where s.SELL_SHOPNUM = sh.shop_num
 		and sh.SHOP_num like #{shop_num}
@@ -37,6 +37,19 @@
 		to_date(#{startdate},'yyyy-MM-dd') and sell_Date <![CDATA[<=]]>
 		to_date(#{enddate},'yyyy-MM-dd'))
 		group by to_char(sell_date,'yyyy-MM-dd') ,sh.SHOP_NAME ORDER BY 1
+	</select>
+
+<!-- 정산관리 기간별 판매 리스트 날짜 (년-월) 까지 나옴 차트 사용 -->
+	<select id="salescheck_chart" parameterType="map" resultType="schkvo">
+		select to_char(sell_date,'yyyy-MM') sell_date,
+		count(sell_many) count ,sum(s.sell_cash) sell_cash,
+		sh.SHOP_NAME sell_shopname from sell s, shop sh
+		where s.SELL_SHOPNUM = sh.shop_num
+		and sh.SHOP_num like #{shop_num}
+		and( sell_date <![CDATA[>=]]>
+		to_date(#{startdate},'yyyy-MM-dd') and sell_Date <![CDATA[<=]]>
+		to_date(#{enddate},'yyyy-MM-dd'))
+		group by to_char(sell_date,'yyyy-MM') ,sh.SHOP_NAME ORDER BY 1
 	</select>
 
 
