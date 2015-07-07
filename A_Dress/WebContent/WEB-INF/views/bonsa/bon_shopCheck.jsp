@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <style>
 	.map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
@@ -44,10 +43,14 @@
 <script>
 	function shopcdetialmap(res){
             $.ajax({
-                   url: "bon_shopdetailmap.jsp?shop_num="+res,
-                   type: "POST",
-                   dataType: "html",
+                   url : "bon_shopdetailmap",
+                   type : "POST",
+                   data : {
+                	   shop_num : res
+                   },
                    success: function(data) {
+                	   $('#map').hide();
+                	   $('#gomapbtn').show();
                 	   var res = data.trim();
                 	   //alert("success! ::"+data.trim());
 					   var str = res.split("/");
@@ -61,7 +64,7 @@
                 		
                 		//$('#mock').html($('#map').html());
                 		$('#demodal').modal('show');
-                		$('#gomapbtn').click(function(){
+                 		$('#gomapbtn').click(function(){
 	                		$('#map').show();
 	                		moveMap(shop_adr, shop_name);
 	                		$('#gomapbtn').hide();
@@ -71,7 +74,7 @@
                        alert("Request: " + JSON.stringify(a));
                    }
                });
-	}
+	};
 </script>
 <%-- 명표 APIkey : 7098d2c774fbdd915ec61cc46e44103b --%>
 <script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7098d2c774fbdd915ec61cc46e44103b&libraries=services"></script>
@@ -224,7 +227,7 @@
 								<th><span id="list_master">${shlist.shop_master}</span></th>
 								<th>${shlist.shop_tel}</th>
 								<th>${shlist.shop_mail}</th>
-								<th><img src="resources/upload/${shlist.shop_img}" style="width: 50px;"></th>
+								<th><img src="upload/${shlist.shop_img}" style="width: 50px;"></th>
 								<th><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="상세보기"></th>								
 								
 							</tr>
@@ -237,3 +240,4 @@
 		</div>
 	</section>
 </section>
+

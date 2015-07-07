@@ -83,27 +83,7 @@
 		}
 	}
 
-	/////////////////////////////////////////chat/////////////////////////////////
-	//receive
-	//push Client설정
-	console.log("typeof:" + typeof (EventSource));
-	if (typeof (EventSource) != "undefined") { //push를 받을 수 있는 브라우저인지 판단 (타입오브 -> 객체의 타입확인)
-		var eventSource = new EventSource("sh_chatload");
-		// EventSource EventListener의 종류
-		// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
-		// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
-		// onopen : 서버가 연결이 되었을 때 발생
-		eventSource.onmessage = function(event) { //리스너형식으로 돌아가고 있는 콜백함수
-
-			document.getElementById("target").innerHTML = "<div class='padd sscroll'><ul class='chats'>"
-					+ event.data + "</ul></div>";
-			//		$("#target").html("<div class='panel-body'><div class='padd sscroll'><ul class='chats'>"+
-			//				event.data+"</ul></div>");
-
-		};
-	} else {
-		$("#target").html("해당 브라우저는 지원이 안됩니다.")
-	}
+	
 
 	//Ajax로 사용자의 데이터를 보내는 쪽 
 	//사용자가 입력한 내용을 서버에 저장
@@ -139,7 +119,69 @@
 			return false;
 		});
 	});
+	</script>
+	<script>
+/////////////////////////////////////////chat/////////////////////////////////
+	//receive
+	//push Client설정
+	console.log("typeof:"+typeof(EventSource));
+	if(typeof(EventSource) != "undefined"){ //push를 받을 수 있는 브라우저인지 판단 (타입오브 -> 객체의 타입확인)
+	var eventSource = new EventSource("sh_chatload");
+	// EventSource EventListener의 종류
+	// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
+	// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
+	// onopen : 서버가 연결이 되었을 때 발생
+	str = "";
+	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
+		
+		var spl = event.data.split("<@>");
+		if(spl[1] != "i" && str != spl[0]){
+			str = spl[0];
+			showNotification();
+		}
+		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
+		spl[0]+"</ul></div>";
+// 		$("#target").html("<div class='panel-body'><div class='padd sscroll'><ul class='chats'>"+
+// 				event.data+"</ul></div>");
+		
+	};
+	}else{
+		$("#target").html("해당 브라우저는 지원이 안됩니다.")
+	}
+	
+////////////////////////////notification////////////////////////////////
+	function showNotification(){
+		// Let's check if the browser supports notifications
+		  if (!("Notification" in window)) {
+		    alert("This browser does not support desktop notification");
+		  }
+
+		  // Let's check whether notification permissions have alredy been granted
+		  else if (Notification.permission === "granted") {
+		    // If it's okay let's create a notification
+		    var notification = new Notification("Hi there!", options);
+		  }
+
+		  // Otherwise, we need to ask the user for permission
+		  else if (Notification.permission !== 'denied') {
+		    Notification.requestPermission(function (permission) {
+		      // If the user accepts, let's create a notification
+		      if (permission === "granted") {
+		        var notification = new Notification("Hi there!", options);
+		      }
+		    });
+		  }
+	}
+		 //var noty = new notification(titleText)
+		 //setTimeout(noty.close.bind(noty), 5000); 
+
+		var options = {
+			      body: 'new Message',
+			      tag: 'notificationPopup',
+			      icon: 'http://localhost/A_Dress/resources/img/bg-86.JPG'
+			  }
 </script>
+
 
 
 <!-- 공지사항 -->
