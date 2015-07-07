@@ -16,15 +16,14 @@ public class SalesCheckDao {
 	@Autowired
 	private SqlSessionTemplate ss;
 	
-	// 경찬이오빠가 한다고 넘어가래요.
-	// 인자값 3개 / 물어볼 것 
-	public List<SalesCheckVO> getProductList(String procode,
+	// 본사-정산관리-품목별매출관리
+	public List<SalesCheckVO> getProductList(String pro_code,
 			String startdate, String enddate) {
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("procode", procode);
+		map.put("pro_code", pro_code);
 		map.put("startdate", startdate);
 		map.put("enddate", enddate);
-		
+		System.out.println(pro_code);
 		return ss.selectList("salescheck.salescheck_productlist", map);
 		
 
