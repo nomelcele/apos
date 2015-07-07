@@ -15,6 +15,18 @@
         group by to_char(sell_date,'yyyy-MM') ,p.PRO_NAME ORDER BY 1
         
 	</select>
+	<!-- 본사-정산관리-대리점별 매출 순위 -->
+	<select id="salescheck_shoplist" parameterType="map" resultType="schkvo">
+		select to_char(sell_date,'yyyy-MM-dd') sell_date,
+		count(sell_many) count ,sum(s.sell_cash) sell_cash,
+		sh.SHOP_NAME sell_shopname from sell s, shop sh
+		where s.SELL_SHOPNUM = sh.shop_num
+		and sh.SHOP_name like #{shop_name}
+		and( sell_date <![CDATA[>=]]>
+		to_date(#{startdate},'yyyy-MM-dd') and sell_Date <![CDATA[<=]]>
+		to_date(#{enddate},'yyyy-MM-dd'))
+		group by to_char(sell_date,'yyyy-MM-dd') ,sh.SHOP_NAME ORDER BY 1
+	</select>
 
 
 	<!-- 매장 정산관리 매출 관리  -->
