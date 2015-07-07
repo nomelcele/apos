@@ -7,9 +7,7 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 	$(function() {
-		$('#btn_out')
-				.click(
-						function() {
+		$('#btn_out').click(function() {
 // 							alert("shopname=" + $('#shop_name').val()
 // 									+ "date_ps=" + $('#date_ps').val()
 // 									+ "&date_ps2=" + $('#date_ps2').val());
@@ -18,13 +16,12 @@
 									&& $('#date_ps2').val() != "") {
 								if ($('#date_ps').val() < $('#date_ps2').val()) {
 									//alert("test2");
-									$
-											.ajax({
-												url : "bon_ajaxoutletsale.jsp?shop_name="
+									$.ajax({
+												url : "bon_ajaxoutletsale?shop_name="
 														+ $('#shop_name').val()
-														+ "&date_ps="
+														+ "&startdate="
 														+ $('#date_ps').val()
-														+ "&date_ps2="
+														+ "&enddate="
 														+ $('#date_ps2').val(),
 												type : "post",
 												dataType : "html",
@@ -36,6 +33,26 @@
 												}
 
 											});
+									$.ajax({
+										url : "bon_ajaxoutletChart?shop_name="
+											+ $('#shop_name').val()
+											+ "&startdate="
+											+ $('#date_ps').val()
+											+ "&enddate="
+											+ $('#date_ps2').val(),
+										type : "post",
+										dataType : "html",
+										success : function(data) {
+											//alert("callback");
+											res2 = eval(data);
+											var result = eval(res2);
+											//alert(res2);
+											drawVisualization();
+											res2=null;
+										}
+
+									});
+									
 								} else {
 									alert("날짜선택을 잘못하셧습니다.시작날짜가 마지막 날짜보다 큽니다.");
 								}
@@ -44,25 +61,7 @@
 							{
 								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
 							}
-							$.ajax({
-								url : "bon_ajaxoutletChart.jsp?shop_name="
-									+ $('#shop_name').val()
-									+ "&date_ps="
-									+ $('#date_ps').val()
-									+ "&date_ps2="
-									+ $('#date_ps2').val(),
-								type : "post",
-								dataType : "html",
-								success : function(data) {
-									//alert("callback");
-									res2 = eval(data);
-									var result = eval(res2);
-									//alert(res2);
-									drawVisualization();
-									res2=null;
-								}
-
-							});
+							
 						})
 	})
 
