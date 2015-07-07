@@ -3,12 +3,20 @@ package vo;
 // sell_mileage, sell_shopnum ¾øÀ½!!
 public class SalesCheckVO {
 	private String sell_memname;
-	private String sell_date;
-	private int count, sell_cash, sell_card,sell_pronum,sell_many,sell_memnum,sell_num;
-	
+	private String sell_date, sell_proimg;
+	private int count, sell_cash, sell_card, sell_pronum, sell_many,
+			sell_memnum, sell_num;
+	public String getSell_proimg() {
+		return sell_proimg;
+	}
+
+	public void setSell_proimg(String sell_proimg) {
+		this.sell_proimg = sell_proimg;
+	}
 	public int getSell_num() {
 		return sell_num;
 	}
+
 	public String getSell_date() {
 		return sell_date;
 	}
@@ -16,6 +24,7 @@ public class SalesCheckVO {
 	public void setSell_date(String sell_date) {
 		this.sell_date = sell_date;
 	}
+
 	public void setSell_num(int sell_num) {
 		this.sell_num = sell_num;
 	}
@@ -27,6 +36,7 @@ public class SalesCheckVO {
 	public void setSell_memname(String sell_memname) {
 		this.sell_memname = sell_memname;
 	}
+
 	public int getSell_memnum() {
 		return sell_memnum;
 	}
@@ -51,14 +61,13 @@ public class SalesCheckVO {
 		this.sell_many = sell_many;
 	}
 
-	private String date,sell_shopname,sell_proname;
-
+	private String date, sell_shopname, sell_proname;
 
 	public String getSell_proname() {
 		return sell_proname;
 	}
 
-	public  void setSell_proname(String sell_proname) {
+	public void setSell_proname(String sell_proname) {
 		this.sell_proname = sell_proname;
 	}
 
@@ -66,15 +75,15 @@ public class SalesCheckVO {
 		return sell_shopname;
 	}
 
-	public  void setSell_shopname(String sell_shopname) {
+	public void setSell_shopname(String sell_shopname) {
 		this.sell_shopname = sell_shopname;
 	}
 
-	public  String getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public  void setDate(String date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 
