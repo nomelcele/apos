@@ -125,7 +125,7 @@
                             	<!-- chat--------------->
 								<form method="post" action="chat_add.jsp" name="cform"	id="cform" class="form-inline">
 									<div class="form-group" >
-									<input type="text" class="form-control" id="chat" name="chat" required="required" placeholder="대화내용" style="float:left;">
+									<input type="text" class="form-control" id="chat" name="chat" required="required" placeholder="대화내용" style="float:left;"onKeypress="javascript:if(event.keyCode==13) {return false;}"	>
 									</div>
 									<input type="button" id="send" value="글작성" class="btn btn-info" style="width: 55px; padding-left: 5px;">
 									<div style="height: 30px;"></div>
