@@ -15,6 +15,7 @@ import or.adress.mvc.dao.StaffDao;
 import org.apache.ibatis.javassist.compiler.MemberResolver.Method;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -414,5 +415,13 @@ public class Shopcon {
       System.out.println(startRow + "---" + endRow);
       return pageInfo;
    }
+   
+   
+   @RequestMapping("test1254")
+   public String test(Model mav){
+	   mav.addAttribute("test", "12345");
+	   return "shop/webRTC";
+   }
+   
 
 }
