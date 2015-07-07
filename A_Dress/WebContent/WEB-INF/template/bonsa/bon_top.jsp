@@ -10,7 +10,8 @@
   <!--logo start-->
             <div style="margin:0 auto">
             <a href="bon_index" class="logo">
-            <img src ="resources/img/bg-20.jpg"><span class="lite"></span></a>
+            <img src ="resources/img/bg-20.jpg"><span class="lite">ADRESS</span></a>
+            
             </div>
             <!--logo end-->
 
