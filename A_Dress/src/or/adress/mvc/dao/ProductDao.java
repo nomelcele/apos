@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -75,5 +76,15 @@ public class ProductDao {
 		map.put("num", num);
 		
 		return ss.selectList("product.product_bon2", map);
+	}
+	
+	//신상품추가시 stock테이블에 재고0인 상태로 추가 위해 샵넘 목록뽑기!
+	public List<Integer> getshop_numlist(){
+		return ss.selectList("product.get_shopnumlist");
+	}
+	
+	//신상품추가시 각매장들에 재고0상태로 insert
+	public void setzerostock(HashMap<String, Integer> map){
+		ss.insert("product.setzerostock", map);
 	}
 }
