@@ -27,6 +27,12 @@
 	<select id="detail_map" parameterType="int" resultType="shvo">
 		select * from shop where shop_num=#{shop_num}
 	</select>
+	<select id="get_shopnumlist" resultType="int">
+		select shop_num from shop
+	</select>
+	<insert id="" parameterType="map">
+		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 0, #{sto_shopnum}, #{sto_size})
+	</insert>
 </mapper>
 
 
