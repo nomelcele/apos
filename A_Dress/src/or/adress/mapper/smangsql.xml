@@ -26,5 +26,12 @@
 	<update id="smang_inmile" parameterType="map">
 	update member set mem_mileage = #{mile} where mem_num = #{cusnum}
 	</update>
+	
+	<!-- 환불교환-테이블불러오기 -->
+	<select id="get_selltable" parameterType="int" resultType="schkvo" >
+	select sell.SELL_NUM,member.mem_name sell_memname,sell.sell_pronum,sell.sell_cash, sell.SELL_MANY
+	from sell,member 
+	where sell_memnum=mem_num and sell_sell=#{sell_sell}
+	</select>
 
 </mapper>
