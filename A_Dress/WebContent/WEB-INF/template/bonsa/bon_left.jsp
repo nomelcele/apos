@@ -77,6 +77,8 @@
 			document.getElementById("del").submit();
 		}else if(str == "sale"){
 			document.getElementById("sale").submit();
+		}else if(str == "discount"){
+			document.getElementById("discount").submit();
 		}else if(str == "brandsch"){
 			document.getElementById("brandsch").submit();
 		}else if(str == "productsch"){
@@ -191,6 +193,8 @@ function showNotification(){
 <form method="post" action="bon_productAdd" id="add"></form>
 <!-- 본사 상품관리 상품재고관리 -->
 <form method="post" action="bon_productSale" id="sale"></form>
+<!-- 본사 상품관리 상품세일 -->
+<form method="post" action="bon_productDiscount" id="discount"></form>
 <!-- 품목별 매출순위 -->
 <form method="post" action="bon_productSalesCheck" id="productsch"></form>
 <!--  대리점별 매출순위-->
@@ -234,6 +238,7 @@ function showNotification(){
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('add')">상품추가</a></li>
                           <li><a class="" href="javascript:goUrl('sale')">상품 재고 관리</a></li>
+                          <li><a class="" href="javascript:goUrl('discount')">상품 세일</a></li>
                       </ul>
                   </li>
                 <li class="sub-menu">
