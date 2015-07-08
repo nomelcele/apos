@@ -28,6 +28,7 @@ import javax.servlet.http.Part;
 import or.adress.mvc.dao.BoardDao;
 import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
+import or.adress.mvc.service.BonsaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
@@ -54,6 +55,8 @@ public class Bonsacon {
 	private ShopDao shdao;
 	@Autowired
 	private ProductDao pdao;
+	@Autowired
+	private BonsaService bservice;
 
 	@RequestMapping(value = "/bon_index")
 	public ModelAndView bon_index(HttpSession session) {
@@ -465,7 +468,8 @@ public class Bonsacon {
 		vo.setPro_img(vo.getPimg().getOriginalFilename());
 
 		mav.setViewName("bonsa/bon_productAdd");
-		pdao.insert(vo);
+		//pdao.insert(vo);
+		bservice.bon_productAdding(vo);
 		return mav;
 	}
 

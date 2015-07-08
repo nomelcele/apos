@@ -135,6 +135,8 @@
 		$("#target").html("해당 브라우저는 지원이 안됩니다.")
 	}
 	
+	
+	
 ////////////////////////////notification////////////////////////////////
 	function showNotification(){
 		// Let's check if the browser supports notifications

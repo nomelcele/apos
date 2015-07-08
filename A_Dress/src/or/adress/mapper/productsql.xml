@@ -41,6 +41,13 @@
   		select p.pro_name pro_name,sh.shop_name shop_name,s.sto_size sto_size,s.sto_amount  sto_amount from product p, stock s, shop sh where p.pro_code = s.sto_pronum and  sh.shop_num=sto_shopnum and  p.pro_code = #{code} and sh.shop_num = #{num} 
   	</select>
   	
+  	<select id="get_shopnumlist" resultType="int">
+  		select shop_num from shop
+  	</select>
+  	
+  	<select id="setzerostock" parameterType="map">
+  		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 0, #{sto_shopnum}, #{sto_size})
+  	</select>
   	
   	
 	
