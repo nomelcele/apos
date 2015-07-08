@@ -895,7 +895,7 @@ public class Ajaxcon {
 			res.append("<th>").append(v.getSell_pronum()).append("</th>");		
 			res.append("<th>").append(v.getSell_cash()).append("</th>");	
 			res.append("<th>").append(v.getSell_many()).append("</th>");
-			res.append("<th>").append("</th>");
+			res.append("<th>").append("<a class=\"btn btn-warning\" data-toggle=\"modal\" href=\"#myModal2\"  onclick=\"sh_managEx("+v.getSell_num()+")\">È¯ºÒ </a></th>");
 			res.append("</tr>");
 
 		}
