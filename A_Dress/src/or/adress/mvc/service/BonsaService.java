@@ -39,11 +39,21 @@ public class BonsaService {
 //			temp = chk21;
 //		}
 		switch(chk){
-		case 11 : temp = chk11;
-		case 12 : temp = chk12;
-		case 21 : temp = chk21;
-		case 22 : temp = chk22;
-		case 33 : temp = chk33;
+		case 11 : 
+			temp = chk11;
+			break;
+		case 12 : 
+			temp = chk12;
+			break;
+		case 21 : 
+			temp = chk21;
+			break;
+		case 22 : 
+			temp = chk22;
+			break;
+		case 33 : 
+			temp = chk33;
+			break;
 		}
 		List<Integer> list = pdao.getshop_numlist();
 		for(int shop_num : list){
@@ -51,7 +61,7 @@ public class BonsaService {
 				HashMap<String, Integer> map = new HashMap<String, Integer>();
 				map.put("sto_shopnum", shop_num);
 				map.put("sto_size", sto_size);
-				map.put("sto_pronum", vo.getPro_num());
+				map.put("sto_pronum", Integer.parseInt(vo.getPro_code()));
 				pdao.setzerostock(map);
 			}
 		}
