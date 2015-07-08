@@ -375,24 +375,26 @@ public class Bonsacon {
 		}
         return bon_shopJoin();
 	}
-		
-		
-		
-		
 	
-	
-	
-	
-	
-	
-	
-	// 夯荤 惑前包府 惑前犁绊包府
+	// 夯荤 惑前包府 - 惑前犁绊包府
 	@RequestMapping(value = "/bon_productSale")
 	public ModelAndView bon_productSale() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("bonsa/bon_productSale");
 		return mav;
 	}
+	
+	
+	
+	// 夯荤 惑前包府 - 惑前技老
+	@RequestMapping(value = "/bon_productDiscount")
+	public ModelAndView bon_productDiscount() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("bonsa/bon_productDiscount");
+		return mav;
+	}
+	
+
 
 	// bon_termSalesCheck 前格喊 概免鉴困
 	@RequestMapping(value = "/bon_productSalesCheck")
