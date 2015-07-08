@@ -33,5 +33,13 @@
 	from sell,member 
 	where sell_memnum=mem_num and sell_sell=#{sell_sell}
 	</select>
-
+	<!-- sell_num으로 vo가져오기 -->
+	<select id="get_vo" parameterType="int" resultType="schkvo">
+	select * from sell where sell_num=#{sell_num}
+	</select>
+	<update id="get_refund" parameterType="schkvo">
+	update stock set STO_AMOUNT=sto_amount+#{sell_many} 
+	where sto_shopnum=#{sell_shopnum} and sto_pronum= #{sell_pronum} 
+	and sto_size =#{sell_size}
+	</update>
 </mapper>
