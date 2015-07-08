@@ -45,6 +45,23 @@
 <script src="resources/js/charts.js"></script>
 <script src="resources/js/jquery.slimscroll.min.js"></script>
 <script>
+	$(function(){
+		$('#send').click(function(){
+			$.ajax({
+				url : "sh_add_chat",
+				type : "POST",
+				data : {
+					chat : $('#chat').val()
+				},
+				success : function(){
+					$("#chat").val("");
+				}
+			});
+			return false;
+		});
+	});
+	</script>
+<script>
 	function goUrl(str) {
 		if (str == "memberJoin") {
 			document.getElementById("memberJoin").submit();
@@ -84,43 +101,6 @@
 	}
 
 	
-
-	//Ajax로 사용자의 데이터를 보내는 쪽 
-	//사용자가 입력한 내용을 서버에 저장
-// 	$(function() {
-// 		$("form").submit(function() {
-// 			var fdata = {
-// 				u_id : encodeURIComponent($("#u_id").val()),
-// 				chat : encodeURIComponent($("#chat").val())
-// 			};
-// 			$.ajax({ //ajax로 보냄
-// 				type : "POST", //헤더에 넣어서보냄 (URL로 안보임)
-// 				url : "chat_add.jsp",
-// 				data : fdata,
-// 				success : function() {
-// 					$("#chat").val("");
-// 				}
-// 			});
-// 			return false;//서브밋후에 페이지가 안바뀌도록 false리턴
-// 		});
-// 	});
-	$(function(){
-		$('#send').click(function(){
-			$.ajax({
-				url : "sh_add_chat",
-				type : "POST",
-				data : {
-					chat : $('#chat').val()
-				},
-				success : function(){
-					$("#chat").val("");
-				}
-			});
-			return false;
-		});
-	});
-	</script>
-	<script>
 /////////////////////////////////////////chat/////////////////////////////////
 	//receive
 	//push Client설정
@@ -131,13 +111,19 @@
 	// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
 	// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
 	// onopen : 서버가 연결이 되었을 때 발생
-	str = "";
+	var str = "";
+	var first = true;
 	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
 		
 		var spl = event.data.split("<@>");
 		if(spl[1] != "i" && str != spl[0]){
-			str = spl[0];
-			showNotification();
+			if(first){
+				first=false;
+				str = spl[0];
+			}else{
+				str = spl[0];
+				showNotification();
+			}
 		}
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
 		spl[0]+"</ul></div>";
