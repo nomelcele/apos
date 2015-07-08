@@ -37,6 +37,7 @@
 	<select id="get_vo" parameterType="int" resultType="schkvo">
 	select * from sell where sell_num=#{sell_num}
 	</select>
+	
 	<update id="get_refund" parameterType="schkvo">
 	update stock set STO_AMOUNT=sto_amount+#{sell_many} 
 	where sto_shopnum=#{sell_shopnum} and sto_pronum= #{sell_pronum} 

@@ -7,8 +7,18 @@ public class SalesCheckVO {
 	private String sell_date, sell_proimg;
 	private int count, sell_cash, sell_card, sell_pronum, sell_many,
 			sell_memnum, sell_num;
+	private int sell_size;
 	
 	
+	
+	public int getSell_size() {
+		return sell_size;
+	}
+
+	public void setSell_size(int sell_size) {
+		this.sell_size = sell_size;
+	}
+
 	public int getSell_shopnum() {
 		return sell_shopnum;
 	}
