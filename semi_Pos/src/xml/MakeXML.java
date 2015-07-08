@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 import org.jdom2.Attribute;
 import org.jdom2.Document;
@@ -27,7 +28,7 @@ public class MakeXML {
 		return makexml;
 	}
 
-	public void shSeggest(ArrayList<String> list) {
+	public void shSeggest(List<String> list) {
 		/*
 		 * --- select tname, name1,name2,name3,name4,name5 from t ex) select
 		 * tname, names from team; application names = 김길동-구하라-소효진
