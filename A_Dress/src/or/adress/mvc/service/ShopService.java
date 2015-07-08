@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import vo.SalesCheckVO;
+
 @Transactional
 @Service
 public class ShopService {
@@ -54,5 +56,19 @@ public class ShopService {
 	      map.put("cusnum", cusnum);
 	      System.out.println(mile);
 	      smdao.inmile(map);
+	}
+	
+	// 매장- 판매등록 -교환 환불 -환불
+	/*
+	 * update stock set STO_AMOUNT=sto_amount+#{sell_many} 
+	where sto_shopnum=#{sell_shopnum} and sto_pronum= #{sell_pronum} 
+	and sto_size =#{sell_size}
+	 * */
+	public void sh_refund(int sell_num){
+		SalesCheckVO skvo = smdao.get_schkvo(sell_num);
+		int sell_many = skvo.getSell_many();
+		int sell_shopnum = skvo.getSell_shopnum();
+		int sell_
+		System.out.println(skvo.getSell_memnum());
 	}
 }
