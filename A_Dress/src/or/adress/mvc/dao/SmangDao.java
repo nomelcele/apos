@@ -54,4 +54,17 @@ public class SmangDao {
 		return ss.selectList("smang.get_selltable",sell_sell);
 	}
 	
+	// 환불 vo가져오기
+	public SalesCheckVO get_schkvo(int sell_num){
+		return ss.selectOne("smang.get_vo", sell_num);
+	}
+	// 환불 refund
+	/*
+	 * update stock set STO_AMOUNT=sto_amount+#{sell_many} 
+	where sto_shopnum=#{sell_shopnum} and sto_pronum= #{sell_pronum} 
+	and sto_size =#{sell_size}
+	 * */
+	public void get_refund(){
+		ss.update("smang.get_refund", parameter)
+	}
 }
