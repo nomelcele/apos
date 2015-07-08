@@ -182,7 +182,7 @@ public class Shopcon {
       return mav;
    }
 
-   // ---------경연
+   // 회원관리 
    @RequestMapping(value = "/sh_memberCheck", method = RequestMethod.POST)
    public ModelAndView sh_memberCheck() {
       ModelAndView mav = new ModelAndView();
@@ -236,9 +236,6 @@ public class Shopcon {
       return mav;
    }
 
-   // ---------경연
-
-   // --경연---------------------------------------
 
    // 처음 화면
    // 상품관리 - 상품조회
@@ -277,7 +274,6 @@ public class Shopcon {
       return mav;
    }
 
-   // --경연---------------------------------------
 
    // 판매등록 - 판매등록
    @RequestMapping(value = "/sh_smangRegis")
