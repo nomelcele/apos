@@ -64,7 +64,7 @@ public class SmangDao {
 	where sto_shopnum=#{sell_shopnum} and sto_pronum= #{sell_pronum} 
 	and sto_size =#{sell_size}
 	 * */
-	public void get_refund(){
-		ss.update("smang.get_refund", parameter)
+	public void get_refund(SalesCheckVO vo){
+		ss.update("smang.get_refund", vo);
 	}
 }

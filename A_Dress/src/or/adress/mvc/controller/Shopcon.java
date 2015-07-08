@@ -398,9 +398,6 @@ public class Shopcon {
 	   System.out.println("shopcon:"+sell_num);
 	   shservice.sh_refund(sell_num);
 	  
-	   
-	   
-	   
 	   ModelAndView mav = new ModelAndView();
 	   mav.setViewName("shop/sh_smangExchTefu");
 	   return mav;
