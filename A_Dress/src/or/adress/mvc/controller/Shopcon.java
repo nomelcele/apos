@@ -26,6 +26,7 @@ import vo.CommVO;
 import vo.MemVO;
 import vo.PageVO;
 import vo.ProductVO;
+import vo.SalesCheckVO;
 import vo.ShopVO;
 import vo.StaffVO;
 
@@ -391,5 +392,23 @@ public class Shopcon {
 	   return "shop/webRTC";
    }
    
+   // 매장 - 판매등록 - 교환환불 - 환불
+   @RequestMapping(value="sh_smangrefund")
+   public ModelAndView sh_smangrefund(int sell_num){
+	   System.out.println("shopcon:"+sell_num);
+	   shservice.sh_refund(sell_num);
+	  
+	   
+	   
+	   
+	   ModelAndView mav = new ModelAndView();
+	   mav.setViewName("shop/sh_smangExchTefu");
+	   return mav;
+   }
 
+   
 }
+
+
+
+
