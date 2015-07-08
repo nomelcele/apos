@@ -3,9 +3,20 @@ package vo;
 // sell_mileage, sell_shopnum ¾øÀ½!!
 public class SalesCheckVO {
 	private String sell_memname;
+	private int sell_shopnum;
 	private String sell_date, sell_proimg;
 	private int count, sell_cash, sell_card, sell_pronum, sell_many,
 			sell_memnum, sell_num;
+	
+	
+	public int getSell_shopnum() {
+		return sell_shopnum;
+	}
+
+	public void setSell_shopnum(int sell_shopnum) {
+		this.sell_shopnum = sell_shopnum;
+	}
+
 	public String getSell_proimg() {
 		return sell_proimg;
 	}
