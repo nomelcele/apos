@@ -18,6 +18,8 @@ import org.springframework.stereotype.Repository;
 
 
 
+
+import vo.SalesCheckVO;
 import vo.SmangVO;
 
 @Repository
@@ -46,5 +48,10 @@ public class SmangDao {
 	public List<SmangVO> getListProduct(HashMap<String, String> map){
 		return ss.selectList("smang.smang_getlistproduct", map);
 		}
+	
+	// 환불교환 테이블불러오기
+	public List<SalesCheckVO> get_selltable(int sell_sell){
+		return ss.selectList("smang.get_selltable",sell_sell);
+	}
 	
 }
