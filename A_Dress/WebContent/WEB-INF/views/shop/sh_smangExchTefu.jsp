@@ -19,6 +19,18 @@ $(function(){
 		return false;//서브밋후에 페이지가 안바뀌도록 false리턴
 	});
 });
+
+function sh_managEx(num){
+	
+	var UP;
+	UP=confirm("환불 하겠습니까?");
+	if(UP){
+		alert(num);
+		location= "sh_smangrefund?sell_num="+num;
+	} else {
+	
+	}
+}
 </script>
 <section id="main-content">
 	<section class="wrapper">
@@ -63,8 +75,7 @@ $(function(){
 
 
 							</table>
-							<a class="btn btn-warning" data-toggle="modal" href="#myModal2">
-								환불 </a>
+							
 						</div>
 					</div>
 				</div>
