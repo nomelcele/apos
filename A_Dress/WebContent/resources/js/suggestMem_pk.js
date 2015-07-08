@@ -6,7 +6,7 @@
 	var loopKey = false;
 
 	function startSuggest() {
-		alert("test")
+		
 		if (check == false) {
 			setTimeout("sendKeyword();", 500);
 			loopKey = true;
