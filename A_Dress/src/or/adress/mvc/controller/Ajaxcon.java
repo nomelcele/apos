@@ -879,5 +879,32 @@ public class Ajaxcon {
 		mav.addObject("result", result);
 		return mav;
 	}
+	// 매장 - 판매등록 -환불 교환
+	@RequestMapping(value="sh_ajaxsmangexc")
+	public ModelAndView sh_ajaxsmangexc(int sell_sell){
+		System.out.println(sell_sell);
+		List<SalesCheckVO> list = smdao.get_selltable(sell_sell);
+		Iterator <SalesCheckVO> it = list.iterator();
+		StringBuffer res = new StringBuffer();
+		while (it.hasNext()) {
+			SalesCheckVO v= new SalesCheckVO();
+			v = it.next();
+			res.append("<tr>");
+			res.append("<th>").append(v.getSell_num()).append("</th>");
+			res.append("<th>").append(v.getSell_memname()).append("</th>");
+			res.append("<th>").append(v.getSell_pronum()).append("</th>");		
+			res.append("<th>").append(v.getSell_cash()).append("</th>");	
+			res.append("<th>").append(v.getSell_many()).append("</th>");
+			res.append("<th>").append("</th>");
+			res.append("</tr>");
+
+		}
+		//res.append("</tr>");
+		String strString = res.toString();
+		System.out.println(strString);
+		ModelAndView mav= new ModelAndView("ajax/sh_ajaxsmangexc");
+		mav.addObject("list",res);
+		return mav;
+	}
 	
 }
