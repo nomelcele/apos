@@ -10,8 +10,8 @@ $(function(){
 		//alert("test");
 		$.ajax({ //ajax로 보냄
 			type:"POST", //헤더에 넣어서보냄 (URL로 안보임)
-			url:"sh_ajaxsmangexc.jsp",
-			data:{name:$("#receiptno").val()},
+			url:"sh_ajaxsmangexc",
+			data:{sell_sell:$("#receiptno").val()},
 			success:function(data){
 					$('#receiptView').html(data);
 				}
@@ -51,6 +51,7 @@ $(function(){
 										<th>상품번호</th>
 										<th>판매가</th>
 										<th>수량</th>
+										<th>환불</th>
 
 									</tr>
 								</thead>
