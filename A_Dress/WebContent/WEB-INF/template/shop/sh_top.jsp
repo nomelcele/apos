@@ -20,14 +20,12 @@
 
 				<ul class="nav top-menu">
 					<li>
-						<form class="navbar-form" id ="top_search_form" action="*.apos" method="post">
-							<input type="hidden" id="cmd" name="cmd" value="sproduct">
-							<input type="hidden" id="subcmd" name="subcmd" value="pcheck">
+						<form class="navbar-form" id ="top_search_form" action="sh_productsaerch" method="post">
 							<input type="hidden" id="childcmd" name="childcmd"
 								value="search_top"> <input type="hidden"
-								id="top_shop_num" name="top_shop_num"
+								id="top_shop_num" name="shop_num"
 								value="${sessionScope.shop_num}">
-								<input type="hidden" id ="top_name_pk" name ="top_name_pk" valeu="">
+								<input type="hidden" id ="top_name_pk" name ="pro_name" valeu="">
 						</form> <input class="form-control" name="top_search" id="top_search"
 						placeholder="Search"   onKeypress="javascript:if(event.keyCode==13) { topsearch_pk();}"
 						type="text">
