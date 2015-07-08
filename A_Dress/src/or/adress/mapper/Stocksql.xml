@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="stock">
+  <insert id="Stockreq"  parameterType="stvo">
+  insert into Stockreq values(stockreq_seq.nextVal,#{shop_num},#{pcode},#{psize},#{pamount})
+  <!-- vo의 컬럼명과 똑같이 해준다./ 그리고 db에 넣는 순서와 일치시켜줌! -->
+  <!-- insert into 테이블명 values(1,2,3,4,5) -->
+  </insert>
+  <select id="Stocklist" resultType="stvo">
+select sto_num,sto_pronum,sto_size,sto_amount,pro_price,pro_img,pro_barcode from product p, stock s where p.pro_code= s.sto_pronum ;
+  </select>
+</mapper>
