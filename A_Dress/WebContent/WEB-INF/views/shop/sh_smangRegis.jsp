@@ -134,7 +134,7 @@
 							<div class="form-group">
 
 								<input type="text" class="form-control" id="ckname" style="width: 100%"
-									placeholder="고객성함" name="name" onkeydown="startSuggest()"
+									placeholder="고객성함" name="name" 
 									autocomplete="off">
 							</div>
 							<button type="button" id="ck" class="btn btn-primary" onclick="javasript:ckbtn()">검색</button>
