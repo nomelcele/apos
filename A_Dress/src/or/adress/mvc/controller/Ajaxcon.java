@@ -670,7 +670,6 @@ public class Ajaxcon {
 			iu="you";
 		}
 		outs.append("data:");
-		System.out.println("//////////////////시작///////////////////////");
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
 				outs.append("<li class=\"by-other\">");
@@ -693,7 +692,6 @@ public class Ajaxcon {
 			}
 
 		}
-		System.out.println("-----------------끝-------------------");
 		outs.append("<@>"+iu+"\n\n");
 		String str = outs.toString();
 		ModelAndView mav = new ModelAndView("ajax/chatload");
@@ -914,6 +912,35 @@ public class Ajaxcon {
 		System.out.println(strString);
 		ModelAndView mav= new ModelAndView("ajax/sh_ajaxsmangexc");
 		mav.addObject("list",res);
+		return mav;
+	}
+	
+	//본사 세일 - 상품조회
+	@RequestMapping(value="bpd_chk", method=RequestMethod.POST)
+	public ModelAndView bpd_chk(int pro_code){
+		List<ProductVO> list = pdao.getListProduct_bon3(pro_code);
+		Iterator <ProductVO> it = list.iterator();
+		StringBuffer res = new StringBuffer();
+		int i = 1;
+		while (it.hasNext()) {
+				ProductVO vo = new ProductVO();
+				vo = it.next();
+				res.append("<tr>");
+				res.append("<td>").append(vo.getPro_num()).append("</td>");
+				res.append("<td>").append(vo.getPro_name()).append("</td>");
+				res.append("<td>").append(vo.getPro_code()).append("</td>");
+				res.append("<td>").append(vo.getPro_price()).append("</td>");
+				res.append("<td><img src='upload/").append(vo.getPro_img())
+				.append("' style=\"width: 100px;\"></td>");
+				res.append("<td><img src='upload/").append(vo.getPro_barcode())
+				.append("' style=\"width: 100px;\"></td>");
+				res.append("<td><input type=\"number\" style=\"width:30%;\" class=\"form-control\" id=\"p_num\" value=\""+vo.getPro_salerate()+"\"\"></td>");
+				res.append("<td><button class='form-control6' type='button' onclick='javascript:saleaccept("+vo.getPro_salerate()+","+vo.getPro_code()+")' id='btn2' name='btn2'>적용</button></td>");
+				res.append("</tr>");
+		}
+		String str = res.toString();
+		ModelAndView mav= new ModelAndView("ajax/bpd_chk_callback");
+		mav.addObject("str", str);
 		return mav;
 	}
 	

@@ -50,6 +50,13 @@ $('#bimg').change(function(){
 });
 });
 </script>
+ <script>
+// 상품코드 분류표 팝업창
+function open_win()
+{
+ window.open('popup','popup', 'width=470, height=310, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
+}
+</script>
 <!-- 본사의 상품관리의 상품추가 페이지 입니다. -->
 
 <section id="main-content">
@@ -67,7 +74,9 @@ $('#bimg').change(function(){
 						<section class="panel">
 							<div class="panel-body">
 								<div class="form">
-
+								<button class="form-control6" type="button"
+											onclick="javascript:open_win()" id="btn1"
+											name="btn1">상품코드구분표</button>
 									<form class="form-validate form-horizontal" id="feedback_form"
 										method="post" action="bon_productAdding" enctype="multipart/form-data">
 										

@@ -78,6 +78,15 @@ public class ProductDao {
 		return ss.selectList("product.product_bon2", map);
 	}
 	
+	//상품세일페이지에서 상품검색
+	public List<ProductVO> getListProduct_bon3(int pro_code){
+		return ss.selectList("product.product_bon3", pro_code);
+	}
+	//상품세일적용]
+	public void acceptsalerate(HashMap<String, String> map){
+		ss.update("product.acceptsalerate", map);
+	}
+	
 	//신상품추가시 stock테이블에 재고0인 상태로 추가 위해 샵넘 목록뽑기!
 	public List<Integer> getshop_numlist(){
 		return ss.selectList("product.get_shopnumlist");

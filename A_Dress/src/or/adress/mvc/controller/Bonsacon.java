@@ -403,8 +403,18 @@ public class Bonsacon {
 		mav.setViewName("bonsa/bon_productDiscount");
 		return mav;
 	}
-	
 
+	// 夯荤 惑前包府 -惑前技老 -技老利侩
+	@RequestMapping(value = "/godiscount")
+	public ModelAndView godiscount(String go_pro_code, String go_salerate) {
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("go_pro_code", go_pro_code);
+		map.put("go_salerate", go_salerate);
+		pdao.acceptsalerate(map);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("bonsa/bon_productDiscount");
+		return mav;
+	}
 
 	// bon_termSalesCheck 前格喊 概免鉴困
 	@RequestMapping(value = "/bon_productSalesCheck")
