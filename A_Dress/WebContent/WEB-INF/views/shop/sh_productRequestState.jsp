@@ -21,7 +21,7 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th>순 번</th>
+									<th>신청번호</th>
 									<th>매장명</th>
 									<th>상품 이름</th>
 									<th>코드</th>
@@ -29,8 +29,9 @@
 									<th>가격</th>
 									<th>상품 사진</th>
 									<th>바코드</th>
-									<th>승인/</th>
-									<th>거절</th>
+									<th>신청 수량</th>
+									<th>신청현황</th>
+									<th>신청일</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -49,19 +50,19 @@
 <!-- 								</form> -->
 								<%-- Hidden End --%>
 
-								<c:forEach var="shopinfo" items="${list}">
+								<c:forEach var="state" items="${list}">
 									<tr>
-										<td>${shopinfo.key_num}</td>
-										<td>${shopinfo.key_name}</td>
-										<td>${shopinfo.key_crnum}</td>
-										<td>${shopinfo.key_email}</td>
-										<td>${shopinfo.key_date}</td>
-										<td>${shopinfo.key_hotkey}</td>
-
-										<td><input type="button" class="form-control" id="yes" value="YES" onclick="location='*.apos?cmd=mailSelect&subcmd=ok&mail=${shopinfo.key_email}&hotkey=${shopinfo.key_hotkey}&name=${shopinfo.key_name}'" /></td>
-											<%--location='*.apos?cmd=mailSelect&subcmd=ok&child=${shopinfo.key_email}' --%>
-											<%--javascript:goUrl('YES') --%>
-										<td><input type="button" class="form-control" id="no" value="NO" onclick="location='*.apos?cmd=mailSelect&subcmd=no&mail=${shopinfo.key_email}&name=${shopinfo.key_name}'" /></td>
+										<td>${state.req_num}</td>
+										<td>${state.shop_name}</td>
+										<td>${state.pro_name}</td>
+										<td>${state.pro_code}</td>
+										<td>${state.pro_size}</td>
+										<td>${state.pro_price}</td>
+										<td><img src="upload/ ${state.pro_img}"  style="width: 100px;"></td>
+										<td>${state.pro_barcode}</td>
+										<td>${state.pro_amount}</td>
+										<td>${state.req_status }</td>
+										<td>${state.req_date }</td>
 									</tr>
 								</c:forEach>
 							</tbody>
