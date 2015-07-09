@@ -5,6 +5,14 @@
 	pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<script>
+			function gostockyn(req_status, req_num){
+				$("#req_status").val(req_status);
+				$("#req_num").val(req_num);
+				document.getElementById("stockyn").submit();		
+			}
+			
+</script>
 <!-- 본사 상품관리의 상품재고관리 페이지 입니다.-->
 <section id="main-content">
 	<section class="wrapper">
@@ -37,6 +45,14 @@
 								</tr>
 							</thead>
 							<tbody>
+							
+										<form action="bon_productSale_1" method="post" id="stockyn">
+												<td><input type="hidden" class="form-control"
+													name='req_status' id="req_status" value="" ></td>
+												<td><input type="hidden" class="form-control"
+													name='req_num' id="req_num" value="" ></td>
+											</tr>
+										</form>
 								<%-- Hidden submit --%>
 								<%-- YES --%>
 <!-- 								<form method="post" action="sh.apos" id="reqOk"> -->
@@ -60,7 +76,7 @@
 										<td>${bon_product.pro_code}</td>
 										<td>${bon_product.pro_size}</td>
 										<td>${bon_product.pro_price}</td>
-										<td><img src="upload/${bon_product.pro_img}"></td>
+										<td><img src="upload/ ${bon_product.pro_img}"  style="width: 100px;"></td>
 										<td>${bon_product.pro_barcode}</td>
 										<td>${bon_product.pro_amount}</td>
 										<td>${bon_product.req_status }</td>
@@ -83,11 +99,12 @@ q.pro_amount -->
 									<th>신청 수량</th>
 									<th>Yes/</th>
 									<th>No</th> -->
+								
 
-										<td><input type="button" class="form-control" id="yes" value="YES" onclick="location='*.apos?cmd=mailSelect&subcmd=ok&mail=${shopinfo.key_email}&hotkey=${shopinfo.key_hotkey}&name=${shopinfo.key_name}'" /></td>
+										<td><input type="button" class="form-control" id="yes" value="YES" style="background-color: #008fcc ;  color: #000000;"onclick="javascript:gostockyn('Yes',${bon_product.req_num})" /></td>
 											<%--location='*.apos?cmd=mailSelect&subcmd=ok&child=${shopinfo.key_email}' --%>
 											<%--javascript:goUrl('YES') --%>
-										<td><input type="button" class="form-control" id="no" value="NO" onclick="location='*.apos?cmd=mailSelect&subcmd=no&mail=${shopinfo.key_email}&name=${shopinfo.key_name}'" /></td>
+										<td><input type="button" class="form-control" id="no" value="NO"  style="background-color: #ed1e1a; color: #000000;"onclick="javascript:gostockyn('No',${bon_product.req_num})"/></td>
 									</tr>
 								</c:forEach>
 							</tbody>
