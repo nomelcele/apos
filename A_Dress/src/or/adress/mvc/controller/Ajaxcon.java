@@ -614,6 +614,11 @@ public class Ajaxcon {
 		// String id = request.getRemoteAddr();
 		// outs.append("retry:2000\n");
 		String iu = "";
+		if(id.equals(list.get(0).getU_id())){
+			iu="i";
+		}else{
+			iu="you";
+		}
 		outs.append("data:");
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
@@ -625,7 +630,7 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-				iu="i";
+				
 			} else {
 				outs.append("<li class=\"by-me\">");
 				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
@@ -635,7 +640,7 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-				iu="you";
+				
 			}
 
 		}
@@ -659,6 +664,11 @@ public class Ajaxcon {
 		// String id = request.getRemoteAddr();
 		// outs.append("retry:2000\n");
 		String iu = "";
+		if(id.equals(list.get(0).getU_id())){
+			iu="i";
+		}else{
+			iu="you";
+		}
 		outs.append("data:");
 		System.out.println("//////////////////시작///////////////////////");
 		for (ChaVO e : list) {
@@ -671,8 +681,6 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-				iu="i";
-				System.out.println("나부분");
 			} else {
 				outs.append("<li class=\"by-me\">");
 				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
@@ -682,8 +690,6 @@ public class Ajaxcon {
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
-				iu="you";
-				System.out.println("너부분");
 			}
 
 		}
