@@ -50,14 +50,36 @@
 <!-- 								</form> -->
 								<%-- Hidden End --%>
 
-								<c:forEach var="shopinfo" items="${list}">
+								<c:forEach var="bon_product" items="${list}">
 									<tr>
-										<td>${shopinfo.key_num}</td>
-										<td>${shopinfo.key_name}</td>
-										<td>${shopinfo.key_crnum}</td>
-										<td>${shopinfo.key_email}</td>
-										<td>${shopinfo.key_date}</td>
-										<td>${shopinfo.key_hotkey}</td>
+										<td>${bon_product.shop_num}</td>
+										<td>${bon_product.shop_name}</td>
+										<td>${bon_product.pro_name}</td>
+										<td>${bon_product.pro_code}</td>
+										<td>${bon_product.pro_size}</td>
+										<td>${bon_product.pro_price}</td>
+										<td><img src="upload/${bon_product.pro_img}"></td>
+										<td>${bon_product.pro_barcode}</td>
+										<td>${bon_product.pro_amount}</td>
+										
+										
+										
+										<!-- 
+										select s.shop_name, s.shop_num,p.pro_name,p,pro_code,q.pro_size,q.pro_price,p.pro_img,p.pro_barcode,
+q.pro_amount -->
+										<!-- 
+										
+										<th>순 번</th>
+									<th>매장명</th>
+									<th>상품 이름</th>
+									<th>코드</th>
+									<th>사이즈</th>
+									<th>가격</th>
+									<th>상품 사진</th>
+									<th>바코드</th>
+									<th>신청 수량</th>
+									<th>Yes/</th>
+									<th>No</th> -->
 
 										<td><input type="button" class="form-control" id="yes" value="YES" onclick="location='*.apos?cmd=mailSelect&subcmd=ok&mail=${shopinfo.key_email}&hotkey=${shopinfo.key_hotkey}&name=${shopinfo.key_name}'" /></td>
 											<%--location='*.apos?cmd=mailSelect&subcmd=ok&child=${shopinfo.key_email}' --%>
