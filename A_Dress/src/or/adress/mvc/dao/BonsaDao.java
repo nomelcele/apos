@@ -1,12 +1,14 @@
-package or.adress.mvc.dao;
+ package or.adress.mvc.dao;
 
 import java.util.HashMap;
+import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import vo.BonsaVO;
+import vo.ProductVO;
 import vo.ShopVO;
 
 @Repository
@@ -59,5 +61,11 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 	      ShopVO vo =ss.selectOne("bonsa.detail_map",shop_num);
 	      return vo;
 	   }
+	
+	// 본사 세일률(discount)
+	public List<ProductVO> discount() {
+		List<ProductVO> list = ss.selectList("bonsa_discount");
+		return list;
+	}
 	
 }
