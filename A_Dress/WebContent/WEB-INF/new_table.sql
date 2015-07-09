@@ -166,6 +166,7 @@ constraint staff_staff_shopnum_fk foreign key (staff_shopnum)
 REFERENCES shop(shop_num) on delete cascade
 );
 create table stockreq(
+req_num number constraint stockreq_req_num_pk primary key,
 sto_num number(10),
 shop_num number(10),
 pro_code varchar2(10),
