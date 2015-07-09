@@ -1,5 +1,6 @@
 package or.adress.mvc.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -20,5 +21,14 @@ public class StockDao {
 	public List<StockVO> Stocklist() {
 		return ss.selectList("stock.Stocklist");
 	}
-	// 접근제한자 리턴타입 메서드명(파라미터타입 파라미터이름)
+	public void Stockreq2(StockVO vo){
+		ss.update("stock.Stockyn",vo);
+		System.out.println("업데이트!");
+	}
+	public List<StockVO> sh_productRequestState(int shop_num){
+		return ss.selectList("stock.SSlist", shop_num);
+	}
+	
 }
+	// 접근제한자 리턴타입 메서드명(파라미터타입 파라미터이름)
+
