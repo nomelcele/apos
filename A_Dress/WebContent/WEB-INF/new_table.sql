@@ -171,6 +171,7 @@ shop_num number(10),
 pro_code varchar2(10),
 pro_size number(10),
 pro_amount number(10),
+req_date date,
 constraint stockreq_pro_code_fk foreign key(pro_code) references product(pro_code) on delete cascade,
 constraint stockreq_shop_num_fk foreign key(shop_num) references shop(shop_num) on delete cascade
 );
