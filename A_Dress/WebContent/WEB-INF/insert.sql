@@ -177,206 +177,55 @@ insert into shop values(
 );
 
 
-
-
---mem insert
-
-
-insert into member values(
-1,'test','010-1234-1234','764-1234',
-'성남시 오리구','우리집 어디야',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-2,'test1','010-1234-1234','764-1234',
-'성남시 분당구','우리집 어디게',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-3,'test2','010-1234-1234','764-1234',
-'성남시 수지구','수지구 어디게',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-4,'test3','010-1234-1234','764-1234',
-'성남시 판교구','판교에 있어요',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-5,'test4','010-1234-1234','764-1234',
-'성남시 관악구','라임이 죽여줘',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-6,'test5','010-1234-1234','764-1234',
-'성남시 강동구','라임이 쩔지요',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-7,'test6','010-1234-1234','764-1234',
-'성남시 강남구','강남구 멋있어',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-8,'test7','010-1234-1234','764-1234',
-'성남시 성동구','성동구 성동일',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-9,'test8','010-1234-1234','764-1234',
-'성남시 중랑구','중랑구 방랑구',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-10,'test9','010-1234-1234','764-1234',
-'성남시 중구','중앙구 중난방',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-11,'test10','010-1234-1234','764-1234',
-'성남시 서초구','더이상 할말이',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-12,'test11','010-1234-1234','764-1234',
-'성남시 강일구','생각이 힘들어',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-13,'test12','010-1234-1234','764-1234',
-'성남시 동동구','머리가 박살나',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-14,'test13','010-1234-1234','764-1234',
-'성남시 금천구','더더더 쥐어짜',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-15,'test14','010-1234-1234','764-1234',
-'성남시 도봉구','조금만 남았어',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-16,'test15','010-1234-1234','764-1234',
-'성남시 성남구','조금만 남았네',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-17,'test16','010-1234-1234','764-1234',
-'성남시 주소 넣어줘','얼마안 남았어',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-18,'test17','010-1234-1234','764-1234',
-'성남시 우리구','이제곧 고지다',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-19,'test18','010-1234-1234','764-1234',
-'성남시 곽한구','어라라 아니네',0,sysdate,1,'email넣어줘');
-
-
-insert into member values(
-20,'test19','010-1234-1234','764-1234',
-'성남시 도와구','드디어 마지막',0,sysdate,1,'email넣어줘');
-
-
-
-
---물품 업데이트
-
-
-
-
-
-insert into product values(product_seq.nextval,'남성 검은색 자켓','15110001','0','0110',sysdate,'25000');
-insert into product values(product_seq.nextval,'남성 흰색 티셔츠','15210002','0','0110',sysdate,'12000');
-insert into product values(product_seq.nextval,'남성 흰색 티셔츠','15210005','0','0110',sysdate,'8000');
-insert into product values(product_seq.nextval,'남성 보라색 셔츠','15110003','0','0110',sysdate,'16000');
-insert into product values(product_seq.nextval,'남성 검은색 바지','15110004','0','0110',sysdate,'19000');
-
-insert into product values(product_seq.nextval,'여성 흰색 자켓','15120001','0','0110',sysdate,'13000');
-insert into product values(product_seq.nextval,'여성 청 베스트','15120002','0','0110',sysdate,'11000');
-insert into product values(product_seq.nextval,'여성 흰색 티셔츠','15120003','0','0110',sysdate,'10000');
-insert into product values(product_seq.nextval,'여성 분홍분홍 셔츠','15120005','0','0110',sysdate,'13000');
-insert into product values(product_seq.nextval,'여성 분홍 바지','15120004','0','0110',sysdate,'19000');
-
-insert into product values(product_seq.nextval,'아기 디지몬 자켓','15130001','0','0110',sysdate,'19000');
-insert into product values(product_seq.nextval,'아기 뽀로로 티셔츠','15130002','0','0110',sysdate,'8500');
-insert into product values(product_seq.nextval,'아기 코코몽 바지','15130003','0','0110',sysdate,'23000');
-insert into product values(product_seq.nextval,'아기 공룡옷','15130004','0','0110',sysdate,'22000');
-insert into product values(product_seq.nextval,'아기 피카츄옷','15130005','0','0110',sysdate,'25000');
-
-
-
-commit;
-
-
-
-update product set pro_barcode ='ba_15110001.png'  where pro_code='15110001';
-update product set pro_img ='img_15110001.jpg' where pro_code='15110001';
-
-update product set pro_barcode ='ba_15210002.png'  where pro_code='15210002';
-update product set pro_img ='img_15210002.jpg' where pro_code='15210002';
-
-update product set pro_barcode ='ba_15210005.png'  where pro_code='15210005';
-update product set pro_img ='img_15210005.jpg' where pro_code='15210005';
-
-update product set pro_barcode ='ba_15110003.png'  where pro_code='15110003';
-update product set pro_img ='img_15110003.jpg' where pro_code='15110003';
-
-update product set pro_barcode ='ba_15110004.png'  where pro_code='15110004';
-update product set pro_img ='img_15110004.jpg' where pro_code='15110004';
-
-
-
-
-
-update product set pro_barcode ='ba_15120001.png'  where pro_code='15120001';
-update product set pro_img ='img_15120001.jpg' where pro_code='15120001';
-
-update product set pro_barcode ='ba_15120002.png'  where pro_code='15120002';
-update product set pro_img ='img_15120002.jpg' where pro_code='15120002';
-
-update product set pro_barcode ='ba_15120003.png'  where pro_code='15120003';
-update product set pro_img ='img_15120003.jpg' where pro_code='15120003';
-
-update product set pro_barcode ='ba_15120005.png'  where pro_code='15120005';
-update product set pro_img ='img_15120005.jpg' where pro_code='15120005';
-
-update product set pro_barcode ='ba_15120004.png'  where pro_code='15120004';
-update product set pro_img ='img_15120004.jpg' where pro_code='15120004';
-
-
-
-
-
-
-
-
-update product set pro_barcode ='ba_15130001.png'  where pro_code='15130001';
-update product set pro_img ='img_15130001.jpg' where pro_code='15130001';
-
-update product set pro_barcode ='ba_15130002.png'  where pro_code='15130002';
-update product set pro_img ='img_15130002.jpg' where pro_code='15130002';
-
-update product set pro_barcode ='ba_15130003.png'  where pro_code='15130003';
-update product set pro_img ='img_15130003.jpg' where pro_code='15130003';
-
-update product set pro_barcode ='ba_15130004.png'  where pro_code='15130004';
-update product set pro_img ='img_15130004.jpg' where pro_code='15130004';
-
-update product set pro_barcode ='ba_15130005.png'  where pro_code='15130005';
-update product set pro_img ='img_15130005.jpg' where pro_code='15130005';
-
-
-
-
-
-
-
-
+-- member insert 문
+insert into member values(member_seq.nextval,'전지현','010-1234-1234','746-2467','성남시 북구','북구 수성동',0,sysdate,1,'jihyun@naver.com','mem1','1234');
+insert into member values(member_seq.nextval,'유보영','010-7367-2745','474-1234','서울시 동구','동구 동명동',0,sysdate,1,'dgsf@gmail.com','mem2','1234');
+insert into member values(member_seq.nextval,'김남길','010-5478-5463','346-1234','경남시 서구','서구 우산동',0,sysdate,1,'jery@naver.com','mem3','1234');
+insert into member values(member_seq.nextval,'이동욱','010-3879-4684','347-3456','경북시 광산구','광산구 두암동',0,sysdate,1,'weyh@hanmail.net','mem4','1234');
+insert into member values(member_seq.nextval,'이진욱','010-8764-4456','234-1234','충남시 성남구','성남구 주월동',0,sysdate,1,'fhytr09@naver.com','mem5','1234');
+insert into member values(member_seq.nextval,'황영동','010-4548-7564','064-5463','충북시 강북구','강북구 미평동',0,sysdate,1,'hwhy89@gmail.com','mem6','1234');
+insert into member values(member_seq.nextval,'김기욱','010-7687-1235','457-2346','강릉시 서초구','서초구 산수동',0,sysdate,1,'hjeh1@naver.com','mem7','1234');
+insert into member values(member_seq.nextval,'정보영','010-7867-5479','786-1234','속초시 송파구','송파구 산본동',0,sysdate,1,'fget@hanmail.net','mem8','1234');
+insert into member values(member_seq.nextval,'장지석','010-3468-3458','755-3466','금산시 중랑구','중랑구 청담동',0,sysdate,1,'dfge@gmail.com','mem9','1234');
+insert into member values(member_seq.nextval,'윤혜영','010-5794-3488','245-1234','영동시 관악구','관악구 보정동',0,sysdate,1,'rtyhd@naver.com','mem10','1234');
+insert into member values(member_seq.nextval,'성동일','010-5468-3475','135-3252','괴산시 영등포구','영등포구 서현동',0,sysdate,1,'hgdt@naver.com','mem11','1234');
+insert into member values(member_seq.nextval,'박수진','010-5795-5685','735-2342','성북시 은평구','은평구 구미동',0,sysdate,1,'sujin@hanmail.net','mem12','1234');
+insert into member values(member_seq.nextval,'빈지노','010-4345-2467','245-1234','대전시 오리구','오리구 서초동',0,sysdate,1,'ji10@naver.com','mem13','1234');
+insert into member values(member_seq.nextval,'이인호','010-8744-9054','452-2356','인천시 죽전구','죽전구 논현동',0,sysdate,1,'inho@gmail.com','mem14','1234');
+insert into member values(member_seq.nextval,'엄지원','010-4684-5467','345-2352','전남시 대화구','대화구 우면동',0,sysdate,1,'jiwon@naver.com','mem15','1234');
+insert into member values(member_seq.nextval,'최수희','010-1234-3578','764-1234','전주시 삼성구','삼성구 당월동',0,sysdate,1,'sususu@hanmail.net','mem16','1234');
+insert into member values(member_seq.nextval,'전소민','010-2466-3464','345-1356','전북시 오성구','오성구 미응동',0,sysdate,1,'somin@naver.com','mem17','1234');
+insert into member values(member_seq.nextval,'홍진영','010-5773-7843','065-8845','수성시 중구','중구 부장동',0,sysdate,1,'jin09@gmail.com','mem18','1234');
+insert into member values(member_seq.nextval,'홍금보','010-5745-6708','076-0986','시흥시 성동구','성동구 구이동',0,sysdate,1,'honghong@naver.com','mem19','1234');
+insert into member values(member_seq.nextval,'나영석','010-5464-8747','235-1234','안양시 성북구','성북구 판교동',0,sysdate,1,'naya@hanmail.net','mem20','1234');
+
+
+
+
+-- insert product
+-- 남성복
+insert into product values(product_seq.nextval,'남성 블루 니트','1531115001','ba_1531115001.png','img_1531115001.jpg',sysdate,25000,0);
+insert into product values(product_seq.nextval,'남성 블루 오버 셔츠','1541115002','ba_1541115002.png','img_1541115002.jpg',sysdate,50000,0);
+insert into product values(product_seq.nextval,'남성 스트라이프 레드 니트','1511111003','ba_1511111003.png','img_1511111003.jpg',sysdate,75000,0);
+insert into product values(product_seq.nextval,'남성 블루 팬츠','1522115004','ba_1522115004.png','img_1522115004.jpg',sysdate,55000,0);
+insert into product values(product_seq.nextval,'남성 카모플라쥬 팬츠','1511215005','ba_1511215005.png','img_1511215005.jpg',sysdate,35000,0);
+
+
+-- 여성복
+insert into product values(product_seq.nextval,'여성 기모노 티셔츠','1512119001','ba_1512119001.png','img_1512119001.jpg',sysdate,25000,0);
+insert into product values(product_seq.nextval,'여성 데님 팬츠','1522219002','ba_1522219002.png','img_1522219002.jpg',sysdate,30000,0);
+insert into product values(product_seq.nextval,'여성 롱 블레이져','1532115003','ba_1532115003.png','img_1532115003.jpg',sysdate,65000,0);
+insert into product values(product_seq.nextval,'여성 체크 원피스','1532110004','ba_1532110004.png','img_1532110004.jpg',sysdate,45000,0);
+insert into product values(product_seq.nextval,'여성 화이트 팬츠','1542210005','ba_1542210005.png','img_1542210005.jpg',sysdate,37000,0);
+
+
+
+-- 아동복
+insert into product values(product_seq.nextval,'아동 노랑 티셔츠','1523103001','ba_1523103001.png','img_1523103001.jpg',sysdate,15000,0);
+insert into product values(product_seq.nextval,'아동 민트 원피스','1513104002','ba_1513104002.png','img_1513104002.jpg',sysdate,22000,0);
+insert into product values(product_seq.nextval,'아동 오가닉 핑크 원피스','1523101003','ba_1523101003.png','img_1523101003.jpg',sysdate,17000,0);
+insert into product values(product_seq.nextval,'아동 포켓 데님 팬츠','1543211004','ba_1543211004.png','img_1543211004.jpg',sysdate,9000,0);
+insert into product values(product_seq.nextval,'아동 폴로셔츠','1533104005','ba_1533104005.png','img_1533104005.jpg',sysdate,12000,0);
 
 
 
@@ -385,13 +234,6 @@ update product set pro_img ='img_15130005.jpg' where pro_code='15130005';
 --이곳은 staff table입니다.--
 
 
-create table staff(
-staff_num number constraint staff_staff_num_pk primary key,
-staff_name varchar2(20),
-staff_position varchar2(30),
-staff_tel varchar2(30),
-staff_shopnum number(10), constraint staff_staff_shopnum_fk foreign key (staff_shopnum)
-REFERENCES shop(shop_num) on delete cascade);
 
 insert into staff values(1,'도하진',1,'010-121-1234',1,'test0',1234);
 insert into staff values(2,'강은지',2,'123-1221-3000',1,'test1',1234);
@@ -461,163 +303,156 @@ insert into staff values(43,'경재욱',1,'123-123-6666',15,'test42',1234);
 insert into staff values(44,'이인의',2,'123-123-7777',15,'test43',1234);
 insert into staff values(45,'안주호',2,'123-123-8888',15,'test44',1234);
 
-alter table staff MODIFY  staff_position number(10);
-alter table staff add(staff_id varchar(30) constraint staff_staff_id_uq unique);
-alter table staff add(staff_pwd varchar(30));
 
 --사원들의 근무 대리점을 출력하시오.
 
 
 
-select a.staff_num,a.staff_name,a.staff_tel,s.shop_name,a.STAFF_POSITION from staff a , shop s
-where s.shop_num=a.staff_shopnum;
-commit;
-select a.staff_num,a.staff_name,a.staff_tel,s.shop_name,a.STAFF_POSITION from staff a , shop s where s.shop_num=a.staff_shopnum;
-select * from staff;
+
 
 
 
 -- stock (5/28) 수정
 
 -- 대리점 1호, 남성옷 1호
-insert into stock values(stock_seq.nextval,'15110001',50,1,95);
-insert into stock values(stock_seq.nextval,'15110001',20,1,100);
-insert into stock values(stock_seq.nextval,'15110001',25,1,105);
+insert into stock values(stock_seq.nextval,'1531115001',50,1,95);
+insert into stock values(stock_seq.nextval,'1531115001',20,1,100);
+insert into stock values(stock_seq.nextval,'1531115001',25,1,105);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15110001',63,2,95);
-insert into stock values(stock_seq.nextval,'15110001',14,2,100);
-insert into stock values(stock_seq.nextval,'15110001',58,2,105);
+insert into stock values(stock_seq.nextval,'1531115001',63,2,95);
+insert into stock values(stock_seq.nextval,'1531115001',14,2,100);
+insert into stock values(stock_seq.nextval,'1531115001',58,2,105);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15110001',43,3,95);
-insert into stock values(stock_seq.nextval,'15110001',32,3,100);
-insert into stock values(stock_seq.nextval,'15110001',85,3,105);
+insert into stock values(stock_seq.nextval,'1531115001',43,3,95);
+insert into stock values(stock_seq.nextval,'1531115001',32,3,100);
+insert into stock values(stock_seq.nextval,'1531115001',85,3,105);
 
 
 -- 대리점 1호, 여성옷 1호
-insert into stock values(stock_seq.nextval,'15120001',32,1,55);
-insert into stock values(stock_seq.nextval,'15120001',54,1,66);
+insert into stock values(stock_seq.nextval,'1512119001',32,1,55);
+insert into stock values(stock_seq.nextval,'1512119001',54,1,66);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15120001',33,2,55);
-insert into stock values(stock_seq.nextval,'15120001',54,2,66);
+insert into stock values(stock_seq.nextval,'1512119001',33,2,55);
+insert into stock values(stock_seq.nextval,'1512119001',54,2,66);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15120001',43,3,55);
-insert into stock values(stock_seq.nextval,'15120001',22,3,66);
+insert into stock values(stock_seq.nextval,'1512119001',43,3,55);
+insert into stock values(stock_seq.nextval,'1512119001',22,3,66);
 
 
 -- 대리점 1호, 아기옷 1호
-insert into stock values(stock_seq.nextval,'15130001',37,1,2);
-insert into stock values(stock_seq.nextval,'15130001',34,1,3);
-insert into stock values(stock_seq.nextval,'15130001',62,1,4);
+insert into stock values(stock_seq.nextval,'1523103001',37,1,2);
+insert into stock values(stock_seq.nextval,'1523103001',34,1,3);
+insert into stock values(stock_seq.nextval,'1523103001',62,1,4);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15130001',17,2,2);
-insert into stock values(stock_seq.nextval,'15130001',24,2,3);
-insert into stock values(stock_seq.nextval,'15130001',82,2,4);
+insert into stock values(stock_seq.nextval,'1523103001',17,2,2);
+insert into stock values(stock_seq.nextval,'1523103001',24,2,3);
+insert into stock values(stock_seq.nextval,'1523103001',82,2,4);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15130001',27,3,2);
-insert into stock values(stock_seq.nextval,'15130001',54,3,3);
-insert into stock values(stock_seq.nextval,'15130001',35,3,4);
+insert into stock values(stock_seq.nextval,'1523103001',27,3,2);
+insert into stock values(stock_seq.nextval,'1523103001',54,3,3);
+insert into stock values(stock_seq.nextval,'1523103001',35,3,4);
 
 
 
 
 
 -- 대리점 1호, 남성옷 2호
-insert into stock values(stock_seq.nextval,'15110002',50,1,95);
-insert into stock values(stock_seq.nextval,'15110002',20,1,100);
-insert into stock values(stock_seq.nextval,'15110002',25,1,105);
+insert into stock values(stock_seq.nextval,'1541115002',50,1,95);
+insert into stock values(stock_seq.nextval,'1541115002',20,1,100);
+insert into stock values(stock_seq.nextval,'1541115002',25,1,105);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15110002',63,2,95);
-insert into stock values(stock_seq.nextval,'15110002',14,2,100);
-insert into stock values(stock_seq.nextval,'15110002',58,2,105);
+insert into stock values(stock_seq.nextval,'1541115002',63,2,95);
+insert into stock values(stock_seq.nextval,'1541115002',14,2,100);
+insert into stock values(stock_seq.nextval,'1541115002',58,2,105);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15110002',43,3,95);
-insert into stock values(stock_seq.nextval,'15110002',32,3,100);
-insert into stock values(stock_seq.nextval,'15110002',85,3,105);
+insert into stock values(stock_seq.nextval,'1541115002',43,3,95);
+insert into stock values(stock_seq.nextval,'1541115002',32,3,100);
+insert into stock values(stock_seq.nextval,'1541115002',85,3,105);
 
 
 -- 대리점 1호, 여성옷 2호
-insert into stock values(stock_seq.nextval,'15120002',32,1,55);
-insert into stock values(stock_seq.nextval,'15120002',54,1,66);
+insert into stock values(stock_seq.nextval,'1541115002',32,1,55);
+insert into stock values(stock_seq.nextval,'1541115002',54,1,66);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15120002',33,2,55);
-insert into stock values(stock_seq.nextval,'15120002',54,2,66);
+insert into stock values(stock_seq.nextval,'1541115002',33,2,55);
+insert into stock values(stock_seq.nextval,'1541115002',54,2,66);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15120002',43,3,55);
-insert into stock values(stock_seq.nextval,'15120002',22,3,66);
+insert into stock values(stock_seq.nextval,'1541115002',43,3,55);
+insert into stock values(stock_seq.nextval,'1541115002',22,3,66);
 
 
 -- 대리점 1호, 아기옷 2호
-insert into stock values(stock_seq.nextval,'15130002',37,1,2);
-insert into stock values(stock_seq.nextval,'15130002',34,1,3);
-insert into stock values(stock_seq.nextval,'15130002',62,1,4);
+insert into stock values(stock_seq.nextval,'1513104002',37,1,2);
+insert into stock values(stock_seq.nextval,'1513104002',34,1,3);
+insert into stock values(stock_seq.nextval,'1513104002',62,1,4);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15130002',17,2,2);
-insert into stock values(stock_seq.nextval,'15130002',24,2,3);
-insert into stock values(stock_seq.nextval,'15130002',82,2,4);
+insert into stock values(stock_seq.nextval,'1513104002',17,2,2);
+insert into stock values(stock_seq.nextval,'1513104002',24,2,3);
+insert into stock values(stock_seq.nextval,'1513104002',82,2,4);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15130002',27,3,2);
-insert into stock values(stock_seq.nextval,'15130002',54,3,3);
-insert into stock values(stock_seq.nextval,'15130002',35,3,4);
+insert into stock values(stock_seq.nextval,'1513104002',27,3,2);
+insert into stock values(stock_seq.nextval,'1513104002',54,3,3);
+insert into stock values(stock_seq.nextval,'1513104002',35,3,4);
 
 
 
 
 
 -- 대리점 1호, 남성옷 3호
-insert into stock values(stock_seq.nextval,'15110003',50,1,95);
-insert into stock values(stock_seq.nextval,'15110003',20,1,100);
-insert into stock values(stock_seq.nextval,'15110003',25,1,105);
+insert into stock values(stock_seq.nextval,'1511111003',50,1,95);
+insert into stock values(stock_seq.nextval,'1511111003',20,1,100);
+insert into stock values(stock_seq.nextval,'1511111003',25,1,105);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15110003',63,2,95);
-insert into stock values(stock_seq.nextval,'15110003',14,2,100);
-insert into stock values(stock_seq.nextval,'15110003',58,2,105);
+insert into stock values(stock_seq.nextval,'1511111003',63,2,95);
+insert into stock values(stock_seq.nextval,'1511111003',14,2,100);
+insert into stock values(stock_seq.nextval,'1511111003',58,2,105);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15110003',43,3,95);
-insert into stock values(stock_seq.nextval,'15110003',32,3,100);
-insert into stock values(stock_seq.nextval,'15110003',85,3,105);
+insert into stock values(stock_seq.nextval,'1511111003',43,3,95);
+insert into stock values(stock_seq.nextval,'1511111003',32,3,100);
+insert into stock values(stock_seq.nextval,'1511111003',85,3,105);
 
 
 -- 대리점 1호, 여성옷 3호
-insert into stock values(stock_seq.nextval,'15120003',32,1,55);
-insert into stock values(stock_seq.nextval,'15120003',54,1,66);
+insert into stock values(stock_seq.nextval,'1532115003',32,1,55);
+insert into stock values(stock_seq.nextval,'1532115003',54,1,66);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15120003',33,2,55);
-insert into stock values(stock_seq.nextval,'15120003',54,2,66);
+insert into stock values(stock_seq.nextval,'1532115003',33,2,55);
+insert into stock values(stock_seq.nextval,'1532115003',54,2,66);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15120003',43,3,55);
-insert into stock values(stock_seq.nextval,'15120003',22,3,66);
+insert into stock values(stock_seq.nextval,'1532115003',43,3,55);
+insert into stock values(stock_seq.nextval,'1532115003',22,3,66);
 
 
 -- 대리점 1호, 아기옷 3호
-insert into stock values(stock_seq.nextval,'15130003',37,1,2);
-insert into stock values(stock_seq.nextval,'15130003',34,1,3);
-insert into stock values(stock_seq.nextval,'15130003',62,1,4);
+insert into stock values(stock_seq.nextval,'1523101003',37,1,2);
+insert into stock values(stock_seq.nextval,'1523101003',34,1,3);
+insert into stock values(stock_seq.nextval,'1523101003',62,1,4);
 
 -- 대리점 2호
-insert into stock values(stock_seq.nextval,'15130003',17,2,2);
-insert into stock values(stock_seq.nextval,'15130003',24,2,3);
-insert into stock values(stock_seq.nextval,'15130003',82,2,4);
+insert into stock values(stock_seq.nextval,'1523101003',17,2,2);
+insert into stock values(stock_seq.nextval,'1523101003',24,2,3);
+insert into stock values(stock_seq.nextval,'1523101003',82,2,4);
 
 -- 대리점 3호
-insert into stock values(stock_seq.nextval,'15130003',27,3,2);
-insert into stock values(stock_seq.nextval,'15130003',54,3,3);
-insert into stock values(stock_seq.nextval,'15130003',35,3,4);
+insert into stock values(stock_seq.nextval,'1523101003',27,3,2);
+insert into stock values(stock_seq.nextval,'1523101003',54,3,3);
+insert into stock values(stock_seq.nextval,'1523101003',35,3,4);
 
 
 
@@ -628,949 +463,130 @@ insert into stock values(stock_seq.nextval,'15130003',35,3,4);
 
 
 -- sell 수정 (5월 28일)
-
-insert into sell values(sell_seq.nextval, 15110001, 25000, 1000, 1, 1, '2015-05-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 50000, 1230, 2, 1, '2015-04-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 17000, 6825, 3, 1, '2015-03-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 20000, 3567, 4, 1, '2015-01-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 34000, 3663, 5, 1, '2014-12-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 32000, 1343, 2, 1, '2015-01-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 65000, 1224, 3, 1, '2014-12-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 79000, 8954, 1, 1, '2015-01-05', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 49000, 6433, 5, 1, '2014-11-30', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 51000, 8267, 4, 1, '2015-04-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 27000, 3583, 3, 1, '2015-05-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 29000, 5793, 3, 1, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 36000, 8433, 2, 1, '2015-02-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 3463, 2, 1, '2014-12-31', 6, 1);
-
-
-
----------------------------------------------------------------------------------------------------매장 1
-insert into sell values(sell_seq.nextval, 15110001, 21000, 1022, 1, 1, '2014-12-31', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 3463, 1, 2, '2014-12-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15220002, 17000, 1120, 1, 3, '2014-12-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 14000, 0, 1, 4, '2014-12-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15210002, 9000, 1250, 1, 3, '2014-12-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310002, 25000, 0, 1, 6, '2014-12-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 14000, 2000, 1, 9, '2014-12-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15210002, 9000, 0, 1, 7, '2014-12-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310002, 25000, 2210, 1, 5, '2014-12-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 14000, 2525, 1, 7, '2014-12-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15220002, 9000, 5020, 1, 2, '2014-12-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 24000, 1752, 1, 1, '2014-12-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 14000, 5959, 1, 9, '2014-12-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 11, '2014-12-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1100, 1, 10, '2014-12-16', 6, 1);
-insert into sell values(sell_seq.nextval, 15220002, 9000, 5020, 1, 2, '2014-12-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 24000, 1752, 1, 12, '2014-12-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 1, 13, '2014-12-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 17000, 0, 1, 14, '2014-12-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1100, 1, 17, '2014-12-26', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 1022, 1, 3, '2015-01-29', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 1, 19, '2015-01-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15220002, 16000, 1120, 1, 3, '2015-01-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 18000, 0, 1, 4, '2015-01-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310002, 95000, 1250, 1, 13, '2015-01-15', 6, 1);
-insert into sell values(sell_seq.nextval, 15310002, 23500, 0, 1, 16, '2015-01-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 2000, 1, 19, '2015-01-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 17, '2015-01-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 34000, 210, 1, 5, '2015-01-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 3525, 1, 7, '2015-01-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 9000, 5959, 1, 2, '2015-01-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 1852, 1, 1, '2015-01-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 14000, 5959, 1, 9, '2015-01-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 11, '2015-01-18', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1250, 1, 10, '2015-01-16', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 5020, 1, 2, '2015-01-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 24000, 2052, 1, 12, '2015-01-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 1, 20, '2015-01-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 14, '2015-01-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1800, 1, 17, '2015-01-26', 6, 1);
-
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 2582, 1, 3, '2015-02-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 1, 17, '2015-02-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220002, 16000, 1135, 1, 3, '2015-02-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 18000, 0, 1, 4, '2015-02-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15310002, 95000, 1460, 1, 13, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 23500, 0, 1, 16, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 3500, 1, 9, '2015-02-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 17, '2015-02-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 34000, 2880, 1, 5, '2015-02-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 3865, 1, 7, '2015-02-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 9000, 5689, 1, 2, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 1, 1, '2015-02-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 14000, 5869, 1, 9, '2015-02-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 11, '2015-02-18', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-02-06', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 5020, 1, 19, '2015-02-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 24000, 2352, 1, 12, '2015-02-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 1, 20, '2015-02-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 4, '2015-02-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1860, 1, 17, '2015-02-26', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 2534, 1, 3, '2015-03-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 1, 17, '2015-03-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 1, 3, '2015-03-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 1, 14, '2015-03-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 35000, 646, 1, 23, '2015-03-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 1, 16, '2015-03-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 1, 9, '2015-03-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 7, '2015-03-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 34000, 659, 1, 15, '2015-03-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 1, 7, '2015-03-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 1, 2, '2015-03-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 1, 3, '2015-03-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 1, 9, '2015-03-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 1, 11, '2015-03-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-03-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 1, 19, '2015-03-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 1, 12, '2015-03-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 15000, 5959, 1, 22, '2015-03-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 1, 15, '2015-03-10', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 22000, 1860, 1, 17, '2015-03-21', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 2534, 1, 13, '2015-04-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 1, 17, '2015-04-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 1, 21, '2015-04-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 1, 14, '2015-04-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 1, 23, '2015-04-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 1, 9, '2015-04-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 1, 27, '2015-04-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 7, '2015-04-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 21000, 659, 1, 11, '2015-04-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 1, 7, '2015-04-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 1, 22, '2015-04-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 1, 3, '2015-04-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 1, 9, '2015-04-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 1, 13, '2015-04-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-04-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 1, 19, '2015-04-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 1, 12, '2015-04-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 13000, 5959, 1, 22, '2015-04-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 18000, 0, 1, 15, '2015-04-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 26000, 1860, 1, 17, '2015-04-21', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15310001, 21000, 2534, 1, 13, '2015-05-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 1, 17, '2015-05-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 1, 21, '2015-05-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 2945, 1, 14, '2015-05-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 33000, 936, 1, 23, '2015-05-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 26000, 0, 1, 9, '2015-05-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 3144, 1, 27, '2015-05-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 1, 7, '2015-05-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 21000, 1472, 1, 11, '2015-05-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 1180, 1, 7, '2015-05-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 9000, 1485, 1, 22, '2015-05-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 3852, 1, 3, '2015-05-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 12500, 5869, 1, 9, '2015-05-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 1, 13, '2015-05-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 1, 10, '2015-05-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 1, 19, '2015-05-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 1, 12, '2015-05-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 1, 22, '2015-05-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 1, 15, '2015-05-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 2160, 1, 17, '2015-05-21', 6, 1);
-
-
----------------------------------------------------------------------------------------------------매장 2
-insert into sell values(sell_seq.nextval, 15110001, 19000, 30, 2, 1, '2014-12-31', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 14500, 20, 2, 3, '2014-12-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 3500, 2, 8, '2014-12-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 4, '2014-12-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 26000, 3500, 2, 9, '2014-12-06', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 2160, 2, 6, '2014-12-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 2, 1, '2014-12-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 10, '2014-12-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 2, 15, '2014-12-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 7500, 210, 2, 12, '2014-12-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 2, 11, '2014-12-31', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 16000, 160, 2, 13, '2014-12-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 9000, 3500, 2, 8, '2014-12-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 18000, 260, 2, 14, '2014-12-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 15000, 3500, 2, 9, '2014-12-06', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 6, '2014-12-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 17000, 300, 2, 1, '2014-12-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 2, 10, '2014-12-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 23000, 30, 2, 4, '2014-12-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 3, '2014-12-17', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15310003, 12000, 620, 2, 3, '2015-01-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 4154, 2, 12, '2015-01-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 2, 2, '2015-01-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 14, '2015-01-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 18000, 240, 2, 7, '2015-01-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 5, '2015-01-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 436, 2, 22, '2015-01-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5259, 2, 21, '2015-01-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-01-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 19, '2015-01-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-01-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 552, 2, 14, '2015-01-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 359, 2, 12, '2015-01-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-01-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 2, 7, '2015-01-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 5, '2015-01-29', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 1352, 2, 22, '2015-01-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 2, 21, '2015-01-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-01-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 2, 20, '2015-01-29', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15310003, 12000, 2320, 2, 3, '2015-02-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 4234, 2, 12, '2015-02-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 14000, 5349, 2, 2, '2015-02-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 14, '2015-02-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 19000, 2450, 2, 7, '2015-02-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 5, '2015-02-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 22000, 436, 2, 22, '2015-02-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 11000, 5259, 2, 21, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 24000, 0, 2, 18, '2015-02-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 19, '2015-02-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-02-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 552, 2, 14, '2015-02-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 359, 2, 12, '2015-02-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-02-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 2, 7, '2015-02-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 5, '2015-02-22', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 2332, 2, 22, '2015-02-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 2, 21, '2015-02-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-02-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 2, 20, '2015-02-27', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15310003, 12000, 2320, 2, 3, '2015-03-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 11000, 4344, 2, 14, '2015-03-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 14000, 5349, 2, 28, '2015-03-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-03-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 19000, 2420, 2, 3, '2015-03-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 5, '2015-03-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 21000, 436, 2, 11, '2015-03-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 11000, 5259, 2, 4, '2015-03-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 24000, 0, 2, 18, '2015-03-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 29, '2015-03-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-03-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 5152, 2, 14, '2015-03-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 13000, 1359, 2, 3, '2015-03-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-03-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15310001, 16000, 1114, 2, 7, '2015-03-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 5, '2015-03-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 2122, 2, 22, '2015-03-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 13000, 5234, 2, 21, '2015-03-22', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12500, 0, 2, 18, '2015-03-15', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 2169, 2, 22, '2015-03-23', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 2534, 2, 13, '2015-04-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 2, 27, '2015-04-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 2, 8, '2015-04-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 2, 14, '2015-04-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 2, 23, '2015-04-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 2, 10, '2015-04-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 2, 23, '2015-04-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 2, 17, '2015-04-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 21000, 659, 2, 21, '2015-04-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 2, 7, '2015-04-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 2, 22, '2015-04-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 2, 22, '2015-04-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 2, 19, '2015-04-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 2, 13, '2015-04-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 2, 10, '2015-04-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 2, 19, '2015-04-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 2, 12, '2015-04-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 13000, 5959, 2, 22, '2015-04-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 18000, 0, 2, 15, '2015-04-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 26000, 1860, 2, 27, '2015-04-21', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15310003, 12000, 6120, 2, 23, '2015-05-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 1224, 2, 12, '2015-05-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5029, 2, 2, '2015-05-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 17, '2015-05-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 18000, 240, 2, 7, '2015-05-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 2, 15, '2015-05-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 436, 2, 12, '2015-05-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5259, 2, 21, '2015-05-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-05-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 2, 17, '2015-05-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 2, 19, '2015-05-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 1452, 2, 14, '2015-05-16', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 3520, 2, 12, '2015-05-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 2, 18, '2015-05-15', 6, 1);
-insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 2, 30, '2015-05-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 345, 2, 5, '2015-05-29', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 142, 2, 2, '2015-05-18', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 2, 21, '2015-05-22', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 2, 18, '2015-05-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 2, 20, '2015-05-19', 6, 1);
-
-
----------------------------------------------------------------------------------------------------매장 3
-insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 3, 1, '2014-12-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 9, '2014-12-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 4, '2014-12-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 7500, 210, 3, 12, '2014-12-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 11, '2014-12-31', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 3, 1, '2014-12-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 200, 3, 10, '2014-12-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 6, '2014-12-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 7500, 230, 3, 4, '2014-12-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 3, '2014-12-31', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 22000, 350, 3, 2, '2014-12-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 6, '2014-12-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 7, '2014-12-06', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 7500, 220, 3, 8, '2014-12-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 11, '2014-12-30', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 22000, 50, 3, 1, '2014-12-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 10, '2014-12-22', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 5, '2014-12-15', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 7500, 210, 3, 2, '2014-12-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15110001, 21000, 0, 3, 1, '2014-12-11', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15310003, 12000, 620, 3, 3, '2015-01-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 4154, 3, 12, '2015-01-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 3, 2, '2015-01-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 3, 14, '2015-01-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 18000, 240, 3, 7, '2015-01-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 164, 3, 5, '2015-01-09', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 436, 3, 22, '2015-01-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5259, 3, 21, '2015-01-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 3, 18, '2015-01-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 160, 3, 19, '2015-01-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 3, 19, '2015-01-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 10000, 552, 3, 14, '2015-01-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 359, 3, 12, '2015-01-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 3, 18, '2015-01-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310001, 18000, 1160, 3, 7, '2015-01-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 60, 3, 5, '2015-01-29', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 20000, 1352, 3, 22, '2015-01-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5234, 3, 21, '2015-01-24', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 17000, 0, 3, 18, '2015-01-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 11000, 2160, 3, 20, '2015-01-29', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 2582, 3, 3, '2015-02-22', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 0, 3, 17, '2015-02-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220002, 16000, 1135, 3, 3, '2015-02-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 18000, 0, 3, 4, '2015-02-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310002, 35000, 1460, 3, 13, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 23500, 0, 3, 16, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 3500, 3, 19, '2015-02-21', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 17, '2015-02-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 34000, 2880, 3, 5, '2015-02-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 3865, 3, 7, '2015-02-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 9000, 5689, 3, 2, '2015-02-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 3, 11, '2015-02-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 16500, 5869, 3, 9, '2015-02-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 3, 11, '2015-02-18', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 3, 10, '2015-02-06', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 5020, 3, 19, '2015-02-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 24000, 2352, 3, 12, '2015-02-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 15000, 5959, 3, 20, '2015-02-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 3, 3, '2015-02-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1860, 3, 17, '2015-02-26', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 1534, 3, 11, '2015-03-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 1344, 3, 17, '2015-03-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 3, 3, '2015-03-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 14000, 2345, 3, 14, '2015-03-03', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 3, 23, '2015-03-16', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 3, 16, '2015-03-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 1587, 3, 9, '2015-03-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 7, '2015-03-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 33000, 659, 3, 15, '2015-03-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 3, 7, '2015-03-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 11000, 1459, 3, 2, '2015-03-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 3, 23, '2015-03-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 3, 9, '2015-03-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 3, 11, '2015-03-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 3, 10, '2015-03-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 3, 19, '2015-03-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 21000, 4352, 3, 12, '2015-03-13', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 14000, 2959, 3, 20, '2015-03-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 19000, 0, 3, 23, '2015-03-10', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 22000, 1860, 3, 17, '2015-03-21', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15110001, 21000, 3634, 3, 13, '2015-04-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 1587, 3, 17, '2015-04-02', 6, 1);
-insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 3, 21, '2015-04-07', 6, 1);
-insert into sell values(sell_seq.nextval, 15120001, 14000, 2387, 3, 14, '2015-04-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 33000, 646, 3, 23, '2015-04-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 27000, 0, 3, 9, '2015-04-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 2587, 3, 27, '2015-04-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 7, '2015-04-28', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 21000, 2599, 3, 17, '2015-04-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 15000, 389, 3, 7, '2015-04-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 9000, 1459, 3, 22, '2015-04-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15130003, 24000, 3852, 3, 23, '2015-04-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 17500, 5869, 3, 9, '2015-04-29', 6, 1);
-insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 3, 13, '2015-04-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 2580, 3, 10, '2015-04-27', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 3420, 3, 19, '2015-04-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 3, 12, '2015-04-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 13000, 5902, 3, 28, '2015-04-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15210003, 18000, 0, 3, 15, '2015-04-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 26000, 1860,03, 17, '2015-04-21', 6, 1);
-
-insert into sell values(sell_seq.nextval, 15310001, 21000, 2534, 3, 13, '2015-05-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 15000, 6344, 3, 17, '2015-05-12', 6, 1);
-insert into sell values(sell_seq.nextval, 15220001, 16000, 0, 3, 21, '2015-05-06', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 2945, 3, 14, '2015-05-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 33000, 936, 3, 23, '2015-05-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15110002, 26000, 0, 3, 9, '2015-05-14', 6, 1);
-insert into sell values(sell_seq.nextval, 15130001, 12000, 3144, 3, 27, '2015-05-11', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 11000, 0, 3, 13, '2015-05-18', 6, 1);
-insert into sell values(sell_seq.nextval, 15310005, 21000, 1472, 3, 11, '2015-05-04', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 1180, 3, 7, '2015-05-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15210004, 9000, 1485, 3, 22, '2015-05-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 3852, 3, 3, '2015-05-20', 6, 1);
-insert into sell values(sell_seq.nextval, 15130005, 12500, 5869, 3, 9, '2015-05-23', 6, 1);
-insert into sell values(sell_seq.nextval, 15110003, 19000, 0, 3, 18, '2015-05-19', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 12000, 1260, 3, 10, '2015-05-26', 6, 1);
-insert into sell values(sell_seq.nextval, 15220004, 8500, 3020, 3, 19, '2015-05-01', 6, 1);
-insert into sell values(sell_seq.nextval, 15120003, 24000, 4352, 3, 2, '2015-05-17', 6, 1);
-insert into sell values(sell_seq.nextval, 15120002, 18000, 5959, 3, 12, '2015-05-08', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 0, 3, 15, '2015-05-25', 6, 1);
-insert into sell values(sell_seq.nextval, 15310003, 13500, 2160, 3, 17, '2015-05-29', 6, 1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---05 29 수정 from
-
-update product set pro_barcode ='ba_15110001.png'  where pro_code='15110001';
-update product set pro_img ='img_15110001.jpg' where pro_code='15110001';
-
-update product set pro_barcode ='ba_15210002.png'  where pro_code='15210002';
-update product set pro_img ='img_15210002.jpg' where pro_code='15210002';
-
-update product set pro_barcode ='ba_15210005.png'  where pro_code='15210005';
-update product set pro_img ='img_15210005.jpg' where pro_code='15210005';
-
-update product set pro_barcode ='ba_15110003.png'  where pro_code='15110003';
-update product set pro_img ='img_15110003.jpg' where pro_code='15110003';
-
-update product set pro_barcode ='ba_15110004.png'  where pro_code='15110004';
-update product set pro_img ='img_15110004.jpg' where pro_code='15110004';
-
-
-
-
-
-update product set pro_barcode ='ba_15120001.png'  where pro_code='15120001';
-update product set pro_img ='img_15120001.jpg' where pro_code='15120001';
-
-update product set pro_barcode ='ba_15120002.png'  where pro_code='15120002';
-update product set pro_img ='img_15120002.jpg' where pro_code='15120002';
-
-update product set pro_barcode ='ba_15120003.png'  where pro_code='15120003';
-update product set pro_img ='img_15120003.jpg' where pro_code='15120003';
-
-update product set pro_barcode ='ba_15120005.png'  where pro_code='15120005';
-update product set pro_img ='img_15120005.jpg' where pro_code='15120005';
-
-update product set pro_barcode ='ba_15120004.png'  where pro_code='15120004';
-update product set pro_img ='img_15120004.jpg' where pro_code='15120004';
-
-
-
-
-
-
-
-
-update product set pro_barcode ='ba_15130001.png'  where pro_code='15130001';
-update product set pro_img ='img_15130001.jpg' where pro_code='15130001';
-
-update product set pro_barcode ='ba_15130002.png'  where pro_code='15130002';
-update product set pro_img ='img_15130002.jpg' where pro_code='15130002';
-
-update product set pro_barcode ='ba_15130003.png'  where pro_code='15130003';
-update product set pro_img ='img_15130003.jpg' where pro_code='15130003';
-
-update product set pro_barcode ='ba_15130004.png'  where pro_code='15130004';
-update product set pro_img ='img_15130004.jpg' where pro_code='15130004';
-
-update product set pro_barcode ='ba_15130005.png'  where pro_code='15130005';
-update product set pro_img ='img_15130005.jpg' where pro_code='15130005';
-
-
-
-update product set pro_price ='100000';
-
-
-
-
-
-----------update
-update shop set shop_master ='김현아',shop_img='Dojun.PNG' where shop_num=1;
-update shop set shop_master ='전지현',shop_img='jihyun.PNG' where shop_num=2;
-update shop set shop_master ='이종석',shop_img='jong.PNG' where shop_num=3;
-update shop set shop_master ='배수지',shop_img='suzy.PNG' where shop_num=4;
-update shop set shop_master ='윤지민',shop_img='suzy.PNG' where shop_num=5;
-update shop set shop_master ='유인나',shop_img='jihyun.PNG' where shop_num=6;
-update shop set shop_master ='강동원',shop_img='suzy.PNG' where shop_num=7;
-update shop set shop_master ='김민성',shop_img='ihyun.PNG' where shop_num=8;
-update shop set shop_master ='주영미',shop_img='jihyun.PNG' where shop_num=9;
-update shop set shop_master ='강민호',shop_img='jong.PNG' where shop_num=10;
-update shop set shop_master ='유미현',shop_img='jong.PNG' where shop_num=11;
-update shop set shop_master ='김수영',shop_img='Dojun.PNG' where shop_num=12;
-update shop set shop_master ='미윤주',shop_img='woo.PNG' where shop_num=13;
-update shop set shop_master ='안영인',shop_img='woo.PNG' where shop_num=14;
-update shop set shop_master ='경민혜',shop_img='woo.PNG' where shop_num=15;
-update shop set shop_master ='김석훈',shop_img='suzy.PNG' where shop_num=16;
-update shop set shop_master ='송중기',shop_img='hyun.PNG' where shop_num=17;
-update shop set shop_master ='이광수',shop_img='Dojun.PNG' where shop_num=18;
-update shop set shop_master ='유재석',shop_img='hyun.PNG' where shop_num=19;
-update shop set shop_master ='김종국',shop_img='Dojun.PNG' where shop_num=20;
-
-
---------------------------------재고조회------------------------------------------
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '판교점','1533104005',95,40);
-
-
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '수지점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '성남점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '부산점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '전주점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '충청점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '강원점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '내곡점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '서초점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '강남점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '한남점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '옥수점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '약수점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '왕십리점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '의정부점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '남양주점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '죽전점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '오리점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '잠실점','1533104005',95,40);
-
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1531115001',95,10);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1541115002',100,15);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1511111003',105,20);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1522115004',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1511215005',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1512119001',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1522219002',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1532115003',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1532110004',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1542210005',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1523103001',95,40);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1513104002',100,25);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1523101003',85,30);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1543211004',90,35);
-insert into stockreq values (stockreq_seq.nextVal, '건대점','1533104005',95,40);
-
-
-
-
-
-
--- 7월 9일
--- 남성복
-insert into product values(product_seq.nextval,'남성 블루 니트','1531115001','ba_1531115001.png','img_1531115001.jpg',sysdate,25000);
-insert into product values(product_seq.nextval,'남성 블루 오버 셔츠','1541115002','ba_1541115002.png','img_1541115002.jpg',sysdate,50000);
-insert into product values(product_seq.nextval,'남성 스트라이프 레드 니트','1511111003','ba_1511111003.png','img_1511111003.jpg',sysdate,75000);
-insert into product values(product_seq.nextval,'남성 블루 팬츠','1522115004','ba_1522115004.png','img_1522115004.jpg',sysdate,55000);
-insert into product values(product_seq.nextval,'남성 카모플라쥬 팬츠','1511215005','ba_1511215005.png','img_1511215005.jpg',sysdate,35000);
-
-
--- 여성복
-insert into product values(product_seq.nextval,'여성 기모노 티셔츠','1512119001','ba_1512119001.png','img_1512119001.jpg',sysdate,25000);
-insert into product values(product_seq.nextval,'여성 데님 팬츠','1522219002','ba_1522219002.png','img_1522219002.jpg',sysdate,30000);
-insert into product values(product_seq.nextval,'여성 롱 블레이져','1532115003','ba_1532115003.png','img_1532115003.jpg',sysdate,65000);
-insert into product values(product_seq.nextval,'여성 체크 원피스','1532110004','ba_1532110004.png','img_1532110004.jpg',sysdate,45000);
-insert into product values(product_seq.nextval,'여성 화이트 팬츠','1542210005','ba_1542210005.png','img_1542210005.jpg',sysdate,37000);
-
-
-
--- 아동복
-insert into product values(product_seq.nextval,'아동 노랑 티셔츠','1523103001','ba_1523103001.png','img_1523103001.jpg',sysdate,15000);
-insert into product values(product_seq.nextval,'아동 민트 원피스','1513104002','ba_1513104002.png','img_1513104002.jpg',sysdate,22000);
-insert into product values(product_seq.nextval,'아동 오가닉 핑크 원피스','1523101003','ba_1523101003.png','img_1523101003.jpg',sysdate,17000);
-insert into product values(product_seq.nextval,'아동 포켓 데님 팬츠','1543211004','ba_1543211004.png','img_1543211004.jpg',sysdate,9000);
-insert into product values(product_seq.nextval,'아동 폴로셔츠','1533104005','ba_1533104005.png','img_1533104005.jpg',sysdate,12000);
-
-
-
--- member insert 문
-insert into member values(member_seq.nextval,'전지현','010-1234-1234','746-2467','성남시 북구','북구 수성동',0,sysdate,1,'jihyun@naver.com');
-insert into member values(member_seq.nextval,'유보영','010-7367-2745','474-1234','서울시 동구','동구 동명동',0,sysdate,1,'dgsf@gmail.com');
-insert into member values(member_seq.nextval,'김남길','010-5478-5463','346-1234','경남시 서구','서구 우산동',0,sysdate,1,'jery@naver.com');
-insert into member values(member_seq.nextval,'이동욱','010-3879-4684','347-3456','경북시 광산구','광산구 두암동',0,sysdate,1,'weyh@hanmail.net');
-insert into member values(member_seq.nextval,'이진욱','010-8764-4456','234-1234','충남시 성남구','성남구 주월동',0,sysdate,1,'fhytr09@naver.com');
-insert into member values(member_seq.nextval,'황영동','010-4548-7564','064-5463','충북시 강북구','강북구 미평동',0,sysdate,1,'hwhy89@gmail.com');
-insert into member values(member_seq.nextval,'김기욱','010-7687-1235','457-2346','강릉시 서초구','서초구 산수동',0,sysdate,1,'hjeh1@naver.com');
-insert into member values(member_seq.nextval,'정보영','010-7867-5479','786-1234','속초시 송파구','송파구 산본동',0,sysdate,1,'fget@hanmail.net');
-insert into member values(member_seq.nextval,'장지석','010-3468-3458','755-3466','금산시 중랑구','중랑구 청담동',0,sysdate,1,'dfge@gmail.com');
-insert into member values(member_seq.nextval,'윤혜영','010-5794-3488','245-1234','영동시 관악구','관악구 보정동',0,sysdate,1,'rtyhd@naver.com');
-insert into member values(member_seq.nextval,'성동일','010-5468-3475','135-3252','괴산시 영등포구','영등포구 서현동',0,sysdate,1,'hgdt@naver.com');
-insert into member values(member_seq.nextval,'박수진','010-5795-5685','735-2342','성북시 은평구','은평구 구미동',0,sysdate,1,'sujin@hanmail.net');
-insert into member values(member_seq.nextval,'빈지노','010-4345-2467','245-1234','대전시 오리구','오리구 서초동',0,sysdate,1,'ji10@naver.com');
-insert into member values(member_seq.nextval,'이인호','010-8744-9054','452-2356','인천시 죽전구','죽전구 논현동',0,sysdate,1,'inho@gmail.com');
-insert into member values(member_seq.nextval,'엄지원','010-4684-5467','345-2352','전남시 대화구','대화구 우면동',0,sysdate,1,'jiwon@naver.com');
-insert into member values(member_seq.nextval,'최수희','010-1234-3578','764-1234','전주시 삼성구','삼성구 당월동',0,sysdate,1,'sususu@hanmail.net');
-insert into member values(member_seq.nextval,'전소민','010-2466-3464','345-1356','전북시 오성구','오성구 미응동',0,sysdate,1,'somin@naver.com');
-insert into member values(member_seq.nextval,'홍진영','010-5773-7843','065-8845','수성시 중구','중구 부장동',0,sysdate,1,'jin09@gmail.com');
-insert into member values(member_seq.nextval,'홍금보','010-5745-6708','076-0986','시흥시 성동구','성동구 구이동',0,sysdate,1,'honghong@naver.com');
-insert into member values(member_seq.nextval,'나영석','010-5464-8747','235-1234','안양시 성북구','성북구 판교동',0,sysdate,1,'naya@hanmail.net');
-
-
-
-
--- 테이블 시퀀스 모음
-Create sequence bonsa_seq
-increment by 1 start with 1;
-
-Create sequence member_seq
-increment by 1 start with 1;
-
-Create sequence shop_seq
-increment by 1 start with 1;
-
-Create sequence board_seq
-increment by 1 start with 1;
-
-Create sequence comm_seq
-increment by 1 start with 1;
-
-Create sequence chat_seq
-increment by 1 start with 1;
-
-Create sequence loginout_seq
-increment by 1 start with 1;
-
-Create sequence product_seq
-increment by 1 start with 1;
-
-Create sequence sell_seq
-increment by 1 start with 1;
-
-Create sequence hotkey_seq
-increment by 1 start with 1;
-
-Create sequence stock_seq
-increment by 1 start with 1;
-
-Create sequence discount_seq
-increment by 1 start with 1;
-
-Create sequence staff_seq
-increment by 1 start with 1;
-
-drop sequence bonsa_seq;
-drop sequence member_seq;
-drop sequence shop_seq;
-drop sequence board_seq;
-drop sequence comm_seq;
-drop sequence chat_seq;
-drop sequence loginout_seq;
-drop sequence product_seq;
-drop sequence sell_seq;
-drop sequence hotkey_seq;
-drop sequence stock_seq;
-drop sequence discount_seq;
-drop sequence staff_seq;
-
-
-
-
-
+-----------------------------------------------------------------------------------------매장 1 시작
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 1000, 1, 1, '2015-01-11', 1, 1,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 1230, 1, 2, '2015-01-12', 2, 1,100);
+insert into sell values(sell_seq.nextval, '1541115002', 17000, 6825, 1, 3, '2015-01-13', 3, 1,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 3567, 1, 4, '2015-01-14', 4, 1,30);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 3663, 1, 5, '2015-01-15', 5, 1,32);
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 1343, 1, 6, '2015-02-11', 6, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 1224, 1, 7, '2015-02-12', 7, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 8954, 1, 8, '2015-02-13', 8, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 6433, 1, 9, '2015-02-14', 9, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 8267, 1, 10, '2015-02-15', 10, 1 ,25);
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 3583, 1, 11, '2015-03-11', 11, 1 ,6 );
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 5793, 1, 12, '2015-03-12', 12, 1 ,7 );
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 8433, 1, 13, '2015-03-13', 13, 1 ,8 );
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 3463, 1, 14, '2015-03-14', 14, 1 ,6 );
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 3463, 1, 15, '2015-03-15', 15, 1 ,8 );
+
+------ 수량 2
+
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 1000, 1, 1, '2015-04-11', 16, 2 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 100000, 1230, 1, 2, '2015-04-12', 17, 2 ,100);
+insert into sell values(sell_seq.nextval, '1541115002', 34000, 6825, 1, 3, '2015-04-13', 18, 2 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 150000, 3567, 1, 4, '2015-04-14', 19, 2 ,30);
+insert into sell values(sell_seq.nextval, '1522115004', 110000, 3663, 1, 5, '2015-04-15', 20, 2 ,32);
+
+insert into sell values(sell_seq.nextval, '1512119001', 50000, 1343, 1, 6, '2015-05-11', 21, 2 ,80);
+insert into sell values(sell_seq.nextval, '1522219002', 60000, 1224, 1, 7, '2015-05-12', 22, 2 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 130000, 8954, 1, 8, '2015-05-13', 23, 2 ,85);
+insert into sell values(sell_seq.nextval, '1532110004', 90000, 6433, 1, 9, '2015-05-14', 24, 2 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 74000, 8267, 1, 10, '2015-05-15', 25, 2 ,25);
+
+insert into sell values(sell_seq.nextval, '1523103001', 30000, 3583, 1, 11, '2015-06-11', 26, 2 ,6 );
+insert into sell values(sell_seq.nextval, '1513104002', 44000, 5793, 1, 12, '2015-06-12', 27, 2 ,7 );
+insert into sell values(sell_seq.nextval, '1523101003', 34000, 8433, 1, 13, '2015-06-13', 28, 2 ,8 );
+insert into sell values(sell_seq.nextval, '1543211004', 18000, 3463, 1, 14, '2015-06-14', 29, 2 ,6 );
+insert into sell values(sell_seq.nextval, '1533104005', 24000, 3463, 1, 15, '2015-06-15', 30, 2 ,8 );
+
+
+
+-------------------------------------------------------------------------------------매장 1 끝
+-------------------------------------------------------------------------------------매장 2 시작
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 1000, 2, 1, '2015-01-11', 1, 1,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 1230, 2, 2, '2015-01-12', 2, 1,100);
+insert into sell values(sell_seq.nextval, '1541115002', 17000, 6825, 2, 3, '2015-01-13', 3, 1,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 3567, 2, 4, '2015-01-14', 4, 1,30);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 3663, 2, 5, '2015-01-15', 5, 1,32);
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 1343, 2, 6, '2015-02-11', 6, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 1224, 2, 7, '2015-02-12', 7, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 8954, 2, 8, '2015-02-13', 8, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 6433, 2, 9, '2015-02-14', 9, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 8267, 2, 10, '2015-02-15', 10, 1 ,25);
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 3583, 2, 11, '2015-03-11', 11, 1 ,6 );
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 5793, 2, 12, '2015-03-12', 12, 1 ,7 );
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 8433, 2, 13, '2015-03-13', 13, 1 ,8 );
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 3463, 2, 14, '2015-03-14', 14, 1 ,6 );
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 3463, 2, 15, '2015-03-15', 15, 1 ,8 );
+
+------ 수량 2
+
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 1000, 2, 1, '2015-04-11', 16, 2 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 100000, 1230, 2, 2, '2015-04-12', 17, 2 ,100);
+insert into sell values(sell_seq.nextval, '1541115002', 34000, 6825, 2, 3, '2015-04-13', 18, 2 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 150000, 3567, 2, 4, '2015-04-14', 19, 2 ,30);
+insert into sell values(sell_seq.nextval, '1522115004', 110000, 3663, 2, 5, '2015-04-15', 20, 2 ,32);
+
+insert into sell values(sell_seq.nextval, '1512119001', 50000, 1343, 2, 6, '2015-05-11', 21, 2 ,80);
+insert into sell values(sell_seq.nextval, '1522219002', 60000, 1224, 2, 7, '2015-05-12', 22, 2 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 130000, 8954, 2, 8, '2015-05-13', 23, 2 ,85);
+insert into sell values(sell_seq.nextval, '1532110004', 90000, 6433, 2, 9, '2015-05-14', 24, 2 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 74000, 8267, 2, 10, '2015-05-15', 25, 2 ,25);
+
+insert into sell values(sell_seq.nextval, '1523103001', 30000, 3583, 2, 11, '2015-06-11', 26, 2 ,6 );
+insert into sell values(sell_seq.nextval, '1513104002', 44000, 5793, 2, 12, '2015-06-12', 27, 2 ,7 );
+insert into sell values(sell_seq.nextval, '1523101003', 34000, 8433, 2, 13, '2015-06-13', 28, 2 ,8 );
+insert into sell values(sell_seq.nextval, '1543211004', 18000, 3463, 2, 14, '2015-06-14', 29, 2 ,6 );
+insert into sell values(sell_seq.nextval, '1533104005', 24000, 3463, 2, 15, '2015-06-15', 30, 2 ,8 );
+
+-------------------------------------------------------------------------------------매장 2 끝
+-------------------------------------------------------------------------------------매장 3 시작
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 1000, 3, 1, '2015-01-11', 1, 1,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 1230, 3, 2, '2015-01-12', 2, 1,100);
+insert into sell values(sell_seq.nextval, '1541115002', 17000, 6825, 3, 3, '2015-01-13', 3, 1,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 3567, 3, 4, '2015-01-14', 4, 1,30);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 3663, 3, 5, '2015-01-15', 5, 1,32);
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 1343, 3, 6, '2015-02-11', 6, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 1224, 3, 7, '2015-02-12', 7, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 8954, 3, 8, '2015-02-13', 8, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 6433, 3, 9, '2015-02-14', 9, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 8267, 3, 10, '2015-02-15', 10, 1 ,25);
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 3583, 3, 11, '2015-03-11', 11, 1 ,6 );
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 5793, 3, 12, '2015-03-12', 12, 1 ,7 );
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 8433, 3, 13, '2015-03-13', 13, 1 ,8 );
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 3463, 3, 14, '2015-03-14', 14, 1 ,6 );
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 3463, 3, 15, '2015-03-15', 15, 1 ,8 );
+
+------ 수량 2
+
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 1000, 3, 1, '2015-04-11', 16, 2 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 100000, 1230, 3, 2, '2015-04-12', 17, 2 ,100);
+insert into sell values(sell_seq.nextval, '1541115002', 34000, 6825, 3, 3, '2015-04-13', 18, 2 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 150000, 3567, 3, 4, '2015-04-14', 19, 2 ,30);
+insert into sell values(sell_seq.nextval, '1522115004', 110000, 3663, 3, 5, '2015-04-15', 20, 2 ,32);
+
+insert into sell values(sell_seq.nextval, '1512119001', 50000, 1343, 3, 6, '2015-05-11', 21, 2 ,80);
+insert into sell values(sell_seq.nextval, '1522219002', 60000, 1224, 3, 7, '2015-05-12', 22, 2 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 130000, 8954, 3, 8, '2015-05-13', 23, 2 ,85);
+insert into sell values(sell_seq.nextval, '1532110004', 90000, 6433, 3, 9, '2015-05-14', 24, 2 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 74000, 8267, 3, 10, '2015-05-15', 25, 2 ,25);
+
+insert into sell values(sell_seq.nextval, '1523103001', 30000, 3583, 3, 11, '2015-06-11', 26, 2 ,6 );
+insert into sell values(sell_seq.nextval, '1513104002', 44000, 5793, 3, 12, '2015-06-12', 27, 2 ,7 );
+insert into sell values(sell_seq.nextval, '1523101003', 34000, 8433, 3, 13, '2015-06-13', 28, 2 ,8 );
+insert into sell values(sell_seq.nextval, '1543211004', 18000, 3463, 3, 14, '2015-06-14', 29, 2 ,6 );
+insert into sell values(sell_seq.nextval, '1533104005', 24000, 3463, 3, 15, '2015-06-15', 30, 2 ,8 );
 
 commit;
 
-select * from stockreq
-order by sto_num asc;
+
+
+
