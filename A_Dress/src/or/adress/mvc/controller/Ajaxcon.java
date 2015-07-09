@@ -935,7 +935,7 @@ public class Ajaxcon {
 				res.append("<td><img src='upload/").append(vo.getPro_barcode())
 				.append("' style=\"width: 100px;\"></td>");
 				res.append("<td><input type=\"number\" style=\"width:30%;\" class=\"form-control\" id=\"p_num\" value=\""+vo.getPro_salerate()+"\"\"></td>");
-				res.append("<td><button class='form-control6' type='button' onclick='javascript:saleaccept("+vo.getPro_salerate()+","+vo.getPro_code()+")' id='btn2' name='btn2'>적용</button></td>");
+				res.append("<td><button class='form-control6' type='button' onclick='javascript:saleaccept("+vo.getPro_code()+")' id='btn2' name='btn2'>적용</button></td>");
 				res.append("</tr>");
 		}
 		String str = res.toString();

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
  <script>
  	function productcheckaction(){
  		$('#go_pro_name').val($('#pro_name').val());
@@ -16,13 +16,14 @@
 		});
  	}
  	
- 	function saleaccept(salerate, pro_code){
+ 	function saleaccept(pro_code){
+ 		
  		$('#go_pro_code').val(pro_code);
  		$('#go_salerate').val(salerate);
  		$('#godiscount').submit();
  	}
  </script>
-<!-- º»»ç »óÇ°°ü¸® - »óÇ°¼¼ÀÏ -->
+<!-- ë³¸ì‚¬ ìƒí’ˆê´€ë¦¬ - ìƒí’ˆì„¸ì¼ -->
 <section id="main-content">
 	<section class="wrapper">
 		<section class="panel">
@@ -33,7 +34,7 @@
 			<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12" style="width: 125%">
 					<h3 class="page-header">
-						<i class="fa fa-files-o"></i> »óÇ°Á¶È¸
+						<i class="fa fa-files-o"></i> ìƒí’ˆì¡°íšŒ
 					</h3>
 
 					<header class="panel-heading tab-bg-primary ">
@@ -44,12 +45,12 @@
 								<div style="margin-bottom: -1%">
 
 									<div class="col-lg-3" style="margin-left: -5%">
-										 <label for="cname" class="control-label col-lg-6" style="font-size: 13px;">ÀÌ¸§
+										 <label for="cname" class="control-label col-lg-6" style="font-size: 13px;">ì´ë¦„
 										</label> <input class="form-control" id="pro_code" name="pro_code"
 											style="width: 50%" autocomplete="off" type="text" required />
 										<button class="form-control6" type="button"
 											onclick="javascript:productcheckaction()" id="btn1"
-											name="btn1">Á¶È¸</button>
+											name="btn1">ì¡°íšŒ</button>
 										<div id="view"></div>
 									</div>
 
@@ -68,37 +69,16 @@
 										<thead>
 											<tr>
 												<th>no</th>
-												<th>»óÇ°ÀÌ¸§</th>
-												<th>»óÇ°ÄÚµå</th>
-												<th>°¡°İ</th>
-												<th>»óÇ°»çÁø</th>
-												<th>¹ÙÄÚµå</th>
-												<th >ÇÒÀÎÀ²</th>
-												<th>Àû¿ë</th>
+												<th>ìƒí’ˆì´ë¦„</th>
+												<th>ìƒí’ˆì½”ë“œ</th>
+												<th>ê°€ê²©</th>
+												<th>ìƒí’ˆì‚¬ì§„</th>
+												<th>ë°”ì½”ë“œ</th>
+												<th >í• ì¸ìœ¨</th>
+												<th>ì ìš©</th>
 											</tr>
 										</thead>
 										<tbody id="bpdtarget">
-											<%-- ¹İº¹ --%>
-<%-- 											<c:forEach var="stList" items="${list}"> --%>
-<!-- 												<tr> -->
-<!-- 													<th>i</th> -->
-<%-- 													<th>${stList.pro_name}</th> --%>
-<%-- 													<th>${stList.pro_code}</th> --%>
-<%-- 													<th>${stList.sto_size}</th> --%>
-<%-- 													<th>${stList.sto_amount}</th> --%>
-<%-- 													<th>${stList.pro_price}</th> --%>
-<%-- 													<th><img src='upload/${stList.pro_img}' --%>
-<!-- 														style="width: 100px;"> -->
-<!-- 													</td> -->
-<!-- 													</th> -->
-<%-- 													<th><img src='upload/${stList.pro_barcode}' --%>
-<!-- 														style="width: 100px;"></th> -->
-
-<!-- 												</tr> -->
-<!-- 											</c:forEach> -->
-
-
-											<%-- ¹İº¹ --%>
 										</tbody>
 									</table>
 
