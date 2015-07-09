@@ -4,12 +4,19 @@ import org.springframework.web.multipart.MultipartFile;
 
 // 컬럼명 일치
 public class ProductVO {
-	private int pro_num, pro_size, pro_price,pro_amount;
+	private int pro_num, pro_size, pro_price,pro_amount,pro_salerate;
 	private String pro_name, pro_code, pro_barcode, pro_img,
 	pro_date, pro_shopname;
 	private String sto_amount,sto_size,shop_name;
 	private MultipartFile bimg,pimg;
 	private String bimgpath,pimgpath;
+	public int getPro_salerate() {
+		return pro_salerate;
+	}
+	public void setPro_salerate(int pro_salerate) {
+		this.pro_salerate = pro_salerate;
+	}
+	
 	public String getBimgpath() {
 		return bimgpath;
 	}
