@@ -67,4 +67,7 @@ public class SmangDao {
 	public void get_refund(SalesCheckVO vo){
 		ss.update("smang.get_refund", vo);
 	}
+	public void sell_del(int sell_num){
+		ss.delete("smang.sell_del", sell_num);
+	}
 }
