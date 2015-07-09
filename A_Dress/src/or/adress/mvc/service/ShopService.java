@@ -61,7 +61,14 @@ public class ShopService {
 	// 매장- 판매등록 -교환 환불 -환불
 	public void sh_refund(int sell_num){
 		SalesCheckVO skvo = smdao.get_schkvo(sell_num);
+		// 재고 테이블에서 재고 다시 올리
 		smdao.get_refund(skvo);
+		// 마일리지 테이블에서 마일리지 빼기
+		int cach=skvo.getSell_cash();
+		int sell_cach=cach*(int) 0.1;
+		//skvo.getSell_m
+		// sell 삭제
+		//smdao.sell_del(sell_num);
 		System.out.println(skvo.getSell_memnum());
 	}
 }
