@@ -67,9 +67,12 @@ public class ShopService {
 		
 		// 마일리지 테이블에서 마일리지 빼기
 		int cach=skvo.getSell_cash();
-		int sell_mileage=cach*(int) 0.1;
+		Double sell_mileage=cach*(Double) 0.01;
+		int reres=(int) (skvo.getSell_mileage()-sell_mileage);
+		System.out.println("re;"+reres);
+		System.out.println("sell_mileage;"+skvo.getSell_mileage());
 		MemVO vo = new MemVO();
-		vo.setMem_mileage(sell_mileage);
+		vo.setMem_mileage(reres);
 		vo.setMem_num(skvo.getSell_memnum());
 		smdao.sell_mileagechange(vo);
 		
