@@ -660,6 +660,7 @@ public class Ajaxcon {
 		// outs.append("retry:2000\n");
 		String iu = "";
 		outs.append("data:");
+		System.out.println("//////////////////시작///////////////////////");
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
 				outs.append("<li class=\"by-other\">");
@@ -671,6 +672,7 @@ public class Ajaxcon {
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
 				iu="i";
+				System.out.println("나부분");
 			} else {
 				outs.append("<li class=\"by-me\">");
 				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
@@ -681,9 +683,11 @@ public class Ajaxcon {
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
 				iu="you";
+				System.out.println("너부분");
 			}
 
 		}
+		System.out.println("-----------------끝-------------------");
 		outs.append("<@>"+iu+"\n\n");
 		String str = outs.toString();
 		ModelAndView mav = new ModelAndView("ajax/chatload");

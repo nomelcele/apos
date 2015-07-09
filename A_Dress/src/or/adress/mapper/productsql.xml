@@ -49,6 +49,4 @@
   		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 0, #{sto_shopnum}, #{sto_size})
   	</select>
   	
-  	
-	
 </mapper>

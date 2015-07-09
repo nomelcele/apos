@@ -48,7 +48,7 @@
 	delete from sell where sell_num=#{sell_num}
 	</delete>
 	<!-- 마일리지 차감 -->
-	<update id="mileage">
-	update member set mem_mileage= mem_mileage+#{} where mem_num =  sell_memnum;
-	</update>
+<!-- 	<update id="mileage"> -->
+<!-- 	update member set mem_mileage= mem_mileage+#{} where mem_num =  sell_memnum -->
+<!-- 	</update> -->
 </mapper>
