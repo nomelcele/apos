@@ -478,6 +478,7 @@ public class Ajaxcon {
 		map.put("pname", pcode);
 		map.put("shop_num", shopnum);
 		List<SmangVO> list = smdao.getListProduct(map);
+		
 
 		Iterator<SmangVO> it = list.iterator();
 		StringBuffer res = new StringBuffer();
@@ -500,9 +501,8 @@ public class Ajaxcon {
 			res.append("<td>");
 			res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
 			res.append("href=\"javascript:proset('");
-			res.append(v.getPro_code()).append("', '").append(v.getSto_size())
-					.append("', '");
-			res.append(v.getSto_amount() + "')\">");
+			res.append(v.getPro_code()).append("', '").append(v.getSto_size());
+			res.append( "')\">");
 			res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
 			res.append("</td>");
 			res.append("</tr>");
