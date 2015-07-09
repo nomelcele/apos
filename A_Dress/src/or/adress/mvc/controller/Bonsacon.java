@@ -26,6 +26,7 @@ import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 
 import or.adress.mvc.dao.BoardDao;
+import or.adress.mvc.dao.BonsaDao;
 import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.StockDao;
@@ -61,6 +62,8 @@ public class Bonsacon {
 	private BonsaService bservice;
 	@Autowired
 	private StockDao stdao;
+	@Autowired
+	private BonsaDao bondao;
 
 	@RequestMapping(value = "/bon_index")
 	public ModelAndView bon_index(HttpSession session) {
