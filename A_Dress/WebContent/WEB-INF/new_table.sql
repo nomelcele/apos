@@ -184,7 +184,7 @@ create table calendar(
 calen_num number(10) constraint calendar_calen_pk primary key,
 calen_start varchar2(30),
 calen_end varchar2(30),
-calen_cont varchar2(200),
+calen_content varchar2(200),
 calen_date date
 );
 
