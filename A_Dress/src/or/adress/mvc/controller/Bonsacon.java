@@ -405,11 +405,13 @@ public class Bonsacon {
 	}
 
 	// 夯荤 惑前包府 -惑前技老 -技老利侩
-	@RequestMapping(value = "/godiscount")
-	public ModelAndView godiscount(String go_pro_code, String go_salerate) {
+	@RequestMapping(value = "/godiscount", method=RequestMethod.POST)
+	public ModelAndView godiscount(String set_pro_code, String set_pro_salerate) {
+		System.out.println(set_pro_code);
+		System.out.println(set_pro_salerate);
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("go_pro_code", go_pro_code);
-		map.put("go_salerate", go_salerate);
+		map.put("set_pro_code", set_pro_code);
+		map.put("set_pro_salerate", set_pro_salerate);
 		pdao.acceptsalerate(map);
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("bonsa/bon_productDiscount");

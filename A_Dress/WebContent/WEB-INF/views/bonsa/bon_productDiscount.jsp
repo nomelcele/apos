@@ -16,21 +16,18 @@
 		});
  	}
  	
- 	function saleaccept(pro_code){
- 		
- 		$('#go_pro_code').val(pro_code);
- 		$('#go_salerate').val(salerate);
+ 	function saleaccept(){
  		$('#godiscount').submit();
+ 	}
+ 	function setsale(pro_code, pro_price){
+ 		$('#set_pro_code').val(pro_code);
+ 		$('#set_pro_price').val(pro_price);
  	}
  </script>
 <!-- 본사 상품관리 - 상품세일 -->
 <section id="main-content">
 	<section class="wrapper">
 		<section class="panel">
-			<form action="godiscount" id="godiscount" method="post">
-				<input type="hidden" id="go_pro_code" name="go_pro_code" value="">
-				<input type="hidden" id="go_salerate" name="go_salerate" value="">
-			</form>
 			<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12" style="width: 125%">
 					<h3 class="page-header">
@@ -75,7 +72,7 @@
 												<th>상품사진</th>
 												<th>바코드</th>
 												<th >할인율</th>
-												<th>적용</th>
+												<th>선택</th>
 											</tr>
 										</thead>
 										<tbody id="bpdtarget">
@@ -84,7 +81,30 @@
 
 								</div>
 							</div>
+							<table class="table" >
+								<thead>
+									<tr>
+										<th>상품코드</th>
+										<th>가격</th>
+										<th>할인율</th>
+										<th>적용</th>
+									</tr>
+								</thead>
+								<tbody>
+									<form action="godiscount" id="godiscount" method="post">
+									<tr class="active">
+										<td><input type="text" class="form-control" name='set_pro_code'
+											id="set_pro_code" value="" readonly="readonly"></td>
+										<td><input type="text" class="form-control" name='set_pro_price'
+											id="set_pro_price" value="" readonly="readonly"></td>
+										<td><input type="number" class="form-control"
+											name='set_pro_salerate' id="set_pro_salerate" value="0" style="width: 100px;"></td>
+										<td><div class="btn-group"><a class="btn btn-success" href="javascript:saleaccept()"><i class="icon_check_alt2"></i></a></div></td>
+									</tr>
+									</form>
 
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>

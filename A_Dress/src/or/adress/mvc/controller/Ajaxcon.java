@@ -169,6 +169,7 @@ public class Ajaxcon {
 							+ "\">").append("</td>");
 			res.append("<td>").append(v.getSto_amount()).append("</td>");
 			res.append("<td>").append(v.getPro_price()).append("</td>");
+			res.append("<td>").append(v.getPro_salerate()).append("</td>");
 			res.append("<td><img src='upload/" + v.getPro_img()
 					+ "' style=\"width: 100px;\"></td>");// 추후 세일추가
 			res.append("<td><img src='upload/" + v.getPro_barcode()
@@ -179,7 +180,7 @@ public class Ajaxcon {
 					.append(v.getPro_code()).append("', '");
 			res.append(v.getSto_size()).append("', '")
 					.append(v.getSto_amount()).append("', '");
-			res.append(v.getPro_price()).append("', '" + i + "')\">");
+			res.append(v.getPro_price()).append("', '" +i+"','"+v.getPro_salerate()+"')\">");
 			res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
 			res.append("</td>");
 			res.append("</tr>");
@@ -934,8 +935,8 @@ public class Ajaxcon {
 				.append("' style=\"width: 100px;\"></td>");
 				res.append("<td><img src='upload/").append(vo.getPro_barcode())
 				.append("' style=\"width: 100px;\"></td>");
-				res.append("<td><input type=\"number\" style=\"width:30%;\" class=\"form-control\" id=\"p_num\" value=\""+vo.getPro_salerate()+"\"\"></td>");
-				res.append("<td><button class='form-control6' type='button' onclick='javascript:saleaccept("+vo.getPro_code()+")' id='btn2' name='btn2'>적용</button></td>");
+				res.append("<td>").append(vo.getPro_salerate()).append("%</td>");
+				res.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" href=\"javascript:setsale("+vo.getPro_code()+","+vo.getPro_price()+")\"><i class=\"icon_check_alt2\"></i></a></div></td>");
 				res.append("</tr>");
 		}
 		String str = res.toString();

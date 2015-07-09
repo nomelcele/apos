@@ -9,7 +9,7 @@
 	<!-- 홍기형이 하신다함 -->
 	<!-- 아무도 건들지 말 것 ㅋㅋ -->
 	<select id="smang_getlistproduct" parameterType="map" resultType="smangvo">
-	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and p.pro_code = #{pname} and sh.shop_num = #{shop_num}
+	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE, p.pro_salerate from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and p.pro_code = #{pname} and sh.shop_num = #{shop_num}
 	</select>
 	<select id="smang_editstock" parameterType="map" resultType="int">
 	select sto_amount from stock where sto_pronum = #{code} and sto_size = #{size} and sto_shopnum = #{shopnum}

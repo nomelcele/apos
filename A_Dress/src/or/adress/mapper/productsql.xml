@@ -14,7 +14,7 @@
 
 	<!-- 완료 -->
 	<insert id="product_insert" parameterType="provo">
-	insert into product values(product_seq.nextVal,#{pro_name},#{pro_code},#{pro_barcode},#{pro_img},sysdate,#{pro_price})
+	insert into product values(product_seq.nextVal,#{pro_name},#{pro_code},#{pro_barcode},#{pro_img},sysdate,#{pro_price},0)
 	</insert>
 	
 	<!-- 모르겠음 / 물어볼 것 -->
@@ -54,7 +54,7 @@
   	</select>
   	
   	<update id="acceptsalerate" parameterType="map">
-  		update product set pro_salerate=#{go_pro_code} where pro_code=#{go_salerate}
+  		update product set pro_salerate=#{set_pro_salerate} where pro_code=#{set_pro_code}
   	</update>
   	
 </mapper>
