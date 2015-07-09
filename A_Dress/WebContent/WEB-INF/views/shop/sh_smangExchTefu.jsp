@@ -25,7 +25,7 @@ function sh_managEx(num){
 	var UP;
 	UP=confirm("환불 하겠습니까?");
 	if(UP){
-		alert(num);
+		alert(num+"을 환불했습니다.");
 		location= "sh_smangrefund?sell_num="+num;
 	} else {
 	
