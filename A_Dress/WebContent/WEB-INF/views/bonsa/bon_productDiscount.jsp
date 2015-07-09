@@ -36,18 +36,7 @@
 								</div>
 							</form>
 						</div>
-						<div>
-							<ul class="nav nav-tabs">
-								<li class=""><a data-toggle="tab" href="#search"
-									id="ajevery">search</a></li>
-								<li class="" id="ajman"><a data-toggle="tab" href="#man"
-									onclick="javascript:Product(1)">man</a></li>
-								<li class=""><a data-toggle="tab" href="#woman"
-									onclick="javascript:Product(2)">woman</a></li>
-								<li class=""><a data-toggle="tab" href="#kids"
-									onclick="javascript:Product(3)">kids</a></li>
-							</ul>
-						</div>
+						
 					</header>
 
 					<div class="panel-body" style="width: 100%">
