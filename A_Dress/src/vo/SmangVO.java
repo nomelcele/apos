@@ -2,6 +2,14 @@ package vo;
 
 public class SmangVO {
 	private String pro_code, pro_name, shop_name, pro_barcode, pro_img;
+	private int pro_salerate;
+	
+	public int getPro_salerate() {
+		return pro_salerate;
+	}
+	public void setPro_salerate(int pro_salerate) {
+		this.pro_salerate = pro_salerate;
+	}
 	public String getPro_barcode() {
 		return pro_barcode;
 	}

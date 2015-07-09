@@ -23,9 +23,12 @@
 			chk = false;
 		}
 	}
-	function insertproduct(pcode, psize, pamount, pprice, a) {
+	function insertproduct(pcode, psize, pamount, pprice, a, psalerate) {
 		//i++;
 		j++;
+		if(psalerate != 0){
+			pprice = pprice*((100-psalerate)*0.01)
+		}
 		var t = $('#p_num' + a).val();
 		price = price + (t * pprice);
 		var str = "<tr><td>" + j + "</td>" + "<td>" + pcode + "</td>" + "<td>"
@@ -212,6 +215,7 @@
 										<th>수량</th>
 										<th>재고</th>
 										<th>가격</th>
+										<th>할인율</th>
 										<th>상품사진</th>
 										<th>바코드</th>
 										<th>선택</th>
