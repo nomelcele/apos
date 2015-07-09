@@ -1457,6 +1457,62 @@ insert into stockreq values (stockreq_seq.nextVal, '건대점','1533104005',95,40);
 
 
 
+
+
+-- 7월 9일
+-- 남성복
+insert into product values(product_seq.nextval,'남성 블루 니트','1531115001','ba_1531115001.png','img_1531115001.jpg',sysdate,25000);
+insert into product values(product_seq.nextval,'남성 블루 오버 셔츠','1541115002','ba_1541115002.png','img_1541115002.jpg',sysdate,50000);
+insert into product values(product_seq.nextval,'남성 스트라이프 레드 니트','1511111003','ba_1511111003.png','img_1511111003.jpg',sysdate,75000);
+insert into product values(product_seq.nextval,'남성 블루 팬츠','1522115004','ba_1522115004.png','img_1522115004.jpg',sysdate,55000);
+insert into product values(product_seq.nextval,'남성 카모플라쥬 팬츠','1511215005','ba_1511215005.png','img_1511215005.jpg',sysdate,35000);
+
+
+-- 여성복
+insert into product values(product_seq.nextval,'여성 기모노 티셔츠','1512119001','ba_1512119001.png','img_1512119001.jpg',sysdate,25000);
+insert into product values(product_seq.nextval,'여성 데님 팬츠','1522219002','ba_1522219002.png','img_1522219002.jpg',sysdate,30000);
+insert into product values(product_seq.nextval,'여성 롱 블레이져','1532115003','ba_1532115003.png','img_1532115003.jpg',sysdate,65000);
+insert into product values(product_seq.nextval,'여성 체크 원피스','1532110004','ba_1532110004.png','img_1532110004.jpg',sysdate,45000);
+insert into product values(product_seq.nextval,'여성 화이트 팬츠','1542210005','ba_1542210005.png','img_1542210005.jpg',sysdate,37000);
+
+
+
+-- 아동복
+insert into product values(product_seq.nextval,'아동 노랑 티셔츠','1523103001','ba_1523103001.png','img_1523103001.jpg',sysdate,15000);
+insert into product values(product_seq.nextval,'아동 민트 원피스','1513104002','ba_1513104002.png','img_1513104002.jpg',sysdate,22000);
+insert into product values(product_seq.nextval,'아동 오가닉 핑크 원피스','1523101003','ba_1523101003.png','img_1523101003.jpg',sysdate,17000);
+insert into product values(product_seq.nextval,'아동 포켓 데님 팬츠','1543211004','ba_1543211004.png','img_1543211004.jpg',sysdate,9000);
+insert into product values(product_seq.nextval,'아동 폴로셔츠','1533104005','ba_1533104005.png','img_1533104005.jpg',sysdate,12000);
+
+
+
+-- member insert 문
+insert into member values(member_seq.nextval,'전지현','010-1234-1234','746-2467','성남시 북구','북구 수성동',0,sysdate,1,'jihyun@naver.com');
+insert into member values(member_seq.nextval,'유보영','010-7367-2745','474-1234','서울시 동구','동구 동명동',0,sysdate,1,'dgsf@gmail.com');
+insert into member values(member_seq.nextval,'김남길','010-5478-5463','346-1234','경남시 서구','서구 우산동',0,sysdate,1,'jery@naver.com');
+insert into member values(member_seq.nextval,'이동욱','010-3879-4684','347-3456','경북시 광산구','광산구 두암동',0,sysdate,1,'weyh@hanmail.net');
+insert into member values(member_seq.nextval,'이진욱','010-8764-4456','234-1234','충남시 성남구','성남구 주월동',0,sysdate,1,'fhytr09@naver.com');
+insert into member values(member_seq.nextval,'황영동','010-4548-7564','064-5463','충북시 강북구','강북구 미평동',0,sysdate,1,'hwhy89@gmail.com');
+insert into member values(member_seq.nextval,'김기욱','010-7687-1235','457-2346','강릉시 서초구','서초구 산수동',0,sysdate,1,'hjeh1@naver.com');
+insert into member values(member_seq.nextval,'정보영','010-7867-5479','786-1234','속초시 송파구','송파구 산본동',0,sysdate,1,'fget@hanmail.net');
+insert into member values(member_seq.nextval,'장지석','010-3468-3458','755-3466','금산시 중랑구','중랑구 청담동',0,sysdate,1,'dfge@gmail.com');
+insert into member values(member_seq.nextval,'윤혜영','010-5794-3488','245-1234','영동시 관악구','관악구 보정동',0,sysdate,1,'rtyhd@naver.com');
+insert into member values(member_seq.nextval,'성동일','010-5468-3475','135-3252','괴산시 영등포구','영등포구 서현동',0,sysdate,1,'hgdt@naver.com');
+insert into member values(member_seq.nextval,'박수진','010-5795-5685','735-2342','성북시 은평구','은평구 구미동',0,sysdate,1,'sujin@hanmail.net');
+insert into member values(member_seq.nextval,'빈지노','010-4345-2467','245-1234','대전시 오리구','오리구 서초동',0,sysdate,1,'ji10@naver.com');
+insert into member values(member_seq.nextval,'이인호','010-8744-9054','452-2356','인천시 죽전구','죽전구 논현동',0,sysdate,1,'inho@gmail.com');
+insert into member values(member_seq.nextval,'엄지원','010-4684-5467','345-2352','전남시 대화구','대화구 우면동',0,sysdate,1,'jiwon@naver.com');
+insert into member values(member_seq.nextval,'최수희','010-1234-3578','764-1234','전주시 삼성구','삼성구 당월동',0,sysdate,1,'sususu@hanmail.net');
+insert into member values(member_seq.nextval,'전소민','010-2466-3464','345-1356','전북시 오성구','오성구 미응동',0,sysdate,1,'somin@naver.com');
+insert into member values(member_seq.nextval,'홍진영','010-5773-7843','065-8845','수성시 중구','중구 부장동',0,sysdate,1,'jin09@gmail.com');
+insert into member values(member_seq.nextval,'홍금보','010-5745-6708','076-0986','시흥시 성동구','성동구 구이동',0,sysdate,1,'honghong@naver.com');
+insert into member values(member_seq.nextval,'나영석','010-5464-8747','235-1234','안양시 성북구','성북구 판교동',0,sysdate,1,'naya@hanmail.net');
+
+
+
+
+
+
 commit;
 
 select * from stockreq
