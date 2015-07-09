@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import vo.MemVO;
 import vo.SalesCheckVO;
 
 @Transactional
@@ -63,12 +64,17 @@ public class ShopService {
 		SalesCheckVO skvo = smdao.get_schkvo(sell_num);
 		// 재고 테이블에서 재고 다시 올리
 		smdao.get_refund(skvo);
+		
 		// 마일리지 테이블에서 마일리지 빼기
 		int cach=skvo.getSell_cash();
-		int sell_cach=cach*(int) 0.1;
-		//skvo.getSell_m
+		int sell_mileage=cach*(int) 0.1;
+		MemVO vo = new MemVO();
+		vo.setMem_mileage(sell_mileage);
+		vo.setMem_num(skvo.getSell_memnum());
+		smdao.sell_mileagechange(vo);
+		
 		// sell 삭제
-		//smdao.sell_del(sell_num);
+		smdao.sell_del(sell_num);
 		System.out.println(skvo.getSell_memnum());
 	}
 }
