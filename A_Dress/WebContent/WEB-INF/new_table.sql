@@ -96,8 +96,9 @@ pro_code varchar2(50) constraint product_pro_code_nn not null,
 pro_barcode varchar2(50) constraint product_pro_barcode_nn not null,
 pro_img varchar2(50) constraint product_pro_img_nn not null,
 pro_date date,
+pro_price number(30),
+pro_salerate number(30),
 constraint product_pro_code_uq unique (pro_code)
-pro_price number(30)
 );
 ---------------------5/28----------------------------
 create table sell(
@@ -164,16 +165,6 @@ staff_pwd varchar2(30),
 constraint staff_staff_shopnum_fk foreign key (staff_shopnum)
 REFERENCES shop(shop_num) on delete cascade
 );
-
-Create sequence staff_seq
-increment by 1 start with 1;
-
----------------------------------------------------------------
-create table croom (num number(10) constraint cromm_num_pk primary key,u_id varchar2(50),chat varchar2(400),cdate date,reip varchar2(100));
-create SEQUENCE croot_seq increment by 1 start with 1;
-commit;
-
-----------------------------------------------------------------------------
 create table stockreq(
 sto_num number(10),
 shop_num number(10),
@@ -183,8 +174,22 @@ pro_amount number(10),
 constraint stockreq_pro_code_fk foreign key(pro_code) references product(pro_code) on delete cascade,
 constraint stockreq_shop_num_fk foreign key(shop_num) references shop(shop_num) on delete cascade
 );
+create table croom (num number(10) constraint cromm_num_pk primary key,u_id varchar2(50),chat varchar2(400),cdate date,reip varchar2(100));
 
-create sequence stockreq_seq
-increment by 1
-start with 1;
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------
+
+
+
+
 
