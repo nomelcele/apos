@@ -1515,10 +1515,10 @@ insert into member values(member_seq.nextval,'³ª¿µ¼®','010-5464-8747','235-1234'
 Create sequence bonsa_seq
 increment by 1 start with 1;
 
-Create sequence staff_seq
+Create sequence member_seq
 increment by 1 start with 1;
 
-Create sequence member_seq
+Create sequence shop_seq
 increment by 1 start with 1;
 
 Create sequence board_seq
@@ -1545,8 +1545,29 @@ increment by 1 start with 1;
 Create sequence stock_seq
 increment by 1 start with 1;
 
+Create sequence discount_seq
+increment by 1 start with 1;
+
 Create sequence staff_seq
 increment by 1 start with 1;
+
+drop sequence bonsa_seq;
+drop sequence member_seq;
+drop sequence shop_seq;
+drop sequence board_seq;
+drop sequence comm_seq;
+drop sequence chat_seq;
+drop sequence loginout_seq;
+drop sequence product_seq;
+drop sequence sell_seq;
+drop sequence hotkey_seq;
+drop sequence stock_seq;
+drop sequence discount_seq;
+drop sequence staff_seq;
+
+
+
+
 
 
 commit;
