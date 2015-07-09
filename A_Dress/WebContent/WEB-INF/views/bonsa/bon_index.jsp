@@ -4,7 +4,7 @@
  <section id="main-content">
  	<section class="wrapper">
  		
- 	<div><img src="resources/img/bg-101.jpg"; width="100%"; height="100%" align="center"></div>
+ 	<div><img src="resources/img/bg-117.jpg"; width="100%"; height="100%" align="center"></div>
  	</br>
  		<table align="center">
 			<tr style="font-size: 1pt">
