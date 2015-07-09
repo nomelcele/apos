@@ -43,4 +43,12 @@
 	where sto_shopnum=#{sell_shopnum} and sto_pronum= #{sell_pronum} 
 	and sto_size =#{sell_size}
 	</update>
+	<!-- sell테이블에서 sell_numq받아서 지우기 -->
+	<delete id="sell_del" parameterType="int">
+	delete from sell where sell_num=#{sell_num}
+	</delete>
+	<!-- 마일리지 차감 -->
+	<update id="mileage">
+	update member set mem_mileage= mem_mileage+#{} where mem_num =  sell_memnum;
+	</update>
 </mapper>
