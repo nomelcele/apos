@@ -4,11 +4,12 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="stock">
   <insert id="Stockreq"  parameterType="stvo">
-  insert into Stockreq values(stockreq_seq.nextVal,#{shop_num},#{pcode},#{psize},#{pamount},'wait')
+  insert into Stockreq values(stockreq_seq.nextVal,#{shop_num},#{pcode},#{psize},#{pro_amount},'wait',sysdate)
   <!-- vo의 컬럼명과 똑같이 해준다./ 그리고 db에 넣는 순서와 일치시켜줌! -->
   <!-- insert into 테이블명 values(1,2,3,4,5) -->
   </insert>
   <select id="Stocklist" resultType="stvo">
-select s.shop_num,s.shop_name, p.pro_name,p.pro_code,q.pro_size,p.pro_price,p.pro_img,p.pro_barcode, q.pro_amount, q.status  from product p, stockreq q, shop s where p.pro_code = q.pro_code and q.shop_num = s.shop_num and q.status='wait'
+select q.req_num,s.shop_num,s.shop_name, p.pro_name,p.pro_code,q.pro_size,p.pro_price,p.pro_img,p.pro_barcode, q.pro_amount, q.req_status,q.req_date  from product p, stockreq q, shop s where p.pro_code = q.pro_code and q.shop_num = s.shop_num and q.req_status='wait'
+order by req_num desc
   </select>
 </mapper>

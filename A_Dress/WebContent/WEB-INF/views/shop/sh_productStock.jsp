@@ -75,14 +75,14 @@
 		});
 	});
 
-	function proset(pcode, psize, pamount) {
+	function proset(pcode, psize) {
 		$("#pcode").val(pcode);
 		$("#psize").val(psize);
-		$("#pamount").val(pamount);
 	}
 
 	function pstoeditaction() {
 		document.getElementById("productstockedit").submit();
+		alert("신청이 완료되었습니다.");
 	}
 </script>
 <section id="main-content">
@@ -197,7 +197,7 @@
 									</thead>
 									<tbody>
 
-										<form action="bon.apos" method="post" id="productstockedit">
+										<form action="sh_productstockreq" method="post" id="productstockedit">
 										<input type="hidden" name="shop_num" value="${sessionScope.shop_num}" id="pnum3">
 											<tr class="active">
 												<td><input type="text" class="form-control" name='shop'
@@ -206,8 +206,8 @@
 													name='pcode' id="pcode" value="" readonly="readonly"></td>
 												<td><input type="text" class="form-control"
 													name='psize' id="psize" value="" readonly="readonly"></td>
-												<td><input type="number" class="form-control"
-													name='pamount' id="pamount" value="0"></td>
+												<td><input type="number" class="form-control" name='pro_amount' id="pamount"
+													value="0"></td>
 											</tr>
 										</form>
 

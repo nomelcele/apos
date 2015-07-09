@@ -21,7 +21,7 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th>순 번</th>
+									<th>신청번호</th>
 									<th>매장명</th>
 									<th>상품 이름</th>
 									<th>코드</th>
@@ -30,6 +30,8 @@
 									<th>상품 사진</th>
 									<th>바코드</th>
 									<th>신청 수량</th>
+									<th>신청현황</th>
+									<th>신청일</th>
 									<th>Yes/</th>
 									<th>No</th>
 								</tr>
@@ -52,7 +54,7 @@
 
 								<c:forEach var="bon_product" items="${list}">
 									<tr>
-										<td>${bon_product.shop_num}</td>
+										<td>${bon_product.req_num}</td>
 										<td>${bon_product.shop_name}</td>
 										<td>${bon_product.pro_name}</td>
 										<td>${bon_product.pro_code}</td>
@@ -61,7 +63,8 @@
 										<td><img src="upload/${bon_product.pro_img}"></td>
 										<td>${bon_product.pro_barcode}</td>
 										<td>${bon_product.pro_amount}</td>
-										
+										<td>${bon_product.req_status }</td>
+										<td>${bon_product.req_date }</td>
 										
 										
 										<!-- 

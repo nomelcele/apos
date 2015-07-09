@@ -11,6 +11,7 @@ import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.SmangDao;
 import or.adress.mvc.dao.StaffDao;
+import or.adress.mvc.dao.StockDao;
 import or.adress.mvc.service.ShopService;
 
 import org.apache.ibatis.javassist.compiler.MemberResolver.Method;
@@ -29,6 +30,7 @@ import vo.ProductVO;
 import vo.SalesCheckVO;
 import vo.ShopVO;
 import vo.StaffVO;
+import vo.StockVO;
 
 @Controller
 public class Shopcon {
@@ -44,7 +46,19 @@ public class Shopcon {
    private SmangDao smdao;
    @Autowired
    private ShopService shservice;
+   @Autowired
+   private StockDao stdao;
 
+   
+   @RequestMapping(value="/sh_productstockreq",method=RequestMethod.POST)
+   public ModelAndView stockreq(StockVO vo){
+	   //ModelAndView mav = new ModelAndView("shop/sh_productStock");
+	   //mav.setViewName("shop/sh_productStock");
+	   stdao.Stockreq(vo);
+	   return  sh_productStock();
+   }
+   //addobject는 list, db에서 값을 불러와 view로 보여줄때 !
+   
 	@RequestMapping(value = "/sh_index")
 	public String index() {
 		// ///////임시세션

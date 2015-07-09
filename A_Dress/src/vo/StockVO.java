@@ -1,9 +1,27 @@
 package vo;
 
 public class StockVO {
+	private String shop,pcode,psize,shop_name,pro_name,pro_code,pro_size,pro_img,pro_barcode, req_status,req_date;
+	private int pamount,shop_num,pro_price,pro_amount,req_num;
+	public String getReq_status() {
+		return req_status;
+	}
+	public int getReq_num() {
+		return req_num;
+	}
+	public void setReq_num(int req_num) {
+		this.req_num = req_num;
+	}
+	public void setReq_status(String req_status) {
+		this.req_status = req_status;
+	}
+	public String getReq_date() {
+		return req_date;
+	}
+	public void setReq_date(String req_date) {
+		this.req_date = req_date;
+	}
 
-	private String shop,pcode,psize,shop_name,pro_name,pro_code,pro_size,pro_img,pro_barcode;
-	private int pamount,shop_num,pro_price,pro_amount;
 	
 	public String getShop_name() {
 		return shop_name;
