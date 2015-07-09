@@ -62,3 +62,8 @@ start with 1;
 create sequence sroot_seq
 increment by 1
 start with 1;
+
+---------------7/9 calendar sequence--------------------------
+create sequence calendar_seq
+increment by 1
+start with 1;

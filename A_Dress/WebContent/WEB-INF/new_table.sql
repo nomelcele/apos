@@ -179,17 +179,14 @@ constraint stockreq_shop_num_fk foreign key(shop_num) references shop(shop_num) 
 create table croom (num number(10) constraint cromm_num_pk primary key,u_id varchar2(50),chat varchar2(400),cdate date,reip varchar2(100));
 
 
-
-
-
-
-
-
-
-
-
-
----------------------------------------------------------------
+---------------7/9 calendar table--------------------------
+create table calendar(
+calen_num number(10) constraint calendar_calen_pk primary key,
+calen_start varchar2(30),
+calen_end varchar2(30),
+calen_cont varchar2(200),
+calen_date date
+);
 
 
 
