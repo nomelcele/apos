@@ -19,6 +19,8 @@ import org.springframework.stereotype.Repository;
 
 
 
+
+import vo.MemVO;
 import vo.SalesCheckVO;
 import vo.SmangVO;
 
@@ -59,15 +61,14 @@ public class SmangDao {
 		return ss.selectOne("smang.get_vo", sell_num);
 	}
 	// È¯ºÒ refund
-	/*
-	 * update stock set STO_AMOUNT=sto_amount+#{sell_many} 
-	where sto_shopnum=#{sell_shopnum} and sto_pronum= #{sell_pronum} 
-	and sto_size =#{sell_size}
-	 * */
 	public void get_refund(SalesCheckVO vo){
 		ss.update("smang.get_refund", vo);
 	}
 	public void sell_del(int sell_num){
 		ss.delete("smang.sell_del", sell_num);
+	}
+	
+	public void sell_mileagechange(MemVO vo){
+		ss.update("smang.mileage",vo);
 	}
 }
