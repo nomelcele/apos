@@ -33,6 +33,10 @@
 	<insert id="" parameterType="map">
 		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 0, #{sto_shopnum}, #{sto_size})
 	</insert>
+	<!-- 상품세일 -->
+	<select id="bonsa_discount" resultType="provo">
+		select * from product
+	</select>
 </mapper>
 
 
