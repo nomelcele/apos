@@ -8,6 +8,8 @@
 <script>
 	function gojoin() {
 		alert("호출확인");
+		var tel = $('#tel1').val()+$('#tel2').val()+$('#tel3').val();
+		$('#shop_tel').val(tel);
 		$('#feedback_form').submit();
 		
 	}
@@ -92,6 +94,7 @@
                               <div class="form">
                               
                                   <form class="form-validate form-horizontal" enctype="multipart/form-data" id="feedback_form" method="post" action="sh_shopinsert" autocomplete="off">
+                                  <input type="hidden" id="shop_tel" name="shop_tel" value="">
                                   	  <div class="form-group ">
                                           <label for="cSelfImg" class="control-label col-lg-2"> Self_IMG <span class="required">*</span></label>
                                           <div class="col-lg-10">

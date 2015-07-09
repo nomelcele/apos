@@ -44,7 +44,6 @@ public class ShopVO {
 		this.shop_name = shop_name;
 	}
 	public String getShop_tel() {
-		shop_tel = tel1+"-"+tel2+"-"+tel3;
 		return shop_tel;
 	}
 	public void setShop_tel(String shop_tel) {

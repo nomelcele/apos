@@ -441,6 +441,7 @@ public class Bonsacon {
 		mav.setViewName("bonsa/bon_shopCheck");
 		List<ShopVO> list = shdao.getshopList();
 		mav.addObject("list", list);
+		System.out.println(list.get(0).getShop_tel());
 		return mav;
 	}
 
