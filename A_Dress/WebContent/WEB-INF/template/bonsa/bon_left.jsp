@@ -108,8 +108,9 @@
 	var str = "";
 	var first = true;
 	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
-		
+		alert(event.data);
 		var spl = event.data.split("<@>");
+		alert(spl[1]);
 		if(str != spl[0]){
 			if(first == true){
 				first=false;

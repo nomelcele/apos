@@ -28,6 +28,7 @@ import javax.servlet.http.Part;
 import or.adress.mvc.dao.BoardDao;
 import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
+import or.adress.mvc.dao.StockDao;
 import or.adress.mvc.service.BonsaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,7 @@ import vo.CommVO;
 import vo.PageVO;
 import vo.ProductVO;
 import vo.ShopVO;
+import vo.StockVO;
 
 @Controller
 public class Bonsacon {
@@ -57,6 +59,8 @@ public class Bonsacon {
 	private ProductDao pdao;
 	@Autowired
 	private BonsaService bservice;
+	@Autowired
+	private StockDao stdao;
 
 	@RequestMapping(value = "/bon_index")
 	public ModelAndView bon_index(HttpSession session) {
@@ -379,13 +383,13 @@ public class Bonsacon {
         return bon_shopJoin();
 	}
 	
-	// 본사 상품관리 - 상품재고관리
-	@RequestMapping(value = "/bon_productSale")
-	public ModelAndView bon_productSale() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("bonsa/bon_productSale");
-		return mav;
-	}
+//	// 본사 상품관리 - 상품재고관리
+//	@RequestMapping(value = "/bon_productSale")
+//	public ModelAndView bon_productSale() {
+//		ModelAndView mav = new ModelAndView();
+//		mav.setViewName("bonsa/bon_productSale");
+//		return mav;
+//	}
 	
 	
 	
@@ -472,7 +476,19 @@ public class Bonsacon {
 		bservice.bon_productAdding(vo);
 		return mav;
 	}
+	
+	//본사 매장 재고 관리
+	   @RequestMapping(value = "/bon_productSale")
+	   public ModelAndView bon_productSale() {
+	   ModelAndView mav = new ModelAndView();
+	   mav.setViewName("bonsa/bon_productSale");
+	   List<StockVO> list = stdao.Stocklist();
+	   mav.addObject("list",list);
+	   return mav;
+	   }
 
+	
+	
 	// 페이징처리
 	private PageVO pageProcess(int page, int no, int etc) {
 		PageVO pageInfo = new PageVO();
