@@ -187,8 +187,7 @@ calen_end varchar2(30),
 calen_content varchar2(200),
 calen_coler varchar2(50),
 calen_procode varchar2(50),
-calen_date date,constraint calendar_procode_fk foreign key (calen_procode) references product(pro_code) on delete cascade
-);
+calen_date date);
 
 
 
