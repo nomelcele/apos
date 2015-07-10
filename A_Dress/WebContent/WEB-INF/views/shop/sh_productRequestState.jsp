@@ -6,6 +6,23 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 매장 상품관리의 상품신청현황 페이지 입니다.-->
+<script>
+
+function open_win2(img2)
+{
+ window.open(img2,'popup', 'width=250, height=300, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
+}
+
+
+</script>
+<script>
+function open_win3(img3)
+{
+ window.open(img3,'popup', 'width=280, height=100, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
+}
+
+
+</script>
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row" style="font-size: 15px; width:100%; height:100%">
@@ -58,8 +75,11 @@
 										<td>${state.pro_code}</td>
 										<td>${state.pro_size}</td>
 										<td>${state.pro_price}</td>
-										<td><img src="upload/${state.pro_img}" style="width:100px;"></td>
-										<td><img src="upload/${state.pro_barcode}"style="width: 100px;"></td>
+										<td><a href="javascript:open_win2('upload/${state.pro_img}')">
+										<img src='upload/${state.pro_img}'style="width:100px;"></a></td>
+										
+										<td><a href="javascript:open_win3('upload/${state.pro_barcode}')">
+										<img src='upload/${state.pro_barcode}'style="width: 100px;"></a></td>
 										<td>${state.pro_amount}</td>
 										<td>${state.req_status }</td>
 										<td>${state.req_date }</td>
