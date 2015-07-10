@@ -10,9 +10,7 @@
 </script>
 
 
-<form method="post" action="sh.apos" id="term">
-<input type="hidden" name="cmd" value="swork">
-<input type="hidden" name="subcmd" value="term">
+<form method="post" action="sh_workTerm" id="term">
 </form>
 
 
