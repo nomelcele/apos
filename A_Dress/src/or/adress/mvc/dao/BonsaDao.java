@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import vo.BonsaVO;
 import vo.CalendarVO;
 import vo.ProductVO;
+import vo.SaleVO;
 import vo.ShopVO;
 
 @Repository
@@ -79,4 +80,10 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 		
 		return list;
 	}
+	
+	//할인적용시 calendar에 적용
+	public void insert_salecalendar(SaleVO vo){
+		ss.insert("bonsa.insert_salecalendar", vo);
+	}
+	
 }

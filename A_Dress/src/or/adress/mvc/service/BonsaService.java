@@ -3,6 +3,8 @@ package or.adress.mvc.service;
 import java.util.HashMap;
 import java.util.List;
 
+import or.adress.mvc.dao.BoardDao;
+import or.adress.mvc.dao.BonsaDao;
 import or.adress.mvc.dao.ProductDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +12,17 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import vo.ProductVO;
+import vo.SaleVO;
 
 @Transactional
 @Service
 public class BonsaService {
 	@Autowired
 	private ProductDao pdao;
+	@Autowired
+	private BoardDao bdao;
+	@Autowired
+	private BonsaDao bondao;
 	
 	//프로퍼티지?
 	private Integer[] chk11 = {95,100,105};
@@ -65,5 +72,12 @@ public class BonsaService {
 				pdao.setzerostock(map);
 			}
 		}
+	}
+	
+	public void acceptsalerate(SaleVO vo){
+		pdao.acceptsalerate(vo);
+		bdao.insertSale(vo);
+		bondao.insert_salecalendar(vo);
+		
 	}
 }

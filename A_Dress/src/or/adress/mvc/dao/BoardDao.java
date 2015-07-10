@@ -16,6 +16,7 @@ import org.springframework.stereotype.Repository;
 
 import vo.BoardVO;
 import vo.CommVO;
+import vo.SaleVO;
 
 @Repository
 public class BoardDao {
@@ -66,5 +67,9 @@ public class BoardDao {
 	//detail페이지에 소속된 댓글의 전체 카운트값을 가져온다.
 	public int getTotalCommCount(int no){
 		return ss.selectOne("notice.notice_gettotalcommcount", no);
+	}
+	//할인적용시 게시판글쓰기
+	public void insertSale(SaleVO vo){
+		ss.insert("notice.notice_saleinsert", vo);
 	}
 }

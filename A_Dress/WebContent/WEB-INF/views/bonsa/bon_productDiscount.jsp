@@ -14,15 +14,13 @@
             $("#bpdtarget").html(data);
          }
       });
+       $('#set_pro_code').val($('#pro_code').val());
     }
     
     function saleaccept(){
        $('#godiscount').submit();
     }
-    function setsale(pro_code, pro_price){
-       $('#set_pro_code').val(pro_code);
-       $('#set_pro_price').val(pro_price);
-    }
+   
  </script>
 <!-- 본사 상품관리 - 상품세일 -->
 <section id="main-content">
@@ -72,7 +70,6 @@
                                     <th>상품사진</th>
                                     <th>바코드</th>
                                     <th >할인율</th>
-                                    <th>선택</th>
                                  </tr>
                               </thead>
                               <tbody id="bpdtarget">
@@ -85,8 +82,9 @@
                         <thead>
                            <tr>
                               <th>상품코드</th>
-                              <th>가격</th>
                               <th>할인율</th>
+                              <th>시작일</th>
+                              <th>종료일</th>
                               <th>적용</th>
                            </tr>
                         </thead>
@@ -95,11 +93,18 @@
                            <tr class="active">
                               <td><input type="text" class="form-control" name='set_pro_code'
                                  id="set_pro_code" value="" readonly="readonly"></td>
-                              <td><input type="text" class="form-control" name='set_pro_price'
-                                 id="set_pro_price" value="" readonly="readonly"></td>
                               <td><input type="number" class="form-control"
                                  name='set_pro_salerate' id="set_pro_salerate" value="0" style="width: 100px;"></td>
-                              <td><div class="btn-group"><a class="btn btn-success" href="javascript:saleaccept()"><i class="icon_check_alt2"></i></a></div></td>
+                                 <td><input id="sale_begin" name="sale_begin" autocomplete="off"
+									type="date" required /></td>
+								 <td><input id="sale_end"
+									name="sale_end" autocomplete="off" type="date"
+									required /></td> 
+                              <td rowspan="2"><div class="btn-group"><a class="btn btn-success" href="javascript:saleaccept()"><i class="icon_check_alt2"></i></a></div></td>
+                           </tr>
+                           <tr class="active">
+                           		<td>내용		:	</td>
+                           		<td colspan="3"><input type="text" class="form-control" name='sale_content' id="sale_content" value=""></td>
                            </tr>
                            </form>
 

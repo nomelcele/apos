@@ -53,8 +53,10 @@
   		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 0, #{sto_shopnum}, #{sto_size})
   	</select>
   	
-  	<update id="acceptsalerate" parameterType="map">
-  		update product set pro_salerate=#{set_pro_salerate} where pro_code=#{set_pro_code}
+  	<!-- 할인적용 -->
+  	<update id="acceptsalerate" parameterType="salevo">
+  		update product set pro_salerate=#{set_pro_salerate} where pro_code like '%'||#{set_pro_code}||'%'
   	</update>
+  	
   	
 </mapper>

@@ -7,6 +7,9 @@
   	 <insert id="notice_in"  parameterType="bvo">
   insert into Board values(Board_seq.nextval,#{title},#{writer},#{content},sysdate,#{path},0,1)
   </insert>
+  	<insert id="notice_saleinsert" parameterType="salevo">
+  	insert into board values(Board_seq.nextval,#{sale_sub},#{sale_writer},#{sale_content},sysdate,null,0,1)
+  	</insert>
   	
   	<select id="notice_list" parameterType="map" resultType="bvo">
   	select bo_num no, bo_sub title, bo_writer writer, bo_cont content, bo_date regdate, bo_img path, bo_hit hit, bo_bonnum groupno,c.cnt from (
