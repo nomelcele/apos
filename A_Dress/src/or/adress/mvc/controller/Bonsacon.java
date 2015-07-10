@@ -251,7 +251,7 @@ public class Bonsacon {
 	// 핫키 Yes 클릭시
 	// 완료
 	@RequestMapping(value = "/bon_shopJoinOK")
-	public ModelAndView bon_shopJoinOK(String mail, String name, String hotkey) {
+	public ModelAndView bon_shopJoinOK(String mail, String name, String hotkey, int key_num) {
 		
 //		if(subcmd.equals("ok")){
 //			// 메일 관련 정보
@@ -274,6 +274,7 @@ public class Bonsacon {
 	        String subject = "APOS - 매장 가입을 환영합니다";
 	        String body = "\""+name+"\"님" + "환영합니다~"+"\n\r"+"Hotkey : "+hotkey;
 	        
+	        bondao.deletehotkey(key_num);
 	        
 	        Properties props = System.getProperties();
 	         
@@ -325,7 +326,7 @@ public class Bonsacon {
 	// 핫키 NO 클릭시
 	// 완료
 	@RequestMapping(value = "/bon_shopJoinNO")
-	public ModelAndView bon_shopJoinNO(String mail, String name, String hotkey) {
+	public ModelAndView bon_shopJoinNO(String mail, String name, String hotkey, int key_num) {
 		
 		System.out.println("--------여기는 NO 메일 보내는 곳--------");
 		System.out.println("MAIL : "+mail);
@@ -342,6 +343,8 @@ public class Bonsacon {
         String subject = "APOS - 매장 가입을 거절당했습니다";
         String body = "\""+name+"\"님" + "안녕하세요~"+"\n\r"+"회사 규정상 회원 가입처리가 거절 되었습니다"+"\n\r"+"감사합니다";
          
+        bondao.deletehotkey(key_num);
+        
         Properties props = System.getProperties();
          
          
