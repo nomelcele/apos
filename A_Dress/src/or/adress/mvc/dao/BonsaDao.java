@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import vo.BonsaVO;
+import vo.CalendarVO;
 import vo.ProductVO;
 import vo.ShopVO;
 
@@ -67,5 +68,15 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 		List<ProductVO> list = ss.selectList("bonsa_discount");
 		return list;
 	}
-	
+	// bonsa_fullcalendar 정보 저장하기
+	public void insertfullcalendar(CalendarVO vo){
+		System.out.println(vo.getCalen_start());
+	      ss.insert("bonsa.insert_calendar",vo);
+	}
+	// bonsa_fullcalendar 정보 가져오기
+	public List<CalendarVO> getlistfullcalendar(){
+		List<CalendarVO> list = ss.selectList("bonsa.getlist_calendar");
+		
+		return list;
+	}
 }
