@@ -5,6 +5,7 @@
 	pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <script>
 			function gostockyn(req_status, req_num){
 				
@@ -22,6 +23,20 @@
 			}
 	
 </script>
+<script>
+function openview1(img1)
+{
+ window.open(img1,'popup', 'width=280, height=310, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
+}
+</script>
+
+<script>
+function openview2(img2)
+{
+ window.open(img2,'popup', 'width=280, height=310, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
+}
+</script>
+
 <!-- 본사 상품관리의 상품재고관리 페이지 입니다.-->
 <section id="main-content">
 	<section class="wrapper">
@@ -85,8 +100,11 @@
 										<td>${bon_product.pro_code}</td>
 										<td>${bon_product.pro_size}</td>
 										<td>${bon_product.pro_price}</td>
-										<td><img src="upload/${bon_product.pro_img}" style="width:100px;"></td>
-										<td><img src="upload/${bon_product.pro_barcode}" style="width:100px;"></td>
+										<td><a href="javascript=openview1('upload/${bon_product.pro_img}')">
+										<img src='upload/${bon_product.pro_img}'style="width:100px; cursor:hand;"></a></td>
+										
+										<td><a href="javascript=openview2('upload/${bon_product.pro_barcode}')">
+										<img src='upload/${bon_product.pro_barcode}' style="width:100px; cursor:hand;"></a></td>
 										<td>${bon_product.pro_amount}</td>
 										<td>${bon_product.req_status }</td>
 										<td>${bon_product.req_date }</td>
