@@ -7,18 +7,21 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script>
 			function gostockyn(req_status, req_num){
-				
-				var UP;
-				   UP=confirm("정말 승인하시겠습니까?");
-				   if(UP){
-				      location= "bon_productSale?";
-				   } else {
-				   
-				   }
-				
-				$("#req_status").val(req_status);
-				$("#req_num").val(req_num);
-				document.getElementById("stockyn").submit();		
+				if(req_status=="Yes"){
+					var UP;
+					   UP=confirm("정말 승인하시겠습니까?");
+					   if(UP){
+						   $("#req_status").val(req_status);
+							$("#req_num").val(req_num);
+						      document.getElementById("stockyn").submit();
+					   }else{
+						   
+					   }
+				}else{
+					
+					alert("거절하였습니다.");
+					
+				}
 			}
 	
 </script>
