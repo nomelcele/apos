@@ -37,6 +37,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import vo.CalendarVO;
 import vo.ChaVO;
 import vo.MemVO;
 import vo.ProductVO;
@@ -942,6 +943,16 @@ public class Ajaxcon {
 		String str = res.toString();
 		ModelAndView mav= new ModelAndView("ajax/bpd_chk_callback");
 		mav.addObject("str", str);
+		return mav;
+	}
+	
+	// º»»ç - Full Calendar
+	@RequestMapping(value="bon_ajaxcalendar", method=RequestMethod.POST)
+	public ModelAndView bon_fullcalendar(CalendarVO vo){
+		ModelAndView mav = new ModelAndView();
+		bdao.insertfullcalendar(vo);
+		mav.setViewName("ajax/bon_ajaxfullcalendar");
+		mav.addObject("res","Success");
 		return mav;
 	}
 	
