@@ -268,12 +268,16 @@ public class Shopcon {
            return mav;
       }
      //상품관리 -상품신청현황
-      @RequestMapping(value="/sh_productRequestState")
-      public ModelAndView sh_productRequestState(){
-         ModelAndView mav = new ModelAndView();
-         mav.setViewName("shop/sh_productRequestState");
-         return mav;
-      }
+
+	   @RequestMapping(value = "/sh_productRequestState")
+	   public ModelAndView bon_productSale_2(int shop_num){
+		   System.out.println("ASDASDASDASDASD");
+	   ModelAndView mav = new ModelAndView();
+	   mav.setViewName("shop/sh_productRequestState");
+	   List<StockVO> list = stdao.sh_productRequestState(shop_num);
+	   mav.addObject("list",list);
+	   return mav;
+	   }
 
    // 시큐리티때 추가 세션
    @RequestMapping(value = "/sh_productsaerch", method = RequestMethod.POST)
@@ -416,7 +420,13 @@ public class Shopcon {
 	   mav.setViewName("shop/sh_smangExchTefu");
 	   return mav;
    }
-
+//자기매장 재고 신청 나만보기
+   @RequestMapping(value="bon_productSale_1")
+   public ModelAndView SSlist(StockVO vo){
+	  ModelAndView mav = new ModelAndView();
+	  mav.setViewName("shop/sh_productRequestState");
+	  return mav;
+   }
    
 }
 
