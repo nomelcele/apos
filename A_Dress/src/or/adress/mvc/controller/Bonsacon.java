@@ -504,6 +504,12 @@ public class Bonsacon {
 	   mav.addObject("list",list);
 	   return mav;
 	   }
+	   
+	//상품코드분류표 팝업창
+	   @RequestMapping(value="popup")
+	   public String popup(){
+		   return "ajax/popup";
+	   }
 
 	
 	
