@@ -16,7 +16,7 @@ public class LoginService {
 	@Autowired
 	ShopDao shdao;
 	
-//	public List<ShopVO> sh_loginok_master(String id){
-//		
-//	}
+	public void shopjoinservice(String id){
+		
+	}
 }
