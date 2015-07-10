@@ -49,6 +49,10 @@
   		select shop_num from shop
   	</select>
   	
+  	<select id="get_productnumlist" resultType="String">
+  		select pro_code from product
+  	</select>
+  	
   	<select id="setzerostock" parameterType="map">
   		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 0, #{sto_shopnum}, #{sto_size})
   	</select>

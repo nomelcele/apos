@@ -98,4 +98,13 @@ public class ProductDao {
 	public void setzerostock(HashMap<String, Integer> map){
 		ss.insert("product.setzerostock", map);
 	}
+	
+	//매장가입시 초기물량설정위한 물품코드리스트
+	public List<String> get_productnumlist(){
+		return ss.selectList("product.get_productnumlist");
+	}
+	//매장가입시 샵넘을 가져오기
+	public int get_last_shopnum(){
+		return ss.selectOne("shop.get_last_shopnum");
+	}
 }

@@ -76,7 +76,10 @@
 	</select>
 	
 	
-	
+	<!-- 매장가입시 -->
+	<select id="get_last_shopnum" resultType="int">
+	select max(shop_num) from shop
+	</select>
 	
 	
 	<!-- 물어볼것! -->

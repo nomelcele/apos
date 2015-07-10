@@ -294,7 +294,7 @@ insert into shop values(
 );
 
 insert into shop values(
-1,'ÆÇ±³Á¡'
+shop_seq.nextval,'ÆÇ±³Á¡'
 ,'031-234-1231','ÆÇ±³',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',004,1,'test','1234'
@@ -302,7 +302,7 @@ insert into shop values(
 
 
 insert into shop values(
-2,'¼öÁöÁ¡'
+shop_seq.nextval,'¼öÁöÁ¡'
 ,'031-264-1236','¼öÁö',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',005,1,'test1','1234'
@@ -310,7 +310,7 @@ insert into shop values(
 
 
 insert into shop values(
-3,'¼º³²Á¡'
+shop_seq.nextval,'¼º³²Á¡'
 ,'031-134-1631','¼º³²',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',006,1,'test2','1234'
@@ -318,7 +318,7 @@ insert into shop values(
 
 
 insert into shop values(
-4,'ºÎ»êÁ¡'
+shop_seq.nextval,'ºÎ»êÁ¡'
 ,'054-214-1291','ºÎ»ê',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',007,1,'test3','1234'
@@ -326,7 +326,7 @@ insert into shop values(
 
 
 insert into shop values(
-5,'ÀüÁÖÁ¡'
+shop_seq.nextval,'ÀüÁÖÁ¡'
 ,'063-214-1981','ÀüÁÖ',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',008,1,'test4','1234'
@@ -334,7 +334,7 @@ insert into shop values(
 
 
 insert into shop values(
-6,'ÃæÃ»Á¡'
+shop_seq.nextval,'ÃæÃ»Á¡'
 ,'043-134-3231','ÃæÃ»',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',009,1,'test5','1234'
@@ -342,7 +342,7 @@ insert into shop values(
 
 
 insert into shop values(
-7,'°­¿øÁ¡'
+shop_seq.nextval,'°­¿øÁ¡'
 ,'033-834-1111','°­¿ø',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',010,1,'test6','1234'
@@ -350,7 +350,7 @@ insert into shop values(
 
 
 insert into shop values(
-8,'³»°îÁ¡'
+shop_seq.nextval,'³»°îÁ¡'
 ,'02-284-1331','³»°î',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',011,1,'test7','1234'
@@ -358,7 +358,7 @@ insert into shop values(
 
 
 insert into shop values(
-9,'¼­ÃÊÁ¡'
+shop_seq.nextval,'¼­ÃÊÁ¡'
 ,'02-678-1341','¼­ÃÊ',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',012,1,'test8','1234'
@@ -366,7 +366,7 @@ insert into shop values(
 
 
 insert into shop values(
-10,'°­³²Á¡'
+shop_seq.nextval,'°­³²Á¡'
 ,'02-2124-1231','°­³²',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',013,1,'test9','1234'
@@ -375,7 +375,7 @@ insert into shop values(
 
 
 insert into shop values(
-11,'ÇÑ³²Á¡'
+shop_seq.nextval,'ÇÑ³²Á¡'
 ,'02-234-1841','ÇÑ³²',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',014,1,'test10','1234'
@@ -383,7 +383,7 @@ insert into shop values(
 
 
 insert into shop values(
-12,'¿Á¼öÁ¡'
+shop_seq.nextval,'¿Á¼öÁ¡'
 ,'02-234-3451','¿Á¼ö',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',015,1,'test11','1234'
@@ -391,7 +391,7 @@ insert into shop values(
 
 
 insert into shop values(
-13,'¾à¼öÁ¡'
+shop_seq.nextval,'¾à¼öÁ¡'
 ,'02-234-1281','¾à¼ö',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',016,1,'test12','1234'
@@ -400,7 +400,7 @@ insert into shop values(
 
 
 insert into shop values(
-14,'¿Õ½Ê¸®Á¡'
+shop_seq.nextval,'¿Õ½Ê¸®Á¡'
 ,'02-2124-1531','¿Õ½Ê¸®',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',017,1,'test13','1234'
@@ -408,7 +408,7 @@ insert into shop values(
 
 
 insert into shop values(
-15,'ÀÇÁ¤ºÎÁ¡'
+shop_seq.nextval,'ÀÇÁ¤ºÎÁ¡'
 ,'031-234-1131','ÀÇÁ¤ºÎ',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',018,1,'test14','1234'
@@ -416,7 +416,7 @@ insert into shop values(
 
 
 insert into shop values(
-16,'³²¾çÁÖÁ¡'
+shop_seq.nextval,'³²¾çÁÖÁ¡'
 ,'031-224-1221','³²¾çÁÖ',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',019,1,'test15','1234'
@@ -425,7 +425,7 @@ insert into shop values(
 
 
 insert into shop values(
-17,'Á×ÀüÁ¡'
+shop_seq.nextval,'Á×ÀüÁ¡'
 ,'031-234-1341','Á×Àü',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',020,1,'test16','1234'
@@ -433,7 +433,7 @@ insert into shop values(
 
 
 insert into shop values(
-18,'¿À¸®Á¡'
+shop_seq.nextval,'¿À¸®Á¡'
 ,'031-2124-6231','¿À¸®',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',021,1,'test17','1234'
@@ -441,7 +441,7 @@ insert into shop values(
 
 
 insert into shop values(
-19,'Àá½ÇÁ¡'
+shop_seq.nextval,'Àá½ÇÁ¡'
 ,'02-123-1255','Àá½Ç',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',022,1,'test18','1234'
@@ -449,7 +449,7 @@ insert into shop values(
 
 
 insert into shop values(
-20,'°Ç´ëÁ¡'
+shop_seq.nextval,'°Ç´ëÁ¡'
 ,'02-237-7831','°Ç´ë',0,0,sysdate,
 'test@naver.com','¿ÊÆÈ¾Æ',
 'imagie.img',023,1,'test19','1234'
@@ -519,73 +519,73 @@ insert into product values(product_seq.nextval,'¾Æµ¿ Æú·Î¼ÅÃ÷','1533104005','ba_
 
 
 
-insert into staff values(1,'µµÇÏÁø',1,'010-121-1234',1,'test0',1234);
-insert into staff values(2,'°­ÀºÁö',2,'123-1221-3000',1,'test1',1234);
-insert into staff values(3,'¹ÚÀºÁö',2,'123-123-1111',1,'test2',1234);
+insert into staff values(staff_seq.nextval,'µµÇÏÁø',1,'010-121-1234',1,'test0',1234);
+insert into staff values(staff_seq.nextval,'°­ÀºÁö',2,'123-1221-3000',1,'test1',1234);
+insert into staff values(staff_seq.nextval,'¹ÚÀºÁö',2,'123-123-1111',1,'test2',1234);
 
-insert into staff values(4,'À±°úÀå',1,'123-124-2222',2,'test3',1234);
-insert into staff values(5,'¸¢°úÀå',2,'123-125-3333',2,'test4',1234);
-insert into staff values(6,'¼®Á¾Çö',2,'123-126-5555',2,'test5',1234);
+insert into staff values(staff_seq.nextval,'À±°úÀå',1,'123-124-2222',2,'test3',1234);
+insert into staff values(staff_seq.nextval,'¸¢°úÀå',2,'123-125-3333',2,'test4',1234);
+insert into staff values(staff_seq.nextval,'¼®Á¾Çö',2,'123-126-5555',2,'test5',1234);
 
-insert into staff values(7,'°­ÀºÁö',1,'123-127-6666',3,'test6',1234);
-insert into staff values(8,'±èÀ±Áö',2,'123-128-7777',3,'test7',1234);
-insert into staff values(9,'±èÇöÁ¤',2,'123-129-8888',3,'test8',1234);
+insert into staff values(staff_seq.nextval,'°­ÀºÁö',1,'123-127-6666',3,'test6',1234);
+insert into staff values(staff_seq.nextval,'±èÀ±Áö',2,'123-128-7777',3,'test7',1234);
+insert into staff values(staff_seq.nextval,'±èÇöÁ¤',2,'123-129-8888',3,'test8',1234);
 
-insert into staff values(10,'À±Á¤¾Æ',1,'123-113-1111',4,'test9',1234);
-insert into staff values(11,'ÀÓ¼öÇö',2,'123-123-9999',4,'test10',1234);
-insert into staff values(12,'ÀÓÇı½Â',2,'123-123-2222',4,'test11',1234);
+insert into staff values(staff_seq.nextval,'À±Á¤¾Æ',1,'123-113-1111',4,'test9',1234);
+insert into staff values(staff_seq.nextval,'ÀÓ¼öÇö',2,'123-123-9999',4,'test10',1234);
+insert into staff values(staff_seq.nextval,'ÀÓÇı½Â',2,'123-123-2222',4,'test11',1234);
 
-insert into staff values(13,'¹Úº´ÁØ',1,'123-123-3333',5,'test12',1234);
-insert into staff values(14,'¼ºµ¿¿ø',2,'123-123-5555',5,'test13',1234);
-insert into staff values(15,'ÃÖÃ¶³ç',2,'123-123-6666',5,'test14',1234);
+insert into staff values(staff_seq.nextval,'¹Úº´ÁØ',1,'123-123-3333',5,'test12',1234);
+insert into staff values(staff_seq.nextval,'¼ºµ¿¿ø',2,'123-123-5555',5,'test13',1234);
+insert into staff values(staff_seq.nextval,'ÃÖÃ¶³ç',2,'123-123-6666',5,'test14',1234);
 
-insert into staff values(16,'¼­°æ¿¬',1,'123-123-7777',6,'test15',1234);
-insert into staff values(17,'¹Ú°æÂù',2,'123-123-8888',6,'test16',1234);
-insert into staff values(18,'¼­°æ¿¬',2,'123-123-9999',6,'test17',1234);
+insert into staff values(staff_seq.nextval,'¼­°æ¿¬',1,'123-123-7777',6,'test15',1234);
+insert into staff values(staff_seq.nextval,'¹Ú°æÂù',2,'123-123-8888',6,'test16',1234);
+insert into staff values(staff_seq.nextval,'¼­°æ¿¬',2,'123-123-9999',6,'test17',1234);
 
-insert into staff values(19,'À±È«±â',1,'123-123-2222',7,'test18',1234);
-insert into staff values(20,'ÇÑ±¤È£',2,'123-123-1234',7,'test19',1234);
-insert into staff values(21,'À±¼ºÇö',2,'123-123-5678',7,'test20',1234);
-
-
-insert into staff values(22,'±è¼öÈ¯',1,'123-123-1111',8,'test21',1234);
-insert into staff values(23,'±è¿µÀº',2,'123-123-2222',8,'test22',1234);
-insert into staff values(24,'¸ğÇÏ¶÷',2,'123-123-3333',8,'test23',1234);
+insert into staff values(staff_seq.nextval,'À±È«±â',1,'123-123-2222',7,'test18',1234);
+insert into staff values(staff_seq.nextval,'ÇÑ±¤È£',2,'123-123-1234',7,'test19',1234);
+insert into staff values(staff_seq.nextval,'À±¼ºÇö',2,'123-123-5678',7,'test20',1234);
 
 
-insert into staff values(25,'±è¼ºÈ£',1,'123-123-6666',9,'test24',1234);
-insert into staff values(26,'È«¸íÇ¥',2,'123-123-7777',9,'test25',1234);
-insert into staff values(27,'±è¸íÁØ',2,'123-123-5555',9,'test26',1234);
+insert into staff values(staff_seq.nextval,'±è¼öÈ¯',1,'123-123-1111',8,'test21',1234);
+insert into staff values(staff_seq.nextval,'±è¿µÀº',2,'123-123-2222',8,'test22',1234);
+insert into staff values(staff_seq.nextval,'¸ğÇÏ¶÷',2,'123-123-3333',8,'test23',1234);
 
 
-insert into staff values(28,'±èÁÖ»ó',1,'123-123-3232',10,'test27',1234);
-insert into staff values(29,'½ÅÈ£¼®',2,'123-123-3333',10,'test28',1234);
-insert into staff values(30,'ÀÌ¼öÀÎ',2,'123-123-7777',10,'test29',1234);
+insert into staff values(staff_seq.nextval,'±è¼ºÈ£',1,'123-123-6666',9,'test24',1234);
+insert into staff values(staff_seq.nextval,'È«¸íÇ¥',2,'123-123-7777',9,'test25',1234);
+insert into staff values(staff_seq.nextval,'±è¸íÁØ',2,'123-123-5555',9,'test26',1234);
 
 
-insert into staff values(31,'¾ÈÁö¿µ',1,'123-123-9999',11,'test30',1234);
-insert into staff values(32,'±è¿µ±Ç',2,'123-123-0000',11,'test31',1234);
-insert into staff values(33,'ÀÌÀçÈï',2,'123-123-2222',11,'test32',1234);
+insert into staff values(staff_seq.nextval,'±èÁÖ»ó',1,'123-123-3232',10,'test27',1234);
+insert into staff values(staff_seq.nextval,'½ÅÈ£¼®',2,'123-123-3333',10,'test28',1234);
+insert into staff values(staff_seq.nextval,'ÀÌ¼öÀÎ',2,'123-123-7777',10,'test29',1234);
 
 
-insert into staff values(34,'ÀÌ°æ¼®',1,'123-123-3333',12,'test33',1234);
-insert into staff values(35,'±è³²Çõ',2,'123-123-1111',12,'test34',1234);
-insert into staff values(36,'Á¶¹Î¿µ',2,'123-123-2222',12,'test35',1234);
+insert into staff values(staff_seq.nextval,'¾ÈÁö¿µ',1,'123-123-9999',11,'test30',1234);
+insert into staff values(staff_seq.nextval,'±è¿µ±Ç',2,'123-123-0000',11,'test31',1234);
+insert into staff values(staff_seq.nextval,'ÀÌÀçÈï',2,'123-123-2222',11,'test32',1234);
 
 
-insert into staff values(37,'Á¤Çı¿µ',1,'123-123-3333',13,'test36',1234);
-insert into staff values(38,'¾ö¼º·Ä',2,'123-123-1111',13,'test37',1234);
-insert into staff values(39,'±ÇÇõ¹Î',2,'123-123-2222',13,'test38',1234);
+insert into staff values(staff_seq.nextval,'ÀÌ°æ¼®',1,'123-123-3333',12,'test33',1234);
+insert into staff values(staff_seq.nextval,'±è³²Çõ',2,'123-123-1111',12,'test34',1234);
+insert into staff values(staff_seq.nextval,'Á¶¹Î¿µ',2,'123-123-2222',12,'test35',1234);
 
 
-insert into staff values(40,'À±¿©È¯',1,'123-123-3333',14,'test39',1234);
-insert into staff values(41,'ÃÖ¿µÀ±',2,'123-123-4444',14,'test40',1234);
-insert into staff values(42,'ÀÓÇöÁö',2,'123-123-5555',14,'test41',1234);
+insert into staff values(staff_seq.nextval,'Á¤Çı¿µ',1,'123-123-3333',13,'test36',1234);
+insert into staff values(staff_seq.nextval,'¾ö¼º·Ä',2,'123-123-1111',13,'test37',1234);
+insert into staff values(staff_seq.nextval,'±ÇÇõ¹Î',2,'123-123-2222',13,'test38',1234);
 
 
-insert into staff values(43,'°æÀç¿í',1,'123-123-6666',15,'test42',1234);
-insert into staff values(44,'ÀÌÀÎÀÇ',2,'123-123-7777',15,'test43',1234);
-insert into staff values(45,'¾ÈÁÖÈ£',2,'123-123-8888',15,'test44',1234);
+insert into staff values(staff_seq.nextval,'À±¿©È¯',1,'123-123-3333',14,'test39',1234);
+insert into staff values(staff_seq.nextval,'ÃÖ¿µÀ±',2,'123-123-4444',14,'test40',1234);
+insert into staff values(staff_seq.nextval,'ÀÓÇöÁö',2,'123-123-5555',14,'test41',1234);
+
+
+insert into staff values(staff_seq.nextval,'°æÀç¿í',1,'123-123-6666',15,'test42',1234);
+insert into staff values(staff_seq.nextval,'ÀÌÀÎÀÇ',2,'123-123-7777',15,'test43',1234);
+insert into staff values(staff_seq.nextval,'¾ÈÁÖÈ£',2,'123-123-8888',15,'test44',1234);
 
 
 --»ç¿øµéÀÇ ±Ù¹« ´ë¸®Á¡À» Ãâ·ÂÇÏ½Ã¿À.
