@@ -154,6 +154,7 @@
 												<th>사이즈</th>
 												<th>재고</th>
 												<th>가격</th>
+												<th>할인율</th>
 												<th>상품사진</th>
 												<th>바코드</th>
 											</tr>
@@ -168,6 +169,7 @@
 													<th>${stList.sto_size}</th>
 													<th>${stList.sto_amount}</th>
 													<th>${stList.pro_price}</th>
+													<th>${stList.pro_salerate}</th>
 													<th><img src='upload/${stList.pro_img}'
 														style="width: 100px;">
 													</td>
@@ -198,6 +200,7 @@
 												<th>사이즈</th>
 												<th>재고</th>
 												<th>가격</th>
+												<th>할인율</th>
 												<th>상품사진</th>
 												<th>바코드</th>
 											</tr>
@@ -224,6 +227,7 @@
 												<th>사이즈</th>
 												<th>재고</th>
 												<th>가격</th>
+												<th>할인율</th>
 												<th>상품사진</th>
 												<th>바코드</th>
 											</tr>
@@ -250,6 +254,7 @@
 												<th>사이즈</th>
 												<th>재고</th>
 												<th>가격</th>
+												<th>할인율</th>
 												<th>상품사진</th>
 												<th>바코드</th>
 											</tr>
