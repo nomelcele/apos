@@ -89,6 +89,7 @@ public class Ajaxcon {
 			res.append("<td>").append(v.getSto_size()).append("</td>");
 			res.append("<td>").append(v.getSto_amount()).append("</td>");
 			res.append("<td>").append(v.getPro_price()).append("</td>");
+			res.append("<td>").append(v.getPro_salerate()).append("</td>");
 			res.append("<td><img src='upload/" + v.getPro_img()
 					+ "' style=\"width: 100px;\"></td>");// 추후 세일추가
 			res.append("<td><img src='upload/" + v.getPro_barcode()
