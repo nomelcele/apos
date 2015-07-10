@@ -24,11 +24,11 @@
   	</select>
   	<!-- 매장 이름 , 상품 번호 or 상품 이름으로 상품 리스트 출력 -->
   	<select id="listproduct" parameterType="map" resultType="provo">
-	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and( p.pro_code like '%'||#{pro_check}||'%' or p.pro_name like '%'||#{pro_check}||'%') and sh.shop_num = #{shop_num}
+	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.pro_salerate, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and( p.pro_code like '%'||#{pro_check}||'%' or p.pro_name like '%'||#{pro_check}||'%') and sh.shop_num = #{shop_num}
 	</select>
   	
   	<select id="listproductGender" parameterType="map" resultType="provo">
-	select p.pro_code, p.pro_name, p.pro_price, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and( p.pro_code like '___'||#{pro_check}||'%') and sh.shop_num = #{shop_num}
+	select p.pro_code, p.pro_name, p.pro_price, p.pro_salerate, s.sto_size, sh.shop_name, s.sto_amount, p.PRO_IMG, p.PRO_BARCODE from product p, stock s, shop sh where p.pro_code = s.sto_pronum and sh.shop_num=sto_shopnum and( p.pro_code like '___'||#{pro_check}||'%') and sh.shop_num = #{shop_num}
 	</select>
 	
   	<!-- 완료 -->
