@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -44,6 +45,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
 import vo.BoardVO;
+import vo.CalendarVO;
 import vo.CommVO;
 import vo.PageVO;
 import vo.ProductVO;
@@ -584,4 +586,30 @@ public class Bonsacon {
 		}
 		return fileName;
 	}
+	// bonsa_fullcalendar Page
+		@RequestMapping(value = "/bon_fullcalendar")
+		public ModelAndView bon_fullcalendar() {
+			ModelAndView mav = new ModelAndView();
+			List<CalendarVO> list = bondao.getlistfullcalendar();
+			Iterator<CalendarVO> it = list.iterator();
+			StringBuffer res = new StringBuffer();
+		
+			while (it.hasNext()) {
+				CalendarVO v= new CalendarVO();
+				v = it.next();
+				res.append("{title:'").append(v.getCalen_content()).append("',");
+				res.append("start:'").append(v.getCalen_start()).append("',");
+				res.append("end:'").append(v.getCalen_end()).append("'}");
+				if(it.hasNext()){
+					res.append(",");
+				}
+			}
+			String strString = res.toString();
+			System.out.println(strString);
+			
+			mav.setViewName("bonsa/bon_fullcalendar");
+			
+			mav.addObject("list", res.toString());
+			return mav;
+		}
 }
