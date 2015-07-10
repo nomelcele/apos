@@ -58,11 +58,12 @@
 										<td>${state.pro_code}</td>
 										<td>${state.pro_size}</td>
 										<td>${state.pro_price}</td>
-										<td><img src="upload/ ${state.pro_img}"  style="width: 100px;"></td>
-										<td>${state.pro_barcode}</td>
+										<td><img src="upload/${state.pro_img}" style="width:100px;"></td>
+										<td><img src="upload/${state.pro_barcode}"style="width: 100px;"></td>
 										<td>${state.pro_amount}</td>
 										<td>${state.req_status }</td>
 										<td>${state.req_date }</td>
+						
 									</tr>
 								</c:forEach>
 							</tbody>
