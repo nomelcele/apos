@@ -5,7 +5,6 @@
 	pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <script>
 			function gostockyn(req_status, req_num){
 				
@@ -24,16 +23,19 @@
 	
 </script>
 <script>
-function openview1(img1)
+
+function openview1(img2)
 {
- window.open(img1,'popup', 'width=280, height=310, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
+ window.open(img2,'popup', 'width=250, height=300, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
 }
+
+
 </script>
 
 <script>
-function openview2(img2)
+function openview2(img3)
 {
- window.open(img2,'popup', 'width=280, height=310, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
+ window.open(img3,'popup', 'width=280, height=100, left=0, top=0, toolbar=no, location=no, directories=no, status=no, menubar=no, resizable=no, scrollbars=no, copyhistory=no');
 }
 </script>
 
@@ -100,10 +102,10 @@ function openview2(img2)
 										<td>${bon_product.pro_code}</td>
 										<td>${bon_product.pro_size}</td>
 										<td>${bon_product.pro_price}</td>
-										<td><a href="javascript=openview1('upload/${bon_product.pro_img}')">
+										<td><a href="javascript:openview1('upload/${bon_product.pro_img}')">
 										<img src='upload/${bon_product.pro_img}'style="width:100px; cursor:hand;"></a></td>
 										
-										<td><a href="javascript=openview2('upload/${bon_product.pro_barcode}')">
+										<td><a href="javascript:openview2('upload/${bon_product.pro_barcode}')">
 										<img src='upload/${bon_product.pro_barcode}' style="width:100px; cursor:hand;"></a></td>
 										<td>${bon_product.pro_amount}</td>
 										<td>${bon_product.req_status }</td>
