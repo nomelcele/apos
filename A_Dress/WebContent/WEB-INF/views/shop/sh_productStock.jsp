@@ -111,7 +111,6 @@
 											<td><input class="form-control" id="pcode3"
 												name="pcode3" onkeydown="startSuggest();" autocomplete="off"
 												type="text" placeholder="상품코드"></td>
-											
 
 											<td>
 												<button class="btn btn-default" type="button"
@@ -210,6 +209,7 @@
 													value="0"></td>
 											</tr>
 										</form>
+							
 
 									</tbody>
 								</table>
