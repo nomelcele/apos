@@ -51,7 +51,7 @@
 				jsonObj = JSON.parse(response);
 				viewTable();
 			} else {
-				alert("test2");
+				
 				document.getElementById("view").style.display = 'none';
 			}
 		}

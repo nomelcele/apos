@@ -10,10 +10,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import xml.MakeXML;
+
 @Controller
 public class Androidcon {
 	@Autowired
 	private ShopDao shdao;
+	@Autowired
+	private MakeXML xml;
 
 	@RequestMapping(value = "androidlogin")
 	public ModelAndView androidlogin(String id, String pwd) {
@@ -51,6 +55,7 @@ public class Androidcon {
 		String key = "false";
 		
 		System.out.println("Request barcode : " +  barcode);
+		xml.shbarcode(barcode);
 		mav.addObject("res",  barcode);
 		mav.addObject("key", key);
 		
