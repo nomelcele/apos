@@ -59,7 +59,7 @@ public class MakeXML {
 		try {
 			xo.output(doc, System.out);
 			xo.output(doc,
-					new FileOutputStream("C:\\kosta97\\spring\\workspace\\A_Dress\\WebContent\\WEB-INF\\views\\shop\\suggest.xml"));
+					new FileOutputStream("C:\\kosta97\\spring\\workspace\\A_Dress\\src\\suggest\\suggest.xml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

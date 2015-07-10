@@ -20,7 +20,7 @@ public class SuggestDao {
 		Iterator<MemVO> it = memlist.iterator();
 		ArrayList<String> list = new ArrayList<String>();
 		while (it.hasNext()) {
-			MemVO memVO = (MemVO) it.next();
+			MemVO memVO = it.next();
 			list.add(memVO.getMem_name());
 			list.add(memVO.getMem_tel());			
 		}
