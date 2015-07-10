@@ -17,5 +17,6 @@
 		<typeAlias type="vo.SmangVO" alias="smangvo" />
 		<typeAlias type="vo.StaffVO" alias="staffvo" />
 		<typeAlias type="vo.StockVO" alias="stvo" />
+		<typeAlias type="vo.CalendarVO" alias="calenvo" />
 	</typeAliases>
 </configuration>
