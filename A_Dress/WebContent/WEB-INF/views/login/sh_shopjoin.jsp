@@ -8,7 +8,7 @@
 <script>
 	function gojoin() {
 		alert("호출확인");
-		var tel = $('#tel1').val()+$('#tel2').val()+$('#tel3').val();
+		var tel = $('#tel1').val()+"-"+$('#tel2').val()+"-"+$('#tel3').val();
 		$('#shop_tel').val(tel);
 		$('#feedback_form').submit();
 		
