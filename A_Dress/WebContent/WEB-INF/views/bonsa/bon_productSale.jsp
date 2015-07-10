@@ -7,11 +7,20 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script>
 			function gostockyn(req_status, req_num){
+				
+				var UP;
+				   UP=confirm("정말 승인하시겠습니까?");
+				   if(UP){
+				      location= "bon_productSale?";
+				   } else {
+				   
+				   }
+				
 				$("#req_status").val(req_status);
 				$("#req_num").val(req_num);
 				document.getElementById("stockyn").submit();		
 			}
-			
+	
 </script>
 <!-- 본사 상품관리의 상품재고관리 페이지 입니다.-->
 <section id="main-content">
@@ -101,10 +110,10 @@ q.pro_amount -->
 									<th>No</th> -->
 								
 
-										<td><input type="button" class="form-control" id="yes" value="YES" style="background-color: #008fcc ;  color: #000000;"onclick="javascript:gostockyn('Yes',${bon_product.req_num})" /></td>
+										<td><input type="button" class="form-control" id="yes" value="YES" style="color: #008fcc;"onclick="javascript:gostockyn('Yes',${bon_product.req_num})" /></td>
 											<%--location='*.apos?cmd=mailSelect&subcmd=ok&child=${shopinfo.key_email}' --%>
 											<%--javascript:goUrl('YES') --%>
-										<td><input type="button" class="form-control" id="no" value="NO"  style="background-color: #ed1e1a; color: #000000;"onclick="javascript:gostockyn('No',${bon_product.req_num})"/></td>
+										<td><input type="button" class="form-control" id="no" value="NO"  style="color: #ed1e1a;"onclick="javascript:gostockyn('No',${bon_product.req_num})"/></td>
 									</tr>
 								</c:forEach>
 							</tbody>
