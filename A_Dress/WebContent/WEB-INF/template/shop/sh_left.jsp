@@ -200,7 +200,7 @@
 
 <!-- 상품신청현황 -->
 <form method="post" action="sh_productRequestState"
-	id=productRequestState></form>
+	id="productRequestState"><input type="hidden" name="shop_num" value="${shop_num}"></form>
 
 <!-- 판매등록 -->
 <form method="post" action="sh_smangRegis" id=smangRegis></form>
