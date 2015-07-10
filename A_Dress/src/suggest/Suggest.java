@@ -27,7 +27,7 @@ public class Suggest {
 
 	public Suggest() {
 		SAXBuilder sb = new SAXBuilder();
-		String path = "C:\\kosta97\\semi\\semi_Pos\\WebContent\\shop\\suggest.xml";
+		String path = "C:\\kosta97\\spring\\workspace\\A_Dress\\src\\suggest\\suggest.xml";
 		try {
 			doc = sb.build(path);
 			root = doc.getRootElement();
