@@ -938,7 +938,6 @@ public class Ajaxcon {
 				res.append("<td><img src='upload/").append(vo.getPro_barcode())
 				.append("' style=\"width: 100px;\"></td>");
 				res.append("<td>").append(vo.getPro_salerate()).append("%</td>");
-				res.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" href=\"javascript:setsale("+vo.getPro_code()+","+vo.getPro_price()+")\"><i class=\"icon_check_alt2\"></i></a></div></td>");
 				res.append("</tr>");
 		}
 		String str = res.toString();

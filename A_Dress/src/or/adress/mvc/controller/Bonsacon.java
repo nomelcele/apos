@@ -49,6 +49,7 @@ import vo.CalendarVO;
 import vo.CommVO;
 import vo.PageVO;
 import vo.ProductVO;
+import vo.SaleVO;
 import vo.ShopVO;
 import vo.StockVO;
 
@@ -408,17 +409,15 @@ public class Bonsacon {
 
 	// 夯荤 惑前包府 -惑前技老 -技老利侩
 	@RequestMapping(value = "/godiscount", method=RequestMethod.POST)
-	public ModelAndView godiscount(String set_pro_code, String set_pro_salerate) {
-		System.out.println(set_pro_code);
-		System.out.println(set_pro_salerate);
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("set_pro_code", set_pro_code);
-		map.put("set_pro_salerate", set_pro_salerate);
-		pdao.acceptsalerate(map);
+	public ModelAndView godiscount(SaleVO vo, HttpSession session) {
+		vo.setSale_writer(session.getAttribute("bon_id").toString());
+		vo.setSale_sub("<技老傍瘤>"+vo.getSale_begin()+"~"+vo.getSale_end());
+		bservice.acceptsalerate(vo);
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("bonsa/bon_productDiscount");
 		return mav;
 	}
+	
 
 	// bon_termSalesCheck 前格喊 概免鉴困
 	@RequestMapping(value = "/bon_productSalesCheck")

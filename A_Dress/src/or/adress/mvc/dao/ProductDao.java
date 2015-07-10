@@ -6,11 +6,13 @@ import java.util.List;
 
 
 
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import vo.ProductVO;
+import vo.SaleVO;
 
 @Repository
 public class ProductDao {
@@ -83,8 +85,8 @@ public class ProductDao {
 		return ss.selectList("product.product_bon3", pro_code);
 	}
 	//상품세일적용]
-	public void acceptsalerate(HashMap<String, String> map){
-		ss.update("product.acceptsalerate", map);
+	public void acceptsalerate(SaleVO vo){
+		ss.update("product.acceptsalerate", vo);
 	}
 	
 	//신상품추가시 stock테이블에 재고0인 상태로 추가 위해 샵넘 목록뽑기!
