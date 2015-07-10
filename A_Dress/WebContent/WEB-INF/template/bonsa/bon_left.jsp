@@ -1,9 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-           <!-- javascripts -->
+
+<!-- javascripts -->
    
+    <!-- full Calendar  -->
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src='resources/js/lang-all.js'></script>
+	<script src='resources/js/moment.min.js'></script>
+	<script src='resources/js/fullcalendar.min.js'></script>
+	
     <script src="resources/js/jquery.js"></script>
-   <script src="resources/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="resources/js/jquery-ui-1.10.4.min.js"></script>
     <script src="resources/js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="resources/js/jquery-ui-1.9.2.custom.min.js"></script>
     <!-- bootstrap -->
@@ -17,31 +25,32 @@
     <script src="resources/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
     <script src="resources/js/owl.carousel.js" ></script>
     <!-- jQuery full calendar -->
-    <<script src="resources/js/fullcalendar.min.js"></script> <!-- Full Google Calendar - Calendar -->
-   <script src="resources/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+    <script src="resources/js/fullcalendar.min.js"></script> 
+    <!-- Full Google Calendar - Calendar -->
+    <script src="resources/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
     <!--script for this page only-->
     <script src="resources/js/calendar-custom.js"></script>
-   <script src="resources/js/jquery.rateit.min.js"></script>
+    <script src="resources/js/jquery.rateit.min.js"></script>
     <!-- custom select -->
     <script src="resources/js/jquery.customSelect.min.js" ></script>
-   <script src="resources/assets/chart-master/Chart.js"></script>
+    <script src="resources/assets/chart-master/Chart.js"></script>
    
     <!--custome script for all page-->
     <script src="resources/js/scripts.js"></script>
     <!-- custom script for this page-->
     <script src="resources/js/sparkline-chart.js"></script>
     <script src="resources/js/easy-pie-chart.js"></script>
-   <script src="resources/js/jquery-jvectormap-1.2.2.min.js"></script>
-   <script src="resources/js/jquery-jvectormap-world-mill-en.js"></script>
-   <script src="resources/js/xcharts.min.js"></script>
-   <script src="resources/js/jquery.autosize.min.js"></script>
-   <script src="resources/js/jquery.placeholder.min.js"></script>
-   <script src="resources/js/gdp-data.js"></script>   
-   <script src="resources/js/morris.min.js"></script>
-   <script src="resources/js/sparklines.js"></script>   
-   <script src="resources/js/charts.js"></script>
-   <script src="resources/js/jquery.slimscroll.min.js"></script>
-  <script>
+    <script src="resources/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="resources/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="resources/js/xcharts.min.js"></script>
+    <script src="resources/js/jquery.autosize.min.js"></script>
+    <script src="resources/js/jquery.placeholder.min.js"></script>
+    <script src="resources/js/gdp-data.js"></script>   
+    <script src="resources/js/morris.min.js"></script>
+    <script src="resources/js/sparklines.js"></script>   
+    <script src="resources/js/charts.js"></script>
+    <script src="resources/js/jquery.slimscroll.min.js"></script>
+    <script>
 	$(function(){
 		$('#send').click(function(){
 			$.ajax({
@@ -61,6 +70,8 @@
 	function goUrl(str){
 		if(str == "notice"){
 			document.getElementById("notice").submit();
+		}else if(str == "calendar"){
+			document.getElementById("calendar").submit();
 		}else if(str == "move"){
 			document.getElementById("move").submit();
 		}else if(str == "join"){
@@ -188,6 +199,8 @@ function showNotification(){
 <form method=post action="bon_workNotice" id="notice">
 	<input type="hidden" name="page" value="1">
 </form>
+<!-- 본사 - 업무관리 - 일정관리 -->
+<form method=post action="bon_fullcalendar" id="calendar"></form>
 <!--본사 - 매장관리 - 매장가입 -->
 <form method="post" action="bon_shopJoin" id="join"></form>
 <!--본사 - 매장관리 - 매장조회 -->
@@ -219,7 +232,8 @@ function showNotification(){
                       </a>
                       <ul class="sub">                          
                           <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
-                           </ul>
+                          <li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
+                       </ul>
                   </li>
               <li class="sub-menu">
                       <a href="javascript:;" class="">
