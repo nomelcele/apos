@@ -76,12 +76,12 @@
 										<td>${bon_product.pro_code}</td>
 										<td>${bon_product.pro_size}</td>
 										<td>${bon_product.pro_price}</td>
-										<td><img src="upload/ ${bon_product.pro_img}"  style="width: 100px;"></td>
-										<td>${bon_product.pro_barcode}</td>
+										<td><img src="upload/${bon_product.pro_img}" style="width:100px;"></td>
+										<td><img src="upload/${bon_product.pro_barcode}" style="width:100px;"></td>
 										<td>${bon_product.pro_amount}</td>
 										<td>${bon_product.req_status }</td>
 										<td>${bon_product.req_date }</td>
-										
+								
 										
 										<!-- 
 										select s.shop_name, s.shop_num,p.pro_name,p,pro_code,q.pro_size,q.pro_price,p.pro_img,p.pro_barcode,
