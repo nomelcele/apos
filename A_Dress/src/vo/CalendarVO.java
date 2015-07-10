@@ -3,6 +3,19 @@ package vo;
 public class CalendarVO {
 	private int calen_num;
 	private String calen_start,calen_end, calen_content, calen_date;
+	private String calen_color, calen_procode;
+	public String getCalen_color() {
+		return calen_color;
+	}
+	public void setCalen_color(String calen_color) {
+		this.calen_color = calen_color;
+	}
+	public String getCalen_procode() {
+		return calen_procode;
+	}
+	public void setCalen_procode(String calen_procode) {
+		this.calen_procode = calen_procode;
+	}
 	public int getCalen_num() {
 		return calen_num;
 	}
