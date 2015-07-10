@@ -68,7 +68,7 @@ public class BonsaService {
 				HashMap<String, Integer> map = new HashMap<String, Integer>();
 				map.put("sto_shopnum", shop_num);
 				map.put("sto_size", sto_size);
-				map.put("sto_pronum", Integer.parseInt(vo.getPro_code()));
+				map.put("sto_pronum", Integer.parseInt(pro_code));//Ç¥½Ã
 				pdao.setzerostock(map);
 			}
 		}
