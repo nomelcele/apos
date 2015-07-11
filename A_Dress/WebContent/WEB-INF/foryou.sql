@@ -32,6 +32,7 @@ drop sequence stockreq_seq;
 drop sequence sroot_seq;
 drop sequence calendar_seq;
 
+
 -- 테이블 시퀀스 모음
 Create sequence bonsa_seq
 increment by 1 start with 1;
@@ -212,7 +213,8 @@ key_name varchar2(30),
 key_hotkey number(10),
 key_email varchar2(30),
 key_crnum number(20) constraint hotkey_key_crnum_uq UNIQUE,
-key_date date
+key_date date,
+hotkey_status varchar2(20)
 );
 
 -------------5/28수정---------------------------------------
@@ -228,7 +230,7 @@ references product(pro_code) on delete cascade,
 constraint stock_sto_shopnum_fk foreign key(sto_shopnum)
 references shop(shop_num) on delete cascade
 );
-select * from shop;
+
 commit;
 
 ----------------------------------------------------------
@@ -517,8 +519,6 @@ insert into product values(product_seq.nextval,'아동 폴로셔츠','1533104005','ba_
 
 --이곳은 staff table입니다.--
 
-
-
 insert into staff values(staff_seq.nextval,'도하진',1,'010-121-1234',1,'test0',1234);
 insert into staff values(staff_seq.nextval,'강은지',2,'123-1221-3000',1,'test1',1234);
 insert into staff values(staff_seq.nextval,'박은지',2,'123-123-1111',1,'test2',1234);
@@ -586,9 +586,6 @@ insert into staff values(staff_seq.nextval,'임현지',2,'123-123-5555',14,'test41'
 insert into staff values(staff_seq.nextval,'경재욱',1,'123-123-6666',15,'test42',1234);
 insert into staff values(staff_seq.nextval,'이인의',2,'123-123-7777',15,'test43',1234);
 insert into staff values(staff_seq.nextval,'안주호',2,'123-123-8888',15,'test44',1234);
-
-
---사원들의 근무 대리점을 출력하시오.
 
 
 
@@ -737,28 +734,6 @@ insert into stock values(stock_seq.nextval,'1523101003',82,2,4);
 insert into stock values(stock_seq.nextval,'1523101003',27,3,2);
 insert into stock values(stock_seq.nextval,'1523101003',54,3,3);
 insert into stock values(stock_seq.nextval,'1523101003',35,3,4);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1129,4 +1104,3 @@ insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 2, 25, '2015-0
 -----------------------------------------------------------------------------------------매장 1 시작
 
 commit;
-

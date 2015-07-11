@@ -126,7 +126,8 @@ key_name varchar2(30),
 key_hotkey number(10),
 key_email varchar2(30),
 key_crnum number(20) constraint hotkey_key_crnum_uq UNIQUE,
-key_date date
+key_date date,
+hotkey_status varchar2(20)
 );
 
 -------------5/28¼öÁ¤---------------------------------------
