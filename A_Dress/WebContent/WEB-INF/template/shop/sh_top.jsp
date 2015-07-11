@@ -11,8 +11,8 @@
 
 			<!--logo start-->
 			<div style="margin: 0 auto">
-				<a href="sh_index" class="logo"> <img src="resources/img/bg-20.jpg">
-					<span class="lite">ADress</span></a>
+				<a href="sh_index" class="logo"> <img src="resources/img/adress-4.JPG">
+					<span class="lite"></span></a>
 			</div>
 			<!--logo end-->
 			<div class="nav search-row" id="top_menu">
