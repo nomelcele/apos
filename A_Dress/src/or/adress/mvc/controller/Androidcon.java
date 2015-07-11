@@ -10,6 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import suggest.Barcoder;
+import suggest.Suggest;
 import xml.MakeXML;
 
 @Controller
@@ -60,6 +62,16 @@ public class Androidcon {
 		mav.addObject("key", key);
 		
 		
+		return mav;
+	}
+	@RequestMapping(value="android_barcodeRead")
+	public ModelAndView android_barcodeRead(){
+		ModelAndView mav = new ModelAndView("ajax/android_barcodeRead");
+		String res = new Barcoder().getBarcode();
+		
+		res="data:"+res+"\n\n";
+		mav.addObject("str", res);
+		System.out.println(res);
 		return mav;
 	}
 }
