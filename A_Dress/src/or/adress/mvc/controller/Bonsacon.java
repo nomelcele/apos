@@ -50,6 +50,7 @@ import vo.CommVO;
 import vo.PageVO;
 import vo.ProductVO;
 import vo.SaleVO;
+import vo.ShopHotkeyVO;
 import vo.ShopVO;
 import vo.StockVO;
 
@@ -268,13 +269,15 @@ public class Bonsacon {
 	        final String username = "ama949@naver.com"; // 보내는 사람 네이버  ID
 	        final String password = "skdltm11a"; // 비밀번호
 	        int port=465;
-	         
+	        String m = "Yes";
 	        // 메일 내용
 	        String recipient = mail; // 받는 사람 E-Mail
 	        String subject = "APOS - 매장 가입을 환영합니다";
 	        String body = "\""+name+"\"님" + "환영합니다~"+"\n\r"+"Hotkey : "+hotkey;
-	        
-	        bondao.deletehotkey(key_num);
+	        ShopHotkeyVO v = new ShopHotkeyVO();
+	        v.setKey_num(key_num);
+	        v.setKey_msg(m);
+	        bondao.deletehotkey(v);
 	        
 	        Properties props = System.getProperties();
 	         
@@ -342,8 +345,11 @@ public class Bonsacon {
         String recipient = mail; // 받는 사람 E-Mail
         String subject = "APOS - 매장 가입을 거절당했습니다";
         String body = "\""+name+"\"님" + "안녕하세요~"+"\n\r"+"회사 규정상 회원 가입처리가 거절 되었습니다"+"\n\r"+"감사합니다";
-         
-        bondao.deletehotkey(key_num);
+        ShopHotkeyVO v = new ShopHotkeyVO();
+        String m = "No";
+        v.setKey_num(key_num);
+        v.setKey_msg(m);
+        bondao.deletehotkey(v);
         
         Properties props = System.getProperties();
          

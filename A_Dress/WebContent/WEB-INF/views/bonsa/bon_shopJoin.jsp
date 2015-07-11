@@ -27,6 +27,7 @@
 									<th>E-Mail</th>
 									<th>신청 날짜</th>
 									<th>Hotkey</th>
+									<th>발급대기</th>
 									<th>YES/</th>
 									<th>NO</th>
 								</tr>
@@ -55,6 +56,8 @@
 										<td>${shopinfo.key_email}</td>
 										<td>${shopinfo.key_date}</td>
 										<td>${shopinfo.key_hotkey}</td>
+										<td>${shopinfo.hotkey_status}</td>
+										
 
 										<td><input type="button" class="form-control" id="yes" value="YES" onclick="location='bon_shopJoinOK?ok&mail=${shopinfo.key_email}&hotkey=${shopinfo.key_hotkey}&name=${shopinfo.key_name}&key_num=${shopinfo.key_num}'" /></td>
 											<%--location='*.apos?cmd=mailSelect&subcmd=ok&child=${shopinfo.key_email}' --%>

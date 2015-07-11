@@ -38,8 +38,9 @@
 		select * from product
 	</select>
 	
-	<update id="deletehotkey" parameterType="int">
-	update hotkey set hotkey_status=#{hotkey_status} where key_num = #{key_num}
+	<!-- hotkey -->
+	<update id="deletehotkey" parameterType="shotvo">
+	update hotkey set hotkey_status=#{key_msg} where key_num = #{key_num}
 	</update>
 	
 	
