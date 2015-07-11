@@ -35,11 +35,23 @@
 								alert("날짜를 입력해주세요");
 							}
 						})
+			
+		
 	})
+	
+	function exceldown(){
+		$('#shop_num').val(shop_num);
+		$('#excel_date').val($('#date_ps').val());
+		$('#exceldown').submit();
+	}
 </script>
 
 <section id="main-content">
 	<section class="wrapper">
+	<form action="sh_excel" method="post" id="exceldown">
+		<input type="hidden" id="shop_num" name="shop_num" value="">
+		<input type="hidden" id="excel_date" name="excel_date" value="">
+	</form>
 
 
 		<div class="row" style="font-size: 15px;width: 100%">
@@ -57,6 +69,9 @@
 							autocomplete="off" type="date" required /> <input
 							class="form-control6" style="margin-left: 10px;" type="button"
 							id="btn_out2" name="btn2" value="조회">
+							<input
+							class="form-control6" style="margin-left: 10px;" type="button"
+							id="btn_excel" name="btn_excel" value="Excel" onclick="javascript:exceldown()">
 					</div>
 				</div>
 				</br> </br> <input type="hidden" id="shop_num" name="shop_num"
