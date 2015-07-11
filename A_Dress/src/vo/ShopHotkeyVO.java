@@ -3,7 +3,13 @@ package vo;
 // key_hot, key_mailÀÓ
 public class ShopHotkeyVO {
 	public int key_num, key_hotkey,key_crnum;
-	public String key_name, key_email, key_date;
+	public String key_name, key_email, key_date, hotkey_status;
+	public String getHotkey_status() {
+		return hotkey_status;
+	}
+	public void setHotkey_status(String hotkey_status) {
+		this.hotkey_status = hotkey_status;
+	}
 	public int getKey_num() {
 		return key_num;
 	}
