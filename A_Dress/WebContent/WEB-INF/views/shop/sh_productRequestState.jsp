@@ -15,6 +15,7 @@ function open_win2(img2)
 
 
 </script>
+
 <script>
 function open_win3(img3)
 {
@@ -79,7 +80,7 @@ function open_win3(img3)
 										<img src='upload/${state.pro_img}'style="width:100px;"></a></td>
 										
 										<td><a href="javascript:open_win3('upload/${state.pro_barcode}')">
-										<img src='upload/${state.pro_barcode}'style="width: 100px;"></a></td>
+										<img src='upload/${state.pro_barcode}'style="width:100px;"></a></td>
 										<td>${state.pro_amount}</td>
 										<td>${state.req_status }</td>
 										<td>${state.req_date }</td>
