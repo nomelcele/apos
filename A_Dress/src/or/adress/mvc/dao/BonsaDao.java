@@ -66,7 +66,7 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 	
 	// hotkey 승인완료후 삭제
 	public void deletehotkey(int key_num){
-		ss.delete("bonsa.deletehotkey", key_num);
+		ss.update("bonsa.deletehotkey", key_num);
 	   }
 	
 	// 본사 세일률(discount)

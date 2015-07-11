@@ -38,9 +38,11 @@
 		select * from product
 	</select>
 	
-	<delete id="deletehotkey" parameterType="int">
-	delete from hotkey where key_num = #{key_num}
-	</delete>
+	<update id="deletehotkey" parameterType="int">
+	update hotkey set hotkey_status=#{hotkey_status} where key_num = #{key_num}
+	</update>
+	
+	
 	
 	<!-- Calendar -->
 	<insert id="insert_calendar" parameterType="calenvo">

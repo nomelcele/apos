@@ -11,7 +11,7 @@
 	</insert>
 	<insert id="shoprequesthotkey" parameterType="shotvo">
 		insert into hotkey
-		values(hotkey_seq.nextVal,#{key_name},#{key_hotkey},#{key_email},#{key_crnum},sysdate)
+		values(hotkey_seq.nextVal,#{key_name},#{key_hotkey},#{key_email},#{key_crnum},sysdate,'wait')
 	</insert>
 
 	<select id="getListRequestShop" resultType="shotvo">
