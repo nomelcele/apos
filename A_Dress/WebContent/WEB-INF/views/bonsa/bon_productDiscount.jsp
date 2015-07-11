@@ -18,7 +18,11 @@
     }
     
     function saleaccept(){
-       $('#godiscount').submit();
+    	if($('#sale_begin').val() < $('#sale_end').val()){
+    		$('#godiscount').submit();	
+    	}else{
+    		alert("기간선택이 잘못되었습니다");
+    	}
     }
    
  </script>
