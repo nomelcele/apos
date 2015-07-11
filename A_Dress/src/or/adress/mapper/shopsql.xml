@@ -15,7 +15,7 @@
 	</insert>
 
 	<select id="getListRequestShop" resultType="shotvo">
-		select * from hotkey
+		select * from hotkey  where hotkey_status = 'wait' order by key_num desc
 	</select>
 
 	<select id="checkhotcrnumname" parameterType="int" resultType="shotvo">
