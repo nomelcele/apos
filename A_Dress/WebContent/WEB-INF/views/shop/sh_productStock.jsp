@@ -6,7 +6,7 @@
 		$('#pnamebtn').click(function() {
 			//alert($('#pname1').val());
 			$.ajax({
-				url : "bon_product_ajax.jsp?pname1=" + $('#pname1').val(),
+				url : "bon_product_ajax.jsp?pname1=" + $('#pname1').val(), 
 				type : "POST",
 				dataType : "html",
 				success : function(data) {
@@ -169,17 +169,6 @@
 									
 										<tbody id="target2">
 
-											<%-- 반복 
-									 <c:forEach var="ptlist" items="${plist}">
-									 	<tr>
-									 		<td>${ptlist.pro_code}</td>
-									 		<td>${ptlist.sto_size }</td>
-									 		<td>${ptlist.sto_amount }</td>
-									 		<td>${ptlist.pro_price }</td>
-									 		<td>할인가</td>
-									 	</tr>
-									 </c:forEach>
-									 반복 --%>
 										</tbody>
 								</div>
 
