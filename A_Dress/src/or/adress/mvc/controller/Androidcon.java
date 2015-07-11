@@ -56,8 +56,8 @@ public class Androidcon {
 		
 		String key = "false";
 		
-		System.out.println("Request barcode : " +  barcode);
-		xml.shbarcode(barcode);
+		System.out.println("Request barcode : " +  id+"<@>"+barcode);
+		xml.shbarcode(id+"@@@"+barcode);
 		mav.addObject("res",  barcode);
 		mav.addObject("key", key);
 		
