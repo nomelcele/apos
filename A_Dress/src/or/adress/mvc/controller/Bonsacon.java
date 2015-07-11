@@ -605,16 +605,14 @@ public class Bonsacon {
 			while (it.hasNext()) {
 				CalendarVO v= new CalendarVO();
 				v = it.next();
-				res.append("{title:'").append(v.getCalen_content()).append("',");
+				res.append("{title:'").append(v.getCalen_num()+"/"+v.getCalen_content()).append("',");
 				res.append("start:'").append(v.getCalen_start()).append("',");
-				res.append("end:'").append(v.getCalen_end()).append("'}");
+				res.append("end:'").append(v.getCalen_end()).append("',");
+				res.append("color:'").append(v.getCalen_color()).append("'}");
 				if(it.hasNext()){
 					res.append(",");
 				}
 			}
-			String strString = res.toString();
-			System.out.println(strString);
-			
 			mav.setViewName("bonsa/bon_fullcalendar");
 			
 			mav.addObject("list", res.toString());
