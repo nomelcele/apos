@@ -20,6 +20,13 @@
 				}else{
 					
 					alert("거절하였습니다.");
+					if(req_status=="No"){
+						 $("#req_status").val(req_status);
+							$("#req_num").val(req_num);
+						      document.getElementById("stockyn").submit();
+						
+					}
+					
 					
 				}
 			}
