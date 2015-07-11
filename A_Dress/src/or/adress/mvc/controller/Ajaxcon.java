@@ -545,6 +545,7 @@ public class Ajaxcon {
 			res.append("</tr>");
 
 		}
+		System.out.println(res.toString());
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/sh_ajaxsaletable");
 		mav.addObject("res", res);
@@ -955,5 +956,16 @@ public class Ajaxcon {
 		mav.addObject("res","Success");
 		return mav;
 	}
+	
+	//¼¥ - ¿¢¼¿
+	@RequestMapping(value="sh_excel", method=RequestMethod.POST)
+	public ModelAndView sh_excel(String shop_num, String excel_date){
+		ModelAndView mav = new ModelAndView("sh_excel");
+		List<SalesCheckVO> list = skdao.getonday(shop_num, excel_date);
+		mav.addObject("list", list);
+		mav.addObject("excel_date", excel_date);
+		return mav;
+	}
+	
 	
 }
