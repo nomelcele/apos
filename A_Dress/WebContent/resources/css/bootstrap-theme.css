@@ -1428,8 +1428,8 @@ table th[class*="col-"] {
 .table > thead > tr.warning > th,
 .table > tbody > tr.warning > th,
 .table > tfoot > tr.warning > th {
-  background-color: #fff0b3;
-  border-color: #ffdda3;
+  background-color: #ffffff;
+  border-color: #ECE8E8;
 }
 .table-hover > tbody > tr > td.warning:hover,
 .table-hover > tbody > tr > th.warning:hover,
