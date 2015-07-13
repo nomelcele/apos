@@ -29,6 +29,7 @@ import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.SalesCheckDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.SmangDao;
+import or.adress.mvc.service.BonsaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -60,6 +61,8 @@ public class Ajaxcon {
 	private SalesCheckDao skdao;
 	@Autowired
 	private ChatDao chdao;
+	@Autowired
+	private BonsaService bservice;
 
 	// 성별 물건 검색 ajax
 	@RequestMapping(value = "sh_AjaxProductSearch")
@@ -966,6 +969,12 @@ public class Ajaxcon {
 		mav.addObject("excel_date", excel_date);
 		return mav;
 	}
-	
+	// bon_deletecalendar
+	@RequestMapping(value="bon_ajaxdeletecalendar")
+	public ModelAndView bon_deletecalendar(int calen_num){
+		ModelAndView mav = new ModelAndView("bonsa/bon_fullcalendar");
+		bservice.bon_deletecalendar(calen_num);
+		return mav;
+	}
 	
 }
