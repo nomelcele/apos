@@ -227,7 +227,7 @@
 								<th><span id="list_master">${shlist.shop_master}</span></th>
 								<th>${shlist.shop_tel}</th>
 								<th>${shlist.shop_mail}</th>
-								<th><img src="upload/${shlist.shop_img}" style="width: 50px;"></th>
+								<th><img src="master/${shlist.shop_img}" style="width: 50px;"></th>
 								<th><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="상세보기"></th>								
 								
 							</tr>
