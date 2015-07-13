@@ -99,20 +99,10 @@ function telaction(){
 											placeholder=지점명>
 										<button type="button" id="btn"
 											onclick="javascript:telaction()" class="btn btn-primary">검색</button>
-
 									</form>
 									<div id="view" class="form-control" style="display: none"></div>
-
-
-
-
-
-
-
 									<table class="table table-condensed">
-
 										<thead>
-
 											<tr>
 												<th>#</th>
 												<th>지점</th>
@@ -121,20 +111,17 @@ function telaction(){
 												<th>연락처</th>
 											</tr>
 										</thead>
-										<tbody id="teltarget">
-
-
-											<c:forEach var="stList" items="${list}">
+										<tbody>
+											<c:forEach var="sList" items="${list}">
 												<tr>
-													<td>${stList.shop_snum}</td>
-													<td>${stList.shop_name}</td>
-													<td>${stList.shop_sposition}</td>
-													<td>${stList.shop_sname}</td>
-													<td>${stList.shop_stel}</td>
+													<td>${sList.staff_num}</td>
+													<td>${sList.staff_name}</td>
+													<td>${sList.staff_position}</td>
+													<td>${sList.shop_sname}</td>
+													<td>${sList.staff_tel}</td>
 												</tr>
 											</c:forEach>
 										</tbody>
-
 									</table>
 								</div>
 							</section>
