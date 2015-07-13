@@ -57,6 +57,14 @@
 	<insert id="insert_salecalendar" parameterType="salevo">
 		insert into calendar values(calendar_seq.nextVal, #{sale_begin},#{sale_end},#{sale_content},'#FF5E00',#{set_pro_code},sysdate)
 	</insert>
+	<!-- 달력 클릭시(삭제) -->
+	<delete id="delete_calendar" parameterType="int">
+		delete from calendar where calen_num=#{calen_num}
+	</delete>
+	<!-- 닥력 삭제시 필요한 procode 뽑아내기 -->
+	<select id="getprocode_calendar" parameterType="int" resultType="String">
+		select calen_procode from calendar where calen_num = #{calen_num} 
+	</select>
 </mapper>
 
 
