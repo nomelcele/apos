@@ -1,6 +1,7 @@
 package or.adress.mvc.controller;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import vo.BoardVO;
+import vo.CalendarVO;
 import vo.CommVO;
 import vo.MemVO;
 import vo.PageVO;
@@ -427,7 +429,30 @@ public class Shopcon {
 	  mav.setViewName("shop/sh_productRequestState");
 	  return mav;
    }
-   
+    // Shop_fullcalendar Page
+		@RequestMapping(value = "/sh_fullcalendar")
+		public ModelAndView sh_fullcalendar() {
+			ModelAndView mav = new ModelAndView();
+			List<CalendarVO> list = shopdao.getlistfullcalendar();
+			Iterator<CalendarVO> it = list.iterator();
+			StringBuffer res = new StringBuffer();
+		
+			while (it.hasNext()) {
+				CalendarVO v= new CalendarVO();
+				v = it.next();
+				res.append("{title:'").append(v.getCalen_num()+"/"+v.getCalen_content()).append("',");
+				res.append("start:'").append(v.getCalen_start()).append("',");
+				res.append("end:'").append(v.getCalen_end()).append("',");
+				res.append("color:'").append(v.getCalen_color()).append("'}");
+				if(it.hasNext()){
+					res.append(",");
+				}
+			}
+			mav.setViewName("shop/sh_fullcalendar");
+			
+			mav.addObject("list", res.toString());
+			return mav;
+		}
 }
 
 
