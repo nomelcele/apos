@@ -93,4 +93,13 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 		ss.insert("bonsa.insert_salecalendar", vo);
 	}
 	
+	// 달력 일정 삭제시
+	public void delete_calendar(int calen_num){
+		ss.delete("bonsa.delete_calendar", calen_num);
+	}
+	// 달력 삭제시 필요한 procode 뽑아내기
+	public String getprocode_calendar(int calen_num){
+		String procode = ss.selectOne("bonsa.getprocode_calendar", calen_num);
+		return procode;
+	}
 }

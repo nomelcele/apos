@@ -7,6 +7,7 @@ import java.util.List;
 
 
 
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -106,5 +107,11 @@ public class ProductDao {
 	//매장가입시 샵넘을 가져오기
 	public int get_last_shopnum(){
 		return ss.selectOne("shop.get_last_shopnum");
+	}
+	// 세일율 취소(0%)
+	public void delete_calendar(String calen_procode){
+		String pro_code = calen_procode;
+		
+		ss.update("product.deletesalerate", pro_code);
 	}
 }
