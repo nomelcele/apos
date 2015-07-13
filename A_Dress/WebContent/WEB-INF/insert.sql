@@ -11,7 +11,7 @@ insert into shop values(
 0,'물류창고'
 ,'031-234-1231','창원공장',0,0,sysdate,
 'test@naver.com','본사 물류창고',
-'Dojun.PNG',000,1,'test0','1234'
+'face_singu.jpg',000,1,'test0','1234'
 );
 
 insert into shop values(
