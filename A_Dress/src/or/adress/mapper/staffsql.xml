@@ -5,10 +5,20 @@
   <!-- private int shop_snum,shop_num;
 private String shop_sname,shop_sposition,shop_stel,shop_name; -->
  <mapper namespace="staff">
+ 
+<!--  <insert id="insert_list"  parameterType="staffvo"> -->
+<!--  insert into staff values(#{staff_num},#{) -->
+<!--  </insert> -->
+
  	<select id="get_list" resultType="staffvo" parameterType="String">
- 		select a.staff_num shop_snum,a.staff_name shop_sname,a.staff_tel shop_stel ,
- 		s.shop_name shop_name,a.STAFF_POSITION  shop_sposition from staff a , 
+ 		select a.staff_num staff_num,a.staff_name staff_name,a.staff_tel staff_tel ,
+ 		s.shop_name shop_sname,a.staff_position  staff_position from staff a , 
  		shop s where s.shop_name like '%'||#{shop_name}||'%'
+ 	</select>
+ 	<select id="get_totallist" resultType="staffvo">
+ 	    select a.staff_num staff_num,a.staff_name staff_name,a.staff_tel staff_tel ,
+ 		s.shop_name shop_sname,a.staff_position  staff_position from staff a , 
+ 		shop s
  	</select>
  	<insert id="inset_mem" parameterType="Hashmap" >
  		insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,sysdate,1,#{mem_email})
