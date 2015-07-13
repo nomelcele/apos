@@ -3,7 +3,13 @@ package vo;
 // ÄÃ·³¸í : staff_num, staff_name, staff_position, staff_tel, staff_shopnum, staff_id, staff_pwd
 public class StaffVO {
 	private int staff_num, staff_position, staff_shopnum;
-	private String staff_name, staff__tel, staff_id, staff_pwd;
+	private String staff_name, staff_tel, staff_id, staff_pwd,shop_sname;
+	public String getShop_sname() {
+		return shop_sname;
+	}
+	public void setShop_sname(String shop_sname) {
+		this.shop_sname = shop_sname;
+	}
 	public int getStaff_num() {
 		return staff_num;
 	}
@@ -25,14 +31,17 @@ public class StaffVO {
 	public String getStaff_name() {
 		return staff_name;
 	}
+	public void setStaff_tel(String staff_tel) {
+		this.staff_tel = staff_tel;
+	}
 	public void setStaff_name(String staff_name) {
 		this.staff_name = staff_name;
 	}
-	public String getStaff__tel() {
-		return staff__tel;
+	public String getStaff_tel() {
+		return staff_tel;
 	}
-	public void setStaff__tel(String staff__tel) {
-		this.staff__tel = staff__tel;
+	public void setStaff__tel(String staff_tel) {
+		this.staff_tel = staff_tel;
 	}
 	public String getStaff_id() {
 		return staff_id;
