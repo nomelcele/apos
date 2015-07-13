@@ -76,11 +76,11 @@ function open_win3(img3)
 										<td>${state.pro_code}</td>
 										<td>${state.pro_size}</td>
 										<td>${state.pro_price}</td>
-										<td><a href="javascript:open_win2('upload/${state.pro_img}')">
-										<img src='upload/${state.pro_img}'style="width:100px;"></a></td>
+										<td><a href="javascript:open_win2('product/${state.pro_img}')">
+										<img src='product/${state.pro_img}'style="width:100px;"></a></td>
 										
-										<td><a href="javascript:open_win3('upload/${state.pro_barcode}')">
-										<img src='upload/${state.pro_barcode}'style="width:100px;"></a></td>
+										<td><a href="javascript:open_win3('barcode/${state.pro_barcode}')">
+										<img src='barcode/${state.pro_barcode}'style="width:100px;"></a></td>
 										<td>${state.pro_amount}</td>
 										<td>${state.req_status }</td>
 										<td>${state.req_date }</td>
