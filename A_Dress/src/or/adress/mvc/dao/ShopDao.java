@@ -7,6 +7,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import vo.CalendarVO;
 import vo.MemVO;
 import vo.ProductVO;
 import vo.ShopHotkeyVO;
@@ -176,5 +177,11 @@ public class ShopDao {
 	public StaffVO getshopno_staff(String id){
 		return ss.selectOne("shop.getshopno_staff", id);
 	}
-
+	
+	// shop_fullcalendar 정보 가져오기
+	public List<CalendarVO> getlistfullcalendar(){
+		List<CalendarVO> list = ss.selectList("bonsa.getlist_calendar");
+		
+		return list;
+	}
 }
