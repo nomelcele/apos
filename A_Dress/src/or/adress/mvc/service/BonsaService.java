@@ -78,6 +78,12 @@ public class BonsaService {
 		pdao.acceptsalerate(vo);
 		bdao.insertSale(vo);
 		bondao.insert_salecalendar(vo);
-		
 	}
+	// 달력 일정 삭제(세일기간, 공지사항)
+	public void bon_deletecalendar(int calen_num){
+		String calen_procode = bondao.getprocode_calendar(calen_num);
+		bondao.delete_calendar(calen_num);
+		pdao.delete_calendar(calen_procode);
+	}
+	
 }
