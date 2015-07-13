@@ -221,7 +221,7 @@
 						<tbody>
 						<c:forEach var="shlist" items="${list}"  >
 							<tr class="warning">
-								<th><span id="list_name">${shlist.shop_name}</span></th>
+								<th><span id="list_name"><a href="bonsaWebRTC?shop_num=${shlist.shop_num}">${shlist.shop_name}</a></span></th>
 								<th><span id="list_adr">${shlist.shop_adr}</span></th>
 								<th>${shlist.shop_crnum}</th>
 								<th><span id="list_master">${shlist.shop_master}</span></th>
