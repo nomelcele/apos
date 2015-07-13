@@ -624,4 +624,13 @@ public class Bonsacon {
 			mav.addObject("list", res.toString());
 			return mav;
 		}
+		
+		
+		@RequestMapping(value="bonsaWebRTC")
+		public ModelAndView bonsaWebRTC(String shop_num){
+			ModelAndView mav = new ModelAndView("bonsa/bon_videochatting");
+			mav.addObject("test", "GeniusKCP"+shop_num);
+			return mav;
+			
+		}
 }
