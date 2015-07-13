@@ -2,6 +2,14 @@
 	pageEncoding="UTF-8"%>
 
 <!-- javascripts -->
+
+<!-- full Calendar  -->
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src='resources/js/lang-all.js'></script>
+	<script src='resources/js/moment.min.js'></script>
+	<script src='resources/js/fullcalendar.min.js'></script>
+	
 <script src="resources/js/jquery.js"></script>
 <script src="resources/js/jquery-ui-1.10.4.min.js"></script>
 <script src="resources/js/jquery-1.8.3.min.js"></script>
@@ -97,6 +105,8 @@
 			document.getElementById("productRequestState").submit();
 		} else if (str == "sh_salesTable") {
 			document.getElementById("sh_salesTable").submit();
+		} else if(str == "calendar"){
+			document.getElementById("calendar").submit();
 		}
 	}
 
@@ -211,11 +221,11 @@
 <!-- 정산관리/판매현황 -->
 <form method="post" action="sh_salesTable" id="sh_salesTable"></form>
 
-
 <!-- 정산관리/기간별판매현황 -->
 <form method="post" action="sh_salesRank" id="rank"></form>
 
-
+<!-- 본사 - 업무관리 - 일정관리 -->
+<form method=post action="sh_fullcalendar" id="calendar"></form>
 
 
 
@@ -244,6 +254,7 @@
 					<li><a class="" href="javascript:goUrl('workitr')">내부 규정</a></li>
 					<li><a class="" href="javascript:goUrl('workterm')">약관</a></li>
 					<li><a class="" href="javascript:goUrl('workTel')">연락처</a></li>
+					<li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
 				</ul></li>
 
 			<li class="sub-menu"><a href="javascript:;" class=""> <i
