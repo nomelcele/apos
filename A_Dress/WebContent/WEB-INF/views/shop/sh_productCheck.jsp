@@ -227,13 +227,13 @@
 													<th>${stList.pro_price}</th>
 													<th>${stList.pro_salerate}</th>
 													<th><a
-														href="javascript:open_win('upload/${stList.pro_img}')">
-															<img src='upload/${stList.pro_img}'
+														href="javascript:open_win('product/${stList.pro_img}')">
+															<img src='product/${stList.pro_img}'
 															style="width: 100px; cursor: hand;">
 													</a></th>
 													<th><a
-														href="javascript:open_win1('upload/${stList.pro_barcode}')">
-															<img src='upload/${stList.pro_barcode}'
+														href="javascript:open_win1('barcode/${stList.pro_barcode}')">
+															<img src='barcode/${stList.pro_barcode}'
 															style="width: 100px; cursor: hand;">
 													</a>
 													</td>
