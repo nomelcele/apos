@@ -294,7 +294,7 @@ insert into shop values(
 );
 
 insert into shop values(
-1,'판교점'
+shop_seq.nextval,'판교점'
 ,'031-234-1231','경기 성남시 분당구 백현동 19-2',0,0,sysdate,
 'test@naver.com','옷팔아',
 'jihyun.PNG',004,1,'test','1234'
@@ -302,7 +302,7 @@ insert into shop values(
 
 
 insert into shop values(
-2,'수지점'
+shop_seq.nextval,'수지점'
 ,'031-264-1236','경기 용인시 수지구 동천동 167-3',0,0,sysdate,
 'test@naver.com','옷팔아',
 'jong.PNG',005,1,'test1','1234'
@@ -310,7 +310,7 @@ insert into shop values(
 
 
 insert into shop values(
-3,'성남점'
+shop_seq.nextval,'성남점'
 ,'031-134-1631','경기 성남시 분당구 동원동 308-5',0,0,sysdate,
 'test@naver.com','옷팔아',
 'suzy.PNG',006,1,'test2','1234'
@@ -318,7 +318,7 @@ insert into shop values(
 
 
 insert into shop values(
-4,'부산점'
+shop_seq.nextval,'부산점'
 ,'054-214-1291','부산 강서구 성북동 6-2',0,0,sysdate,
 'test@naver.com','옷팔아',
 'suzy.PNG',007,1,'test3','1234'
@@ -326,7 +326,7 @@ insert into shop values(
 
 
 insert into shop values(
-5,'전주점'
+shop_seq.nextval,'전주점'
 ,'063-214-1981','전북 전주시 덕진구 덕진동2가 695-4',0,0,sysdate,
 'test@naver.com','옷팔아',
 'jihyun.PNG',008,1,'test4','1234'
@@ -334,7 +334,7 @@ insert into shop values(
 
 
 insert into shop values(
-6,'충청점'
+shop_seq.nextval,'충청점'
 ,'043-134-3231','충북 괴산군 감물면 오성리 45-4',0,0,sysdate,
 'test@naver.com','옷팔아',
 'suzy.PNG',009,1,'test5','1234'
@@ -342,7 +342,7 @@ insert into shop values(
 
 
 insert into shop values(
-7,'강원점'
+shop_seq.nextval,'강원점'
 ,'033-834-1111','강원 강릉시 교동 1817-1',0,0,sysdate,
 'test@naver.com','옷팔아',
 'ihyun.PNG',010,1,'test6','1234'
@@ -350,7 +350,7 @@ insert into shop values(
 
 
 insert into shop values(
-8,'내곡점'
+shop_seq.nextval,'내곡점'
 ,'02-284-1331','서울 서초구 내곡동 1-645',0,0,sysdate,
 'test@naver.com','옷팔아',
 'jihyun.PNG',011,1,'test7','1234'
@@ -358,7 +358,7 @@ insert into shop values(
 
 
 insert into shop values(
-9,'서초점'
+shop_seq.nextval,'서초점'
 ,'02-678-1341','서울 서초구 양재동 326-7',0,0,sysdate,
 'test@naver.com','옷팔아',
 'jong.PNG',012,1,'test8','1234'
@@ -366,7 +366,7 @@ insert into shop values(
 
 
 insert into shop values(
-10,'강남점'
+shop_seq.nextval,'강남점'
 ,'02-2124-1231','서울 강남구 역삼동 837-12',0,0,sysdate,
 'test@naver.com','옷팔아',
 'jong.PNG',013,1,'test9','1234'
@@ -375,7 +375,7 @@ insert into shop values(
 
 
 insert into shop values(
-11,'한남점'
+shop_seq.nextval,'한남점'
 ,'02-234-1841','서울 용산구 한남동 1-44',0,0,sysdate,
 'test@naver.com','옷팔아',
 'Dojun.PNG',014,1,'test10','1234'
@@ -383,7 +383,7 @@ insert into shop values(
 
 
 insert into shop values(
-12,'옥수점'
+shop_seq.nextval,'옥수점'
 ,'02-234-3451','서울 성동구 옥수동 168-1',0,0,sysdate,
 'test@naver.com','옷팔아',
 'woo.PNG',015,1,'test11','1234'
@@ -391,7 +391,7 @@ insert into shop values(
 
 
 insert into shop values(
-13,'약수점'
+shop_seq.nextval,'약수점'
 ,'02-234-1281','서울 중구 신당동 369-2',0,0,sysdate,
 'test@naver.com','옷팔아',
 'woo.PNG',016,1,'test12','1234'
@@ -400,7 +400,7 @@ insert into shop values(
 
 
 insert into shop values(
-14,'왕십리점'
+shop_seq.nextval,'왕십리점'
 ,'02-2124-1531','서울 성동구 도선동 22-1',0,0,sysdate,
 'test@naver.com','옷팔아',
 'woo.PNG',017,1,'test13','1234'
@@ -408,7 +408,7 @@ insert into shop values(
 
 
 insert into shop values(
-15,'의정부점'
+shop_seq.nextval,'의정부점'
 ,'031-234-1131','경기 의정부시 가능동 71',0,0,sysdate,
 'test@naver.com','옷팔아',
 'suzy.PNG',018,1,'test14','1234'
@@ -416,7 +416,7 @@ insert into shop values(
 
 
 insert into shop values(
-16,'남양주점'
+shop_seq.nextval,'남양주점'
 ,'031-224-1221','경기 남양주시 가운동 617-64',0,0,sysdate,
 'test@naver.com','옷팔아',
 'suzy.PNG',019,1,'test15','1234'
@@ -425,7 +425,7 @@ insert into shop values(
 
 
 insert into shop values(
-17,'죽전점'
+shop_seq.nextval,'죽전점'
 ,'031-234-1341','경기 용인시 수지구 죽전동 23-2',0,0,sysdate,
 'test@naver.com','옷팔아',
 'hyun.PNG',020,1,'test16','1234'
@@ -433,7 +433,7 @@ insert into shop values(
 
 
 insert into shop values(
-18,'오리점'
+shop_seq.nextval,'오리점'
 ,'031-2124-6231','경기 성남시 분당구 구미동 197-1',0,0,sysdate,
 'test@naver.com','옷팔아',
 'Dojun.PNG',021,1,'test17','1234'
@@ -441,7 +441,7 @@ insert into shop values(
 
 
 insert into shop values(
-19,'잠실점'
+shop_seq.nextval,'잠실점'
 ,'02-123-1255','서울 송파구 잠실동 8',0,0,sysdate,
 'test@naver.com','옷팔아',
 'hyun.PNG',022,1,'test18','1234'
@@ -449,7 +449,7 @@ insert into shop values(
 
 
 insert into shop values(
-20,'건대점'
+shop_seq.nextval,'건대점'
 ,'02-237-7831','서울 광진구 화양동 1',0,0,sysdate,
 'test@naver.com','옷팔아',
 'Dojun.PNG',023,1,'test19','1234'
