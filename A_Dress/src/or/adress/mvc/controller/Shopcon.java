@@ -164,6 +164,8 @@ public class Shopcon {
    public ModelAndView sh_workTel() {
       ModelAndView mav = new ModelAndView();
       mav.setViewName("shop/sh_workTel");
+      List<StaffVO>list=staffdao.gettotalList();
+      mav.addObject("list",list);
       return mav;
    }
 
@@ -171,13 +173,11 @@ public class Shopcon {
    @RequestMapping(value = "/sh_workTelSearch", method = RequestMethod.POST)
    public ModelAndView sh_workTelSearch(String shop_name) {
       System.out.println("매장이름:" + shop_name);
-
       ModelAndView mav = new ModelAndView();
       mav.setViewName("shop/sh_workTel");
-      List<StaffVO> list = staffdao.getList(shop_name);
+      List<StaffVO>list= staffdao.getList(shop_name);
       mav.addObject("list", list);
-
-      return mav;
+      return mav; 
    }
 
    // 회원관리 - 회원가입
