@@ -83,8 +83,8 @@
 			document.getElementById("notice").submit();
 		} else if (str == "workitr") {
 			document.getElementById("workitr").submit();
-		} else if (str == "workterm") {
-			document.getElementById("workterm").submit();
+		} else if (str == "videochat") {
+			document.getElementById("videochat").submit();
 		} else if (str == "workTel") {
 			document.getElementById("workTel").submit();
 		} else if (str == "pcheck") {
@@ -190,11 +190,15 @@
 <!-- 내부규정 -->
 <form method="post" action="sh_workItr" id=workitr></form>
 
-<!-- 약관 -->
-<form method="post" action="sh_workTerm" id=workterm></form>
 
 <!-- 연락처 -->
 <form method="post" action="sh_workTel" id=workTel></form>
+
+<!-- 화상 회의 -->
+<form method="post" action="sh_videochat" id=videochat>
+<input type="hidden" name="shop_num" value="${sessionScope.shop_num}">
+</form>
+
 
 <!-- 회원가입 -->
 <form method="post" action="sh_memberJoin" id=memberJoin></form>
@@ -252,9 +256,9 @@
 				<ul class="sub">
 					<li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
 					<li><a class="" href="javascript:goUrl('workitr')">내부 규정</a></li>
-					<li><a class="" href="javascript:goUrl('workterm')">약관</a></li>
 					<li><a class="" href="javascript:goUrl('workTel')">연락처</a></li>
 					<li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
+					<li><a class="" href="javascript:goUrl('videochat')">화상 회의</a></li>
 				</ul></li>
 
 			<li class="sub-menu"><a href="javascript:;" class=""> <i

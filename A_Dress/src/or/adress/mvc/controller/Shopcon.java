@@ -453,6 +453,16 @@ public class Shopcon {
 			mav.addObject("list", res.toString());
 			return mav;
 		}
+		
+		
+		@RequestMapping(value="sh_videochat")
+		public ModelAndView bonsaWebRTC(String shop_num){
+			ModelAndView mav = new ModelAndView("shop/sh_videochatting");
+			mav.addObject("test", "GeniusKCP"+shop_num);
+			return mav;
+			
+		}
+		
 }
 
 
