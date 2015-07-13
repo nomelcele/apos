@@ -50,6 +50,7 @@
 	<insert id="insert_calendar" parameterType="calenvo">
 		insert into calendar values(calendar_seq.nextVal, #{calen_start},#{calen_end},#{calen_content},sysdate)
 	</insert>
+	<!-- Bonsa, Shop Calendar 둘다 쓰임 -->
 	<select id="getlist_calendar" resultType="calenvo">
 		select * from calendar
 	</select>
