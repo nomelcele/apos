@@ -16,6 +16,10 @@
 
 <title>Creative - Bootstrap Admin Template</title>
 
+<!-- full Calendar CSS -->
+<link href='resources/css/jquery-ui.min.css' rel='stylesheet' />
+<link href='resources/css/fullcalendar.css' rel='stylesheet' />
+<link href='resources/css/fullcalendar.print.css' rel='stylesheet' media='print' />
 <!-- Bootstrap CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 <!-- bootstrap theme -->
