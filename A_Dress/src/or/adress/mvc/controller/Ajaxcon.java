@@ -82,6 +82,7 @@ public class Ajaxcon {
 			i++;
 			ProductVO v = new ProductVO();
 			v = it.next();
+			System.out.println("asdasdd");
 			res.append("<tr>");
 			res.append("<td>" + i + "</td>");
 			res.append("<td>").append(v.getPro_name()).append("</td>");
@@ -90,12 +91,11 @@ public class Ajaxcon {
 			res.append("<td>").append(v.getSto_amount()).append("</td>");
 			res.append("<td>").append(v.getPro_price()).append("</td>");
 			res.append("<td>").append(v.getPro_salerate()).append("</td>");
-			res.append("<td><img src='upload/" + v.getPro_img()
-					+ "' style=\"width: 100px;\"></td>");// 추후 세일추가
+			res.append("<td> <img src='upload/" + v.getPro_img()
+					+ "' style=\"width: 100px;\"></a></td>");// 추후 세일추가
 			res.append("<td><img src='upload/" + v.getPro_barcode()
 					+ "' style=\"width: 100px;\"></td>");
 			res.append("</tr>");
-
 		}
 
 		// res.append("</tr>");
