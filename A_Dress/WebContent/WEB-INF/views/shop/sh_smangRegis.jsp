@@ -108,6 +108,48 @@
 			return false;
 		});
 	});
+	
+	
+	
+	//receive
+	//push Client설정
+	console.log("typeof:" + typeof (EventSource));
+	if (typeof (EventSource) != "undefined") { //push를 받을 수 있는 브라우저인지 판단 (타입오브 -> 객체의 타입확인)
+		var eventSource2 = new EventSource("android_barcodeRead");
+		// EventSource EventListener의 종류
+		// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
+		// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
+		// onopen : 서버가 연결이 되었을 때 발생
+		var str = "";
+		var first = true;
+		eventSource2.onmessage = function(e) { //리스너형식으로 돌아가고 있는 콜백함수
+			console.log("리스너 실행");
+
+			var spl = event.data.split("@@@");
+			if (spl[0]=="${sessionScope.shop_id}" && spl[1] != "no"  ) {
+				$("#pro_code").val(spl[1]);
+				console.log("리스너 실행");
+				initbarcode();
+			}
+			console.log("no");
+
+		};
+	} else {
+		alert("test");
+	}
+
+	function initbarcode() {
+
+		$.ajax({
+			url : "androidbarcode?id=null&barcode=no",
+			type : "post",
+			dataType : "html",
+			success : function(data) {
+			}
+
+		});
+	};
+	
 </script>
 <section id="main-content">
 	<section class="wrapper">
