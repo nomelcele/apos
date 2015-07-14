@@ -2,7 +2,7 @@
 
 --bonsa insert 이건 하나만
 insert into bonsa values(
-0,'박대리',
+1,'박대리',
 'bon_admin','1234','대리',
 '010-5017-3854',sysdate);
 
