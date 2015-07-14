@@ -14,3 +14,5 @@ drop table staff cascade constraint;
 drop table croom cascade constraint;
 drop table stockreq cascade constraint;
 drop table calendar cascade constraint;
+drop table login cascade constraint;
+drop table grade cascade constraint;

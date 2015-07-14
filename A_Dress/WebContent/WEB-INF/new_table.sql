@@ -190,6 +190,18 @@ calen_color varchar2(50),
 calen_procode varchar2(50),
 calen_date date);
 
+CREATE TABLE login (
+  username varchar2(20) NOT NULL,
+  password varchar2(20) NOT NULL,
+  enabled number(2) NOT NULL,
+  constraint login_username_pk PRIMARY KEY (username)
+);
+
+CREATE TABLE grade (
+  username varchar(20) NOT NULL,
+  role varchar(20) NOT NULL,
+  PRIMARY KEY (username,role)
+);
 
 
 
