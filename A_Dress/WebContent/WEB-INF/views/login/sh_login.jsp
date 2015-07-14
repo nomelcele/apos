@@ -218,15 +218,18 @@
 				<!-- body -->
 				<form method="post" action="submithot" name="checkhot" id="checkhot" autocomplete="off">
 						<div style="width: 100%;" >
+						
+						
+						
 						<div class="modal-body2">
-							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
+							HotKey:<input type="button" value="hotkey" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
+						
 						<div class="modal-body2">
-							사업자 번호:<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="crnum"  autofocus>
+							Join:<input type="button" value="join" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
-						<div class="modal-body2">
-							HotKey:<input type="text" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
-						</div>
+						
+						
 						<div id="target"></div>
 						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>
 						<input type="button" id="nextJoinBtn" class="btn btn-default hidebtn" value="다음">
@@ -252,8 +255,7 @@
 					<input type="password" class="form-control" placeholder="Password" id="pwd" name="pwd">
 				</div>
 				<label class="checkbox" style="padding-left: 0; font-weight: bold;">
-					<input type="radio" id="radio1" name="radio" value="master" checked="checked" > Mastser
-					<input type="radio" id="radio2" name="radio" value="staff" > Staff 
+					 
 					
 				<span class="pull-right" id="find"><a href="#"> Find ID/PWD</a>
 				</span>
@@ -283,8 +285,12 @@
 				<div id="targetCapt" style="display: none;"></div>
 				<%-- captcha END --%>
 				
-				<input type="button" class="btn btn-primary btn-lg btn-block" id="loginBtn" value="Login">
-				<input class="btn btn-info btn-lg btn-block" type="button" value="SignUp" id="SignUpBtn"> 
+				<div style="width: 100%; margin-bottom: 1%">
+				<input class="btn btn-primary btn-lg btn-inline" type="button" value="bon" id="loginBtn" style="width: 50%">
+				<input class="btn btn-danger btn-lg btn-inline" type="button" value="shop" id="SignUpBtn" style="width: 49.1%">
+				</div>
+				
+				<input type="button" class="btn btn-info btn-lg btn-block" id="loginBtn" value="Login">
 					
 			</div>
 		</form>
