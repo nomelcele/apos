@@ -17,7 +17,7 @@
   $('#calendarTagert').fullCalendar('destroy');
   $('#calendarTagert').fullCalendar({
    //lang: currentLangCode,
-   dragable:false,  //드래그앤 드랍 옵션
+   dragable:true,  //드래그앤 드랍 옵션
             timeFormat: 'hh:mm', //시간 포멧
            // lang: 'ko',  //언어타입
             header: {
@@ -29,8 +29,26 @@
             eventClick : function(calEvent,jsEvent,view){ 
             	var r=confirm("Delete " + calEvent.title+":"+calEvent._id);
 	            if (r===true){
-	            	
 	            	$('#calendarTagert').fullCalendar('removeEvents', calEvent._id);
+	            	// 삭제 -DB 연동
+	            	var res = calEvent.title.split("/");
+	            	$.ajax({
+		  	              url: "bon_ajaxdeletecalendar",
+		  	              type: "POST",
+		  	              data: {
+		  	            	  calen_num :  res[0],
+				              calen_start :  calEvent.start.format(),
+			            	  calen_end :  calEvent.end.format(),
+			            	  calen_content : calEvent.title
+		  	              },
+		  	              dataType: "html",
+		  	              success: function(a) {
+		  	            	  //alert(a);
+		  	              },
+		  	              error: function(a, b) {
+		  	                  alert("Request: " + JSON.stringify(a));
+		  	              }
+		  	          });
 	            }
             },defaultView: 'month',//기본 뷰 - 옵션   //첫 페이지 기본 뷰 옵션
             editable: false,                                             //에디터 가능 옵션
@@ -47,11 +65,11 @@
 		      start: start,
 		      end: end
 		     };
-	
+			
 	     	$('#calendarTagert').fullCalendar('renderEvent', eventData, true); // stick? = true
 	    }
+	    alert(title+"//"+start.format()+"//"+end.format()+"//");
 	    $('#calendarTagert').fullCalendar('unselect');
-	  
 	     //alert("selected from: " + start.format() + "//, to: " + end.format());
 	     // 셀렉트된 결과를 서버로 전송
 	          $.ajax({
@@ -60,7 +78,8 @@
 	              data: {
 	            	  calen_start :  start.format(),
 	            	  calen_end :  end.format(),
-	            	  calen_content : title
+	            	  calen_content : title,
+	            	  calen_color : '#FFFF66'
 	              },
 	              dataType: "html",
 	              success: function(a) {
@@ -71,7 +90,7 @@
 	              }
 	          });
    },
-   editable: true,
+   editable: false,
    eventLimit: true,
    events: [${list}]
   })
