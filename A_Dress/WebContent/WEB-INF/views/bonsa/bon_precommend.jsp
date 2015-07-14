@@ -26,14 +26,14 @@
     }
    
  </script>
-<!-- 본사 상품관리 - 상품 추천 -->
+<!-- 본사 상품관리 - 상품세일 -->
 <section id="main-content">
    <section class="wrapper">
       <section class="panel">
          <div class="row" style="font-size: 15px;">
             <div class="col-lg-12" style="width: 125%">
                <h3 class="page-header">
-                  <i class="fa fa-files-o"></i> 상품 추천
+                  <i class="fa fa-files-o"></i> 상품 추천 
                </h3>
 
                <header class="panel-heading tab-bg-primary ">
@@ -43,11 +43,11 @@
 
                         <div style="margin-bottom: -1%">
 
-                           <div class="col-lg-3" style="margin-left: -5%;width: 100%">
-                               <label for="cname" class="control-label col-lg-2" style="display:border-left;  float: left;">상품 코드
-                              </label> <input class="form-control" id="pro_code" name="pro_code" 
-                                 style="width: 30%; float: left;" autocomplete="off" type="text" required />
-                              <button class="form-control6" type="button" style="float: left; "
+                           <div class="col-lg-3" style="margin-left: -5%">
+                               <label for="cname" class="control-label col-lg-6" style="font-size: 15px;">상품 코드 
+                              </label> <input class="form-control" id="pro_code" name="pro_code"
+                                 style="width: 50%" autocomplete="off" type="text" required />
+                              <button class="form-control6" type="button"
                                  onclick="javascript:productcheckaction()" id="btn1"
                                  name="btn1">조회</button>
                               <div id="view"></div>
@@ -59,7 +59,7 @@
                   
                </header>
 
-               <div class="panel-body" style="width:100%">
+               <div class="panel-body" style="width: 100%">
                   <div class="tab-content" style="width: 100%">
 
                      <div id="search" class="tab-pane active">
