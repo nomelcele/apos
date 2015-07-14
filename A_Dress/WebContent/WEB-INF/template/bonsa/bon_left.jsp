@@ -72,6 +72,8 @@
 			document.getElementById("notice").submit();
 		}else if(str == "calendar"){
 			document.getElementById("calendar").submit();
+		}else if(str == "recommend"){
+			document.getElementById("recommend").submit();	
 		}else if(str == "move"){
 			document.getElementById("move").submit();
 		}else if(str == "join"){
@@ -201,6 +203,8 @@ function showNotification(){
 </form>
 <!-- 본사 - 업무관리 - 일정관리 -->
 <form method=post action="bon_fullcalendar" id="calendar"></form>
+<!-- 본사-업무관리-상품추천 -->
+<form method=post action="bon_precommend" id="recommend"></form>
 <!--본사 - 매장관리 - 매장가입 -->
 <form method="post" action="bon_shopJoin" id="join"></form>
 <!--본사 - 매장관리 - 매장조회 -->
@@ -233,6 +237,7 @@ function showNotification(){
                       <ul class="sub">                          
                           <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
                           <li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
+                             <li><a class="" href="javascript:goUrl('recommend')">상품추천</a></li>
                        </ul>
                   </li>
               <li class="sub-menu">
