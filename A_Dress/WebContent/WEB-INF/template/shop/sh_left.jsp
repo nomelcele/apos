@@ -223,10 +223,10 @@
 <form method="post" action="sh_smangExchTefu" id=smangExchTefu></form>
 
 <!-- 정산관리/판매현황 -->
-<form method="post" action="sh_salesTable" id="sh_salesTable"></form>
+<form method="post" action="ssh_salesTable" id="sh_salesTable"></form>
 
 <!-- 정산관리/기간별판매현황 -->
-<form method="post" action="sh_salesRank" id="rank"></form>
+<form method="post" action="ssh_salesRank" id="rank"></form>
 
 <!-- 본사 - 업무관리 - 일정관리 -->
 <form method=post action="sh_fullcalendar" id="calendar"></form>
