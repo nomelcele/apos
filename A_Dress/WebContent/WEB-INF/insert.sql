@@ -563,9 +563,153 @@ insert into stock values(stock_seq.nextval,'1533104005',54,3,3);
 insert into stock values(stock_seq.nextval,'1533104005',35,3,4);
 
 
+-- login bon
+insert into login values('bon_admin', '1234', 1);
+
+-- login sh
+insert into login values('sh_test', '1234', 1);
+insert into login values('sh_test0', '1234', 1);
+insert into login values('sh_test1', '1234', 1);
+insert into login values('sh_test2', '1234', 1);
+insert into login values('sh_test3', '1234', 1);
+insert into login values('sh_test4', '1234', 1);
+insert into login values('sh_test5', '1234', 1);
+insert into login values('sh_test6', '1234', 1);
+insert into login values('sh_test7', '1234', 1);
+insert into login values('sh_test8', '1234', 1);
+insert into login values('sh_test9', '1234', 1);
+insert into login values('sh_test10', '1234', 1);
+insert into login values('sh_test11', '1234', 1);
+insert into login values('sh_test12', '1234', 1);
+insert into login values('sh_test13', '1234', 1);
+insert into login values('sh_test14', '1234', 1);
+insert into login values('sh_test15', '1234', 1);
+insert into login values('sh_test16', '1234', 1);
+insert into login values('sh_test17', '1234', 1);
+insert into login values('sh_test18', '1234', 1);
+insert into login values('sh_test19', '1234', 1);
+
+-- login staff
+insert into login values('staff_test0', '1234', 1);
+insert into login values('staff_test1', '1234', 1);
+insert into login values('staff_test2', '1234', 1);
+insert into login values('staff_test3', '1234', 1);
+insert into login values('staff_test4', '1234', 1);
+insert into login values('staff_test5', '1234', 1);
+insert into login values('staff_test6', '1234', 1);
+insert into login values('staff_test7', '1234', 1);
+insert into login values('staff_test8', '1234', 1);
+insert into login values('staff_test9', '1234', 1);
+insert into login values('staff_test10', '1234', 1);
+insert into login values('staff_test11', '1234', 1);
+insert into login values('staff_test12', '1234', 1);
+insert into login values('staff_test13', '1234', 1);
+insert into login values('staff_test14', '1234', 1);
+insert into login values('staff_test15', '1234', 1);
+insert into login values('staff_test16', '1234', 1);
+insert into login values('staff_test17', '1234', 1);
+insert into login values('staff_test18', '1234', 1);
+insert into login values('staff_test19', '1234', 1);
+insert into login values('staff_test20', '1234', 1);
+insert into login values('staff_test21', '1234', 1);
+insert into login values('staff_test22', '1234', 1);
+insert into login values('staff_test23', '1234', 1);
+insert into login values('staff_test24', '1234', 1);
+insert into login values('staff_test25', '1234', 1);
+insert into login values('staff_test26', '1234', 1);
+insert into login values('staff_test27', '1234', 1);
+insert into login values('staff_test28', '1234', 1);
+insert into login values('staff_test29', '1234', 1);
+insert into login values('staff_test30', '1234', 1);
+insert into login values('staff_test31', '1234', 1);
+insert into login values('staff_test32', '1234', 1);
+insert into login values('staff_test33', '1234', 1);
+insert into login values('staff_test34', '1234', 1);
+insert into login values('staff_test35', '1234', 1);
+insert into login values('staff_test36', '1234', 1);
+insert into login values('staff_test37', '1234', 1);
+insert into login values('staff_test38', '1234', 1);
+insert into login values('staff_test39', '1234', 1);
+insert into login values('staff_test40', '1234', 1);
+insert into login values('staff_test41', '1234', 1);
+insert into login values('staff_test42', '1234', 1);
+insert into login values('staff_test43', '1234', 1);
+insert into login values('staff_test44', '1234', 1);
 
 
+-- grade bon
+insert into grade values('bon_admin', 'bon');
 
+-- grade shop
+
+insert into grade values('sh_test', 'shop');
+insert into grade values('sh_test0', 'shop');
+insert into grade values('sh_test1', 'shop');
+insert into grade values('sh_test2', 'shop');
+insert into grade values('sh_test3', 'shop');
+insert into grade values('sh_test4', 'shop');
+insert into grade values('sh_test5', 'shop');
+insert into grade values('sh_test6', 'shop');
+insert into grade values('sh_test7', 'shop');
+insert into grade values('sh_test8', 'shop');
+insert into grade values('sh_test9', 'shop');
+insert into grade values('sh_test10', 'shop');
+insert into grade values('sh_test11', 'shop');
+insert into grade values('sh_test12', 'shop');
+insert into grade values('sh_test13', 'shop');
+insert into grade values('sh_test14', 'shop');
+insert into grade values('sh_test15', 'shop');
+insert into grade values('sh_test16', 'shop');
+insert into grade values('sh_test17', 'shop');
+insert into grade values('sh_test18', 'shop');
+insert into grade values('sh_test19', 'shop');
+
+-- grade staff
+insert into grade values('staff_test0', 'staff');
+insert into grade values('staff_test1', 'staff');
+insert into grade values('staff_test2', 'staff');
+insert into grade values('staff_test3', 'staff');
+insert into grade values('staff_test4', 'staff');
+insert into grade values('staff_test5', 'staff');
+insert into grade values('staff_test6', 'staff');
+insert into grade values('staff_test7', 'staff');
+insert into grade values('staff_test8', 'staff');
+insert into grade values('staff_test9', 'staff');
+insert into grade values('staff_test10', 'staff');
+insert into grade values('staff_test11', 'staff');
+insert into grade values('staff_test12', 'staff');
+insert into grade values('staff_test13', 'staff');
+insert into grade values('staff_test14', 'staff');
+insert into grade values('staff_test15', 'staff');
+insert into grade values('staff_test16', 'staff');
+insert into grade values('staff_test17', 'staff');
+insert into grade values('staff_test18', 'staff');
+insert into grade values('staff_test19', 'staff');
+insert into grade values('staff_test20', 'staff');
+insert into grade values('staff_test21', 'staff');
+insert into grade values('staff_test22', 'staff');
+insert into grade values('staff_test23', 'staff');
+insert into grade values('staff_test24', 'staff');
+insert into grade values('staff_test25', 'staff');
+insert into grade values('staff_test26', 'staff');
+insert into grade values('staff_test27', 'staff');
+insert into grade values('staff_test28', 'staff');
+insert into grade values('staff_test29', 'staff');
+insert into grade values('staff_test30', 'staff');
+insert into grade values('staff_test31', 'staff');
+insert into grade values('staff_test32', 'staff');
+insert into grade values('staff_test33', 'staff');
+insert into grade values('staff_test34', 'staff');
+insert into grade values('staff_test35', 'staff');
+insert into grade values('staff_test36', 'staff');
+insert into grade values('staff_test37', 'staff');
+insert into grade values('staff_test38', 'staff');
+insert into grade values('staff_test39', 'staff');
+insert into grade values('staff_test40', 'staff');
+insert into grade values('staff_test41', 'staff');
+insert into grade values('staff_test42', 'staff');
+insert into grade values('staff_test43', 'staff');
+insert into grade values('staff_test44', 'staff');
 
 
 
