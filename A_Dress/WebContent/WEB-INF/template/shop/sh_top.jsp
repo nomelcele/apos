@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<script>
+
+function open_win2()
+{
+ window.open('upload/code-7.JPG','popup', 'width=340, height=250, left=50, top=20, toolbar=no, location=yes, directories=no, status=no, menubar=no, resizable=yes, scrollbars=no, copyhistory=no');
+}
+
+
+</script>
 <body>
 	<!-- container section start -->
 	<section id="container" class="">
@@ -12,23 +21,28 @@
 			<!--logo start-->
 			<div style="margin: 0 auto">
 				<a href="sh_index" class="logo"> <img src="resources/img/adress-4.JPG">
-					<span class="lite"></span></a>
+					<span class="lite"></span></a> 
 			</div>
 			<!--logo end-->
 			<div class="nav search-row" id="top_menu">
+			
 				<!--  search form start -->
-
 				<ul class="nav top-menu">
-					<li>
+					<li style="float:left;">
 						<form class="navbar-form" id ="top_search_form" action="sh_productsaerch" method="post">
 							<input type="hidden" id="childcmd" name="childcmd"
-								value="search_top"> <input type="hidden"
+								value="search_top"> 
+								<input type="hidden"
 								id="top_shop_num" name="shop_num"
 								value="${sessionScope.shop_num}">
-								<input type="hidden" id ="top_name_pk" name ="pro_name" valeu="">
-						</form> <input class="form-control" name="top_search" id="top_search"
+								<input type="hidden" id ="top_name_pk" name ="pro_name" val="">			
+						</form><a href="javascript:open_win2()">&nbsp;&nbsp;&nbsp;&nbsp;<img src="resources/img/GH.JPG" ><div style="float: left;">
+						<input class="form-control" name="top_search" id="top_search"
 						placeholder="Search"   onKeypress="javascript:if(event.keyCode==13) { topsearch_pk();}"
-						type="text">
+						type="text" ></div>
+						
+						
+
 					</li>
 				</ul>
 				<!--  search form end -->
@@ -36,14 +50,17 @@
 			<div class="top-nav notification-row">
 
 				<!-- notificatoin dropdown start-->
+				   
 				<ul class="nav pull-right top-menu">
-
+                  
 					<!-- task notificatoin start -->
 					<li id="task_notificatoin_bar" class="dropdown"><a
 						data-toggle="dropdown" class="dropdown-toggle" href="#"> <span
-							class="icon-task-l"></i> <span class="badge bg-important">6</span></a>
+							class="icon-task-l"></i> <span class="badge bg-important"> </span></a>
 						<ul class="dropdown-menu extended tasks-bar">
+						
 							<div class="notify-arrow notify-arrow-blue"></div>
+							
 							<li>
 								<p class="blue">You have 6 pending letter</p>
 							</li>
@@ -125,7 +142,6 @@
 
 						<ul class="dropdown-menu extended inbox">
 							<div class="notify-arrow notify-arrow-blue"></div>
-
 
 							<!-- chat--------------->
 							<form method="post" action="chat_add.jsp" name="cform" id="cform"
@@ -210,7 +226,7 @@
 					<!-- alert notification start-->
 					<li id="alert_notificatoin_bar" class="dropdown"><a
 						data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
-							class="icon-bell-l"></i> <span class="badge bg-important">7</span>
+							class="icon-bell-l"></i> <span class="badge bg-important"></span>
 					</a>
 						<ul class="dropdown-menu extended notification">
 							<div class="notify-arrow notify-arrow-blue"></div>
