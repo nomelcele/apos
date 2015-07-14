@@ -2,16 +2,16 @@
 
 --bonsa insert 이건 하나만
 insert into bonsa values(
-1,'박대리',
-'admin','1234','대리',
+0,'박대리',
+'bon_admin','1234','대리',
 '010-5017-3854',sysdate);
 
 --shop insert 애는  test 숫자 늘려가면서 넣어줘 004 써진 부분도 숫자 하나씩 증가하면서 넣어줘
 insert into shop values(
-0,'물류창고'
+shop_seq.nextval,'물류창고'
 ,'031-234-1231','창원공장',0,0,sysdate,
 'test@naver.com','본사 물류창고',
-'face_singu.jpg',000,1,'test0','1234'
+'face_singu.jpg',000,1,'sh_test0','1234'
 );
 
 insert into shop values(
@@ -178,9 +178,9 @@ insert into shop values(
 
 
 -- member insert 문
-insert into member values(member_seq.nextval,'전지현','010-1234-1234','746-2467','성남시 북구','북구 수성동',0,sysdate,1,'jihyun@naver.com','mem1','1234');
-insert into member values(member_seq.nextval,'유보영','010-7367-2745','474-1234','서울시 동구','동구 동명동',0,sysdate,1,'dgsf@gmail.com','mem2','1234');
-insert into member values(member_seq.nextval,'김남길','010-5478-5463','346-1234','경남시 서구','서구 우산동',0,sysdate,1,'jery@naver.com','mem3','1234');
+insert into member values(member_seq.nextval,'전지현','010-1234-1234','746-2467','성남시 북구','북구 수성동',0,sysdate,1,'jihyun@naver.com','mem_1','1234');
+insert into member values(member_seq.nextval,'유보영','010-7367-2745','474-1234','서울시 동구','동구 동명동',0,sysdate,1,'dgsf@gmail.com','mem_2','1234');
+insert into member values(member_seq.nextval,'김남길','010-5478-5463','346-1234','경남시 서구','서구 우산동',0,sysdate,1,'jery@naver.com','mem_3','1234');
 insert into member values(member_seq.nextval,'이동욱','010-3879-4684','347-3456','경북시 광산구','광산구 두암동',0,sysdate,1,'weyh@hanmail.net','mem4','1234');
 insert into member values(member_seq.nextval,'이진욱','010-8764-4456','234-1234','충남시 성남구','성남구 주월동',0,sysdate,1,'fhytr09@naver.com','mem5','1234');
 insert into member values(member_seq.nextval,'황영동','010-4548-7564','064-5463','충북시 강북구','강북구 미평동',0,sysdate,1,'hwhy89@gmail.com','mem6','1234');
@@ -240,7 +240,7 @@ insert into product values(product_seq.nextval,'아동 폴로셔츠','1533104005','ba_
 
 
 
-insert into staff values(1,'도하진',1,'010-121-1234',1,'test0',1234);
+insert into staff values(staff_seq.nextval,'도하진',1,'010-121-1234',1,'staff_test0',1234);
 insert into staff values(2,'강은지',2,'123-1221-3000',1,'test1',1234);
 insert into staff values(3,'박은지',2,'123-123-1111',1,'test2',1234);
 
