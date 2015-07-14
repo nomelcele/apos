@@ -625,7 +625,7 @@ public class Bonsacon {
 			return mav;
 		}
 		
-		
+		//본사 화상채팅 
 		@RequestMapping(value="bonsaWebRTC")
 		public ModelAndView bonsaWebRTC(String shop_num){
 			ModelAndView mav = new ModelAndView("bonsa/bon_videochatting");
@@ -633,4 +633,14 @@ public class Bonsacon {
 			return mav;
 			
 		}
+		
+		
+		//고객 상품 추천 
+		@RequestMapping(value="bon_precommend")
+		public ModelAndView bon_precommend(){
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("bonsa/bon_precommend");
+			return mav;
+		}
+		
 }
