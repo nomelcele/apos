@@ -33,7 +33,7 @@
          <div class="row" style="font-size: 15px;">
             <div class="col-lg-12" style="width: 125%">
                <h3 class="page-header">
-                  <i class="fa fa-files-o"></i> 상품조회
+                  <i class="fa fa-files-o"></i> 상품세일조정
                </h3>
 
                <header class="panel-heading tab-bg-primary ">
