@@ -634,7 +634,7 @@ insert into login values('staff_test44', '1234', 1);
 
 
 -- grade bon
-insert into grade values('bon_admin', 'bon');
+insert into grade values('bon_admin', 'bonsa');
 
 -- grade shop
 
