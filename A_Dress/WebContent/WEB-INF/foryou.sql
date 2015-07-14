@@ -245,7 +245,7 @@ drop sequence calendar_seq;
 
 -- 테이블 시퀀스 모음
 Create sequence bonsa_seq
-increment by 1 start with 1;
+increment by 1 start with 2;
 
 Create sequence member_seq
 increment by 1 start with 1;
