@@ -17,7 +17,7 @@
 								if ($('#date_ps').val() < $('#date_ps2').val()) {
 									//alert("test2");
 									$.ajax({
-												url : "bon_ajaxproductsale?pro_code="
+												url : "bon_ajaxproductsmang?pro_code="
 														+ $('#pro_code').val()
 														+ "&startdate="
 														+ $('#date_ps').val()
