@@ -504,10 +504,10 @@ public class Bonsacon {
 	}
 	
 	//본사 매장 재고 관리
-	   @RequestMapping(value = "/bon_productSale")
-	   public ModelAndView bon_productSale() {
+	   @RequestMapping(value = "/bon_productSmang")
+	   public ModelAndView bon_productSmang() {
 	   ModelAndView mav = new ModelAndView();
-	   mav.setViewName("bonsa/bon_productSale");
+	   mav.setViewName("bonsa/bon_productSmang");
 	   List<StockVO> list = stdao.Stocklist();
 	   mav.addObject("list",list);
 	   return mav;
