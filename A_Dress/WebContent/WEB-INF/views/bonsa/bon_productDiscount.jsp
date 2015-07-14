@@ -59,7 +59,7 @@
                   
                </header>
 
-               <div class="panel-body" style="width: 80%">
+               <div class="panel-body" style="width: 100%">
                   <div class="tab-content" style="width: 100%">
 
                      <div id="search" class="tab-pane active">
