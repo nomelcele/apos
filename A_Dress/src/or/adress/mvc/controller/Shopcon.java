@@ -324,7 +324,7 @@ public class Shopcon {
    }
 
    // 정산관리 -판매현황
-   @RequestMapping(value ="sh_salesTable")
+   @RequestMapping(value ="ssh_salesTable")
    public ModelAndView sh_salesTable() {
       ModelAndView mav = new ModelAndView();
       mav.setViewName("shop/sh_salesTable");
@@ -332,7 +332,7 @@ public class Shopcon {
    }
 
    // 정산관리 - 기간별 매출현황
-   @RequestMapping(value = "sh_salesRank")
+   @RequestMapping(value = "ssh_salesRank")
    public ModelAndView sh_salesRank() {
       ModelAndView mav = new ModelAndView();
       mav.setViewName("shop/sh_salesRank");
