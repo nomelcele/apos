@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -35,6 +36,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 
+
 import vo.BonsaVO;
 import vo.ShopHotkeyVO;
 import vo.ShopVO;
@@ -50,6 +52,36 @@ public class Logincon {
 	private ShopDao sdao;
 	@Autowired
 	private LoginService lservice;
+	
+	@RequestMapping(value="login")
+	public String login(){
+		return "login/login";
+	}
+	//아이디,비번 안맞을 경우
+	@RequestMapping(value="/denied")
+	public String denied(){
+		System.out.println("거부?");
+		return "login/denied";
+	}
+	//접근불가경우
+	@RequestMapping(value="/error")
+	public String denied1(){
+		System.out.println("에러");
+		return "login/denied";
+	}
+	
+	@RequestMapping(value="/home")
+	public ModelAndView home(Locale locale, HttpServletRequest request, HttpSession session){
+		System.out.println("여기는 오는지");
+		String id = request.getUserPrincipal().getName();
+		if(id.startsWith("bon")){
+			return bon_sawonlogin(id, session);
+		}else if(id.startsWith("sh")){
+			return sh_loginok(id, "master", session);
+		}else{
+			return sh_loginok(id, "staff", session);
+		}
+	}
 	
 	@RequestMapping(value="/bon_login")
 	public ModelAndView bon_login(){
@@ -104,7 +136,7 @@ public class Logincon {
 	
 	
 	//로그인성공
-	//transaction
+	//transactio
 	@RequestMapping(value="/sh_loginok", method=RequestMethod.POST)
 	public ModelAndView sh_loginok(String id, String radio, HttpSession session){
 		ModelAndView mav = new ModelAndView("shop/sh_index");
@@ -142,9 +174,8 @@ public class Logincon {
 	
 	//샵로그아웃
 	@RequestMapping(value="/sh_logout")
-	public ModelAndView sh_logout(HttpSession session){
-		session.invalidate(); //모든 세션삭제
-		return sh_login();
+	public String sh_logout(){
+		return "/j_spring_security_logout";
 	}
 	
 	
@@ -158,20 +189,20 @@ public class Logincon {
 	
 		
 	
-	@RequestMapping(value="bon_findidform", method=RequestMethod.POST)
+	@RequestMapping(value="/bon_findidform", method=RequestMethod.POST)
 	public ModelAndView bon_findidform(){
 		
 		return bon_login();
 	}
 	
-	@RequestMapping(value="bon_findpwdform", method=RequestMethod.POST)
+	@RequestMapping(value="/bon_findpwdform", method=RequestMethod.POST)
 	public ModelAndView bon_findpwdform(){
 		
 		return bon_login();
 	}
 	
 	// 본사 - 사원 가입
-	@RequestMapping(value="bon_sawonjoin", method=RequestMethod.POST)
+	@RequestMapping(value="/bon_sawonjoin", method=RequestMethod.POST)
 	public ModelAndView bon_sawonjoin(HttpServletRequest request){
 		
 				// 이름 ,비밀번호, 비밀번호 확인, 성명, 연락처
@@ -196,7 +227,7 @@ public class Logincon {
 	
 	//본사로그인 (화면전환, 세션저장) (아이디/비번체크는 캡챠에서)
 	//transaction
-	@RequestMapping(value="bon_sawonlogin", method=RequestMethod.POST)
+	@RequestMapping(value="/bon_sawonlogin", method=RequestMethod.POST)
 	public ModelAndView bon_sawonlogin(String bon_login_id, HttpSession session){
 		//String id =request.getParameter("bon_login_id");
 		String id = bon_login_id;
@@ -210,13 +241,13 @@ public class Logincon {
 	}
 	
 	//본사로그아웃
-	@RequestMapping(value="bon_sawonlogout")
-	public ModelAndView bon_sawonlogout(HttpSession session){
+	@RequestMapping(value="/bon_sawonlogout")
+	public String bon_sawonlogout(HttpSession session){
 		// 본사 사원 로그 아웃
 					String bon_id =(String) session.getAttribute("bon_id");
 					ldao.logouttime(bdao.getbonnum(bon_id));
 					session.invalidate(); //모든 세션삭제
-					return bon_login();
+					return "/j_spring_security_logout";
 	}
 	
 	

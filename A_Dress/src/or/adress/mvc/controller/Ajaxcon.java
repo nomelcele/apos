@@ -609,7 +609,7 @@ public class Ajaxcon {
 	}
 
 	// 본사채팅로드
-	@RequestMapping(value = "bon_chatload")
+	@RequestMapping(value = "/bon_chatload")
 	public ModelAndView bon_chatload(HttpServletResponse response,
 			HttpSession session) {
 
