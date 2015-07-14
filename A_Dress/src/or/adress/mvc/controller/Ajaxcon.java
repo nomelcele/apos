@@ -952,7 +952,8 @@ public class Ajaxcon {
 	
 	// º»»ç - Full Calendar
 	@RequestMapping(value="bon_ajaxcalendar", method=RequestMethod.POST)
-	public ModelAndView bon_fullcalendar(CalendarVO vo){
+	public ModelAndView bon_ajaxfullcalendar(CalendarVO vo){
+		System.out.println("comehere?");
 		ModelAndView mav = new ModelAndView();
 		bdao.insertfullcalendar(vo);
 		mav.setViewName("ajax/bon_ajaxfullcalendar");
@@ -970,10 +971,12 @@ public class Ajaxcon {
 		return mav;
 	}
 	// bon_deletecalendar
-	@RequestMapping(value="bon_ajaxdeletecalendar")
-	public ModelAndView bon_deletecalendar(int calen_num){
+	@RequestMapping(value="bon_ajaxdeletecalendar", method=RequestMethod.POST)
+	public ModelAndView bon_ajaxdeletecalendar(int calen_num, String calen_start, String calen_end){
 		ModelAndView mav = new ModelAndView("bonsa/bon_fullcalendar");
-		bservice.bon_deletecalendar(calen_num);
+		System.out.println("calen_start :: "+calen_start);
+		System.out.println("calen_end :: "+calen_end);
+		bservice.bon_deletecalendar(calen_num,calen_start, calen_end);
 		return mav;
 	}
 	
