@@ -17,7 +17,7 @@
 
 				<div class="row">
 					<br />
-					<div class="col-sm-10" style="width: 100%;height: 100%">
+					<div class="col-sm-10" style="width: 125%;height: 100%">
 						<table class="table">
 							<thead>
 								<tr>
