@@ -76,6 +76,9 @@ public class BoardDao {
 	//할인취소시 게시판글머리 수정
 	public void cancelSale(CalendarVO vo){
 		String bo_sub = "<종료>"+vo.getCalen_start()+"~"+vo.getCalen_end();
-		ss.update("notice.notice_salecancel",bo_sub);
+		HashMap<String , String> map = new HashMap();
+		map.put("calen_num", String.valueOf( vo.getCalen_num()));
+		map.put("bo_sub", bo_sub);
+		ss.update("notice.notice_salecancel",map);
 	}
 }
