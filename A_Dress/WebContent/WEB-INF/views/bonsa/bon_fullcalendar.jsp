@@ -17,7 +17,7 @@
   $('#calendarTagert').fullCalendar('destroy');
   $('#calendarTagert').fullCalendar({
    //lang: currentLangCode,
-   dragable:true,  //드래그앤 드랍 옵션
+   dragable:false,  //드래그앤 드랍 옵션
             timeFormat: 'hh:mm', //시간 포멧
            // lang: 'ko',  //언어타입
             header: {
@@ -31,14 +31,16 @@
 	            if (r===true){
 	            	$('#calendarTagert').fullCalendar('removeEvents', calEvent._id);
 	            	// 삭제 -DB 연동
+	            	var calen_start = $.fullCalendar.formatDate( calEvent.start, 'yyyy-MM-dd' );
+	    			var calen_end = $.fullCalendar.formatDate( calEvent.end, 'yyyy-MM-dd' );
 	            	var res = calEvent.title.split("/");
 	            	$.ajax({
 		  	              url: "bon_ajaxdeletecalendar",
 		  	              type: "POST",
 		  	              data: {
 		  	            	  calen_num :  res[0],
-				              calen_start :  calEvent.start.format(),
-			            	  calen_end :  calEvent.end.format(),
+				              calen_start : calen_start,
+			            	  calen_end :  calen_end,
 			            	  calen_content : calEvent.title
 		  	              },
 		  	              dataType: "html",
@@ -58,28 +60,30 @@
    // 캘린더 셀렉트 된 값을 컬럼에 표시...
    select: function(start, end, event) {
 	    var title = prompt('Event Title:');
+	    alert(title);
 	    var eventData;
 	    if (title) {
 		     eventData = {
 		      title: title,
 		      start: start,
 		      end: end
-		     };
-			
+		     }
 	     	$('#calendarTagert').fullCalendar('renderEvent', eventData, true); // stick? = true
 	    }
-	    alert(title+"//"+start.format()+"//"+end.format()+"//");
 	    $('#calendarTagert').fullCalendar('unselect');
 	     //alert("selected from: " + start.format() + "//, to: " + end.format());
 	     // 셀렉트된 결과를 서버로 전송
+	     // getDate : 일수, getMonth  : 달수, getFullYear : 년수
+	    var start2 = $.fullCalendar.formatDate( start, 'yyyy-MM-dd' );
+	    var end2 = $.fullCalendar.formatDate( end, 'yyyy-MM-dd' );
 	          $.ajax({
 	              url: "bon_ajaxcalendar",
 	              type: "POST",
 	              data: {
-	            	  calen_start :  start.format(),
-	            	  calen_end :  end.format(),
+	            	  calen_start : start2,
+	            	  calen_end :  end2,
 	            	  calen_content : title,
-	            	  calen_color : '#FFFF66'
+	            	  calen_color : '#CC0000'
 	              },
 	              dataType: "html",
 	              success: function(a) {
@@ -90,7 +94,7 @@
 	              }
 	          });
    },
-   editable: false,
+   editable: true,
    eventLimit: true,
    events: [${list}]
   })
