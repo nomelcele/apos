@@ -648,6 +648,9 @@ public class Bonsacon {
 		public ModelAndView bon_conference(){
 			ModelAndView mav = new ModelAndView();
 			mav.setViewName("bonsa/bon_workconference");
+			List<ShopVO> list = shdao.getshopList();
+			mav.addObject("list", list);
+			System.out.println(list.get(0).getShop_tel());
 			return mav;
 		}
 		
