@@ -55,7 +55,7 @@ public class Logincon {
 	
 	@RequestMapping(value="login")
 	public String login(){
-		return "login/login";
+		return "login/new_login";
 	}
 	//아이디,비번 안맞을 경우
 	@RequestMapping(value="/denied")
