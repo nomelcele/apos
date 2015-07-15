@@ -43,6 +43,10 @@
 			$('#modal2').modal('hide');
 			$('#modal3').modal('show');
 		});
+		$('#join').click(function(){
+			$('#modal2').modal('hide');
+			$('#modal4').modal('show');
+		});
 		$('#shopmodal').click(function() {
 				$('#modal2').modal('show');
 		});
@@ -81,7 +85,7 @@
 		
 		$('#nextJoinBtn').click(function(){
             $.ajax({
-                   url: "sh_NCRHOTcheck",
+                   url: "NCRHOTcheck",
                    type: "POST",
                    data : {
                 	   email : $('#email').val(),
@@ -170,6 +174,8 @@
 	
 </script>
 <body class="login-img3-body">
+
+	<!-- 본사회원가입 모달 -->
 	<div id="modal1" class="modal fade">
 		<div class="modal-dialog" style="width: 400px; text-align: center;">
 			<div class="modal-content">
@@ -228,6 +234,7 @@
 		</div>
 	</div>
 
+	<!-- 샵-핫키,가입 선택모달 -->
 	<div id="modal2" class="modal fade">
 		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
 			<div class="modal-content">
@@ -250,13 +257,13 @@
 						</div>
 						
 						<div class="modal-body2">
-							Join:<input type="button" value="join" class="form-control4 block" id="123123" name="hotkey" placeholder="hotkey" autofocus>
+							Join:<input type="button" value="join" class="form-control4 block" id="join" name="join" placeholder="hotkey" autofocus>
 						</div>
 						
 						
 						<div id="target"></div>
 						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>
-						<input type="button" id="nextJoinBtn" class="btn btn-default hidebtn" value="다음">
+						
 					</div>
 				</form>
 				</div>
@@ -265,7 +272,7 @@
 	</div>
 	
 	
-	
+	<!-- 핫키발급 모달 -->
 	<div id="modal3" class="modal fade">
 		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
 			<div class="modal-content">
@@ -279,7 +286,7 @@
 			
 				<!-- body -->
 									
-				<form method="post" action="sh_requesthot" name="requesthot" id="requesthot" autocomplete="off">
+				<form method="post" action="requesthot" name="requesthot" id="requesthot" autocomplete="off">
 						<%-- 성명 --%>
 						<div class="modal-body2"><span style="display: block">성 명 :</span>
 							<input class="form-control" id="key_name" name="key_name" type="text" required /></div>
@@ -287,7 +294,7 @@
 						<div class="modal-body2"><span style="display: block">사업자번호 :</span>
 							<input class="form-control" id="key_crnum" name="key_crnum" type="text" required /></div>
 						<%-- 이메일 --%>
-						<div class="modal-body2"><span style="display: block">사업자번호 :</span>
+						<div class="modal-body2"><span style="display: block">e-mail :</span>
 							<input class="form-control" id="key_email" name="key_email" type="text" required /></div>
 						
 						<!-- Footer -->
@@ -303,6 +310,40 @@
 		</div>
 	</div>
 	
+	
+	<!-- 핫키확인모달 -->
+<div id="modal4" class="modal fade">
+		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
+			<div class="modal-content">
+				<!-- header -->
+				<div class="modal-header">
+					<!-- 닫기(x) 버튼 -->
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<!-- header title -->
+					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+				</div>
+				<div >
+				<!-- body -->
+				<form method="post" action="NCRHOTcheck" name="checkhot" id="checkhot" autocomplete="off">
+					<div style="width: 100%;" >
+						<div class="modal-body2">
+							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
+						</div>
+						<div class="modal-body2">
+							사업자 번호:<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="crnum"  autofocus>
+						</div>
+						<div class="modal-body2">
+							HotKey:<input type="text" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
+						</div>
+						<div id="target"></div>
+						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>
+						<input type="button" id="nextJoinBtn" class="btn btn-default hidebtn" value="다음">
+					</div>
+				</form>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	
 

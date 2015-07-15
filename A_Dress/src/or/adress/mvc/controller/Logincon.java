@@ -124,12 +124,13 @@ public class Logincon {
 	}
 	
 	//«÷≈∞πﬂ±ﬁΩ≈√ª
-	@RequestMapping(value="/sh_requesthot", method=RequestMethod.POST)
-	public ModelAndView sh_requesthot(ShopHotkeyVO vo){
+	@RequestMapping(value="/requesthot", method=RequestMethod.POST)
+	public String sh_requesthot(ShopHotkeyVO vo){
 		// hotkey πﬂ±ﬁΩ√ 
+		System.out.println("«÷≈∞ƒ¡√Ω");
 		sdao.shoprequesthotkey(vo);
-		ModelAndView mav = new ModelAndView("login/sh_login");
-		return mav;
+		//ModelAndView mav = new ModelAndView("/login");
+		return login();
 	}
 	
 	//º• »∏ø¯∞°¿‘ insert
