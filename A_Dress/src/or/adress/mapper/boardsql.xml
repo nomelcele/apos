@@ -45,8 +45,8 @@ select * from board order by bo_num desc) a) c where r_num between #{begin} and 
   	<select id="notice_gettotalcommcount" parameterType="int" resultType="int">
   		select count(*) cnt from comm where comm_bonum=#{no}
   	</select>
-  	<update id="notice_salecancel"  parameterType="String">
-  		update board set bo_sub=#{bo_sub} where bo_sub =#{sub} 		
+  	<update id="notice_salecancel"  parameterType="map">
+  		update board set bo_sub=#{bo_sub} where bo_calennum =#{calen_num} 		
   	</update>
   	
 </mapper>
