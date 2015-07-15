@@ -426,7 +426,8 @@ public class Shopcon {
    @RequestMapping(value="bon_productSale_1")
    public ModelAndView SSlist(StockVO vo){
 	  ModelAndView mav = new ModelAndView();
-	  mav.setViewName("shop/sh_productRequestState");
+	  stdao.Stockreq2(vo);
+	  mav.setViewName("bonsa/bon_productSmang");
 	  return mav;
    }
     // Shop_fullcalendar Page
