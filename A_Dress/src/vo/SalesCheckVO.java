@@ -8,9 +8,20 @@ public class SalesCheckVO {
 	private int count, sell_cash, sell_card, sell_pronum, sell_many,
 			sell_memnum, sell_num;
 	private int sell_size;
+	private int sell_sell;
 	
 	
 	
+	
+	
+	public int getSell_sell() {
+		return sell_sell;
+	}
+
+	public void setSell_sell(int sell_sell) {
+		this.sell_sell = sell_sell;
+	}
+
 	public int getSell_mileage() {
 		return sell_mileage;
 	}
