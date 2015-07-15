@@ -239,10 +239,10 @@ function showNotification(){
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">                          
-                          <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
-                          <li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
-                             <li><a class="" href="javascript:goUrl('recommend')">상품추천</a></li>
-                              <li><a class="" href="javascript:goUrl('conference')">화상회의</a></li>
+                          <li><a class="" href="javascript:goUrl('notice')">✔ 공지사항</a></li>
+                          <li><a class="" href="javascript:goUrl('calendar')">✔ 일정관리</a></li>
+                             <li><a class="" href="javascript:goUrl('recommend')">✔ 상품추천</a></li>
+                              <li><a class="" href="javascript:goUrl('conference')">✔ 화상회의</a></li>
                        </ul>
                   </li>
               <li class="sub-menu">
@@ -252,8 +252,8 @@ function showNotification(){
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="javascript:goUrl('join')">매장 가입</a></li>   
-                          <li><a class="" href="javascript:goUrl('check')">매장 조회</a></li>
+                          <li><a class="" href="javascript:goUrl('join')">✔ 매장 가입</a></li>   
+                          <li><a class="" href="javascript:goUrl('check')">✔ 매장 조회</a></li>
                       </ul>
                   </li>       
                   <li class="sub-menu">
@@ -263,9 +263,9 @@ function showNotification(){
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="javascript:goUrl('add')">상품추가</a></li>
-                          <li><a class="" href="javascript:goUrl('smang')">상품 재고 관리</a></li>
-                          <li><a class="" href="javascript:goUrl('discount')">상품 세일</a></li>
+                          <li><a class="" href="javascript:goUrl('add')">✔ 상품추가</a></li>
+                          <li><a class="" href="javascript:goUrl('smang')">✔ 상품 재고 관리</a></li>
+                          <li><a class="" href="javascript:goUrl('discount')">✔ 상품 세일</a></li>
                       </ul>
                   </li>
                 <li class="sub-menu">
@@ -275,8 +275,8 @@ function showNotification(){
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
                       <ul class="sub">
-                          <li><a class="" href="javascript:goUrl('productsch')">품목별 매출순위</a></li>
-                          <li><a class="" href="javascript:goUrl('outletsch')">대리점별 매출순위</a></li>
+                          <li><a class="" href="javascript:goUrl('productsch')">✔ 품목별 매출순위</a></li>
+                          <li><a class="" href="javascript:goUrl('outletsch')">✔ 대리점별 매출순위</a></li>
                           
                       </ul>
                   </li>
