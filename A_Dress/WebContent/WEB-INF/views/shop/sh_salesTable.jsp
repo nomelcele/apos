@@ -89,6 +89,7 @@
 							<th><i class="icon_mail_alt"></i>판매 액</th>
 							<th><i class="icon_pin_alt"></i>판매 수량</th>
 							<th><i class="icon_profile"></i>구매 고객 번호</th>
+							<th><i class="icon_profile"></i>영수증 번호</th>
 						</tr>
 
 					</thead>
