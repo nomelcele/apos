@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import vo.CalendarVO;
 import vo.ProductVO;
 import vo.SaleVO;
 
@@ -80,10 +81,14 @@ public class BonsaService {
 		bondao.insert_salecalendar(vo);
 	}
 	// 달력 일정 삭제(세일기간, 공지사항)
-	public void bon_deletecalendar(int calen_num){
+	public void bon_deletecalendar(int calen_num,String start, String end){
 		String calen_procode = bondao.getprocode_calendar(calen_num);
 		bondao.delete_calendar(calen_num);
 		pdao.delete_calendar(calen_procode);
+		CalendarVO vo = new CalendarVO();
+		vo.setCalen_start(start);
+		vo.setCalen_end(end);
+		bdao.cancelSale(vo);
 	}
 	
 }
