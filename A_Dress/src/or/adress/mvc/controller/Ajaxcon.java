@@ -976,7 +976,7 @@ public class Ajaxcon {
 		ModelAndView mav = new ModelAndView("bonsa/bon_fullcalendar");
 		System.out.println("calen_start :: "+calen_start);
 		System.out.println("calen_end :: "+calen_end);
-		bservice.bon_deletecalendar(calen_num,calen_start, calen_end);
+		//bservice.bon_deletecalendar(calen_num,calen_start, calen_end);
 		return mav;
 	}
 	
