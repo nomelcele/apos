@@ -63,7 +63,7 @@
   	</update>
   	<!-- 할인원상복귀(0%) -->
   	<update id="deletesalerate" parameterType="String">
-  		update product set pro_salerate=0 where pro_code like '%'||#{pro_code}||'%'
+  		update product set pro_salerate=0 where pro_code like '%'||#{calen_procode}||'%'
   	</update>
   	
 </mapper>
