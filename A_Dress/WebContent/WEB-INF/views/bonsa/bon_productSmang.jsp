@@ -1,15 +1,15 @@
 <%@page import="java.util.ArrayList"%>
 <%-- ---<%@page import="dao.ShopDao"%>--%>
 <%@page import="vo.ShopHotkeyVO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=euc-kr"
+	pageEncoding="euc-kr"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script>
 			function gostockyn(req_status, req_num){
 				if(req_status=="Yes"){
 					var UP;
-					   UP=confirm("ì •ë§ ìŠ¹ì¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+					   UP=confirm("Á¤¸» ½ÂÀÎÇÏ½Ã°Ú½À´Ï±î?");
 					   if(UP){
 						   $("#req_status").val(req_status);
 							$("#req_num").val(req_num);
@@ -19,7 +19,7 @@
 					   }
 				}else{
 					
-					alert("ê±°ì ˆí•˜ì˜€ìŠµë‹ˆë‹¤.");
+					alert("°ÅÀıÇÏ¿´½À´Ï´Ù.");
 					if(req_status=="No"){
 						 $("#req_status").val(req_status);
 							$("#req_num").val(req_num);
@@ -49,14 +49,14 @@ function openview2(img3)
 }
 </script>
 
-<!-- ë³¸ì‚¬ ìƒí’ˆê´€ë¦¬ì˜ ìƒí’ˆì¬ê³ ê´€ë¦¬ í˜ì´ì§€ ì…ë‹ˆë‹¤.-->
+<!-- º»»ç »óÇ°°ü¸®ÀÇ »óÇ°Àç°í°ü¸® ÆäÀÌÁö ÀÔ´Ï´Ù.-->
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row" style="font-size: 15px; width:100%; height:100%">
 			<div class="col-lg-12">
 
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> ë§¤ì¥ ì¬ê³ ê´€ë¦¬
+					<i class="fa fa-files-o"></i> ¸ÅÀå Àç°í°ü¸®
 				</h3>
 
 				<div class="row">
@@ -65,17 +65,17 @@ function openview2(img3)
 						<table class="table">
 							<thead>
 								<tr>
-									<th>ì‹ ì²­ë²ˆí˜¸</th>
-									<th>ë§¤ì¥ëª…</th>
-									<th>ìƒí’ˆ ì´ë¦„</th>
-									<th>ì½”ë“œ</th>
-									<th>ì‚¬ì´ì¦ˆ</th>
-									<th>ê°€ê²©</th>
-									<th>ìƒí’ˆ ì‚¬ì§„</th>
-									<th>ë°”ì½”ë“œ</th>
-									<th>ì‹ ì²­ ìˆ˜ëŸ‰</th>
-									<th>ì‹ ì²­í˜„í™©</th>
-									<th>ì‹ ì²­ì¼</th>
+									<th>½ÅÃ»¹øÈ£</th>
+									<th>¸ÅÀå¸í</th>
+									<th>»óÇ° ÀÌ¸§</th>
+									<th>ÄÚµå</th>
+									<th>»çÀÌÁî</th>
+									<th>°¡°İ</th>
+									<th>»óÇ° »çÁø</th>
+									<th>¹ÙÄÚµå</th>
+									<th>½ÅÃ» ¼ö·®</th>
+									<th>½ÅÃ»ÇöÈ²</th>
+									<th>½ÅÃ»ÀÏ</th>
 									<th>Yes/</th>
 									<th>No</th>
 								</tr>
@@ -127,15 +127,15 @@ function openview2(img3)
 q.pro_amount -->
 										<!-- 
 										
-										<th>ìˆœ ë²ˆ</th>
-									<th>ë§¤ì¥ëª…</th>
-									<th>ìƒí’ˆ ì´ë¦„</th>
-									<th>ì½”ë“œ</th>
-									<th>ì‚¬ì´ì¦ˆ</th>
-									<th>ê°€ê²©</th>
-									<th>ìƒí’ˆ ì‚¬ì§„</th>
-									<th>ë°”ì½”ë“œ</th>
-									<th>ì‹ ì²­ ìˆ˜ëŸ‰</th>
+										<th>¼ø ¹ø</th>
+									<th>¸ÅÀå¸í</th>
+									<th>»óÇ° ÀÌ¸§</th>
+									<th>ÄÚµå</th>
+									<th>»çÀÌÁî</th>
+									<th>°¡°İ</th>
+									<th>»óÇ° »çÁø</th>
+									<th>¹ÙÄÚµå</th>
+									<th>½ÅÃ» ¼ö·®</th>
 									<th>Yes/</th>
 									<th>No</th> -->
 								
