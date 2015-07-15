@@ -556,7 +556,7 @@ public class Ajaxcon {
 		return mav;
 
 	}
-
+	
 	// 본사채팅입력
 	@RequestMapping(value = "bon_add_chat", method = RequestMethod.POST)
 	public String bon_add_chat(HttpServletRequest request, HttpSession session) {
@@ -980,4 +980,38 @@ public class Ajaxcon {
 		return mav;
 	}
 	
+	
+	//본사 추천 - 상품추천
+			@RequestMapping(value="bon_precommand", method=RequestMethod.POST)
+			public ModelAndView bon_precommand(int pro_code){
+				List<ProductVO> list = pdao.getListProduct_bon3(pro_code);
+				Iterator <ProductVO> it = list.iterator();
+				StringBuffer res = new StringBuffer();
+				int i = 1;
+				while (it.hasNext()) {
+						ProductVO vo = new ProductVO();
+						vo = it.next();
+						res.append("<tr>");
+						res.append("<td>").append(vo.getPro_num()).append("</td>");
+						res.append("<td>").append(vo.getPro_name()).append("</td>");
+						res.append("<td>").append(vo.getPro_code()).append("</td>");
+						res.append("<td>").append(vo.getPro_price()).append("</td>");
+						res.append("<td><img src='product/").append(vo.getPro_img())
+						.append("' style=\"width: 100px;\"></td>");
+						res.append("<td><img src='barcode/").append(vo.getPro_barcode())
+						.append("' style=\"width: 100px;\"></td>");
+						res.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" ");
+						res.append("href=\"javascript:pro_chk('")
+								.append(vo.getPro_num()).append("', '");
+						res.append(vo.getPro_code()).append("', '");
+						res.append(vo.getPro_name()).append(
+								"', '" + vo.getPro_price() + "')\">");
+						res.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");res.append("</tr>");
+				}
+				String str = res.toString();
+				ModelAndView mav= new ModelAndView("ajax/bpd_chk_callback");
+				mav.addObject("str", str);
+				return mav;
+			}
+		
 }
