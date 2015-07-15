@@ -87,6 +87,8 @@
 			document.getElementById("videochat").submit();
 		} else if (str == "workTel") {
 			document.getElementById("workTel").submit();
+		} else if (str == "workData") {
+			document.getElementById("workData").submit();
 		} else if (str == "pcheck") {
 			document.getElementById("pcheck").submit();
 		} else if (str == "move") {
@@ -199,6 +201,9 @@
 <input type="hidden" name="shop_num" value="${sessionScope.shop_num}">
 </form>
 
+<!-- 급여 -->
+<form method="post" action="sh_workData" id=workData></form>
+
 
 <!-- 회원가입 -->
 <form method="post" action="sh_memberJoin" id=memberJoin></form>
@@ -259,6 +264,8 @@
 					<li><a class="" href="javascript:goUrl('workTel')">연락처</a></li>
 					<li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
 					<li><a class="" href="javascript:goUrl('videochat')">화상 회의</a></li>
+					<li><a class="" href="javascript:goUrl('workData')">급여</a></li>
+					
 				</ul></li>
 
 			<li class="sub-menu"><a href="javascript:;" class=""> <i
