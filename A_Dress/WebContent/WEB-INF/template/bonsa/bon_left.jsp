@@ -98,6 +98,8 @@
 			document.getElementById("productsch").submit();
 		}else if(str == "outletsch"){
 			document.getElementById("outletsch").submit();
+		}else if(str == "conference"){
+			document.getElementById("conference").submit();
 		}
 // 		else if(str == "YES"){
 //  			document.getElementById("reqOk").submit();
@@ -205,6 +207,8 @@ function showNotification(){
 <form method=post action="bon_fullcalendar" id="calendar"></form>
 <!-- 본사-업무관리-상품추천 -->
 <form method=post action="bon_precommend" id="recommend"></form>
+<!-- 본사-업무관리- 화상회의 -->
+<form method=post action="bon_conference" id="conference"></form>
 <!--본사 - 매장관리 - 매장가입 -->
 <form method="post" action="bon_shopJoin" id="join"></form>
 <!--본사 - 매장관리 - 매장조회 -->
@@ -238,6 +242,7 @@ function showNotification(){
                           <li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
                           <li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
                              <li><a class="" href="javascript:goUrl('recommend')">상품추천</a></li>
+                              <li><a class="" href="javascript:goUrl('conference')">화상회의</a></li>
                        </ul>
                   </li>
               <li class="sub-menu">
