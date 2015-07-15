@@ -48,7 +48,7 @@
 	
 	<!-- Calendar -->
 	<insert id="insert_calendar" parameterType="calenvo">
-		insert into calendar values(calendar_seq.nextVal, #{calen_start},#{calen_end},#{calen_content},sysdate)
+		insert into calendar values(calendar_seq.nextVal, #{calen_start},#{calen_end},#{calen_content},#{calen_color},'공지사항',sysdate)
 	</insert>
 	<!-- Bonsa, Shop Calendar 둘다 쓰임 -->
 	<select id="getlist_calendar" resultType="calenvo">
