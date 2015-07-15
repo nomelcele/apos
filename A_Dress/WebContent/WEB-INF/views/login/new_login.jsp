@@ -39,10 +39,9 @@
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$(function() {
-		$('#getHotkey').click(function() {
-			$('#modal1').modal({
-				remote : 'sh_gethotkey'
-			});
+		$('#hotkey').click(function() {
+			$('#modal2').modal('hide');
+			$('#modal3').modal('show');
 		});
 		$('#shopmodal').click(function() {
 				$('#modal2').modal('show');
@@ -53,18 +52,29 @@
 		
 		//본사회원가입 아이디중복체크
 		$('#bon_id').keyup(function(){
-			$('#viewID').load("bon_sawonidcheck.jsp?id="+$('#bon_id').val());
+				$.ajax({
+	                 url: "bo_idchk",
+	                 type: "POST",
+	                 data : {
+	              	 	id : "bon_"+$('#bon_id').val()
+	                 },
+	                 success: function(data) {
+	                  $("#viewID").html(data);
+	                 }
+	             });
+				
 		});
 		
 		//본사회원가입 패스워드체크
 		$('#bon_pwd_ck').keyup(function(){
-			if($('#bon_pwd').val() == $('#bon_pwd_ck').val()){
-				$('#viewPWD').css("color","green");
-				$('#viewPWD').text("비밀번호가 일치합니다");
-			}else{
-				$('#viewPWD').css("color","red");
-				$('#viewPWD').text("비밀번호가 일치하지 않습니다");
-			}
+				if($('#bon_pwd').val() == $('#bon_pwd_ck').val()){
+					$('#viewPWD').css("color","green");
+					$('#viewPWD').text("비밀번호가 일치합니다");
+				}else{
+					$('#viewPWD').css("color","red");
+					$('#viewPWD').text("비밀번호가 일치하지 않습니다");
+				}
+			
 		});
 		
 		
@@ -163,14 +173,22 @@
 	<div id="modal1" class="modal fade">
 		<div class="modal-dialog" style="width: 400px; text-align: center;">
 			<div class="modal-content">
+			<div class="modal-header">
+					<!-- 닫기(x) 버튼 -->
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<!-- header title -->
+					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+				</div>
 			<div>
+			
 				<!-- body -->
 									
 				<form method="post" action="bon_sawonjoin" name="bon_joinForm" id="bon_joinForm" autocomplete="off">
 				
 						<%-- ID 입력 --%>
 						<div class="modal-body2" ><span style="display: block;">아이디 :</span>
-								<input class="form-control" id="bon_id" name="bon_id" type="text" minlength="5" required />
+						<input style="width: 20%" class="form-control" id="bon_" name="bon_"type="text" value="bon_" readonly="readonly" />
+						<input style="width: 79%" class="form-control" id="bon_id" name="bon_id" type="text" minlength="5" required />
 						</div>
 						<%-- ID 중복 확인 : ajax 사용 --%>
 						<div id="viewID"></div>
@@ -188,14 +206,14 @@
 							<input class="form-control" id="bon_name" name="bon_name" type="text" required /></div>
 						<%-- 연락처 --%>
 						<div class="modal-body2 "><span style="display: block">연락처 :</span>
-						 	<select style="width: 20%" class="form-control">
+						 	<select style="width: 23%" class="form-control">
 	                                          		<option>SKT</option>
 	                                          		<option>KT</option>
 	                                          		<option>LG</option>
                              </select>-
-							 <input style="width: 20%" class="form-control" id="bon_tel1" name="bon_tel1" maxlength="3" type="tel" required />-
-                             <input style="width: 20%" class="form-control" id="bon_tel2" name="bon_tel2" maxlength="4" type="tel" required />-
-                             <input style="width: 20%" class="form-control" id="bon_tel3" name="bon_tel3" maxlength="4" type="tel" required />
+							 <input style="width: 23%" class="form-control" id="bon_tel1" name="bon_tel1" maxlength="3" type="tel" required />-
+                             <input style="width: 23%" class="form-control" id="bon_tel2" name="bon_tel2" maxlength="4" type="tel" required />-
+                             <input style="width: 23%" class="form-control" id="bon_tel3" name="bon_tel3" maxlength="4" type="tel" required />
 						</div>
 						<!-- Footer -->
 						<div class="modal-footer" >
@@ -232,7 +250,7 @@
 						</div>
 						
 						<div class="modal-body2">
-							Join:<input type="button" value="join" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
+							Join:<input type="button" value="join" class="form-control4 block" id="123123" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
 						
 						
@@ -245,6 +263,48 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
+	<div id="modal3" class="modal fade">
+		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
+			<div class="modal-content">
+			<div class="modal-header">
+					<!-- 닫기(x) 버튼 -->
+					<button type="button" class="close" data-dismiss="modal">×</button>
+					<!-- header title -->
+					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+				</div>
+			<div>
+			
+				<!-- body -->
+									
+				<form method="post" action="sh_requesthot" name="requesthot" id="requesthot" autocomplete="off">
+						<%-- 성명 --%>
+						<div class="modal-body2"><span style="display: block">성 명 :</span>
+							<input class="form-control" id="key_name" name="key_name" type="text" required /></div>
+						<%-- 사업자번호 --%>
+						<div class="modal-body2"><span style="display: block">사업자번호 :</span>
+							<input class="form-control" id="key_crnum" name="key_crnum" type="text" required /></div>
+						<%-- 이메일 --%>
+						<div class="modal-body2"><span style="display: block">사업자번호 :</span>
+							<input class="form-control" id="key_email" name="key_email" type="text" required /></div>
+						
+						<!-- Footer -->
+						<div class="modal-footer" >
+							<button type="submit" class="btn btn-default" >요청</button>
+						</div>
+				</form>
+				
+				</div>	
+				
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
 
 	<div class="container">
 		<form class="login-form" action="loging" id="loginForm" autocomplete="off" method="post">

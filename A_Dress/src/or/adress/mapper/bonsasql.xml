@@ -6,7 +6,7 @@
 	<select id="login_check" parameterType="map" resultType="String">
 		select bon_id from bonsa where bon_id=#{id} and bon_pwd=#{pwd}
 	</select>
-	<select id="chk_id" parameterType="String" resultType="boolean">
+	<select id="chk_id" parameterType="String" resultType="String">
 		select bon_id from bonsa where bon_id=#{bon_id}
 	</select>
 	<select id="find_id" parameterType="map" resultType="String">
