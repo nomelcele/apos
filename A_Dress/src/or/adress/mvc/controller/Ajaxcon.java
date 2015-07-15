@@ -545,6 +545,7 @@ public class Ajaxcon {
 			res.append("<th>").append(v.getSell_cash()).append("</th>");
 			res.append("<th>").append(v.getSell_many()).append("</th>");
 			res.append("<th>").append(v.getSell_memnum()).append("</th>");
+			res.append("<th>").append(v.getSell_sell()).append("</th>");
 			res.append("</tr>");
 
 		}
