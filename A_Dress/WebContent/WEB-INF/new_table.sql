@@ -1,3 +1,4 @@
+
 create table bonsa(
 bon_num number(10) constraint bonsa_bon_num_pk primary key,
 bon_name varchar2(20) constraint bonsa_bon_name_nn not null,
@@ -48,37 +49,7 @@ references shop(shop_num) on delete cascade
 );
 
 -----------------------------------------------------------------
-create table board(
-bo_num number(10) constraint board_bo_num_pk primary key,
-bo_sub varchar2(50) constraint board_bo_sub_nn not null,
-bo_writer varchar(20) constraint board_bo_writer_nn not null,
-bo_cont clob constraint board_bo_cont_nn not null,
-bo_date date,
-bo_img varchar2(50),
-bo_hit number(10),
-bo_bonnum number(10),
-constraint board_bo_bonnum_fk foreign key(bo_bonnum)
-references bonsa(bon_num) on delete cascade
-);
----------------------------------------------------------------
-create table comm(
-comm_num number(10) constraint comm_comm_num_pk primary key,
-comm_bonum number(10),
-comm_writer varchar2(20) constraint comm_comm_writer_nn not null,
-comm_cont varchar2(100) constraint comm_comm_cont_nn not null,
-comm_date date,
-constraint comm_comm_bonum_fk foreign key (comm_bonum)
-references board(bo_num) on delete cascade
-);
--------------------------------------------------------------
-create table chat(
-chat_num number(10) constraint chat_chat_num_pk primary key,
-chat_id varchar2(20) constraint chat_chat_id_nn not null,
-chat_cont varchar2(200),
-chat_ip varchar(20),
-chat_date date
-);
-------------------------------------
+
 create table loginout(
 log_num number(10) constraint loginout_log_num_pk primary key,
 log_in date,
@@ -190,6 +161,41 @@ calen_color varchar2(50),
 calen_procode varchar2(50),
 calen_date date);
 
+create table board(
+bo_num number(10) constraint board_bo_num_pk primary key,
+bo_sub varchar2(50) constraint board_bo_sub_nn not null,
+bo_writer varchar(20) constraint board_bo_writer_nn not null,
+bo_cont clob constraint board_bo_cont_nn not null,
+bo_date date,
+bo_img varchar2(50),
+bo_hit number(10),
+bo_bonnum number(10),
+bo_calennum number(10),
+constraint board_bo_bonnum_fk foreign key(bo_bonnum)
+references bonsa(bon_num) on delete cascade,
+constraint board_bo_calennum_fk foreign key(bo_calennum)
+references calendar(calen_num) on delete cascade);
+---------------------------------------------------------------
+create table comm(
+comm_num number(10) constraint comm_comm_num_pk primary key,
+comm_bonum number(10),
+comm_writer varchar2(20) constraint comm_comm_writer_nn not null,
+comm_cont varchar2(100) constraint comm_comm_cont_nn not null,
+comm_date date,
+constraint comm_comm_bonum_fk foreign key (comm_bonum)
+references board(bo_num) on delete cascade
+);
+-------------------------------------------------------------
+create table chat(
+chat_num number(10) constraint chat_chat_num_pk primary key,
+chat_id varchar2(20) constraint chat_chat_id_nn not null,
+chat_cont varchar2(200),
+chat_ip varchar(20),
+chat_date date
+);
+------------------------------------
+
+
 CREATE TABLE login (
   username varchar2(20) NOT NULL,
   password varchar2(20) NOT NULL,
@@ -202,6 +208,4 @@ CREATE TABLE grade (
   role varchar(20) NOT NULL,
   PRIMARY KEY (username,role)
 );
-
-
 
