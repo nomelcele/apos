@@ -1239,7 +1239,7 @@ insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 2, 14, '2015-0
 
 
 insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 2, 15, '2015-01-29', 1, 1 ,29);
-insert into sell values(sell_seq.nextval, '151211900',	25000, 0, 2, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 2, 15, '2015-01-29', 1, 1 ,85);
 insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 2, 15, '2015-02-04', 1, 1 ,6);
 insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 2, 15, '2015-02-16', 1, 1 ,6);
 insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 2, 15, '2015-03-27', 1, 1 ,6);
