@@ -528,6 +528,7 @@ ul.sidebar-menu li.active a i {
 .dark-bg {    
     background: rgba(54,66,74,1);
     border-bottom:1px solid #CED0DD;
+    padding-top:4px;
 }
 .panel-content{
     padding: 10px;
