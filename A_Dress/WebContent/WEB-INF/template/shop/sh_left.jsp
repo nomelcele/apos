@@ -264,7 +264,7 @@
 					<li><a class="" href="javascript:goUrl('workTel')">✔ 연락처</a></li>
 					<li><a class="" href="javascript:goUrl('calendar')">✔ 일정관리</a></li>
 					<li><a class="" href="javascript:goUrl('videochat')">✔ 화상 회의</a></li>
-					<li><a class="" href="javascript:goUrl('workData')">급여</a></li>
+					<li><a class="" href="javascript:goUrl('workData')">✔ 급여관리</a></li>
 					
 				</ul></li>
 
