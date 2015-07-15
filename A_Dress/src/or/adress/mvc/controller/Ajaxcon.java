@@ -25,6 +25,7 @@ import javax.servlet.http.HttpSession;
 
 import or.adress.mvc.dao.BonsaDao;
 import or.adress.mvc.dao.ChatDao;
+import or.adress.mvc.dao.MemberDao;
 import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.SalesCheckDao;
 import or.adress.mvc.dao.ShopDao;
@@ -63,6 +64,8 @@ public class Ajaxcon {
 	private ChatDao chdao;
 	@Autowired
 	private BonsaService bservice;
+	@Autowired
+	private MemberDao memdao;
 
 	// 성별 물건 검색 ajax
 	@RequestMapping(value = "sh_AjaxProductSearch")
@@ -981,7 +984,7 @@ public class Ajaxcon {
 	}
 	
 	
-	//본사 추천 - 상품추천
+	//본사 추천 - 상품추천 - 상품 검색
 			@RequestMapping(value="bon_precommand", method=RequestMethod.POST)
 			public ModelAndView bon_precommand(int pro_code){
 				List<ProductVO> list = pdao.getListProduct_bon3(pro_code);
@@ -1013,5 +1016,42 @@ public class Ajaxcon {
 				mav.addObject("str", str);
 				return mav;
 			}
+			
+			//본사 추천 - 상품 추천 - 맴버 찾기
+			@RequestMapping(value="bon_precommandsearchmem")
+			public ModelAndView bon_precommandsearchmem(String pro_code){
+				ModelAndView mav = new ModelAndView("ajax/bon_precommandsearchmem");
+				HashMap<String, String> map = new HashMap<String, String>();
+				map.put("pro_code", pro_code);
+				String select = pro_code.substring(4, 5);
+				System.out.println("잘라낸 코드 넘버:"+select);
+				StringBuffer res = new StringBuffer();
+				map.put("pre_code", "___"+select);
+				List<MemVO> list = memdao.presearchmem(map);
+				Iterator<MemVO> it =list.iterator();
+				while(it.hasNext()){
+					MemVO vo = new MemVO();
+					vo= it.next();
+					res.append("<tr>");
+					res.append("<td>").append(vo.getMem_num()).append("</td>");
+					res.append("<td>").append(vo.getMem_name()).append("</td>");
+					res.append("<td>").append(vo.getMem_email()).append("</td>");
+					res.append("<td>").append(vo.getMem_tel()).append("</td>");
+					
+					
+					res.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" ");
+					res.append("href=\"javascript:pro_chk('");
+						
+					res.append(vo.getMem_email()).append(
+							"', '" + vo.getMem_num() + "')\">");
+					res.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");res.append("</tr>");
+			
+					
+				}
+				mav.addObject("res", res);
+				
+				return mav;
+			}
+			
 		
 }
