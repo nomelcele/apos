@@ -81,13 +81,10 @@ public class BonsaService {
 		bondao.insert_salecalendar(vo);
 	}
 	// 달력 일정 삭제(세일기간, 공지사항)
-	public void bon_deletecalendar(int calen_num,String start, String end){
-		String calen_procode = bondao.getprocode_calendar(calen_num);
-		bondao.delete_calendar(calen_num);
+	public void bon_deletecalendar(CalendarVO vo){
+		String calen_procode = bondao.getprocode_calendar(vo.getCalen_num());
+		bondao.delete_calendar(vo.getCalen_num());
 		pdao.delete_calendar(calen_procode);
-		CalendarVO vo = new CalendarVO();
-		vo.setCalen_start(start);
-		vo.setCalen_end(end);
 		bdao.cancelSale(vo);
 	}
 	
