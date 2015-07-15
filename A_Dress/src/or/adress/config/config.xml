@@ -19,5 +19,6 @@
 		<typeAlias type="vo.StockVO" alias="stvo" />
 		<typeAlias type="vo.CalendarVO" alias="calenvo" />
 		<typeAlias type="vo.SaleVO" alias="salevo"/>
+		<typeAlias type="vo.JoinVO" alias="jvo"/>
 	</typeAliases>
 </configuration>
