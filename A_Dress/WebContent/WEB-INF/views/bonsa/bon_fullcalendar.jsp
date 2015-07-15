@@ -34,14 +34,14 @@
 	            	var calen_start = $.fullCalendar.formatDate( calEvent.start, 'yyyy-MM-dd' );
 	    			var calen_end = $.fullCalendar.formatDate( calEvent.end, 'yyyy-MM-dd' );
 	            	var res = calEvent.title.split("/");
+	            	alert(res[0]);
 	            	$.ajax({
 		  	              url: "bon_ajaxdeletecalendar",
 		  	              type: "POST",
 		  	              data: {
 		  	            	  calen_num :  res[0],
 				              calen_start : calen_start,
-			            	  calen_end :  calen_end,
-			            	  calen_content : calEvent.title
+			            	  calen_end :  calen_end
 		  	              },
 		  	              dataType: "html",
 		  	              success: function(a) {
@@ -60,7 +60,6 @@
    // 캘린더 셀렉트 된 값을 컬럼에 표시...
    select: function(start, end, event) {
 	    var title = prompt('Event Title:');
-	    alert(title);
 	    var eventData;
 	    if (title) {
 		     eventData = {
@@ -69,32 +68,33 @@
 		      end: end
 		     }
 	     	$('#calendarTagert').fullCalendar('renderEvent', eventData, true); // stick? = true
+		     var start2 = $.fullCalendar.formatDate( start, 'yyyy-MM-dd' );
+			 var end2 = $.fullCalendar.formatDate( end, 'yyyy-MM-dd' );
+			          $.ajax({
+			              url: "bon_ajaxcalendar",
+			              type: "POST",
+			              data: {
+			            	  calen_start : start2,
+			            	  calen_end :  end2,
+			            	  calen_content : title,
+			            	  calen_color : '#CC0000'
+			              },
+			              dataType: "html",
+			              success: function(a) {
+			            	  alert(a);
+			              },
+			              error: function(a, b) {
+			                  alert("Request: " + JSON.stringify(a));
+			              }
+			          });
 	    }
 	    $('#calendarTagert').fullCalendar('unselect');
 	     //alert("selected from: " + start.format() + "//, to: " + end.format());
 	     // 셀렉트된 결과를 서버로 전송
 	     // getDate : 일수, getMonth  : 달수, getFullYear : 년수
-	    var start2 = $.fullCalendar.formatDate( start, 'yyyy-MM-dd' );
-	    var end2 = $.fullCalendar.formatDate( end, 'yyyy-MM-dd' );
-	          $.ajax({
-	              url: "bon_ajaxcalendar",
-	              type: "POST",
-	              data: {
-	            	  calen_start : start2,
-	            	  calen_end :  end2,
-	            	  calen_content : title,
-	            	  calen_color : '#CC0000'
-	              },
-	              dataType: "html",
-	              success: function(a) {
-	            	  alert(a);
-	              },
-	              error: function(a, b) {
-	                  alert("Request: " + JSON.stringify(a));
-	              }
-	          });
+	  
    },
-   editable: true,
+   editable: false,
    eventLimit: true,
    events: [${list}]
   })
