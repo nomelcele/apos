@@ -954,8 +954,9 @@ public class Ajaxcon {
 	// º»»ç - Full Calendar
 	@RequestMapping(value="bon_ajaxcalendar", method=RequestMethod.POST)
 	public ModelAndView bon_ajaxfullcalendar(CalendarVO vo){
-		System.out.println("comehere?");
 		ModelAndView mav = new ModelAndView();
+		System.out.println("START :: "+vo.getCalen_start());
+		System.out.println("END:: "+vo.getCalen_end());
 		bdao.insertfullcalendar(vo);
 		mav.setViewName("ajax/bon_ajaxfullcalendar");
 		mav.addObject("res","Success");
