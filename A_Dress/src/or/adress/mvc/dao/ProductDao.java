@@ -110,8 +110,6 @@ public class ProductDao {
 	}
 	// 세일율 취소(0%)
 	public void delete_calendar(String calen_procode){
-		String pro_code = calen_procode;
-		
-		ss.update("product.deletesalerate", pro_code);
+		ss.update("product.deletesalerate", calen_procode);
 	}
 }
