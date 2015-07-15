@@ -36,7 +36,7 @@ function open_win2()
                         id="top_shop_num" name="shop_num"
                         value="${sessionScope.shop_num}">
                         <input type="hidden" id ="top_name_pk" name ="pro_name" val="">         
-                  </form><a href="javascript:open_win2()" style="float:left">&nbsp;&nbsp;&nbsp;&nbsp;<img src="resources/img/pcode79.JPG" ></a><div style="float: left;">
+                  </form><a href="javascript:open_win2()" style="float:left">&nbsp;&nbsp;&nbsp;<img src="resources/img/pcode79.JPG" ></a><div style="float: left;">
                   <input class="form-control" name="top_search" id="top_search"
                   placeholder="Product Code Search"   onKeypress="javascript:if(event.keyCode==13) { topsearch_pk();}"
                   type="text" ></div>
