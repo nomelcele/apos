@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import vo.BoardVO;
+import vo.CalendarVO;
 import vo.CommVO;
 import vo.SaleVO;
 
@@ -71,5 +72,10 @@ public class BoardDao {
 	//할인적용시 게시판글쓰기
 	public void insertSale(SaleVO vo){
 		ss.insert("notice.notice_saleinsert", vo);
+	}
+	//할인취소시 게시판글머리 수정
+	public void cancelSale(CalendarVO vo){
+		String bo_sub = "<종료>"+vo.getCalen_start()+"~"+vo.getCalen_end();
+		ss.update("notice.notice_salecancel",bo_sub);
 	}
 }
