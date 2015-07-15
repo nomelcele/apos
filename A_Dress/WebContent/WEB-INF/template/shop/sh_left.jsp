@@ -259,11 +259,11 @@
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
-					<li><a class="" href="javascript:goUrl('notice')">공지사항</a></li>
-					<li><a class="" href="javascript:goUrl('workitr')">내부 규정</a></li>
-					<li><a class="" href="javascript:goUrl('workTel')">연락처</a></li>
-					<li><a class="" href="javascript:goUrl('calendar')">일정관리</a></li>
-					<li><a class="" href="javascript:goUrl('videochat')">화상 회의</a></li>
+					<li><a class="" href="javascript:goUrl('notice')">✔ 공지사항</a></li>
+					<li><a class="" href="javascript:goUrl('workitr')">✔ 내부 규정</a></li>
+					<li><a class="" href="javascript:goUrl('workTel')">✔ 연락처</a></li>
+					<li><a class="" href="javascript:goUrl('calendar')">✔ 일정관리</a></li>
+					<li><a class="" href="javascript:goUrl('videochat')">✔ 화상 회의</a></li>
 					<li><a class="" href="javascript:goUrl('workData')">급여</a></li>
 					
 				</ul></li>
@@ -273,17 +273,17 @@
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
-					<li><a class="" href="javascript:goUrl('memberJoin')">회원가입</a></li>
-					<li><a class="" href="javascript:goUrl('memberCheck')">회원조회/수정</a></li>
+					<li><a class="" href="javascript:goUrl('memberJoin')">✔ 회원가입</a></li>
+					<li><a class="" href="javascript:goUrl('memberCheck')">✔ 회원조회/수정</a></li>
 				</ul></li>
 			<li class="sub-menu"><a href="javascript:;" class=""> <i
 					class="icon_desktop"></i> <span>상품관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
-					<li><a class="" href="javascript:goUrl('productCheck')">상품조회</a></li>
-					<li><a class="" href="javascript:goUrl('productStock')">상품재고관리</a></li>
-					<li><a class="" href="javascript:goUrl('productRequestState')">상품신청현황</a></li>
+					<li><a class="" href="javascript:goUrl('productCheck')">✔ 상품조회</a></li>
+					<li><a class="" href="javascript:goUrl('productStock')">✔ 상품재고관리</a></li>
+					<li><a class="" href="javascript:goUrl('productRequestState')">✔ 상품신청현황</a></li>
 
 				</ul></li>
 			<li class="sub-menu"><a href="javascript:;" class=""> <i
@@ -291,8 +291,8 @@
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
-					<li><a class="" href="javascript:goUrl('smangRegis')">판매등록</a></li>
-					<li><a class="" href="javascript:goUrl('smangExchTefu')"><span>교환/환불</span></a></li>
+					<li><a class="" href="javascript:goUrl('smangRegis')">✔ 판매등록</a></li>
+					<li><a class="" href="javascript:goUrl('smangExchTefu')"><span>✔ 교환/환불</span></a></li>
 				</ul></li>
 
 			<li class="sub-menu" id="hideMenu""><a href="javascript:;"
@@ -300,8 +300,8 @@
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
-					<li><a class="" href="javascript:goUrl('sh_salesTable')">판매현황</a></li>
-					<li><a class="" href="javascript:goUrl('rank')"><span>기간별
+					<li><a class="" href="javascript:goUrl('sh_salesTable')">✔ 판매현황</a></li>
+					<li><a class="" href="javascript:goUrl('rank')"><span>✔ 기간별
 								판매현황</span></a></li>
 				</ul></li>
 		</ul>
