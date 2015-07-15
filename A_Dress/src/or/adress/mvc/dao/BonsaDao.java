@@ -78,7 +78,6 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 	}
 	// bonsa_fullcalendar 정보 저장하기
 	public void insertfullcalendar(CalendarVO vo){
-		System.out.println(vo.getCalen_start());
 	      ss.insert("bonsa.insert_calendar",vo);
 	}
 	// bonsa_fullcalendar 정보 가져오기
