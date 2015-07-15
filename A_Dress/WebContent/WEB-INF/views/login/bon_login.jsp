@@ -280,7 +280,6 @@
             <input class="btn btn-info btn-lg btn-block" type="button" value="SignUp" id="SignUpBtn">
         </div>
       </form>
-
     </div>
     
     <%--Modal2 ID/PWD 찾기  : START --%>

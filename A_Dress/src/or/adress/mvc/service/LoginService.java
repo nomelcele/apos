@@ -3,6 +3,8 @@ package or.adress.mvc.service;
 import java.util.HashMap;
 import java.util.List;
 
+import or.adress.mvc.dao.BonsaDao;
+import or.adress.mvc.dao.LoginDao;
 import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.ShopDao;
 
@@ -10,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import vo.BonsaVO;
+import vo.JoinVO;
 import vo.ProductVO;
 import vo.ShopVO;
 
@@ -20,6 +24,10 @@ public class LoginService {
 	ShopDao sdao;
 	@Autowired
 	ProductDao pdao;
+	@Autowired
+	BonsaDao bdao;
+	@Autowired
+	LoginDao ldao;
 	
 	//프로퍼티지?
 			private Integer[] chk11 = {95,100,105};
@@ -65,5 +73,13 @@ public class LoginService {
 				
 			
 		}
+	
+	public void bonjoinservice(BonsaVO vo, JoinVO jvo){
+		bdao.sawonjoin(vo);
+		ldao.login(jvo);
+		ldao.grade(jvo);
+		
+	}
+	
 }
 

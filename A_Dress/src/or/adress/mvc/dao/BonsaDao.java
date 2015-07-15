@@ -28,7 +28,14 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 	
 	// bon_id로 bon_id찾기 아이디있나 검사?
 	public boolean chkid(String id){
-		boolean res = ss.selectOne("bonsa.chk_id",id);
+		String res_id = ss.selectOne("bonsa.chk_id",id);
+		boolean res = false;
+		if(res_id != null){
+			res = true;
+		}else{
+			res = false;
+		}
+		
 		return res;
 	}
 	
