@@ -41,133 +41,8 @@
 </style>
 <!-- 본사 매장관리의 매장 조회 페이지 입니다. -->
 <script>
-	function shopcdetialmap(res){
-            $.ajax({
-                   url : "bon_shopdetailmap",
-                   type : "POST",
-                   data : {
-                	   shop_num : res
-                   },
-                   success: function(data) {
-                	   $('#map').hide();
-                	   $('#gomapbtn').show();
-                	   var res = data.trim();
-                	   //alert("success! ::"+data.trim());
-					   var str = res.split("/");
-					   var shop_name = str[0];
-					   var shop_master = str[1];
-					   var shop_adr = str[2];
-					   $('#name').attr("value",shop_name);
-					   $('#master').attr("value",shop_master);
-					   $('#adr').attr("value",shop_adr);
-					   
-                		
-                		//$('#mock').html($('#map').html());
-                		$('#demodal').modal('show');
-                 		$('#gomapbtn').click(function(){
-	                		$('#map').show();
-	                		moveMap(shop_adr, shop_name);
-	                		$('#gomapbtn').hide();
-                		});
-                   },
-                   error: function(a, b) {
-                       alert("Request: " + JSON.stringify(a));
-                   }
-               });
-	};
-</script>
-<%-- 명표 APIkey : 7098d2c774fbdd915ec61cc46e44103b --%>
-<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=7098d2c774fbdd915ec61cc46e44103b&libraries=services"></script>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
-<script>
-	  <%-- 다음 지도 API --%>
-	    function moveMap(location,shop_name){
-	    	//마커를 담을 배열입니다
-	    	
-	    	var markers = [];
-	    	var geocoder = new daum.maps.services.Geocoder();
-	    	var coords;
-	    	geocoder.addr2coord(location, function(status, result) {
-	    	  // 정상적으로 검색이 완료됐으면 
-	    	   if (status === daum.maps.services.Status.OK) {
-	    	
-	    	      coords = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
-
-	       		  // 결과값으로 받은 위치를 마커로 표시합니다
-	    	      var marker = new daum.maps.Marker({
-	    	          map: map,
-	    	          position: coords
-	    	      });
-	       		  
-	    	      for ( var i=0; i<result.length; i++ ) {
-	    	    	  
-	    		      var placePosition = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng),
-	    		      marker = addMarker(placePosition, i), 
-	    		      itemEl = getListItem(i, result[i], marker); // 검색 결과 항목 Element를 생성합니다
-	    	      }
-	    			
-	    	      var moveLatLon = new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng);
-	    	     
-	    	      var circle = new daum.maps.Circle({
-	    	    	    center : new daum.maps.LatLng(result.addr[0].lat, result.addr[0].lng),  // 원의 중심좌표 입니다 
-	    	    	    radius: 50, // 미터 단위의 원의 반지름입니다 
-	    	    	    strokeWeight: 5, // 선의 두께입니다 
-	    	    	    //strokeColor: '#75B8FA', // 선의 색깔입니다
-	    	    	    strokeColor: 'red',
-	    	    	    strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-	    	    	    strokeStyle: 'dashed', // 선의 스타일 입니다
-	    	    	    fillColor: 'none',
-	    	    	    //fillColor: '#CFE7FF', // 채우기 색깔입니다
-	    	    	    fillOpacity: 0.7  // 채우기 불투명도 입니다   
-	    	    	}); 
-	    	
-	    	    	// 지도에 원을 표시합니다 
-	    	    	circle.setMap(map); 
-	    	      // 인포윈도우로 장소에 대한 설명을 표시합니다
-	    	      var infowindow = new daum.maps.InfoWindow({
-	    	          content: '<div style="padding:5px;">'+shop_name+'</div>'
-	    	      });
-	    	      
-	    	      map.setCenter(moveLatLon);
-	    	      infowindow.open(map, marker);
-	    	  } 
-	    	});
-
-	    	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-	    		mapOption = {
-	    		    center: new daum.maps.LatLng(coords), // 지도의 중심좌표
-	    		    level: 3 // 지도의 확대 레벨
-	    	};  
-	    	
-	    	//지도를 생성합니다    
-	    	var map = new daum.maps.Map(mapContainer, mapOption); 
-	    	
-	    	//장소 검색 객체를 생성합니다
-	    	var ps = new daum.maps.services.Places();  
-
-
-
-	    //마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
-	    	function addMarker(position, idx, title) {
-	    		var imageSrc = 'http://i1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
-	    		    imageSize = new daum.maps.Size(36, 37),  // 마커 이미지의 크기
-	    		    imgOptions =  {
-	    		        spriteSize : new daum.maps.Size(36, 691), // 스프라이트 이미지의 크기
-	    		        spriteOrigin : new daum.maps.Point(0, (idx*46)+10), // 스프라이트 이미지 중 사용할 영역의 좌상단 좌표
-	    		        offset: new daum.maps.Point(13, 37) // 마커 좌표에 일치시킬 이미지 내에서의 좌표
-	    		    },
-	    		    markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imgOptions),
-	    		        marker = new daum.maps.Marker({
-	    		        position: position, // 마커의 위치
-	    		        image: markerImage 
-	    		    });
-	    		
-	    		marker.setMap(map); // 지도 위에 마커를 표출합니다
-	    		markers.push(marker);  // 배열에 생성된 마커를 추가합니다
-	    		
-	    		return marker;
-	    	}
-	    }
+	
+	 
 </script>
 <%-- Detail Modal --%>
 <div id="demodal" class="modal fade">
@@ -201,7 +76,7 @@
 			<div class="col-lg-12" style="width: 100%; height: 100%;">
 				<section class="panel">
 					<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 매장 조회
+					<i class="fa fa-files-o"></i> 화상 회의
 				</h3>
 					<table class="table" style="width: 100%; height: 100%;">
 						<thead>
@@ -214,21 +89,21 @@
 								<th>매장전화번호</th>
 								<th>매장주email</th>
 								<th>매장주사진</th>
-								<th>상세보기></th>
+								<th>화상회의</th>
 							</tr>
 						</thead>
 						
 						<tbody>
 						<c:forEach var="shlist" items="${list}"  >
 							<tr class="warning">
-								<th><span id="list_name"><a href="bonsaWebRTC?shop_num=${shlist.shop_num}">${shlist.shop_name}</a></span></th>
+								<th><span id="list_name">${shlist.shop_name}</span></th>
 								<th><span id="list_adr">${shlist.shop_adr}</span></th>
 								<th>${shlist.shop_crnum}</th>
 								<th><span id="list_master">${shlist.shop_master}</span></th>
 								<th>${shlist.shop_tel}</th>
 								<th>${shlist.shop_mail}</th>
 								<th><img src="master/${shlist.shop_img}" style="width: 50px;"></th>
-								<th><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="상세보기"></th>								
+								<th><a href="bonsaWebRTC?shop_num=${shlist.shop_num}"><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="화상연결하기"></a></th>								
 								
 							</tr>
 						</c:forEach>
