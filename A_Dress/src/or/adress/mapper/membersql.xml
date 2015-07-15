@@ -9,4 +9,9 @@
   #{mem_deaddr},0, #{mem_date} ,#{mem_shopnum},#{mem_email},#{mem_id},
   #{mem_pwd})
   </insert>
+  <select id="mem_presearch" parameterType="map" resultType="memvo">
+  
+ select * from member where MEM_NUM in (select  DISTINCT sell_memnum  from sell  where sell_pronum like #{pre_code}||'%' and
+ sell_memnum not in (select  DISTINCT sell_memnum from sell where sell_pronum = #{pro_code}) )ORDER by 1
+  </select>
   </mapper>
