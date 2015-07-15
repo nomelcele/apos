@@ -73,7 +73,7 @@
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row">
-			<div class="col-lg-12" style="width: 100%; height: 100%;">
+			<div class="col-lg-12" style="width: 125%; height: 100%;">
 				<section class="panel">
 					<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 화상 회의
