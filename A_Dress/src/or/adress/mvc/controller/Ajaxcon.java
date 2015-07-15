@@ -974,11 +974,9 @@ public class Ajaxcon {
 	}
 	// bon_deletecalendar
 	@RequestMapping(value="bon_ajaxdeletecalendar", method=RequestMethod.POST)
-	public ModelAndView bon_ajaxdeletecalendar(int calen_num, String calen_start, String calen_end){
+	public ModelAndView bon_ajaxdeletecalendar(CalendarVO vo){
 		ModelAndView mav = new ModelAndView("bonsa/bon_fullcalendar");
-		System.out.println("calen_start :: "+calen_start);
-		System.out.println("calen_end :: "+calen_end);
-		//bservice.bon_deletecalendar(calen_num,calen_start, calen_end);
+		bservice.bon_deletecalendar(vo);
 		return mav;
 	}
 	
