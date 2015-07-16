@@ -108,4 +108,10 @@ public class BonsaDao { // 서경연 : 본사 Dao 입니다.
 		String procode = ss.selectOne("bonsa.getprocode_calendar", calen_num);
 		return procode;
 	}
+	// Calendar에서 pro_code를 이용해서 calen_num을 얻어오기 
+   // 세일율 적용시 공지사항을 입력하기 위해서 사용됨
+	public int get_calen_num(String set_pro_code){
+		System.out.println("SET_pro_code (DB들어가기전)::"+set_pro_code);
+		return ss.selectOne("bonsa.getcalennum_calendar",set_pro_code);
+	}
 }
