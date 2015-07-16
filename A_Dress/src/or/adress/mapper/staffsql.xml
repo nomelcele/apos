@@ -29,10 +29,29 @@ private String shop_sname,shop_sposition,shop_stel,shop_name; -->
  	<select id="find_pwd" parameterType="staffvo" resultType="String">
  		select staff_pwd from staff where staff_name=#{staff_name} and staff_id=#{staff_id}
  	</select>
- 	<!-- 급여 스탭테이블 가져오기 -->
+ 	<!-- 출결 스탭테이블 가져오기 -->
  	<select id="get_stafflist" parameterType="int" resultType="staffvo">
  		select staff_name,staff_tel,staff_num from staff where staff_shopnum=#{shop_num}
  	</select>
+ 	<!-- 출결 login 상태 가져오기 -->
+ 	<select id="get_login" parameterType="int" resultType="int">
+ 		select count(*)  work_login from workpay 
+ 		where WORK_FLAG=0 and WORK_STAFFNUM = #{staff_num}
+ 	</select>
+ 	<!-- 출결  인설트 -->
+ 	<select id="insert_login" parameterType="int">
+ 		insert into workpay 
+ 		values(workpay_seq.nextval,sysdate,to_date('0001-01-01','YY-MM-dd'),#{work_staffnum},0) 
+ 	</select>
+ 	<!-- 출결 login시간 가져오기 -->
+ 	<select id="get_logintime" parameterType="int" resultType="String">
+ 		select to_char( WORK_LOGIN ,'yy-MM-dd/hh24:mi')  
+ 		from workpay where WORK_flag=0 and WORK_STAFFNUM = #{work_staffnum}
+ 	</select>
+ 	<!-- 퇴근 업데이트 -->
+ 	<update id="set_logout" parameterType="int">
+ 	UPDATE workpay SET work_flag=1 , work_logout=sysdate where work_staffnum=#{work_staffnum} and work_flag=0
+ 	</update>
  </mapper>
  
  
