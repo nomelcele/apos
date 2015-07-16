@@ -202,7 +202,7 @@
 </form>
 
 <!-- 급여 -->
-<form method="post" action="sh_workData" id=workData></form>
+<form method="post" action="ssh_workData" id=workData></form>
 
 
 <!-- 회원가입 -->
