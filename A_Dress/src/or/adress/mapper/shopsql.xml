@@ -47,11 +47,11 @@
 	</select>
 
 	<select id="findid" parameterType="map" resultType="String">
-		select shop_id from shop where shop_master=#{shop_master} and shop_tel=#{shop_tel}
+		select shop_id from shop where shop_master=#{name} and shop_tel=#{tel}
 
 	</select>
 	<select id="findpwd" parameterType="map" resultType="String">
-	select shop_pwd from shop where shop_name=#{shop_name} and shop_id=#{shop_id}
+	select shop_pwd from shop where shop_master=#{shop_master} and shop_id=#{shop_id}
 	</select>
 	<select id="shopList" resultType="shvo">
 	select *from shop

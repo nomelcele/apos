@@ -121,7 +121,7 @@ public class ShopDao {
 	// shop pwd Ã£±â
 	public String findpwd(String name, String id) {
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("shop_name", name);
+		map.put("shop_master", name);
 		map.put("shop_id", id);
 		String res = ss.selectOne("shop.findpwd", map);
 

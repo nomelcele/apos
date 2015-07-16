@@ -39,6 +39,7 @@
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$(function() {
+		//모달창띄우기~~~~~~~~~~~~~~~~
 		$('#hotkey').click(function() {
 			$('#modal2').modal('hide');
 			$('#modal3').modal('show');
@@ -53,6 +54,7 @@
 		$('#bonmodal').click(function() {
 			$('#modal1').modal('show');
 	});
+		//////////////////////////////////
 		
 		//본사회원가입 아이디중복체크
 		$('#bon_id').keyup(function(){
@@ -115,26 +117,23 @@
 			$('#findidform').show();
 			$('#findpwdform').hide();
 			// 찾기 버튼 
-			$('#findBtn').click(function(){
+			$('#shidfindBtn').click(function(){
 				$.ajax({
-					url : "sh_findid.jsp?name=" + $('#find_name1').val()+ "&tel1=" + $('#find_tel1').val()+ "&tel2=" + $('#find_tel2').val()+ "&tel3=" + $('#find_tel3').val()
-					+"&radio="+$(':radio[name="radio"]:checked').val(),
+					url : "findid_sh",
 					type : "POST",
-					dataType : "html",
-					success : function(res) {
+					data : {
+						email : $('#find_email1').val(),
+						name : $('#find_name1').val(),
+						tel : $('#find_tel1').val()+"-"+$('#find_tel2').val()+"-"+$('#find_tel3').val()
+						
+					},
+					success : function(data) {
 						// 실패 했을 때
-						if (res.trim() == "") {
+						if (data.trim() == 'false') {
 							alert("아이디와 비밀번호 확인하세요.");
 						} else {
 							alert("입력하신 E-mail로  ID가 전송되었습니다.");
-							$.ajax({
-									url : "*.apos?cmd=mailSelect&subcmd=findid&mail=" +$('#find_email1').val()+"&name="+$('#find_name1').val()+ "&tel2=" + "&id="+res.trim(),
-									type : "POST",
-									dataType : "html",
-									success : function() {
-									}
-								});
-							$('#findidform').submit();
+							$('#find_modal').modal('hide');
 						}
 					}
 				});
@@ -145,25 +144,23 @@
 			$('#findpwdform').show();
 			$('#findidform').hide();
 			// 찾기 버튼 
-			$('#findBtn').click(function(){
+			$('#shpwdfindBtn').click(function(){
 				$.ajax({
-					url : "sh_findpwd.jsp?name="+$('#find_name2').val()+"&id=" + $('#find_id').val()+"&radio="+$(':radio[name="radio"]:checked').val(),
+					url : "findpwd_sh",
 					type : "POST",
-					dataType : "html",
-					success : function(res) {
+					data : {
+						name : $('#find_name2').val(),
+						id : $('#find_id').val(),
+						email : $('#find_email2').val()
+					},
+					success : function(data) {
 						// res는 pwd
-						if (res.trim()=="") {
+						
+						if (data.trim()=="false") {
 							alert("입력한 정보가 없습니다.");
 						} else {
 							alert("입력하신 E-mail로  PWD가 전송되었습니다.");
-							$.ajax({
-								url : "*.apos?cmd=mailSelect&subcmd=findpwd&mail="+$('#find_email2').val()+"&name="+$('#find_name2').val()+"&pwd="+res.trim(),
-								type : "POST",
-								dataType : "html",
-								success : function() {
-								}
-							});
-							$('#findpwdform').submit();
+							$('#find_modal').modal('hide');
 						}
 					}
 				});
@@ -399,14 +396,9 @@
 				<!-- body -->
 					<input type="radio" id="findid" name="radioIDPWD" value="findid" > ID &nbsp;
 					<input type="radio" id="findpwd" name="radioIDPWD" value="findpwd" > PWD
-					&nbsp;<span> // </span>&nbsp;
-					<input type="radio" id="findMaster" name="radio" value="master" > Master &nbsp;
-					<input type="radio" id="findStaff" name="radio" value="staff" > Staff
 					<%-- ID 찾기 --%>
 					<form method="post" action="*.apos" name="findidform" id="findidform" autocomplete="off" style="display: none">
-					<input type="hidden" name="cmd" value="sjoin">
-					<input type="hidden" name="subcmd" value="findId">
-						<div class="modal-body2" ><span style="display: block;">E-mail</span>
+					<div class="modal-body2" ><span style="display: block;">E-mail</span>
 								<input class="form-control" id="find_email1" name="find_email1" type="email"  required />
 						</div>
 										 	
@@ -423,6 +415,7 @@
                              <input style="width: 20%" class="form-control" id="find_tel2" name="find_tel2" maxlength="4" type="tel" required />-
                              <input style="width: 20%" class="form-control" id="find_tel3" name="find_tel3" maxlength="4" type="tel" required />
 						</div>
+						<input type="button" id="shidfindBtn" class="btn btn-default" value="찾기">
 						<div id="findid_res"></div>
 					</form>
 
@@ -441,12 +434,13 @@
 						<div class="modal-body2"><span style="display: block">성 명 :</span>
 							<input class="form-control" id="find_name2" name="find_name2" type="text" required />
 						</div>
+						<input type="button" id="shpwdfindBtn" class="btn btn-default" value="찾기">
 						<div id="findid_res"></div>
 					</form>
 					
 						<!-- Footer -->
 						<div class="modal-footer" >
-							<input type="button" id="findBtn" class="btn btn-default" value="찾기">
+							
 						</div>
 				</div>
 			</div>
