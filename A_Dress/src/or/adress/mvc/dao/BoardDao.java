@@ -81,4 +81,5 @@ public class BoardDao {
 		map.put("bo_sub", bo_sub);
 		ss.update("notice.notice_salecancel",map);
 	}
+	
 }
