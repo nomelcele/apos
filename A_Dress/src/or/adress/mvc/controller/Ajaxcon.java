@@ -1018,6 +1018,7 @@ public class Ajaxcon {
 				return mav;
 			}
 			
+			
 			//본사 추천 - 상품 추천 - 맴버 찾기
 			@RequestMapping(value="bon_precommandsearchmem")
 			public ModelAndView bon_precommandsearchmem(String pro_code){
@@ -1041,10 +1042,10 @@ public class Ajaxcon {
 					
 					
 					res.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" ");
-					res.append("href=\"javascript:pro_chk('");
+					res.append("href=\"javascript:pro_chkmail('");
 						
 					res.append(vo.getMem_email()).append(
-							"', '" + vo.getMem_num() + "')\">");
+							"', '" + vo.getMem_name() + "')\">");
 					res.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");res.append("</tr>");
 			
 					
@@ -1053,7 +1054,76 @@ public class Ajaxcon {
 				
 				return mav;
 			}
-			
+			@RequestMapping(value = "/bon_precommandsearchmail")
+			public void bon_precommandsearchmail(String mail, String name, String res,String img) {
+				
+//				
+					System.out.println("--------여기는 YES 메일 보내는 곳--------");
+					System.out.println("MAIL : "+mail);
+					System.out.println("NAME : "+name);
+					System.out.println("HOTKEY : "+res);
+					
+					String host = "smtp.naver.com";
+			        final String username = "ama949@naver.com"; // 보내는 사람 네이버  ID
+			        final String password = "skdltm11a"; // 비밀번호
+			        int port=465;
+			        String m = "Yes";
+			        // 메일 내용
+			        String recipient = mail; // 받는 사람 E-Mail
+			        String subject = "ADRESS-맞춤  추천";
+			        String body = "<h1>"+name+"님" + "안녕하세요~"+"</h1>"+"<h3>"+res+"</h3>"
+			        		;
+			      
+			        
+			        Properties props = System.getProperties();
+			         
+			         
+			        props.put("mail.smtp.host", host);
+			        props.put("mail.smtp.port", port);
+			        props.put("mail.smtp.auth", "true");
+			        props.put("mail.smtp.ssl.enable", "true");
+			        props.put("mail.smtp.starttls.enable","true");  
+			        props.put("mail.smtp.ssl.trust", host);
+			          
+			        Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+			            String un=username;
+			            String pw=password;
+			            protected PasswordAuthentication getPasswordAuthentication() {
+			                return new PasswordAuthentication(un, pw);
+			            }
+			        });
+			        session.setDebug(true); //for debug
+		         
+			        Message msg = new MimeMessage(session);
+			        try {
+						msg.setFrom(new InternetAddress(username));
+						msg.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+						msg.setSubject(subject);
+						msg.setSentDate(new Date());
+						// 파일 첨부시에는 BodyPart를 사용
+						// msg.setText(body);
+						
+						// 파일첨부를 위한 Multipart
+						Multipart multipart = new MimeMultipart();
+						
+						// BodyPart를 생성
+						BodyPart bodyPart = new MimeBodyPart();
+						bodyPart.setText(body);
+						bodyPart.setContent("<h1>"+name+"\"님" + "안녕하세요~"+"</h1>"+"<h3>"+res+"</h3>"
+				        		+
+					      "<img src='http://localhost/A_Dress/product/"+img+"' style=\"width: 100px;\">", "text/html; charset=EUC-KR");
+						
+						// 1. Multipart에 BodyPart를 붙인다.
+						multipart.addBodyPart(bodyPart);
+						// 이메일 메시지의 내용에 Multipart를 붙인다.
+						msg.setContent(multipart);
+					
+						Transport.send(msg);
+					} catch (MessagingException e) {
+						e.printStackTrace();
+					}
+				
+			}
 			
 			
 		
