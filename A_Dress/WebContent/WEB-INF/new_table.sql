@@ -172,7 +172,7 @@ bo_hit number(10),
 bo_bonnum number(10),
 bo_calennum number(10),
 constraint board_bo_bonnum_fk foreign key(bo_bonnum)
-references bonsa(bon_num) on delete cascade;
+references bonsa(bon_num) on delete cascade);
 ---------------------------------------------------------------
 create table comm(
 comm_num number(10) constraint comm_comm_num_pk primary key,
