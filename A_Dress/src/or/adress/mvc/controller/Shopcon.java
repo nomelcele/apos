@@ -356,7 +356,7 @@ public class Shopcon {
 			int shop_num =(int) session.getAttribute("shop_num");
 			System.out.println(shop_num);
 			mav.setViewName("shop/sh_workData");
-			List<StaffVO> list = staffdao.gettotalList();
+			List<StaffVO> list = staffdao.get_list(shop_num);
 			mav.addObject("list", list);
 			return mav;
 		}
