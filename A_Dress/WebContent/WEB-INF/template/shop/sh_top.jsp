@@ -70,7 +70,7 @@ document.getElementById("profilechange").submit();
                <li id="mail_notificatoin_bar" class="dropdown"><a
                   data-toggle="dropdown" class="dropdown-toggle" href="#"> <i
                      class="icon-envelope-l"></i> <span class="badge bg-important"><img
-                        src="resources/img/bg-86.JPG"></span>
+                        src="resources/img/gggwww.JPG"></span>
                </a>
 
                   <ul class="dropdown-menu extended inbox">
@@ -164,7 +164,7 @@ document.getElementById("profilechange").submit();
                <!-- user login dropdown start-->
                <li class="dropdown"><a data-toggle="dropdown"
                   class="dropdown-toggle" href="#"> <span class="profile-ava">
-                        <img alt="" src="resources/img/dress1.JPG" align="center">
+                        <img alt="" src="resources/img/ee.JPG" align="center">
                   </span> <span class="form-control" id="master_span"
                      style="color: black;">
                         [${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님
@@ -176,7 +176,7 @@ document.getElementById("profilechange").submit();
                   <ul class="dropdown-menu extended logout">
                      <div class="log-arrow-up"></div>
                      <li class="eborder-top"><a href="javascript:profilecha()">
-                     <i class="icon_profile"></i> My Profile</a></li>
+                     <i class="icon_profile"></i> Shop Information</a></li>
                    
                      <li><a href="j_spring_security_logout">
                      <i class="icon_key_alt"></i> Log Out</a></li>
