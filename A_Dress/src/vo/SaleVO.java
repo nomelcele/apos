@@ -3,6 +3,15 @@ package vo;
 public class SaleVO {
 	private String set_pro_code, set_pro_salerate, sale_begin, sale_end;
 	private String sale_writer, sale_sub, sale_content;
+	private int  sale_calennum;
+	
+	public int getSale_calennum() {
+		return sale_calennum;
+	}
+
+	public void setSale_calennum(int sale_calennum) {
+		this.sale_calennum = sale_calennum;
+	}
 
 	public String getSet_pro_code() {
 		return set_pro_code;
