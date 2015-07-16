@@ -3,9 +3,22 @@ package or.adress.mvc.controller;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.Properties;
 
+import javax.mail.BodyPart;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Multipart;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -14,6 +27,7 @@ import javax.servlet.http.Part;
 import or.adress.mvc.dao.BonsaDao;
 import or.adress.mvc.dao.LogTimeDao;
 import or.adress.mvc.dao.ShopDao;
+import or.adress.mvc.dao.StaffDao;
 import or.adress.mvc.service.LoginService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +36,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+
 
 
 
@@ -52,6 +68,8 @@ public class Logincon {
 	private LogTimeDao ldao;
 	@Autowired
 	private ShopDao sdao;
+	@Autowired
+	private StaffDao stdao;
 	@Autowired
 	private LoginService lservice;
 	
@@ -213,6 +231,58 @@ public class Logincon {
 		return mav;
 	}
 	
+	//아이디찾기
+	@RequestMapping(value="findid_sh", method=RequestMethod.POST)
+	public ModelAndView findid_sh(String email, String name, String tel){
+		System.out.println("-----------SHOP_findid.jsp---------");
+		System.out.println("Request NAME : " + name);
+		System.out.println("Request TEL : " + tel);
+		String id= null;
+		
+			System.out.println("MASTER FIND ID");
+			id = sdao.findid(name, tel);
+			
+		System.out.println("아이디는 "+id);
+		String chk = "false";
+		if(id == null){
+			System.out.println("실패확인");
+			chk="false";
+		}else{
+			chk="true";
+			String subject = "APOS - ID 찾기 결과입니다.";
+	        String body = "\""+name+"\"님의" +"\n\r"+"ID는 : "+id+"\n\r"+"감사합니다";
+	        mail(email, name, id, subject, body);
+		}
+		ModelAndView mav = new ModelAndView("ajax/sh_findid");
+		mav.addObject("data", chk);
+		return mav;
+	}
+	
+	@RequestMapping(value="findpwd_sh", method=RequestMethod.POST)
+	public ModelAndView findpwd_sh(String name, String id, String email){
+		
+		
+		System.out.println("-----------SHOP_findpwd.jsp---------");
+		System.out.println("Request NAME : " + name);
+		System.out.println("Request ID : " + id);
+		String res= null;
+		String chk = "false";
+		res = sdao.findpwd(name, id);
+		System.out.println(res);
+		if(res == null){
+			System.out.println("실패확인");
+			chk = "false";
+		}else{
+			chk = "true";
+			String subject = "APOS - PWD 찾기 결과입니다.";
+	        String body = "\""+name+"\"님의" +"\n\r"+"PWD는 : "+res+"\n\r"+"감사합니다";
+			mail(email, name, id, subject, body);
+			System.out.println("Request RES : " + res);
+		}
+		ModelAndView mav = new ModelAndView("ajax/sh_findid");
+		mav.addObject("data", chk);
+		return mav;
+	}
 	
 	
 		
@@ -289,5 +359,74 @@ public class Logincon {
 		return "login/login_hotkey";
 	}
 	
+	
+	
+	
+	//메일발송메서드
+	public void mail(String mail, String name, String id, String subject, String body){
+		// 메일 관련 정보
+		
+		
+		System.out.println("--------여기는 FIND ID 메일 보내는 곳--------");
+		System.out.println("MAIL : "+mail);
+		System.out.println("NAME : "+name);
+		System.out.println("ID : "+id);
+		
+		String host = "smtp.naver.com";
+        final String username = "ama949@naver.com"; // 보내는 사람 네이버  ID
+        final String password = "skdltm11a"; // 비밀번호
+        int port=465;
+         
+        // 메일 내용
+        String recipient = mail; // 받는 사람 E-Mail
+        //String subject = "APOS - ID 찾기 결과입니다.";
+        //String body = "\""+name+"\"님의" +"\n\r"+"ID는 : "+id+"\n\r"+"감사합니다";
+         
+        Properties props = System.getProperties();
+         
+         
+        props.put("mail.smtp.host", host);
+        props.put("mail.smtp.port", port);
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.ssl.enable", "true");
+        props.put("mail.smtp.starttls.enable","true");  
+        props.put("mail.smtp.ssl.trust", host);
+          
+        Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
+            String un=username;
+            String pw=password;
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(un, pw);
+            }
+        });
+        session.setDebug(true); //for debug
+          
+        Message msg = new MimeMessage(session);
+        try {
+			msg.setFrom(new InternetAddress(username));
+			msg.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+			msg.setSubject(subject);
+			msg.setSentDate(new Date());
+			// 파일 첨부시에는 BodyPart를 사용
+			// msg.setText(body);
+			
+			// 파일첨부를 위한 Multipart
+			Multipart multipart = new MimeMultipart();
+			
+			// BodyPart를 생성
+			BodyPart bodyPart = new MimeBodyPart();
+			bodyPart.setText(body);
+			
+			// 1. Multipart에 BodyPart를 붙인다.
+			multipart.addBodyPart(bodyPart);
+			
+			// 이메일 메시지의 내용에 Multipart를 붙인다.
+			msg.setContent(multipart);
+			Transport.send(msg);
+		} catch (MessagingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 }
