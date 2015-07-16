@@ -16,3 +16,5 @@ drop table stockreq cascade constraint;
 drop table calendar cascade constraint;
 drop table login cascade constraint;
 drop table grade cascade constraint;
+drop table workpay cascade constraint;
+
