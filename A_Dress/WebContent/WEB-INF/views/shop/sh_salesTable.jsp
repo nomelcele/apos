@@ -9,11 +9,10 @@
 <script>
 	var shop_num = "${sessionScope.shop_num}";
 	$(function() {
-
 		$('#btn_out2')
 				.click(
 						function() {
-
+						
 							if ($('#date_ps').val() != "") {
 								$
 										.ajax({
@@ -37,7 +36,7 @@
 						})
 			
 		
-	})
+	});
 	
 	function exceldown(){
 		$('#shop_num').val(shop_num);
