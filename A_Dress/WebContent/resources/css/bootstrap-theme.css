@@ -435,7 +435,7 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 20px;
 }
 h4,
 .h4 {
@@ -1301,6 +1301,7 @@ th {
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
+  font-weight:normal;
 }
 .table thead > tr > th {
   vertical-align: bottom;
