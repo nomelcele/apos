@@ -168,15 +168,7 @@ public class Shopcon {
 		return mav;
 	}
 
-	// 업무관리 - 급여
-	@RequestMapping(value = "/ssh_workData")
-	public ModelAndView sh_workData() {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("shop/sh_workData");
-		List<StaffVO> list = staffdao.gettotalList();
-		mav.addObject("list", list);
-		return mav;
-	}
+	
 
 	// 업무관리 - 연락처- 연락서 검색
 	@RequestMapping(value = "/sh_workTelSearch", method = RequestMethod.POST)
@@ -347,6 +339,18 @@ public class Shopcon {
 		mav.setViewName("shop/sh_salesRank");
 		return mav;
 	}
+	
+	// 업무관리 - 급여
+		@RequestMapping(value = "/ssh_workData")
+		public ModelAndView sh_workData(HttpSession session) {
+			ModelAndView mav = new ModelAndView();
+			int shop_num =(int) session.getAttribute("shop_num");
+			System.out.println(shop_num);
+			mav.setViewName("shop/sh_workData");
+			List<StaffVO> list = staffdao.gettotalList();
+			mav.addObject("list", list);
+			return mav;
+		}
 
 	// 페이징 처리 전용 매서드
 	private PageVO pageProcess(int page, int no, int etc) {
