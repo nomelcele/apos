@@ -42,10 +42,25 @@ public class StaffDao { // 서경연
 			String res = ss.selectOne("staff.find_pwd",vo);
 			return res;
 		}
-		// 정산관리 급여
+		// 정산관리 출결
 		public List<StaffVO> get_list(int shop_num){
 			return ss.selectList("staff.get_stafflist", shop_num);
 			
 		}
-		
+		// 출결 ajxa
+		public int get_login(int staff_num){
+			return ss.selectOne("staff.get_login",staff_num);
+		}
+		// 출결 인설트
+		public void insert_login(int work_staffnum){
+			ss.insert("staff.insert_login", work_staffnum);
+		}
+		// 출결 시간 가져오는 셀렉트
+		public String get_logintime(int work_staffnum){
+			return ss.selectOne("staff.get_logintime", work_staffnum);
+		}
+		//출결 퇴근 시간 업데이트
+		public void set_logout(int work_staffnum){
+			 ss.update("staff.set_logout",work_staffnum);
+		}
 }

@@ -4,24 +4,53 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 매장의업무관리- 급여페이지입니다. -->
 <script>
- function telaction(num, name){
-	 alert(num+name);
-	  $.ajax({
-         url : "sh_ajax_outletsale"
-              ,
-         type : "post",
-         data : {staff_num : num,
-        	 	 staff_name : name } ,
-         success : function(data) {
-            //alert(data);
-            str = data.trim();
-            document
-                  .getElementById("view_product").innerHTML = str;
-         }
+	function worklogin(num, name) {
+		alert(num + name);
+		$.ajax({
+			url : "sh_ajax_sh_workData",
+			type : "post",
+			data : {
+				staff_num : num,
+				staff_name : name
+			},
+			success : function(data) {
 
-      });
+				str = data.trim();
+				if (str == 0) {
+					alert("출근 처리 되었습니다.");
+				} else if (str == -1) {
+					alert("중복 출근 error입니다. ")
+				} else {
+					alert("이미" + str + "에 출근처리 했습니다");
+				}
+			}
 
- }
+		});
+	}
+	function worklogout(num) {
+		alert(num);
+					$.ajax({
+						url : "sh_ajax_sh_workDataend",
+						type : "post",
+						data : {
+							staff_num : num,
+							staff_name : name
+						},
+						success : function(data) {
+
+							str = data.trim();
+							if(str==0){
+								alert("출근 처리를 먼저하세요")
+							}else if(str==-1){
+							 	alert("중복 출근 error입니다. ")
+							}else{
+								alert("퇴근 처리 되었습니다.");
+							}
+						}
+
+					});
+
+	}
 </script>
 <section id="main-content">
 	<section class="wrapper">
@@ -62,14 +91,20 @@
 													<td>${sList.staff_name}</td>
 													<td>${sList.staff_tel }</td>
 													<td>
-											<button type="button" id="btn"
-											onclick="javascript:telaction('${sList.staff_num}','${sList.staff_name}')" class="btn btn-primary">확인</button>
-											</td>
+														<button type="button" id="btn"
+															onclick="javascript:worklogin('${sList.staff_num}','${sList.staff_name}')"
+															class="btn btn-primary">출근</button>
+														<button type="button" id="btn"
+															onclick="javascript:worklogout('${sList.staff_num}')"
+															class="btn btn-primary">퇴근</button>
+													</td>
 												</tr>
 											</c:forEach>
 										</tbody>
 
 									</table>
+
+									
 
 								</div>
 							</section>

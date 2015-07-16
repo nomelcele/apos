@@ -30,6 +30,7 @@ import or.adress.mvc.dao.ProductDao;
 import or.adress.mvc.dao.SalesCheckDao;
 import or.adress.mvc.dao.ShopDao;
 import or.adress.mvc.dao.SmangDao;
+import or.adress.mvc.dao.StaffDao;
 import or.adress.mvc.service.BonsaService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +48,7 @@ import vo.SalesCheckVO;
 import vo.ShopHotkeyVO;
 import vo.ShopVO;
 import vo.SmangVO;
+import vo.StaffVO;
 
 @Controller
 public class Ajaxcon {
@@ -66,6 +68,8 @@ public class Ajaxcon {
 	private BonsaService bservice;
 	@Autowired
 	private MemberDao memdao;
+	@Autowired
+	private StaffDao sfdao;
 
 	// 성별 물건 검색 ajax
 	@RequestMapping(value = "sh_AjaxProductSearch")
@@ -1125,6 +1129,43 @@ public class Ajaxcon {
 				
 			}
 			
-			
+			// 출결 출근
+			@RequestMapping(value="sh_ajax_sh_workData")
+			public ModelAndView sh_ajax_sh_workData(int staff_num, String staff_name){
+				int login = sfdao.get_login(staff_num);
+				int work_staffnum= staff_num;
+				String login_time="-1";
+				if(login==0){
+					login_time="0";
+					sfdao.insert_login(work_staffnum);
+				} else if(login == 1){
+					login_time = sfdao.get_logintime(work_staffnum);
+					System.out.println();
+				}
+				
+				ModelAndView mav = new ModelAndView();
+				mav.setViewName("ajax/sh_ajax_sh_workData");
+				mav.addObject("res", login_time);
+				return mav;
+			}
+			//출결 퇴근
+			@RequestMapping(value="sh_ajax_sh_workDataend")
+			public ModelAndView sh_ajax_sh_workDataend(int staff_num){
+				ModelAndView mav= new ModelAndView();
+				int login = sfdao.get_login(staff_num);
+				int work_staffnum= staff_num;
+				String login_time="-1";
+				if(login==0){
+					login_time="0";
+					
+				} else if(login == 1){
+					sfdao.set_logout(work_staffnum);
+					login_time="1";
+				}
+				mav.setViewName("ajax/sh_ajax_sh_workData");
+				mav.addObject("res", login_time);
+				return mav;
+				
+			}
 		
 }
