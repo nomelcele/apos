@@ -415,7 +415,7 @@ public class Ajaxcon {
 
 	// 샵 회원가입 (ajax)
 	@RequestMapping(value = "/NCRHOTcheck", method = RequestMethod.POST)
-	public ModelAndView sh_NCRHOTcheck(String email, int crnum, int hotkey) {
+	public ModelAndView NCRHOTcheck(String email, int crnum, int hotkey) {
 		System.out.println("핫키체크이후");
 		List<ShopHotkeyVO> list = shdao.checkhotcrnumname(crnum);
 		System.out.println("Request Email : " + email);
@@ -442,7 +442,7 @@ public class Ajaxcon {
 	}
 
 	// 아이디중복체크
-	@RequestMapping(value = "/sh_shopjoincheck")
+	@RequestMapping(value = "/shopjoincheck")
 	public ModelAndView sh_shopjoincheck(String id) {
 		ModelAndView mav = new ModelAndView("ajax/sh_shopjoincheck");
 		System.out.println(id);

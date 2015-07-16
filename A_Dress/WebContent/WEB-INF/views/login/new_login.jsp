@@ -90,7 +90,7 @@
                    data : {
                 	   email : $('#email').val(),
                 	   crnum : $('#crnum').val(),
-                	   hotkey : $('#hotkey').val()
+                	   hotkey : $('#hotkey2').val()
                    },
                    success: function(data) {
                     if(data.trim() == "true"){
@@ -189,7 +189,7 @@
 			
 				<!-- body -->
 									
-				<form method="post" action="bon_sawonjoin" name="bon_joinForm" id="bon_joinForm" autocomplete="off">
+				<form method="post" action="sawonjoin" name="bon_joinForm" id="bon_joinForm" autocomplete="off">
 				
 						<%-- ID 입력 --%>
 						<div class="modal-body2" ><span style="display: block;">아이디 :</span>
@@ -333,7 +333,7 @@
 							사업자 번호:<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="crnum"  autofocus>
 						</div>
 						<div class="modal-body2">
-							HotKey:<input type="text" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
+							HotKey:<input type="text" class="form-control4 block" id="hotkey2" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
 						<div id="target"></div>
 						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>

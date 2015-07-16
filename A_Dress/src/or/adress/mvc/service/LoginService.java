@@ -36,7 +36,9 @@ public class LoginService {
 			private Integer[] chk22 = {25,27,29};
 			private Integer[] chk33 = {6,7,8};
 			
-	public void shopjoinservice(ShopVO vo){
+	public void shopjoinservice(ShopVO vo, JoinVO jvo){
+		ldao.grade(jvo);
+		ldao.login(jvo);
 		sdao.shopjoin(vo);
 		int shop_num = pdao.get_last_shopnum();
 			List<String> pro_num_list = pdao.get_productnumlist();
