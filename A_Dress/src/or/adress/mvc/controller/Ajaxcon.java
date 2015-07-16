@@ -1009,7 +1009,7 @@ public class Ajaxcon {
 								.append(vo.getPro_num()).append("', '");
 						res.append(vo.getPro_code()).append("', '");
 						res.append(vo.getPro_name()).append(
-								"', '" + vo.getPro_price() + "')\">");
+								"', '" + vo.getPro_price()+"', '" + vo.getPro_img() + "')\">");
 						res.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");res.append("</tr>");
 				}
 				String str = res.toString();
