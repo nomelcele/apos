@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <script>
-//상품 정보 가져오기
+	//상품 정보 가져오기
+	var pre_img;
 	function productcheckaction() {
 
 		$.ajax({
@@ -16,15 +17,16 @@
 		});
 	}
 	// 가져온 상품 정보 입력
-	function pro_chk(pro_num, pro_code, pro_name, pro_price) {
+	function pro_chk(pro_num, pro_code, pro_name, pro_price, pro_img) {
 		$('#pre_pro_num').val(pro_num);
 		$('#pre_pro_code').val(pro_code);
 		$('#pre_pro_name').val(pro_name);
+		$('#pre_pro_img').html("<img src='product/"+pro_img+"' style=\"width: 100px;\">");
 		$('#pre_pro_price').val(pro_price);
-
+		pre_img=pro_img;
 	}
 	//상품 코드에 맞는 고객 찾기 
-	function bon_searchmem(){
+	function bon_searchmem() {
 		$.ajax({
 			url : "bon_precommandsearchmem",
 			type : "POST",
@@ -35,6 +37,23 @@
 				$("#mpdtarget").html(data);
 			}
 		});
+	}
+	
+	function pro_chkmail(mail,name){
+		var res;
+		res = "상품 이름 :"+$('#pre_pro_name').val()+"\n\r"
+		+"상품 가격 :"+$('#pre_pro_price').val()+"\n\r";
+		$.ajax({
+			url : "bon_precommandsearchmail",
+			type : "POST",
+			data : {
+				mail: mail, name:name, res:res,img:pre_img
+			},
+			success : function(data) {
+				
+			}
+		});
+		
 	}
 </script>
 <!-- 본사 상품관리 - 상품세일 -->
@@ -100,6 +119,7 @@
 										<th>상품번호</th>
 										<th>상품이름</th>
 										<th>상품 코드</th>
+										<th>상품 사진</th>
 										<th>상품 가격</th>
 										<th>추천</th>
 									</tr>
@@ -115,15 +135,17 @@
 										<td><input id="pre_pro_code" name="pre_pro_code"
 											class="form-control" autocomplete="off" type="text"
 											readonly="readonly" /></td>
+										<td><div id="pre_pro_img"></div></td>
 										<td><input id="pre_pro_price" name="pre_pro_price"
 											autocomplete="off" type="text" readonly="readonly"
 											class="form-control" /></td>
+											
 										<td rowspan="2"><div class="btn-group">
 												<a class="btn btn-success" href="javascript:bon_searchmem()"><i
 													class="icon_check_alt2"></i></a>
 											</div></td>
 									</tr>
-								
+
 
 
 								</tbody>
@@ -133,7 +155,7 @@
 									<tr>
 										<th>고객 번호</th>
 										<th>고객 이름</th>
-										<th>고객  E-mail</th>
+										<th>고객 E-mail</th>
 										<th>고객 전화번호</th>
 										<th>추천</th>
 									</tr>
