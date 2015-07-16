@@ -4,6 +4,41 @@ package vo;
 public class StaffVO {
 	private int staff_num, staff_position, staff_shopnum;
 	private String staff_name, staff_tel, staff_id, staff_pwd,shop_sname;
+	private String work_num,work_login,work_logout,work_staffnum,work_flag;
+	
+	
+	
+	
+	public String getWork_num() {
+		return work_num;
+	}
+	public void setWork_num(String work_num) {
+		this.work_num = work_num;
+	}
+	public String getWork_login() {
+		return work_login;
+	}
+	public void setWork_login(String work_login) {
+		this.work_login = work_login;
+	}
+	public String getWork_logout() {
+		return work_logout;
+	}
+	public void setWork_logout(String work_logout) {
+		this.work_logout = work_logout;
+	}
+	public String getWork_staffnum() {
+		return work_staffnum;
+	}
+	public void setWork_staffnum(String work_staffnum) {
+		this.work_staffnum = work_staffnum;
+	}
+	public String getWork_flag() {
+		return work_flag;
+	}
+	public void setWork_flag(String work_flag) {
+		this.work_flag = work_flag;
+	}
 	public String getShop_sname() {
 		return shop_sname;
 	}
