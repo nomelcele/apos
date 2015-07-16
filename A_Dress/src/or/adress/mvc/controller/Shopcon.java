@@ -58,7 +58,16 @@ public class Shopcon {
 		stdao.Stockreq(vo);
 		return sh_productStock();
 	}
+	//productchage
+		@RequestMapping(value="/sh_profilecha", method=RequestMethod.POST)
+		    public ModelAndView profilecha(){
+			ModelAndView mav = new ModelAndView();
+			mav.setViewName("shop/sh_smasterDetail");
+			return mav;
+		}
+		
 
+	
 	// addobject는 list, db에서 값을 불러와 view로 보여줄때 !
 
 	@RequestMapping(value = "/sh_index")
