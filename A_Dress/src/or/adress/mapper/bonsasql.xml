@@ -65,6 +65,10 @@
 	<select id="getprocode_calendar" parameterType="int" resultType="String">
 		select calen_procode from calendar where calen_num = #{calen_num} 
 	</select>
+	<!-- procode를 이용한 calen_num을 얻어오기위한 작업 -->
+	<select id="getcalennum_calendar" parameterType="String" resultType="int">
+		select calen_num from calendar where calen_procode = #{set_pro_code} 
+	</select>
 </mapper>
 
 
