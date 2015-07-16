@@ -236,7 +236,7 @@
 
 	<!-- 샵-핫키,가입 선택모달 -->
 	<div id="modal2" class="modal fade">
-		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
+		<div class="modal-dialog" style="width: 400px; height:auto; text-align: center;">
 			<div class="modal-content">
 				<!-- header -->
 				<div class="modal-header">
@@ -253,11 +253,11 @@
 						
 						
 						<div class="modal-body2">
-							HotKey:<input type="button" value="hotkey" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
+							<input type="button" value="hotkey" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
 						
 						<div class="modal-body2">
-							Join:<input type="button" value="join" class="form-control4 block" id="join" name="join" placeholder="hotkey" autofocus>
+						<input type="button" value="join" class="form-control4 block" id="join" name="join" placeholder="hotkey" autofocus>
 						</div>
 						
 						
