@@ -29,6 +29,10 @@ private String shop_sname,shop_sposition,shop_stel,shop_name; -->
  	<select id="find_pwd" parameterType="staffvo" resultType="String">
  		select staff_pwd from staff where staff_name=#{staff_name} and staff_id=#{staff_id}
  	</select>
+ 	<!-- 급여 스탭테이블 가져오기 -->
+ 	<select id="get_stafflist" parameterType="int" resultType="staffvo">
+ 		select staff_name,staff_tel,staff_num from staff where staff_shopnum=#{shop_num}
+ 	</select>
  </mapper>
  
  
