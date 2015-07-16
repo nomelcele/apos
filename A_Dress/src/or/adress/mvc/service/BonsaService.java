@@ -25,6 +25,7 @@ public class BonsaService {
 	@Autowired
 	private BonsaDao bondao;
 	
+	
 	//프로퍼티지?
 	private Integer[] chk11 = {95,100,105};
 	private Integer[] chk12 = {28,30,32};
@@ -76,9 +77,14 @@ public class BonsaService {
 	}
 	
 	public void acceptsalerate(SaleVO vo){
+		bondao.insert_salecalendar(vo);
+		// 공지사항에 입력을 해야되는데.... 필요한거는 calen_num을 집어 넣어야되는데
+		// pro_code를 이용하여서  calen_num을 구해야된다.
+		int calen_num =bondao.get_calen_num(vo.getSet_pro_code());
+		vo.setSale_calennum(calen_num);
 		pdao.acceptsalerate(vo);
 		bdao.insertSale(vo);
-		bondao.insert_salecalendar(vo);
+		
 	}
 	// 달력 일정 삭제(세일기간, 공지사항)
 	public void bon_deletecalendar(CalendarVO vo){
