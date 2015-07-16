@@ -169,7 +169,7 @@ public class Shopcon {
 	}
 
 	// 업무관리 - 급여
-	@RequestMapping(value = "/sh_workData")
+	@RequestMapping(value = "/ssh_workData")
 	public ModelAndView sh_workData() {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("shop/sh_workData");
