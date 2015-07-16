@@ -15,6 +15,7 @@ drop sequence staff_seq;
 drop sequence stockreq_seq;
 drop sequence sroot_seq;
 drop sequence calendar_seq;
+drop SEQUENCE workpay_seq;
 
 -- 테이블 시퀀스 모음
 Create sequence bonsa_seq
@@ -68,3 +69,8 @@ start with 1;
 create sequence calendar_seq
 increment by 1
 start with 1;
+----------------------------------------
+ create SEQUENCE workpay_seq
+ increment by 1 start with 1;
+ ---------------------------------------
+ 
