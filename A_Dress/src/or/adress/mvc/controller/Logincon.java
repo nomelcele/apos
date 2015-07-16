@@ -134,8 +134,8 @@ public class Logincon {
 	}
 	
 	//샵 회원가입 insert
-	@RequestMapping(value="/sh_shopinsert", method=RequestMethod.POST)
-	public ModelAndView sh_shopinsert(@ModelAttribute ShopVO vo, HttpSession session){
+	@RequestMapping(value="/shopinsert", method=RequestMethod.POST)
+	public String sh_shopinsert(@ModelAttribute ShopVO vo, HttpSession session){
 		System.out.println("확인");
 		// 매장 회원 가입- DB에 저장
 					String path = 
@@ -151,9 +151,15 @@ public class Logincon {
 							e.printStackTrace();
 					}
 					vo.setShop_img(vo.getSelfimg().getOriginalFilename());
-					lservice.shopjoinservice(vo);
-		ModelAndView mav = new ModelAndView("login/sh_login");
-		return mav;
+					String username = "sh_"+vo.getShop_id();
+					vo.setShop_id(username);
+					JoinVO jvo = new JoinVO();
+					jvo.setUsername(username);
+					jvo.setPassword(vo.getShop_pwd());
+					jvo.setRole("shop");
+					lservice.shopjoinservice(vo, jvo);
+		
+		return login();
 	}
 	
 	
@@ -224,7 +230,7 @@ public class Logincon {
 	}
 	
 	// 본사 - 사원 가입
-	@RequestMapping(value="/bon_sawonjoin", method=RequestMethod.POST)
+	@RequestMapping(value="/sawonjoin", method=RequestMethod.POST)
 	public String bon_sawonjoin(HttpServletRequest request){
 		
 				// 이름 ,비밀번호, 비밀번호 확인, 성명, 연락처

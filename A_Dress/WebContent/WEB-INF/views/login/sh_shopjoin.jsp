@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 <script>
 	function gojoin() {
-		alert("호출확인");
 		var tel = $('#tel1').val()+"-"+$('#tel2').val()+"-"+$('#tel3').val();
 		$('#shop_tel').val(tel);
 		$('#feedback_form').submit();
@@ -60,7 +59,7 @@
 		
 		// ID 중복체크
 		$('#sid').keyup(function(){
-			$('#targetID').load("sh_shopjoincheck?id="+$('#sid').val());
+			$('#targetID').load("shopjoincheck?id="+$('#sid').val());
 		});
 		
 		$('#spwdchk').keyup(function(){
@@ -93,7 +92,7 @@
                           <div class="panel-body">
                               <div class="form">
                               
-                                  <form class="form-validate form-horizontal" enctype="multipart/form-data" id="feedback_form" method="post" action="sh_shopinsert" autocomplete="off">
+                                  <form class="form-validate form-horizontal" enctype="multipart/form-data" id="feedback_form" method="post" action="shopinsert" autocomplete="off">
                                   <input type="hidden" id="shop_tel" name="shop_tel" value="">
                                   	  <div class="form-group ">
                                           <label for="cSelfImg" class="control-label col-lg-2"> Self_IMG <span class="required">*</span></label>
@@ -115,6 +114,7 @@
                                       <div class="form-group ">
                                           <label for="cId" class="control-label col-lg-2"> ID <span class="required">*</span></label>
                                           <div class="col-lg-10">
+                                          	  <input style="width: 6%; float: left;" class="form-control"  id="sh_" name="sh_"type="text" value="sh_" readonly="readonly" />
                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="sid" name="shop_id" minlength="5" type="text" required />
                                               <div id="targetID"></div>
                                           </div>
