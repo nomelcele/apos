@@ -105,9 +105,9 @@ function telaction(){
 										<thead>
 											<tr>
 												<th>#</th>
-												<th>지점</th>
-												<th>직급</th>
 												<th>이름</th>
+												<th>직급</th>
+												<th>지점</th>
 												<th>연락처</th>
 											</tr>
 										</thead>
