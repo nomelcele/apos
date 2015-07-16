@@ -16,7 +16,7 @@ drop table stockreq cascade constraint;
 drop table calendar cascade constraint;
 drop table login cascade constraint;
 drop table grade cascade constraint;
-
+drop table workpay cascade constraint;
 
 
 create table bonsa(
@@ -228,7 +228,14 @@ CREATE TABLE grade (
   role varchar(20) NOT NULL,
   PRIMARY KEY (username,role)
 );
-
+-------------------------------------------
+CREATE TABLE workpay(
+ work_num number(10) CONSTRAINT work_num_pk PRIMARY key,
+ work_login DATE,
+ work_logout date,
+ work_staffnum number(10),
+ work_flag number(10),
+ CONSTRAINT work_staffnum_fk FOREIGN key (work_num) REFERENCES staff(staff_num)on delete cascade);
 
 
 drop sequence bonsa_seq;
@@ -247,6 +254,7 @@ drop sequence staff_seq;
 drop sequence stockreq_seq;
 drop sequence sroot_seq;
 drop sequence calendar_seq;
+drop SEQUENCE workpay_seq;
 
 -- 테이블 시퀀스 모음
 Create sequence bonsa_seq
@@ -300,11 +308,11 @@ start with 1;
 create sequence calendar_seq
 increment by 1
 start with 1;
-
-
-
-
-
+----------------------------------------
+ create SEQUENCE workpay_seq
+ increment by 1 start with 1;
+ ---------------------------------------
+ 
 
 --bonsa insert 이건 하나만
 insert into bonsa values(
