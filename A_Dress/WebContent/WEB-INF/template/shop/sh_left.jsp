@@ -264,7 +264,7 @@
 					<li><a class="" href="javascript:goUrl('workTel')">✔ 연락처</a></li>
 					<li><a class="" href="javascript:goUrl('calendar')">✔ 일정관리</a></li>
 					<li><a class="" href="javascript:goUrl('videochat')">✔ 화상 회의</a></li>
-					<li><a class="" href="javascript:goUrl('workData')">✔ 급여관리</a></li>
+					
 					
 				</ul></li>
 
@@ -301,8 +301,8 @@
 			</a>
 				<ul class="sub">
 					<li><a class="" href="javascript:goUrl('sh_salesTable')">✔ 판매현황</a></li>
-					<li><a class="" href="javascript:goUrl('rank')"><span>✔ 기간별
-								판매현황</span></a></li>
+					<li><a class="" href="javascript:goUrl('rank')"><span>✔ 기간별 판매현황</span></a></li>
+					<li><a class="" href="javascript:goUrl('workData')">✔ 급여관리</a></li>
 				</ul></li>
 		</ul>
 		<!-- sidebar menu end-->
