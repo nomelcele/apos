@@ -63,8 +63,8 @@ public class StaffDao { // 서경연
 		public void set_logout(int work_staffnum){
 			 ss.update("staff.set_logout",work_staffnum);
 		}
-		// 급여
-		public List<StaffVO> get_pay(int staff_num){
-			return ss.selectList("staff.get_pay",staff_num);
+		// 급여 계산
+		public List<StaffVO> get_pay(HashMap<String, String> map){
+			return ss.selectList("staff.get_pay",map);
 		}
 }

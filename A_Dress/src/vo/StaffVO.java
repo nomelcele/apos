@@ -2,13 +2,19 @@ package vo;
 
 // ÄÃ·³¸í : staff_num, staff_name, staff_position, staff_tel, staff_shopnum, staff_id, staff_pwd
 public class StaffVO {
-	private int staff_num, staff_position, staff_shopnum;
+	private int staff_num, staff_position, staff_shopnum,work_time;
 	private String staff_name, staff_tel, staff_id, staff_pwd,shop_sname;
 	private String work_num,work_login,work_logout,work_staffnum,work_flag;
 	
 	
 	
 	
+	public int getWork_time() {
+		return work_time;
+	}
+	public void setWork_time(int work_time) {
+		this.work_time = work_time;
+	}
 	public String getWork_num() {
 		return work_num;
 	}

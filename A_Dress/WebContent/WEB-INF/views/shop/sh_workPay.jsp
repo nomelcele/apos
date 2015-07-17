@@ -4,8 +4,6 @@
 <!-- 매장 정산관리의 급여 페이지 입니다. -->
 <script src="resources/js/http.js"></script>
 <script src="resources/js/json2.js"></script>
-<script src="resources/js/suggest_shop_pk.js"></script>
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
    var shop_num = "${sessionScope.shop_num}";
    $(function() {
@@ -13,6 +11,7 @@
       $('#btn_out')
             .click(
                   function() {
+                	
                      if ($('#date_ps').val() != ""
                            && $('#date_ps2').val() != "") {
                         if ($('#date_ps').val() <= $('#date_ps2').val()) {
@@ -20,10 +19,10 @@
                            $
                                  .ajax({
                                     url : "sh_ajax_workPay?staff_num="
-                                          + staff_num
-                                          + "&startdate="
+                                          + $('#staff_num').val()
+                                          + "&date_ps="
                                           + $('#date_ps').val()
-                                          + "&enddate="
+                                          + "&date_ps2="
                                           + $('#date_ps2').val(),
                                     type : "post",
                                     dataType : "html",
@@ -31,7 +30,7 @@
                                        //alert(data);
                                        str = data.trim();
                                        document
-                                             .getElementById("view_product").innerHTML = str;
+                                             .getElementById("view_workpay").innerHTML = str;
                                     }
 
                                  });
@@ -77,16 +76,15 @@
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                      ~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                      <input id="date_ps2" name="date_ps2" minlength="2" autocomplete="off" type="date"  required /> 
-                     <input class="form-control6"  style="margin-left: 10px;" type="button" id="btn_out" name="btn" value="조회">
+                     
 
                   </div>
                    <label for="cname" class="control-label col-lg-2" style="font-size: 13px;">직원 번호
 										</label> <input class="form-control" id="staff_num" name="staff_num"
 											style="width: 20%" onkeydown="startSuggest();"
 											autocomplete="off" type="text" required />
-										<button class="form-control6" type="button"
-											onclick="javascript:productcheckaction()" id="btn1"
-											name="btn1">조회</button>
+										<button class="form-control6" type="button" id="btn_out"
+											name="btn_out">조회</button>
 
                </div>
                </br> </br>
@@ -95,9 +93,9 @@
 
 
             <table class="table table-striped table-advance table-hover">
-               <div id="chart_div" style="width: 100%; height: 50%;"></div>
+               
                <thead>
-                  <p></p>
+                
                   <tr>
                      <th><i class="icon_profile"></i>이름</th>
                      <th><i class="icon_profile"></i>출근 시간</th>
@@ -108,7 +106,7 @@
 
                </thead>
                
-               <tbody id="view_product">
+               <tbody id="view_workpay">
 
                </tbody>
             </table>
