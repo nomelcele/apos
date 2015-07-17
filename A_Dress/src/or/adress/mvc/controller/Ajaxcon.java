@@ -1167,5 +1167,15 @@ public class Ajaxcon {
 				return mav;
 				
 			}
+			
+			// ±Þ¿©
+			@RequestMapping(value="sh_ajax_workPay?")
+			public ModelAndView sh_ajax_workPay(int staff_num){
+				ModelAndView mav = new ModelAndView();
+				List<StaffVO> list = sfdao.get_pay(staff_num);
+				mav.setViewName("ajax/sh_ajax_sh_workPay");
+				mav.addObject("res", list);
+				return mav;
+			}
 		
 }
