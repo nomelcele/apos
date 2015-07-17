@@ -1,9 +1,34 @@
 package vo;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 // 컬럼명 일치!
 public class BonsaVO {
+	// Valid 안걸어 되는것
 	private int bon_num;
-	private String bon_name, bon_id, bon_pwd, bon_job, bon_tel, bon_date;
+	private String bon_job, bon_tel, bon_date;
+	
+	// Valid 걸어야하는 것들
+	@NotEmpty(message = "이름을 입력하세요.")
+	private String bon_name;
+	@NotEmpty(message = "아이디를 입력하세요.")
+	@Size(min = 4, max = 8, message = "ID는 4~8자리로 입력하세요")
+	private String bon_id;
+	@NotEmpty(message = "비밀번호을 입력하세요.")
+	@Size(min = 6, max = 12, message = "PWD는 6~12자리로 입력하세요")
+	private String bon_pwd;
+	@NotEmpty(message = "비밀번호 확인을 입력하세요.")
+	private String bon_pwd_ck;
+	
+	public String getBon_pwd_ck() {
+		return bon_pwd_ck;
+	}
+	public void setBon_pwd_ck(String bon_pwd_ck) {
+		this.bon_pwd_ck = bon_pwd_ck;
+	}
 	public int getBon_num() {
 		return bon_num;
 	}
