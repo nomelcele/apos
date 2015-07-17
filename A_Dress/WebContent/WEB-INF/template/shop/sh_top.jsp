@@ -11,7 +11,7 @@ function open_win2()
 </script>
 <script>
 
-function profilecha(){
+function sh_memberDetail_cha(){
 document.getElementById("profilechange").submit();
 }
 </script>
@@ -95,7 +95,7 @@ document.getElementById("profilechange").submit();
                      <!-- chat----------------------------------------------------------------------->
 
 
-   	<form action="sh_profilecha" method="post" id="profilechange">
+   	<form action="sh_memberDetail_cha" method="post" id="profilechange">
 										<input type="hidden" name="profile" value=""></form>
                         
 
@@ -164,7 +164,7 @@ document.getElementById("profilechange").submit();
                <!-- user login dropdown start-->
                <li class="dropdown"><a data-toggle="dropdown"
                   class="dropdown-toggle" href="#"> <span class="profile-ava">
-                        <img alt="" src="resources/img/ee.JPG" align="center">
+                        <img alt="" src="master/${sessionScope.shop_img}" align="center" style="width:40px; height: 40px;  border-radius:150px;">
                   </span> <span class="form-control" id="master_span"
                      style="color: black;">
                         [${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님
@@ -175,7 +175,8 @@ document.getElementById("profilechange").submit();
 <!--                </a> -->
                   <ul class="dropdown-menu extended logout">
                      <div class="log-arrow-up"></div>
-                     <li class="eborder-top"><a href="javascript:profilecha()">
+                     <li class="eborder-top">
+                     <a href="javascript: sh_memberDetail_cha()">
                      <i class="icon_profile"></i> Shop Information</a></li>
                    
                      <li><a href="j_spring_security_logout">
