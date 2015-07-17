@@ -97,7 +97,7 @@
                    success: function(data) {
                     if(data.trim() == "true"){
                     	alert("success!")
-                    	$('#checkhot').submit();
+                    	$('#submithot').submit();
                     }else{
                     	alert("입력된 정보가 잘 못 되었습니다.")
                     }
@@ -171,6 +171,8 @@
 	
 </script>
 <body class="login-img3-body">
+<form action="submithot" id="submithot" method="post">
+</form>
 
 	<!-- 본사회원가입 모달 -->
 	<div id="modal1" class="modal fade">
@@ -244,7 +246,7 @@
 				</div>
 				<div >
 				<!-- body -->
-				<form method="post" action="submithot" name="checkhot" id="checkhot" autocomplete="off">
+			
 						<div style="width: 100%;" >
 						
 						
@@ -262,7 +264,6 @@
 						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>
 						
 					</div>
-				</form>
 				</div>
 			</div>
 		</div>
@@ -321,7 +322,7 @@
 				</div>
 				<div >
 				<!-- body -->
-				<form method="post" action="NCRHOTcheck" name="checkhot" id="checkhot" autocomplete="off">
+				<form method="post" action="submithot" name="checkhot" id="checkhot" autocomplete="off">
 					<div style="width: 100%;" >
 						<div class="modal-body2">
 							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
