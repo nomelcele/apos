@@ -2,13 +2,16 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
 <mapper namespace="shop">
+
 	<insert id="shopjoin" parameterType="shvo">
 		insert into shop values(
 		shop_seq.nextval,#{shop_name},#{shop_tel},#{shop_adr},#{shop_map_x},
 		#{shop_map_y},sysdate,#{shop_mail}, #{shop_master},
 		#{shop_img},#{shop_crnum},1,#{shop_id},#{shop_pwd})
 	</insert>
+	
 	<insert id="shoprequesthotkey" parameterType="shotvo">
 		insert into hotkey
 		values(hotkey_seq.nextVal,#{key_name},#{key_hotkey},#{key_email},#{key_crnum},sysdate,'wait')
@@ -45,6 +48,14 @@
 	<select id="getshopnameone" parameterType="int" resultType="String">
 		select shop_name from shop where shop_num = #{shop_num}
 	</select>
+
+<select id="getshopmaster"  parameterType="int" resultType="shvo">
+select shop_name,shop_tel,shop_master,shop_mail,shop_adr from shop where shop_num = #{shop_num}
+
+</select>
+
+
+
 
 	<select id="findid" parameterType="map" resultType="String">
 		select shop_id from shop where shop_master=#{name} and shop_tel=#{tel}
@@ -91,5 +102,14 @@
 	delete from member where mem_num=#{num}
   	</delete>
 	
+	
+	<update id="fileinsert" parameterType="shvo">
+	update shop set shop_img=#{shop_img},shop_master=#{shop_master},shop_tel=#{shop_tel},shop_mail=#{shop_mail} where shop_num=#{shop_num}
+	</update>
+	
+	
+	<update id="fileinsert2" parameterType="shvo">
+	update shop set shop_master=#{shop_master},shop_tel=#{shop_tel},shop_mail=#{shop_mail} where shop_num=#{shop_num}
+	</update>
 	
 </mapper>
