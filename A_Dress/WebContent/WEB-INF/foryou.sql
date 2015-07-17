@@ -233,7 +233,7 @@ CREATE TABLE workpay(
  work_logout date,
  work_staffnum number(10),
  work_flag number(10),
- CONSTRAINT work_staffnum_fk FOREIGN key (work_num) REFERENCES staff(staff_num)on delete cascade);
+ CONSTRAINT work_staffnum_fk FOREIGN key (work_staffnum) REFERENCES staff(staff_num)on delete cascade);
 
 
 drop sequence bonsa_seq;
@@ -1345,4 +1345,734 @@ insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 2, 20, '2015-0
 insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 2, 20, '2015-06-19', 1, 1 ,8);
 
 
+
+select * from staff;
+select * from WORKPAY;
+-----------------------------------------------------------------staff_num 1
+
 commit;
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),1,1);
+
+
+
+
+----------------------------------------------------- staff_num 2
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+
+
+
+----------------------------------------------------- staff_num 3
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),2,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),3,1);
+
+----------------------------------------------------- staff_num 4
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),4,1);
+
+
+----------------------------------------------------- staff_num 5
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),5,1);
+
+----------------------------------------------------- staff_num 6
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),6,1);
+
+
+----------------------------------------------------- staff_num 7
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),7,1);
+
+
+----------------------------------------------------- staff_num 8
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),8,1);
+
+
+----------------------------------------------------- staff_num 9
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-06/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-06/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-05/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-05/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-04/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-04/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-03/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-03/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-02/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-01/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-12/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-13/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-13/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-16/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-16/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-07-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-07-17/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-01/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-01/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-02/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-02/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-08/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-08/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-12/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-12/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-17/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-17/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-22/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-22/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-25/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-25/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
+to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
+,to_date('2015-06-28/19:59','yyyy-MM-dd/hh24:mi'),9,1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit;
+
+
+

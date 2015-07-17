@@ -213,4 +213,4 @@ CREATE TABLE workpay(
  work_logout date,
  work_staffnum number(10),
  work_flag number(10),
- CONSTRAINT work_staffnum_fk FOREIGN key (work_num) REFERENCES staff(staff_num)on delete cascade);
+ CONSTRAINT work_staffnum_fk FOREIGN key (work_staffnum) REFERENCES staff(staff_num)on delete cascade);
