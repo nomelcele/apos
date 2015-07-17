@@ -184,4 +184,15 @@ public class ShopDao {
 		
 		return list;
 	}
+	public ShopVO getvomaster(int shop_num){
+		ShopVO vo = ss.selectOne("shop.getshopmaster",shop_num);
+		return vo;
+	}
+	public void fileinsert(ShopVO vo){
+	 ss.update("shop.fileinsert",vo);
+	
+	}
+	public void fileinsert2(ShopVO vo){
+		 ss.update("shop.fileinsert2",vo);
+}
 }
