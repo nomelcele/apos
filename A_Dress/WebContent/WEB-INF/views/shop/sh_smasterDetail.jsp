@@ -74,21 +74,21 @@ $(function(){
 					<div class="col-lg-6">
 						<form method="post" action="sh_memdetail_change" id="finishbtn"  enctype="multipart/form-data">
 							 <br />
-								<label style="width: 200px;" for="cname"
+								<label style="width: 200px; margin-top:1px;" for="cname"
 									class="control-label col-lg-2">대리점</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="shop_name"
 										name="shop_name" minlength="2" type="text" value="${v1.shop_name}"
 										readonly="readonly" />
 								</div>		
-		      				<br/><br/>
+		      				
 		      				<div
-												style="width: 103px; height: 97px; border: 2px solid rgb(213,206,206); margin-top: 10px; margin-bottom: 10px; margin-left: 240px;"
+												style="width: 103px; height: 97px; border: 2px solid rgb(213,206,206); margin-top: 10px; margin-bottom: 10px; margin-left: 40px;"
 												id="uploadFiletarget"><img src="master/${sessionScope.shop_img}"  style="width: 100px; height:100px;">
 												</div>
 												
-                          <input type="file" id="uploadFile" name="selfimg" style="margin-left: 253px;">
-                    	  
+                          <input type="file" id="uploadFile" name="selfimg" style="margin-left: 50px;">
+                    	  <br/>
                     	  <input type="hidden" name="shop_num" value="${sessionScope.shop_num }">
 								<div class="form-group ">
 								<label style="width: 200px;" for="cname"
@@ -118,8 +118,8 @@ $(function(){
 
 								</div>
 								
-							</div>
-							<br />
+						
+
 							<div class="form-group ">
 								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">매장 주소</label>
@@ -131,11 +131,10 @@ $(function(){
 							</div>
 							<br />
 						
-								<br /> <br />
 							</div>
 						</form>
 </div>
-<br/><br/>
+
 						<div class="form-group"
 							style="margin-left: 200px; margin-top: 30px;">
 							<div class="col-lg-offset-2 col-lg-12">
