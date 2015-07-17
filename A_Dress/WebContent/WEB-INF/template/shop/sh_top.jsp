@@ -95,7 +95,7 @@ document.getElementById("profilechange").submit();
                      <!-- chat----------------------------------------------------------------------->
 
 
-   	<form action="sh_memberDetail_cha" method="post" id="profilechange">
+   	<form action="sh_memberDetail_cha" method="get" id="profilechange">
 										<input type="hidden" name="profile" value=""></form>
                         
 
