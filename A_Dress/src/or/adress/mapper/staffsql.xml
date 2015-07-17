@@ -53,11 +53,14 @@ private String shop_sname,shop_sposition,shop_stel,shop_name; -->
  	UPDATE workpay SET work_flag=1 , work_logout=sysdate where work_staffnum=#{work_staffnum} and work_flag=0
  	</update>
  	<!-- 급여  -->
- 	<select id="get_pay" parameterType="int" resultType="staffvo">
+ 	<select id="get_pay" parameterType="map" resultType="staffvo">
  		select s.STAFF_NAME,WORK_LOGIN,work_logout,round
- 		((WORK_LOGOUT-WORK_LOGIN)*24,2) qw from workpay w,staff s
+ 		((WORK_LOGOUT-WORK_LOGIN)*24,2) work_time from workpay w,staff s
 		where WORK_FLAG=1 and WORK_STAFFNUM=#{staff_num} 
-		and s.STAFF_NUM=w.WORK_STAFFNUM order by 2
+		and s.STAFF_NUM=w.WORK_STAFFNUM 
+		 and( WORK_LOGIN <![CDATA[>=]]> to_date(#{date_ps},'yyyy-MM-dd')  
+		 and WORK_LOGIN <![CDATA[<=]]> to_date(#{date_ps2},'yyyy-MM-dd'))
+		order by 2
  	</select>
  </mapper>
  
