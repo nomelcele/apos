@@ -56,7 +56,7 @@
 	<section class="wrapper">
 		<div class="col-lg-12">
 			<h3 class="page-header">
-				<i class="fa fa-files-o"></i> 출결/급여
+				<i class="fa fa-files-o"></i> 출결
 			</h3>
 
 			<div class="row" style="font-size: 12px; width: 100%; height: 100%;">

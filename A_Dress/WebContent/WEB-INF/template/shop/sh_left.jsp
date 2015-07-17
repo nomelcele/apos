@@ -109,6 +109,8 @@
 			document.getElementById("sh_salesTable").submit();
 		} else if(str == "calendar"){
 			document.getElementById("calendar").submit();
+		}else if(str == "workPay"){
+			document.getElementById("workPay").submit();
 		}
 	}
 
@@ -201,8 +203,11 @@
 <input type="hidden" name="shop_num" value="${sessionScope.shop_num}">
 </form>
 
-<!-- 급여 -->
+<!-- 출결 -->
 <form method="post" action="ssh_workData" id=workData></form>
+
+<!-- 급여 -->
+<form method="post" action="ssh_workPay" id=workPay></form>
 
 
 <!-- 회원가입 -->
@@ -302,7 +307,8 @@
 				<ul class="sub">
 					<li><a class="" href="javascript:goUrl('sh_salesTable')">✔ 판매현황</a></li>
 					<li><a class="" href="javascript:goUrl('rank')"><span>✔ 기간별 판매현황</span></a></li>
-					<li><a class="" href="javascript:goUrl('workData')">✔ 급여관리</a></li>
+					<li><a class="" href="javascript:goUrl('workData')">✔ 출결관리</a></li>
+					<li><a class="" href="javascript:goUrl('workPay')">✔ 급여관리</a></li>
 				</ul></li>
 		</ul>
 		<!-- sidebar menu end-->
