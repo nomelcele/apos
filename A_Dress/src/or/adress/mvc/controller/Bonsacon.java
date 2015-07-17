@@ -25,6 +25,7 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
+import javax.validation.Valid;
 
 import or.adress.mvc.dao.BoardDao;
 import or.adress.mvc.dao.BonsaDao;
@@ -36,6 +37,7 @@ import or.adress.mvc.service.BonsaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -102,7 +104,9 @@ public class Bonsacon {
 
 	// 본사 공지사항 작성폼 cmd=bwork subcmd=in
 	@RequestMapping(value = "/bon_noticein", method = RequestMethod.POST)
-	public ModelAndView bon_workNoticeIn() {
+	public ModelAndView bon_workNoticeIn(Map<String,Object> model) {
+		BoardVO board =  new BoardVO();
+		model.put("boardForm",board);
 		ModelAndView mav = new ModelAndView("bonsa/bon_workNoticeWriter");
 		return mav;
 	}
@@ -133,44 +137,52 @@ public class Bonsacon {
 
 	// 본사 공지사항 글쓰기
 	@RequestMapping(value = "/bon_workNoticewrite", method = RequestMethod.POST)
-	public ModelAndView bon_workNoticewrite(BoardVO vo, HttpSession session) {
-		vo.setWriter(session.getAttribute("bon_id").toString());
-		String s = vo.getContent();
-		String filename = "";
-		String content = "";
-		String[] str = s.split(">");
-		for (String e : str) {
-			System.out.println(e);
-			if (!e.startsWith("<")) {
-				System.out.println("<가아닌가    " + e);
-				try {
-					content = e.substring(0, e.indexOf("<"));
-					break;
-				} catch (Exception ee) {
-					ee.printStackTrace();
-					break;
+	public ModelAndView bon_workNoticewrite(@Valid @ModelAttribute("boardForm") BoardVO vo, BindingResult result,Map<String, Object> model, HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		
+		if(result.hasErrors()){
+			mav.setViewName("bonsa/bon_workNoticeWriter");
+			System.out.println("여긴 에러");
+			return mav;
+		}else{
+			
+			vo.setWriter(session.getAttribute("bon_id").toString());
+			String s = vo.getContent();
+			String filename = "";
+			String content = "";
+			String[] str = s.split(">");
+			for (String e : str) {
+				System.out.println(e);
+				if (!e.startsWith("<")) {
+					System.out.println("<가아닌가    " + e);
+					try {
+						content = e.substring(0, e.indexOf("<"));
+						break;
+					} catch (Exception ee) {
+						ee.printStackTrace();
+						break;
+					}
+
 				}
-
 			}
-		}
-		String[] ff = str[1].split("\"");
+			String[] ff = str[1].split("\"");
 
-		System.out.println("---------------------------------------");
-		for (String e : ff) {
-			System.out.println(e);
-			if (e.startsWith("upload")) {
-				filename = e.substring(7);
+			System.out.println("---------------------------------------");
+			for (String e : ff) {
+				System.out.println(e);
+				if (e.startsWith("upload")) {
+					filename = e.substring(7);
+				}
 			}
-		}
-		System.out.println("----------------------------");
-		System.out.println("파일명"+filename);
-		System.out.println(content);
-		vo.setContent(content);
-		vo.setPath(filename);
-		System.out.println("인서트전");
-		bdao.insert(vo);
-		System.out.println("인서트후");
-		return bon_workNotice(1);
+			System.out.println("----------------------------");
+			System.out.println("파일명"+filename);
+			System.out.println(content);
+			vo.setContent(content);
+			vo.setPath(filename);
+			System.out.println("인서트전");
+			bdao.insert(vo);
+			System.out.println("인서트후");
+		return bon_workNotice(1);}
 	}
 
 	// 본사 공지사항 파일업로드 cmd=bwork subcmd=ckBoard
