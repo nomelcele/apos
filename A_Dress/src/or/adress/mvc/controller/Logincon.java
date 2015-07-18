@@ -105,23 +105,23 @@ public class Logincon {
 	}
 
 	// 본사회원가입 아이디중복체크
-	@RequestMapping(value = "/bo_idchk")
-	public ModelAndView bo_idchk(String id) {
-		System.out.println("호출확인");
-		boolean res = bdao.chkid(id);
-		System.out.println("Request ID : " + id);
-		ModelAndView mav = new ModelAndView("ajax/bon_sawonidcheck");
+		@RequestMapping(value = "/bo_idchk")
+		public ModelAndView bo_idchk(String id) {
+			System.out.println("호출확인");
+			boolean res = bdao.chkid(id);
+			System.out.println("Request ID : " + id);
+			ModelAndView mav = new ModelAndView("ajax/bon_sawonidcheck");
 
-		if (res) {
-			mav.addObject("res", "<p style=\"color:red;\">이미 존재하는 아이디입니다</p>");
+			if (res) {
+				mav.addObject("res", "false");
 
-		} else {
-			mav.addObject("res", "<p style=\"color:green;\">사용가능한 아이디입니다</p>");
+			} else {
+				mav.addObject("res", "true");
 
+			}
+			return mav;
 		}
-		return mav;
-	}
-
+		
 	// 샵로그인화면에서 겟핫키모달창띄우기
 	@RequestMapping(value = "/sh_gethotkey")
 	public ModelAndView sh_gethotkey() {
@@ -294,30 +294,32 @@ public class Logincon {
 
 	// 본사 - 사원 가입
 	@RequestMapping(value = "/sawonjoin", method = RequestMethod.POST)
-	public String bon_sawonjoin(HttpServletRequest request) {
+	public String bon_sawonjoin(@Valid @ModelAttribute("BonsaVO") BonsaVO bvo,
+			BindingResult result) {
+		if (result.hasErrors()) {
+			return "login/bon_bonJoin";
+		} else {
 
-		// 이름 ,비밀번호, 비밀번호 확인, 성명, 연락처
+			// 이름 ,비밀번호, 비밀번호 확인, 성명, 연락처
 
-		String bon_id = "bon_" + request.getParameter("bon_id");
-		String bon_name = request.getParameter("bon_name");
-		String bon_pwd = request.getParameter("bon_pwd");
-		String tel1 = request.getParameter("bon_tel1");
-		String tel2 = request.getParameter("bon_tel2");
-		String tel3 = request.getParameter("bon_tel3");
-		String bon_tel = tel1 + "-" + tel2 + "-" + tel3;
+			String bon_id = "bon_" + bvo.getBon_id();
+			String bon_name = bvo.getBon_name();
+			String bon_pwd = bvo.getBon_pwd();
+			String bon_tel = bvo.getBon_tel();
 
-		BonsaVO vo = new BonsaVO();
-		vo.setBon_id(bon_id);
-		vo.setBon_name(bon_name);
-		vo.setBon_pwd(bon_pwd);
-		vo.setBon_tel(bon_tel);
-		JoinVO jvo = new JoinVO();
-		jvo.setUsername(bon_id);
-		jvo.setPassword(bon_pwd);
-		jvo.setRole("bonsa");
-		lservice.bonjoinservice(vo, jvo);
+			BonsaVO vo = new BonsaVO();
+			vo.setBon_id(bon_id);
+			vo.setBon_name(bon_name);
+			vo.setBon_pwd(bon_pwd);
+			vo.setBon_tel(bon_tel);
+			JoinVO jvo = new JoinVO();
+			jvo.setUsername(bon_id);
+			jvo.setPassword(bon_pwd);
+			jvo.setRole("bonsa");
+			lservice.bonjoinservice(vo, jvo);
 
-		return login();
+			return login();
+		}
 	}
 
 	// 본사로그인 (화면전환, 세션저장) (아이디/비번체크는 캡챠에서)
@@ -419,9 +421,12 @@ public class Logincon {
 		}
 	}
 
+	// 본사 사원 회원 가입
 	@RequestMapping(value = "/submitJoin", method = RequestMethod.POST)
-	public ModelAndView bon_bonJoin() {
+	public ModelAndView bon_bonJoin(Map<String, Object> model) {
 		ModelAndView mav = new ModelAndView("login/bon_bonJoin");
+		BonsaVO bvo = new BonsaVO();
+		model.put("BonsaVO", bvo);
 		System.out.println("로그인 컨트롤러 확인");
 		return mav;
 	}
