@@ -60,7 +60,7 @@
 				<div class="col-lg-12" style="width: 125%">
 					<div>
 					<h3 class="page-header">
-						<i class="fa fa-files-o"></i> 일정조회
+						<i class="fa fa-files-o"></i> 일정 관리
 					</h3></div>
 						<div id="calendarTagert"></div>
 				</div>
