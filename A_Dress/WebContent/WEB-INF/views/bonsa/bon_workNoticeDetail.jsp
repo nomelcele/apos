@@ -61,16 +61,16 @@
                     <form action="bon_noticedelte" method="post" id="deleteform">
                     <input type="hidden" name="no" value="${v.no }">
                     <input type="hidden" name="writer" value="${v.writer }">
-                    <button type="button" class="btn btn-danger" onclick="javascript:delteaction()" style="margin-left: 21%; margin-top: 1%">글 삭제</button>
-                    </form>
+                    <button type="button" class="btn btn-danger" onclick="javascript:delteaction()" style="margin-left: 23%; margin-top: 1%; float: left;" >글 삭제</button>
+                    </form> 
                     <form action="bon_workNotice" method="post" id="listform">
                     <input type="hidden" name="page" value="1">
-                    <button type="button" class="btn btn-danger" onclick="javascript:listaction()" style="margin-left: 21%; margin-top: 1%">목록</button>
+                    <button type="button" class="btn btn-danger" onclick="javascript:listaction()" style="margin-left: 1%; margin-top: 1%">목록</button>
                     </form>
                     
                      </div>
                      
-                     <div class="col-sm-10" style="margin-left: 200px;">
+                     <div class="col-sm-10" style="margin-left: 50px;">
                         <table class="table">
                            <thead>
                               <tr>
