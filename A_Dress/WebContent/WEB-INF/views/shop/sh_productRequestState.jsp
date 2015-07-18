@@ -30,7 +30,7 @@ function open_win3(img3)
 			<div class="col-lg-12">
 
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 매장 재고관리
+					<i class="fa fa-files-o"></i> 상품 신청 현황 
 				</h3>
 
 				<div class="row">
