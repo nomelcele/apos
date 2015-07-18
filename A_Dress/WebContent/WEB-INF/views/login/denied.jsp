@@ -4,9 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
 </head>
 <body>
-	접근거부
+<button type="button"  id="return" 	onclick="javascript:return_1()">Return</button>
+<script>
+function return_1() {
+		document.getElementById("dreturn").submit();
+
+	}
+</script>
+	<form action="return_denied" method="post" id="dreturn">
+
+</form>
+
+
+       <img src ="resources/img/zal3.jpg">
+     
 </body>
 </html>
