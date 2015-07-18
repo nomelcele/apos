@@ -1346,8 +1346,7 @@ insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 2, 20, '2015-0
 
 
 
-select * from staff;
-select * from WORKPAY;
+
 -----------------------------------------------------------------staff_num 1
 
 commit;
