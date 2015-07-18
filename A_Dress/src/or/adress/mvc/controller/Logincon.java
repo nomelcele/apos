@@ -77,6 +77,11 @@ public class Logincon {
 		System.out.println("에러");
 		return "login/denied";
 	}
+	//접근불가시 이미지
+	@RequestMapping(value="/return_denied")
+	public String return_2(){
+		return "login/new_login";
+	}
 
 	@RequestMapping(value = "/home")
 	public ModelAndView home(Locale locale, HttpServletRequest request,
