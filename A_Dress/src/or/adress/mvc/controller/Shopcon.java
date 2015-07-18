@@ -254,12 +254,13 @@ public class Shopcon {
 	}
 
 	// 수정
-	@RequestMapping(value = "/sh_memdetail_change")
+	@RequestMapping(value = "/sh_memdetail_change", method = RequestMethod.POST)
 	public ModelAndView memdetail_change(MemVO vo) {
 		ModelAndView mav = new ModelAndView();
 		shopdao.getfinish(vo);
 		System.out.println("수정이 완료되었습니당");
 		System.out.println(mav);
+		mav.setViewName("shop/sh_memberCheck");
 		return mav;
 	}
 
