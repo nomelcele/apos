@@ -15,7 +15,7 @@
                      if ($('#date_ps').val() != ""
                            && $('#date_ps2').val() != "") {
                         if ($('#date_ps').val() <= $('#date_ps2').val()) {
-                           alert("test2");
+                           alert("직원번호 "+ $('#staff_num').val()+"을 선택하셨습니다.");
                            $
                                  .ajax({
                                     url : "sh_ajax_workPay?staff_num="
