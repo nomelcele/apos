@@ -428,5 +428,10 @@ public class Logincon {
 			e.printStackTrace();
 		}
 	}
-	
+	@RequestMapping(value="/submitJoin", method=RequestMethod.POST)
+	public ModelAndView bon_bonJoin(){
+		ModelAndView mav = new ModelAndView("login/bon_bonJoin");
+		System.out.println("로그인 컨트롤러 확인");
+		return mav;
+	}
 }

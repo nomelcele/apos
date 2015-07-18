@@ -52,8 +52,7 @@
 				$('#modal2').modal('show');
 		});
 		$('#bonmodal').click(function() {
-			alert("그만쳐이놈아확마");
-			$('#bon_bonjoinsubmit').submit();
+			$('#modal1').modal('show');
 	});
 		//////////////////////////////////
 		
@@ -173,9 +172,6 @@
 </script>
 <body class="login-img3-body">
 <form action="submithot" id="submithot" method="post">
-</form>
-
-<form action="submitJoin" id="bon_bonjoinsubmit" method="post">
 </form>
 
 	<!-- 본사회원가입 모달 -->
