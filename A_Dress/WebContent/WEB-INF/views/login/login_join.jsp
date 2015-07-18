@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,8 +45,8 @@
 							<div class="panel-body">
 								<div class="form">
 
-									<form class="form-validate form-horizontal" id="member_form"
-										method="post" action="sh_memberjoinjoin">
+									<form:form class="form-validate form-horizontal" id="member_form"
+										method="post" action="sh_memberjoinjoin"  commandName="BonsaVO">
 										<div class="form-group ">
 											<label for="cname" class="control-label col-lg-2">사업자번호<span
 												class="required">*</span></label>
@@ -83,7 +84,7 @@
 													onclick="">다음</button>
 											</div>
 										</div>
-									</form>
+									</form:form>
 								</div>
 							</div>
 						</section>
