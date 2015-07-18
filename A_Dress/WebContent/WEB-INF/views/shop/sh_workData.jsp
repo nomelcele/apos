@@ -2,10 +2,10 @@
 	pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!-- 매장의업무관리- 급여페이지입니다. -->
+<!-- 매장의업무관리- 출결 페이지입니다. -->
 <script>
 	function worklogin(num, name) {
-		alert(num + name);
+		alert("직원번호 "+num+"번 " + name+"님이 출근하셨습니다.");
 		$.ajax({
 			url : "sh_ajax_sh_workData",
 			type : "post",
@@ -28,7 +28,7 @@
 		});
 	}
 	function worklogout(num) {
-		alert(num);
+		alert("직원번호 "+num+"번 " + name+"님이 퇴근하셨습니다.");
 					$.ajax({
 						url : "sh_ajax_sh_workDataend",
 						type : "post",
