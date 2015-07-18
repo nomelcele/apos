@@ -1,17 +1,58 @@
 package vo;
 
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 // 컬럼명 일치!
 public class ShopVO {
 	// 매장이 가입 할때 필요한 요소
 	// name, tel, adr, date, mail, master img, crnum
-	private String shop_name, shop_tel ,shop_adr, shop_date, shop_mail, shop_master, shop_img, shop_id, shop_pwd;
-	private int shop_num, shop_bonnum, shop_crnum;
-	private float shop_map_x, shop_map_y;
-	private String tel1, tel2, tel3;
-	private MultipartFile selfimg;
+	@NotEmpty(message = "올바른 입력값이 아닙니다.")
+	private String shop_name; 
+	private String shop_tel;
+	private String shop_adr;
+	private String shop_date;
+	@NotEmpty(message = "올바른 입력값이 아닙니다.")
+	private String shop_master;
+	private String shop_img;
+	private String shop_id;
+	private String pwdchk;
 	
+	
+	
+	private int shop_num;
+	private int shop_bonnum;
+//	@NotEmpty(message = "올바른 입력값이 아닙니다.")
+	@DecimalMin(value="100000")
+	private int shop_crnum;
+	
+	
+	
+	private float shop_map_x, shop_map_y;
+	  
+	private String tel1, tel2;
+	private MultipartFile selfimg;
+	private String tel3;
+	
+	@Pattern(regexp="^[_0-9a-zA-Z-]+@[0-9a-zA-Z]+(.[_0-9a-zA-Z-]+)*$")
+	@Email(message = "올바른 이메일 형식이 아닙니다.")
+	@NotEmpty(message = "이메일을 입력하세요.")
+	private String shop_mail;
+	
+	private String shop_pwd;
+	
+	
+	public String getPwdchk() {
+		return pwdchk;
+	}
+	public void setPwdchk(String pwdchk) {
+		this.pwdchk = pwdchk;
+	}
 	
 	public MultipartFile getSelfimg() {
 		return selfimg;
