@@ -14,11 +14,10 @@ function return_1() {
 	}
 </script>
 	<form action="return_denied" method="post" id="dreturn">
-
+       <img src ="resources/img/wrong.jpg" style="margin-left: 73px ;">
 </form>
 
 
-       <img src ="resources/img/zal3.jpg">
      
 </body>
 </html>
