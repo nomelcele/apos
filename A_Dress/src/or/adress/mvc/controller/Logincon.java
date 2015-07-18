@@ -415,7 +415,6 @@ public class Logincon {
 			msg.setContent(multipart);
 			Transport.send(msg);
 		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
