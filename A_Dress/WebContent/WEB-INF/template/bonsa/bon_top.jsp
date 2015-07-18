@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
   <!-- container section start -->
+ 
   <section id="container" class="">
       
       <header class="header dark-bg">
@@ -118,7 +119,8 @@
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
                             <li class="eborder-top">
-                                <a href="#"><i class="icon_profile"></i>Bonsa Information</a>
+                  
+                            
                             </li>
                            <li>
                                 <a href="j_spring_security_logout"><i class="icon_key_alt"></i> Log Out</a>
@@ -132,6 +134,8 @@
                 <!-- notificatoin dropdown end-->
             </div>
             <%-- Chatting modal --%>
+        
+         
          
  	  </header>      
  	  </section>
