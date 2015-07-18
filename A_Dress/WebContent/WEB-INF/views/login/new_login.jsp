@@ -52,37 +52,13 @@
 				$('#modal2').modal('show');
 		});
 		$('#bonmodal').click(function() {
-			alert("그만쳐이놈아확마");
+			
 			$('#bon_bonjoinsubmit').submit();
 	});
 		//////////////////////////////////
 		
-		//본사회원가입 아이디중복체크
-		$('#bon_id').keyup(function(){
-				$.ajax({
-	                 url: "bo_idchk",
-	                 type: "POST",
-	                 data : {
-	              	 	id : "bon_"+$('#bon_id').val()
-	                 },
-	                 success: function(data) {
-	                  $("#viewID").html(data);
-	                 }
-	             });
-				
-		});
 		
-		//본사회원가입 패스워드체크
-		$('#bon_pwd_ck').keyup(function(){
-				if($('#bon_pwd').val() == $('#bon_pwd_ck').val()){
-					$('#viewPWD').css("color","green");
-					$('#viewPWD').text("비밀번호가 일치합니다");
-				}else{
-					$('#viewPWD').css("color","red");
-					$('#viewPWD').text("비밀번호가 일치하지 않습니다");
-				}
-			
-		});
+		
 		
 		
 		
