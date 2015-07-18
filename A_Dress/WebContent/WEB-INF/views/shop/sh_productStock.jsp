@@ -59,7 +59,7 @@
 
 	$(function() {
 		$("#bon_p_numbtn").click(function() {
-			alert($("#pnum3").val())
+			//alert($("#pnum3").val())
 			$.ajax({
 				type : "POST",
 				url : "sh_productStock_callback",
