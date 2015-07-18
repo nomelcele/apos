@@ -113,10 +113,9 @@ function openview2(img3)
 										<td>${bon_product.pro_size}</td>
 										<td>${bon_product.pro_price}</td>
 										<td><a href="javascript:openview1('upload/${bon_product.pro_img}')">
-										<img src='upload/${bon_product.pro_img}'style="width:100px; cursor:hand;"></a></td>
-										
-										<td><a href="javascript:openview2('upload/${bon_product.pro_barcode}')">
-										<img src='upload/${bon_product.pro_barcode}' style="width:100px; cursor:hand;"></a></td>
+										<img src='product/${bon_product.pro_img}'style="width:100px; cursor:hand;"></a></td>
+										<td><a href="javascript:openview2(upload/${bon_product.pro_barcode }')">
+										<img src='barcode/${bon_product.pro_barcode}' style="width:100px; cursor:hand;"></a></td>
 										<td>${bon_product.pro_amount}</td>
 										<td>${bon_product.req_status }</td>
 										<td>${bon_product.req_date }</td>
