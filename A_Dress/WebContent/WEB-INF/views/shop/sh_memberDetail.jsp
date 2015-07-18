@@ -2,14 +2,13 @@
 	pageEncoding="UTF-8"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!-- 본사 상품관리의 상품삭제 페이지입니다. -->
+<!-- 매장 회원 관리의 멤버상세 페이지입니다. -->
 <script>
 	function gosecedeUrl(str) {
 		if (str == "gosecede") {
 			document.getElementById("secede").submit();
 			System.out.println("gourl");
 		} else if (str = "finish_mem") {
-
 			document.getElementById("finishbtn").submit();
 			System.out.println("gourl");
 		}
