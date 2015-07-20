@@ -25,7 +25,7 @@ function sh_managEx(num){
 	var UP;
 	UP=confirm("환불 하겠습니까?");
 	if(UP){
-		alert("영수증 번호"+num+"을 환불했습니다.");
+		alert(num+"번 영수증을 환불했습니다.");
 		location= "sh_smangrefund?sell_num="+num;
 	} else {
 	
