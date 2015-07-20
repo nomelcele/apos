@@ -72,7 +72,7 @@ $(function(){
 			<div class="panel-body" style="margin-top: 30px;">
 				<div class="form">
 					<div class="col-lg-6">
-						<form method="post" action="sh_memdetail_change" id="finishbtn"  enctype="multipart/form-data">
+						<form method="post" action="sh_detail_change" id="finishbtn"  enctype="multipart/form-data">
 							 <br />
 								<label style="width: 200px; margin-top:1px;" for="cname"
 									class="control-label col-lg-2">대리점</label>
