@@ -303,13 +303,14 @@ public class Shopcon {
 		return mav;
 	}
 
-	// 시큐리티때 추가 세션
+	// 상품 검색
 	@RequestMapping(value = "/sh_productsaerch", method = RequestMethod.POST)
-	public ModelAndView sh_productsaerch(String pro_name) {
+	public ModelAndView sh_productsaerch(String pro_name,String shop_num) {
 		ModelAndView mav = new ModelAndView();
 		HashMap<String, String> map = new HashMap<String, String>();
+		
 		map.put("pro_check", pro_name);
-		map.put("shop_num", "1");
+		map.put("shop_num", shop_num);
 		// List<ProductVO> list = productdao.getListProduct_bon(pro_name);
 		List<ProductVO> list = pdao.getListProduct(map);
 		mav.setViewName("shop/sh_productCheck");

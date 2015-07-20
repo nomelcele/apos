@@ -44,4 +44,30 @@ public class SuggestCon {
 		mav.addObject("res", res);
 		return mav;
 	}
+	
+	@RequestMapping(value="sg_product")
+	public ModelAndView sg_product(String key) {
+		System.out.println("sugest Key:" + key);
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("ajax/suggestmem");
+
+		ArrayList<String> list = sgdao.getMember(key);
+		makexml.shSeggest(list);
+		// xml을 읽어 오기 위해서 만든 클래스의 메서드를 호출
+		StringBuffer res = new StringBuffer();
+		res.append("[");
+		String[] suggests = new Suggest().getSuggest(key);
+		if (suggests != null) {
+			for (int i = 0; i < suggests.length; i++) {
+				res.append("\""+suggests[i]+"\"");
+				if (!(i == suggests.length - 1)) {
+					res.append(',');
+				}
+			}
+		}
+		res.append("]");
+		mav.addObject("res", res);
+		return mav;
+	}
+	
 }

@@ -217,9 +217,9 @@
 										</thead>
 										<tbody>
 											<%-- 반복 --%>
-											<c:forEach var="stList" items="${list}">
+											<c:forEach var="stList"  items="${list}" varStatus="status">
 												<tr>
-													<th>i</th>
+													<th>${status.index+1 }</th>
 													<th>${stList.pro_name}</th>
 													<th>${stList.pro_code}</th>
 													<th>${stList.sto_size}</th>
