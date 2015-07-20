@@ -114,7 +114,11 @@ public class Bonsacon {
 	// 본사 공지사항 디테일 cmd=bwork subcmd=boardDetail
 	//transaction
 	@RequestMapping(value = "/bon_workNoticedetail", method = RequestMethod.POST)
-	public ModelAndView bon_workNoticedetail(int no, int page) {
+	public ModelAndView bon_workNoticedetail(int no, int page,Map<String, Object> model) {
+		CommVO vo = new CommVO();
+		vo.setComm_bonum(String.valueOf(no));
+		model.put("commin",vo);
+		
 		ModelAndView mav = new ModelAndView("bonsa/bon_workNoticeDetail");
 		// 페이징처리 (댓글)
 		PageVO pageInfo = pageProcess(page, no, 1);
@@ -141,11 +145,10 @@ public class Bonsacon {
 		ModelAndView mav = new ModelAndView();
 		
 		if(result.hasErrors()){
-			mav.setViewName("bonsa/bon_workNoticeWriter");
 			System.out.println("여긴 에러");
+			mav.setViewName("bonsa/bon_workNoticeWriter");
 			return mav;
 		}else{
-			
 			vo.setWriter(session.getAttribute("bon_id").toString());
 			String s = vo.getContent();
 			String filename = "";
@@ -226,27 +229,54 @@ public class Bonsacon {
 	// 본사 공지사항 댓글 삭제 cmd=bwork subcmd=commdelete
 	@RequestMapping(value = "/bon_commdelete")
 	public ModelAndView bon_commdelete(int no, int bo_num, String writer,
-			int page, HttpSession session) {
+			int page, HttpSession session, Map<String, Object> model) {
 		String bon_id = session.getAttribute("bon_id").toString();
 
 		if (bon_id.equals(writer)) {
 
 			bdao.deleteComm(no);
 		}
-		return bon_workNoticedetail(bo_num, page);
+		return bon_workNoticedetail(bo_num, page, model);
 	}
 
 	// 본사 공지사항 댓글 입력 cmd=bwork subcmd=boardDetail childcmd=in
 	@RequestMapping(value = "/bon_commin", method = RequestMethod.POST)
-	public ModelAndView bon_commin(String comm_bonum, String comm_cont,
-			HttpSession session) {
-		int page = 1;
-		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("no", comm_bonum);
-		map.put("cont", comm_cont);
-		map.put("writer", session.getAttribute("bon_id").toString());
-		bdao.insertComm(map);
-		return bon_workNoticedetail(Integer.parseInt(comm_bonum), 1);
+	public ModelAndView bon_commin(@Valid @ModelAttribute("commin") CommVO vo, BindingResult result,
+			Map<String, Object> model, HttpSession session, int page, int no) {
+		ModelAndView mav =  new ModelAndView();
+		if(result.hasErrors()){
+			System.out.println("디테일 댓글 에러::");
+			mav.setViewName("bonsa/bon_workNoticeDetail");
+			
+			PageVO pageInfo = pageProcess(page, no, 1);
+			HashMap<String, Integer> map = new HashMap<>();
+			map.put("begin", pageInfo.getStartRow());
+			map.put("end", pageInfo.getEndRow());
+			//
+			map.put("no", no);
+			System.out.println("시작" + pageInfo.getStartRow());
+			System.out.println("끝" + pageInfo.getEndRow());
+			List<CommVO> clist = bdao.getCommList(map);
+			BoardVO v = bdao.getDetail(no);
+			v.setPath("upload/" + v.getPath());
+			System.out.println(v.getPath());
+			mav.addObject("clist", clist);
+			mav.addObject("v", v);
+			mav.addObject("pageInfo", pageInfo);
+			
+			
+			return mav;
+//			return bon_workNoticedetail(Integer.parseInt(vo.getComm_bonum()), 1, model);
+		}else{
+			
+			HashMap<String, String> map = new HashMap<String, String>();
+			map.put("no", vo.getComm_bonum());
+			map.put("cont", vo.getComm_cont());
+			map.put("writer", session.getAttribute("bon_id").toString());
+			bdao.insertComm(map);
+			return bon_workNoticedetail(Integer.parseInt(vo.getComm_bonum()), 1, model);
+		}
+		
 	}
 
 	// 본사 매장관리 매장가입
