@@ -183,7 +183,7 @@
 
 			<%-- BODY --%>
 			<div id="modal body" style="text-align: center;">
-				<span class="form-control" style="width:29%">주 소 : &nbsp;</span><input style="width:70% " type="text" class="form-control" id="adr" readonly> <br>
+				<span class="control-label" >주 소 : &nbsp;</span><input style="width:70% " type="text" class="form-control" id="adr" readonly> <br>
 				<span class="form-control" style="width:29% ">매 장 명 : &nbsp;</span><input style="width:70% " type="text" class="form-control" id="master"  readonly><br> 
 				<span  class="form-control" style="width:29% ">매 장 주 : &nbsp;</span><input style="width:70% " type="text" class="form-control" id="name"  readonly><br>
 				<div id="map" style="height: 400px; width: 500px; border: 1px solid black; margin: auto; display:  none"></div>
