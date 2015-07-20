@@ -27,14 +27,15 @@
 		    },
       		// 클릭이벤트 - 삭제 
             eventClick : function(calEvent,jsEvent,view){ 
-            	var r=confirm("Delete " + calEvent.title+":"+calEvent._id);
-	            if (r===true){
+            	//var r=confirm("Delete " + calEvent.title+":"+calEvent._id);
+	            var r=confirm(calEvent.title+"를 지우시겠습니까?");
+            	if (r===true){
 	            	$('#calendarTagert').fullCalendar('removeEvents', calEvent._id);
 	            	// 삭제 -DB 연동
 	            	var calen_start = $.fullCalendar.formatDate( calEvent.start, 'yyyy-MM-dd' );
 	    			var calen_end = $.fullCalendar.formatDate( calEvent.end, 'yyyy-MM-dd' );
 	            	var res = calEvent.title.split("/");
-	            	alert(res[0]);
+	            	//alert(res[0]);
 	            	$.ajax({
 		  	              url: "bon_ajaxdeletecalendar",
 		  	              type: "POST",
@@ -48,7 +49,7 @@
 		  	            	  //alert(a);
 		  	              },
 		  	              error: function(a, b) {
-		  	                  alert("Request: " + JSON.stringify(a));
+		  	                  //alert("Request: " + JSON.stringify(a));
 		  	              }
 		  	          });
 	            }
@@ -81,7 +82,7 @@
 			              },
 			              dataType: "html",
 			              success: function(a) {
-			            	  alert(a);
+			            	  //alert(a);
 			              },
 			              error: function(a, b) {
 			                  alert("Request: " + JSON.stringify(a));
