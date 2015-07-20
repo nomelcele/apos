@@ -59,9 +59,14 @@
 	}
 
 	function joinaction() {
+		alert("가입처리하시겠습니까?");
 		postsum();
 		telsum();
 		document.getElementById("member_form").submit();
+	}
+	function joinCancel(){
+		alert("취소하시겠습니까?");
+		document.getElementById("cancel").submit();
 	}
 	function telsum() {
 		$("#mem_tel").val(
@@ -85,7 +90,9 @@
 <!-- 매장의 회원관리 - 회원가입 페이지입니다. -->
 <section id="main-content">
 	<section class="wrapper">
-
+<form class="form-validate form-horizontal" id="cancel"
+						method="post" action="sh_memberjoinCancel">
+						</form>
 		<div class="row" style="font-size: 15px; width: 125%; height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
@@ -186,7 +193,8 @@
 											<div class="col-lg-offset-2 col-lg-10">
 												<button class="btn btn-primary" type="button"
 													onclick="javascript:joinaction()">Save</button>
-												<button class="btn btn-default" type="button">Cancel</button>
+												<button class="btn btn-default" type="button"
+												onclick="javascript:joinCancel()">Cancel</button>
 											</div>
 										</div>
 									</form>
