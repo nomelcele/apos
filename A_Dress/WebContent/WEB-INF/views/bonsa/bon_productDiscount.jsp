@@ -18,8 +18,15 @@
     }
     
     function saleaccept(){
+    	
     	if($('#sale_begin').val() < $('#sale_end').val()){
-    		$('#godiscount').submit();	
+    		if($('#sale_content').val()==""){
+    			alert("세일내용이 없습니다.");
+    		}else{
+    			$('#godiscount').submit();
+    		}
+    			
+    		
     	}else{
     		alert("기간선택이 잘못되었습니다");
     	}
