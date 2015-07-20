@@ -7,16 +7,19 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 	$(function() {
-		$('#btn_out').click(function() {
-// 							alert("shopname=" + $('#shop_name').val()
-// 									+ "date_ps=" + $('#date_ps').val()
-// 									+ "&date_ps2=" + $('#date_ps2').val());
+		$('#btn_out')
+				.click(
+						function() {
+							// 							alert("shopname=" + $('#shop_name').val()
+							// 									+ "date_ps=" + $('#date_ps').val()
+							// 									+ "&date_ps2=" + $('#date_ps2').val());
 
 							if ($('#date_ps').val() != ""
 									&& $('#date_ps2').val() != "") {
 								if ($('#date_ps').val() < $('#date_ps2').val()) {
 									//alert("test2");
-									$.ajax({
+									$
+											.ajax({
 												url : "bon_ajaxoutletsale?shop_name="
 														+ $('#shop_name').val()
 														+ "&startdate="
@@ -35,11 +38,11 @@
 											});
 									$.ajax({
 										url : "bon_ajaxoutletChart?shop_name="
-											+ $('#shop_name').val()
-											+ "&startdate="
-											+ $('#date_ps').val()
-											+ "&enddate="
-											+ $('#date_ps2').val(),
+												+ $('#shop_name').val()
+												+ "&startdate="
+												+ $('#date_ps').val()
+												+ "&enddate="
+												+ $('#date_ps2').val(),
 										type : "post",
 										dataType : "html",
 										success : function(data) {
@@ -48,11 +51,11 @@
 											var result = eval(res2);
 											//alert(res2);
 											drawVisualization();
-											res2=null;
+											res2 = null;
 										}
 
 									});
-									
+
 								} else {
 									alert("날짜선택을 잘못하셧습니다.시작날짜가 마지막 날짜보다 큽니다.");
 								}
@@ -61,7 +64,7 @@
 							{
 								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
 							}
-							
+
 						})
 	})
 
@@ -69,9 +72,9 @@
 		packages : [ "corechart" ]
 	});
 	google.setOnLoadCallback(drawVisualization);
-	var res2 = [ [ 'Month', '판매 금액', '판매량' ], [ '2004/05', 165, 0 ],
+	var res2 = [ [ 'Month', '매출액', '판매량' ], [ '2004/05', 165, 0 ],
 			[ '2005/06', 135, 0 ], [ '2006/07', 157, 0 ],
-			[ '2007/08', 139, 0], [ '2008/09', 136, 0 ] ];
+			[ '2007/08', 139, 0 ], [ '2008/09', 136, 0 ] ];
 	var res = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
 			[ '2005-06', 135, 1120, 599, ], [ '2006-07', 157, 1167, 587, ] ];
 	function drawVisualization() {
@@ -104,7 +107,7 @@
 	<section class="wrapper">
 
 
-		<div class="row" style="font-size: 15px; width: 100%;height: 100%">
+		<div class="row" style="font-size: 15px; width: 100%; height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 대리점별 매출순위
@@ -115,18 +118,15 @@
 					<div class="form-group">
 
 						<div style="margin-left: 10px;">
-							<label for="cname" class="control-label col-lg-2"><p>매장검색</p> </label>
-							<input id="shop_name" name="name" 
-									autocomplete="off" type="text" onkeydown="startSuggest();"
-									required />
+							<label for="cname" class="control-label col-lg-2"><p>매장검색</p>
+							</label> <input id="shop_name" name="name" autocomplete="off" type="text"
+								onkeydown="startSuggest();" required />
 
-								<div id="view"></div>
-							
-							<div class="col-lg-2" style="margin-left: -5%;">
+							<div id="view"></div>
 
-								</div>
+							<div class="col-lg-2" style="margin-left: -5%;"></div>
 							</br>
-							
+
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2"><p
 										align="left">기간</p> </label> <input id="date_ps" name="date_ps"
@@ -145,8 +145,9 @@
 					</div>
 				</form>
 
-
-				<table class="table table-striped table-advance table-hover" style="width: 100%; height: 100%">
+				<div id="chart_div" style="width: 100%; height: 100%;"></div>
+				<table class="table table-striped table-advance table-hover"
+					style="width: 100%; height: 100%">
 					<thead>
 						<p></p>
 						<tr>
@@ -161,7 +162,7 @@
 
 					</tbody>
 				</table>
-				<div id="chart_div" style="width: 80%; height: 100%;"></div>
+
 
 
 				<!-- 				<div class="form-group" style="margin-left: 700px;"> -->

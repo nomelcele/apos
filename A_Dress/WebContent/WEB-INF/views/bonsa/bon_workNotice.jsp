@@ -33,9 +33,9 @@
 <section id="main-content">
 	<section class="wrapper">
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-lg-12" style="width:125%">
 				<section class="panel">
-					<div class="row" style="font-size: 15px; margin-top: -3%">
+					<div class="row" style="font-size: 15px; margin-top: -3%; widows: 100%;">
 						<div class="col-lg-12">
 							<h3 class="page-header">
 								<i class="fa fa-files-o"></i> 공지사항 
