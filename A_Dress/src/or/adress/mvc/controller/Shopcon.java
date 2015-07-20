@@ -498,7 +498,7 @@ public class Shopcon {
 		return mav;
 
 	}
-	@RequestMapping(value = "/sh_memberDetail_cha",method=RequestMethod.GET)
+	@RequestMapping(value = "/ssh_memberDetail_cha",method=RequestMethod.GET)
 	public ModelAndView sh_memberDetail_cha(HttpSession session) {
 		
 		ModelAndView mav = new ModelAndView();
