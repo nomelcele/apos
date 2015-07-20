@@ -206,6 +206,7 @@ public class Logincon {
 			shop_num = vo.getStaff_shopnum();
 			name = sdao.getshopnameone(shop_num);
 			session.setAttribute("shop_master", vo.getStaff_name());
+			session.setAttribute("shop_img", "staff.JPG");
 		}
 		System.out.println(name);
 		System.out.println(master);
