@@ -106,7 +106,7 @@
 											<label for="cname" class="control-label col-lg-2">이름<span
 												class="required">*</span></label>
 											<div class="col-lg-2">
-												<input class="form-control" style="width: 50%" id="sname"
+												<input class="form-control" style="width: 50%" id="mem_name"
 													name="mem_name" type="text" required />
 											</div>
 										</div>
@@ -117,7 +117,7 @@
 												<span class="required">*</span>
 											</label>
 											<div class="col-lg-2">
-												<input class="form-control1 " id="date" type="date"
+												<input class="form-control1 " id="mem_date" type="date"
 													style="width: 50%" name="mem_date" required />
 											</div>
 										</div>
@@ -127,7 +127,7 @@
 												<span class="required">*</span>
 											</label>
 											<div class="col-lg-4">
-												<input class="form-control " id="smail" type="email"
+												<input class="form-control " id="smail" type="mem_email"
 													name="mem_email" style="width: 80%" required />
 											</div>
 										</div>
