@@ -95,10 +95,10 @@ document.getElementById("profilechange").submit();
                      <!-- chat----------------------------------------------------------------------->
 
 
-   	<form action="sh_memberDetail_cha" method="get" id="profilechange">
+   	<form action="ssh_memberDetail_cha" method="get" id="profilechange">
 										<input type="hidden" name="profile" value=""></form>
                         
-
+  
 
 
 
