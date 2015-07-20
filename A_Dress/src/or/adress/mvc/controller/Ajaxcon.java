@@ -55,7 +55,7 @@ public class Ajaxcon {
 	@Autowired
 	private ProductDao pdao;
 	@Autowired
-	private SmangDao smdao;
+	private SmangDao smdao;	
 	@Autowired
 	private ShopDao shdao;
 	@Autowired

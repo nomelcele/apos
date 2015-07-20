@@ -102,8 +102,8 @@ public class ShopDao {
 		return ss.selectOne("shop.getshopno", id);
 	}
 
-	public List<ShopVO> getshopname(String id) {
-		return ss.selectList("shop.getshopname", id);
+	public ShopVO getshopname(String id) {
+		return ss.selectOne("shop.getshopname", id);
 	}
 	
 	public String getshopnameone(int shop_num){
