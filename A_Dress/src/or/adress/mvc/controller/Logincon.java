@@ -194,11 +194,11 @@ public class Logincon {
 		if (radio.equals("master")) {
 			shop_num = sdao.getshopno(id);// shop_num;
 			System.out.println(shop_num);
-			List<ShopVO> list = sdao.getshopname(id);
-			for (ShopVO e : list) {
-				name = e.getShop_name();
-				master = e.getShop_master();
-			}
+			ShopVO vo = sdao.getshopname(id);
+			
+				name = vo.getShop_name();
+				master = vo.getShop_master();
+		    session.setAttribute("shop_img", vo.getShop_img());
 			session.setAttribute("shop_master", master); // 매장주 이름
 		} else if (radio.equals("staff")) {
 			StaffVO vo = new StaffVO();
