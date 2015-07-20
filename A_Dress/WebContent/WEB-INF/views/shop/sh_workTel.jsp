@@ -74,7 +74,7 @@ function telaction(){
 	<section class="wrapper">
 		<div class="col-lg-12">
 			<h3 class="page-header">
-				<i class="fa fa-files-o"></i> 연락처
+				<i class="fa fa-files-o"></i> 매장 직원 연락처
 			</h3>
 
 			<div class="row" style="font-size: 12px; width: 125%; height: 100%;">
@@ -104,7 +104,7 @@ function telaction(){
 									<table class="table table-condensed">
 										<thead>
 											<tr>
-												<th>#</th>
+												<th>지원 번호</th>
 												<th>이름</th>
 												<th>직급</th>
 												<th>지점</th>
