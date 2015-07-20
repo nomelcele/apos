@@ -179,7 +179,11 @@ public class Logincon {
 		}
 
 	}
-
+	//error 페이지 처리 400,500 다 여기로 옴 
+	@RequestMapping(value="/spring_security")
+	public String spring_security(){
+		return "login/denied";
+	}
 	// 로그인성공
 	// transactio
 	@RequestMapping(value = "/sh_loginok", method = RequestMethod.POST)
