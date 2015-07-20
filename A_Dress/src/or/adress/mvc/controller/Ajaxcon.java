@@ -771,7 +771,7 @@ public class Ajaxcon {
 	}
 
 	// 본사 - 정산관리 - 품목별 매출순위 - 테이블 검색
-	@RequestMapping(value = "bon_ajaxproductsale", method = RequestMethod.POST)
+	@RequestMapping(value = "bon_ajaxproductsmang", method = RequestMethod.POST)
 	public ModelAndView bon_ajaxproductsale(String pro_code, String startdate,
 			String enddate) {
 		System.out.println(pro_code + startdate + enddate);
