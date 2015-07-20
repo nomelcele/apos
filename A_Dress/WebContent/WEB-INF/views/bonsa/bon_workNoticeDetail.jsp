@@ -1,11 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
-
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 본사의 업무관리의 공지사항 상세보기 페이지 입니다. --%>
+<style>
+	.error {
+		color: red;
+		font-weight: bold;
+	}
+</style>
 <script>
+	// Page에서 F5(새로고침)을 방지함 
+	window.onkeydown = function() {
+		var kcode = event.keyCode;
+		if(kcode == 116) event.returnValue = false;
+	}
+
 	function goUrlshcin(){
-		document.getElementById("commin").submit();
+		document.commin.save_to_db.disabled = true;
 	}
 	function delteaction(){
 		document.getElementById("deleteform").submit();
@@ -13,6 +25,7 @@
 	function listaction(){
 		document.getElementById("listform").submit();
 	}
+	
 </script>
 <script>
 	function gourl31(page){
@@ -99,12 +112,15 @@
 						
                      </div>
 <!--                      </form> -->
-                     <form method="post" action="bon_commin" id="commin">
+
+<!--                      <form method="post" action="bon_commin" id="commin"> -->
+                     <form:form method="post" action="bon_commin" id="commin" commandName="commin" >
                      <div class="form-group">
                         <label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
                         <div class="col-lg-6">
-                           <input type="text" class="form-control" id="inputPassword1"
-                              placeholder="댓글을 입력하세요." name="comm_cont">
+<!--                            <input type="text" class="form-control" id="inputPassword1" placeholder="댓글을 입력하세요." name="comm_cont" > -->
+                           		<form:input path="comm_cont" cssClass="form-control" id="comm_cont" placeholder="댓글을 입력하세요"/>
+                           		<form:errors path="comm_cont" cssClass="error"></form:errors>
                         </div>
                      </div>
                      <div class="form-group">
@@ -114,7 +130,10 @@
                      </div>
 				
 				  <input type="hidden" name="comm_bonum" value="${v.no}">
-                  </form>
+				  <input type="hidden" name="no" value="${v.no }">
+			      <input type="hidden" name="page" value="1">
+				  </form:form>
+<%--                   </form> --%>
                </div>
             </section>
          </div>
