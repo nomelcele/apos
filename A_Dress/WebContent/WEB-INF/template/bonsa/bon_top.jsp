@@ -111,7 +111,7 @@
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         	
                             <span class="profile-ava">
-                              <img alt="" src="resources/img/ee.JPG" align="center">
+                              <img alt="" src="resources/img/A-4.JPG" style="width:40px; height: 40px; align="center">
                             </span>
                             <span class="form-control" style="color: black; font-family:'1훈바람언덕' "> [${sessionScope.bon_name}] 님 환영합니다  </span>&nbsp;
                             <b class="caret"></b>
