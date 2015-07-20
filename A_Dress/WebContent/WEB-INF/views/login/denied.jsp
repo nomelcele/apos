@@ -6,19 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 </head>
 <body>
-<button type="button"  id="return" 	onclick="javascript:history.back(-1)">Return</button>
-
-<script>
-function return_1() {
-		document.getElementById("dreturn").submit();
-
-	}
-</script>
-	<form action="return_denied" method="post" id="dreturn">
-       <img src ="resources/img/wrong.jpg" style="margin-left:5px" width="100%"; height="70%";>
-</form>
 
 
+       <a href="javascript:history.back(-1)"><img src ="resources/img/wrong.jpg" style="margin-top:-10px" width="102%"; height="70%";></a>
      
 </body>
 </html>
