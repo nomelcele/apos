@@ -44,7 +44,7 @@
                         <div style="margin-bottom: -1%">
 
                            <div class="col-lg-3" style="margin-left: -5%">
-                               <label for="cname" class="control-label col-lg-6" style="font-size: 13px;">이름
+                               <label for="cname" class="control-label col-lg-6" style="font-size: 13px;">상품코드
                               </label> <input class="form-control" id="pro_code" name="pro_code"
                                  style="width: 50%" autocomplete="off" type="text" required />
                               <button class="form-control6" type="button"
