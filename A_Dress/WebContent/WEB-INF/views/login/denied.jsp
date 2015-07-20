@@ -14,7 +14,7 @@ function return_1() {
 	}
 </script>
 	<form action="return_denied" method="post" id="dreturn">
-       <img src ="resources/img/wrong.jpg" style="margin-left: 73px ;">
+       <img src ="resources/img/wrong.jpg" style="margin-left:5px" width="100%"; height="70%";>
 </form>
 
 
