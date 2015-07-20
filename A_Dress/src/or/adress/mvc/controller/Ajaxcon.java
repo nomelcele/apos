@@ -873,7 +873,7 @@ public class Ajaxcon {
 				enddate);
 		Iterator<SalesCheckVO> it = list.iterator();
 		StringBuffer res = new StringBuffer();
-		res.append("[ ['Month', '매출액', '판매량' ],");
+		res.append("[ ['Month', '매출액' ],");
 		while (it.hasNext()) {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
