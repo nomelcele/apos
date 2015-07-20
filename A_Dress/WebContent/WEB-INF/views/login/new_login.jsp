@@ -33,6 +33,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
+    
 </head>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -147,6 +148,7 @@
 	});
 	
 </script>
+<div style=margin-top:6%;>
 <body class="login-img3-body">
 <form action="submithot" id="submithot" method="post">
 </form>
@@ -241,7 +243,7 @@
 						
 						
 						<div id="target"></div>
-						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>
+						<div class="hidebtn" style="text-align: center;"></div>
 						
 					</div>
 				</div>
@@ -252,7 +254,7 @@
 	
 	<!-- 핫키발급 모달 -->
 	<div id="modal3" class="modal fade">
-		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
+		<div class="modal-dialog" style="width: 500px; height:auto; text-align: center;">
 			<div class="modal-content">
 			<div class="modal-header">
 					<!-- 닫기(x) 버튼 -->
@@ -291,7 +293,7 @@
 	
 	<!-- 핫키확인모달 -->
 <div id="modal4" class="modal fade">
-		<div class="modal-dialog" style="width: 600px; height:auto; text-align: center;">
+		<div class="modal-dialog" style="width: 500px; height:auto; text-align: center;">
 			<div class="modal-content">
 				<!-- header -->
 				<div class="modal-header">
@@ -305,16 +307,16 @@
 				<form method="post" action="submithot" name="checkhot" id="checkhot" autocomplete="off">
 					<div style="width: 100%;" >
 						<div class="modal-body2">
-							E-mail:<input type="text" class="form-control4 block" id="email" name="email" placeholder="email" autofocus>
+							<input type="text" class="form-control4 block" id="email" name="email" placeholder="이메일" autofocus>
 						</div>
 						<div class="modal-body2">
-							사업자 번호:<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="crnum"  autofocus>
+							<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="사업자번호"  autofocus>
 						</div>
 						<div class="modal-body2">
-							HotKey:<input type="text" class="form-control4 block" id="hotkey2" name="hotkey" placeholder="hotkey" autofocus>
+							<input type="text" class="form-control4 block" id="hotkey2" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
 						<div id="target"></div>
-						<div class="hidebtn" style="text-align: center;">**hotkey가 없으신분은 발급받으시길 바랍니다**</div>
+						<div class="hidebtn" style="text-align: center;"></div>
 						<input type="button" id="nextJoinBtn" class="btn btn-default hidebtn" value="다음">
 					</div>
 				</form>
@@ -421,7 +423,7 @@
 					
 						<!-- Footer -->
 						<div class="modal-footer" >
-							
+							</div>
 						</div>
 				</div>
 			</div>
