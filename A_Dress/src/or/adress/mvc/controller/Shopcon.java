@@ -204,9 +204,9 @@ public class Shopcon {
 	// 회원관리 - 회원가입 -가입완료
 	@RequestMapping(value = "/sh_memberjoinjoin", method = RequestMethod.POST)
 	public ModelAndView sh_memberjoinjoin(MemVO vo) {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("shop/sh_memberJoin");
+
 		System.out.println("고객이름:" + vo.getMem_name());
+		ModelAndView mav = new ModelAndView();
 		shopdao.insertMem(vo);
 		mav.setViewName("shop/sh_index");
 		return mav;
