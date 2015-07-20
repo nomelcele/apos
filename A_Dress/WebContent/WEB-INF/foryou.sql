@@ -61,8 +61,7 @@ mem_mileage number(10),
 mem_date date,
 mem_shopnum number(10),
 mem_email varchar2(50),
-mem_id varchar2(10),
-mem_pwd  varchar2(20),
+
 
 constraint member_memb_shopnum_fk foreign key(mem_shopnum)
 references shop(shop_num) on delete cascade
