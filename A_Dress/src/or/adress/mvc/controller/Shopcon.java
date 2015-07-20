@@ -200,7 +200,14 @@ public class Shopcon {
 		mav.setViewName("shop/sh_memberJoin");
 		return mav;
 	}
-
+	// 회원관리-회원가입 - sh_memberjoinCancel
+	@RequestMapping(value = "/sh_memberjoinCancel")
+	public ModelAndView sh_memberCancel() {
+		System.out.println("캔슬얍");
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("shop/sh_index");
+		return mav;
+	}
 	// 회원관리 - 회원가입 -가입완료
 	@RequestMapping(value = "/sh_memberjoinjoin", method = RequestMethod.POST)
 	public ModelAndView sh_memberjoinjoin(MemVO vo) {
