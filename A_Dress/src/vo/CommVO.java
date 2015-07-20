@@ -1,16 +1,25 @@
 package vo;
 
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class CommVO {
-	int r_num, comm_num, comm_bonum;
-	String comm_writer, comm_cont, comm_date;
-	public int getR_num() {
-		return r_num;
-	}
-	public int getComm_bonum() {
+	private int r_num, comm_num;
+	private String comm_writer, comm_date, comm_bonum;
+	@NotEmpty(message = "³»¿ëÀ» ÀÔ·ÂÇÏ¼¼¿ä.")
+	@Pattern(regexp=".*[0-9a-zA-Z¤¡-ÆR]", message="Àß¸øµÈ ÀÔ·ÂÀÔ´Ï´Ù.(Æ¯¼ö¹®ÀÚ <,> »ç¿ë ºÒ°¡)")
+	private String comm_cont;
+	
+	public String getComm_bonum() {
 		return comm_bonum;
 	}
-	public void setComm_bonum(int comm_bonum) {
+	public void setComm_bonum(String comm_bonum) {
 		this.comm_bonum = comm_bonum;
+	}
+	
+	public int getR_num() {
+		return r_num;
 	}
 	public void setR_num(int r_num) {
 		this.r_num = r_num;
