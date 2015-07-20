@@ -167,7 +167,7 @@ document.getElementById("profilechange").submit();
                         <img alt="" src="master/${sessionScope.shop_img}" align="center" style="width:40px; height: 40px;  border-radius:150px;">
                   </span> <span class="form-control" id="master_span"
                      style="color: black;">
-                        [${sessionScope.shop_name}] - [${sessionScope.shop_master}] 님
+                        [${sessionScope.shop_name}] - ${sessionScope.shop_master}님
                         환영합니다 </span>&nbsp; 
 <!--                         <span class="form-control" id="staff_span" -->
 <!--                      style="color: black; display: none;"> -->
