@@ -145,10 +145,10 @@
 					<thead>
 
 						<tr>
-							<th><i class="icon_profile"></i>날짜</th>
-							<th><i class="icon_profile"></i>물품명</th>
-							<th><i class="icon_mail_alt"></i>판매 액</th>
-							<th><i class="icon_pin_alt"></i>판매 수량</th>
+							<th>날짜</th>
+							<th>물품명</th>
+							<th>판매 액</th>
+							<th>판매 수량</th>
 						</tr>
 
 					</thead>
