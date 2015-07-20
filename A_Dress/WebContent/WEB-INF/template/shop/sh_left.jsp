@@ -266,7 +266,7 @@
 				<ul class="sub">
 					<li><a class="" href="javascript:goUrl('notice')">✔ 공지사항</a></li>
 					<li><a class="" href="javascript:goUrl('workitr')">✔ 내부 규정</a></li>
-					<li><a class="" href="javascript:goUrl('workTel')">✔ 연락처</a></li>
+					<li><a class="" href="javascript:goUrl('workTel')">✔ 매장 직원 연락처</a></li>
 					<li><a class="" href="javascript:goUrl('calendar')">✔ 일정관리</a></li>
 					<li><a class="" href="javascript:goUrl('videochat')">✔ 화상 회의</a></li>
 					
