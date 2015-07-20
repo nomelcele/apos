@@ -33,7 +33,7 @@
          <div class="row" style="font-size: 15px;">
             <div class="col-lg-12" style="width: 125%">
                <h3 class="page-header">
-                  <i class="fa fa-files-o"></i> 상품세일조정
+                  <i class="fa fa-files-o"></i> 상품 세일 조정
                </h3>
 
                <header class="panel-heading tab-bg-primary ">
@@ -107,7 +107,7 @@
                               <td rowspan="2"><div class="btn-group"><a class="btn btn-success" href="javascript:saleaccept()"><i class="icon_check_alt2"></i></a></div></td>
                            </tr>
                            <tr class="active">
-                           		<td>내용		:	</td>
+                           		<td>세일 내용	:	</td>
                            		<td colspan="3"><input type="text" class="form-control" name='sale_content' id="sale_content" value=""></td>
                            </tr>
                            </form>
