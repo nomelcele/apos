@@ -26,7 +26,7 @@ function open_win3(img3)
 </script>
 <section id="main-content">
 	<section class="wrapper">
-		<div class="row" style="font-size: 15px; width:100%; height:100%">
+		<div class="row" style="font-size: 13px; width:100%; height:100%">
 			<div class="col-lg-12">
 
 				<h3 class="page-header">

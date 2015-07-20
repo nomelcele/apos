@@ -59,7 +59,7 @@
 				<i class="fa fa-files-o"></i> 출결
 			</h3>
 
-			<div class="row" style="font-size: 12px; width: 100%; height: 100%;">
+			<div class="row" style="font-size: 12px; width: 125%; height: 100%;">
 				<div class="col-lg-21" style="margin-left: 20px">
 
 

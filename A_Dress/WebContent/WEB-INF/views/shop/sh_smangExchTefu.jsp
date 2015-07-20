@@ -44,7 +44,7 @@ function sh_managEx(num){
 				</div>
 			</section>
 			<section class="panel">
-				<div class="col-lg-12">
+				<div class="col-lg-12" style="width: 125%">
 
 					<div class="panel-body">
 						<form class="form-inline" role="form">
