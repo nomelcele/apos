@@ -11,8 +11,8 @@ video {
 <section id="main-content">
 
 	<section class="wrapper">
-		<div class="row" style="font-size: 15px;">
-			<div class="col-lg-12">
+		<div class="row" style="font-size: 15px; width: 125%;">
+			<div class="col-lg-12" >
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 본사와의 화상채팅
 				</h3>

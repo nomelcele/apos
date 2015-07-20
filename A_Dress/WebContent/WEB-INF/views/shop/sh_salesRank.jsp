@@ -19,7 +19,7 @@
                      if ($('#date_ps').val() != ""
                            && $('#date_ps2').val() != "") {
                         if ($('#date_ps').val() <= $('#date_ps2').val()) {
-                           alert("test2");
+                          // alert("test2");
                            $
                                  .ajax({
                                     url : "sh_ajax_outletsale?shop_num="
@@ -51,7 +51,7 @@
                                  //alert("callback");
                                  res2 = eval(data);
                                  var result = eval(res2);
-                                 alert(res2);
+                                // alert(res2);
                                  drawVisualization();
                                  res2 = null;
                               }
@@ -108,7 +108,7 @@
    <section class="wrapper">
 
 
-      <div class="row" style="font-size: 15px;">
+      <div class="row" style="font-size: 15px; width: 100%">
          <div class="col-lg-12">
             <h3 class="page-header">
                <i class="fa fa-files-o"></i> 기간별 매출현황
