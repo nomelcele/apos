@@ -26,7 +26,7 @@ function open_win3(img3)
 </script>
 <section id="main-content">
 	<section class="wrapper">
-		<div class="row" style="font-size: 13px; width:100%; height:100%">
+		<div class="row" style="font-size: 8px; width:100%; height:100%">
 			<div class="col-lg-12">
 
 				<h3 class="page-header">
@@ -35,21 +35,21 @@ function open_win3(img3)
 
 				<div class="row">
 					<br />
-					<div class="col-sm-10" style="width: 125%;height: 100%">
+					<div class="col-sm-10" style="width: 135%;height: 100%">
 						<table class="table">
 							<thead>
 								<tr>
-									<th>신청번호</th>
-									<th>매장명</th>
-									<th>상품 이름</th>
+									<th style="width: 5%;">번호</th>
+									<th style="width: 8%;">매장</th>
+									<th style="width: 11%;">이름</th>
 									<th>코드</th>
 									<th>사이즈</th>
 									<th>가격</th>
-									<th>상품 사진</th>
+									<th>사진</th>
 									<th>바코드</th>
-									<th>신청 수량</th>
-									<th>신청현황</th>
-									<th>신청일</th>
+									<th>수량</th>
+									<th>현황</th>
+									<th>날짜</th>
 								</tr>
 							</thead>
 							<tbody>
