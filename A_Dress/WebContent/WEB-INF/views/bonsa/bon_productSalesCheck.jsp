@@ -7,7 +7,9 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
 	$(function() {
-		$('#btn').click(function() {
+		$('#btn')
+				.click(
+						function() {
 							// 							alert("shopname=" + $('#shop_name').val()
 							// 									+ "date_ps=" + $('#date_ps').val()
 							// 									+ "&date_ps2=" + $('#date_ps2').val());
@@ -16,7 +18,8 @@
 									&& $('#date_ps2').val() != "") {
 								if ($('#date_ps').val() < $('#date_ps2').val()) {
 									//alert("test2");
-									$.ajax({
+									$
+											.ajax({
 												url : "bon_ajaxproductsmang?pro_code="
 														+ $('#pro_code').val()
 														+ "&startdate="
@@ -36,8 +39,10 @@
 
 									$.ajax({
 										url : "bon_ajaxproductChart?pro_code="
-												+ $('#pro_code').val() + "&startdate="
-												+ $('#date_ps').val() + "&enddate="
+												+ $('#pro_code').val()
+												+ "&startdate="
+												+ $('#date_ps').val()
+												+ "&enddate="
 												+ $('#date_ps2').val(),
 										type : "post",
 										dataType : "html",
@@ -123,10 +128,9 @@
 								</label> <input id="date_ps" name="date_ps" autocomplete="off"
 									type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
-									name="date_ps2" autocomplete="off" type="date"
-									required /> <input class="form-control6"
-									style="margin-left: 10px;" type="button" id="btn"
-									name="btn" value="조회">
+									name="date_ps2" autocomplete="off" type="date" required /> <input
+									class="form-control6" style="margin-left: 10px;" type="button"
+									id="btn" name="btn" value="조회">
 
 							</div>
 
@@ -135,11 +139,11 @@
 
 					</div>
 				</form>
-
+				<div id="chart_div" style="width: 80%; height: 100%;"></div>
 
 				<table class="table table-striped table-advance table-hover">
 					<thead>
-						
+
 						<tr>
 							<th><i class="icon_profile"></i>날짜</th>
 							<th><i class="icon_profile"></i>물품명</th>
@@ -152,7 +156,7 @@
 
 					</tbody>
 				</table>
-				<div id="chart_div" style="width: 80%; height: 100%;"></div>
+
 
 
 				<!-- 				<div class="form-group" style="margin-left: 700px;"> -->

@@ -11,7 +11,7 @@ video {
 <section id="main-content">
 
 	<section class="wrapper">
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px; width: 125%;">
 			<div class="col-lg-12">
 				<h3 class="page-header">
 					<i class="fa fa-files-o"></i> 매장과 화상채팅
@@ -24,8 +24,7 @@ video {
 								<div id="localVideo" style="float: left; width: 48%;margin: 1%"></div>
 								<div id="remoteVideo" style="float: left; width: 48%;margin: 1%"></div>
 							</div>
-							<button onclick="exe()">click</button>
-							${test }
+							
 						</div>
 
 					</div>

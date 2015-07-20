@@ -105,8 +105,8 @@
 <section id="main-content">
 	<section class="wrapper">
 		<section class="panel">
-			<div class="row" style="font-size: 15px;">
-				<div class="col-lg-12" style="width: 125%">
+			<div class="row" style="font-size: 15px;width: 125%;">
+				<div class="col-lg-12" >
 					<div>
 					<h3 class="page-header">
 						<i class="fa fa-files-o"></i> 일정관리
