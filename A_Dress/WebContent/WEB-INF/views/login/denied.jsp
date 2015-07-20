@@ -6,7 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 </head>
 <body>
-<button type="button"  id="return" 	onclick="javascript:return_1()">Return</button>
+<button type="button"  id="return" 	onclick="javascript:history.back(-1)">Return</button>
+
 <script>
 function return_1() {
 		document.getElementById("dreturn").submit();
