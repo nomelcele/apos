@@ -750,7 +750,7 @@ public class Ajaxcon {
 				date_ps2);
 		Iterator<SalesCheckVO> it = list.iterator();
 		StringBuffer res = new StringBuffer();
-		res.append("[ ['Month', '판매 금액', '판매량' ],");
+		res.append("[ ['Month', '매출액' ],");
 		while (it.hasNext()) {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
@@ -758,7 +758,7 @@ public class Ajaxcon {
 			res.append(v.getSell_date()).append("',");
 			res.append(v.getSell_cash()).append(",");
 			;
-			res.append(v.getCount()).append(",");
+		
 			res.append("],");
 
 		}
@@ -809,7 +809,7 @@ public class Ajaxcon {
 				enddate);
 		Iterator<SalesCheckVO> it = list.iterator();
 		StringBuffer res = new StringBuffer();
-		res.append("[ ['Month', '판매 금액'],");
+		res.append("[ ['Month', '매출액'],");
 		while (it.hasNext()) {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
@@ -873,15 +873,14 @@ public class Ajaxcon {
 				enddate);
 		Iterator<SalesCheckVO> it = list.iterator();
 		StringBuffer res = new StringBuffer();
-		res.append("[ ['Month', '판매 금액', '판매량' ],");
+		res.append("[ ['Month', '매출액', '판매량' ],");
 		while (it.hasNext()) {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
 			res.append("['");
 			res.append(v.getSell_date()).append("',");
 			res.append(v.getSell_cash()).append(",");
-			;
-			res.append(v.getCount()).append(",");
+		
 			res.append("],");
 
 		}
