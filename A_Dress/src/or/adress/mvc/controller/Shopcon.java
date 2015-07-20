@@ -1,5 +1,7 @@
 package or.adress.mvc.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -19,6 +21,7 @@ import org.apache.ibatis.javassist.compiler.MemberResolver.Method;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -495,5 +498,55 @@ public class Shopcon {
 		return mav;
 
 	}
+	@RequestMapping(value = "/sh_memberDetail_cha",method=RequestMethod.GET)
+	public ModelAndView sh_memberDetail_cha(HttpSession session) {
+		
+		ModelAndView mav = new ModelAndView();
+		int shop_num =Integer.parseInt(session.getAttribute("shop_num").toString());
+		System.out.println("----------------------------"+shop_num);
+		mav.setViewName("shop/sh_smasterDetail");
+		ShopVO vo= shopdao.getvomaster(shop_num);
+		mav.addObject("v1", vo);
+		return mav;
+	}
+	//프로필 수정
 
-}
+	@RequestMapping(value = "/sh_detail_change", method = RequestMethod.POST)
+	public ModelAndView sh_memdetail_change(@ModelAttribute ShopVO vo,
+		HttpSession session) {
+		ModelAndView mav = new ModelAndView();
+		String path = session.getServletContext().getRealPath("/master/")
+				+vo.getSelfimg().getOriginalFilename();
+		System.out.println(session.getServletContext().getRealPath("/master/"));
+		File f = new File(path);
+		try {
+			vo.getSelfimg().transferTo(f);
+			
+		 } catch (IllegalStateException | IOException e) {
+			e.printStackTrace();
+		}
+		vo.setShop_img(vo.getSelfimg().getOriginalFilename());
+	if(vo.getShop_img().equals("")){
+	shopdao.fileinsert2(vo);
+	System.out.println(vo.getShop_img());
+	}else{
+	shopdao.fileinsert(vo);
+	}
+		
+		
+	System.out.println("자____"+vo.getSelfimg().getOriginalFilename());
+		
+		System.out.println(vo.getShop_adr());
+		
+		System.out.println(vo.getShop_master());
+		System.out.println(vo.getShop_mail());
+		System.out.println(vo.getShop_tel());
+		mav.setViewName("redirect:/sh_memberDetail_cha");
+		return mav;
+	}
+
+	}
+
+
+
+
