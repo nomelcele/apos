@@ -173,11 +173,14 @@ document.getElementById("profilechange").submit();
 <!--                      style="color: black; display: none;"> -->
 <%--                         [${sessionScope.shop_id}] 님 환영합니다 </span>&nbsp; <b class="caret"></b> --%>
 <!--                </a> -->
+
+
                   <ul class="dropdown-menu extended logout">
                      <div class="log-arrow-up"></div>
                      <li class="eborder-top">
-                     <a href="javascript: sh_memberDetail_cha()">
-                     <i class="icon_profile"></i> Shop Information</a></li>
+                      <a href="javascript: sh_memberDetail_cha()">
+                     <i class="icon_profile"></i> Shop Information</a>
+                     </li>
                    
                      <li><a href="j_spring_security_logout">
                      <i class="icon_key_alt"></i> Log Out</a></li>
