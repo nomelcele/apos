@@ -1,12 +1,11 @@
-/**
- * 
- */
+
+
 	var lastKey = '';
 	var check = false;
 	var loopKey = false;
 
 	function startSuggest() {
-		
+
 		if (check == false) {
 			setTimeout("sendKeyword();", 500);
 			loopKey = true;
@@ -14,6 +13,7 @@
 		check = true;
 	}
 	function sendKeyword() {
+
 		if (loopKey == false) {
 			return;
 		}
@@ -38,6 +38,7 @@
 				jsonObj = JSON.parse(response);
 				viewTable();
 			} else {
+				
 				document.getElementById("view").style.display = 'none';
 			}
 		}
