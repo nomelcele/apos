@@ -263,8 +263,9 @@
 		<ul class="sidebar-menu">
 
 
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_table"></i> <span>업무관리</span> <span
+			<li class="sub-menu"><a href="javascript:;" class="">
+			<span><img src = "img/work.ico" style="width: 20pt; height: 15pt;"></span> 
+			 <span>업무관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
@@ -277,16 +278,17 @@
 					
 				</ul></li>
 
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_document_alt"></i> <span>회원관리</span> <span
-					class="menu-arrow arrow_carrot-right"></span>
+			<li class="sub-menu"><a href="javascript:;" class=""> 
+			<span><img src = "img/member.ico" style="width: 20pt; height: 15pt;"></span> 
+			<span>  회원관리</span> <span class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
 					<li><a class="" href="javascript:goUrl('memberJoin')">✔ 회원가입</a></li>
 					<li><a class="" href="javascript:goUrl('memberCheck')">✔ 회원조회/수정</a></li>
 				</ul></li>
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_desktop"></i> <span>상품관리</span> <span
+			<li class="sub-menu"><a href="javascript:;" class="">
+			 <span><img src = "img/product.ico" style="width: 20pt; height: 15pt;"></span>
+			 <span> 상품관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
@@ -296,8 +298,9 @@
 						<li><a class="" href="javascript:goUrl('productgallery')">✔ LOOKBOOK</a></li>
 
 				</ul></li>
-			<li class="sub-menu"><a href="javascript:;" class=""> <i
-					class="icon_documents_alt"></i> <span>판매등록</span> <span
+			<li class="sub-menu"><a href="javascript:;" class="">
+			<sapn><img src = "img/smang.ico" style="width: 20pt; height: 15pt;"></sapn>
+			<span>판매등록</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
@@ -306,7 +309,8 @@
 				</ul></li>
 
 			<li class="sub-menu" id="hideMenu""><a href="javascript:;"
-				class=""> <i class="icon_documents_alt"></i> <span>정산관리</span> <span
+				class=""> <span><img src = "img/sales.ico" style="width: 20pt; height: 15pt;"></span> 
+				<span> 정산관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
