@@ -55,7 +55,7 @@ function openview2(img3)
 		<div class="row" style="font-size: 5px; width: 100%; height: 100%">
 			<div class="col-lg-12">
 
-				<h3 class="page-header">
+				<h3 class="page-header" style="font-family: '210 나무고딕' ">
 					<i class="fa fa-files-o"></i> 매장 재고관리
 				</h3>
 
