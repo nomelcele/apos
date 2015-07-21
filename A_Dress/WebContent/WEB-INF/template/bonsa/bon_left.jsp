@@ -234,7 +234,7 @@ function showNotification(){
              
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
-                          <span><img src = "img/work.ico" style="width: 20pt; height: 15pt;"></span> 
+                          <span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span> 
                           <span>업무관리</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
@@ -247,7 +247,7 @@ function showNotification(){
                   </li>
               <li class="sub-menu">
                       <a href="javascript:;" class="">
-                          <span><img src = "img/shop.ico" style="width: 20pt; height: 15pt;"></span> 
+                          <span><img src = "img/shop.ico" style="width: 17pt; height: 15pt;"></span> 
                           <span>매장관리</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
@@ -258,7 +258,7 @@ function showNotification(){
                   </li>       
                   <li class="sub-menu">
                       <a href="javascript:;" class="">
-                          <span><img src = "img/product.ico" style="width: 18pt; height: 15pt;"></span> 
+                          <span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span> 
                           <span>상품관리</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
@@ -270,7 +270,7 @@ function showNotification(){
                   </li>
                 <li class="sub-menu">
                       <a href="javascript:;" class="">
-                          <span><img src = "img/sales.ico" style="width: 20pt; height: 15pt;"></span> 
+                          <span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span> 
                           <span>정산관리</span>
                           <span class="menu-arrow arrow_carrot-right"></span>
                       </a>
