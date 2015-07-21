@@ -13,7 +13,7 @@ video {
 	<section class="wrapper">
 		<div class="row" style="font-size: 15px; width: 125%;">
 			<div class="col-lg-12" >
-				<h3 class="page-header">
+				<h3 class="page-header" style="font-family: '210 나무고딕' ">
 					<span><img src = "img/work.ico" style="width: 20pt; height: 15pt;"></span>본사와의 화상채팅
 				</h3>
 				<section class="panel" style="font-size: 8px;">
