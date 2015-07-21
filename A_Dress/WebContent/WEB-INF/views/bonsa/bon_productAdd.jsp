@@ -138,7 +138,7 @@ var procode = false;
 		<div class="row" style="font-size: 15px; margin-top: -3%;">
 			<div class="col-lg-12" style="width: 125%;">
 				<h3 class="page-header" style="font-family: '210 나무고딕' ">
-					<i class="fa fa-files-o"></i> 상품추가
+					<span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>상품추가
 				</h3>
 
 				<section class="panel">

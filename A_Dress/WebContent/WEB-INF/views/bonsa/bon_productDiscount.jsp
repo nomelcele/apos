@@ -44,7 +44,7 @@
          <div class="row" style="font-size: 15px;">
             <div class="col-lg-12" style="width: 125%">
                <h3 class="page-header" style="font-family: '210 나무고딕' ">
-                  <i class="fa fa-files-o"></i> 상품 세일 조정
+                 <span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>상품 세일 조정
                </h3>
 
                <header class="panel-heading tab-bg-primary ">

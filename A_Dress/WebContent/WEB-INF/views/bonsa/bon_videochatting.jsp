@@ -14,7 +14,7 @@ video {
 		<div class="row" style="font-size: 15px; width: 125%;">
 			<div class="col-lg-12">
 				<h3 class="page-header" style="font-family: '210 나무고딕' ">
-					<i class="fa fa-files-o"></i> 매장과 화상채팅
+					<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span>매장과 화상채팅
 				</h3>
 				<section class="panel" style="font-size: 8px;">
 					<div style="width: 80%">

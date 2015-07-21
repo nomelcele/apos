@@ -201,7 +201,7 @@
 			<div class="col-lg-12" style="width: 125%; height: 100%;">
 				<section class="panel">
 					<h3 class="page-header" style="font-family: '210 나무고딕' ">
-					<i class="fa fa-files-o"></i> 매장 조회
+					<span><img src = "img/shop.ico" style="width: 17pt; height: 15pt;"></span>매장 조회
 				</h3>
 					<table class="table" style="width: 100%; height: 100%;">
 						<thead>
