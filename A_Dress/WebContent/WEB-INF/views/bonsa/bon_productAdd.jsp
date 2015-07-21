@@ -137,7 +137,7 @@ var procode = false;
 
 		<div class="row" style="font-size: 15px; margin-top: -3%;">
 			<div class="col-lg-12" style="width: 125%;">
-				<h3 class="page-header">
+				<h3 class="page-header" style="font-family: '210 나무고딕' ">
 					<i class="fa fa-files-o"></i> 상품추가
 				</h3>
 
@@ -157,7 +157,7 @@ var procode = false;
 								<div style="margin: 0; width: 100%; margin-top: 1%;">
 
 
-									<div class="form-group ">
+									<div class="form-group " style="font-family: '210 나무고딕' ">
 										<label style="width: 30%; float: left;" for="cname"
 											class="control-label col-lg-2">물품명</label>
 										<div class="col-lg-2" style="float: left; width: 50%;">
