@@ -9,7 +9,7 @@
 			<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12">
 					<h3 class="page-header">
-						<i class="fa fa-files-o">상품이동요청</i>
+						<span><img src = "img/product.ico" style="width: 18pt; height: 15pt;"></span>상품이동요청
 					</h3>
 					<form action="sh.apos" method="post"
 						style="margin-top: 50px; margin-left: 50px;">
