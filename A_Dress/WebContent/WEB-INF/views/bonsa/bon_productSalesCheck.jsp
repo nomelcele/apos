@@ -31,6 +31,7 @@
 												success : function(data) {
 													//alert(data);
 													str = data.trim();
+													alert(str);
 													document
 															.getElementById("view_product").innerHTML = str;
 												}
