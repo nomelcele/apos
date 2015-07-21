@@ -97,21 +97,26 @@
 	// ID가 사용가능할때 || 비밀번호확인이 맞았을 때 
 	function gojoin() {
 		$('#shop_tel').val($('#tel1').val()+"-"+$('#tel2').val()+"-"+$('#tel3').val());
-		if (shopidchk == true) {
-			if (shoppwdchk == true) {
-				//010-0000-0000: 3+4+4+2 =13자리
-				//010-307-3333:3+3+4+2=12자리
-				if($('#shop_tel').val().length <12){
-					alert("전화번호를 확인하세요")
-				}else{
-					$('#feedback_form').submit();
+		if($('#selfimg').val().length>1){
+			if (shopidchk == true) {
+				if (shoppwdchk == true) {
+					//010-0000-0000: 3+4+4+2 =13자리
+					//010-307-3333:3+3+4+2=12자리
+					if($('#shop_tel').val().length <12){
+						alert("전화번호를 확인하세요")
+					}else{
+						$('#feedback_form').submit();
+					}
+				} else {
+					alert("비밀번호가 불일치 합니다");
+					return false;
 				}
 			} else {
-				alert("비밀번호가 불일치 합니다");
+				alert("ID 입력값이 잘못 되었습니다.");
 				return false;
 			}
-		} else {
-			alert("ID 입력값이 잘못 되었습니다.");
+		}else{
+			alert("사진을 첨부해주세요");
 			return false;
 		}
 	}
