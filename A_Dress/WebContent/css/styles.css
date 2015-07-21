@@ -853,7 +853,7 @@ Screenshots
     float: left;
     min-height: 100%;
     width: 25%;
-    background-color: #000;
+    background-color: #FFFFFF;
     list-style: none;
 }
 .screenshots figure {
@@ -878,7 +878,8 @@ Screenshots
     padding: 25% 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(63, 97, 132, 0.85);
+    background-color: rgba(255, 176, 224, 0.85);
+    border-color:white;
     text-align: center;
     font-size: 15px;
     opacity: 0;
