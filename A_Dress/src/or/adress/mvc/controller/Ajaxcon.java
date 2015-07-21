@@ -1230,4 +1230,13 @@ public class Ajaxcon {
 		mav.addObject("res", res.toString());
 		return mav;
 	}
+	//상품 추가 상품 코드 유효성 검사
+		@RequestMapping(value="bo_codechk")
+		public ModelAndView bo_codechk(String pro_code){
+			ModelAndView mav = new ModelAndView("ajax/bon_codechk");
+			System.out.println(pro_code);
+			int count =pdao.pro_codechk(pro_code);
+			mav.addObject("res", count);
+			return mav;
+		}
 }
