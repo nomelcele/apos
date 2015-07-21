@@ -65,6 +65,8 @@
          document.getElementById("stock").submit();
       }else if(str == "move"){
          document.getElementById("move").submit();
+      }else if(str == "gallery"){
+          document.getElementById("gallery").submit();        
       } else if(str == "table"){
          document.getElementById("table").submit();
       } else if(str == "rank"){
@@ -254,7 +256,7 @@
                       <ul class="sub">
                           <li><a class="" href="javascript:goUrl('pcheck')">상품조회</a></li>
                           <li><a class="" href="javascript:goUrl('stock')">상품재고관리</a></li>
-                          
+                           <li><a class="" href="javascript:goUrl('gallery')">상품갤러리</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
