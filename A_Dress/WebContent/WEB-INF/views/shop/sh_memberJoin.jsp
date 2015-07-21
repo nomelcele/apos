@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
-
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<style>
+	.error{
+		color: red;
+	}
+</style>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
 	function sample4_execDaumPostcode() {
@@ -90,9 +94,8 @@
 <!-- 매장의 회원관리 - 회원가입 페이지입니다. -->
 <section id="main-content">
 	<section class="wrapper">
-<form class="form-validate form-horizontal" id="cancel"
-						method="post" action="sh_memberjoinCancel">
-						</form>
+		<form class="form-validate form-horizontal" id="cancel" method="post" action="sh_memberjoinCancel">
+		</form>
 		<div class="row" style="font-size: 15px; width: 125%; height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
@@ -107,14 +110,15 @@
 							<div class="panel-body">
 								<div class="form">
 
-									<form class="form-validate form-horizontal" id="member_form"
-										method="post" action="sh_memberjoinjoin">
+<%-- 									<form class="form-validate form-horizontal" id="member_form" method="post" action="sh_memberjoinjoin"> --%>
+									<form:form commandName="member_form" cssClass="form-validate form-horizontal" id="member_form" method="post" action="sh_memberjoinjoin">
 										<div class="form-group ">
 											<label for="cname" class="control-label col-lg-2">이름<span
 												class="required">*</span></label>
-											<div class="col-lg-2">
-												<input class="form-control" style="width: 50%" id="mem_name"
-													name="mem_name" type="text" required />
+											<div class="col-lg-3">
+<!-- 												<input class="form-control" style="width: 50%" id="mem_name" name="mem_name" type="text" required /> -->
+													<form:input path="mem_name"  cssClass="form-control" style="width: 50%" id="mem_name"/>
+													<form:errors path="mem_name" cssClass="error"/>
 											</div>
 										</div>
 
@@ -124,8 +128,7 @@
 												<span class="required">*</span>
 											</label>
 											<div class="col-lg-2">
-												<input class="form-control1 " id="mem_date" type="date"
-													style="width: 50%" name="mem_date" required />
+												<input class="form-control1 " id="mem_date" type="date"  style="width: 50%" name="mem_date" required />
 											</div>
 										</div>
 
@@ -134,8 +137,9 @@
 												<span class="required">*</span>
 											</label>
 											<div class="col-lg-4">
-												<input class="form-control " id="smail" type="mem_email"
-													name="mem_email" style="width: 80%" required />
+<!-- 												<input class="form-control " id="smail" type="mem_email" name="mem_email" style="width: 80%" required /> -->
+													<form:input path="mem_email" cssClass="form-control " id="smail" style="width: 40%" />
+													<form:errors path="mem_email" cssClass="error"/>
 											</div>
 										</div>
 
@@ -147,12 +151,12 @@
 											<div class="">
 												<input class="form-control"
 													style="width: 20%; margin-left: 40px;" id="tel1"
-													maxlength="3" type="tel" required />- <input
+													minlength="3" maxlength="3" type="tel" required />- <input
 													class="form-control" style="width: 20%" id="tel2"
-													type="tel" required maxlength="4" />- <input
+													type="tel" required minlength="3" maxlength="4" />- <input
 													class="form-control" style="width: 20%" id="tel3"
-													type="tel" required maxlength="4" /> <input type="hidden"
-													name="mem_tel" id="mem_tel">
+													type="tel" required minlength="4" maxlength="4" /> ]
+													<input type="hidden" name="mem_tel" id="mem_tel">
 											</div>
 										</div>
 
@@ -197,7 +201,8 @@
 												onclick="javascript:joinCancel()">Cancel</button>
 											</div>
 										</div>
-									</form>
+										</form:form>
+<%-- 									</form> --%>
 								</div>
 							</div>
 						</section>
