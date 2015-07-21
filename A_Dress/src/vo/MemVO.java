@@ -1,10 +1,18 @@
 package vo;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 // 컬럼명 일치!!
 public class MemVO {
+	@NotEmpty(message="이름을 입력해주세요.")
+	private String mem_name;
+	@NotEmpty(message="E-Mail을 입력해주세요.")
+	@Email(message="E-Mail 형식이 아닙니다. 다시 입력해주세요.")
+	private String mem_email;
+	
 	private int mem_num,mem_mileage,mem_shopnum;
-	private String mem_name,mem_tel,mem_post,mem_addr
-	,mem_deaddr,mem_date,mem_email;
+	private String mem_tel,mem_post,mem_addr,mem_deaddr,mem_date;
 	public int getMem_num() {
 		return mem_num;
 	}
