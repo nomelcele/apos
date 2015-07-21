@@ -12,7 +12,7 @@
 			<div class="col-lg-12">
 
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 매장 Hotkey 발급 대기자
+					<span><img src = "img/shop.ico" style="width: 17pt; height: 15pt;"></span>매장 Hotkey 발급 대기자
 				</h3>
 
 				<div class="row">

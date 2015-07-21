@@ -110,7 +110,7 @@
 		<div class="row" style="font-size: 15px; width: 100%; height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header" style="font-family: '210 나무고딕' ">
-					<i class="fa fa-files-o"></i> 대리점별 매출순위
+					<span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>대리점별 매출순위
 				</h3>
 				</br>
 				<form action="*.apos" id="otsearch" method="post"

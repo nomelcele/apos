@@ -79,7 +79,7 @@
 			<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12" style="width: 125%">
 					<h3 class="page-header" style="font-family: '210 나무고딕' ">
-						<i class="fa fa-files-o"></i> 상품 추천
+						<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span>상품 추천
 					</h3>
 
 					<header class="panel-heading tab-bg-primary ">

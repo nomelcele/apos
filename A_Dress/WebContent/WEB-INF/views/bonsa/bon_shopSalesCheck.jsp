@@ -7,7 +7,7 @@
 		<div class="row" style="font-size: 15px;">
 			<div class="col-lg-12">
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 매장별 매출순위
+					<span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>매장별 매출순위
 				</h3>
 
 

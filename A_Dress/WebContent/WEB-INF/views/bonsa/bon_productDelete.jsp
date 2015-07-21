@@ -47,7 +47,7 @@
 			<div class="row" style="font-size: 15px; margin-top: -3%">
 				<div class="col-lg-12">
 					<h3 class="page-header">
-						<i class="fa fa-files-o">상품삭제</i>
+						<span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>상품삭제
 					</h3>
 				</div>
 
