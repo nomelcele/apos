@@ -48,7 +48,7 @@
 								<div class="caption-content">
 									<a href="img/lookbook-1.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>Optimised For Design</p>
+										<p>Pocket white shirt</p>
 									</a>
 								</div>
 								</figcaption>
@@ -61,7 +61,7 @@
 								<div class="caption-content">
 									<a href="img/lookbook-14.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>User Centric Design</p>
+										<p>Orange  lipgloss </p>
 									</a>
 								</div>
 								</figcaption>
@@ -74,7 +74,7 @@
 								<div class="caption-content">
 									<a href="img/lookbook-8.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>Responsive and Adaptive</p>
+										<p>Blue sleeveless shirt</p>
 									</a>
 								</div>
 								</figcaption>
@@ -87,7 +87,7 @@
 								<div class="caption-content">
 									<a href="img/A-12.JPG" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>Absolutely Free</p>
+										<p>Blue neat sweater</p>
 									</a>
 								</div>
 								</figcaption>
@@ -104,7 +104,7 @@
 								<div class="caption-content">
 									<a href="img/a-50.JPG" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>Multi-Purpose Design</p>
+										<p>Denim overalls</p>
 									</a>
 								</div>
 								</figcaption>
@@ -117,7 +117,7 @@
 								<div class="caption-content">
 									<a href="img/lookbook-31.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>Exclusive to Codrops</p>
+										<p>Pocket Orange pants</p>
 									</a>
 								</div>
 								</figcaption>
@@ -130,7 +130,7 @@
 								<div class="caption-content">
 									<a href="img/a-25..JPG" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>Made with Love</p>
+										<p>Organic white T-shirt</p>
 									</a>
 								</div>
 								</figcaption>
@@ -143,7 +143,7 @@
 								<div class="caption-content">
 									<a href="img/a-45.JPG" class="single_image">
 										<i class="fa fa-search"></i><br>
-										<p>In Sydney, Australia</p>
+										<p>Button Pink jacket</p>
 									</a>
 								</div>
 								</figcaption>
@@ -156,6 +156,7 @@
 
 			</nav>
 		</div>
+
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="js/min/toucheffects-min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
