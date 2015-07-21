@@ -170,7 +170,7 @@
 					<div class="row" style="font-size: 15px; margin-top: -3%">
 						<div class="col-lg-12">
 							<h3 class="page-header">
-								<i class="fa fa-files-o"></i>고객검색
+								<sapn><img src = "img/smang.ico" style="width: 20pt; height: 15pt;"></sapn>고객검색
 							</h3>
 						</div>
 					</div>
@@ -234,7 +234,7 @@
 					<div class="row" style="font-size: 15px; margin-top: -3%" >
 						<div class="col-lg-12">
 							<h3 class="page-header">
-								<i class="fa fa-files-o"></i>구매정보
+								<sapn><img src = "img/smang.ico" style="width: 20pt; height: 15pt;"></sapn>구매정보
 							</h3>
 						</div>
 					</div>
