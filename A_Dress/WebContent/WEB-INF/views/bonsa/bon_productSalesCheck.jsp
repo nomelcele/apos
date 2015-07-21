@@ -31,9 +31,12 @@
 												success : function(data) {
 													//alert(data);
 													str = data.trim();
-													alert(str);
-													document
-															.getElementById("view_product").innerHTML = str;
+													if (str == "") {
+														alert("지정한 날짜에 해당 상품 판매 기록이 없습니다.");
+													} else {
+														document
+																.getElementById("view_product").innerHTML = str;
+													}
 												}
 
 											});
@@ -72,9 +75,8 @@
 		packages : [ "corechart" ]
 	});
 	google.setOnLoadCallback(drawVisualization);
-	var res2 = [ [ 'Month', '매출액' ], [ '2004/05', 165],
-			[ '2005/06', 135 ], [ '2006/07', 157 ],
-			[ '2007/08', 139 ], [ '2008/09', 136 ] ];
+	var res2 = [ [ 'Month', '매출액' ], [ '2004/05', 165 ], [ '2005/06', 135 ],
+			[ '2006/07', 157 ], [ '2007/08', 139 ], [ '2008/09', 136 ] ];
 	var res = [ [ 'Month', '남성', '여성', '유아', ], [ '2004-05', 165, 938, 522, ],
 			[ '2005-06', 135, 1120, 599, ], [ '2006-07', 157, 1167, 587, ] ];
 	function drawVisualization() {
