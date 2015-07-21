@@ -92,7 +92,7 @@
 						</li>
 						<li>
 							<figure>
-								<img src="img/BWS1.jpg"  style= "height:290px";  Screenshot 01">
+								<img src="img/BWS1.jpg"  style= "height:220px";  Screenshot 01">
 								<figcaption>
 								<div class="caption-content" style="z-index: 2;">
 									<a href="img/BWS2.jpg" class="single_image">
@@ -101,7 +101,7 @@
 									</a>
 								</div>
 									<div style="z-index: 1;">
-								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -120px;">
 								</div>
 								</figcaption>
 							</figure>
@@ -157,7 +157,7 @@
 						</li>
 						<li>
 							<figure>
-								<img src="img/a-45.JPG"  style= "height:280px";alt="Screenshot 01">
+								<img src="img/a-45.JPG"  style= "height:213px";alt="Screenshot 01">
 								<figcaption>
 								<div class="caption-content" style="z-index: 2;">
 									<a href="img/PJ.JPG" class="single_image">
@@ -170,6 +170,7 @@
 								</figcaption>
 							</figure>
 						</li>
+						
 					</ul>
 				</div>
 			</div>
