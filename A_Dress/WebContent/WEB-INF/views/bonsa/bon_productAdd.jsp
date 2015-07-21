@@ -186,7 +186,7 @@ var procode = false;
 										<label style="width: 30%; float: left;" for="cname"
 											class="control-label col-lg-2">판매금액</label>
 										<div class="col-lg-2" style="width: 50%; float: left;">
-											<input class="form-control" id="price" name=" pro_price"
+											<input class="form-control" id="price" name=" pro_price" maxlength="10"
 												minlength="2" type="text" required />
 										</div>
 									</div>
@@ -196,7 +196,7 @@ var procode = false;
 								<div class="form-group" style="margin-left: 18%">
 									<div style="float: left; width: 30%;">
 										<span>사진추가</span> <input type="file" id="pimg" name="pimg"
-											style="width: 70%;">
+											style="width: 100%;">
 
 									</div>
 									<div style="float: left; width: 40%;">
@@ -212,7 +212,7 @@ var procode = false;
 								<div class="form-group " style="margin-left: 18%">
 									<div style="float: left; width: 30%;">
 										<span>바코드 추가</span> <input type="file" id="bimg" name="bimg"
-											style="width: 70%;">
+											style="width: 100%;">
 
 									</div>
 									<div style="float: left; width: 40%;">
