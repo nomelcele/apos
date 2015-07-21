@@ -170,7 +170,7 @@
 					<div class="row" style="font-size: 15px; margin-top: -3%">
 						<div class="col-lg-12">
 							<h3 class="page-header" style="font-family: '210 나무고딕' ">
-								<sapn><img src = "img/smang.ico" style="width: 20pt; height: 15pt;"></sapn>고객검색
+								<sapn><img src = "img/smang.ico" style="width: 16pt; height: 15pt;"></sapn>고객검색
 							</h3>
 						</div>
 					</div>
