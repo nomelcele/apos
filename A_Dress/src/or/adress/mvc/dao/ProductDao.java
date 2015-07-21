@@ -112,4 +112,8 @@ public class ProductDao {
 	public void delete_calendar(String calen_procode){
 		ss.update("product.deletesalerate", calen_procode);
 	}
+	
+	public int pro_codechk(String pro_code){
+		return ss.selectOne("product.countcode",pro_code);
+	}
 }

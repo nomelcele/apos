@@ -21,10 +21,11 @@
 		$('#pre_pro_num').val(pro_num);
 		$('#pre_pro_code').val(pro_code);
 		$('#pre_pro_name').val(pro_name);
-		$('#pre_pro_img').html("<img src='product/"+pro_img+"' style=\"width: 100px;\">");
+		$('#pre_pro_img').html(
+				"<img src='product/"+pro_img+"' style=\"width: 100px;\">");
 		$('#pre_pro_price').val(pro_price);
-		
-		pre_img=pro_img;
+
+		pre_img = pro_img;
 	}
 	//상품 코드에 맞는 고객 찾기 
 	function bon_searchmem() {
@@ -35,36 +36,40 @@
 				pro_code : $('#pre_pro_code').val()
 			},
 			success : function(data) {
-				$("#mpdtarget").html(data);
+
+				if (data.trim() != "") {
+					$("#mpdtarget").html(data);
+				} else {
+					alert("적합한 대상이 없습니다.")
+				}
 			}
 		});
 	}
-	
-	
+
 	//메일 전송
-	function pro_chkmail(mail,name){
+	function pro_chkmail(mail, name) {
 		var res;
-		res = "상품 이름 :"+$('#pre_pro_name').val()+"\n\r"
-		+"상품 가격 :"+$('#pre_pro_price').val()+"\n\r";
-		if (confirm(name+"님에게 "+$('#pre_pro_name').val()+"을 추천 하시겠습니까 ?") == true){    //확인
+		res = "상품 이름 :" + $('#pre_pro_name').val() + "\n\r" + "상품 가격 :"
+				+ $('#pre_pro_price').val() + "\n\r";
+		if (confirm(name + "님에게 " + $('#pre_pro_name').val() + "을 추천 하시겠습니까 ?") == true) { //확인
 			$.ajax({
 				url : "bon_precommandsearchmail",
 				type : "POST",
 				data : {
-					mail: mail, name:name, res:res,img:pre_img
+					mail : mail,
+					name : name,
+					res : res,
+					img : pre_img
 				},
 				success : function(data) {
-				 
+
 				}
 			});
-			 alert("Mail전송이 완료되었습니다.");
-		}else{   //취소
-		    return;
+			alert("Mail전송이 완료되었습니다.");
+		} else { //취소
+			return;
 		}
-		
-		
-		
-		
+
 	}
 </script>
 <!-- 본사 상품관리 - 상품세일 -->
@@ -150,7 +155,7 @@
 										<td><input id="pre_pro_price" name="pre_pro_price"
 											autocomplete="off" type="text" readonly="readonly"
 											class="form-control" /></td>
-											
+
 										<td rowspan="2"><div class="btn-group">
 												<a class="btn btn-success" href="javascript:bon_searchmem()"><i
 													class="icon_check_alt2"></i></a>
