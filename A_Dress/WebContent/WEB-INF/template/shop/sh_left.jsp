@@ -105,6 +105,8 @@
 			document.getElementById("productStock").submit();
 		} else if (str == "productRequestState") {
 			document.getElementById("productRequestState").submit();
+		} else if (str == "productgallery") {
+			document.getElementById("productgallery").submit();
 		} else if (str == "sh_salesTable") {
 			document.getElementById("sh_salesTable").submit();
 		} else if(str == "calendar"){
@@ -225,6 +227,8 @@
 <!-- 상품신청현황 -->
 <form method="post" action="sh_productRequestState"
 	id="productRequestState"><input type="hidden" name="shop_num" value="${shop_num}"></form>
+<!-- 상품갤러리 -->
+<form method="post" action="sh_productgallery" id="productgallery"></form>
 
 <!-- 판매등록 -->
 <form method="post" action="sh_smangRegis" id=smangRegis></form>
@@ -289,6 +293,7 @@
 					<li><a class="" href="javascript:goUrl('productCheck')">✔ 상품조회</a></li>
 					<li><a class="" href="javascript:goUrl('productStock')">✔ 상품재고관리</a></li>
 					<li><a class="" href="javascript:goUrl('productRequestState')">✔ 상품신청현황</a></li>
+						<li><a class="" href="javascript:goUrl('productgallery')">✔ LOOKBOOK</a></li>
 
 				</ul></li>
 			<li class="sub-menu"><a href="javascript:;" class=""> <i
