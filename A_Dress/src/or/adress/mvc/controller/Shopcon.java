@@ -549,12 +549,15 @@ public class Shopcon {
 		System.out.println(vo.getShop_master());
 		System.out.println(vo.getShop_mail());
 		System.out.println(vo.getShop_tel());
-		mav.setViewName("redirect:/sh_memberDetail_cha");
+		mav.setViewName("redirect:/ssh_memberDetail_cha");
 		return mav;
 	}
+	@RequestMapping(value = "sh_productgallery")
+	public ModelAndView gallery() {
+		ModelAndView mav = new ModelAndView();
+        mav.setViewName("gallery/sh_productgallery");
+		return mav;
 
 	}
-
-
-
+}
 
