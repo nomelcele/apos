@@ -112,7 +112,7 @@
 
 <%-- 									<form class="form-validate form-horizontal" id="member_form" method="post" action="sh_memberjoinjoin"> --%>
 									<form:form commandName="member_form" cssClass="form-validate form-horizontal" id="member_form" method="post" action="sh_memberjoinjoin">
-										<div class="form-group ">
+										<div class="form-group " style="font-family: '210 나무고딕' ">
 											<label for="cname" class="control-label col-lg-2">이름<span
 												class="required">*</span></label>
 											<div class="col-lg-3">
@@ -123,7 +123,7 @@
 										</div>
 
 
-										<div class="form-group ">
+										<div class="form-group " style="font-family: '210 나무고딕' ">
 											<label for="cdate" class="control-label col-lg-2">생년월일
 												<span class="required">*</span>
 											</label>
@@ -132,7 +132,7 @@
 											</div>
 										</div>
 
-										<div class="form-group ">
+										<div class="form-group " style="font-family: '210 나무고딕' ">
 											<label for="cemail" class="control-label col-lg-2">E-Mail
 												<span class="required">*</span>
 											</label>
@@ -144,7 +144,7 @@
 										</div>
 
 
-										<div class="form-group ">
+										<div class="form-group " style="font-family: '210 나무고딕' ">
 											<label for="ctel" class="control-label col-lg-2">연락처
 												<span class="required">*</span>
 											</label>
@@ -161,7 +161,7 @@
 										</div>
 
 
-										<div class="form-group">
+										<div class="form-group" style="font-family: '210 나무고딕' ">
 											<label for="cadr" class="control-label col-lg-2">주소 <span
 												class="required">*</span></label>
 											<div class="col-lg-10">
@@ -177,7 +177,7 @@
 
 
 
-										<div class="form-group">
+										<div class="form-group" style="font-family: '210 나무고딕' ">
 											<label for="cadrr" class="control-label col-lg-2">상세주소
 												<span class="required">*</span>
 											</label>
@@ -193,7 +193,7 @@
 
 
 
-										<div class="form-group">
+										<div class="form-group" style="font-family: '210 나무고딕' ">
 											<div class="col-lg-offset-2 col-lg-10">
 												<button class="btn btn-primary" type="button"
 													onclick="javascript:joinaction()">Save</button>
