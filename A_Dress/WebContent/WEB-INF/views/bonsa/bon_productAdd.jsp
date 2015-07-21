@@ -157,7 +157,7 @@ var procode = false;
 								<div style="margin: 0; width: 100%; margin-top: 1%;">
 
 
-									<div class="form-group " style="font-family: '210 나무고딕' ">
+									<div class="form-group " >
 										<label style="width: 30%; float: left;" for="cname"
 											class="control-label col-lg-2">물품명</label>
 										<div class="col-lg-2" style="float: left; width: 50%;">
