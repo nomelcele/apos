@@ -5,9 +5,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 import or.adress.mvc.dao.BoardDao;
 import or.adress.mvc.dao.ProductDao;
@@ -18,9 +20,11 @@ import or.adress.mvc.dao.StockDao;
 import or.adress.mvc.service.ShopService;
 
 import org.apache.ibatis.javassist.compiler.MemberResolver.Method;
+import org.apache.poi.ss.formula.ptg.MemErrPtg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -195,7 +199,9 @@ public class Shopcon {
 
 	// 회원관리 - 회원가입
 	@RequestMapping(value = "/sh_memberJoin")
-	public ModelAndView sh_memberJoin() {
+	public ModelAndView sh_memberJoin(Map<String , Object> model) {
+		MemVO memvo = new MemVO();
+		model.put("member_form",memvo);
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("shop/sh_memberJoin");
 		return mav;
@@ -210,13 +216,17 @@ public class Shopcon {
 	}
 	// 회원관리 - 회원가입 -가입완료
 	@RequestMapping(value = "/sh_memberjoinjoin", method = RequestMethod.POST)
-	public ModelAndView sh_memberjoinjoin(MemVO vo) {
-
-		System.out.println("고객이름:" + vo.getMem_name());
+	public ModelAndView sh_memberjoinjoin(@Valid @ModelAttribute("member_form") MemVO vo, BindingResult result, Map<String , Object> model) {
 		ModelAndView mav = new ModelAndView();
-		shopdao.insertMem(vo);
-		mav.setViewName("shop/sh_index");
-		return mav;
+		if(result.hasErrors()){
+			mav.setViewName("shop/sh_memberJoin");
+			return mav;
+		}else{
+			System.out.println("고객이름:" + vo.getMem_name());
+			shopdao.insertMem(vo);
+			mav.setViewName("shop/sh_index");
+			return mav;
+		}
 	}
 
 	// 회원관리
