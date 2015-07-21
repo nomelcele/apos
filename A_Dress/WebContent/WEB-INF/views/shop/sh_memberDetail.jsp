@@ -29,7 +29,7 @@
 		<div class="row" style="font-size: 15px; width: 125%; height: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
-					<i class="fa fa-files-o">회원정보</i>
+					<span><img src = "img/member.ico" style="width: 20pt; height: 15pt;"></span>회원정보
 				</h3>
 			</div>
 

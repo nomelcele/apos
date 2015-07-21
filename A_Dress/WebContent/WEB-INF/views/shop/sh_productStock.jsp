@@ -90,7 +90,7 @@
 		<div class="row" >
 			<div class="col-lg-12" >
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 재고조정
+					<span><img src = "img/product.ico" style="width: 18pt; height: 15pt;"></span>재고조정
 				</h3>
 				<div class="row" style="font-size: 13px; width: 125%; ">
 					<div class="col-lg-12">

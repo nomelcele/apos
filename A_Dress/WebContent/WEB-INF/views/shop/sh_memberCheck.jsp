@@ -20,7 +20,7 @@
 		<div class="row" style="font-size: 15px;">
 			<div class="col-lg-12" style="width: 100%">
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 회원수정
+					<span><img src = "img/member.ico" style="width: 20pt; height: 15pt;"></span>회원수정
 				</h3>
 
 				<div class="row" style="width: 125%">
