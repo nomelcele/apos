@@ -75,7 +75,7 @@
 		<div class="row">
 			<div class="col-lg-12" style="width: 125%; height: 100%;">
 				<section class="panel">
-					<h3 class="page-header">
+					<h3 class="page-header"style="font-family: '210 나무고딕' ">
 					<i class="fa fa-files-o"></i> 화상 회의
 				</h3>
 					<table class="table" style="width: 100%; height: 100%;">
