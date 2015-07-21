@@ -17,7 +17,7 @@
 	}
 
 	function goUrlshcin(){
-		document.commin.save_to_db.disabled = true;
+		document.getElementById("commin").submit();
 	}
 	function delteaction(){
 		document.getElementById("deleteform").submit();
