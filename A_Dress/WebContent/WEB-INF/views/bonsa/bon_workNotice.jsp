@@ -37,7 +37,7 @@
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%; widows: 100%;">
 						<div class="col-lg-12">
-							<h3 class="page-header">
+							<h3 class="page-header" style="font-family: '210 나무고딕' ">
 								<i class="fa fa-files-o"></i> 공지사항 
 							</h3>
 						</div>
