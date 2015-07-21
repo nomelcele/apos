@@ -27,14 +27,19 @@
 	<input type="hidden" name="page" value="1">
 </form>
 <section id="main-content" >
-	<section class="wrapper">
-		<div class="row">
+	<section class="wrapper" >
+		<div class="row" >
 			<div class="col-lg-12" style="width:125%;">
 				<section class="panel">
-					<div class="row" style="font-size: 15px; margin-top: -3%; ">
+					<div class="row" style="font-size: 15px; 
+					margin-top: -3%; ">
 						<div class="col-lg-12">
-							<h3 class="page-header">
+
+					
+
+							<h3 class="page-header" style="font-family: '210 나무고딕' ">
 								<span><img src = "img/work.ico" style="width: 20pt; height: 15pt;"></span>공지사항
+
 							</h3>
 						</div>
 					</div>
