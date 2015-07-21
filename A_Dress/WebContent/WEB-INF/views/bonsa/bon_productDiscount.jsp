@@ -11,7 +11,11 @@
             pro_code : $('#pro_code').val()
          },
          success : function(data){
-            $("#bpdtarget").html(data);
+            if(data.trim()==""){
+            	alert("입력하신 상품코드는 존재 하지 않습니다.")
+            }else{
+        		$("#bpdtarget").html(data);
+            }
          }
       });
        $('#set_pro_code').val($('#pro_code').val());
@@ -105,7 +109,8 @@
                               <td><input type="text" class="form-control" name='set_pro_code'
                                  id="set_pro_code" value="" readonly="readonly"></td>
                               <td><input type="number" class="form-control"
-                                 name='set_pro_salerate' id="set_pro_salerate" value="0" style="width: 100px;"></td>
+                                 name='set_pro_salerate' id="set_pro_salerate" value="0" style="width: 100px;"
+                                 min="0" max="99"></td>
                                  <td><input id="sale_begin" name="sale_begin" autocomplete="off"
 									type="date" required /></td>
 								 <td><input id="sale_end"
