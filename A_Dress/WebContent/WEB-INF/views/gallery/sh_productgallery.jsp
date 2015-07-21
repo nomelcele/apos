@@ -43,14 +43,18 @@
 					<ul class="grid">
 						<li>
 							<figure>
-								<img src="img/lookbook-1.jpg" alt="Screenshot 01">
+								<img src="img/lookbook-1.jpg" alt="Screenshot 01" >
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/lookbook-1.jpg" class="single_image">
+								<div class="caption-content"  style="z-index: 2;">
+									<a href="img/PWS.jpg" class="single_image" >
 										<i class="fa fa-search"></i><br>
 										<p>Pocket white shirt</p>
 									</a>
 								</div>
+								<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
+								</div>
+								
 								</figcaption>
 							</figure>
 						</li>
@@ -58,11 +62,14 @@
 							<figure>
 								<img src="img/lookbook-14.jpg" alt="Screenshot 01">
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/lookbook-14.jpg" class="single_image">
+								<div class="caption-content" style="z-index: 2;">
+									<a href="img/OL.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
 										<p>Orange  lipgloss </p>
 									</a>
+								</div>
+									<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
 								</div>
 								</figcaption>
 							</figure>
@@ -71,24 +78,30 @@
 							<figure>
 								<img src="img/lookbook-8.jpg" alt="Screenshot 01">
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/lookbook-8.jpg" class="single_image">
+								<div class="caption-content" style="z-index: 2;">
+									<a href="img/BS.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
 										<p>Blue sleeveless shirt</p>
 									</a>
+								</div>
+								<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
 								</div>
 								</figcaption>
 							</figure>
 						</li>
 						<li>
 							<figure>
-								<img src="img/A-12.JPG"  style= "height:220px";  Screenshot 01">
+								<img src="img/BWS1.jpg"  style= "height:290px";  Screenshot 01">
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/A-12.JPG" class="single_image">
+								<div class="caption-content" style="z-index: 2;">
+									<a href="img/BWS2.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
 										<p>Blue neat sweater</p>
 									</a>
+								</div>
+									<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
 								</div>
 								</figcaption>
 							</figure>
@@ -101,12 +114,14 @@
 							<figure>
 								<img src="img/a-50.JPG" alt="Screenshot 01">
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/a-50.JPG" class="single_image">
+								<div class="caption-content" style="z-index: 2;">
+									<a href="img/BO.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
 										<p>Denim overalls</p>
 									</a>
 								</div>
+										<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
 								</figcaption>
 							</figure>
 						</li>
@@ -114,12 +129,14 @@
 							<figure>
 								<img src="img/lookbook-31.jpg" alt="Screenshot 01">
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/lookbook-31.jpg" class="single_image">
+								<div class="caption-content" style="z-index: 2;">
+									<a href="img/POP.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
 										<p>Pocket Orange pants</p>
 									</a>
 								</div>
+								<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
 								</figcaption>
 							</figure>
 						</li>
@@ -127,25 +144,29 @@
 							<figure>
 								<img src="img/a-25..JPG" alt="Screenshot 01">
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/a-25..JPG" class="single_image">
+								<div class="caption-content"style="z-index: 2;">
+									<a href="img/OWS.jpg" class="single_image">
 										<i class="fa fa-search"></i><br>
 										<p>Organic white T-shirt</p>
 									</a>
 								</div>
+								<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
 								</figcaption>
 							</figure>
 						</li>
 						<li>
 							<figure>
-								<img src="img/a-45.JPG" alt="Screenshot 01">
+								<img src="img/a-45.JPG"  style= "height:280px";alt="Screenshot 01">
 								<figcaption>
-								<div class="caption-content">
-									<a href="img/a-45.JPG" class="single_image">
+								<div class="caption-content" style="z-index: 2;">
+									<a href="img/PJ.JPG" class="single_image">
 										<i class="fa fa-search"></i><br>
 										<p>Button Pink jacket</p>
 									</a>
 								</div>
+								<div style="z-index: 1;">
+								<img src="" style="width: 30px; height: 30px; margin-left: 285px; margin-top: -140px;">
 								</figcaption>
 							</figure>
 						</li>
