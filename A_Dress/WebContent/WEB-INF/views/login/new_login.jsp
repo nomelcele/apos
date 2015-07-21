@@ -58,11 +58,6 @@
 	});
 		//////////////////////////////////
 		
-		
-		
-		
-		
-		
 		$('#nextJoinBtn').click(function(){
             $.ajax({
                    url: "NCRHOTcheck",
@@ -75,7 +70,7 @@
                    success: function(data) {
                     if(data.trim() == "true"){
                     	alert("success!")
-                    	$('#submithot').submit();
+                    	$('#checkhot').submit();
                     }else{
                     	alert("입력된 정보가 잘 못 되었습니다.")
                     }
@@ -103,7 +98,6 @@
 						email : $('#find_email1').val(),
 						name : $('#find_name1').val(),
 						tel : $('#find_tel1').val()+"-"+$('#find_tel2').val()+"-"+$('#find_tel3').val()
-						
 					},
 					success : function(data) {
 						// 실패 했을 때
