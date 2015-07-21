@@ -155,7 +155,7 @@
 			<div class="row" style="font-size: 13px;width: 100%;">
 				<div class="col-lg-12" >
 					<h3 class="page-header" style="font-family: '210 나무고딕' ">
-						<span><img src = "img/product.ico" style="width: 18pt; height: 15pt;"></span>상품조회
+						<span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>상품조회
 					</h3>
 
 					<header class="panel-heading tab-bg-primary ">
