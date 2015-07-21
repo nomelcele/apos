@@ -526,7 +526,7 @@ public class Bonsacon {
 		}
 		vo.setPro_barcode(vo.getBimg().getOriginalFilename());
 
-		String path2 = session.getServletContext().getRealPath("/product/")
+		String path2 = session.getServletContext().getRealPath("/barcode/")
 				+ vo.getPimg().getOriginalFilename();
 
 		System.out.println(path2);
