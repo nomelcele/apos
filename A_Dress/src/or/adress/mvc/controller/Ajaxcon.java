@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 
 import javax.mail.BodyPart;
@@ -448,7 +449,11 @@ public class Ajaxcon {
 
 	// 아이디중복체크
 	@RequestMapping(value = "/shopjoincheck")
-	public ModelAndView sh_shopjoincheck(String id) {
+	public ModelAndView sh_shopjoincheck(String id, Map<String,Object> model) {
+		ShopVO shopvo = new ShopVO();
+		shopvo.setShop_id(id);
+		model.put("joinForm",shopvo);
+		
 		ModelAndView mav = new ModelAndView("ajax/sh_shopjoincheck");
 		System.out.println(id);
 		boolean res = shdao.checkid(id);
