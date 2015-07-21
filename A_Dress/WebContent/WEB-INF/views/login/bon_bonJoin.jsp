@@ -259,7 +259,7 @@
 													idchk = true;
 													$("#viewID")
 															.html(
-																	"<p style=\"color:green;\">사용가능한 아이디입니다</p>");
+																	"<p style=\"color:green; \">사용가능한 아이디입니다</p>");
 
 												} else {
 													idchk = false;
@@ -334,7 +334,7 @@
 
 								<div class="form-group">
 									<span style="display: block;">아이디 :</span> <input
-										style="width: 20%" class="form-control" id="bon_" name="bon_"
+										style="width: 20%; " class="form-control" id="bon_" name="bon_"
 										type="text" value="bon_" readonly="readonly" />
 									<form:input path="bon_id" style="width: 79%"
 										class="form-control" id="bon_id" name="bon_id" type="text" />

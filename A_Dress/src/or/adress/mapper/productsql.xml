@@ -66,4 +66,8 @@
   		update product set pro_salerate=0 where pro_code like '%'||#{calen_procode}||'%'
   	</update>
   	
+  	
+  	<select id="countcode" parameterType="String" resultType="int">
+  	select count(*) count from product where pro_code =#{pro_code}
+  	</select>
 </mapper>

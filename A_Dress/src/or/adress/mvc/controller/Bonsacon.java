@@ -513,7 +513,7 @@ public class Bonsacon {
 			HttpSession session) {
 		System.out.println(vo.getPro_name());
 		ModelAndView mav = new ModelAndView();
-		String path = session.getServletContext().getRealPath("/upload/")
+		String path = session.getServletContext().getRealPath("/product/")
 				+ vo.getBimg().getOriginalFilename();
 
 		System.out.println(path);
@@ -526,7 +526,7 @@ public class Bonsacon {
 		}
 		vo.setPro_barcode(vo.getBimg().getOriginalFilename());
 
-		String path2 = session.getServletContext().getRealPath("/upload/")
+		String path2 = session.getServletContext().getRealPath("/product/")
 				+ vo.getPimg().getOriginalFilename();
 
 		System.out.println(path2);
