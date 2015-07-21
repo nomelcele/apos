@@ -64,7 +64,7 @@
 		<div class="row" style="font-size: 15px;">
 			<div class="col-lg-12" style="width: 125%;">
 				<h3 class="page-header" style="font-family: '210 나무고딕' ">
-					<span><img src = "img/sales.ico" style="width: 20pt; height: 15pt;"></span> 급여 관리
+					<span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span> 급여 관리
 				</h3>
 				</br>
 				<form action="*.apos" id="otsearch" method="post"
