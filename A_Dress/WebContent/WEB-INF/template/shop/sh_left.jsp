@@ -287,7 +287,7 @@
 					<li><a class="" href="javascript:goUrl('memberCheck')">✔ 회원조회/수정</a></li>
 				</ul></li>
 			<li class="sub-menu"><a href="javascript:;" class="">
-			 <span><img src = "img/product.ico" style="width: 20pt; height: 15pt;"></span>
+			 <span><img src = "img/product.ico" style="width: 18pt; height: 15pt;"></span>
 			 <span> 상품관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
