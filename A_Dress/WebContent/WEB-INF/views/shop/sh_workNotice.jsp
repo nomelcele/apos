@@ -48,10 +48,10 @@
 						style="font-size: 15px; ">
 						<tbody>
 							<tr>
-								<th>#</th>
-								<th><i class="icon_mail_alt"></i> 제목</th>
-								<th><i class="icon_profile"></i> 작성자</th>
-								<th><i class="icon_calendar"></i> 날짜</th>
+								<th  style="font-family: '210 나무고딕' ">#</th>
+								<th  style="font-family: '210 나무고딕' "><i class="icon_mail_alt" ></i> 제목</th>
+								<th  style="font-family: '210 나무고딕' "><i class="icon_profile"></i> 작성자</th>
+								<th  style="font-family: '210 나무고딕' "><i class="icon_calendar" ></i> 날짜</th>
 							</tr>
 							<c:forEach var="stList" items="${list}">
 								<tr>
@@ -74,7 +74,7 @@
 					<div>
 						<table>
 							<tr>
-								<td><a class="btn btn-danger btn-sm"
+								<td  style="font-family: '210 나무고딕' "><a class="btn btn-danger btn-sm"
 									href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
 								</td>
 							</tr>
