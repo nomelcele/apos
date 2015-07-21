@@ -264,7 +264,7 @@
 
 
 			<li class="sub-menu"><a href="javascript:;" class="">
-			<span><img src = "img/work.ico" style="width: 20pt; height: 15pt;"></span> 
+			<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span> 
 			 <span>업무관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
@@ -279,7 +279,7 @@
 				</ul></li>
 
 			<li class="sub-menu"><a href="javascript:;" class=""> 
-			<span><img src = "img/member.ico" style="width: 20pt; height: 15pt;"></span> 
+			<span><img src = "img/member.ico" style="width: 14pt; height: 14pt;"></span> 
 			<span>  회원관리</span> <span class="menu-arrow arrow_carrot-right"></span>
 			</a>
 				<ul class="sub">
@@ -287,7 +287,7 @@
 					<li><a class="" href="javascript:goUrl('memberCheck')">✔ 회원조회/수정</a></li>
 				</ul></li>
 			<li class="sub-menu"><a href="javascript:;" class="">
-			 <span><img src = "img/product.ico" style="width: 18pt; height: 15pt;"></span>
+			 <span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>
 			 <span> 상품관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
@@ -299,7 +299,7 @@
 
 				</ul></li>
 			<li class="sub-menu"><a href="javascript:;" class="">
-			<sapn><img src = "img/smang.ico" style="width: 20pt; height: 15pt;"></sapn>
+			<sapn><img src = "img/smang.ico" style="width: 16pt; height: 15pt;"></sapn>
 			<span>판매등록</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
@@ -309,7 +309,7 @@
 				</ul></li>
 
 			<li class="sub-menu" id="hideMenu""><a href="javascript:;"
-				class=""> <span><img src = "img/sales.ico" style="width: 20pt; height: 15pt;"></span> 
+				class=""> <span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span> 
 				<span> 정산관리</span> <span
 					class="menu-arrow arrow_carrot-right"></span>
 			</a>
