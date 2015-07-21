@@ -19,7 +19,7 @@
 
 		<div class="row" style="font-size: 15px;">
 			<div class="col-lg-12" style="width: 100%">
-				<h3 class="page-header">
+				<h3 class="page-header" style="font-family: '210 나무고딕' ">
 					<span><img src = "img/member.ico" style="width: 20pt; height: 15pt;"></span>회원수정
 				</h3>
 
