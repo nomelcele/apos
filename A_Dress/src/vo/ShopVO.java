@@ -12,40 +12,31 @@ import org.springframework.web.multipart.MultipartFile;
 public class ShopVO {
 	// 매장이 가입 할때 필요한 요소
 	// name, tel, adr, date, mail, master img, crnum
-	@NotEmpty(message = "올바른 입력값이 아닙니다.")
-	private String shop_name; 
-	private String shop_tel;
-	private String shop_adr;
-	private String shop_date;
-	@NotEmpty(message = "올바른 입력값이 아닙니다.")
+	// Valid : 이름, 사업자번호, 이메일, 매장이름
+	@NotEmpty(message = "Name을 입력해주세요")
 	private String shop_master;
-	private String shop_img;
-	private String shop_id;
-	private String pwdchk;
+	//@DecimalMin(value="100000",message="")
 	
-	
-	
-	private int shop_num;
-	private int shop_bonnum;
-//	@NotEmpty(message = "올바른 입력값이 아닙니다.")
-	@DecimalMin(value="100000")
-	private int shop_crnum;
-	
-	
-	
-	private float shop_map_x, shop_map_y;
-	  
-	private String tel1, tel2;
-	private MultipartFile selfimg;
-	private String tel3;
-	
-	@Pattern(regexp="^[_0-9a-zA-Z-]+@[0-9a-zA-Z]+(.[_0-9a-zA-Z-]+)*$")
-	@Email(message = "올바른 이메일 형식이 아닙니다.")
+	@NotEmpty(message = "ShopName을 입력해주세요")
+	private String shop_name; 
+//	@Email(message = "올바른 이메일 형식이 아닙니다.")
 	@NotEmpty(message = "이메일을 입력하세요.")
+	@Pattern(regexp="^[_0-9a-zA-Z-]+@[0-9a-zA-Z]+(.[_0-9a-zA-Z-]+)*$", message = "올바른 이메일 형식이 아닙니다.")
 	private String shop_mail;
 	
+	private String shop_adr;
+	private String shop_date;
+	private String shop_img;
+	private String shop_id;
+	private int shop_num;
+	private int shop_bonnum;
+	private int shop_crnum;
+	private float shop_map_x, shop_map_y;
+	private String shop_tel;
+	private String tel1, tel2, tel3;
+	private MultipartFile selfimg;
 	private String shop_pwd;
-	
+	private String pwdchk;
 	
 	public String getPwdchk() {
 		return pwdchk;
