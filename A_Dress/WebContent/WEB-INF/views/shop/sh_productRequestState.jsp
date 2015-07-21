@@ -30,7 +30,7 @@ function open_win3(img3)
 			<div class="col-lg-12">
 
 				<h3 class="page-header" style="font-family: '210 나무고딕' ">
-					<span><img src = "img/product.ico" style="width: 18pt; height: 15pt;"></span>상품 신청 현황 
+					<span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>상품 신청 현황 
 				</h3>
 
 				<div class="row">
