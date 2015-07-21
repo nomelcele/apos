@@ -98,17 +98,17 @@ function telaction(){
 											type="text"
 											placeholder=지점명>
 										<button type="button" id="btn"
-											onclick="javascript:telaction()" class="btn btn-primary">검색</button>
+											onclick="javascript:telaction()" class="btn btn-primary"  style="font-family: '210 나무고딕' ">검색</button>
 									</form>
 									<div id="view" class="form-control" style="display: none"></div>
 									<table class="table table-condensed">
 										<thead>
 											<tr>
-												<th>지원 번호</th>
-												<th>이름</th>
-												<th>직급</th>
-												<th>지점</th>
-												<th>연락처</th>
+												<th  style="font-family: '210 나무고딕' ">지원 번호</th>
+												<th style="font-family: '210 나무고딕' ">이름</th>
+												<th style="font-family: '210 나무고딕' ">직급</th>
+												<th style="font-family: '210 나무고딕' ">지점</th>
+												<th style="font-family: '210 나무고딕' ">연락처</th>
 											</tr>
 										</thead>
 										<tbody>
