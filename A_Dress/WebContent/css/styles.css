@@ -514,7 +514,7 @@ Buttons
 Navigation
 ========================================================================== */
 .nav-toggle {
-    position: absolute;
+    position: static;
     top: 0;
     right: 15px;
     z-index: 999999;
@@ -584,6 +584,7 @@ Hero
     background: rgb(40, 70, 102) url('../img/gueen2.png') no-repeat center center;
     background-size: cover;
     color: #fff;
+    margin-top:70px;
 }
 .hero h1 {
     margin: 200px 0 45px 0;
@@ -603,7 +604,7 @@ Hero
     height: 100%;
 }
 header i {
-    margin-left: 5px
+    margin-left: 5px;
 }
 
 /* ==========================================================================
