@@ -39,7 +39,7 @@ function sh_managEx(num){
 				<div class="col-lg-12">
 
 					<h3 class="page-header" style="font-family: '210 나무고딕' ">
-						<sapn><img src = "img/smang.ico" style="width: 20pt; height: 15pt;"></sapn>상품 환불
+						<sapn><img src = "img/smang.ico" style="width: 16pt; height: 15pt;"></sapn>상품 환불
 					</h3>
 				</div>
 			</section>
