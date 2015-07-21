@@ -17,6 +17,18 @@
 			value="/WEB-INF/template/bonsa/bon_left.jsp" />
 	</definition>
  	
+ 	<!-- gallery에 붙일 jsp지정 -->
+ 	<definition name="galleryTemplate" template="/WEB-INF/template/gallery/template.jsp">
+		<put-attribute name="top"
+			value="/WEB-INF/template/gallery/gallery_top.jsp" />
+		
+	</definition>
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
 	<definition name="shop/*" extends="shopTemplate">
 		<put-attribute name="body" value="/WEB-INF/views/shop/{1}.jsp">
 		</put-attribute>
@@ -24,6 +36,11 @@
 	
 	<definition name="bonsa/*" extends="bonsaTemplate">
 		<put-attribute name="body" value="/WEB-INF/views/bonsa/{1}.jsp">
+		</put-attribute>
+	</definition>
+	
+		<definition name="gallery/*" extends="galleryTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/gallery/{1}.jsp">
 		</put-attribute>
 	</definition>
 </tiles-definitions>
