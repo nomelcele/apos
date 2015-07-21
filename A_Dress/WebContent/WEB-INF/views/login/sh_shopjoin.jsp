@@ -7,12 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <script>
-	function gojoin() {
-		var tel = $('#tel1').val()+"-"+$('#tel2').val()+"-"+$('#tel3').val();
-		$('#shop_tel').val(tel);
-		$('#feedback_form').submit();
-		
-	}
+	var shopidchk = false;
+	var shoppwdchk = false;
+
 	function resetFormElement(e) {
 	      e.wrap('<form>').closest('form').get(0).reset(); 
 	      //리셋하려는 폼양식 요소를 폼(<form>) 으로 감싸고 (wrap()) , 
@@ -60,19 +57,64 @@
 		
 		// ID 중복체크
 		$('#sid').keyup(function(){
-			$('#targetID').load("shopjoincheck?id="+$('#sid').val());
+			if ($('#sid').val().length < 1) {
+				$("#targetID").hide();
+			}else{
+				$.ajax({
+					url : "shopjoincheck",
+					type : "POST",
+					data : {
+						id : "sh_"+ $('#sid').val()
+					},
+					success : function(data) {
+						$("#targetID").show();
+						// 없으면 true 있으면 false
+						if (data.trim() == "true") {
+							shopidchk = true;
+							$("#targetID").html("<p style=\"color:green;\">사용가능한 아이디입니다</p>");
+						} else {
+							shopidchk = false;
+							$("#targetID").html("<p style=\"color:red;\">이미 존재하는 아이디입니다</p>");
+						}
+					}
+				});
+			}
 		});
-		
+		// 매장 회원 가입 - 비밀번호 확인 
 		$('#spwdchk').keyup(function(){
 			if($('#spwd').val() == $('#spwdchk').val()){
 				$('#targetPWD').css("color","green");
 				$('#targetPWD').text("비밀번호가 일치합니다");
+				shoppwdchk = true;
 			}else{
 				$('#targetPWD').css("color","red");
 				$('#targetPWD').text("비밀번호가 일치하지 않습니다");
+				shoppwdchk = false ;
 			}
 		});
 	});
+	// Submit Button -매장 회원가입
+	// ID가 사용가능할때 || 비밀번호확인이 맞았을 때 
+	function gojoin() {
+		$('#shop_tel').val($('#tel1').val()+"-"+$('#tel2').val()+"-"+$('#tel3').val());
+		if (shopidchk == true) {
+			if (shoppwdchk == true) {
+				//010-0000-0000: 3+4+4+2 =13자리
+				//010-307-3333:3+3+4+2=12자리
+				if($('#shop_tel').val().length <12){
+					alert("전화번호를 확인하세요")
+				}else{
+					$('#feedback_form').submit();
+				}
+			} else {
+				alert("비밀번호가 불일치 합니다");
+				return false;
+			}
+		} else {
+			alert("ID 입력값이 잘못 되었습니다.");
+			return false;
+		}
+	}
 	
 </script>
 </head>
@@ -131,7 +173,7 @@
                                           <label for="cPwd" class="control-label col-lg-2">PWD <span class="required">*</span></label>
                                           <div class="col-lg-10">
 <!--                                               <input style="width: 20%" class="form-control" id="spwd" name="shop_pwd" minlength="6" type="password" required /> -->
-												<form:password path="shop_pwd" size="30" id="spwd" cssStyle="width: 20%" cssClass="form-control"></form:password>>
+												<form:password path="shop_pwd" size="30" id="spwd" cssStyle="width: 20%" cssClass="form-control" minlength="4"></form:password>
 												<form:errors path="shop_pwd" cssClass="error"></form:errors>
                                           </div>
                                       </div>
@@ -140,7 +182,7 @@
                                           <label for="cPwdChk" class="control-label col-lg-2">PWDCHK <span class="required">*</span></label>
                                           <div class="col-lg-10">
 <!--                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="spwdchk" name="pwdchk" minlength="6" type="password" required /> -->
-													<form:password path="pwdchk" size="30" id="spwdchk" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"/>
+													<form:password path="pwdchk" size="30" id="spwdchk" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control" minlength="4"/>
 													<form:errors path="pwdchk" cssClass="error"></form:errors>
                                           	  <div id="targetPWD"></div>
                                           </div>
@@ -150,8 +192,8 @@
                                           <label for="cCrnum" class="control-label col-lg-2">사업자 번호 <span class="required">*</span></label>
                                           <div class="col-lg-10">
 <!--                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="scrnum" name="shop_crnum" minlength="6" type="text" required /> -->
-                                              <form:input path="shop_crnum" size="30" id="scrnum" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"></form:input>
-											<form:errors path="shop_crnum" cssClass="error"></form:errors>
+                                              <form:input path="shop_crnum"  id="scrnum" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control" minlength="6" maxlength="10"></form:input>
+											  <form:errors path="shop_crnum" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
@@ -176,11 +218,11 @@
 <!-- 	                                          <input style="width: 7%" class="form-control" id="tel1" name="tel1" maxlength="3" type="tel" required />- -->
 <!-- 	                                          <input style="width: 7%" class="form-control" id="tel2" name="tel2" maxlength="4" type="tel" required />- -->
 <!-- 	                                          <input style="width: 7%" class="form-control" id="tel3" name="tel3" maxlength="4" type="tel" required /> -->
-	                                          <form:input path="tel1" size="30" id="tel1" cssStyle="width: 7%" cssClass="form-control"></form:input>
+	                                          <form:input path="tel1" size="30" id="tel1" cssStyle="width: 7%" cssClass="form-control" maxlength="3"></form:input>
 											<form:errors path="tel1" cssClass="error"></form:errors>
-											<form:input path="tel2" size="30" id="tel1" cssStyle="width: 7%" cssClass="form-control"></form:input>
+											<form:input path="tel2" size="30" id="tel2" cssStyle="width: 7%" cssClass="form-control" maxlength="4"></form:input>
 											<form:errors path="tel2" cssClass="error"></form:errors>
-											<form:input path="tel3" size="30" id="tel1" cssStyle="width: 7%" cssClass="form-control"></form:input>
+											<form:input path="tel3" size="30" id="tel3" cssStyle="width: 7%" cssClass="form-control" maxlength="4"></form:input>
 											<form:errors path="tel3" cssClass="error"></form:errors>
                                           </div>
                                       </div>
