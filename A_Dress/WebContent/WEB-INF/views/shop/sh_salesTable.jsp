@@ -56,7 +56,7 @@
 		<div class="row" style="font-size: 15px;width: 100%">
 			<div class="col-lg-12">
 				<h3 class="page-header">
-					<i class="fa fa-files-o"></i> 판매현황
+					<span><img src = "img/sales.ico" style="width: 20pt; height: 15pt;"></span>판매현황
 				</h3>
 				</br>
 
