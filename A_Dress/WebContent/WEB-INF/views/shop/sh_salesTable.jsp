@@ -73,7 +73,7 @@
 							id="btn_excel" name="btn_excel" value="Excel" onclick="javascript:exceldown()">
 					</div>
 				</div>
-				</br> </br> <input type="hidden" id="shop_num" name="shop_num"
+			<input type="hidden" id="shop_num" name="shop_num"
 					value="${sessionScope.shop_num}">
 
 
