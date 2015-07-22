@@ -61,7 +61,7 @@
 				</br>
 
 				<div class="form-group"  style="font-family: '210 나무고딕' ">
-					<div style="margin-left: 10px;">
+					<div style="margin-left: -2%;">
 						<label for="cname" class="control-label col-lg-2">
 							<p align="left">날짜</p>
 						</label> <input id="date_ps" name="date_ps" minlength="2"

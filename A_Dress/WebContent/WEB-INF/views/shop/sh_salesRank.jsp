@@ -121,7 +121,7 @@
 <br/><br/>
 
 
-                  <div style="margin-left: 10px;">
+                  <div style="margin-left: -2%;">
                      <label for="cname" class="control-label col-lg-2"><p
                            align="left">기간</p> </label> <input id="date_ps" name="date_ps"
                         minlength="2" autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
