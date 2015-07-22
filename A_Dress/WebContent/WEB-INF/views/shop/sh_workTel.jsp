@@ -111,7 +111,7 @@ function telaction(){
 												<th style="font-family: '210 나무고딕' ">연락처</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody  style="font-family: '210 나무고딕' ">
 											<c:forEach var="sList" items="${list}">
 												<tr>
 													<td>${sList.staff_num}</td>
