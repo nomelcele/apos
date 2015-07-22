@@ -93,7 +93,8 @@
 										<label for="cname" class="control-label col-lg-6"
 											style="font-size: 15px; font-family: '210 나무고딕' ">상품 코드 </label> <input
 											class="form-control" id="pro_code" name="pro_code"
-											style="width: 50%" autocomplete="off" type="text" required />
+											style="width: 50%" autocomplete="off" type="text" required 
+											onKeypress="javascript:if(event.keyCode==13) {return false;}"/>
 										<button class="form-control6" type="button"
 											onclick="javascript:productcheckaction()" id="btn1"
 											name="btn1"     style="font-family: '210 나무고딕' ">조회</button>
