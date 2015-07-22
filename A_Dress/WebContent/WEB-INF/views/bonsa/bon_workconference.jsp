@@ -79,17 +79,17 @@
 					<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span>화상 회의
 				</h3>
 					<table class="table" style="width: 100%; height: 100%;">
-						<thead style="font-family: '210 나무고딕' ">
+						<thead style="font-family: '210 나무고딕';font-size:8px;">
 							<tr>
 								
-								<th><img src = "img/shopimg.ico" style="width: 15px; height: 10px;" >지점명</th>
-								<th><img src = "img/home.jpg" style="width: 15px; height: 10px;" >주소</th>
-								<th><img src = "img/num.ico" style="width: 15px; height: 10px;" >사업자번호</th>
-								<th><img src = "img/man.ico" style="width: 15px; height: 10px;" >매장주이름</th>
-								<th><img src = "img/tel.ico" style="width: 15px; height: 10px;" >매장전화번호</th>
+								<th><img src = "img/shopimg.ico" style="width: 10px; height: 8px;" >지점명</th>
+								<th><img src = "img/home.jpg" style="width: 10px; height: 8px;" >주소</th>
+								<th><img src = "img/num.ico" style="width: 10px; height: 8px;" >사업자번호</th>
+								<th><img src = "img/man.ico" style="width: 10px; height: 8px;" >매장주이름</th>
+								<th><img src = "img/tel.ico" style="width: 10px; height: 8px;" >전화번호</th>
 								<th><i class="icon_mail_alt"></i>매장주email</th>
-								<th><img src = "img/man.ico" style="width: 15px; height: 10px;" >매장주사진</th>
-								<th><img src = "img/shop.ico" style="width: 15px; height: 10px;" >화상회의</th>
+								<th><img src = "img/man.ico" style="width: 10px; height: 8px;" >매장주사진</th>
+								<th><img src = "img/shop.ico" style="width: 10px; height: 8px;" >화상회의</th>
 							</tr>
 						</thead>
 						
