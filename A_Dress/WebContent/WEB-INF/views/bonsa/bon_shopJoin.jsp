@@ -11,7 +11,7 @@
 		<div class="row" style="font-size: 15px; width:100%; height:100%">
 			<div class="col-lg-12">
 
-				<h3 class="page-header">
+				<h3 class="page-header" style="font-family: '210 나무고딕' ">
 					<span><img src = "img/shop.ico" style="width: 17pt; height: 15pt;"></span>매장 Hotkey 발급 대기자
 				</h3>
 
@@ -19,7 +19,7 @@
 					<br />
 					<div class="col-sm-10" style="width: 125%;height: 100%">
 						<table class="table">
-							<thead>
+							<thead style="font-family: '210 나무고딕' ">
 								<tr>
 									<th>순 번</th>
 									<th>성 명</th>
