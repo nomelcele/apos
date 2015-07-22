@@ -214,14 +214,14 @@ html .fc,
 .fc-state-default,
 .fc-state-default .fc-button-inner {
 	border-style: solid;
-	border-color: #ccc #bbb #aaa;
+	border-color: #FFF #FFF #FFF;
 	background: #F3F3F3;
 	color: #000;
 	}
 	
 .fc-state-hover,
 .fc-state-hover .fc-button-inner {
-	border-color: #999;
+	border-color: #FFF;
 	}
 	
 .fc-state-down,
@@ -239,8 +239,8 @@ html .fc,
 	
 .fc-state-disabled,
 .fc-state-disabled .fc-button-inner {
-	color: #999;
-	border-color: #ddd;
+	color: #000;
+	border-color: #FFF;
 	}
 	
 .fc-state-disabled {
