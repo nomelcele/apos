@@ -54,16 +54,16 @@
 							</tr>
 							<c:forEach var="stList" items="${list}">
 								<tr>
-									<td>${stList.no}</td>
-									<td><a
+									<td  style= "background-color: #F4F4F4">${stList.no}</td>
+									<td style= "background-color: #F4F4F4"><a
 										href="javascript:godetail('${stList.no}')">
 											${stList.title}[${stList.cnt }]</a></td>
 									<form action="bon_workNoticedetail" method="post" id="godetail">
 										<input type="hidden" name="no" value="" id="dno">
 										<input type="hidden" name="page" value="1">
 									</form>
-									<td>${stList.writer}</td>
-									<td>${stList.regdate}</td>
+									<td style= "background-color: #F4F4F4">${stList.writer}</td>
+									<td style= "background-color: #F4F4F4">${stList.regdate}</td>
 								</tr>
 							</c:forEach>
 						</tbody>
