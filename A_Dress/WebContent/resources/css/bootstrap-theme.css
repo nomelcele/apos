@@ -674,6 +674,7 @@ pre code {
 .row {
   margin-left: -20px;
   margin-right: 200px;
+  margin-top:-10px;
 }
 .row:before,
 .row:after {
@@ -4811,6 +4812,7 @@ a.list-group-item:focus {
 }
 .panel-title > a {
   color: inherit;
+  font-family: '210 ³ª¹«°íµñ';
 }
 .panel-footer {
   padding: 10px 15px;
