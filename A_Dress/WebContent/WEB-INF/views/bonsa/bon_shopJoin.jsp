@@ -8,7 +8,7 @@
 <!-- 본사 매장관리의 매장가입 페이지 입니다.-->
 <section id="main-content">
 	<section class="wrapper">
-		<div class="row" style="font-size: 15px; width:100%; height:100%">
+		<div class="row" style="font-size: 13px; width:100%; height:100%">
 			<div class="col-lg-12">
 
 				<h3 class="page-header" style="font-family: '210 나무고딕' ">
@@ -19,7 +19,7 @@
 					<br />
 					<div class="col-sm-10" style="width: 125%;height: 100%">
 						<table class="table">
-							<thead style="font-family: '210 나무고딕' ">
+							<thead style="font-family: '210 나무고딕' ; font-size: 10px;">
 								<tr>
 									<th>순 번</th>
 									<th>성 명</th>
