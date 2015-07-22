@@ -165,17 +165,17 @@
 
 								<div style="margin-bottom: -1%">
 
-									<div class="col-lg-3" style="margin-left: -5%">
+									<div class="col-lg-3" style="margin-left: -5% "font-family: '210 나무고딕'">
 
 										<input type="hidden" id="shop_num" name="shop_num"
 											value="${sessionScope.shop_num}"> <label for="cname"
-											class="control-label col-lg-6" style="font-size: 13px;">이름
+											class="control-label col-lg-6" style="font-size: 13px;  font-family: '210 나무고딕' ">이름
 										</label> <input class="form-control" id="pro_name" name="pro_name"
 											style="width: 50%" onkeydown="startSuggest();"
 											autocomplete="off" type="text" required />
 										<button class="form-control6" type="button"
 											onclick="javascript:productcheckaction()" id="btn1"
-											name="btn1">조회</button>
+											name="btn1"  style="font-family: '210 나무고딕' ">조회</button>
 										<div id="view"></div>
 									</div>
 
@@ -183,7 +183,7 @@
 							</form>
 						</div>
 						<div>
-							<ul class="nav nav-tabs">
+							<ul class="nav nav-tabs"  style="font-family: '210 나무고딕' ">
 								<li class=""><a data-toggle="tab" href="#search"
 									id="ajevery">search</a></li>
 								<li class="" id="ajman"><a data-toggle="tab" href="#man"
@@ -204,18 +204,18 @@
 									<table class="table">
 										<thead>
 											<tr>
-												<th>no</th>
-												<th>상품이름</th>
-												<th>상품코드</th>
-												<th>사이즈</th>
-												<th>재고</th>
-												<th>가격</th>
-												<th>할인율</th>
-												<th>상품사진</th>
-												<th>바코드</th>
+												<th style="font-family: '210 나무고딕' ">no</th>
+												<th style="font-family: '210 나무고딕' ">상품이름</th>
+												<th style="font-family: '210 나무고딕' ">상품코드</th>
+												<th style="font-family: '210 나무고딕' ">사이즈</th>
+												<th style="font-family: '210 나무고딕' ">재고</th>
+												<th style="font-family: '210 나무고딕' ">가격</th>
+												<th style="font-family: '210 나무고딕' ">할인율</th>
+												<th style="font-family: '210 나무고딕' ">상품사진</th>
+												<th style="font-family: '210 나무고딕' ">바코드</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody style="font-family: '210 나무고딕' ">
 											<%-- 반복 --%>
 											<c:forEach var="stList"  items="${list}" varStatus="status">
 												<tr>
@@ -258,7 +258,7 @@
 							<div id="man" class="tab-pane">
 								<div class="table-responsive">
 									<table class="table">
-										<thead>
+										<thead style="font-family: '210 나무고딕' ">
 											<tr>
 												<th>no</th>
 												<th>상품이름</th>
@@ -271,7 +271,7 @@
 												<th>바코드</th>
 											</tr>
 										</thead>
-										<tbody id="view_product">
+										<tbody id="view_product" style="font-family: '210 나무고딕' ">
 
 										</tbody>
 									</table>
@@ -281,11 +281,11 @@
 
 
 							<%-- 여자 시작--%>
-							<div id="woman" class="tab-pane">
+							<div id="woman" class="tab-pane" style="font-family: '210 나무고딕' ">
 
 								<div class="table-responsive">
 									<table class="table">
-										<thead>
+										<thead style="font-family: '210 나무고딕' ">
 											<tr>
 												<th>no</th>
 												<th>상품이름</th>
@@ -308,11 +308,11 @@
 							<%-- 여자 끗--%>
 
 							<%-- 키즈 시작--%>
-							<div id="kids" class="tab-pane">
+							<div id="kids" class="tab-pane" style="font-family: '210 나무고딕' ">
 
 								<div class="table-responsive">
 									<table class="table">
-										<thead>
+										<thead style="font-family: '210 나무고딕' ">
 											<tr>
 												<th>no</th>
 												<th>상품이름</th>
