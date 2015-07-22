@@ -10,9 +10,9 @@
 </style>
 <section id="main-content">
 	<section class="wrapper">
-		<div class="panel-group m-bot20" id="accordion">
+		<div class="panel-group m-bot20" id="accordion"  style="font-family: '210 나무고딕' ">
 			<div class="panel panel-default" style="margin-top: 3%">
-				<div class="panel-heading">
+				<div class="panel-heading" style="font-family: '210 나무고딕' ">
 					<h4 class="panel-title">
 						<a class="accordion-toggle" data-toggle="collapse"
 							data-parent="#accordion" href="#collapseOne"> </a>
@@ -21,10 +21,10 @@
 				<div id="collapseOne" class="panel-collapse collapse in">
 					<div class="panel-body">ADress의 회원약관은 다음과 같은 내용을 담고 있습니다.</div>
 				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading">
+				<div class="panel panel-default"  style="font-family: '210 나무고딕' ">
+					<div class="panel-heading" style="font-family: '210 나무고딕' ">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-toggl0e" data-toggle="collapse" style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapseTwo"> 제1조 (명칭) </a>
 						</h4>
 					</div>
@@ -36,7 +36,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-togglea" data-toggle="collapse"style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapseThree"> 제2조 (목적) </a>
 						</h4>
 					</div>
@@ -48,7 +48,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-togglec" data-toggle="collapse"style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapseT"> 제3조 (소재지) </a>
 						</h4>
 					</div>
@@ -60,7 +60,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-toggleu" data-toggle="collapse" style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapseTh"> 제4조 (사업) </a>
 						</h4>
 					</div>
@@ -77,7 +77,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-togglek" data-toggle="collapse"style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapse1"> 제5조 (기본재산)</a>
 						</h4>
 					</div>
@@ -94,7 +94,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-togglen" data-toggle="collapse"style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapse2"> 제6조 (재산의 처분제한)</a>
 						</h4>
 					</div>
@@ -112,7 +112,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-togglev" data-toggle="collapse"style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapse3">제7조 (공단의 수입․지출)</a>
 						</h4>
 					</div>
@@ -127,7 +127,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a class="accordion-toggle" data-toggle="collapse"
+							<a class="accordion-togglec" data-toggle="collapse"style="font-family: '210 나무고딕' "
 								data-parent="#accordion" href="#collapse4">제8조</a>
 						</h4>
 					</div>
