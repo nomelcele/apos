@@ -39,30 +39,30 @@
       <div class="row">
          <div class="col-lg-12">
             <section class="panel">
-               <header class="panel-heading"> 공지사항 게시글 </header>
+               <header class="panel-heading" style="font-family: '210 나무고딕' "> 공지사항 게시글 </header>
                <div class="panel-body">
 <!--                   <form class="form-horizontal " method="post"> -->
                   
-                     <div class="form-group">
-                        <label class="col-sm-2 control-label">제목</label>
+                     <div class="form-group" style="font-family: '210 나무고딕' ">
+                        <label class="col-sm-2 control-label" style="font-family: '210 나무고딕' ">제목</label>
                         <div class="col-sm-10">
                            <input type="text" class="form-control" value="${v.title}" readonly="readonly">
                         </div>
                      </div>
                      <div class="form-group">
-                        <label class="col-sm-2 control-label">날짜</label>
+                        <label class="col-sm-2 control-label" style="font-family: '210 나무고딕' ">날짜</label>
                         <div class="col-sm-10">
                            <input type="text" class="form-control" value="${v.regdate}" readonly="readonly">
                         </div>
                      </div>
                      <div class="form-group">
-                        <label class="col-sm-2 control-label">작성자</label>
+                        <label class="col-sm-2 control-label" style="font-family: '210 나무고딕' ">작성자</label>
                         <div class="col-sm-10">
                            <input type="text" class="form-control round-input" value="${v.writer}" readonly="readonly">
                         </div>
                      </div>
                      <div class="form-group">
-                        <label class="col-sm-2 control-label">내용</label>
+                        <label class="col-sm-2 control-label" style="font-family: '210 나무고딕' ">내용</label>
                         <div class="col-lg-10">
                         <textarea name="" id="" class="form-control7" cols="30" rows="5" style="min-width: 350px; max-width: 700px; height:100px; float: left;" readonly="readonly">${v.content}</textarea>
                         
@@ -74,18 +74,18 @@
                     <form action="bon_noticedelte" method="post" id="deleteform">
                     <input type="hidden" name="no" value="${v.no }">
                     <input type="hidden" name="writer" value="${v.writer }">
-                    <button type="button" class="btn btn-danger" onclick="javascript:delteaction()" style="margin-left: 23%; margin-top: 1%; float: left;" >글 삭제</button>
+                    <button type="button" class="btn btn-danger" onclick="javascript:delteaction()" style="margin-left: 23%; margin-top: 1%; float: left; font-family: '210 나무고딕' ">글 삭제</button>
                     </form> 
                     <form action="bon_workNotice" method="post" id="listform">
                     <input type="hidden" name="page" value="1">
-                    <button type="button" class="btn btn-danger" onclick="javascript:listaction()" style="margin-left: 1%; margin-top: 1%">목록</button>
+                    <button type="button" class="btn btn-danger" onclick="javascript:listaction()" style="margin-left: 1%; margin-top: 1%;  font-family: '210 나무고딕' ">목록</button>
                     </form>
                     
                      </div>
                      
                      <div class="col-sm-10" style="margin-left: 50px;">
                         <table class="table">
-                           <thead>
+                           <thead style="font-family: '210 나무고딕' ">
                               <tr>
                                  <th>작성자</th>
                                  <th>내용</th>
@@ -94,7 +94,7 @@
                               </tr>
                            </thead>
                            
-                           <tbody>
+                           <tbody style="font-family: '210 나무고딕' ">
                            <c:forEach var="ctlist" items="${clist}">
                               <tr>
                                  <td>${ctlist.comm_writer }</td>
@@ -115,7 +115,7 @@
 
 <!--                      <form method="post" action="bon_commin" id="commin"> -->
                      <form:form method="post" action="bon_commin" id="commin" commandName="commin" >
-                     <div class="form-group">
+                     <div class="form-group" style="font-family: '210 나무고딕' ">
                         <label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
                         <div class="col-lg-6">
 <!--                            <input type="text" class="form-control" id="inputPassword1" placeholder="댓글을 입력하세요." name="comm_cont" > -->
@@ -123,7 +123,7 @@
                            		<form:errors path="comm_cont" cssClass="error"></form:errors>
                         </div>
                      </div>
-                     <div class="form-group">
+                     <div class="form-group" style="font-family: '210 나무고딕' ">
                            <button type="button" class="btn btn-danger" onclick="javascript:goUrlshcin()">댓글 작성</button>
                         <div class="col-lg-offset-2 col-lg-10" style="display:block;">
                         </div>
