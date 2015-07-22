@@ -53,7 +53,7 @@
 					<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">위치 상세 보기</h4>
+					<h4 class="modal-title"style="font-weight: bold;  font-family: '210 나무고딕' ">위치 상세 보기</h4>
 			</div>
 
 			<%-- BODY --%>
@@ -79,7 +79,7 @@
 					<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span>화상 회의
 				</h3>
 					<table class="table" style="width: 100%; height: 100%;">
-						<thead>
+						<thead style="font-family: '210 나무고딕' ">
 							<tr>
 								
 								<th>지점명</th>
@@ -93,7 +93,7 @@
 							</tr>
 						</thead>
 						
-						<tbody>
+						<tbody style="font-family: '210 나무고딕' ">
 						<c:forEach var="shlist" items="${list}"  >
 							<tr class="warning">
 								<th><span id="list_name">${shlist.shop_name}</span></th>
@@ -103,7 +103,7 @@
 								<th>${shlist.shop_tel}</th>
 								<th>${shlist.shop_mail}</th>
 								<th><img src="master/${shlist.shop_img}" style="width: 50px;"></th>
-								<th><a href="bonsaWebRTC?shop_num=${shlist.shop_num}"><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="화상연결하기"></a></th>								
+								<th><a href="bonsaWebRTC?shop_num=${shlist.shop_num}" style="font-family: '210 나무고딕' "><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="화상연결하기"></a></th>								
 								
 							</tr>
 						</c:forEach>
