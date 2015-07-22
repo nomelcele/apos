@@ -23,7 +23,7 @@
 					<span><img src = "img/member.ico" style="width: 14pt; height: 14pt;"></span>회원수정
 				</h3>
 
-				<div class="row" style="width: 125%">
+				<div class="row" style="width: 138%">
 					<div class="col-lg-12">
 						<section class="panel" style="font-size: 8px;">
 							<div class="panel-body">
@@ -68,7 +68,7 @@
 																	<th style="font-family: '210 나무고딕'; color: black "><i class="icon_calendar"></i>가입날짜</th>
 																</tr>
 															</thead>
-															<tbody style="font-family: '210 나무고딕' ">
+															<tbody style="font-family: '210 나무고딕'; font-size: 10px;">
 																<c:forEach var="stList" items="${stList}">
 																	<tr>
 																		<th>${stList.mem_num}</th>
