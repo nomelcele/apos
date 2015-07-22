@@ -48,7 +48,7 @@
    editable: false,
    eventLimit: true,
    events: [${list}]
-  })
+  });
  });
 </script>
 </head>
@@ -56,7 +56,7 @@
 <section id="main-content">
 	<section class="wrapper">
 		<section class="panel">
-			<div class="row" style="font-size: 15px; width: 125%;">
+			<div class="row" style="font-size: 15px; width: 125%;  font-family: '210 나무고딕' ">
 				<div class="col-lg-12" >
 					<div>
 					<h3 class="page-header" style="font-family: '210 나무고딕' ">
