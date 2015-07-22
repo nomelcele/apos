@@ -173,6 +173,7 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  font-size:13px;
 }
 @media print {
   * {
@@ -750,7 +751,7 @@ pre code {
 .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 40px;
+  padding-left: 30px;
   padding-right: 15px;
 }
 .col-xs-1,
