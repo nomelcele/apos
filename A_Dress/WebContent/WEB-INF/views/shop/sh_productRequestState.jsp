@@ -29,7 +29,7 @@ function open_win3(img3)
 		<div class="row" style="font-size: 8px; width:100%; height:100%">
 			<div class="col-lg-12">
 
-				<h3 class="page-header" style="font-family: '210 나무고딕' ">
+				<h3 class="page-header" style="font-family: '210 나무고딕'  ">
 					<span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>상품 신청 현황 
 				</h3>
 
@@ -37,7 +37,7 @@ function open_win3(img3)
 					<br />
 					<div class="col-sm-10" style="width: 135%;height: 100%">
 						<table class="table">
-							<thead>
+							<thead  style="font-family: '210 나무고딕' ">
 								<tr>
 									<th style="width: 5%;">번호</th>
 									<th style="width: 8%;">매장</th>
@@ -52,7 +52,7 @@ function open_win3(img3)
 									<th>날짜</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody  style="font-family: '210 나무고딕' ">
 								<%-- Hidden submit --%>
 								<%-- YES --%>
 <!-- 								<form method="post" action="sh.apos" id="reqOk"> -->
