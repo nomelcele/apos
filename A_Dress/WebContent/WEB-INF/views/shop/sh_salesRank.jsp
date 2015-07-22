@@ -116,7 +116,7 @@
             </br>
             <form action="*.apos" id="otsearch" method="post"
                onsubmit="return false;">
-               <div class="form-group">
+               <div class="form-group" style="font-family: '210 나무고딕' ">
 
 
 
@@ -139,7 +139,7 @@
             </form>
 
 
-            <table class="table table-striped table-advance table-hover">
+            <table class="table table-striped table-advance table-hover" style="font-family: '210 나무고딕' ">
                <div id="chart_div" style="width: 100%; height: 50%;"></div>
                <thead>
                   <p></p>
@@ -152,7 +152,7 @@
 
                </thead>
                
-               <tbody id="view_product">
+               <tbody id="view_product" style="font-family: '210 나무고딕' ">
 
                </tbody>
             </table>
