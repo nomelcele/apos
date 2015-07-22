@@ -113,12 +113,12 @@
             <h3 class="page-header" style="font-family: '210 나무고딕'; color: black; ">
                <span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>기간별 매출현황
             </h3>
-            </br>
+            
             <form action="*.apos" id="otsearch" method="post"
                onsubmit="return false;">
                <div class="form-group" style="font-family: '210 나무고딕' ">
 
-
+<br/><br/>
 
 
                   <div style="margin-left: 10px;">
@@ -134,11 +134,11 @@
                   </div>
 
                </div>
-               </br> </br>
+               </br>
 
             </form>
 
-
+<br/>
             <table class="table table-striped table-advance table-hover" style="font-family: '210 나무고딕' ">
                <div id="chart_div" style="width: 100%; height: 50%;"></div>
                <thead>
