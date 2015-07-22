@@ -60,9 +60,9 @@
 				<div class="col-lg-12" >
 					<div>
 					<h3 class="page-header" style="font-family: '210 나무고딕'; color: black; ">
-						<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span> 일정 관리
+						<span><img src = "img/work.ico" style="width: 16pt; height: 15pt; font-family: '210 나무고딕' "></span> 일정 관리
 					</h3></div>
-						<div id="calendarTagert"></div>
+						<div id="calendarTagert" style="font-family: '210 나무고딕' "></div>
 				</div>
 			</div>
 		</section>
