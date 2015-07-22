@@ -48,7 +48,7 @@
 						<tbody style="font-family: '210 나무고딕' ">
 							<tr>
 								<th>#</th>
-								<th><i class="icon_mail_alt"></i> 제목</th>
+								<th><img src = "img/pen.ico" style="width: 15px; height: 15px;" > 제목</th>
 								<th><i class="icon_profile"></i> 작성자</th>
 								<th><i class="icon_calendar"></i> 날짜</th>
 							</tr>

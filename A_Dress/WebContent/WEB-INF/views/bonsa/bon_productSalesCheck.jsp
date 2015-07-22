@@ -148,10 +148,10 @@
 					<thead style="font-family: '210 나무고딕' ">
 
 						<tr>
-							<th>날짜</th>
-							<th>물품명</th>
-							<th>판매 액</th>
-							<th>판매 수량</th>
+							<th><i class="icon_calendar"></i>날짜</th>
+							<th><img src = "img/tag.jpg" style="width: 18px; height: 15px;" >물품명</th>
+							<th><img src = "img/s.ico" style="width: 15px; height: 15px;" >판매 액</th>
+							<th><img src = "img/sn.ico" style="width: 19px; height: 18px;" >판매 수량</th>
 						</tr>
 
 					</thead>
