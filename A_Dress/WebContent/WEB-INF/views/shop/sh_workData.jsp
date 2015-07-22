@@ -75,7 +75,7 @@
 
 									<div id="view" class="form-control" style="display: none"></div>
 									<table class="table table-condensed">
-										<thead>
+										<thead style="font-family: '210 나무고딕' ">
 											<tr>
 												<th>#</th>
 												<th>이름</th>
@@ -84,7 +84,7 @@
 											</tr>
 										</thead>
 
-										<tbody>
+										<tbody style="font-family: '210 나무고딕' ">
 											<c:forEach var="sList" items="${list}">
 												<tr>
 													<td>${sList.staff_num}</td>
