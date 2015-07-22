@@ -104,25 +104,6 @@ function openview2(img3)
 										<td>${bon_product.req_status }</td>
 										<td>${bon_product.req_date }</td>
 
-
-										<!-- 
-										select s.shop_name, s.shop_num,p.pro_name,p,pro_code,q.pro_size,q.pro_price,p.pro_img,p.pro_barcode,
-q.pro_amount -->
-										<!-- 
-										
-										<th>순 번</th>
-									<th>매장명</th>
-									<th>상품 이름</th>
-									<th>코드</th>
-									<th>사이즈</th>
-									<th>가격</th>
-									<th>상품 사진</th>
-									<th>바코드</th>
-									<th>신청 수량</th>
-									<th>Yes/</th>
-									<th>No</th> -->
-
-
 										<td><input type="button" class="form-control" id="yes"
 											value="YES" style="color: #008fcc;"
 											onclick="javascript:gostockyn('Yes',${bon_product.req_num})" /></td>
