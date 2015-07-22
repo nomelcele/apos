@@ -147,17 +147,17 @@ var procode = false;
 
 							<button class="form-control6" type="button"
 								onclick="javascript:open_win()" id="btn1" name="btn1"
-								style="float: right;">상품코드구분표</button>
+								style="float: right; font-family: '210 나무고딕' ">상품코드구분표</button>
 							<form class="form-validate form-horizontal" id="feedback_form"
 								method="post" action="bon_productAdding"
 								enctype="multipart/form-data">
 
 
 
-								<div style="margin: 0; width: 100%; margin-top: 1%;">
+								<div style="margin: 0; width: 100%; margin-top: 1%;  font-family: '210 나무고딕'">
 
 
-									<div class="form-group " >
+									<div class="form-group "  style="font-family: '210 나무고딕' ">
 										<label style="width: 30%; float: left;" for="cname"
 											class="control-label col-lg-2">물품명</label>
 										<div class="col-lg-2" style="float: left; width: 50%;">
@@ -193,8 +193,8 @@ var procode = false;
 
 								</div>
 
-								<div class="form-group" style="margin-left: 18%">
-									<div style="float: left; width: 30%;">
+								<div class="form-group" style="margin-left: 18%    ">
+									<div style="float: left; width: 30%; font-family:'210 나무고딕'">
 										<span>사진추가</span> <input type="file" id="pimg" name="pimg"
 											style="width: 100%;">
 
@@ -209,7 +209,7 @@ var procode = false;
 								</div>
 
 
-								<div class="form-group " style="margin-left: 18%">
+								<div class="form-group " style="margin-left: 18% ;font-family:'210 나무고딕'">
 									<div style="float: left; width: 30%;">
 										<span>바코드 추가</span> <input type="file" id="bimg" name="bimg"
 											style="width: 100%;">
@@ -225,10 +225,10 @@ var procode = false;
 								</div>
 
 
-								<div style="float: left;"></div>
+								<div style="float: left; "></div>
 								<div style="float: right; margin-right: 20%; margin-top: 2%">
 									<button type="button" class="btn btn-primary"
-										onclick="javascript:submitproduct()">상품 추가</button>
+										onclick="javascript:submitproduct()" style="font-family: '210 나무고딕' ">상품 추가</button>
 								</div>
 
 
