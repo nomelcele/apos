@@ -770,23 +770,28 @@ public class Ajaxcon {
 		List<SalesCheckVO> list = skdao.getListChart(shop_num, date_ps,
 				date_ps2);
 		Iterator<SalesCheckVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		res.append("[ ['Month', '¸ÅÃâ¾×' ],");
+		StringBuffer date = new StringBuffer();
+		StringBuffer rescash = new StringBuffer();
+		StringBuffer resnum = new StringBuffer();
+		date.append("[ ");
+		rescash.append("[ ");
+		resnum.append("[ ");
 		while (it.hasNext()) {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
-			res.append("['");
-			res.append(v.getSell_date()).append("',");
-			res.append(v.getSell_cash()).append(",");
-			;
 
-			res.append("],");
+			date.append("'"+v.getSell_date()).append("',");
+			rescash.append(v.getSell_cash()).append(",");
+			resnum.append(v.getCount()).append(",");
 
 		}
-		res.append("]");
-		String strString = res.toString();
-		System.out.println(strString);
+		date.append("]");
+		rescash.append("]");
+		resnum.append("]");
+		String res = date.toString()+"@"+rescash.toString()+"@"+resnum.toString();
+		System.out.println(res);
 
+		
 		mav.addObject("res", res);
 		return mav;
 	}
