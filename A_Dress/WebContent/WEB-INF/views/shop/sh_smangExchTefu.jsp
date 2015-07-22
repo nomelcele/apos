@@ -56,7 +56,7 @@ function sh_managEx(num){
 						</form>
 						<div class="table-responsive" style="font-size: 15px;">
 							<table class="table">
-								<thead>
+								<thead style="font-family: '210 나무고딕' ">
 									<tr>
 										<th>판매번호</th>
 										<th>고객성명</th>
