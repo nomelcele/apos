@@ -63,7 +63,7 @@ function openview2(img3)
 					<br />
 					<div class="col-sm-10" style="width: 130%; height: 100%">
 						<table class="table">
-							<thead>
+							<thead style="font-family: '210 나무고딕' ">
 								<tr>
 									<th style="width: 5%;">번호</th>
 									<th style="width: 8%;">매장</th>
@@ -80,7 +80,7 @@ function openview2(img3)
 									<th style="width: 5%;">No</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody style="font-family: '210 나무고딕' ">
 
 								<form action="bon_productSale_1" method="post" id="stockyn">
 									<td><input type="hidden" class="form-control"
