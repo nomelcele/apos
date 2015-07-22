@@ -6,12 +6,14 @@
 <script src="resources/js/suggest_shop_pk.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script>
-// 차트에 들어갈 데이터 자료
-	var time, res, res2,shop_name;
+	// 차트에 들어갈 데이터 자료
+	var time, resnum, rescash, shop_name;
 	time = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
-			'Oct', 'Nov', 'Dec' ]
-	res = [ 49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1,
-			95.6, 59.4 ];
+			'Oct', 'Nov', 'Dec', ]
+	resnum = [ 49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4,
+			194.1, 95.6, 59.4, ];
+	rescash = [ 7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9,
+			9.6, ];
 	$(function() {
 		$('#btn_out')
 				.click(
@@ -19,141 +21,164 @@
 							// 							alert("shopname=" + $('#shop_name').val()
 							// 									+ "date_ps=" + $('#date_ps').val()
 							// 									+ "&date_ps2=" + $('#date_ps2').val());
+							if ($('#shop_name').val() != "") {
+								if ($('#date_ps').val() != ""
+										&& $('#date_ps2').val() != "") {
+									if ($('#date_ps').val() < $('#date_ps2')
+											.val()) {
+										//alert("test2");
+										shop_name = $('#shop_name').val();
+										$
+												.ajax({
+													url : "bon_ajaxoutletsale?shop_name="
+															+ $('#shop_name')
+																	.val()
+															+ "&startdate="
+															+ $('#date_ps')
+																	.val()
+															+ "&enddate="
+															+ $('#date_ps2')
+																	.val(),
+													type : "post",
+													dataType : "html",
+													success : function(data) {
+														//alert(data);
+														str = data.trim();
+														document
+																.getElementById("view_product").innerHTML = str;
+													}
 
-							if ($('#date_ps').val() != ""
-									&& $('#date_ps2').val() != "") {
-								if ($('#date_ps').val() < $('#date_ps2').val()) {
-									//alert("test2");
-									shop_name=$('#shop_name').val();
-									$
-											.ajax({
-												url : "bon_ajaxoutletsale?shop_name="
-														+ $('#shop_name').val()
-														+ "&startdate="
-														+ $('#date_ps').val()
-														+ "&enddate="
-														+ $('#date_ps2').val(),
-												type : "post",
-												dataType : "html",
-												success : function(data) {
-													//alert(data);
-													str = data.trim();
-													document
-															.getElementById("view_product").innerHTML = str;
-												}
+												});
+										$
+												.ajax({
+													url : "bon_ajaxoutletChart?shop_name="
+															+ $('#shop_name')
+																	.val()
+															+ "&startdate="
+															+ $('#date_ps')
+																	.val()
+															+ "&enddate="
+															+ $('#date_ps2')
+																	.val(),
+													type : "post",
+													dataType : "html",
+													success : function(event) {
+														//alert("callback");
+														
+														var res = event.trim()
+																.split("@");
+														time = eval(res[0]);
+														resnum = eval(res[1]);
+														rescash = eval(res[2]);
+													
+														if (time != "") {
+															chartstart();
+														} else {
+															alert("검색한 매장의 지정한 날짜에 판매한 기록이 없습니다.")
+														}
+													}
 
-											});
-									$.ajax({
-										url : "bon_ajaxoutletChart?shop_name="
-												+ $('#shop_name').val()
-												+ "&startdate="
-												+ $('#date_ps').val()
-												+ "&enddate="
-												+ $('#date_ps2').val(),
-										type : "post",
-										dataType : "html",
-										success : function(data) {
-											//alert("callback");
-											res2 = eval(data);
-											var result = eval(res2);
-											//alert(res2);
-											drawVisualization();
-											res2 = null;
-										}
+												});
 
-									});
+									} else {
+										alert("날짜선택을 잘못하셧습니다.시작날짜가 마지막 날짜보다 큽니다.");
+									}
+								} else
 
-								} else {
-									alert("날짜선택을 잘못하셧습니다.시작날짜가 마지막 날짜보다 큽니다.");
+								{
+									alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
 								}
-							} else
 
-							{
-								alert("날짜를 선택 안하셧습니다.날짜를 선택하세요")
+							}else{
+								alert("매장 이름을 입력하세요.");
 							}
 
 						});
-		$('#container3')
-				.highcharts(
-						{
-							chart : {
-								zoomType : 'xy'
-							},
-							title : {
-								text : '대리점별 매출순위 '
-							},
-							subtitle : {
-								text : shop_name
-							},
-							xAxis : [ {
-								categories : time,
-								crosshair : true
-							} ],
-							yAxis : [
-									{ // Primary yAxis
-										labels : {
-											format : '{value}개',
-											style : {
-												color : Highcharts.getOptions().colors[1]
-											}
-										},
-										title : {
-											text : '판매 량',
-											style : {
-												color : Highcharts.getOptions().colors[1]
-											}
-										}
-									},
-									{ // Secondary yAxis
-										title : {
-											text : '판매 금액',
-											style : {
-												color : Highcharts.getOptions().colors[0]
-											}
-										},
-										labels : {
-											format : '{value} 원',
-											style : {
-												color : Highcharts.getOptions().colors[0]
-											}
-										},
-										opposite : true
-									} ],
-							tooltip : {
-								shared : true
-							},
-							legend : {
-								layout : 'vertical',
-								align : 'left',
-								x : 120,
-								verticalAlign : 'top',
-								y : 100,
-								floating : true,
-								backgroundColor : (Highcharts.theme && Highcharts.theme.legendBackgroundColor)
-										|| '#FFFFFF'
-							},
-							series : [
-									{
-										name : 'Rainfall',
-										type : 'column',
-										yAxis : 1,
-										data : res,
-										tooltip : {
-											valueSuffix : ' mm'
-										}
 
-									},
-									{
-										name : 'Temperature',
-										type : 'spline',
-										data : [ 7.0, 6.9, 9.5, 14.5, 18.2,
-												21.5, 25.2, 26.5, 23.3, 18.3,
-												13.9, 9.6 ],
-										tooltip : {
-											valueSuffix : '°C'
-										}
-									} ]
-						});
+		function chartstart() {
+			
+			$('#container3')
+					.highcharts(
+							{
+								chart : {
+									zoomType : 'xy'
+								},
+								title : {
+									text : '대리점별 매출순위 '
+								},
+								subtitle : {
+									text : shop_name
+								},
+								xAxis : [ {
+									categories : time,
+									crosshair : true
+								} ],
+								yAxis : [
+										{ // Primary yAxis
+											labels : {
+												format : '{value}개',
+												style : {
+													color : Highcharts
+															.getOptions().colors[1]
+												}
+											},
+											title : {
+												text : '판매 량',
+												style : {
+													color : Highcharts
+															.getOptions().colors[1]
+												}
+											}
+										},
+										{ // Secondary yAxis
+											title : {
+												text : '판매 금액',
+												style : {
+													color : Highcharts
+															.getOptions().colors[0]
+												}
+											},
+											labels : {
+												format : '{value} 원',
+												style : {
+													color : Highcharts
+															.getOptions().colors[0]
+												}
+											},
+											opposite : true
+										} ],
+								tooltip : {
+									shared : true
+								},
+								legend : {
+									layout : 'vertical',
+									align : 'left',
+									x : 120,
+									verticalAlign : 'top',
+									y : 100,
+									floating : true,
+									backgroundColor : (Highcharts.theme && Highcharts.theme.legendBackgroundColor)
+											|| '#FFFFFF'
+								},
+								series : [ {
+									name : '판매 금액',
+									type : 'column',
+									yAxis : 1,
+									data : resnum,
+									tooltip : {
+										valueSuffix : '원'
+									}
+
+								}, {
+									name : '판매 량',
+									type : 'spline',
+									data : rescash,
+									tooltip : {
+										valueSuffix : '개'
+									}
+								} ]
+							});
+		}
 	});
 </script>
 

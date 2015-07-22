@@ -56,7 +56,7 @@ public class Ajaxcon {
 	@Autowired
 	private ProductDao pdao;
 	@Autowired
-	private SmangDao smdao;	
+	private SmangDao smdao;
 	@Autowired
 	private ShopDao shdao;
 	@Autowired
@@ -449,11 +449,11 @@ public class Ajaxcon {
 
 	// 아이디중복체크
 	@RequestMapping(value = "/shopjoincheck")
-	public ModelAndView sh_shopjoincheck(String id, Map<String,Object> model) {
+	public ModelAndView sh_shopjoincheck(String id, Map<String, Object> model) {
 		ShopVO shopvo = new ShopVO();
 		shopvo.setShop_id(id);
-		model.put("joinForm",shopvo);
-		
+		model.put("joinForm", shopvo);
+
 		ModelAndView mav = new ModelAndView("ajax/sh_shopjoincheck");
 		System.out.println(id);
 		boolean res = shdao.checkid(id);
@@ -647,18 +647,24 @@ public class Ajaxcon {
 			if (e.getU_id().equals(id)) {
 				System.out.println(e.getImg());
 				outs.append("<li class=\"by-other\">");
-				//outs.append("<div class=\"avatar pull-right\">").append(e.getU_id()).append("<div class=\"chat-content\"><div class=\"chat-meta\">");
-				outs.append("<div class=\"avatar pull-right\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				// outs.append("<div class=\"avatar pull-right\">").append(e.getU_id()).append("<div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append(
+						"<div class=\"avatar pull-right\"><img src=\"master/")
+						.append(e.getImg())
+						.append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getCdate());
 				outs.append("<span class=\"pull-right\">");
-				//outs.append(e.getU_id());
+				// outs.append(e.getU_id());
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
 
 			} else {
 				outs.append("<li class=\"by-me\">");
-				outs.append("<div class=\"avatar pull-left\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append(
+						"<div class=\"avatar pull-left\"><img src=\"master/")
+						.append(e.getImg())
+						.append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getU_id());
 				outs.append("<span class=\"pull-right\">");
 				outs.append(e.getCdate());
@@ -698,7 +704,10 @@ public class Ajaxcon {
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
 				outs.append("<li class=\"by-other\">");
-				outs.append("<div class=\"avatar pull-right\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append(
+						"<div class=\"avatar pull-right\"><img src=\"master/")
+						.append(e.getImg())
+						.append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getCdate());
 				outs.append("<span class=\"pull-right\">");
 				outs.append(e.getU_id());
@@ -707,7 +716,10 @@ public class Ajaxcon {
 				outs.append("<div class=\"clearfix\"></div></div></li>");
 			} else {
 				outs.append("<li class=\"by-me\">");
-				outs.append("<div class=\"avatar pull-left\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append(
+						"<div class=\"avatar pull-left\"><img src=\"master/")
+						.append(e.getImg())
+						.append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getU_id());
 				outs.append("<span class=\"pull-right\">");
 				outs.append(e.getCdate());
@@ -767,7 +779,7 @@ public class Ajaxcon {
 			res.append(v.getSell_date()).append("',");
 			res.append(v.getSell_cash()).append(",");
 			;
-		
+
 			res.append("],");
 
 		}
@@ -881,21 +893,26 @@ public class Ajaxcon {
 		List<SalesCheckVO> list = skdao.get_shopList(shop_name, startdate,
 				enddate);
 		Iterator<SalesCheckVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		res.append("[ ['Month', '매출액' ],");
+		StringBuffer date = new StringBuffer();
+		StringBuffer rescash = new StringBuffer();
+		StringBuffer resnum = new StringBuffer();
+		date.append("[ ");
+		rescash.append("[ ");
+		resnum.append("[ ");
 		while (it.hasNext()) {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
-			res.append("['");
-			res.append(v.getSell_date()).append("',");
-			res.append(v.getSell_cash()).append(",");
-		
-			res.append("],");
+
+			date.append("'"+v.getSell_date()).append("',");
+			rescash.append(v.getSell_cash()).append(",");
+			resnum.append(v.getCount()).append(",");
 
 		}
-		res.append("]");
-		String strString = res.toString();
-		System.out.println(strString);
+		date.append("]");
+		rescash.append("]");
+		resnum.append("]");
+		String res = date.toString()+"@"+rescash.toString()+"@"+resnum.toString();
+		System.out.println(res);
 
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/bon_ajaxoutletChart");
@@ -1206,41 +1223,43 @@ public class Ajaxcon {
 		List<StaffVO> list = sfdao.get_pay(map);
 		StringBuffer res = new StringBuffer();
 		Iterator<StaffVO> it = list.iterator();
-		
-		//합계 급액과 근무 시간을 위한 변수
-		int timeres = 0,payres=0;
+
+		// 합계 급액과 근무 시간을 위한 변수
+		int timeres = 0, payres = 0;
 		while (it.hasNext()) {
 			StaffVO vo = it.next();
 			res.append("<tr>");
 			res.append("<td>").append(vo.getStaff_name()).append("</td>");
 			res.append("<td>").append(vo.getWork_login()).append("</td>");
 			res.append("<td>").append(vo.getWork_logout()).append("</td>");
-			res.append("<td>").append(vo.getWork_time()).append(" 시간").append("</td>");
+			res.append("<td>").append(vo.getWork_time()).append(" 시간")
+					.append("</td>");
 			res.append("<td>").append(vo.getWork_time() * 10000).append(" 원")
 					.append("</td>");
 			res.append("</tr>");
-			timeres+=vo.getWork_time();
-			payres+=vo.getWork_time() * 10000;
-			
+			timeres += vo.getWork_time();
+			payres += vo.getWork_time() * 10000;
+
 		}
 		res.append("<tr><th>합계</th>");
 		res.append("<th>-</th>");
 		res.append("<th>-</th>");
-		res.append("<th>"+timeres+" 시간</th>");
-		res.append("<th>"+payres+" 원</th>");
+		res.append("<th>" + timeres + " 시간</th>");
+		res.append("<th>" + payres + " 원</th>");
 		res.append("</tr>");
 
 		mav.setViewName("ajax/sh_ajax_sh_workPay");
 		mav.addObject("res", res.toString());
 		return mav;
 	}
-	//상품 추가 상품 코드 유효성 검사
-		@RequestMapping(value="bo_codechk")
-		public ModelAndView bo_codechk(String pro_code){
-			ModelAndView mav = new ModelAndView("ajax/bon_codechk");
-			System.out.println(pro_code);
-			int count =pdao.pro_codechk(pro_code);
-			mav.addObject("res", count);
-			return mav;
-		}
+
+	// 상품 추가 상품 코드 유효성 검사
+	@RequestMapping(value = "bo_codechk")
+	public ModelAndView bo_codechk(String pro_code) {
+		ModelAndView mav = new ModelAndView("ajax/bon_codechk");
+		System.out.println(pro_code);
+		int count = pdao.pro_codechk(pro_code);
+		mav.addObject("res", count);
+		return mav;
+	}
 }
