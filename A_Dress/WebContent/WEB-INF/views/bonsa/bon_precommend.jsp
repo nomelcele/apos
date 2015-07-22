@@ -91,12 +91,12 @@
 
 									<div class="col-lg-3" style="margin-left: -5%">
 										<label for="cname" class="control-label col-lg-6"
-											style="font-size: 15px; font-family: '210나무고딕' ;" >상품 코드 </label> <input
+											style="font-size: 15px; font-family: '210 나무고딕' ">상품 코드 </label> <input
 											class="form-control" id="pro_code" name="pro_code"
 											style="width: 50%" autocomplete="off" type="text" required />
 										<button class="form-control6" type="button"
 											onclick="javascript:productcheckaction()" id="btn1"
-											name="btn1">조회</button>
+											name="btn1"     style="font-family: '210 나무고딕' ">조회</button>
 										<div id="view"></div>
 									</div>
 
@@ -112,7 +112,7 @@
 							<div id="search" class="tab-pane active">
 								<div class="table-responsive" style="width: 100%">
 									<table class="table">
-										<thead>
+										<thead style="font-family: '210 나무고딕' ">
 											<tr>
 												<th>no</th>
 												<th>상품이름</th>
@@ -130,7 +130,7 @@
 								</div>
 							</div>
 							<table class="table">
-								<thead>
+								<thead style="font-family: '210 나무고딕' ">
 									<tr>
 										<th>상품번호</th>
 										<th>상품이름</th>
@@ -167,7 +167,7 @@
 								</tbody>
 							</table>
 							<table class="table">
-								<thead>
+								<thead style="font-family: '210 나무고딕' ">
 									<tr>
 										<th>고객 번호</th>
 										<th>고객 이름</th>
