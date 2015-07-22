@@ -22,13 +22,13 @@
 
 		<div style="margin-left: 5px; padding-left: 30px; padding-top: 15px;">
 			<img src=resources/img/zdd.JPG>
-			<p style="font-size: 13pt; font-weight: bold; color: #2426F9"></p>
+			<p style="font-size: 13pt; font-weight: bold; font-family:'210 나무고딕' ; color: #2426F9 "></p>
 
-			<p style="border: dotted; border-width: 1px "></p>
+			<p style="border: dotted;   border-width: 1px " ></p>
 			<div style="color: #000000; font-size: 13px; align: center; width: 100%; height: 100%">
 
-				<p>
-					제1조<b style="color: #0059ff; font-weight: bold;"><a href="#a">목적</a></b>
+				<p style="font-family: '210 나무고딕' ">
+					제1조<b style="color: #0059ff; font-weight: bold;  font-family: '210 나무고딕' "><a href="#a">목적</a></b>
 				</p>
 				</br> 제2조 <b style="color: #000000; font-weight: bold;"><a href="#b">정의</a></b>
 				</p>
