@@ -313,6 +313,8 @@
 								<div class="table-responsive">
 									<table class="table">
 										<thead style="font-family: '210 나무고딕' ">
+						
+										
 											<tr>
 												<th>no</th>
 												<th>상품이름</th>
