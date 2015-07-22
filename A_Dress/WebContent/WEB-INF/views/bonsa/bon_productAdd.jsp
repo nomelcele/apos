@@ -201,7 +201,7 @@ var procode = false;
 									</div>
 									<div style="float: left; width: 40%;">
 										<div
-											style="width: 80%; height: 100%; border: 2px solid rgb(213, 206, 206); margin-top: 10px; margin-bottom: 10px; margin-left: 30%;"
+											style="width: 80%; height: 100%; border-color:#FFFFFF; margin-top: 10px; margin-bottom: 10px; margin-left: 30%;"
 											id="pimgtarget">
 											<img src="">
 										</div>
@@ -217,7 +217,7 @@ var procode = false;
 									</div>
 									<div style="float: left; width: 40%;">
 										<div
-											style="width: 80%; height: 100%; border: 2px solid rgb(213, 206, 206); margin-top: 10px; margin-bottom: 10px; margin-left: 30%;"
+											style="width: 80%; height: 100%; border-color:#FFFFFF; margin-top: 10px; margin-bottom: 10px; margin-left: 30%;"
 											id="bimgtarget">
 											<img src="">
 										</div>
