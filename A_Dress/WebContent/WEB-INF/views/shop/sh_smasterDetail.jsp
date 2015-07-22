@@ -62,18 +62,17 @@ $(function(){
 
 
 
-		<div class="row" style="font-size: 15px;">
-			<div class="col-lg-12">
-				<h3 class="page-header">
-					<i class="fa fa-files-o"> 매장 정보</i>
+		<div class="row" style="font-size: 15px; font-family: '210 나무고딕' ">
+			<div class="col-lg-12" style="font-family: '210 나무고딕' ">
+				<h3 class="page-header"  style="font-family: '210 나무고딕' ">
+					<i class="fa fa-files-o"><a style="font-family: '210 나무고딕' "> 매장정보</a></i>
 				</h3>
 			</div>
-
-			<div class="panel-body" style="margin-top: 30px;">
+			<div class="panel-body" style="margin-top: 25px;">
 				<div class="form">
 					<div class="col-lg-6">
 						<form method="post" action="sh_detail_change" id="finishbtn"  enctype="multipart/form-data">
-							 <br />
+					
 								<label style="width: 200px; margin-top:1px;" for="cname"
 									class="control-label col-lg-2">대리점</label>
 								<div class="col-lg-2">
