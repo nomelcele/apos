@@ -60,12 +60,12 @@
 														<table class="table">
 															<thead>
 																<tr>
-																	<th style="font-family: '210 나무고딕'; color: black ">고객번호</th>
-																	<th style="font-family: '210 나무고딕'; color: black ">이름</th>
-																	<th style="font-family: '210 나무고딕'; color: black ">Email</th>
-																	<th style="font-family: '210 나무고딕'; color: black ">주소</th>
-																	<th style="font-family: '210 나무고딕'; color: black ">핸드폰번호</th>
-																	<th style="font-family: '210 나무고딕'; color: black ">가입날짜</th>
+																	<th style="font-family: '210 나무고딕'; color: black "><img src = "img/num.ico" style="width: 15px; height: 10px;" >고객번호</th>
+																	<th style="font-family: '210 나무고딕'; color: black "><img src = "img/man.ico" style="width: 15px; height: 10px;" >이름</th>
+																	<th style="font-family: '210 나무고딕'; color: black "><i class="icon_mail_alt"></i>Email</th>
+																	<th style="font-family: '210 나무고딕'; color: black "><img src = "img/home.jpg" style="width: 15px; height: 10px;"> 주소</th>
+																	<th style="font-family: '210 나무고딕'; color: black "><img src = "img/tel.ico" style="width: 15px; height: 10px;" >핸드폰번호</th>
+																	<th style="font-family: '210 나무고딕'; color: black "><i class="icon_calendar"></i>가입날짜</th>
 																</tr>
 															</thead>
 															<tbody style="font-family: '210 나무고딕' ">
