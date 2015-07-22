@@ -53,15 +53,15 @@
 								<th  style="font-family: '210 나무고딕'; color: #000000 "><i class="icon_profile"></i> 작성자</th>
 								<th  style="font-family: '210 나무고딕'; color: #000000 "><i class="icon_calendar" ></i> 날짜</th>
 							</tr>
-							<c:forEach var="stList" items="${list}">
+							<c:forEach var="stList" items="${list}" >
 								<tr style="font-family: '210 나무고딕' ">
-									<td>${stList.no}</td>
-									<td><a
+									<td style= "background-color: #F4F4F4">${stList.no}</td>
+									<td style= "background-color: #F4F4F4"><a
 										href="javascript:godetail('${stList.no}')">
 											${stList.title}[${stList.cnt }]</a></td>
 									
-									<td>${stList.writer}</td>
-									<td>${stList.regdate}</td>
+									<td style= "background-color: #F4F4F4">${stList.writer}</td>
+									<td style= "background-color: #F4F4F4">${stList.regdate}</td>
 								</tr>
 							</c:forEach>
 						</tbody>
