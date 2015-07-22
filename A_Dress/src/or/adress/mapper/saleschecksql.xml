@@ -8,7 +8,7 @@
 	<!-- 본사-정산관리 -품목별 매출 순위 -->
 	<select id="salescheck_productlist" parameterType="map"
 		resultType="schkvo">
-		select  to_char(sell_date,'yyyy-MM') sell_date,count(*) count 
+		select  to_char(sell_date,'yyyy-MM') sell_date,count(s.sell_many) count 
 		,sum(s.sell_cash) sell_cash,p.PRO_NAME sell_proname
 		  from sell s, shop sh,product p  where s.SELL_pronum = p.pro_code and s.SELL_PRONUM like #{pro_code}
 		     and( sell_date <![CDATA[>=]]> to_date(#{startdate},'yyyy-MM-dd')  and sell_Date <![CDATA[<=]]> to_date(#{enddate},'yyyy-MM-dd')) 
