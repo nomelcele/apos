@@ -176,7 +176,7 @@
 					</div>
 					<div class="panel-body">
 
-						<form class="form-inline" role="form">
+						<form class="form-inline" role="form" style="font-family: '210 나무고딕' ">
 							<div class="form-group">
 
 								<input type="text" class="form-control" id="ckname" style="width: 100%"
@@ -187,7 +187,7 @@
 						</form>
 
 						<table class="table table-striped table-advance table-hover">
-							<thead>
+							<thead  style="font-family: '210 나무고딕' ">
 								<tr>
 									<th><i class="icon_profile"></i> 고객 번호</th>
 									<th><i class="icon_calendar"></i> 고객 성명</th>
@@ -251,17 +251,17 @@
 							<table class="table">
 								<thead>
 									<tr>
-										<th>no</th>
-										<th>대리점</th>
-										<th>상품코드</th>
-										<th>사이즈</th>
-										<th>수량</th>
-										<th>재고</th>
-										<th>가격</th>
-										<th>할인율</th>
-										<th>상품사진</th>
-										<th>바코드</th>
-										<th>선택</th>
+										<th style="font-family: '210 나무고딕' ">no</th>
+										<th style="font-family: '210 나무고딕' ">대리점</th>
+										<th style="font-family: '210 나무고딕' ">상품코드</th>
+										<th style="font-family: '210 나무고딕' ">사이즈</th>
+										<th style="font-family: '210 나무고딕' ">수량</th>
+										<th style="font-family: '210 나무고딕' ">재고</th>
+										<th style="font-family: '210 나무고딕' ">가격</th>
+										<th style="font-family: '210 나무고딕' ">할인율</th>
+										<th style="font-family: '210 나무고딕' ">상품사진</th>
+										<th style="font-family: '210 나무고딕' ">바코드</th>
+										<th style="font-family: '210 나무고딕' ">선택</th>
 									</tr>
 								</thead>
 								<tbody id="target2">
@@ -284,7 +284,7 @@
 
 
 
-						<div class="form-group" >
+						<div class="form-group"  style="font-family: '210 나무고딕' ">
 							<button type="button" class="btn btn-primary"
 								onclick="javascript:usingmileage()">마일리지 사용</button>
 							'
@@ -292,7 +292,7 @@
 								onclick="javascript:gogo()">완료</button>
 						</div>
 						<div class="col-sm-6" style="width: 100%;">
-							<table class="table" >
+							<table class="table"  style="font-family: '210 나무고딕' ">
 								<thead>
 									<tr>
 										<th>#</th>
@@ -322,7 +322,7 @@
 
 						<div class="table-responsive">
 
-							<table class="table">
+							<table class="table" style="font-family: '210 나무고딕' ">
 								<thead>
 									<tr>
 										<th>no</th>
@@ -346,9 +346,9 @@
 									 반복 --%>
 								</tbody>
 								<tr>
-									<td>합계 :</td>
+									<td style="font-family: '210 나무고딕' ">합계 :</td>
 									<td id="total"></td>
-									<td>잔여 마일리지</td>
+									<td style="font-family: '210 나무고딕' ">잔여 마일리지</td>
 									<td id="miletotal"></td>
 								</tr>
 							</table>
