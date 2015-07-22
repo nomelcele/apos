@@ -32,6 +32,7 @@ html .fc,
 
 .fc-header td {
 	white-space: nowrap;
+	background-color: #FFFFFF;
 	}
 
 .fc-header-left {
@@ -121,10 +122,11 @@ html .fc,
 .fc-widget-header,    /* <th>, usually */
 .fc-widget-content {  /* <td>, usually */
 	border: 1px solid #ccc;
+	background: #fff;
 	}
 	
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	background: #ffc;
+	background: #fff;
 	}
 	
 .fc-cell-overlay { /* semi-transparent rectangle while dragging */
@@ -417,6 +419,7 @@ table.fc-border-separate {
 .fc-border-separate tr.fc-last th,
 .fc-border-separate tr.fc-last td {
 	border-bottom-width: 1px;
+	background-color: rgb(219, 234, 234);
 	}
 	
 .fc-border-separate tbody tr.fc-first td,
