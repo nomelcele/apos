@@ -182,7 +182,7 @@
 			</div>
 
 			<%-- BODY --%>
-			<div id="modal body" style="text-align: center;">
+			<div id="modal body" style="text-align: center;  font-family: '210 나무고딕' ">
 				<span class="control-label" >주 소 : &nbsp;</span><input style="width:70% " type="text" class="form-control" id="adr" readonly> <br>
 				<span class="form-control" style="width:29% ">매 장 명 : &nbsp;</span><input style="width:70% " type="text" class="form-control" id="master"  readonly><br> 
 				<span  class="form-control" style="width:29% ">매 장 주 : &nbsp;</span><input style="width:70% " type="text" class="form-control" id="name"  readonly><br>
@@ -204,7 +204,7 @@
 					<span><img src = "img/shop.ico" style="width: 17pt; height: 15pt;"></span>매장 조회
 				</h3>
 					<table class="table" style="width: 100%; height: 100%;">
-						<thead>
+						<thead style="font-family: '210 나무고딕' ">
 							<tr>
 								
 								<th>지점명</th>
@@ -218,7 +218,7 @@
 							</tr>
 						</thead>
 						
-						<tbody>
+						<tbody style="font-family: '210 나무고딕' ">
 						<c:forEach var="shlist" items="${list}"  >
 							<tr class="warning">
 								<th><span id="list_name"><a href="bonsaWebRTC?shop_num=${shlist.shop_num}">${shlist.shop_name}</a></span></th>
