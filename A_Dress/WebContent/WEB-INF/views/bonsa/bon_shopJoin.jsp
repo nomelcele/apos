@@ -19,7 +19,7 @@
 					<br />
 					<div class="col-sm-10" style="width: 125%;height: 100%">
 						<table class="table">
-							<thead style="font-family: '210 나무고딕' ; font-size: 10px;">
+							<thead style="font-family: '210 나무고딕' ; font-size: 12px;">
 								<tr>
 									<th>순 번</th>
 									<th>성 명</th>
@@ -32,22 +32,7 @@
 									<th>NO</th>
 								</tr>
 							</thead>
-							<tbody>
-								<%-- Hidden submit --%>
-								<%-- YES --%>
-<!-- 								<form method="post" action="sh.apos" id="reqOk"> -->
-<!-- 									<input type="hidden" name="cmd" value="mailSelect">  -->
-<!-- 									<input type="hidden" name="subcmd" value="yes"> <input -->
-<%-- 										type="hidden" name="child" value="${shopinfo.key_email}"> --%>
-<!-- 								</form> -->
-				
-<%-- 								NO --%>
-<!-- 								<form method="post" action="sh.apos" id="reqNo"> -->
-<!-- 									<input type="hidden" name="cmd" value="mailSelect"> <input -->
-<!-- 										type="hidden" name="subcmd" value="no"> -->
-<!-- 								</form> -->
-								<%-- Hidden End --%>
-
+							<tbody style="font-family: '210 나무고딕' ; font-size: 12px;">
 								<c:forEach var="shopinfo" items="${list}">
 									<tr>
 										<td>${shopinfo.key_num}</td>
