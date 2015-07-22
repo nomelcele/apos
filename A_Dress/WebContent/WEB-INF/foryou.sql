@@ -167,7 +167,7 @@ req_date date,
 constraint stockreq_pro_code_fk foreign key(pro_code) references product(pro_code) on delete cascade,
 constraint stockreq_shop_num_fk foreign key(shop_num) references shop(shop_num) on delete cascade
 );
-create table croom (num number(10) constraint cromm_num_pk primary key,u_id varchar2(50),chat varchar2(400),cdate date,reip varchar2(100));
+create table croom (num number(10) constraint cromm_num_pk primary key,u_id varchar2(50),chat varchar2(400),cdate date,reip varchar2(100),img varchar2(20));
 
 
 ---------------7/9 calendar table--------------------------
