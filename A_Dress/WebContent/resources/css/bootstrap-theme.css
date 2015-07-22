@@ -278,7 +278,7 @@ input,
 select[multiple],
 textarea {
   background-image: none;
-  background-color: rgb(140,171,239);
+  background-color: #FFFFFF;
   border-color:rgb(140,171,239);
 }
 a {
