@@ -65,14 +65,12 @@ function openview2(img3)
 						<table class="table">
 							<thead style="font-family: '210 나무고딕' ">
 								<tr>
-									<th style="width: 5%;">번호</th>
+									<th style="width: 6%;">번호</th>
 									<th style="width: 8%;">매장</th>
 									<th style="width: 10%;">이름</th>
 									<th style="width: 10%;">코드</th>
 									<th>사이즈</th>
-									<th>가격</th>
 									<th>사진</th>
-									<th>바코드</th>
 									<th>수량</th>
 									<th>현황</th>
 									<th>날짜</th>
@@ -89,20 +87,6 @@ function openview2(img3)
 										name='req_num' id="req_num" value=""></td>
 									</tr>
 								</form>
-								<%-- Hidden submit --%>
-								<%-- YES --%>
-								<!-- 								<form method="post" action="sh.apos" id="reqOk"> -->
-								<!-- 									<input type="hidden" name="cmd" value="mailSelect">  -->
-								<!-- 									<input type="hidden" name="subcmd" value="yes"> <input -->
-								<%-- 										type="hidden" name="child" value="${shopinfo.key_email}"> --%>
-								<!-- 								</form> -->
-
-								<%-- 								NO --%>
-								<!-- 								<form method="post" action="sh.apos" id="reqNo"> -->
-								<!-- 									<input type="hidden" name="cmd" value="mailSelect"> <input -->
-								<!-- 										type="hidden" name="subcmd" value="no"> -->
-								<!-- 								</form> -->
-								<%-- Hidden End --%>
 
 								<c:forEach var="bon_product" items="${list}" varStatus="status">
 									<tr>
@@ -111,15 +95,9 @@ function openview2(img3)
 										<td>${bon_product.pro_name}</td>
 										<td>${bon_product.pro_code}</td>
 										<td>${bon_product.pro_size}</td>
-										<td>${bon_product.pro_price}</td>
 										<td><a
 											href="javascript:openview1('product/${bon_product.pro_img}')">
 												<img src='product/${bon_product.pro_img}'
-												style="width: 40px; cursor: hand;">
-										</a></td>
-										<td><a
-											href="javascript:openview2('barcode/${bon_product.pro_barcode }')">
-												<img src='barcode/${bon_product.pro_barcode}'
 												style="width: 40px; cursor: hand;">
 										</a></td>
 										<td>${bon_product.pro_amount}</td>
