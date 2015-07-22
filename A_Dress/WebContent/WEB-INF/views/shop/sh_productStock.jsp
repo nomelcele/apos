@@ -116,14 +116,14 @@
 									<table class="table" style="width: 100%;">
 										<thead  style="font-family: '210 나무고딕' ">
 											<tr>
-												<th>no</th>
-												<th>상품코드</th>
-												<th>사이즈</th>
-												<th>재고</th>
-												<th>가격</th>
-												<th>상품사진</th>
-												<th>바코드</th>
-												<th>선택</th>
+												<th style="color: black;">no</th>
+												<th style="color: black;">상품코드</th>
+												<th style="color: black;">사이즈</th>
+												<th style="color: black;">재고</th>
+												<th style="color: black;">가격</th>
+												<th style="color: black;">상품사진</th>
+												<th style="color: black;">바코드</th>
+												<th style="color: black;">선택</th>
 											</tr>
 										</thead>
 
@@ -137,10 +137,10 @@
 										<table class="table" style="width: 100%; height: 100%">
 											<thead  style="font-family: '210 나무고딕' ">
 												<tr>
-													<th>대리점</th>
-													<th>상품코드</th>
-													<th>사이즈</th>
-													<th>수량</th>
+													<th style="color: black;">대리점</th>
+													<th style="color: black;">상품코드</th>
+													<th style="color: black;">사이즈</th>
+													<th style="color: black;">수량</th>
 												</tr>
 											</thead>
 											<tbody  style="font-family: '210 나무고딕' ">

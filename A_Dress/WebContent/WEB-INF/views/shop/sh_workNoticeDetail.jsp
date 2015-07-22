@@ -66,10 +66,10 @@
                         <table class="table">
                            <thead style="font-family: '210 나무고딕' ">
                               <tr>
-                                 <th>작성자</th>
-                                 <th>내용</th>
-                                 <th>날짜</th>
-                                 <th>삭제</th>
+                                 <th style="color: black;">작성자</th>
+                                 <th style="color: black;">내용</th>
+                                 <th style="color: black;">날짜</th>
+                                 <th style="color: black;">삭제</th>
                               </tr>
                            </thead>
                            

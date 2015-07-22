@@ -55,7 +55,7 @@
 
 		<div class="row" style="font-size: 15px;width: 100%">
 			<div class="col-lg-12">
-				<h3 class="page-header" style="font-family: '210 나무고딕' ">
+				<h3 class="page-header" style="font-family: '210 나무고딕'; color: black; ">
 					<span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>판매현황
 				</h3>
 				</br>
@@ -82,13 +82,13 @@
 					<thead  style="font-family: '210 나무고딕' ">
 						<p></p>
 						<tr>
-							<th><i class="icon_profile"></i>날짜</th>
-							<th><i class="icon_profile"></i>상품번호</th>
-							<th><i class="icon_profile"></i>상품 사진</th>
-							<th><i class="icon_mail_alt"></i>판매 액</th>
-							<th><i class="icon_pin_alt"></i>판매 수량</th>
-							<th><i class="icon_profile"></i>구매 고객 번호</th>
-							<th><i class="icon_profile"></i>영수증 번호</th>
+							<th style="color: black;"><i class="icon_profile"></i>날짜</th>
+							<th style="color: black;"><i class="icon_profile"></i>상품번호</th>
+							<th style="color: black;"><i class="icon_profile"></i>상품 사진</th>
+							<th style="color: black;"><i class="icon_mail_alt"></i>판매 액</th>
+							<th style="color: black;"><i class="icon_pin_alt"></i>판매 수량</th>
+							<th style="color: black;"><i class="icon_profile"></i>구매 고객 번호</th>
+							<th style="color: black;"><i class="icon_profile"></i>영수증 번호</th>
 						</tr>
 
 					</thead>

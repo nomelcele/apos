@@ -17,9 +17,9 @@
 <section id="main-content">
 	<section class="wrapper">
 
-		<div class="row" style="font-size: 15px;">
+		<div class="row" style="font-size: 15px; color: black">
 			<div class="col-lg-12" style="width: 100%">
-				<h3 class="page-header" style="font-family: '210 나무고딕' ">
+				<h3 class="page-header" style="font-family: '210 나무고딕'; color: #000000 ">
 					<span><img src = "img/member.ico" style="width: 14pt; height: 14pt;"></span>회원수정
 				</h3>
 
@@ -60,12 +60,12 @@
 														<table class="table">
 															<thead>
 																<tr>
-																	<th style="font-family: '210 나무고딕' ">고객번호</th>
-																	<th style="font-family: '210 나무고딕' ">이름</th>
-																	<th style="font-family: '210 나무고딕' ">Email</th>
-																	<th style="font-family: '210 나무고딕' ">주소</th>
-																	<th style="font-family: '210 나무고딕' ">핸드폰번호</th>
-																	<th style="font-family: '210 나무고딕' ">가입날짜</th>
+																	<th style="font-family: '210 나무고딕'; color: black ">고객번호</th>
+																	<th style="font-family: '210 나무고딕'; color: black ">이름</th>
+																	<th style="font-family: '210 나무고딕'; color: black ">Email</th>
+																	<th style="font-family: '210 나무고딕'; color: black ">주소</th>
+																	<th style="font-family: '210 나무고딕'; color: black ">핸드폰번호</th>
+																	<th style="font-family: '210 나무고딕'; color: black ">가입날짜</th>
 																</tr>
 															</thead>
 															<tbody style="font-family: '210 나무고딕' ">
