@@ -45,7 +45,7 @@
 
 					<table class="table table-striped table-advance table-hover"
 						style="font-size: 15px;">
-						<tbody>
+						<tbody style="font-family: '210 나무고딕' ">
 							<tr>
 								<th>#</th>
 								<th><i class="icon_mail_alt"></i> 제목</th>
