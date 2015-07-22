@@ -83,7 +83,7 @@
 								name="date_ps2" minlength="2" autocomplete="off" type="date"
 								required />
 
-
+<br/><br/>
 						</div>
 						<label for="cname" class="control-label col-lg-2"
 							style="font-size: 13px;  font-family: '210 나무고딕' ">직원 번호 </label> <input
@@ -94,8 +94,7 @@
 							name="btn_out" style="font-family: '210 나무고딕' ">조회</button>
 
 					</div>
-					</br> </br>
-
+					</br> 
 				</form>
 
 
