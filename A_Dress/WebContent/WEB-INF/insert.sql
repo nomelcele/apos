@@ -1033,5 +1033,8 @@ insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 2, 20, '2015-0
 insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 2, 20, '2015-06-19', 1, 1 ,28);
 insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 2, 20, '2015-06-19', 1, 1 ,8);
 
+------------------------------------대화 인서트---------------------------
+insert into croom values(croot_seq.nextVal,'bon_admin','여기는 본사입니다',sysdate,'0:0:0:0:0:0:0:1','A-4.JPG');
+
 
 commit;
