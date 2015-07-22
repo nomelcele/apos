@@ -313,30 +313,37 @@
 	});
 </script>
 
+             
+
 <body>
+<div style="z-index: 1; position: relative; margin-left: 45px;"> 
+<img src="resources/img/ZARA5.jpg ">
+             
 	<!-- 본사 회원관리 - 회원가입 페이지입니다. -->
-	<section id="main-content"> <section class="panel">
-	<div class="row" style="font-size: 15px;">
-		<div class="col-lg-12">
-			<h3 class="page-header">
+	<div style="z-index: 2;">
+	
+	<div class="row" style="font-size: 15px; margin-top: -780px; margin-left: 30px;">
+	
+		<div class="col-lg-5">
+			<h3 class="page-header" style="font-family: '210 나무고딕' ">
 				<i class="fa fa-files-o"></i> 회원가입
 			</h3>
 
 			<div class="row">
 				<div class="col-lg-12">
 
-					<div class="panel-body">
-						<div class="form">
+					<div class="panel-body" >
+						<div class="form" >
 
 
 							<form:form method="post" action="sawonjoin" name="bon_joinForm"
-								id="bon_joinForm" commandName="BonsaVO">
+								id="bon_joinForm" commandName="BonsaVO" >
 
-								<div class="form-group">
+								<div class="form-group" style="font-family: '210 나무고딕' ">
 									<span style="display: block;">아이디 :</span> <input
 										style="width: 20%; " class="form-control" id="bon_" name="bon_"
 										type="text" value="bon_" readonly="readonly" />
-									<form:input path="bon_id" style="width: 79%"
+									<form:input path="bon_id" style="width: 30%"
 										class="form-control" id="bon_id" name="bon_id" type="text" />
 									<form:errors path="bon_id" cssClass="error" />
 								</div>
@@ -344,32 +351,32 @@
 								<div id="viewID"></div>
 
 								<%-- 비밀번호  --%>
-								<div class="form-group">
+								<div class="form-group" style="font-family: '210 나무고딕' ">
 									<span style="display: block;">비밀번호 :</span>
 									<form:password path="bon_pwd" class="form-control" id="bon_pwd"
-										name="bon_pwd"  />
+										name="bon_pwd" style="width: 40%"  />
 									<form:errors path="bon_pwd" cssClass="error" />
 								</div>
-								<div class="form-group">
+								<div class="form-group" style="font-family: '210 나무고딕' ">
 									<span style="display: block;">비밀번호 확인 :</span> <input
 										class="form-control" id="bon_pwd_ck" name="bon_pwd_ck"
-										type="password" minlength="6" />
+										type="password" style="width: 40%"minlength="6" />
 
 								</div>
 								<%-- 비밀번호 확인 결과--%>
 								<div id="viewPWD"></div>
 
 								<%-- 성명 --%>
-								<div class="form-group">
+								<div class="form-group" style="font-family: '210 나무고딕' ">
 									<span style="display: block">성 명 :</span>
-									<form:input path="bon_name" class="form-control" id="bon_name"
+									<form:input path="bon_name" style="width: 30%" class="form-control" id="bon_name"
 										name="bon_name" type="text" />
 									<form:errors path="bon_name" cssClass="error" />
 								</div>
 								<%-- 연락처 --%>
-								<div class="form-group ">
+								<div class="form-group " style="font-family: '210 나무고딕'  ">
 									<span style="display: block">연락처 :</span> <select
-										style="width: 23%" class="form-control">
+										style="width: 20%" class="form-control">
 										<option>SKT</option>
 										<option>KT</option>
 										<option>LG</option>
@@ -381,7 +388,7 @@
 										 maxlength="4" type="text" />
 								</div>
 								<!-- Footer -->
-								<div class="form-group">
+								<div class="form-group" style="font-family: '210 나무고딕' ">
 									<button type="button" class="btn btn-default"
 										id="submit_button">요청</button>
 								</div>
@@ -395,7 +402,9 @@
 			</div>
 		</div>
 	</div>
+	</div>
+	</div>
 	</section> </section>
-
+	</div>
 </body>
 </html>
