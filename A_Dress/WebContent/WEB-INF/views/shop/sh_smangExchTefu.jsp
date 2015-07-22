@@ -58,12 +58,12 @@ function sh_managEx(num){
 							<table class="table">
 								<thead style="font-family: '210 나무고딕' ">
 									<tr>
-										<th>판매번호</th>
-										<th>고객성명</th>
-										<th>상품번호</th>
-										<th>판매가</th>
-										<th>수량</th>
-										<th>환불</th>
+										<th style="color: black;">판매번호</th>
+										<th style="color: black;">고객성명</th>
+										<th style="color: black;">상품번호</th>
+										<th style="color: black;">판매가</th>
+										<th style="color: black;">수량</th>
+										<th style="color: black;">환불</th>
 
 									</tr>
 								</thead>

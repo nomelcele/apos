@@ -154,7 +154,7 @@
 
 			<div class="row" style="font-size: 13px;width: 100%;">
 				<div class="col-lg-12" >
-					<h3 class="page-header" style="font-family: '210 나무고딕' ">
+					<h3 class="page-header" style="font-family: '210 나무고딕'; color: black ">
 						<span><img src = "img/product.ico" style="width: 14pt; height: 14pt;"></span>상품조회
 					</h3>
 
@@ -204,15 +204,15 @@
 									<table class="table">
 										<thead>
 											<tr>
-												<th style="font-family: '210 나무고딕' ">no</th>
-												<th style="font-family: '210 나무고딕' ">상품이름</th>
-												<th style="font-family: '210 나무고딕' ">상품코드</th>
-												<th style="font-family: '210 나무고딕' ">사이즈</th>
-												<th style="font-family: '210 나무고딕' ">재고</th>
-												<th style="font-family: '210 나무고딕' ">가격</th>
-												<th style="font-family: '210 나무고딕' ">할인율</th>
-												<th style="font-family: '210 나무고딕' ">상품사진</th>
-												<th style="font-family: '210 나무고딕' ">바코드</th>
+												<th style="font-family: '210 나무고딕'; color: black ">no</th>
+												<th style="font-family: '210 나무고딕'; color: black ">상품이름</th>
+												<th style="font-family: '210 나무고딕'; color: black ">상품코드</th>
+												<th style="font-family: '210 나무고딕'; color: black ">사이즈</th>
+												<th style="font-family: '210 나무고딕'; color: black ">재고</th>
+												<th style="font-family: '210 나무고딕'; color: black ">가격</th>
+												<th style="font-family: '210 나무고딕'; color: black ">할인율</th>
+												<th style="font-family: '210 나무고딕'; color: black ">상품사진</th>
+												<th style="font-family: '210 나무고딕'; color: black ">바코드</th>
 											</tr>
 										</thead>
 										<tbody style="font-family: '210 나무고딕' ">

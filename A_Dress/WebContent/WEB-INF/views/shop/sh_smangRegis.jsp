@@ -169,14 +169,14 @@
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%">
 						<div class="col-lg-12">
-							<h3 class="page-header" style="font-family: '210 나무고딕' ">
+							<h3 class="page-header" style="font-family: '210 나무고딕'; color: black; ">
 								<sapn><img src = "img/smang.ico" style="width: 16pt; height: 15pt;"></sapn>고객검색
 							</h3>
 						</div>
 					</div>
 					<div class="panel-body">
 
-						<form class="form-inline" role="form" style="font-family: '210 나무고딕' ">
+						<form class="form-inline" role="form" style="font-family: '210 나무고딕'; color: black; ">
 							<div class="form-group">
 
 								<input type="text" class="form-control" id="ckname" style="width: 100%"
@@ -189,12 +189,12 @@
 						<table class="table table-striped table-advance table-hover">
 							<thead  style="font-family: '210 나무고딕' ">
 								<tr>
-									<th><i class="icon_profile"></i> 고객 번호</th>
-									<th><i class="icon_calendar"></i> 고객 성명</th>
-									<th><i class="icon_pin_alt"></i> 주소</th>
-									<th><i class="icon_mobile"></i> 전화번호</th>
-									<th><i class="icon_profile"></i> 마일리지</th>
-									<th><i class="icon_cogs"></i> 선택</th>
+									<th style="color: black;"><i class="icon_profile"></i> 고객 번호</th>
+									<th style="color: black;"><i class="icon_calendar"></i> 고객 성명</th>
+									<th style="color: black;"><i class="icon_pin_alt"></i> 주소</th>
+									<th style="color: black;"><i class="icon_mobile"></i> 전화번호</th>
+									<th style="color: black;"><i class="icon_profile"></i> 마일리지</th>
+									<th style="color: black;"><i class="icon_cogs"></i> 선택</th>
 								</tr>
 							</thead>
 							<tbody id="custarget">
@@ -233,7 +233,7 @@
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%" >
 						<div class="col-lg-12">
-							<h3 class="page-header" style="font-family: '210 나무고딕' ">
+							<h3 class="page-header" style="font-family: '210 나무고딕'; color: black; ">
 								<sapn><img src = "img/smang.ico" style="width: 16pt; height: 15pt;"></sapn>구매정보
 							</h3>
 						</div>
@@ -251,17 +251,17 @@
 							<table class="table">
 								<thead>
 									<tr>
-										<th style="font-family: '210 나무고딕' ">no</th>
-										<th style="font-family: '210 나무고딕' ">대리점</th>
-										<th style="font-family: '210 나무고딕' ">상품코드</th>
-										<th style="font-family: '210 나무고딕' ">사이즈</th>
-										<th style="font-family: '210 나무고딕' ">수량</th>
-										<th style="font-family: '210 나무고딕' ">재고</th>
-										<th style="font-family: '210 나무고딕' ">가격</th>
-										<th style="font-family: '210 나무고딕' ">할인율</th>
-										<th style="font-family: '210 나무고딕' ">상품사진</th>
-										<th style="font-family: '210 나무고딕' ">바코드</th>
-										<th style="font-family: '210 나무고딕' ">선택</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">no</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">대리점</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">상품코드</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">사이즈</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">수량</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">재고</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">가격</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">할인율</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">상품사진</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">바코드</th>
+										<th style="font-family: '210 나무고딕'; color: black; ">선택</th>
 									</tr>
 								</thead>
 								<tbody id="target2">
@@ -295,10 +295,10 @@
 							<table class="table"  style="font-family: '210 나무고딕' ">
 								<thead>
 									<tr>
-										<th>#</th>
-										<th>이름</th>
-										<th>전화번호</th>
-										<th>마일리지</th>
+										<th style="color: black;">#</th>
+										<th style="color: black;">이름</th>
+										<th style="color: black;">전화번호</th>
+										<th style="color: black;">마일리지</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -325,11 +325,11 @@
 							<table class="table" style="font-family: '210 나무고딕' ">
 								<thead>
 									<tr>
-										<th>no</th>
-										<th>상품번호</th>
-										<th>사이즈</th>
-										<th>수량</th>
-										<th>할인가</th>
+										<th style="color: black;">no</th>
+										<th style="color: black;">상품번호</th>
+										<th style="color: black;">사이즈</th>
+										<th style="color: black;">수량</th>
+										<th style="color: black;">할인가</th>
 									</tr>
 								</thead>
 								<tbody id="ftarget">

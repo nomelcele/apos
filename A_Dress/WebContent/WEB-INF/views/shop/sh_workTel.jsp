@@ -73,7 +73,7 @@ function telaction(){
 <section id="main-content">
 	<section class="wrapper">
 		<div class="col-lg-12">
-			<h3 class="page-header" style="font-family: '210 나무고딕' ">
+			<h3 class="page-header" style="font-family: '210 나무고딕'; color: black;">
 				<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span> 매장 직원 연락처
 			</h3>
 
@@ -104,11 +104,11 @@ function telaction(){
 									<table class="table table-condensed">
 										<thead>
 											<tr>
-												<th  style="font-family: '210 나무고딕' ">지원 번호</th>
-												<th style="font-family: '210 나무고딕' ">이름</th>
-												<th style="font-family: '210 나무고딕' ">직급</th>
-												<th style="font-family: '210 나무고딕' ">지점</th>
-												<th style="font-family: '210 나무고딕' ">연락처</th>
+												<th  style="font-family: '210 나무고딕'; color: black; ">지원 번호</th>
+												<th style="font-family: '210 나무고딕'; color: black; ">이름</th>
+												<th style="font-family: '210 나무고딕'; color: black; ">직급</th>
+												<th style="font-family: '210 나무고딕'; color: black; ">지점</th>
+												<th style="font-family: '210 나무고딕'; color: black; ">연락처</th>
 											</tr>
 										</thead>
 										<tbody  style="font-family: '210 나무고딕' ">

@@ -110,7 +110,7 @@
 
       <div class="row" style="font-size: 15px; width: 100%">
          <div class="col-lg-12">
-            <h3 class="page-header" style="font-family: '210 나무고딕' ">
+            <h3 class="page-header" style="font-family: '210 나무고딕'; color: black; ">
                <span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>기간별 매출현황
             </h3>
             </br>
@@ -144,10 +144,10 @@
                <thead>
                   <p></p>
                   <tr>
-                     <th><i class="icon_profile"></i>날짜</th>
-                     <th><i class="icon_profile"></i>대리점명</th>
-                     <th><i class="icon_mail_alt"></i>판매 액</th>
-                     <th><i class="icon_pin_alt"></i>판매 수량</th>
+                     <th style="color: black;"><i class="icon_profile"></i>날짜</th>
+                     <th style="color: black;"><i class="icon_profile"></i>대리점명</th>
+                     <th style="color: black;"><i class="icon_mail_alt"></i>판매 액</th>
+                     <th style="color: black;"><i class="icon_pin_alt"></i>판매 수량</th>
                   </tr>
 
                </thead>

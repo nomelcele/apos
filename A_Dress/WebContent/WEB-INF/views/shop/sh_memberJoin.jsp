@@ -98,8 +98,8 @@
 		</form>
 		<div class="row" style="font-size: 15px; width: 125%; height: 100%">
 			<div class="col-lg-12">
-				<h3 class="page-header" style="font-family: '210 나무고딕' ">
-					<span><img src = "img/member.ico" style="width: 14pt; height: 14pt;"></span>회원가입
+				<h3 class="page-header" style="font-family: '210 나무고딕'; color: #000000 ">
+					<span><img src = "img/member.ico" style="width: 14pt; height: 14pt; color: #000000"></span>회원가입
 				</h3>
 
 				<div class="row">
@@ -155,7 +155,7 @@
 													class="form-control" style="width: 20%" id="tel2"
 													type="tel" required minlength="3" maxlength="4" />- <input
 													class="form-control" style="width: 20%" id="tel3"
-													type="tel" required minlength="4" maxlength="4" /> ]
+													type="tel" required minlength="4" maxlength="4" />
 													<input type="hidden" name="mem_tel" id="mem_tel">
 											</div>
 										</div>

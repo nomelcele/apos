@@ -55,7 +55,7 @@
 <section id="main-content">
 	<section class="wrapper">
 		<div class="col-lg-12">
-			<h3 class="page-header"style="font-family: '210 나무고딕' ">
+			<h3 class="page-header"style="font-family: '210 나무고딕'; color: black; ">
 				<span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>출결
 			</h3>
 
@@ -77,10 +77,10 @@
 									<table class="table table-condensed">
 										<thead style="font-family: '210 나무고딕' ">
 											<tr>
-												<th>#</th>
-												<th>이름</th>
-												<th>전화번호</th>
-												<th>출결관리</th>
+												<th style="color: black;">#</th>
+												<th style="color: black;">이름</th>
+												<th style="color: black;">전화번호</th>
+												<th style="color: black;">출결관리</th>
 											</tr>
 										</thead>
 

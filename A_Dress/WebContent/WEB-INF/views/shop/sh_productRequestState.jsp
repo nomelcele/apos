@@ -37,19 +37,19 @@ function open_win3(img3)
 					<br />
 					<div class="col-sm-10" style="width: 135%;height: 100%">
 						<table class="table">
-							<thead  style="font-family: '210 나무고딕' ">
+							<thead  style="font-family: '210 나무고딕'; color: black; ">
 								<tr>
-									<th style="width: 5%;">번호</th>
-									<th style="width: 8%;">매장</th>
-									<th style="width: 11%;">이름</th>
-									<th>코드</th>
-									<th>사이즈</th>
-									<th>가격</th>
-									<th>사진</th>
-									<th>바코드</th>
-									<th>수량</th>
-									<th>현황</th>
-									<th>날짜</th>
+									<th style="width: 5%; color: black;">번호</th>
+									<th style="width: 8%; color: black;">매장</th>
+									<th style="width: 11%; color: black;">이름</th>
+									<th style="color: black;">코드</th>
+									<th style="color: black;">사이즈</th>
+									<th style="color: black;">가격</th>
+									<th style="color: black;">사진</th>
+									<th style="color: black;">바코드</th>
+									<th style="color: black;">수량</th>
+									<th style="color: black;">현황</th>
+									<th style="color: black;">날짜</th>
 								</tr>
 							</thead>
 							<tbody  style="font-family: '210 나무고딕' ">
