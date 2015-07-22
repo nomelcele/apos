@@ -103,7 +103,7 @@
 												name="pcode3" onkeydown="startSuggest();" autocomplete="off"
 												type="text" placeholder="상품코드"></td>
 
-											<td>
+											<td  style="font-family: '210 나무고딕' ">
 												<button class="btn btn-default" type="button"
 													id="bon_p_numbtn">조회</button>
 											</td>
@@ -114,7 +114,7 @@
 								<div class="table-responsive" style="height: 100%; width: 100%">
 
 									<table class="table" style="width: 100%;">
-										<thead>
+										<thead  style="font-family: '210 나무고딕' ">
 											<tr>
 												<th>no</th>
 												<th>상품코드</th>
@@ -135,7 +135,7 @@
 
 
 										<table class="table" style="width: 100%; height: 100%">
-											<thead>
+											<thead  style="font-family: '210 나무고딕' ">
 												<tr>
 													<th>대리점</th>
 													<th>상품코드</th>
@@ -143,7 +143,7 @@
 													<th>수량</th>
 												</tr>
 											</thead>
-											<tbody>
+											<tbody  style="font-family: '210 나무고딕' ">
 
 												<form action="sh_productstockreq" method="post"
 													id="productstockedit">
@@ -167,7 +167,7 @@
 										</table>
 
 									</table>
-									<button class="btn btn-default" type="button"
+									<button class="btn btn-default" type="button"  style="font-family: '210 나무고딕' "
 										onclick="javascript:pstoeditaction()">신청</button>
 
 
