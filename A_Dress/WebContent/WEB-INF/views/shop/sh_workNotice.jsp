@@ -54,7 +54,7 @@
 								<th  style="font-family: '210 나무고딕' "><i class="icon_calendar" ></i> 날짜</th>
 							</tr>
 							<c:forEach var="stList" items="${list}">
-								<tr>
+								<tr style="font-family: '210 나무고딕' ">
 									<td>${stList.no}</td>
 									<td><a
 										href="javascript:godetail('${stList.no}')">
