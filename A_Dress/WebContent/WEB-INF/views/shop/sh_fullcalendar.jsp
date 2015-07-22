@@ -9,6 +9,7 @@
 		width: 70%;
 		height : 70%;
 		float: left;
+		background-color: rgb(219, 234, 234);
 	}
 </style>
 <script>
