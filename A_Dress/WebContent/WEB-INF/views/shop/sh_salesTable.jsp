@@ -60,7 +60,7 @@
 				</h3>
 				</br>
 
-				<div class="form-group">
+				<div class="form-group"  style="font-family: '210 나무고딕' ">
 					<div style="margin-left: 10px;">
 						<label for="cname" class="control-label col-lg-2">
 							<p align="left">날짜</p>
@@ -79,7 +79,7 @@
 
 
 				<table class="table table-striped table-advance table-hover">
-					<thead>
+					<thead  style="font-family: '210 나무고딕' ">
 						<p></p>
 						<tr>
 							<th><i class="icon_profile"></i>날짜</th>
