@@ -151,10 +151,10 @@
 					<thead style="font-family: '210 나무고딕' ">
 						<p></p>
 						<tr>
-							<th><i class="icon_profile"></i>날짜</th>
-							<th><i class="icon_profile"></i>대리점명</th>
-							<th><i class="icon_mail_alt"></i>판매 액</th>
-							<th><i class="icon_pin_alt"></i>판매 수량</th>
+						<th><i class="icon_calendar"></i>날짜</th>
+							<th><img src = "img/shopimg.ico" style="width: 18px; height: 15px;" >대리점명</th>
+							<th><img src = "img/s.ico" style="width: 15px; height: 15px;" >판매 액</th>
+							<th><img src = "img/sn.ico" style="width: 20px; height: 18px;" >판매 수량</th>
 						</tr>
 
 					</thead>
