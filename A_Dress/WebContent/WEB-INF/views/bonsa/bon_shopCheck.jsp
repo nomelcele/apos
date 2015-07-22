@@ -197,7 +197,7 @@
 
 <section id="main-content">
 	<section class="wrapper">
-		<div class="row">
+		<div class="row" >
 			<div class="col-lg-12" style="width: 125%; height: 100%;">
 				<section class="panel">
 					<h3 class="page-header" style="font-family: '210 나무고딕' ">
@@ -217,7 +217,7 @@
 							</tr>
 						</thead>
 						
-						<tbody style="font-family: '210 나무고딕' ">
+						<tbody style="font-family: '210 나무고딕' ; font-size: 12px;">
 						<c:forEach var="shlist" items="${list}"  >
 							<tr class="warning">
 								<th><span id="list_name"><a href="bonsaWebRTC?shop_num=${shlist.shop_num}">${shlist.shop_name}</a></span></th>
