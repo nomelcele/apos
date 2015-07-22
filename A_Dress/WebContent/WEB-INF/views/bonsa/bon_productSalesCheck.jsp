@@ -117,7 +117,7 @@
 				</br>
 				<form action="*.apos" id="otsearch" method="post"
 					onsubmit="return false;">
-					<div class="form-group">
+					<div class="form-group" style="font-family: '210 나무고딕' ">
 
 						<div style="margin-left: 10px;">
 							<label for="cname" class="control-label col-lg-2">물품코드번호
@@ -145,7 +145,7 @@
 				<div id="chart_div" style="width: 80%; height: 100%;"></div>
 
 				<table class="table table-striped table-advance table-hover">
-					<thead>
+					<thead style="font-family: '210 나무고딕' ">
 
 						<tr>
 							<th>날짜</th>
