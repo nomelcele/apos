@@ -34,9 +34,9 @@
 										<input type="hidden" name="cmd" value="smember"> <input
 											type="hidden" name="subcmd" value="check"> <input
 											type="hidden" name="page" value="1">
-										<div class="form-group ">
+										<div class="form-group " style="font-family: '210 나무고딕' ">
 											<label for="cname" class="control-label col-lg-2"
-												style="font-size: 11px; float: left">이름 </label>
+												style="font-size: 11px; float: left  ">이름 </label>
 											<div style="float: left; position: relative;">
 												<input class="form-control" id="sname_ps" name="mem_name"
 													onkeydown="startSuggest();" autocomplete="off" type="text"
@@ -60,15 +60,15 @@
 														<table class="table">
 															<thead>
 																<tr>
-																	<th>고객번호</th>
-																	<th>이름</th>
-																	<th>Email</th>
-																	<th>주소</th>
-																	<th>핸드폰번호</th>
-																	<th>가입날짜</th>
+																	<th style="font-family: '210 나무고딕' ">고객번호</th>
+																	<th style="font-family: '210 나무고딕' ">이름</th>
+																	<th style="font-family: '210 나무고딕' ">Email</th>
+																	<th style="font-family: '210 나무고딕' ">주소</th>
+																	<th style="font-family: '210 나무고딕' ">핸드폰번호</th>
+																	<th style="font-family: '210 나무고딕' ">가입날짜</th>
 																</tr>
 															</thead>
-															<tbody>
+															<tbody style="font-family: '210 나무고딕' ">
 																<c:forEach var="stList" items="${stList}">
 																	<tr>
 																		<th>${stList.mem_num}</th>
