@@ -86,8 +86,6 @@
 								<th><img src = "img/home.jpg" style="width: 10px; height: 8px;" >주소</th>
 								<th><img src = "img/num.ico" style="width: 10px; height: 8px;" >사업자번호</th>
 								<th><img src = "img/man.ico" style="width: 10px; height: 8px;" >매장주이름</th>
-								<th><img src = "img/tel.ico" style="width: 10px; height: 8px;" >전화번호</th>
-								<th><i class="icon_mail_alt"></i>매장주email</th>
 								<th><img src = "img/man.ico" style="width: 10px; height: 8px;" >매장주사진</th>
 								<th><img src = "img/shop.ico" style="width: 10px; height: 8px;" >화상회의</th>
 							</tr>
@@ -100,8 +98,6 @@
 								<th><span id="list_adr">${shlist.shop_adr}</span></th>
 								<th>${shlist.shop_crnum}</th>
 								<th><span id="list_master">${shlist.shop_master}</span></th>
-								<th>${shlist.shop_tel}</th>
-								<th>${shlist.shop_mail}</th>
 								<th><img src="master/${shlist.shop_img}" style="width: 50px;"></th>
 								<th><a href="bonsaWebRTC?shop_num=${shlist.shop_num}" style="font-family: '210 나무고딕' "><input onclick="shopcdetialmap(${shlist.shop_num})" type="button" class="form-control4 block" id="detailBtn" value="화상연결하기"></a></th>								
 								
