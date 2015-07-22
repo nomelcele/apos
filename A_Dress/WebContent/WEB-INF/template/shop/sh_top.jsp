@@ -36,10 +36,10 @@ document.getElementById("profilechange").submit();
                <span class="lite"></span></a> 
          </div>
          <!--logo end-->
-         <div class="nav search-row" id="top_menu">
+         <div class="nav search-row" id="top_menu"  style="font-family: '210 나무고딕' ">
          
             <!--  search form start -->
-            <ul class="nav top-menu">
+            <ul class="nav top-menu"  style="font-family: '210 나무고딕' ">
                <li style="float:left;">
                   <form class="navbar-form" id ="top_search_form" action="sh_productsaerch" method="post">
                      <input type="hidden" id="childcmd" name="childcmd"
@@ -48,7 +48,7 @@ document.getElementById("profilechange").submit();
                         id="top_shop_num" name="shop_num"
                         value="${sessionScope.shop_num}">
                         <input type="hidden" id ="top_name_pk" name ="pro_name" val="">         
-                  </form><a href="javascript:open_win2()" style="float:left">&nbsp;&nbsp;&nbsp;<img src="resources/img/pcode79.JPG" ></a><div style="float: left;">
+                  </form><a href="javascript:open_win2()" style="float:left">&nbsp;&nbsp;&nbsp;</a><div style="float: left;">
                   <input class="form-control" name="top_search" id="top_search"
                   placeholder="Product Code Search"   onKeypress="javascript:if(event.keyCode==13) { topsearch_pk();}"
                   type="text" ></div>
@@ -166,7 +166,7 @@ document.getElementById("profilechange").submit();
                   class="dropdown-toggle" href="#"> <span class="profile-ava">
                         <img alt="" src="master/${sessionScope.shop_img}" align="center" style="width:40px; height: 40px;  border-radius:150px;">
                   </span> <span class="form-control" id="master_span"
-                     style="color: black;">
+                     style="color: black; font-family: '1훈바람언덕' ">
                         [${sessionScope.shop_name}] - ${sessionScope.shop_master}님
                         환영합니다 </span>&nbsp; 
 <!--                         <span class="form-control" id="staff_span" -->
