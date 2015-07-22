@@ -74,9 +74,9 @@
 
 
 
-						<div style="margin-left: 10px;">
+						<div style="margin-left: 10px;  font-family: '210 나무고딕' ">
 							<label for="cname" class="control-label col-lg-2"><p
-									align="left">기간</p> </label> <input id="date_ps" name="date_ps"
+									align="left" style="font-family: '210 나무고딕' ">기간</p> </label> <input id="date_ps" name="date_ps"
 								minlength="2" autocomplete="off" type="date" required />
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 							~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; <input id="date_ps2"
@@ -86,12 +86,12 @@
 
 						</div>
 						<label for="cname" class="control-label col-lg-2"
-							style="font-size: 13px;">직원 번호 </label> <input
+							style="font-size: 13px;  font-family: '210 나무고딕' ">직원 번호 </label> <input
 							class="form-control" id="staff_num" name="staff_num"
 							style="width: 20%" onkeydown="startSuggest();" autocomplete="off"
 							type="text" required />
 						<button class="form-control6" type="button" id="btn_out"
-							name="btn_out">조회</button>
+							name="btn_out" style="font-family: '210 나무고딕' ">조회</button>
 
 					</div>
 					</br> </br>
@@ -101,7 +101,7 @@
 
 				<table class="table table-striped table-advance table-hover">
 
-					<thead>
+					<thead style="font-family: '210 나무고딕' ">
 
 						<tr>
 							<th><i class="icon_profile"></i>이름</th>
