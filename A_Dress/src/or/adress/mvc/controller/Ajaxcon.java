@@ -591,6 +591,7 @@ public class Ajaxcon {
 		v.setU_id(u_id);
 		v.setChat(chat);
 		v.setReip(reip);
+		v.setImg("A-4.JPG");
 		chdao.insertChat(v);
 		System.out.println("üũ3");
 		return "ajax/NewFile";
@@ -617,6 +618,7 @@ public class Ajaxcon {
 		v.setU_id(u_id);
 		v.setChat(chat);
 		v.setReip(reip);
+		v.setImg(session.getAttribute("shop_img").toString());
 		chdao.insertChat(v);
 		System.out.println("üũ3");
 		return "ajax/NewFile";
@@ -643,18 +645,20 @@ public class Ajaxcon {
 		outs.append("data:");
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
+				System.out.println(e.getImg());
 				outs.append("<li class=\"by-other\">");
-				outs.append("<div class=\"avatar pull-right\"><img src=\"resources/img/user22.png\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				//outs.append("<div class=\"avatar pull-right\">").append(e.getU_id()).append("<div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append("<div class=\"avatar pull-right\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getCdate());
 				outs.append("<span class=\"pull-right\">");
-				outs.append(e.getU_id());
+				//outs.append(e.getU_id());
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
 
 			} else {
 				outs.append("<li class=\"by-me\">");
-				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append("<div class=\"avatar pull-left\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getU_id());
 				outs.append("<span class=\"pull-right\">");
 				outs.append(e.getCdate());
@@ -694,7 +698,7 @@ public class Ajaxcon {
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
 				outs.append("<li class=\"by-other\">");
-				outs.append("<div class=\"avatar pull-right\"><img src=\"resources/img/user22.png\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append("<div class=\"avatar pull-right\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getCdate());
 				outs.append("<span class=\"pull-right\">");
 				outs.append(e.getU_id());
@@ -703,7 +707,7 @@ public class Ajaxcon {
 				outs.append("<div class=\"clearfix\"></div></div></li>");
 			} else {
 				outs.append("<li class=\"by-me\">");
-				outs.append("<div class=\"avatar pull-left\"><img src=\"resources/img/user.jpg\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
+				outs.append("<div class=\"avatar pull-left\"><img src=\"master/").append(e.getImg()).append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getU_id());
 				outs.append("<span class=\"pull-right\">");
 				outs.append(e.getCdate());
