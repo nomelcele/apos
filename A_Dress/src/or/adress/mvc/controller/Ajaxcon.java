@@ -1033,52 +1033,22 @@ public class Ajaxcon {
 	}
 	
 	@RequestMapping(value="sh_excel2", method=RequestMethod.POST)
-	public ModelAndView sh_excel2(int staff_num, String date_ps,
-			String date_ps2, HttpSession session){
+	public ModelAndView sh_excel2(int ex_staff_num, String ex_date_ps,
+			String ex_date_ps2, HttpSession session){
 		
 		ModelAndView mav = new ModelAndView("sh_excel2");
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("staff_num", String.valueOf(staff_num));
-		map.put("date_ps", date_ps);
-		map.put("date_ps2", date_ps2);
+		map.put("staff_num", String.valueOf(ex_staff_num));
+		map.put("date_ps", ex_date_ps);
+		map.put("date_ps2", ex_date_ps2);
 		map.put("shop_num", session.getAttribute("shop_num").toString());
+		System.out.println(session.getAttribute("shop_num").toString());
 		List<StaffVO> list = sfdao.get_pay(map);
 		mav.addObject("list", list);
-		mav.addObject("staff_num", staff_num);
-		mav.addObject("date_ps", date_ps);
-		mav.addObject("date_ps2", date_ps2);
+		mav.addObject("staff_num", ex_staff_num);
+		mav.addObject("date_ps", ex_date_ps);
+		mav.addObject("date_ps2", ex_date_ps2);
 		return mav;
-		
-//		StringBuffer res = new StringBuffer();
-//		Iterator<StaffVO> it = list.iterator();
-//
-//		// 합계 급액과 근무 시간을 위한 변수
-//		int timeres = 0, payres = 0;
-//		while (it.hasNext()) {
-//			StaffVO vo = it.next();
-//			res.append("<tr>");
-//			res.append("<td>").append(vo.getStaff_name()).append("</td>");
-//			res.append("<td>").append(vo.getWork_login()).append("</td>");
-//			res.append("<td>").append(vo.getWork_logout()).append("</td>");
-//			res.append("<td>").append(vo.getWork_time()).append(" 시간")
-//					.append("</td>");
-//			res.append("<td>").append(vo.getWork_time() * 10000).append(" 원")
-//					.append("</td>");
-//			res.append("</tr>");
-//			timeres += vo.getWork_time();
-//			payres += vo.getWork_time() * 10000;
-//
-//		}
-//		res.append("<tr><th>합계</th>");
-//		res.append("<th>-</th>");
-//		res.append("<th>-</th>");
-//		res.append("<th>" + timeres + " 시간</th>");
-//		res.append("<th>" + payres + " 원</th>");
-//		res.append("</tr>");
-//
-//		mav.setViewName("ajax/sh_ajax_sh_workPay");
-//		mav.addObject("res", res.toString());
-//		return mav;
 	}
 
 	// bon_deletecalendar

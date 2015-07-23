@@ -65,6 +65,7 @@ public class StaffDao { // 서경연
 		}
 		// 급여 계산
 		public List<StaffVO> get_pay(HashMap<String, String> map){
+			System.out.println("dao에서 : "+map.get("shop_num"));
 			return ss.selectList("staff.get_pay",map);
 		}
 }
