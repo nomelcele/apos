@@ -6,6 +6,7 @@ import java.util.List;
 import or.adress.mvc.dao.BoardDao;
 import or.adress.mvc.dao.BonsaDao;
 import or.adress.mvc.dao.ProductDao;
+import or.adress.mvc.dao.StockDao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import vo.CalendarVO;
 import vo.ProductVO;
 import vo.SaleVO;
+import vo.StockVO;
 
 @Transactional
 @Service
@@ -24,7 +26,8 @@ public class BonsaService {
 	private BoardDao bdao;
 	@Autowired
 	private BonsaDao bondao;
-	
+	@Autowired
+	private StockDao stdao;
 	
 	//프로퍼티지?
 	private Integer[] chk11 = {95,100,105};
@@ -102,5 +105,9 @@ public class BonsaService {
 		pdao.delete_calendar(calen_procode);
 		bdao.cancelSale(vo);
 	}
-	
+	public void Aa(int req_num){
+		stdao.Stockreq2(req_num); //물류창고에서 마이너스
+		stdao.Stockreq3(req_num);//신청한 지점에서 플러스
+		stdao.Stockreqyes(req_num); // 상태를 yes로 바꿈
+	}
 }

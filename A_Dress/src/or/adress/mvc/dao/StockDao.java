@@ -21,13 +21,27 @@ public class StockDao {
 	public List<StockVO> Stocklist() {
 		return ss.selectList("stock.Stocklist");
 	}
-	public void Stockreq2(StockVO vo){
-		ss.update("stock.Stockyn",vo);
+	public void Stockreq2(int req_num){
+		ss.update("stock.Stockyn", req_num);
+		System.out.println("업데이트!");
+	}
+	public void Stockreq3(int req_num){
+		ss.update("stock.Stockyn2", req_num);
 		System.out.println("업데이트!");
 	}
 	public List<StockVO> sh_productRequestState(int shop_num){
 		return ss.selectList("stock.SSlist", shop_num);
 	}
+	
+	//재고신청 상태를 yes로 바꾸는 곳
+	public void Stockreqyes(int req_num){
+		ss.update("stock.yes", req_num);
+	}
+	
+	//재고신청 상태를 bo로 바꾸는 곳
+		public void Stockreqno(int req_num){
+			ss.update("stock.no", req_num);
+		}
 	
 }
 	// 접근제한자 리턴타입 메서드명(파라미터타입 파라미터이름)
