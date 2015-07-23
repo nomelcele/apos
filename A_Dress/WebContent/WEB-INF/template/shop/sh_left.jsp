@@ -113,6 +113,8 @@
 			document.getElementById("calendar").submit();
 		}else if(str == "workPay"){
 			document.getElementById("workPay").submit();
+		}else if(str == "cctv"){
+			document.getElementById("workcctv").submit();
 		}
 	}
 
@@ -211,6 +213,8 @@
 <!-- 급여 -->
 <form method="post" action="ssh_workPay" id=workPay></form>
 
+<!-- cctv -->
+<form method="post" action="sh_workcctv" id=workcctv></form>
 
 <!-- 회원가입 -->
 <form method="post" action="sh_memberJoin" id=memberJoin></form>
@@ -275,7 +279,7 @@
 					<li><a class="" href="javascript:goUrl('workTel')">✔ 매장 직원 연락처</a></li>
 					<li><a class="" href="javascript:goUrl('calendar')">✔ 일정관리</a></li>
 					<li><a class="" href="javascript:goUrl('videochat')">✔ 화상 회의</a></li>
-					
+					<li><a class="" href="javascript:goUrl('cctv')">✔ CCTV</a></li>
 					
 				</ul></li>
 
