@@ -234,7 +234,7 @@
 				<table class="table table-striped table-advance table-hover"
 					style="width: 100%; height: 100%">
 					<thead style="font-family: '210 나무고딕'">
-						<p></p>
+					
 						<tr>
 							<th><i class="icon_calendar"></i>날짜</th>
 							<th><img src="img/shopimg.ico"
