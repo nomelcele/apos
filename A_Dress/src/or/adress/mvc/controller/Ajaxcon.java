@@ -73,41 +73,48 @@ public class Ajaxcon {
 	private StaffDao sfdao;
 
 	// 성별 물건 검색 ajax
-	@RequestMapping(value = "sh_AjaxProductSearch")
-	public ModelAndView sh_AjaxProductSearch(String shop_num, String key) {
-		ModelAndView mav = new ModelAndView("ajax/sh_AjaxProductSearch");
+			@RequestMapping(value = "sh_AjaxProductSearch")
+			public ModelAndView sh_AjaxProductSearch(String shop_num, String key) {
+				ModelAndView mav = new ModelAndView("ajax/sh_AjaxProductSearch");
 
-		System.out.println("ajax Test");
-		System.out.println("=================");
-		System.out.println("shopNum:" + shop_num + "key:" + key);
-		HashMap<String, String> map = new HashMap<>();
-		map.put("pro_check", key);
-		map.put("shop_num", shop_num);
+				System.out.println("ajax Test");
+				System.out.println("=================");
+				System.out.println("shopNum:" + shop_num + "key:" + key);
+				HashMap<String, String> map = new HashMap<>();
+				map.put("pro_check", key);
+				map.put("shop_num", shop_num);
 
-		List<ProductVO> list = pdao.getListProductGender(map);
-		Iterator<ProductVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		// res.append("<tr>");
-		int i = 0;
-		while (it.hasNext()) {
-			i++;
-			ProductVO v = new ProductVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<td>" + i + "</td>");
-			res.append("<td>").append(v.getPro_name()).append("</td>");
-			res.append("<td>").append(v.getPro_code()).append("</td>");
-			res.append("<td>").append(v.getSto_size()).append("</td>");
-			res.append("<td>").append(v.getSto_amount()).append("</td>");
-			res.append("<td>").append(v.getPro_price()).append("</td>");
-			res.append("<td>").append(v.getPro_salerate()).append("</td>");
-			res.append("<td><img src='product/" + v.getPro_img()
-					+ "' style=\"width: 100px;\"></td>");// 추후 세일추가
-			res.append("<td><img src='barcode/" + v.getPro_barcode()
-					+ "' style=\"width: 100px;\"></td>");
-			res.append("</tr>");
+				List<ProductVO> list = pdao.getListProductGender(map);
+				Iterator<ProductVO> it = list.iterator();
+				StringBuffer res = new StringBuffer();
+				// res.append("<tr>");
+				int i = 0;
+				while (it.hasNext()) {
+					i++;
+					ProductVO v = new ProductVO();
+					v = it.next();
+					res.append("<tr>");
+					res.append("<td>" + i + "</td>");
+					res.append("<td>").append(v.getPro_name()).append("</td>");
+					res.append("<td>").append(v.getPro_code()).append("</td>");
+					res.append("<td>").append(v.getSto_size()).append("</td>");
+					res.append("<td>").append(v.getSto_amount()).append("</td>");
+					res.append("<td>").append(v.getPro_price()).append("</td>");
+					res.append("<td>").append(v.getPro_salerate()).append("</td>");
+					
+					res.append("<td>");
+					res.append("<a href=\"javascript:open_win('product/"+v.getPro_img()+"')\">");
+					res.append("<img src='product/" + v.getPro_img()
+							+ "' style=\"width: 100px; cursor: hand; \"></a></td>");// 추후 세일추가
+					
+					
+					res.append("<td>");
+					res.append("<a href=\"javascript:open_win1('barcode/"+v.getPro_barcode()+"')\">");
+					res.append("<img src='barcode/" + v.getPro_barcode()
+							+ "' style=\"width: 100px;\"></a></td>");
+					res.append("</tr>");
 
-		}
+				}
 
 		// res.append("</tr>");
 		String strString = res.toString();
