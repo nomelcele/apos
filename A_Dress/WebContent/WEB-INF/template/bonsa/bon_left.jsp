@@ -2,7 +2,8 @@
    pageEncoding="UTF-8"%>
 
 <!-- javascripts -->
-   
+     <!-- Daum New Postcode -->
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
     <!-- full Calendar  -->
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
