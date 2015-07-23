@@ -209,7 +209,7 @@
 					style="min-width: 80%; height: 100%; margin: 0 auto"></div>
 
 
-				<br />
+		
 				<table class="table table-striped table-advance table-hover"
 					style="font-family: '210 나무고딕'">
 
