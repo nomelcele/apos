@@ -473,14 +473,7 @@ public class Shopcon {
 		return mav;
 	}
 
-	// 자기매장 재고 신청 나만보기
-	@RequestMapping(value = "bon_productSale_1")
-	public ModelAndView SSlist(StockVO vo) {
-		ModelAndView mav = new ModelAndView();
-		stdao.Stockreq2(vo);
-		mav.setViewName("bonsa/bon_productSmang");
-		return mav;
-	}
+	
 
 	// Shop_fullcalendar Page
 	@RequestMapping(value = "/sh_fullcalendar")
