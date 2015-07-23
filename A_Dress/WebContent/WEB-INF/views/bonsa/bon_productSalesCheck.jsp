@@ -190,7 +190,7 @@
 							<label for="cname" class="control-label col-lg-2" style="margin-left: 1.2%;">물품코드번호</label> 
 							<input id="pro_code" name="name" width="80%" autocomplete="off"
 								type="text" onkeydown="startSuggest();" required />
-
+<br/>
 							<div id="view"></div>
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2"><p>기간</p>
