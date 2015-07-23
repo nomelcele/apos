@@ -13,8 +13,20 @@ select q.req_num,s.shop_num,s.shop_name, p.pro_name,p.pro_code,q.pro_size,p.pro_
 order by req_num desc
   </select>
   
-  <update id="Stockyn" parameterType="stvo">
-update stockreq set req_status=#{req_status} where req_num =#{req_num}     
+  <update id="Stockyn" parameterType="int">
+update stock set sto_amount=sto_amount-(select pro_amount from stockreq where req_num=#{req_num}) where  sto_shopnum=1 and sto_pronum = (select pro_code from stockreq where req_num=#{req_num}) and sto_size = (select pro_size from stockreq where req_num=#{req_num})
+  </update>
+  
+  <update id="Stockyn2" parameterType="int">
+update stock set sto_amount=sto_amount+(select pro_amount from stockreq where req_num=#{req_num}) where  sto_shopnum=(select shop_num from stockreq where req_num=#{req_num}) and sto_pronum = (select pro_code from stockreq where req_num=#{req_num}) and sto_size = (select pro_size from stockreq where req_num=#{req_num})
+  </update>
+  
+  <update id="yes" parameterType="int">
+  		update stockreq set req_status='yes' where req_num = #{req_num}
+  </update>
+  
+  <update id="no" parameterType="int">
+  		update stockreq set req_status='no' where req_num = #{req_num}
   </update>
   
   <select id="SSlist"  parameterType="int"  resultType="stvo">

@@ -11,22 +11,15 @@
 					var UP;
 					   UP=confirm("정말 승인하시겠습니까?");
 					   if(UP){
-						   $("#req_status").val(req_status);
-							$("#req_num").val(req_num);
-						      document.getElementById("stockyn").submit();
+							$("#req_numy").val(req_num);
+						      document.getElementById("stocky").submit();
 					   }else{
 						   
 					   }
 				}else{
-					
 					alert("거절하였습니다.");
-					if(req_status=="No"){
-						 $("#req_status").val(req_status);
-							$("#req_num").val(req_num);
-						      document.getElementById("stockyn").submit();
-						
-					}
-					
+							$("#req_numn").val(req_num);
+						      document.getElementById("stockn").submit();
 					
 				}
 			}
@@ -80,12 +73,13 @@ function openview2(img3)
 							</thead>
 							<tbody style="font-family: '210 나무고딕' ">
 
-								<form action="bon_productSale_1" method="post" id="stockyn">
-									<td><input type="hidden" class="form-control"
-										name='req_status' id="req_status" value=""></td>
-									<td><input type="hidden" class="form-control"
-										name='req_num' id="req_num" value=""></td>
-									</tr>
+								<form action="bon_productSale_1" method="post" id="stocky">
+									<input type="hidden" class="form-control"
+										name='req_num' id="req_numy" value="">
+								</form>
+								<form action="bon_productSale_2" method="post" id="stockn">
+									<input type="hidden" class="form-control"
+										name='req_num' id="req_numn" value="">
 								</form>
 
 								<c:forEach var="bon_product" items="${list}" varStatus="status">
@@ -95,7 +89,7 @@ function openview2(img3)
 										<td>${bon_product.pro_name}</td>
 										<td>${bon_product.pro_code}</td>
 										<td>${bon_product.pro_size}</td>
-										<td><a
+										<td><a	
 											href="javascript:openview1('product/${bon_product.pro_img}')">
 												<img src='product/${bon_product.pro_img}'
 												style="width: 40px; cursor: hand;">

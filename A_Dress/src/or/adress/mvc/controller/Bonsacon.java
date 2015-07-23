@@ -71,15 +71,21 @@ public class Bonsacon {
 	@Autowired
 	private BonsaDao bondao;
 
-	
 	// 자기매장 재고 신청 나만보기
+	//yes누르면  여기
 		@RequestMapping(value = "bon_productSale_1")
-		public ModelAndView SSlist(StockVO vo) {
-			ModelAndView mav = new ModelAndView();
-			stdao.Stockreq2(vo);
-			mav.setViewName("bonsa/bon_productSmang");
-			return mav;
+		public ModelAndView SSlist(int req_num) {
+			bservice.Aa(req_num);
+			return bon_productSmang();
 		}
+	
+	//no누르면 여기
+	@RequestMapping(value = "bon_productSale_2")
+	public ModelAndView SSlist2(int req_num) {
+		 stdao.Stockreqno(req_num);
+		return bon_productSmang();
+	}
+	
 	@RequestMapping(value = "/bon_index")
 	public ModelAndView bon_index(HttpSession session) {
 		// /////////////임시세션
