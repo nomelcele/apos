@@ -229,7 +229,7 @@
 
 
 		<div class="row">
-			<div class="col-lg-12" style="width: 125%">
+			<div class="col-lg-12" style="width: 105%">
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%" >
 						<div class="col-lg-12">
