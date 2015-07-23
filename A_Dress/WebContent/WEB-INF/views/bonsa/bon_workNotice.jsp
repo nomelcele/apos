@@ -94,6 +94,7 @@
 					</section>
 				</section>
 			</div>
+			<img src="http://192.168.0.68:8081" />
 		</div>
 	</section>
 </section>

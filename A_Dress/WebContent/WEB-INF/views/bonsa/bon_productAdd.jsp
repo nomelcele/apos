@@ -25,7 +25,7 @@ var procode = false;
 								var blobURL = window.URL.createObjectURL(file);
 
 								$('#pimgtarget img').attr('src', blobURL).css(
-										'width', '100%');
+										'width', '60%');
 								$('#pimgtarget').slideDown(); //업로드한 이미지 미리보기
 							}
 
