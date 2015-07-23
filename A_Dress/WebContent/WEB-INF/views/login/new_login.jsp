@@ -227,11 +227,11 @@
 						
 						
 						
-						<div class="modal-body2">
+						<div class="modal-body2" style="font-family: '210 나무고딕' ">
 							<input type="button" value="hotkey" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
 						</div>
 						
-						<div class="modal-body2">
+						<div class="modal-body2" style="font-family: '210 나무고딕' ">
 						<input type="button" value="join" class="form-control4 block" id="join" name="join" placeholder="hotkey" autofocus>
 						</div>
 						
@@ -254,7 +254,7 @@
 					<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕'">회원 가입</h4>
 				</div>
 			<div>
 			
@@ -262,13 +262,13 @@
 									
 				<form method="post" action="requesthot" name="requesthot" id="requesthot" autocomplete="off">
 						<%-- 성명 --%>
-						<div class="modal-body2"><span style="display: block">성 명 :</span>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">성 명 :</span>
 							<input class="form-control" id="key_name" name="key_name" type="text" required /></div>
 						<%-- 사업자번호 --%>
-						<div class="modal-body2"><span style="display: block">사업자번호 :</span>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">사업자번호 :</span>
 							<input class="form-control" id="key_crnum" name="key_crnum" type="text" required /></div>
 						<%-- 이메일 --%>
-						<div class="modal-body2"><span style="display: block">e-mail :</span>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">e-mail :</span>
 							<input class="form-control" id="key_email" name="key_email" type="text" required /></div>
 						
 						<!-- Footer -->
@@ -294,23 +294,23 @@
 					<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕">회원 가입</h4>
 				</div>
 				<div >
 				<!-- body -->
 				<form method="post" action="submithot" name="checkhot" id="checkhot" autocomplete="off">
 					<div style="width: 100%;" >
-						<div class="modal-body2">
-							<input type="text" class="form-control4 block" id="email" name="email" placeholder="이메일" autofocus>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">e-mail :</span>
+							<input type="text" class="form-control4 block" id="email" name="email"  placeholder="" autofocus>
 						</div>
-						<div class="modal-body2">
-							<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder="사업자번호"  autofocus>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">사업자번호:</span>
+							<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder=""  autofocus>
 						</div>
-						<div class="modal-body2">
-							<input type="text" class="form-control4 block" id="hotkey2" name="hotkey" placeholder="hotkey" autofocus>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">hotkey :</span>
+							<input type="text" class="form-control4 block" id="hotkey2" name="hotkey" placeholder="" autofocus>
 						</div>
 						<div id="target"></div>
-						<div class="hidebtn" style="text-align: center;"></div>
+						<div class="hidebtn" style="text-align: center; "></div>
 						<input type="button" id="nextJoinBtn" class="btn btn-default hidebtn" value="다음">
 					</div>
 				</form>
@@ -367,7 +367,7 @@
 				<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕'">회원 가입</h4>
 				</div>
 				<div>
 				<!-- body -->
