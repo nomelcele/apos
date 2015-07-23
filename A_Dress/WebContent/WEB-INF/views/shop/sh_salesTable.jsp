@@ -82,13 +82,13 @@
 					<thead  style="font-family: '210 나무고딕' ">
 						<p></p>
 						<tr>
-							<th style="color: black;"><i class="icon_profile"></i>날짜</th>
-							<th style="color: black;"><i class="icon_profile"></i>상품번호</th>
-							<th style="color: black;"><i class="icon_profile"></i>상품 사진</th>
-							<th style="color: black;"><i class="icon_mail_alt"></i>판매 액</th>
-							<th style="color: black;"><i class="icon_pin_alt"></i>판매 수량</th>
-							<th style="color: black;"><i class="icon_profile"></i>구매 고객 번호</th>
-							<th style="color: black;"><i class="icon_profile"></i>영수증 번호</th>
+							<th style="color: black;"><i class="icon_calendar"></i>날짜</th>
+							<th style="color: black;"><img src = "img/num.ico" style="width: 15px; height: 10px;" >상품번호</th>
+							<th style="color: black;"><img src = "img/product.ico" style="width: 15px; height: 15px;" >상품 사진</th>
+							<th style="color: black;"><img src = "img/s.ico" style="width: 15px; height: 15px;" >판매 액</th>
+							<th style="color: black;"><img src = "img/sn.ico" style="width: 20px; height: 18px;" >판매 수량</th>
+							<th style="color: black;"><img src = "img/man.ico" style="width: 15px; height: 10px;" >구매 고객 번호</th>
+							<th style="color: black;"><img src = "img/num.ico" style="width: 15px; height: 10px;" >영수증 번호</th>
 						</tr>
 
 					</thead>
