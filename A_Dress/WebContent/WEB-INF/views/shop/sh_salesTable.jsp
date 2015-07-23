@@ -87,7 +87,7 @@
 							<th style="color: black;"><img src = "img/product.ico" style="width: 15px; height: 15px;" >상품 사진</th>
 							<th style="color: black;"><img src = "img/s.ico" style="width: 15px; height: 15px;" >판매 액</th>
 							<th style="color: black;"><img src = "img/sn.ico" style="width: 20px; height: 18px;" >판매 수량</th>
-							<th style="color: black;"><img src = "img/man.ico" style="width: 15px; height: 10px;" >구매 고객 번호</th>
+							<th style="color: black;"><img src = "img/man.ico" style="width: 15px; height: 15px;" >구매 고객 번호</th>
 							<th style="color: black;"><img src = "img/num.ico" style="width: 15px; height: 10px;" >영수증 번호</th>
 						</tr>
 
