@@ -57,6 +57,13 @@ public class Shopcon {
 	private ShopService shservice;
 	@Autowired
 	private StockDao stdao;
+	
+	// cctv 처음화면 sh_workcctv
+	@RequestMapping(value = "/ sh_workcctv", method = RequestMethod.POST)
+	public ModelAndView  sh_workcctv() {
+		ModelAndView mav = new ModelAndView("shop/sh_workcctv");
+		return mav;
+	}
 
 	@RequestMapping(value = "/sh_productstockreq", method = RequestMethod.POST)
 	public ModelAndView stockreq(StockVO vo) {
