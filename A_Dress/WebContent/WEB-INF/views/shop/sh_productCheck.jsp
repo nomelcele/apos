@@ -168,9 +168,9 @@
 									<div class="col-lg-3" style="margin-left: -5% "font-family: '210 나무고딕'">
 
 										<input type="hidden" id="shop_num" name="shop_num"
-											value="${sessionScope.shop_num}"> <label for="cname"
-											class="control-label col-lg-6" style="font-size: 13px;  font-family: '210 나무고딕' ">이름
-										</label> <input class="form-control" id="pro_name" name="pro_name"
+											value="${sessionScope.shop_num}"> 
+											<label for="cname" class="control-label col-lg-6" style="font-size: 13px;  font-family: '210 나무고딕' ">이름</label> 
+											<input class="form-control" id="pro_name" name="pro_name"
 											style="width: 50%" onkeydown="startSuggest();"
 											autocomplete="off" type="text" required />
 										<button class="form-control6" type="button"
@@ -226,15 +226,13 @@
 													<th>${stList.sto_amount}</th>
 													<th>${stList.pro_price}</th>
 													<th>${stList.pro_salerate}</th>
-													<th><a
-														href="javascript:open_win('product/${stList.pro_img}')">
-															<img src='product/${stList.pro_img}'
-															style="width: 100px; cursor: hand;">
+													<th><a href="javascript:open_win('product/${stList.pro_img}')">
+													<img src='product/${stList.pro_img}'
+													style="width: 100px; cursor: hand;">
 													</a></th>
-													<th><a
-														href="javascript:open_win1('barcode/${stList.pro_barcode}')">
-															<img src='barcode/${stList.pro_barcode}'
-															style="width: 100px; cursor: hand;">
+													<th><a href="javascript:open_win1('barcode/${stList.pro_barcode}')">
+													<img src='barcode/${stList.pro_barcode}'
+													style="width: 100px; cursor: hand;">
 													</a>
 													</td>
 													</th>
