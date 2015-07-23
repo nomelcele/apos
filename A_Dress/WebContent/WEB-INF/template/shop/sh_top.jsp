@@ -4,7 +4,7 @@
 
 function open_win2()
 {
- window.open('upload/code-9.jpg','popup', 'width=320, height=250, left=50, top=20, toolbar=no, location=yes, directories=no, status=no, menubar=no, resizable=yes, scrollbars=no, copyhistory=no');
+ window.open('upload/product-code.jpg','popup', 'width=320, height=250, left=50, top=20, toolbar=no, location=yes, directories=no, status=no, menubar=no, resizable=yes, scrollbars=no, copyhistory=no');
 }
 
 
