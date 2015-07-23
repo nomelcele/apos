@@ -310,7 +310,7 @@
 							<input type="text" class="form-control4 block" id="hotkey2" name="hotkey" placeholder="" autofocus>
 						</div>
 						<div id="target"></div>
-						<div class="hidebtn" style="text-align: center; "></div>
+						<div class="hidebtn" style="text-align: center; font-family: '210 나무고딕' "></div>
 						<input type="button" id="nextJoinBtn" class="btn btn-default hidebtn" value="다음">
 					</div>
 				</form>
@@ -375,14 +375,14 @@
 					<input type="radio" id="findpwd" name="radioIDPWD" value="findpwd" > PWD
 					<%-- ID 찾기 --%>
 					<form method="post" action="*.apos" name="findidform" id="findidform" autocomplete="off" style="display: none">
-					<div class="modal-body2" ><span style="display: block;">E-mail</span>
+					<div class="modal-body2" ><span style="display: block; font-family: '210 나무고딕' ">E-mail</span>
 								<input class="form-control" id="find_email1" name="find_email1" type="email"  required />
 						</div>
 										 	
-						<div class="modal-body2"><span style="display: block">성 명 :</span>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕' ">성 명 :</span>
 							<input class="form-control" id="find_name1" name="find_name1" type="text" required /></div>
 
-						<div class="modal-body2 "><span style="display: block">연락처 :</span>
+						<div class="modal-body2 "><span style="display: block; font-family: '210 나무고딕'">연락처 :</span>
 						 	<select style="width: 20%" class="form-control">
 	                                          		<option>SKT</option>
 	                                          		<option>KT</option>
@@ -400,15 +400,15 @@
 					<form method="post" action="*.apos" name="findpwdform" id="findpwdform" autocomplete="off" style="display: none">
 					<input type="hidden" name="cmd" value="sjoin">
 					<input type="hidden" name="subcmd" value="findPwd">
-						<div class="modal-body2" ><span style="display: block;">ID</span>
+						<div class="modal-body2" ><span style="display: block; font-family: '210 나무고딕' ">ID</span>
 								<input class="form-control" id="find_id" name="find_id" type="text"  required />
 						</div>
 						
-						<div class="modal-body2" ><span style="display: block;">E-mail</span>
+						<div class="modal-body2" ><span style="display: block; font-family: '210 나무고딕' ">E-mail</span>
 								<input class="form-control" id="find_email2" name="find_email2" type="email"  required />
 						</div>
 										 	
-						<div class="modal-body2"><span style="display: block">성 명 :</span>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕' ">성 명 :</span>
 							<input class="form-control" id="find_name2" name="find_name2" type="text" required />
 						</div>
 						<input type="button" id="shpwdfindBtn" class="btn btn-default" value="찾기">
