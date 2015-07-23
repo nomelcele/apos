@@ -50,7 +50,8 @@ function sh_managEx(num){
 						<form class="form-inline" role="form">
 							<div class="form-group">
 								<input type="text" class="form-control"
-									id="receiptno" placeholder="영수증번호">
+									id="receiptno" placeholder="영수증번호"
+									onKeypress="javascript:if(event.keyCode==13) {return false;}">
 							</div>
 							<button type="button" class="btn btn-primary" id="sh_exc">검색</button>
 						</form>
@@ -58,12 +59,12 @@ function sh_managEx(num){
 							<table class="table">
 								<thead style="font-family: '210 나무고딕' ">
 									<tr>
-										<th style="color: black;">판매번호</th>
-										<th style="color: black;">고객성명</th>
-										<th style="color: black;">상품번호</th>
-										<th style="color: black;">판매가</th>
-										<th style="color: black;">수량</th>
-										<th style="color: black;">환불</th>
+										<th style="color: black;"><img src = "img/num.ico" style="width: 15px; height: 15px;" >판매번호</th>
+										<th style="color: black;"><img src = "img/man.ico" style="width: 15px; height: 15px;" >고객성명</th>
+										<th style="color: black;"><img src = "img/product.ico" style="width: 15px; height: 15px;" >상품번호</th>
+										<th style="color: black;"><img src = "img/s.ico" style="width: 15px; height: 15px;" >판매가</th>
+										<th style="color: black;"><img src = "img/sn.ico" style="width: 20px; height: 18px;" >수량</th>
+										<th style="color: black;"><img src = "img/ex.ico" style="width: 20px; height: 18px;" >환불</th>
 
 									</tr>
 								</thead>
