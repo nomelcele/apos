@@ -2321,14 +2321,5349 @@ insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 5, 20, '2015-0
 insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 5, 20, '2015-02-19', 1, 1 ,28);
 insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 5, 20, '2015-01-19', 1, 1 ,8);
 
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 6 : 전주점
+
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 6, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 6, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 6, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 6, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 6, 1, '2015-03-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 6, 1, '2015-03-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 6, 1, '2015-03-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 6, 1, '2015-03-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 6, 1, '2015-02-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 6, 1, '2015-03-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 6, 1, '2015-06-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 6, 1, '2015-06-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 6, 1, '2015-06-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 6, 2, '2015-01-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 6, 2, '2015-01-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 6, 2, '2015-01-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 6, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 6, 2, '2015-03-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 6, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 6, 2, '2015-03-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 6, 2, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 6, 2, '2015-01-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 6, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 6, 2, '2015-03-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 6, 2, '2015-06-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 6, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 6, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 6, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 6, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 6, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 6, 3, '2015-04-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 3, '2015-03-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 6, 3, '2015-05-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 6, 3, '2015-01-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 6, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 6, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 6, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 6, 4, '2015-03-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 6, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 6, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 4, '2015-04-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 4, '2015-05-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 6, 4, '2015-03-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 6, 4, '2015-03-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 6, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 6, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 6, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 6, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 6, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 6, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 6, 5, '2015-03-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 6, 5, '2015-04-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 6, 5, '2015-04-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 6, 5, '2015-04-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 6, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 6, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 6, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 6, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 6, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 6, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 6, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 6, '2015-04-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 6, '2015-04-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 6, '2015-05-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 6, '2015-06-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 6, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 7, '2015-03-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 8, '2015-03-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 8, '2015-04-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 8, '2015-05-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 8, '2015-04-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 9, '2015-04-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 9, '2015-03-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 9, '2015-02-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 10, '2015-03-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 10, '2015-04-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 10, '2015-04-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 10, '2015-04-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 10, '2015-03-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 11, '2015-04-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 11, '2015-04-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 11, '2015-04-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 11, '2015-05-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 11, '2015-03-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 12, '2015-03-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 12, '2015-03-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 12, '2015-03-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 12, '2015-04-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 12, '2015-02-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 12, '2015-03-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 13, '2015-03-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 13, '2015-03-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 13, '2015-03-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 13, '2015-04-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 13, '2015-04-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 13, '2015-05-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 13, '2015-05-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 13, '2015-05-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 14, '2015-03-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 14, '2015-03-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 13, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 14, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 14, '2015-06-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 6, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 15, '2015-03-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 15, '2015-03-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 15, '2015-03-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 15, '2015-04-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 6, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 15, '2015-03-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 16, '2015-03-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 16, '2015-03-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 16, '2015-04-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 16, '2015-05-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 16, '2015-05-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 6, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 17, '2015-04-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 17, '2015-04-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 17, '2015-05-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 6, 17, '2015-05-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 17, '2015-05-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 17, '2015-03-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 18, '2015-03-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 6, 18, '2015-04-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 6, 18, '2015-05-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 6, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 6, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 6, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 6, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 19, '2015-03-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 19, '2015-03-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 19, '2015-04-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 19, '2015-04-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 6, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 6, 19, '2015-03-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 19, '2015-03-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 6, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 6, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 6, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 6, 20, '2015-04-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 20, '2015-04-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 6, 20, '2015-04-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 6, 20, '2015-05-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 6, 20, '2015-06-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 6, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 6, 20, '2015-01-19', 1, 1 ,8);
+
+
+------------------------------------------------------------------
+-------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 7 : 충청점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 7, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 7, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 7, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 7, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 7, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 7, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 7, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 7, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 7, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 7, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 7, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 7, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 7, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 7, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 7, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 7, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 7, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 7, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 7, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 7, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 7, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 7, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 7, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 7, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 7, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 7, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 7, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 7, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 7, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 7, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 7, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 7, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 7, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 7, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 7, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 7, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 7, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 7, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 7, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 7, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 7, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 7, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 7, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 7, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 7, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 7, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 7, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 7, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 7, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 7, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 7, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 7, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 7, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 7, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 7, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 7, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 7, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 7, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 7, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 13, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 7, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 7, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 7, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 7, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 7, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 7, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 7, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 7, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 7, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 7, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 7, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 7, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 7, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 7, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 7, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 7, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 7, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 7, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 7, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 7, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 7, 20, '2015-01-19', 1, 1 ,8);
+
+-----------------------------------------------------------------
+---------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 8 : 강원점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 8, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 8, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 8, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 8, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 8, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 8, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 8, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 8, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 8, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 8, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 8, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 8, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 8, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 8, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 8, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 8, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 8, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 8, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 8, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 8, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 8, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 8, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 8, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 8, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 8, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 8, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 8, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 8, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 8, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 8, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 8, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 8, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 8, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 8, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 8, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 8, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 8, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 8, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 8, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 8, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 8, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 8, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 8, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 8, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 8, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 8, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 8, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 8, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 8, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 8, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 8, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 8, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 8, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 8, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 8, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 8, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 8, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 8, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 8, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 13, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 8, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 8, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 8, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 8, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 8, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 8, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 8, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 8, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 8, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 8, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 8, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 8, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 8, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 8, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 8, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 8, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 8, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 8, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 8, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 8, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 8, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+-------------------------------------------------------------------
+--------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 9 : 내곡점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 9, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 9, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 9, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 9, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 9, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 9, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 9, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 9, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 9, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 9, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 9, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 9, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 9, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 9, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 9, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 9, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 9, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 9, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 9, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 9, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 9, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 9, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 9, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 9, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 9, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 9, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 9, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 9, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 9, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 9, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 9, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 9, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 9, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 9, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 9, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 9, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 9, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 9, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 9, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 9, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 9, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 9, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 9, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 9, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 9, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 9, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 9, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 9, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 9, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 9, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 9, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 9, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 9, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 9, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 9, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 9, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 9, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 9, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 9, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 13, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 9, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 9, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 9, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 9, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 9, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 9, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 9, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 9, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 9, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 9, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 9, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 9, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 9, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 9, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 9, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 9, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 9, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 9, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 9, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 9, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 9, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+-------------------------------------------------------------------
+---------------------------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 10 : 서초점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 10, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 10, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 10, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 10, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 10, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 10, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 10, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 10, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 10, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 10, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 10, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 10, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 10, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 10, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 10, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 10, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 10, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 10, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 10, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 10, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 10, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 10, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 10, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 10, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 10, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 10, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 10, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 10, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 10, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 10, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 10, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 10, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 10, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 10, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 10, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 10, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 10, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 10, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 10, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 10, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 10, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 10, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 10, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 10, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 10, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 10, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 10, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 10, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 10, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 10, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 10, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 10, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 10, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 10, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 10, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 10, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 10, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 10, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 10, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 10, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 10, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 10, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 10, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 10, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 10, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 10, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 10, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 10, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 10, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 10, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 10, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 10, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 10, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 10, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 10, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 10, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 10, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 10, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 10, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 10, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+------------------------------------------------------------
+-----------------------------------------------------------
+
+
+
+------------------------------------------------------------
+---sell 11 : 강남점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 11, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 11, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 11, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 1, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 11, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 11, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 11, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 11, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 11, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 11, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 11, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 11, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 11, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 11, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 11, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 11, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 11, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 11, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 11, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 11, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 11, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 11, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 11, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 11, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 11, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 11, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 11, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 11, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 11, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 11, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 11, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 11, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 11, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 11, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 11, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 11, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 11, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 11, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 11, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 11, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 11, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 11, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 11, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 11, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 11, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 11, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 11, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 11, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 11, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 11, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 11, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 11, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 11, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 11, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 11, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 11, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 11, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 11, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 11, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 11, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 11, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 11, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 11, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 11, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 11, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 11, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 11, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 11, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 11, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 11, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 11, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 11, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 11, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 11, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 11, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 11, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 11, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 11, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 11, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 11, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------
+---sell 12 : 한남점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 12, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 12, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 12, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 12, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 12, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 12, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 12, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 12, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 12, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 12, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 12, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 12, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 12, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 12, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 12, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 12, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 12, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 12, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 12, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 12, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 12, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 12, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 12, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 12, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 12, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 12, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 12, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 12, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 12, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 12, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 12, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 12, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 12, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 12, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 12, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 12, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 12, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 12, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 12, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 12, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 12, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 12, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 12, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 12, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 12, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 12, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 12, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 12, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 12, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 12, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 12, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 12, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 12, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 12, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 12, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 12, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 12, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 12, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 12, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 12, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 12, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 12, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 12, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 12, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 12, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 12, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 12, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 12, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 12, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 12, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 12, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 12, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 12, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 12, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 12, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 12, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 12, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 12, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 12, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 12, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+----------------------------------------------------
+-----------------------------------------------
+
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 13 : 옥수점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 13, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 13, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 13, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 13, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 13, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 13, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 13, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 13, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 13, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 13, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 13, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 13, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 13, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 13, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 13, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 13, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 13, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 13, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 13, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 13, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 13, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 13, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 13, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 13, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 13, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 13, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 13, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 13, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 13, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 13, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 13, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 13, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 13, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 13, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 13, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 13, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 13, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 13, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 13, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 13, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 13, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 13, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 13, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 13, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 13, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 13, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 13, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 13, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 13, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 13, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 13, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 13, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 13, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 13, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 13, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 13, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 13, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 13, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 13, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 13, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 13, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 13, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 13, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 13, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 13, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 13, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 13, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 13, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 13, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 13, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 13, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 13, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 13, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 13, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 13, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 13, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 13, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 13, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 13, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 13, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+
+-----------------------------------
+-----------------------------------
+
+
+
+
+------------------------------------------------------------
+---sell 14 : 약수점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 14, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 14, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 14, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 14, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 14, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 14, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 14, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 14, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 14, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 14, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 14, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 14, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 14, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 14, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 14, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 14, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 14, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 14, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 14, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 14, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 14, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 14, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 14, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 14, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 14, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 14, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 14, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 14, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 14, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 14, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 14, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 14, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 14, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 14, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 14, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 14, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 14, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 14, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 14, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 14, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 14, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 14, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 14, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 14, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 14, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 14, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 14, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 14, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 14, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 14, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 14, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 14, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 14, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 14, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 14, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 14, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 14, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 14, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 14, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 14, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 14, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 14, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 14, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 14, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 14, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 14, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 14, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 14, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 14, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 14, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 14, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 14, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 14, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 14, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 14, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 14, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 14, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 14, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 14, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 14, 20, '2015-01-19', 1, 1 ,8);
+
+
+-----------------------------------------
+-----------------------------------------
+
+
+
+
+
+------------------------------------------------------------
+---sell 15 : 왕십리점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 15, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 15, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 15, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 15, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 15, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 15, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 15, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 15, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 15, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 15, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 15, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 15, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 15, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 15, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 15, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 15, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 15, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 15, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 15, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 15, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 15, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 15, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 15, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 15, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 15, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 15, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 15, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 15, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 15, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 15, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 15, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 15, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 15, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 15, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 15, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 15, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 15, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 15, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 15, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 15, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 15, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 15, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 15, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 15, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 15, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 15, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 15, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 15, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 15, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 15, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 15, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 15, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 15, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 15, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 15, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 15, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 15, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 15, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 15, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 15, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 15, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 15, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 15, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 15, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 15, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 15, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 15, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 15, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 15, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 15, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 15, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 15, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 15, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 15, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 15, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 15, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 15, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 15, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 15, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 15, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+
+----------------------
+----------------------
+
+
+
+
+------------------------------------------------------------
+---sell 16 : 의정부점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 16, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 16, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 16, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 16, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 16, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 16, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 16, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 16, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 16, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 16, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 16, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 16, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 16, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 16, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 16, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 16, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 16, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 16, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 16, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 16, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 16, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 16, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 16, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 16, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 16, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 16, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 16, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 16, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 16, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 16, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 16, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 16, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 16, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 16, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 16, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 16, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 16, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 16, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 16, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 16, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 16, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 16, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 16, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 16, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 16, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 16, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 16, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 16, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 16, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 16, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 16, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 16, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 16, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 16, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 16, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 16, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 16, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 16, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 16, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 16, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 16, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 16, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 16, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 16, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 16, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 16, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 16, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 16, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 16, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 16, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 16, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 16, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 16, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 16, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 16, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 16, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 16, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 16, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 16, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 16, 20, '2015-01-19', 1, 1 ,8);
+
+
+--------------------------------
+---------------------------------
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 17 : 남양주점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 17, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 17, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 17, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 17, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 17, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 17, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 17, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 17, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 17, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 17, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 17, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 17, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 17, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 17, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 17, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 17, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 17, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 17, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 17, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 17, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 17, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 17, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 17, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 17, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 17, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 17, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 17, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 17, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 17, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 17, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 17, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 17, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 17, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 17, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 17, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 17, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 17, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 17, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 17, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 17, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 17, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 17, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 17, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 17, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 17, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 17, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 17, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 17, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 17, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 17, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 17, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 17, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 17, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 17, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 17, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 17, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 17, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 17, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 17, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 17, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 17, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 17, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 17, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 17, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 17, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 17, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 17, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 17, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 17, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 17, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 17, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 17, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 17, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 17, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 17, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 17, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 17, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 17, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 17, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 17, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+
+
+--------------------------------------------
+--------------------------------------------
+
+
+
+
+
+------------------------------------------------------------
+---sell 18 : 죽전점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 18, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 18, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 18, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 18, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 18, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 18, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 18, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 18, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 18, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 18, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 18, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 18, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 18, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 18, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 18, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 18, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 18, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 18, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 18, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 18, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 18, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 18, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 18, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 18, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 18, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 18, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 18, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 18, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 18, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 18, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 18, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 18, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 18, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 18, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 18, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 18, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 18, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 18, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 18, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 18, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 18, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 18, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 18, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 18, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 18, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 18, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 18, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 18, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 18, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 18, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 18, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 18, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 18, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 18, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 18, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 18, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 18, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 18, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 18, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 18, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 18, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 18, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 18, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 18, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 18, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 18, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 18, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 18, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 18, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 18, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 18, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 18, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 18, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 18, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 18, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 18, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 18, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 18, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 18, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 18, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+---------------------------------
+---------------------------------
+
+
+
+
+------------------------------------------------------------
+---sell 19 : 오리점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 19, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 19, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 19, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 19, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 19, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 19, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 19, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 19, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 19, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 19, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 19, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 19, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 19, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 19, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 19, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 19, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 19, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 19, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 19, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 19, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 19, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 19, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 19, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 19, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 19, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 19, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 19, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 19, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 19, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 19, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 19, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 19, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 19, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 19, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 19, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 19, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 19, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 19, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 19, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 19, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 19, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 19, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 19, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 19, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 19, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 19, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 19, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 19, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 19, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 19, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 19, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 19, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 19, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 19, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 19, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 19, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 19, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 19, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 19, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 19, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 19, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 19, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 19, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 19, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 19, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 19, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 19, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 19, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 19, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 19, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 19, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 19, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 19, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 19, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 19, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 19, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 19, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 19, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 19, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 19, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+
+
+--------------------------------------
+--------------------------------------
+
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 20 : 잠실점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 20, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 20, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 20, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 20, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 20, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 20, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 20, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 20, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 20, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 20, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 20, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 20, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 20, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 20, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 20, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 20, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 20, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 20, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 20, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 20, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 20, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 20, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 20, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 20, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 20, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 20, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 20, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 20, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 20, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 20, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 20, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 20, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 20, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 20, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 20, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 20, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 20, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 20, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 20, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 20, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 20, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 20, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 20, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 20, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 20, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 20, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 20, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 20, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 20, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 20, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 20, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 20, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 20, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 20, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 20, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 20, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 20, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 20, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0,20 , 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 20, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 20, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 20, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 20, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 20, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 20, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 20, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 20, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 20, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 20, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 20, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 20, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 20, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 20, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 20, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 20, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 20, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 20, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 20, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 20, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 20, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 20, 20, '2015-01-19', 1, 1 ,8);
+
+
+
+---------------------------------------------
+--------------------------------------------
+
+
+
+
+
+
+------------------------------------------------------------
+---sell 21 : 건대점
+
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 21, 1, '2015-01-01', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 21, 1, '2015-01-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 21, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 37000, 0, 21, 1, '2015-02-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 21, 1, '2015-01-13', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 21, 1, '2015-01-05', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 21, 1, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 21, 1, '2015-01-14', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 21, 1, '2015-01-26', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 21, 1, '2015-01-16', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 21, 1, '2015-01-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 21, 1, '2015-01-19', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 21, 1, '2015-01-19', 1, 1 ,75);
+------------------------------------------------------------- memnum 22일 때 시작 : 아기옷, 사이즈 6 
+
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 21, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 21, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 21, 2, '2015-02-02', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 21, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 21, 2, '2015-02-12', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 21, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 21, 2, '2015-02-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 21, 2, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 21, 2, '2015-02-22', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 21, 2, '2015-02-11', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 21, 2, '2015-02-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 21, 2, '2015-02-27', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 23일 때 시작 : 남자옷, 사이즈 105 , 30
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 21, 3, '2015-01-03', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 21, 3, '2015-01-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 21, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 3, '2015-02-09', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 21, 3, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 21, 3, '2015-03-18', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 21, 3, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 3, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001', 50000, 0, 21, 3, '2015-02-05', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 21, 3, '2015-02-16', 1, 1 ,105);
+
+
+------------------------------------------------------------- memnum 4일 때 시작 : 남자옷, 사이즈 95 , 28
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 21, 4, '2015-01-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 21, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 21, 4, '2015-02-04', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 21, 4, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002', 50000, 0, 21, 4, '2015-04-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 21, 4, '2015-02-14', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 4, '2015-02-21', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1522115004', 55000, 0, 21, 4, '2015-02-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003', 75000, 0, 21, 4, '2015-01-24', 1, 1 ,95);
+
+
+------------------------------------------------------------- memnum 5일 때 시작 : 여자옷, 사이즈 80 , 27  ,아기옷 :사이즈 8 
+insert into sell values(sell_seq.nextval, '1532110004', 45000, 0, 21, 5, '2015-01-05', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1513104002', 22000, 0, 21, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 21, 5, '2015-01-05', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1522219002', 30000, 0, 21, 5, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 21, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 21, 5, '2015-02-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 21, 5, '2015-01-09', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 21, 5, '2015-01-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 21, 5, '2015-01-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1543211004', 9000, 0, 21, 5, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523101003', 17000, 0, 21, 5, '2015-02-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005', 12000, 0, 21, 5, '2015-01-04', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1523103001', 15000, 0, 21, 5, '2015-02-26', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1512119001', 25000, 0, 21, 5, '2015-01-26', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005', 37000, 0, 21, 5, '2015-02-26', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532115003', 65000, 0, 21, 5, '2015-01-19', 1, 1 ,80);
+------------------------------------------------------------- memnum 6일 때 시작 : 남자, 105, 32
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 21, 6, '2015-01-06', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 6, '2015-02-16', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 6, '2015-02-16', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 6, '2015-03-05', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 6, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 6, '2015-02-23', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 6, '2015-02-13', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 6, '2015-02-05', 1, 1 ,32);
+
+
+------------------------------------------------------------- memnum 7일 때 시작 : 남자, 95, 28 아기옷 : 7
+
+
+insert into sell values(sell_seq.nextval, '1531115001', 25000, 0, 21, 7, '2015-01-07', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 7, '2015-02-02', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 7, '2015-02-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 7, '2015-02-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 7, '2015-02-03', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 7, '2015-02-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 7, '2015-02-09', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 7, '2015-04-13', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 7, '2015-01-28', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 7, '2015-03-11', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 7, '2015-02-11', 1, 1 ,7);
+
+------------------------------------------------------------- memnum 8일 때 시작 : 여, 85, 29
+
+
+
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 8, '2015-01-13', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 8, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 8, '2015-01-26', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 8, '2015-01-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 8, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 8, '2015-02-14', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 8, '2015-03-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 8, '2015-03-03', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 8, '2015-02-19', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 8, '2015-06-25', 1, 1 ,85);
+
+
+------------------------------------------------------------- memnum 9 일 때 시작 : 남자, 100, 30
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 9, '2015-01-05', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 9, '2015-01-05', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 9, '2015-01-27', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 9, '2015-02-21', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 9, '2015-02-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 9, '2015-03-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 9, '2015-01-14', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 9, '2015-01-14', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 9, '2015-01-17', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 9, '2015-01-01', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 9, '2015-01-01', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 9, '2015-01-29', 1, 1 ,100);
+
+
+------------------------------------------------------------- memnum 10일 때 시작 : 여, 75, 25
+
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 10, '2015-01-27', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 10, '2015-02-05', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 10, '2015-02-11', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 10, '2015-02-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 10, '2015-01-24', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 10, '2015-01-21', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 10, '2015-02-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 10, '2015-02-16', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 10, '2015-02-16', 1, 1 ,75);
+
+
+------------------------------------------------------------- memnum 11일 때 시작 : 여, 75, 25 아기옷 8
+
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 11, '2015-01-13', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 11, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 11, '2015-03-11', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 11, '2015-03-11', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 11, '2015-03-29', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 11, '2015-01-03', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 11, '2015-01-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 11, '2015-01-28', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 11, '2015-01-28', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 11, '2015-01-14', 1, 1 ,75);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 11, '2015-02-14', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 11, '2015-02-14', 1, 1 ,8);
+
+------------------------------------------------------------- memnum 12 일 때 시작 : 남자, 100, 28
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 12, '2015-01-11', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 12, '2015-01-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 12, '2015-01-22', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 12, '2015-02-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 12, '2015-02-19', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 12, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 12, '2015-01-07', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 12, '2015-01-11', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 12, '2015-01-21', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 12, '2015-01-04', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 12, '2015-01-02', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 12, '2015-02-09', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 12, '2015-02-22', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 12, '2015-01-26', 1, 1 ,28);
+
+
+
+------------------------------------------------------------- memnum 13일 때 시작 : 여, 80, 25 
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 13, '2015-01-07', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 13, '2015-01-08', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 13, '2015-01-08', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 13, '2015-01-18', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 13, '2015-02-21', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 13, '2015-02-27', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 13, '2015-02-06', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 13, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 13, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 13, '2015-06-07', 1, 1 ,25);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 13, '2015-01-26', 1, 1 ,80);
+
+------------------------------------------------------------- memnum 14일 때 시작 : 여, 85, 29
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 14, '2015-01-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 14, '2015-02-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 14, '2015-02-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 14, '2015-02-11', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 14, '2015-02-28', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 14, '2015-01-23', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 14, '2015-02-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 14, '2015-02-14', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 14, '2015-01-21', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 14, '2015-01-29', 1, 1 ,29);
+
+------------------------------------------------------------- memnum 15일 때 시작 : 여, 80, 25  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 15, '2015-01-29', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 21, 15, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 15, '2015-02-16', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 15, '2015-01-27', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 15, '2015-01-27', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 15, '2015-01-29', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 15, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 21, 15, '2015-01-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 15, '2015-02-05', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 15, '2015-02-05', 1, 1 ,29);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 15, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 15, '2015-01-27', 1, 1 ,6);
+
+
+------------------------------------------------------------- memnum 16일 때 시작 : 남 , 100, 30  아기옷 : 6
+
+
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 16, '2015-01-13', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 16, '2015-01-23', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 16, '2015-02-13', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 16, '2015-02-16', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 16, '2015-02-26', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 16, '2015-02-24', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 16, '2015-02-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 16, '2015-01-04', 1, 1 ,6);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 16, '2015-01-08', 1, 1 ,100);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 16, '2015-02-17', 1, 1 ,30);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 16, '2015-01-17', 1, 1 ,6);
+
+------------------------------------------------------------- memnum 17일 때 시작 : 여, 85, 27  아기옷 : 7
+
+
+
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 17, '2015-01-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 17, '2015-02-10', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 21, 17, '2015-03-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 17, '2015-03-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 17, '2015-02-22', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 17, '2015-02-22', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 17, '2015-02-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 17, '2015-02-05', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 21, 17, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 17, '2015-01-19', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 17, '2015-01-07', 1, 1 ,85);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 17, '2015-02-20', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 17, '2015-01-20', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 18일 때 시작 : 여, 80, 27
+
+
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 18, '2015-01-22', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 18, '2015-02-14', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 18, '2015-01-17', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1532115003',	65000, 0, 21, 18, '2015-01-24', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1522219002',	30000, 0, 21, 18, '2015-01-23', 1, 1 ,27);
+insert into sell values(sell_seq.nextval, '1532110004',	45000, 0, 21, 18, '2015-01-23', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1512119001',	25000, 0, 21, 18, '2015-02-14', 1, 1 ,80);
+insert into sell values(sell_seq.nextval, '1542210005',	37000, 0, 21, 18, '2015-02-23', 1, 1 ,27);
+
+
+------------------------------------------------------------- memnum 19일 때 시작 : 남 105 , 32 아기옷 7
+
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 19, '2015-01-22', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1533104005',	12000, 0, 21, 19, '2015-01-22', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 19, '2015-02-14', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 19, '2015-02-14', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 19, '2015-02-17', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 19, '2015-03-26', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 19, '2015-01-26', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 19, '2015-02-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 19, '2015-02-21', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1543211004',	9000, 0, 21, 19, '2015-02-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 21, 19, '2015-01-05', 1, 1 ,7);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 19, '2015-01-08', 1, 1 ,105);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 19, '2015-02-11', 1, 1 ,32);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 21, 19, '2015-01-11', 1, 1 ,7);
+
+
+------------------------------------------------------------- memnum 40일 때 시작 : 남 95, 28
+
+
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 20, '2015-01-08', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 20, '2015-01-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1513104002',	22000, 0, 21, 20, '2015-01-19', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 20, '2015-02-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1531115001',	25000, 0, 21, 20, '2015-03-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 20, '2015-02-01', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1523101003',	17000, 0, 21, 20, '2015-02-07', 1, 1 ,8);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 20, '2015-02-21', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1522115004',	55000, 0, 21, 20, '2015-01-29', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1541115002',	50000, 0, 21, 20, '2015-01-22', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511111003',	75000, 0, 21, 20, '2015-01-11', 1, 1 ,95);
+insert into sell values(sell_seq.nextval, '1511215005', 35000, 0, 21, 20, '2015-02-19', 1, 1 ,28);
+insert into sell values(sell_seq.nextval, '1523103001',	15000, 0, 21, 20, '2015-01-19', 1, 1 ,8);
+
+
 commit;
+
+
+
 
 
 
 
 -----------------------------------------------------------------staff_num 1
 
-commit;
+
 INSERT INTO WORKPAY VALUES (workpay_seq.nextval,
 to_date('2015-07-07/13:00','yyyy-MM-dd/hh24:mi')
 ,to_date('2015-07-07/19:59','yyyy-MM-dd/hh24:mi'),1,1);
