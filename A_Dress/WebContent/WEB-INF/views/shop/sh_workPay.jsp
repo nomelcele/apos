@@ -115,11 +115,11 @@
 							<thead style="font-family: '210 나무고딕'">
 
 								<tr>
-									<th><i class="icon_profile"></i>이름</th>
-									<th><i class="icon_profile"></i>출근 시간</th>
-									<th><i class="icon_profile"></i>퇴근 시간</th>
-									<th><i class="icon_mail_alt"></i>근무 시간</th>
-									<th><i class="icon_pin_alt"></i>급여</th>
+									<th><img src = "img/man.ico" style="width: 15px; height: 15px;" >이름</th>
+									<th><img src = "img/c.ico" style="width: 16px; height: 16px;" >출근 시간</th>
+									<th><img src = "img/c.ico" style="width: 16px; height: 16px;" >퇴근 시간</th>
+									<th><img src = "img/aa.ico" style="width: 16px; height: 16px;" >근무 시간</th>
+									<th><img src = "img/ss.ico" style="width: 17px; height: 15px;" >급여</th>
 								</tr>
 
 							</thead>

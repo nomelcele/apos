@@ -78,9 +78,9 @@
 										<thead style="font-family: '210 나무고딕' ">
 											<tr>
 												<th style="color: black;">#</th>
-												<th style="color: black;">이름</th>
-												<th style="color: black;">전화번호</th>
-												<th style="color: black;">출결관리</th>
+												<th style="color: black;"><img src = "img/man.ico" style="width: 15px; height: 15px;" >이름</th>
+												<th style="color: black;"><img src = "img/tel.ico" style="width: 15px; height: 15px;" >전화번호</th>
+												<th style="color: black;"><img src = "img/workdate.ico" style="width: 15px; height: 17px;" >출결관리</th>
 											</tr>
 										</thead>
 
