@@ -194,7 +194,7 @@
 							<div id="view"></div>
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2"><p>기간</p>
-								</label> <input id="date_ps" name="date_ps" autocomplete="off"
+								</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="date_ps" name="date_ps" autocomplete="off"
 									type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
 									name="date_ps2" autocomplete="off" type="date" required /> <input
