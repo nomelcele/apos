@@ -198,7 +198,8 @@
 					<div class="form-group" style="font-family: '210 나무고딕'">
 
 						<div style="margin-left: 10px;">
-							<label for="cname" class="control-label col-lg-2"><p>매장검색</p>
+							<label for="cname" class="control-label col-lg-2"
+							style="margin-left: 1.2%;"><p>매장검색</p>
 							</label> <input id="shop_name" name="name" autocomplete="off" type="text"
 								onkeydown="startSuggest();" required />
 
@@ -208,8 +209,9 @@
 							</br>
 
 							<div style="margin-left: 10px;">
-								<label for="cname" class="control-label col-lg-2"><p
-										align="left">기간</p> </label> <input id="date_ps" name="date_ps"
+								<label for="cname" class="control-label col-lg-2">
+								<p align="left">기간</p> </label> 
+								<input id="date_ps" name="date_ps"
 									minlength="2" autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
 									name="date_ps2" minlength="2" autocomplete="off" type="date"
