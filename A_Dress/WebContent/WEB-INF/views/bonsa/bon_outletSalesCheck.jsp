@@ -202,12 +202,9 @@
 							style="margin-left: 1.2%;"><p>매장검색</p>
 							</label> <input id="shop_name" name="name" autocomplete="off" type="text"
 								onkeydown="startSuggest();" required />
-
 							<div id="view"></div>
-
 							<div class="col-lg-2" style="margin-left: -5%;"></div>
 							
-
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2">
 								<p align="left">기간</p> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
