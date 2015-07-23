@@ -100,6 +100,11 @@ public class ProductDao {
 		ss.insert("product.setzerostock", map);
 	}
 	
+	//신상품추가시 물류창고는 재고 1000개 상태로insert
+	public void setstoragefactory(HashMap<String, Integer> map){
+		ss.insert("product.set1000", map);
+	}
+	
 	//매장가입시 초기물량설정위한 물품코드리스트
 	public List<String> get_productnumlist(){
 		return ss.selectList("product.get_productnumlist");
