@@ -196,9 +196,9 @@ public class Bonsacon {
 				+vo.getUpload().getOriginalFilename();
 		MultipartFile upload = vo.getUpload();
 		System.out.println(path);
-		File f = new File(path);
+		File f = new File(path.toString());
 		try {
-			vo.getUpload().transferTo(f);
+			upload.transferTo(f);
 
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
