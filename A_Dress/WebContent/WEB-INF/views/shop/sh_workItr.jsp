@@ -29,7 +29,7 @@
 						</h4>
 					</div>
 					<div id="collapseTwo" class="panel-collapse collapse">
-						<div class="panel-body">프로젝트 이름은 의류매장관리시스템(이하 “apos”이라 한다)이라
+						<div class="panel-body">프로젝트 이름은 의류매장관리시스템(이하 “ADRESS”이라 한다)이라
 							한다.</div>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 						</h4>
 					</div>
 					<div id="collapseThree" class="panel-collapse collapse">
-						<div class="panel-body">apos은 의류매장의 효율적인 관리를 위하여 만들어 졌으며 매장과
+						<div class="panel-body">ADRESS은 의류매장의 효율적인 관리를 위하여 만들어 졌으며 매장과
 							본사와의 원할한 의사소통과 효율적인 업무를 도와준다.</div>
 					</div>
 				</div>
@@ -53,8 +53,8 @@
 						</h4>
 					</div>
 					<div id="collapseT" class="panel-collapse collapse">
-						<div class="panel-body">apos은 kosta강의실 어딘가에 있으며 이를 만든 사람들은
-							한국 여기 저기에 분포하고 있고 apos를 사용하는 사람은 지구 곳곳에 분포하고 있습니다.</div>
+						<div class="panel-body">ADRESS은 kosta강의실 어딘가에 있으며 이를 만든 사람들은
+							한국 여기 저기에 분포하고 있고 ADRESS를 사용하는 사람은 지구 곳곳에 분포하고 있습니다.</div>
 					</div>
 				</div>
 				<div class="panel panel-default">
@@ -66,7 +66,7 @@
 					</div>
 					<div id="collapseTh" class="panel-collapse collapse">
 						<div class="panel-body">
-							apos은 제2조의 목적을 달성하기 위하여 다음을 수행한다.<br />
+							ADRESS은 제2조의 목적을 달성하기 위하여 다음을 수행한다.<br />
 							<개정2015.05.20> <br />
 							1.모든 매장과 본사와의 소통을 위한 채팅기능<br />
 							2.매출을 한눈에 볼 수 있는 차트 구비<br />
@@ -83,9 +83,9 @@
 					</div>
 					<div id="collapse1" class="panel-collapse collapse">
 						<div class="panel-body">
-							apos은 다음 재산을 기본재산으로 한다.<br />
+							ADRESS은 다음 재산을 기본재산으로 한다.<br />
 							<개정1991.4.15, 1997.12.17> <br />
-							1. apos 부칙 제6조에 규정한 기본재산 <br />
+							1. ADRESS 부칙 제6조에 규정한 기본재산 <br />
 							2. 설립 당시 설립자가 출연한 출연금 <br />
 							3. 기타 이사회의 의결을 거쳐 기본재산으로 정하는 재산 <br />
 						</div>
@@ -100,7 +100,7 @@
 					</div>
 					<div id="collapse2" class="panel-collapse collapse">
 						<div class="panel-body">
-							apos의 재산중 다음 재산을 매각, 양도 또는 담보로 제공하고자 할 때에는 이사회의 의결을 거쳐 고용노동부장관의
+							ADRESS의 재산중 다음 재산을 매각, 양도 또는 담보로 제공하고자 할 때에는 이사회의 의결을 거쳐 고용노동부장관의
 							승인을 얻어야 한다.<br />
 							<개정1988.12.31, 1998.12.29, 2010.7.28> <br />
 							1. 토지 및 건물(국유재산법, 지방재정법 등 관련 법령이 정하는 바에 의하여 기부채납하는 경우 제외)<br />
