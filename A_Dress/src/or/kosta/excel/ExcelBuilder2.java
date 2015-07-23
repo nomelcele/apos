@@ -78,14 +78,13 @@ public class ExcelBuilder2 extends AbstractExcelView{
 		rowCount++;
 		aRow = sheet.createRow(rowCount);
 		aRow.createCell(0).setCellValue("합계 : ");
-		aRow.createCell(1).setCellValue(excel_date+"~");
-		aRow.createCell(2).setCellValue(excel_date2);
+		aRow.createCell(1).setCellValue(excel_date+"~"+excel_date2);
 		aRow.createCell(3).setCellValue(timeres+"시간");
 		aRow.createCell(4).setCellValue(payres+"원");
 	
 		//응답객체로 부터 다운로드 받을 타입과 파일 이름을 설정한다.
 		response.setContentType("Application/Msexcel");
-		response.setHeader("Content-Disposition", "attachment; filename="+excel_date+"~"+excel_date2+":"+staff_num+"_excel.xls;");
+		response.setHeader("Content-Disposition", "attachment; filename="+excel_date+"~"+excel_date2+":"+staff_num+"급여_excel.xls;");
 		
 	}
 

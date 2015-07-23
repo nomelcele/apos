@@ -8,7 +8,7 @@
 	var shop_num = "${sessionScope.shop_num}";
 	$(
 			function() {
-
+				
 				$('#btn_out')
 						.click(
 								function() {
@@ -62,12 +62,23 @@
 									}
 
 								})
-			})
+			});
+	
+	function exceldown2(){
+		$('#ex_staff_num').val($('#staff_num').val());
+		$('#ex_date_ps').val($('#date_ps').val());
+		$('#ex_date_ps2').val($('#date_ps2').val());
+		$('#sh_excel2_form').submit();
+	}
 </script>
 
 <section id="main-content">
 	<section class="wrapper">
-
+		<form action="sh_excel2" method="post" id="sh_excel2_form">
+			<input type="hidden" id="ex_staff_num" name="ex_staff_num" value="">
+			<input type="hidden" id="ex_date_ps" name="ex_date_ps" value="">
+			<input type="hidden" id="ex_date_ps2" name="ex_date_ps2" value="">
+		</form>
 
 		
 		<div class="row"  style="font-size: 15px; width: 100%;">
@@ -104,7 +115,9 @@
 									autocomplete="off" type="text" required />
 								<button class="form-control6" type="button" id="btn_out"
 									name="btn_out" style="font-family: '210 나무고딕'">조회</button>
-
+								<input
+							class="form-control6" style="margin-left: 10px;" type="button"
+							id="btn_excel" name="btn_excel" value="Excel" onclick="javascript:exceldown2()">
 							</div>
 							</br>
 						</form>
