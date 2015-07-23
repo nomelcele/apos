@@ -197,7 +197,7 @@
                              <input style="width: 23%" class="form-control" id="bon_tel3" name="bon_tel3" maxlength="4" type="tel" required />
 						</div>
 						<!-- Footer -->
-						<div class="modal-footer" >
+						<div class="modal-footer"  style="font-family: '210 나무고딕' ">
 							<button type="submit" class="btn btn-default" >요청</button>
 						</div>
 				</form>
