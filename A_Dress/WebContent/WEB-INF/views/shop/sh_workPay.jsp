@@ -41,10 +41,10 @@
 															success : function(
 																	data) {
 																//alert(data);
-																str = data
+																str2 = data
 																		.trim();
 																document
-																		.getElementById("view_workpay").innerHTML = str;
+																		.getElementById("view_workpay").innerHTML = str2;
 															}
 
 														});

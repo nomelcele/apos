@@ -121,22 +121,22 @@
 	// onmessage : 서버가 보낸 push 메세지가 수신되면 발생(리스너)
 	// onerror : 서버가 보낸 push에서 에러가 발생되었을 때 발생
 	// onopen : 서버가 연결이 되었을 때 발생
-	var str = "";
+	var strchat = "";
 	var first = true;
 	eventSource.onmessage = function(event){ //리스너형식으로 돌아가고 있는 콜백함수
 		//alert(event.data);
 		var spl = event.data.split("<@>");
 		//alert(spl[1]);
-		if(str != spl[0]){
+		if(strchat != spl[0]){
 			if(first == true){
 				first=false;
-				str = spl[0];
+				strchat = spl[0];
 			}else if(spl[1] == "you"){
 				//alert("너 확인");
-				str = spl[0];
+				strchat = spl[0];
 				showNotification();
 			}else{
-				str = spl[0];
+				strchat = spl[0];
 			}
 		}
 		document.getElementById("target").innerHTML="<div class='padd sscroll'><ul class='chats'>"+
