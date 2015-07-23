@@ -38,35 +38,21 @@ function open_win3(img3)
 					<div class="col-sm-10" style="width: 135%;height: 100%">
 						<table class="table">
 							<thead  style="font-family: '210 나무고딕'; color: black; ">
-								<tr>
-									<th style="width: 5%; color: black;">번호</th>
+								<tr style="color: black;">
+									<th style="width: 6%; color: black;">번호</th>
 									<th style="width: 8%; color: black;">매장</th>
-									<th style="width: 11%; color: black;">이름</th>
+									<th style="width: 10%; color: black;">이름</th>
 									<th style="color: black;">코드</th>
-									<th style="color: black;">사이즈</th>
+									<th style="width: 8%; color: black;">사이즈</th>
 									<th style="color: black;">가격</th>
 									<th style="color: black;">사진</th>
 									<th style="color: black;">바코드</th>
-									<th style="color: black;">수량</th>
-									<th style="color: black;">현황</th>
+									<th style="width: 6%; color: black;">수량</th>
+									<th style="width: 6%; color: black;">현황</th>
 									<th style="color: black;">날짜</th>
 								</tr>
 							</thead>
 							<tbody  style="font-family: '210 나무고딕' ">
-								<%-- Hidden submit --%>
-								<%-- YES --%>
-<!-- 								<form method="post" action="sh.apos" id="reqOk"> -->
-<!-- 									<input type="hidden" name="cmd" value="mailSelect">  -->
-<!-- 									<input type="hidden" name="subcmd" value="yes"> <input -->
-<%-- 										type="hidden" name="child" value="${shopinfo.key_email}"> --%>
-<!-- 								</form> -->
-				
-<%-- 								NO --%>
-<!-- 								<form method="post" action="sh.apos" id="reqNo"> -->
-<!-- 									<input type="hidden" name="cmd" value="mailSelect"> <input -->
-<!-- 										type="hidden" name="subcmd" value="no"> -->
-<!-- 								</form> -->
-								<%-- Hidden End --%>
 
 								<c:forEach var="state" items="${list}">
 									<tr>
