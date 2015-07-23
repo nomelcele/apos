@@ -187,12 +187,11 @@
 					<div class="form-group" style="font-family: '210 나무고딕'">
 
 						<div style="margin-left: 10px;">
-							<label for="cname" class="control-label col-lg-2">물품코드번호
-							</label> <input id="pro_code" name="name" width="80%" autocomplete="off"
+							<label for="cname" class="control-label col-lg-2" style="margin-left: 1.2%;">물품코드번호</label> 
+							<input id="pro_code" name="name" width="80%" autocomplete="off"
 								type="text" onkeydown="startSuggest();" required />
 
 							<div id="view"></div>
-							</br> </br>
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2"><p>기간</p>
 								</label> <input id="date_ps" name="date_ps" autocomplete="off"
