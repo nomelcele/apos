@@ -53,9 +53,13 @@
   		select pro_code from product
   	</select>
   	
-  	<select id="setzerostock" parameterType="map">
+  	<insert id="setzerostock" parameterType="map">
   		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 0, #{sto_shopnum}, #{sto_size})
-  	</select>
+  	</insert>
+  	
+  	<insert id="set1000" parameterType="map">
+  		insert into stock values(stock_seq.nextVal, #{sto_pronum}, 1000, #{sto_shopnum}, #{sto_size})
+  	</insert>
   	
   	<!-- 할인적용 -->
   	<update id="acceptsalerate" parameterType="salevo">

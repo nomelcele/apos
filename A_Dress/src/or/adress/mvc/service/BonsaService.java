@@ -67,11 +67,20 @@ public class BonsaService {
 		List<Integer> list = pdao.getshop_numlist();
 		for(int shop_num : list){
 			for(int sto_size : temp){
-				HashMap<String, Integer> map = new HashMap<String, Integer>();
-				map.put("sto_shopnum", shop_num);
-				map.put("sto_size", sto_size);
-				map.put("sto_pronum", Integer.parseInt(pro_code));//표시
-				pdao.setzerostock(map);
+				if(shop_num == 1){ //물류창고에는 상품1000개추가해주기위해 구분
+					HashMap<String, Integer> map = new HashMap<String, Integer>();
+					map.put("sto_shopnum", shop_num);
+					map.put("sto_size", sto_size);
+					map.put("sto_pronum", Integer.parseInt(pro_code));//표시
+					pdao.setstoragefactory(map);
+				}else{
+					HashMap<String, Integer> map = new HashMap<String, Integer>();
+					map.put("sto_shopnum", shop_num);
+					map.put("sto_size", sto_size);
+					map.put("sto_pronum", Integer.parseInt(pro_code));//표시
+					pdao.setzerostock(map);
+				}
+				
 			}
 		}
 	}

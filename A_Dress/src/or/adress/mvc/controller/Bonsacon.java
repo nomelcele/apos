@@ -523,30 +523,31 @@ public class Bonsacon {
 		System.out.println(vo.getPro_name());
 		ModelAndView mav = new ModelAndView();
 		String path = session.getServletContext().getRealPath("/product/")
-				+ vo.getBimg().getOriginalFilename();
+				+ vo.getPimg().getOriginalFilename();
 
 		System.out.println(path);
 		File f = new File(path);
 		try {
-			vo.getBimg().transferTo(f);
-
-		} catch (IllegalStateException | IOException e) {
-			e.printStackTrace();
-		}
-		vo.setPro_barcode(vo.getBimg().getOriginalFilename());
-
-		String path2 = session.getServletContext().getRealPath("/barcode/")
-				+ vo.getPimg().getOriginalFilename();
-
-		System.out.println(path2);
-		File f2 = new File(path2);
-		try {
-			vo.getPimg().transferTo(f2);
+			vo.getPimg().transferTo(f);
 
 		} catch (IllegalStateException | IOException e) {
 			e.printStackTrace();
 		}
 		vo.setPro_img(vo.getPimg().getOriginalFilename());
+		
+
+		String path2 = session.getServletContext().getRealPath("/barcode/")
+				+ vo.getBimg().getOriginalFilename();
+
+		System.out.println(path2);
+		File f2 = new File(path2);
+		try {
+			vo.getBimg().transferTo(f2);
+
+		} catch (IllegalStateException | IOException e) {
+			e.printStackTrace();
+		}
+		vo.setPro_barcode(vo.getBimg().getOriginalFilename());
 
 		mav.setViewName("bonsa/bon_productAdd");
 		//pdao.insert(vo);

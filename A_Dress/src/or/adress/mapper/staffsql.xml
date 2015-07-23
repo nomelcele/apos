@@ -56,7 +56,7 @@ private String shop_sname,shop_sposition,shop_stel,shop_name; -->
  	<select id="get_pay" parameterType="map" resultType="staffvo">
  		select s.STAFF_NAME,WORK_LOGIN,work_logout,round
  		((WORK_LOGOUT-WORK_LOGIN)*24,2) work_time from workpay w,staff s
-		where WORK_FLAG=1 and WORK_STAFFNUM=#{staff_num} 
+		where WORK_FLAG=1 and WORK_STAFFNUM=#{staff_num} and s.staff_shopnum=#{shop_num}
 		and s.STAFF_NUM=w.WORK_STAFFNUM 
 		 and( WORK_LOGIN <![CDATA[>=]]> to_date(#{date_ps},'yyyy-MM-dd')  
 		 and WORK_LOGIN <![CDATA[<=]]> to_date(#{date_ps2},'yyyy-MM-dd'))
