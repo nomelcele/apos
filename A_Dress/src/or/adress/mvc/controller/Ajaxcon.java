@@ -178,22 +178,22 @@ public class Ajaxcon {
 			v = it.next();
 			res.append("<tr>");
 			res.append("<td>" + i + "</td>");
-			res.append("<td>").append(v.getShop_name()).append("</td>");
-			res.append("<td>").append(v.getPro_code()).append("</td>");
-			res.append("<td>").append(v.getSto_size()).append("</td>");
-			res.append("<td style=\"width:20%; \">")
+			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getShop_name()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getPro_code()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getSto_size()).append("</td>");
+			res.append("<td style=\"width:20%; font-family: '210 나무고딕'; \">")
 					.append("<input type=\"number\" style=\"width:100%;\" class=\"form-control\" id=\"p_num"
 							+ i
 							+ "\" value=\"1\" max=\""
 							+ v.getSto_amount()
 							+ "\">").append("</td>");
-			res.append("<td>").append(v.getSto_amount()).append("</td>");
-			res.append("<td>").append(v.getPro_price()).append("</td>");
-			res.append("<td>").append(v.getPro_salerate()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getSto_amount()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getPro_price()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getPro_salerate()).append("</td>");
 			res.append("<td><img src='product/" + v.getPro_img()
-					+ "' style=\"width: 100px;\"></td>");// 추후 세일추가
+					+ "' style=\"width: 50px;\"></td>");// 추후 세일추가
 			res.append("<td><img src='barcode/" + v.getPro_barcode()
-					+ "' style=\"width: 100px;\"></td>");
+					+ "' style=\"width: 50px;\"></td>");
 			res.append("<td>");
 			res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
 			res.append("href=\"javascript:insertproduct('")
