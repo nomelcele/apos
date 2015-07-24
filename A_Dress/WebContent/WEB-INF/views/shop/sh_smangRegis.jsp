@@ -53,7 +53,8 @@
 	function gogo() {
 		var temp1 = parseInt(mile, 10);
 		//alert(parseInt(mile, 10));
-		var temp = (price * 0.01) + temp1;
+		var beforetemp = (price * 0.01) + temp1;
+		var temp = Math.ceil(beforetemp);
 		//alert(temp);
 		
 		var str5 = "<input type='hidden' name='fmileage' value='"
