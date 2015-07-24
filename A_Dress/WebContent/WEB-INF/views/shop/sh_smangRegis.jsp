@@ -194,7 +194,7 @@
 									<th style="color: black;"><img src = "img/home.jpg" style="width: 15px; height: 15px;" >주소</th>
 									<th style="color: black;"><img src = "img/tel.ico" style="width: 15px; height: 15px;" >전화번호</th>
 									<th style="color: black;"><img src = "img/m.ico" style="width: 15px; height: 15px;" >마일리지</th>
-									<th style="color: black;"><img src = "img/c.ico" style="width: 15px; height: 15px;" >선택</th>
+									<th style="color: black;"><img src = "img/ck.ico" style="width: 15px; height: 15px;" >선택</th>
 								</tr>
 							</thead>
 							<tbody id="custarget">
