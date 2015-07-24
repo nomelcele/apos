@@ -108,7 +108,7 @@
 
 								<div class="col-lg-6" style="width: 100%">
 									<label for="inputPassword1" class="col-lg-2 control-label"
-										style="font-family: '210 나무고딕';">댓글</label> <input type="text"
+										style="font-family: '210 나무고딕'; font-size: 13px;">댓글</label> <input type="text"
 										class="form-control" id="inputPassword1"
 										placeholder="댓글을 입력하세요." name="comm_cont" style="width: 30%">
 									<button type="button" onclick="javascript:comminaction()"
