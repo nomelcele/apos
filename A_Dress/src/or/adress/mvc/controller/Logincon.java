@@ -231,10 +231,14 @@ public class Logincon {
 	// joinForm 추가
 	// joinForm : valid 쓰기 위함
 	@RequestMapping(value = "/submithot", method = RequestMethod.POST)
-	public ModelAndView submithot(Map<String,Object> model) {
+	public ModelAndView submithot(Map<String,Object> model, int crnum, String email) {
 		ShopVO vo = new ShopVO();
+		ShopHotkeyVO hot = new ShopHotkeyVO();
 		model.put("joinForm", vo);
+		hot.setKey_crnum(crnum);
+		hot.setKey_email(email);
 		ModelAndView mav = new ModelAndView("login/sh_shopjoin");
+		mav.addObject("hotkey",hot);
 		return mav;
 	}
 
