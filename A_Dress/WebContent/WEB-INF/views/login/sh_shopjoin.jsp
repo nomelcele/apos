@@ -136,6 +136,9 @@
 			return false;
 		}
 	}
+	function goCanel(){
+		location = "login";
+	}
 	
 </script>
 </head>
@@ -272,10 +275,9 @@
                                       <div class="form-group">
                                           <div class="col-lg-offset-2 col-lg-10">
                                               <button class="btn btn-primary" type="button" onclick="javasript:gojoin()">Save</button>
-                                              <button class="btn btn-default" type="button">Cancel</button>
+                                              <button class="btn btn-default" type="button" onclick="javasript:goCanel()">Cancel</button>
                                           </div>
                                       </div>
-<%--                                   </form> --%>
 								</form:form>
                               </div>
                           </div>
