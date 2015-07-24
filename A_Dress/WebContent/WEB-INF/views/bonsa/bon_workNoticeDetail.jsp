@@ -46,7 +46,7 @@
 
 						<div class="form-group" style="font-family: '210 나무고딕'">
 							<label class="col-sm-2 control-label"
-								style="font-family: '210 나무고딕'">제목</label>
+								style="font-family: '210 나무고딕' ; font-size: 14px;">제목</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" value="${v.title}"
 									readonly="readonly">
@@ -54,7 +54,7 @@
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label"
-								style="font-family: '210 나무고딕'">날짜</label>
+								style="font-family: '210 나무고딕' ; font-size: 14px;">날짜</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" value="${v.regdate}"
 									readonly="readonly">
@@ -62,7 +62,7 @@
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label"
-								style="font-family: '210 나무고딕'">작성자</label>
+								style="font-family: '210 나무고딕' ; font-size: 14px;">작성자</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control round-input"
 									value="${v.writer}" readonly="readonly">
@@ -70,7 +70,7 @@
 						</div>
 						<div class="form-group">
 							<label class="col-sm-2 control-label"
-								style="font-family: '210 나무고딕'">내용</label>
+								style="font-family: '210 나무고딕' ; font-size: 14px;">내용</label>
 							<div class="col-lg-10">
 								<textarea name="" id="" class="form-control7" cols="30" rows="5"
 									style="min-width: 350px; max-width: 700px; height: 100px; margin-left: 5.7%"
@@ -123,7 +123,7 @@
 						<!--                      <form method="post" action="bon_commin" id="commin"> -->
 						<form:form method="post" action="bon_commin" id="commin"
 							commandName="commin">
-							<div class="form-group" style="font-family: '210 나무고딕'">
+							<div class="form-group" style="font-family: '210 나무고딕' ; font-size: 13px;">
 								<label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
 								<div class="col-lg-6" style="width:100%;">
 									<!--                            <input type="text" class="form-control" id="inputPassword1" placeholder="댓글을 입력하세요." name="comm_cont" > -->
@@ -133,7 +133,7 @@
 									<form:errors path="comm_cont" cssClass="error"></form:errors>
 
 									<button type="button" class="btn btn-danger"
-										onclick="javascript:goUrlshcin()" style="width:30%;">댓글
+										onclick="javascript:goUrlshcin()" style="width:20%;">댓글
 										작성</button>
 								</div>
 							</div>
@@ -149,7 +149,7 @@
 								type="hidden" name="writer" value="${v.writer }">
 							<button type="button" class="btn btn-danger"
 								onclick="javascript:delteaction()"
-								style="margin-left: 23%; margin-top: 1%; float: left; font-family: '210 나무고딕'">글
+								style="margin-left: 5%; margin-top: 1%; float: left; font-family: '210 나무고딕'">글
 								삭제</button>
 						</form>
 						<form action="bon_workNotice" method="post" id="listform">
