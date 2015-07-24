@@ -56,7 +56,7 @@
 	<section class="wrapper">
 		<div class="col-lg-12">
 			<h3 class="page-header"style="font-family: '210 나무고딕'; color: black; ">
-				<span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>출결
+				<span><img src = "img/sales.ico" style="width: 17pt; height: 15pt;"></span>출결 관리
 			</h3>
 
 			<div class="row" style="font-size: 12px; width: 125%; height: 100%;">
