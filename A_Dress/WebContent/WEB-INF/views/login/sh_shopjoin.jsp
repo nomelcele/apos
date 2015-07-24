@@ -167,7 +167,8 @@
                                           <label for="cSelfImg" class="control-label col-lg-2"> Self_IMG <span class="required">*</span></label>
                                           <div class="col-lg-10">
                                           	  <div style="width: 124px; height: 130px; border: 1px solid #DEDEDE;" >
-                                          		  <div class="form-contro" style="width: 102px; height: 142px; margin: auto;" id="selfimgtarget"><img src=""></div>
+                                          		  <div class="form-contro" style="width: 102px; height: 142px; margin: auto;" id="selfimgtarget"><img src="master/${sessionScope.shop_img}">
+                                          		  </div>
                                           	  </div>
                                           		  <input class="form-control5" type="file" id="selfimg" name="selfimg" style="display: inline;">
                                           </div>
