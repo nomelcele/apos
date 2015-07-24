@@ -199,8 +199,7 @@
 
 						</div>
 
-					</div>
-					</br>
+				
 
 				</form>
 				<script src="resources/js/highcharts.js"></script>
