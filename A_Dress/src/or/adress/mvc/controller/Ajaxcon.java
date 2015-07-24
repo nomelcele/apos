@@ -1295,4 +1295,19 @@ public class Ajaxcon {
 		mav.addObject("res", count);
 		return mav;
 	}
+	// HOTKEY신청 부분에서의 CRNUM 확인
+		@RequestMapping(value = "crnumchk")
+		public ModelAndView crnumchk(int key_crnum) {
+			ModelAndView mav = new ModelAndView("ajax/crnumchk");
+			System.out.println(key_crnum);
+			int res = shdao.chkcrnum(key_crnum);
+			boolean result=false;
+			if(res==1){
+				result =true; // 값이 존재
+			}else{
+				result=false;
+			}
+			mav.addObject("result",result);
+			return mav;
+		}
 }
