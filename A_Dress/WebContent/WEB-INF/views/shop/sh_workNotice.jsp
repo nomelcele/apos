@@ -75,7 +75,7 @@
 						<table>
 							<tr>
 								<td  style="font-family: '210 나무고딕' "><a class="btn btn-danger btn-sm"
-									href="javascript:gourl2()" title="Bootstrap 3 themes generator">목록</a>
+									href="javascript:gourl2()" title="Bootstrap 3 themes generator" style="margin-left: 1675%;">목록</a>
 								</td>
 							</tr>
 						</table>
