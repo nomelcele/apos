@@ -63,7 +63,7 @@
 	<servlet>
 		<servlet-name>kosta</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<!-- 서블릿 config dispatch+erServlet에서만 설정이 유효 하고 다른 서블릿에선 못함 디스패처만을 위한 설정 -->
+		<!-- 서블릿 config dispatcherServlet에서만 설정이 유효 하고 다른 서블릿에선 못함 디스패처만을 위한 설정 -->
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>/WEB-INF/*-context.xml</param-value>
