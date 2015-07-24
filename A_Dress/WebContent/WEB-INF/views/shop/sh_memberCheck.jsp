@@ -36,7 +36,7 @@
 											type="hidden" name="page" value="1">
 										<div class="form-group " style="font-family: '210 나무고딕' ">
 											<label for="cname" class="control-label col-lg-2"
-												style="font-size: 11px; float: left  ">이름 </label>
+												style="font-size: 13px; float: left  ">이름 </label>
 											<div style="float: left; position: relative;">
 												<input class="form-control" id="sname_ps" name="mem_name"
 													onkeydown="startSuggest();" autocomplete="off" type="text"
