@@ -75,7 +75,7 @@ select shop_name,shop_tel,shop_master,shop_mail,shop_adr from shop where shop_nu
 	
 	
 	<insert id="insertMem" parameterType="memvo">
-	insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,sysdate,1,#{mem_email})
+	insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,#{mem_date},1,#{mem_email})
 	</insert>
 	
 	<select id="memdetail" parameterType="int" resultType="memvo">
