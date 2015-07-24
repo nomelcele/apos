@@ -26,10 +26,8 @@
 		}
 	}
 	function insertproduct(pcode, psize, pamount, pprice, a, psalerate) {
-		if(document
-				.getElementById('p_num'+a).value != "" && document
-				.getElementById('p_num'+a).value <= document
-				.getElementById('p_orinum'+a).value ){
+		var order = $('#p_num' + a).val().trim();
+		if(order != "" && order <= pamount ){
 			//i++;
 			j++;
 			if(psalerate != 0){
@@ -55,6 +53,7 @@
 			document.getElementById('final').innerHTML += str3;
 			document.getElementById('final').innerHTML += str4;
 			document.getElementById('final').innerHTML += str9;
+
 		}else{
 			alert("잘못된 값 입니다. 다시 입력하세요")
 		}
