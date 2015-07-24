@@ -82,12 +82,12 @@
 						<thead style="font-family: '210 나무고딕';font-size:8px;">
 							<tr>
 								
-								<th><img src = "img/shopimg.ico" style="width: 10px; height: 8px;" >지점명</th>
-								<th><img src = "img/home.jpg" style="width: 10px; height: 8px;" >주소</th>
-								<th><img src = "img/num.ico" style="width: 10px; height: 8px;" >사업자번호</th>
-								<th><img src = "img/man.ico" style="width: 10px; height: 8px;" >매장주이름</th>
-								<th><img src = "img/man.ico" style="width: 10px; height: 8px;" >매장주사진</th>
-								<th><img src = "img/shop.ico" style="width: 10px; height: 8px;" >화상회의</th>
+								<th><img src = "img/shopimg.ico" style="width: 15px; height: 15px;" >지점명</th>
+								<th><img src = "img/home.jpg" style="width: 15px; height: 15px;" >주소</th>
+								<th><img src = "img/num.ico" style="width: 15px; height: 15px;" >사업자번호</th>
+								<th><img src = "img/man.ico" style="width: 15px; height: 15px;" >매장주이름</th>
+								<th><img src = "img/man.ico" style="width: 15px; height: 15px;" >매장주사진</th>
+								<th><img src = "img/shop.ico" style="width: 15px; height: 15px;" >화상회의</th>
 							</tr>
 						</thead>
 						
