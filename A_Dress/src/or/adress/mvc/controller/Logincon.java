@@ -155,7 +155,7 @@ public class Logincon {
 			model.put("joinForm", shop);
 			System.out.println("확인");
 			// 매장 회원 가입- DB에 저장
-			String path = session.getServletContext().getRealPath("/upload/")
+			String path = session.getServletContext().getRealPath("/master/")
 					+ vo.getSelfimg().getOriginalFilename();
 
 			System.out.println(path);
