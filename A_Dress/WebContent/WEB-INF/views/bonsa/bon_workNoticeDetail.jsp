@@ -125,20 +125,19 @@
 							commandName="commin">
 							<div class="form-group" style="font-family: '210 나무고딕'">
 								<label for="inputPassword1" class="col-lg-2 control-label">댓글</label>
-								<div class="col-lg-6">
+								<div class="col-lg-6" style="width:100%;">
 									<!--                            <input type="text" class="form-control" id="inputPassword1" placeholder="댓글을 입력하세요." name="comm_cont" > -->
-									<form:input path="comm_cont" cssClass="form-control" 
-										id="comm_cont" placeholder="댓글을 입력하세요" style="float:left; width:80%;" />
+									<form:input path="comm_cont" cssClass="form-control"
+										id="comm_cont" placeholder="댓글을 입력하세요"
+										style=" width:40%;" />
 									<form:errors path="comm_cont" cssClass="error"></form:errors>
-								</div>
-								<button type="button" class="btn btn-danger"
-									onclick="javascript:goUrlshcin()" style="margin-left: 1%;">댓글 작성</button>
-								<div class="col-lg-offset-2 col-lg-10" style="display: block;">
+
+									<button type="button" class="btn btn-danger"
+										onclick="javascript:goUrlshcin()" style="width:30%;">댓글
+										작성</button>
 								</div>
 							</div>
-							<div class="form-group" style="font-family: '210 나무고딕'">
-								
-							</div>
+							<div class="form-group" style="font-family: '210 나무고딕'"></div>
 
 							<input type="hidden" name="comm_bonum" value="${v.no}">
 							<input type="hidden" name="no" value="${v.no }">
@@ -155,7 +154,7 @@
 						</form>
 						<form action="bon_workNotice" method="post" id="listform">
 							<input type="hidden" name="page" value="1">
-							<button type="button" class="btn btn-danger"
+							<button type="button" class="btn btn-primary"
 								onclick="javascript:listaction()"
 								style="margin-left: 1%; margin-top: 1%; font-family: '210 나무고딕'">목록</button>
 						</form>
