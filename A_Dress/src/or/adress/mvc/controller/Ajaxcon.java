@@ -652,7 +652,6 @@ public class Ajaxcon {
 		outs.append("data:");
 		for (ChaVO e : list) {
 			if (e.getU_id().equals(id)) {
-				System.out.println(e.getImg());
 				outs.append("<li class=\"by-other\">");
 				// outs.append("<div class=\"avatar pull-right\">").append(e.getU_id()).append("<div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(

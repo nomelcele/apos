@@ -62,7 +62,7 @@
 								<c:set var="chkpath" value="upload/null" />
 								<c:if test="${v.path ne chkpath }">
 									<img src="${v.path}"
-										style="width: 60% px; resize: none; margin-left: 18%; margin-top: 3%;">
+										style="width: 60%; resize: none; margin-left: 18%; margin-top: 3%;">
 								</c:if>
 
 								<%--                          <img src="${v.path}" style="width: 350px; resize: none "> --%>
