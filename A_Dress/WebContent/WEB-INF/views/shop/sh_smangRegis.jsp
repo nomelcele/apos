@@ -189,12 +189,12 @@
 						<table class="table table-striped table-advance table-hover">
 							<thead  style="font-family: '210 나무고딕' ">
 								<tr>
-									<th style="color: black;"><i class="icon_profile"></i> 고객 번호</th>
-									<th style="color: black;"><i class="icon_calendar"></i> 고객 성명</th>
-									<th style="color: black;"><i class="icon_pin_alt"></i> 주소</th>
-									<th style="color: black;"><i class="icon_mobile"></i> 전화번호</th>
-									<th style="color: black;"><i class="icon_profile"></i> 마일리지</th>
-									<th style="color: black;"><i class="icon_cogs"></i> 선택</th>
+									<th style="color: black;"><img src = "img/num.ico" style="width: 15px; height: 15px;" >고객 번호</th>
+									<th style="color: black;"><img src = "img/man.ico" style="width: 15px; height: 15px;" >고객 성명</th>
+									<th style="color: black;"><img src = "img/home.jpg" style="width: 15px; height: 15px;" >주소</th>
+									<th style="color: black;"><img src = "img/tel.ico" style="width: 15px; height: 15px;" >전화번호</th>
+									<th style="color: black;"><img src = "img/m.ico" style="width: 15px; height: 15px;" >마일리지</th>
+									<th style="color: black;"><img src = "img/c.ico" style="width: 15px; height: 15px;" >선택</th>
 								</tr>
 							</thead>
 							<tbody id="custarget">
