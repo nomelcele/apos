@@ -117,8 +117,8 @@
 				<div class="form-group" style="height: 50px;">
 					<label for="cadr" class="control-label col-lg-2" style="padding: 0; font-size: 15px;">주소 <span class="required">*</span></label>
 					<div class="col-lg-10">
-					    <input class="form-control2" type="text" id="sample4_postcode1_2" name="adr1_2"> - 
-						<input class="form-control2" type="text" id="sample4_postcode2_2" name="adr2_2">
+					    <input class="form-control2" type="text" id="sample4_postcode1_2" name="adr1_2" readonly="readonly" autocomplete="off"> - 
+						<input class="form-control2" type="text" id="sample4_postcode2_2" name="adr2_2" readonly="readonly" autocomplete="off">
 						<input class="form-control5 " type="button" onclick="sample4_execDaumPostcode()" value="위치 찾기"><br>
 					</div>
 				</div>

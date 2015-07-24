@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
 <script>
+	//자바 스크립트 정규표현식
+	var regType1 = /^[0-9]*$/;
 	var shopidchk = false;
 	var shoppwdchk = false;
 
@@ -82,14 +84,19 @@
 		});
 		// 매장 회원 가입 - 비밀번호 확인 
 		$('#spwdchk').keyup(function(){
-			if($('#spwd').val() == $('#spwdchk').val()){
-				$('#targetPWD').css("color","green");
-				$('#targetPWD').text("비밀번호가 일치합니다");
-				shoppwdchk = true;
+			if ($('#spwdchk').val().length < 1) {
+				$("#targetPWD").hide();
 			}else{
-				$('#targetPWD').css("color","red");
-				$('#targetPWD').text("비밀번호가 일치하지 않습니다");
-				shoppwdchk = false ;
+				$("#targetPWD").show();
+				if($('#spwd').val() == $('#spwdchk').val()){
+					$('#targetPWD').css("color","green");
+					$('#targetPWD').text("비밀번호가 일치합니다");
+					shoppwdchk = true;
+				}else{
+					$('#targetPWD').css("color","red");
+					$('#targetPWD').text("비밀번호가 일치하지 않습니다");
+					shoppwdchk = false ;
+				}
 			}
 		});
 	});
@@ -102,11 +109,20 @@
 				if (shoppwdchk == true) {
 					//010-0000-0000: 3+4+4+2 =13자리
 					//010-307-3333:3+3+4+2=12자리
-					if($('#shop_tel').val().length <12){
-						alert("전화번호를 확인하세요")
-					}else{
+					if (($('#tel1').val().length < 1)	|| ($('#tel2').val().length < 1)	|| ($('#tel3').val().length < 1)) {
+						alert("전화번호를 입력하세요.");
+					} else if ((!regType1.test(document
+							.getElementById('tel1').value))||(!regType1.test(document
+									.getElementById('tel2').value))||(!regType1.test(document
+											.getElementById('tel3').value))) {
+						alert('전화번호에는 숫자만 입력해주세요');
+					}else  if(($('#tel1').val().length < 3)	|| ($('#tel2').val().length < 3)	|| ($('#tel3').val().length < 4)) {
+						alert("전화번호를 확인해주세요.");
+					} else {
+						$('#shop_tel').val($('#tel1').val()+"-"+ $('#tel2').val()+"-"+$('#tel3').val());
 						$('#feedback_form').submit();
 					}
+				
 				} else {
 					alert("비밀번호가 불일치 합니다");
 					return false;
@@ -140,9 +156,8 @@
                           <div class="panel-body">
                               <div class="form">
                               
-<%--                                   <form class="form-validate form-horizontal" enctype="multipart/form-data" id="feedback_form" method="post" action="shopinsert" autocomplete="off"> --%>
 
-									<form:form action="shopinsert" commandName="joinForm" id="feedback_form" autocomplete="off" cssClass="form-validate form-horizontal" enctype="multipart/form-data" method="post">
+								<form:form action="shopinsert" commandName="joinForm" id="feedback_form" autocomplete="off" cssClass="form-validate form-horizontal" enctype="multipart/form-data" method="post">
                                   <input type="hidden" id="shop_tel" name="shop_tel" value="">
                                   	  <div class="form-group ">
                                           <label for="cSelfImg" class="control-label col-lg-2"> Self_IMG <span class="required">*</span></label>
@@ -157,9 +172,8 @@
                                       <div class="form-group ">
                                           <label for="cName" class="control-label col-lg-2"> Name <span class="required">*</span></label>
                                           <div class="col-lg-10">
-<!--                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="sname" name="shop_master" minlength="2" type="text" required /> -->
-											<form:input path="shop_master" size="30" id="sname" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"></form:input>
-											<form:errors path="shop_master" cssClass="error"></form:errors>
+												<form:input path="shop_master" size="30" id="sname" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control" autocomplete="off"></form:input>
+												<form:errors path="shop_master" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
@@ -167,9 +181,8 @@
                                           <label for="cId" class="control-label col-lg-2"> ID <span class="required">*</span></label>
                                           <div class="col-lg-10">
                                           	  <input style="width: 6%; float: left;" class="form-control"  id="sh_" name="sh_"type="text" value="sh_" readonly="readonly" />
-<!--                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="sid" name="shop_id" minlength="5" type="text" required /> -->
-												<form:input path="shop_id" size="30" id="sid" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"></form:input>
-												<form:errors path="shop_id" cssClass="error"></form:errors>
+													<form:input path="shop_id" size="30" id="sid" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"></form:input>
+													<form:errors path="shop_id" cssClass="error"></form:errors>
                                               <div id="targetID"></div>
                                           </div>
                                       </div>
@@ -177,16 +190,14 @@
                                       <div class="form-group ">
                                           <label for="cPwd" class="control-label col-lg-2">PWD <span class="required">*</span></label>
                                           <div class="col-lg-10">
-<!--                                               <input style="width: 20%" class="form-control" id="spwd" name="shop_pwd" minlength="6" type="password" required /> -->
-												<form:password path="shop_pwd" size="30" id="spwd" cssStyle="width: 20%" cssClass="form-control" minlength="4"></form:password>
-												<form:errors path="shop_pwd" cssClass="error"></form:errors>
+													<form:password path="shop_pwd" size="30" id="spwd" cssStyle="width: 20%" cssClass="form-control" minlength="4"></form:password>
+													<form:errors path="shop_pwd" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
 									  <div class="form-group ">
                                           <label for="cPwdChk" class="control-label col-lg-2">PWDCHK <span class="required">*</span></label>
                                           <div class="col-lg-10">
-<!--                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="spwdchk" name="pwdchk" minlength="6" type="password" required /> -->
 													<form:password path="pwdchk" size="30" id="spwdchk" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control" minlength="4"/>
 													<form:errors path="pwdchk" cssClass="error"></form:errors>
                                           	  <div id="targetPWD"></div>
@@ -196,18 +207,15 @@
                                       <div class="form-group ">
                                           <label for="cCrnum" class="control-label col-lg-2">사업자 번호 <span class="required">*</span></label>
                                           <div class="col-lg-10">
-<!--                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="scrnum" name="shop_crnum" minlength="6" type="text" required /> -->
-                                              <form:input path="shop_crnum"  id="scrnum" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control" minlength="6" maxlength="10"></form:input>
-											  <form:errors path="shop_crnum" cssClass="error"></form:errors>
+	                                              <input type="text" name="shop_crnum" id="scrnum" style="width: 20%; float: left; margin-right: 10px;" class="form-control" minlength="6" maxlength="10" autocomplete="off"> 
                                           </div>
                                       </div>
                                       
                                       <div class="form-group ">
                                           <label for="cEmail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
                                           <div class="col-lg-10">
-<!--                                               <input style="width: 20%" class="form-control " id="smail" type="email" name="shop_mail" required /> -->
-                                              <form:input path="shop_mail" size="30" id="smail" cssStyle="width: 20%" cssClass="form-control"></form:input>
-											<form:errors path="shop_mail" cssClass="error"></form:errors>
+                                              	<form:input path="shop_mail" size="30" id="smail" cssStyle="width: 20%" cssClass="form-control" autocomplete="off"></form:input>
+												<form:errors path="shop_mail" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
@@ -215,27 +223,18 @@
                                       <div class="form-group ">
                                           <label for="ctel" class="control-label col-lg-2">Tel <span class="required">*</span></label>
                                           <div class="col-lg-10">
-	                                          <select style="width: 8%" class="form-control">
-	                                          		<option>SKT</option>
-	                                          		<option>KT</option>
-	                                          		<option>LG</option>
-	                                          </select>-
-<!-- 	                                          <input style="width: 7%" class="form-control" id="tel1" name="tel1" maxlength="3" type="tel" required />- -->
-<!-- 	                                          <input style="width: 7%" class="form-control" id="tel2" name="tel2" maxlength="4" type="tel" required />- -->
-<!-- 	                                          <input style="width: 7%" class="form-control" id="tel3" name="tel3" maxlength="4" type="tel" required /> -->
-	                                          <form:input path="tel1" size="30" id="tel1" cssStyle="width: 7%" cssClass="form-control" maxlength="3"></form:input>
-											<form:errors path="tel1" cssClass="error"></form:errors>
-											<form:input path="tel2" size="30" id="tel2" cssStyle="width: 7%" cssClass="form-control" maxlength="4"></form:input>
-											<form:errors path="tel2" cssClass="error"></form:errors>
-											<form:input path="tel3" size="30" id="tel3" cssStyle="width: 7%" cssClass="form-control" maxlength="4"></form:input>
-											<form:errors path="tel3" cssClass="error"></form:errors>
+	                                          	<form:input path="tel1" size="30" id="tel1" cssStyle="width: 7%" cssClass="form-control" maxlength="3" autocomplete="off"></form:input>
+												<form:errors path="tel1" cssClass="error"></form:errors>
+												<form:input path="tel2" size="30" id="tel2" cssStyle="width: 7%" cssClass="form-control" maxlength="4" autocomplete="off"></form:input>
+												<form:errors path="tel2" cssClass="error"></form:errors>
+												<form:input path="tel3" size="30" id="tel3" cssStyle="width: 7%" cssClass="form-control" maxlength="4" autocomplete="off"></form:input>
+												<form:errors path="tel3" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
                                       <div class="form-group ">
                                           <label for="cShopName" class="control-label col-lg-2"> ShopName <span class="required">*</span></label>
                                           <div class="col-lg-10">
-<!--                                               <input style="width: 20%; float: left; margin-right: 10px;" class="form-control" id="sshopname" name="shop_name" minlength="3" type="text" placeholder="ex) 죽전점" required /> -->
                                               <form:input path="shop_name" size="30" id="sshopname" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"></form:input>
 											<form:errors path="shop_name" cssClass="error"></form:errors>
                                           </div>
