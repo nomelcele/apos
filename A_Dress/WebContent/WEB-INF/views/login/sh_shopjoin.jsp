@@ -143,99 +143,100 @@
 </script>
 </head>
 <body>
+<div style="z-index: 1; position: relative; margin-left: 45px;">
+<img src="upload/zara13.jpg">
 <!-- 매장의 회원관리 - 회원가입 페이지입니다. -->
+<div style="z-index: 2; margin-top: -1050px; margin-left:-150px;" >
 <section id="main-content">
  	<section class="wrapper">
  	
  	<div class="row" style="font-size: 15px;">
 				<div class="col-lg-12">
-					<h3 class="page-header"><i class="fa fa-files-o"></i> 회원가입</h3>
+					<h3 class="page-header"  style="margin-top: 20px; height: -50%; width: 100%; font-family: '210 나무고딕' "><i class="fa fa-files-o"></i> 회원가입</h3>
  	
-				<div class="row">
-                  <div class="col-lg-12">
-                      <section class="panel">
+
 <!--                           <header class="panel-heading"> -->
 <!--                           </header> -->
-                          <div class="panel-body">
-                              <div class="form">
+                          <div class="panel-bod" style="height: 240%;">
+                              <div class="form" style="height: 300%;">
                               
 
 								<form:form action="shopinsert" commandName="joinForm" id="feedback_form" autocomplete="off" cssClass="form-validate form-horizontal" enctype="multipart/form-data" method="post">
                                   <input type="hidden" id="shop_tel" name="shop_tel" value="">
-                                  	  <div class="form-group ">
+                                  	  <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cSelfImg" class="control-label col-lg-2"> Self_IMG <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                          	  <div style="width: 124px; height: 164px; border: 1px solid black;" >
-                                          		  <div class="form-contro" style="width: 102px; height: 142px; margin: auto;" id="selfimgtarget"><img src="resources/img/selfimg_basic.PNG"></div>
+                                          	  <div style="width: 124px; height: 130px; border: 1px solid #DEDEDE;" >
+                                          		  <div class="form-contro" style="width: 102px; height: 142px; margin: auto;" id="selfimgtarget"><img src=""></div>
                                           	  </div>
                                           		  <input class="form-control5" type="file" id="selfimg" name="selfimg" style="display: inline;">
                                           </div>
                                       </div>
                                       
-                                      <div class="form-group ">
+                                      <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cName" class="control-label col-lg-2"> Name <span class="required">*</span></label>
                                           <div class="col-lg-10">
-												<form:input path="shop_master" size="30" id="sname" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control" autocomplete="off"></form:input>
+												<form:input path="shop_master" size="30" id="sname" cssStyle="width: 40%;  " cssClass="form-control" autocomplete="off"></form:input>
 												<form:errors path="shop_master" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
-                                      <div class="form-group ">
+                                      <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cId" class="control-label col-lg-2"> ID <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                          	  <input style="width: 6%; float: left;" class="form-control"  id="sh_" name="sh_"type="text" value="sh_" readonly="readonly" />
-													<form:input path="shop_id" size="30" id="sid" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"></form:input>
+                                          	  <input style="width: 10%;" class="form-control"  id="sh_" name="sh_"type="text" value="sh_" readonly="readonly" />
+													<form:input path="shop_id" size="30" id="sid" cssStyle="width: 30%; " cssClass="form-control"></form:input>
 													<form:errors path="shop_id" cssClass="error"></form:errors>
                                               <div id="targetID"></div>
                                           </div>
                                       </div>
                                       
-                                      <div class="form-group ">
+                                      <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cPwd" class="control-label col-lg-2">PWD <span class="required">*</span></label>
                                           <div class="col-lg-10">
-													<form:password path="shop_pwd" size="30" id="spwd" cssStyle="width: 20%" cssClass="form-control" minlength="4"></form:password>
+													<form:password path="shop_pwd" size="30" id="spwd" cssStyle="width: 40%" cssClass="form-control" minlength="4"></form:password>
 													<form:errors path="shop_pwd" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
-									  <div class="form-group ">
+									  <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cPwdChk" class="control-label col-lg-2">PWDCHK <span class="required">*</span></label>
                                           <div class="col-lg-10">
-													<form:password path="pwdchk" size="30" id="spwdchk" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control" minlength="4"/>
+													<form:password path="pwdchk" size="30" id="spwdchk" cssStyle="width: 40%; float: left; margin-right: 10px;" cssClass="form-control" minlength="4"/>
 													<form:errors path="pwdchk" cssClass="error"></form:errors>
                                           	  <div id="targetPWD"></div>
                                           </div>
                                       </div>
                                       
-                                      <div class="form-group ">
+                                      <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cCrnum" class="control-label col-lg-2">사업자 번호 <span class="required">*</span></label>
                                           <div class="col-lg-10">
-	                                              <input type="text" name="shop_crnum" id="scrnum" style="width: 20%; float: left; margin-right: 10px;" class="form-control" minlength="6" maxlength="10" autocomplete="off"> 
+	                                              <input type="text" name="shop_crnum" id="scrnum" style="width: 40%; float: left; margin-right: 10px;" class="form-control" minlength="6" maxlength="10" autocomplete="off"> 
                                           </div>
                                       </div>
                                       
-                                      <div class="form-group ">
+                                      <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cEmail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              	<form:input path="shop_mail" size="30" id="smail" cssStyle="width: 20%" cssClass="form-control" autocomplete="off"></form:input>
+                                              	<form:input path="shop_mail" size="30" id="smail" cssStyle="width: 40%" cssClass="form-control" autocomplete="off"></form:input>
 												<form:errors path="shop_mail" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
                                       
-                                      <div class="form-group ">
+                                      <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="ctel" class="control-label col-lg-2">Tel <span class="required">*</span></label>
                                           <div class="col-lg-10">
-	                                          	<form:input path="tel1" size="30" id="tel1" cssStyle="width: 7%" cssClass="form-control" maxlength="3" autocomplete="off"></form:input>
+	                                          	<form:input path="tel1" size="30" id="tel1" cssStyle="width: 13%" cssClass="form-control" maxlength="3" autocomplete="off"></form:input>
 												<form:errors path="tel1" cssClass="error"></form:errors>
-												<form:input path="tel2" size="30" id="tel2" cssStyle="width: 7%" cssClass="form-control" maxlength="4" autocomplete="off"></form:input>
+												<form:input path="tel2" size="30" id="tel2" cssStyle="width: 13%" cssClass="form-control" maxlength="4" autocomplete="off"></form:input>
 												<form:errors path="tel2" cssClass="error"></form:errors>
-												<form:input path="tel3" size="30" id="tel3" cssStyle="width: 7%" cssClass="form-control" maxlength="4" autocomplete="off"></form:input>
+												<form:input path="tel3" size="30" id="tel3" cssStyle="width: 13%" cssClass="form-control" maxlength="4" autocomplete="off"></form:input>
 												<form:errors path="tel3" cssClass="error"></form:errors>
                                           </div>
                                       </div>
                                       
-                                      <div class="form-group ">
+                                      <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cShopName" class="control-label col-lg-2"> ShopName <span class="required">*</span></label>
                                           <div class="col-lg-10">
                                               <form:input path="shop_name" size="30" id="sshopname" cssStyle="width: 20%; float: left; margin-right: 10px;" cssClass="form-control"></form:input>
@@ -243,7 +244,7 @@
                                           </div>
                                       </div>
                                       
-                                      <div class="form-group">
+                                      <div class="form-group"  style="font-family: '210 나무고딕' ">
 	                                      <label for="cadr" class="control-label col-lg-2">주소 <span class="required">*</span></label>
 	                                      <div class="col-lg-10" >
 	                                     	    <input style="display: none" class="form-control2 showc" type="text" id="sample4_postcode1_1" name="adr1_1">
@@ -272,21 +273,22 @@
 	                                      </div>
                                       </div>
                                       
-                                      <div class="form-group">
+                                      <div class="form-group"  style="font-family: '210 나무고딕' ">
                                           <div class="col-lg-offset-2 col-lg-10">
                                               <button class="btn btn-primary" type="button" onclick="javasript:gojoin()">Save</button>
                                               <button class="btn btn-default" type="button" onclick="javasript:goCanel()">Cancel</button>
                                           </div>
                                       </div>
+                                      
 								</form:form>
                               </div>
                           </div>
+                          </div>
                       </section>
+                      </section>
+                      
                   </div>
               </div>
-              </div>
-              </div>
-              </section>
-              </section>
+              
               </body>
 </html>
