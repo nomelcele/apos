@@ -194,5 +194,9 @@ public class ShopDao {
 	}
 	public void fileinsert2(ShopVO vo){
 		 ss.update("shop.fileinsert2",vo);
-}
+	}
+	// Check Crnum
+	public int chkcrnum(int key_crnum){
+		return ss.selectOne("shop.chkcrnum",key_crnum);
+	}
 }
