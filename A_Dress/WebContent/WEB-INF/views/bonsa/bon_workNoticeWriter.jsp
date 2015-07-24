@@ -47,7 +47,7 @@
                                           <input type="hidden" name="url" id="url" value="">      
                                               <div class="form-group">
                                                   <div class="col-sm-10">
-                                              	<div style="font-size: 15px;">제목:
+                                              	<div style="font-size: 14px; font-family: '210 나무고딕' ">제목:
 														<form:input path="title" size="30" id="title"  autocomplete="off"/>
 														<form:errors path="title" cssClass="error"/>
                                               	</div>
