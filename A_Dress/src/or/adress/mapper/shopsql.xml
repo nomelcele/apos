@@ -112,4 +112,8 @@ select shop_name,shop_tel,shop_master,shop_mail,shop_adr from shop where shop_nu
 	update shop set shop_master=#{shop_master},shop_tel=#{shop_tel},shop_mail=#{shop_mail} where shop_num=#{shop_num}
 	</update>
 	
+	<!-- Check Crnum -->
+	<select id="chkcrnum" parameterType="int" resultType="int">
+	select count(*) from hotkey where key_crnum=#{key_crnum}
+	</select>
 </mapper>
