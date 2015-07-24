@@ -300,7 +300,7 @@
 
 		$('#submit_button').click(
 				function() {
-
+					
 					if (idchk == true) {
 						if (pwdchk == true) {
 							if (($('#bon_tel1').val().length < 1)
@@ -312,8 +312,9 @@
 											.getElementById('bon_tel2').value))||(!regType1.test(document
 													.getElementById('bon_tel3').value))) {
 								alert('전화번호에는 숫자만 입력해주세요');
-							}else  if(($('#tel1').val().length < 3)	|| ($('#tel2').val().length < 3)	|| ($('#tel3').val().length < 4)) {
-								alert("전화번호를 확인해주세요.");
+							}else  if(($('#bon_tel1').val().length < 3)	|| ($('#bon_tel2').val().length < 4)	|| ($('#bon_tel3').val().length < 4)) {
+								alert("전화번호가 너무 짧습니다.");
+								return false;
 							} else {
 								$('#bon_tel').val(
 										$('#bon_tel1').val() + "-"
@@ -399,11 +400,7 @@
 										</div>
 										<%-- 연락처 --%>
 										<div class="form-group " style="font-family: '210 나무고딕'">
-											<span style="display: block">연락처 :</span> <select
-												style="width: 20%" class="form-control">
-												<option>KT</option>
-												<option>LG</option>
-											</select>- <input path="bon_tel1" style="width: 23%"
+											<span style="display: block">연락처 :</span> <input path="bon_tel1" style="width: 23%"
 												class="form-control" id="bon_tel1" maxlength="3" type="text" />-
 											<input style="width: 23%" class="form-control" id="bon_tel2"
 												maxlength="4" type="text" />- <input style="width: 23%"
