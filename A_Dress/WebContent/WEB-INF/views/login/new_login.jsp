@@ -107,7 +107,7 @@
                    },
                    success: function(data) {
                     if(data.trim() == "true"){
-                    	alert("success!")
+                    	alert("success!");
                     	$('#checkhot').submit();
                     }else{
                     	alert("입력된 정보가 잘 못 되었습니다.")
