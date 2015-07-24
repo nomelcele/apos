@@ -218,7 +218,7 @@
 					<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">회원 가입</h4>
+					<h4 class="modal-title"style="font-weight: bold; font-family: '나눔바른고딕체 Light'">List</h4>
 				</div>
 				<div >
 				<!-- body -->
@@ -228,11 +228,11 @@
 						
 						
 						<div class="modal-body2" style="font-family: '210 나무고딕' ">
-							<input type="button" value="hotkey" class="form-control4 block" id="hotkey" name="hotkey" placeholder="hotkey" autofocus>
+							<input type="button" value="HotKey 발급" class="form-control4 block" id="hotkey" name="hotkey" autofocus>
 						</div>
 						
 						<div class="modal-body2" style="font-family: '210 나무고딕' ">
-						<input type="button" value="join" class="form-control4 block" id="join" name="join" placeholder="hotkey" autofocus>
+						<input type="button" value="회원 가입" class="form-control4 block" id="join" name="join" autofocus>
 						</div>
 						
 						
@@ -254,7 +254,7 @@
 					<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕'">회원 가입</h4>
+					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕'">[HotKey] 발급 요청</h4>
 				</div>
 			<div>
 			
@@ -294,7 +294,7 @@
 					<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕">회원 가입</h4>
+					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕">[Hotkey] 인증</h4>
 				</div>
 				<div >
 				<!-- body -->
@@ -367,7 +367,7 @@
 				<!-- 닫기(x) 버튼 -->
 					<button type="button" class="close" data-dismiss="modal">×</button>
 					<!-- header title -->
-					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕'">회원 가입</h4>
+					<h4 class="modal-title"style="font-weight: bold; font-family: '210 나무고딕'">[ID/PWD]  찾기 </h4>
 				</div>
 				<div>
 				<!-- body -->
