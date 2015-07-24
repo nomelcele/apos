@@ -13,12 +13,12 @@ private String shop_sname,shop_sposition,shop_stel,shop_name; -->
  	<select id="get_list" resultType="staffvo" parameterType="String">
  		select a.staff_num staff_num,a.staff_name staff_name,a.staff_tel staff_tel ,
  		s.shop_name shop_sname,a.staff_position  staff_position from staff a , 
- 		shop s where s.shop_name like '%'||#{shop_name}||'%'
+ 		shop s where s.shop_name like '%'||#{shop_name}||'%' and a.staff_shopnum = s.shop_num
  	</select>
  	<select id="get_totallist" resultType="staffvo">
  	    select a.staff_num staff_num,a.staff_name staff_name,a.staff_tel staff_tel ,
  		s.shop_name shop_sname,a.staff_position  staff_position from staff a , 
- 		shop s
+ 		shop s where a.staff_shopnum = s.shop_num
  	</select>
  	<insert id="inset_mem" parameterType="Hashmap" >
  		insert into member values(member_seq.nextval,#{mem_name},#{mem_tel},#{mem_post},#{mem_addr},#{mem_deaddr},0,sysdate,1,#{mem_email})
