@@ -40,6 +40,7 @@
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 	$(function() {
+		var crnumflag = false;
 		//모달창띄우기~~~~~~~~~~~~~~~~
 		$('#hotkey').click(function() {
 			$('#modal2').modal('hide');
@@ -57,7 +58,44 @@
 			$('#bon_bonjoinsubmit').submit();
 	});
 		//////////////////////////////////
+		$('#key_crnum').keyup(function(){
+			if($('#key_crnum').val().length < 6){
+				$('#targetCRNUM').hide();
+			}else{
+				$('#targetCRNUM').show();
+				 $.ajax({
+	                 url: "crnumchk",
+	                 type: "POST",
+	                 data : {
+	                	 key_crnum : $('#key_crnum').val()
+	                 },
+	                 success: function(data) {
+		                  if(data.trim() == "true"){
+		                	 // 존재할때
+		                	    crnumflag = false;
+		                	 	$('#targetCRNUM').css("color","red");
+								$('#targetCRNUM').text("사용하실수 없는 사업자 번호입니다.");
+		                  }else{
+		                	  //없을때
+		                	    crnumflag = true;
+		                	  	$('#targetCRNUM').css("color","green");
+		                		$('#targetCRNUM').text("사용하실수 있는 사업자번호입니다.")
+		                  }
+	                 },
+	                 error: function(a, b) {
+	                     alert("Request: " + JSON.stringify(a));
+	                 }
+	             });
+			}
+		});
 		
+		$('#requesthotBtn').click(function(){
+			if(crnumflag==true){
+				$('#requesthot').submit();
+			}else if(crnumflag ==false){
+				alert("사업자번호를 확인해주세요");
+			}
+		});
 		$('#nextJoinBtn').click(function(){
             $.ajax({
                    url: "NCRHOTcheck",
@@ -80,7 +118,7 @@
                    }
                });
 		});
-
+		
 		// ID/PWD 찾기 버튼- 모달열기
 		$('#find').click(function() {
 			$('#find_modal').modal('show');
@@ -265,15 +303,18 @@
 						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">성 명 :</span>
 							<input class="form-control" id="key_name" name="key_name" type="text" required /></div>
 						<%-- 사업자번호 --%>
-						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">사업자번호 :</span>
-							<input class="form-control" id="key_crnum" name="key_crnum" type="text" required /></div>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">사업자번호 : (6~10자리)</span>
+							<input class="form-control" id="key_crnum" name="key_crnum" type="text" required />
+							<div id="targetCRNUM"></div>
+						</div>
+							
 						<%-- 이메일 --%>
 						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">e-mail :</span>
 							<input class="form-control" id="key_email" name="key_email" type="text" required /></div>
 						
 						<!-- Footer -->
 						<div class="modal-footer" >
-							<button type="submit" class="btn btn-default" >요청</button>
+								<input type="button" class="btn btn-default" value="요청" id="requesthotBtn">
 						</div>
 				</form>
 				
@@ -303,7 +344,7 @@
 						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">e-mail :</span>
 							<input type="text" class="form-control4 block" id="email" name="email"  placeholder="" autofocus>
 						</div>
-						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">사업자번호:</span>
+						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">사업자번호:(6~10자리)</span>
 							<input type="text" class="form-control4 block" id="crnum"name="crnum" placeholder=""  autofocus>
 						</div>
 						<div class="modal-body2"><span style="display: block; font-family: '210 나무고딕'">hotkey :</span>
