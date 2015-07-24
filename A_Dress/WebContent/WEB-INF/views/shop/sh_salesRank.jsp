@@ -177,7 +177,7 @@
 				<h3 class="page-header"
 					style="font-family: '210 나무고딕'; color: black;">
 					<span><img src="img/sales.ico"
-						style="width: 17pt; height: 15pt;"></span>기간별 매출현황
+						style="width: 17pt; height: 15pt;"></span>기간별 판매 현황
 				</h3>
 
 				<form action="*.apos" id="otsearch" method="post"
