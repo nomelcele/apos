@@ -7,6 +7,8 @@
 <script src="resources/js/json2.js"></script>
 <script src="resources/js/suggestMem_pk.js"></script>
 <script>
+	//자바 스크립트 정규표현식
+	var regType1 = /^[0-9]*$/;
 	var price = 0;
 	var i = 0;
 	var j = 0;
@@ -24,31 +26,39 @@
 		}
 	}
 	function insertproduct(pcode, psize, pamount, pprice, a, psalerate) {
-		//i++;
-		j++;
-		if(psalerate != 0){
-			pprice = pprice*((100-psalerate)*0.01)
+		if(document
+				.getElementById('p_num'+a).value != "" && document
+				.getElementById('p_num'+a).value <= document
+				.getElementById('p_orinum'+a).value ){
+			//i++;
+			j++;
+			if(psalerate != 0){
+				pprice = pprice*((100-psalerate)*0.01)
+			}
+			var t = $('#p_num' + a).val();
+			price = price + (t * pprice);
+			var str = "<tr><td>" + j + "</td>" + "<td>" + pcode + "</td>" + "<td>"
+					+ psize + "</td>" + "<td>" + t + "</td>" + "<td>"
+					+ (t * pprice) + "</td><tr>"
+			var str2 = "<input type='hidden' name='fcode"+j+"' value='"+pcode+"'>";
+			var str3 = "<input type='hidden' name='fcash" + j + "' value='"
+					+ (t * pprice) + "'>";
+			var str4 = "<input type='hidden' name='fmany"+j+"' value='"+t+"'>";
+			var str9 = "<input type='hidden' name='fsize"+j+"' value='"+psize+"'>";
+			console.log(str);
+			console.log(str2);
+			console.log("셋 : " + j);
+			document.getElementById('ftarget').innerHTML += str;
+			document.getElementById('total').innerHTML = price;
+			////////////////////////////////////////////////
+			document.getElementById('final').innerHTML += str2;
+			document.getElementById('final').innerHTML += str3;
+			document.getElementById('final').innerHTML += str4;
+			document.getElementById('final').innerHTML += str9;
+		}else{
+			alert("잘못된 값 입니다. 다시 입력하세요")
 		}
-		var t = $('#p_num' + a).val();
-		price = price + (t * pprice);
-		var str = "<tr><td>" + j + "</td>" + "<td>" + pcode + "</td>" + "<td>"
-				+ psize + "</td>" + "<td>" + t + "</td>" + "<td>"
-				+ (t * pprice) + "</td><tr>"
-		var str2 = "<input type='hidden' name='fcode"+j+"' value='"+pcode+"'>";
-		var str3 = "<input type='hidden' name='fcash" + j + "' value='"
-				+ (t * pprice) + "'>";
-		var str4 = "<input type='hidden' name='fmany"+j+"' value='"+t+"'>";
-		var str9 = "<input type='hidden' name='fsize"+j+"' value='"+psize+"'>";
-		console.log(str);
-		console.log(str2);
-		console.log("셋 : " + j);
-		document.getElementById('ftarget').innerHTML += str;
-		document.getElementById('total').innerHTML = price;
-		////////////////////////////////////////////////
-		document.getElementById('final').innerHTML += str2;
-		document.getElementById('final').innerHTML += str3;
-		document.getElementById('final').innerHTML += str4;
-		document.getElementById('final').innerHTML += str9;
+		
 	}
 	function gogo() {
 		var temp1 = parseInt(mile, 10);
