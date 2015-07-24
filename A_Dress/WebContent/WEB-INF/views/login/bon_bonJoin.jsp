@@ -399,7 +399,6 @@
 										<div class="form-group " style="font-family: '210 나무고딕'">
 											<span style="display: block">연락처 :</span> <select
 												style="width: 20%" class="form-control">
-												<option>SKT</option>
 												<option>KT</option>
 												<option>LG</option>
 											</select>- <input path="bon_tel1" style="width: 23%"
