@@ -13,11 +13,13 @@ public class ShopVO {
 	// ¸ÅÀåÀÌ °¡ÀÔ ÇÒ¶§ ÇÊ¿äÇÑ ¿ä¼Ò
 	// name, tel, adr, date, mail, master img, crnum
 	// Valid : ÀÌ¸§, »ç¾÷ÀÚ¹øÈ£, ÀÌ¸ŞÀÏ, ¸ÅÀåÀÌ¸§
-	@NotEmpty(message = "NameÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä")
+	@NotEmpty(message = "ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä")
+	@Pattern(regexp=".*[¤¡-ÆR]", message="ÇÑ±Û¸¸ »ç¿ë°¡´ÉÇÕ´Ï´Ù")
 	private String shop_master;
 	//@DecimalMin(value="100000",message="")
 	
 	@NotEmpty(message = "ShopNameÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä")
+	@Pattern(regexp=".*[¤¡-ÆR]", message="ÇÑ±Û¸¸ »ç¿ë°¡´ÉÇÕ´Ï´Ù")
 	private String shop_name; 
 //	@Email(message = "¿Ã¹Ù¸¥ ÀÌ¸ŞÀÏ Çü½ÄÀÌ ¾Æ´Õ´Ï´Ù.")
 	@NotEmpty(message = "ÀÌ¸ŞÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä.")
