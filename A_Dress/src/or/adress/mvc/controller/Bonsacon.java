@@ -195,7 +195,11 @@ public class Bonsacon {
 			System.out.println("----------------------------");
 			System.out.println("파일명"+filename);
 			System.out.println(content);
-			vo.setContent(content);
+			if(content == null){
+				vo.setContent(" ");
+			}else{
+				vo.setContent(content);
+			}
 			vo.setPath(filename);
 			System.out.println("인서트전");
 			bdao.insert(vo);
