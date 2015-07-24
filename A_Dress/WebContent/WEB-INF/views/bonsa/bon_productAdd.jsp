@@ -143,7 +143,7 @@ var procode = false;
 
 				<section class="panel">
 					<div class="panel-body">
-						<div class="form" style="margin-left: -20%">
+						<div class="form" style="">
 
 							<button class="form-control6" type="button"
 								onclick="javascript:open_win()" id="btn1" name="btn1"
@@ -192,7 +192,7 @@ var procode = false;
 									</div>
 
 								</div>
-			<div style="margin-left: 4%">
+			
 								<div class="form-group" style="margin-left: 18%    ">
 									<div style="float: left; width: 30%; font-family:'210 나무고딕'">
 										<span>사진추가</span> <input type="file" id="pimg" name="pimg"
@@ -215,7 +215,7 @@ var procode = false;
 											style="width: 100%;">
 
 									</div>
-			</div>
+			
 									<div style="float: left; width: 40%;">
 										<div
 											style="width: 80%; height: 100%; border-color:#FFFFFF; margin-top: 10px; margin-bottom: 10px; margin-left: 30%;"
