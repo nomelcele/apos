@@ -106,17 +106,15 @@ function telaction(){
 											<tr>
 												<th  style="font-family: '210 나무고딕'; color: black; "><img src = "img/num.ico" style="width: 15px; height: 10px;" >직원 번호</th>
 												<th style="font-family: '210 나무고딕'; color: black; "><img src = "img/man.ico" style="width: 15px; height: 10px;" >이름</th>
-												<th style="font-family: '210 나무고딕'; color: black; "><img src = "img/gir.ico" style="width: 15px; height: 15px;" >직급</th>
 												<th style="font-family: '210 나무고딕'; color: black; "><img src = "img/shopimg.ico" style="width: 15px; height: 10px;" >지점</th>
 												<th style="font-family: '210 나무고딕'; color: black; "><img src = "img/tel.ico" style="width: 15px; height: 10px;" >연락처</th>
 											</tr>
-										</thead>
+										</thead>	
 										<tbody  style="font-family: '210 나무고딕' ">
 											<c:forEach var="sList" items="${list}">
 												<tr>
 													<td>${sList.staff_num}</td>
 													<td>${sList.staff_name}</td>
-													<td>${sList.staff_position}</td>
 													<td>${sList.shop_sname}</td>
 													<td>${sList.staff_tel}</td>
 												</tr>
