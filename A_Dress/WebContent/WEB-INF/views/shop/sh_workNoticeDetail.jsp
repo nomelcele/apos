@@ -29,28 +29,28 @@
 					<div class="panel-body">
 						<!--                   <form class="form-horizontal " method="post"> -->
 
-						<div class="form-group" style="font-family: '210 나무고딕'">
+						<div class="form-group" style="font-family: '210 나무고딕'; font-size: 14px;" >
 							<label class="col-sm-2 control-label">제목</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" value="${v.title}"
 									readonly="readonly">
 							</div>
 						</div>
-						<div class="form-group" style="font-family: '210 나무고딕'">
+						<div class="form-group" style="font-family: '210 나무고딕' ; font-size: 14px;">
 							<label class="col-sm-2 control-label">날짜</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control" value="${v.regdate}"
 									readonly="readonly">
 							</div>
 						</div>
-						<div class="form-group" style="font-family: '210 나무고딕'">
+						<div class="form-group" style="font-family: '210 나무고딕' ; font-size: 14px;">
 							<label class="col-sm-2 control-label">작성자</label>
 							<div class="col-sm-10">
 								<input type="text" class="form-control round-input"
 									value="${v.writer}" readonly="readonly">
 							</div>
 						</div>
-						<div class="form-group" style="font-family: '210 나무고딕'">
+						<div class="form-group" style="font-family: '210 나무고딕' ; font-size: 14px;">
 							<label class="col-sm-2 control-label">내용</label>
 							<div class="col-lg-10">
 								<textarea name="" id="" class="form-control7" cols="30" rows="5"
