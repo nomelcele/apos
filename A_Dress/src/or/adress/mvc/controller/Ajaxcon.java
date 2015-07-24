@@ -611,7 +611,7 @@ public class Ajaxcon {
 		String chat = "";
 		try {
 			u_id = URLDecoder.decode(
-					session.getAttribute("shop_id").toString(), "utf-8");
+					session.getAttribute("shop_name").toString(), "utf-8");
 			chat = URLDecoder.decode(request.getParameter("chat"), "utf-8");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
@@ -695,7 +695,7 @@ public class Ajaxcon {
 
 		// response.setHeader("cache-control", "no-cache");
 		// response.setContentType("text/event-stream");
-		String id = (String) session.getAttribute("shop_id");
+		String id = (String) session.getAttribute("shop_name");
 		List<ChaVO> list = chdao.getList();
 		StringBuffer outs = new StringBuffer();
 		// String id = request.getRemoteAddr();
