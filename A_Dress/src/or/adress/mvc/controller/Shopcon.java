@@ -143,7 +143,7 @@ public class Shopcon {
 	@RequestMapping(value = "/sh_commdelete")
 	public ModelAndView bon_commdelete(int no, int bo_num, String writer,
 			int page, HttpSession session) {
-		String sh_id = session.getAttribute("sh_id").toString();
+		String sh_id = session.getAttribute("shop_id").toString();
 
 		if (sh_id.equals(writer)) {
 
