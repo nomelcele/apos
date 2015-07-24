@@ -1,11 +1,14 @@
 package vo;
 
+import javax.validation.constraints.Pattern;
+
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 // ÄÃ·³¸í ÀÏÄ¡!!
 public class MemVO {
 	@NotEmpty(message="ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.")
+	@Pattern(regexp=".*[¤¡-ÆR]", message="ÇÑ±Û¸¸ »ç¿ë°¡´ÉÇÕ´Ï´Ù")
 	private String mem_name;
 	@NotEmpty(message="E-MailÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.")
 	@Email(message="E-Mail Çü½ÄÀÌ ¾Æ´Õ´Ï´Ù. ´Ù½Ã ÀÔ·ÂÇØÁÖ¼¼¿ä.")
