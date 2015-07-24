@@ -189,15 +189,15 @@
 						<table class="table table-striped table-advance table-hover">
 							<thead  style="font-family: '210 나무고딕' ">
 								<tr>
-									<th style="color: black;"><img src = "img/num.ico" style="width: 15px; height: 15px;" >고객 번호</th>
-									<th style="color: black;"><img src = "img/man.ico" style="width: 15px; height: 15px;" >고객 성명</th>
-									<th style="color: black;"><img src = "img/home.jpg" style="width: 15px; height: 15px;" >주소</th>
-									<th style="color: black;"><img src = "img/tel.ico" style="width: 15px; height: 15px;" >전화번호</th>
-									<th style="color: black;"><img src = "img/m.ico" style="width: 15px; height: 15px;" >마일리지</th>
-									<th style="color: black;"><img src = "img/ck.ico" style="width: 15px; height: 15px;" >선택</th>
+									<th style="color: black;"><i class="icon_profile"></i> 고객 번호</th>
+									<th style="color: black;"><i class="icon_calendar"></i> 고객 성명</th>
+									<th style="color: black;"><i class="icon_pin_alt"></i> 주소</th>
+									<th style="color: black;"><i class="icon_mobile"></i> 전화번호</th>
+									<th style="color: black;"><i class="icon_profile"></i> 마일리지</th>
+									<th style="color: black;"><i class="icon_cogs"></i> 선택</th>
 								</tr>
 							</thead>
-							<tbody id="custarget">
+							<tbody id="custarget"  style="font-family: '210 나무고딕'; " >
 								<%--   <c:forEach var="stList" items="${list}">
                               <tr>
                                  <td>${stList.mem_num}</td>										
@@ -229,7 +229,7 @@
 
 
 		<div class="row">
-			<div class="col-lg-12" style="width: 105%">
+			<div class="col-lg-12" style="width: 125%;margin-top: 1%;">
 				<section class="panel">
 					<div class="row" style="font-size: 15px; margin-top: -3%" >
 						<div class="col-lg-12">
@@ -264,7 +264,7 @@
 										<th style="font-family: '210 나무고딕'; color: black; ">선택</th>
 									</tr>
 								</thead>
-								<tbody id="target2">
+								<tbody id="target2" >
 
 									<%-- 반복 
 									 <c:forEach var="ptlist" items="${plist}">
