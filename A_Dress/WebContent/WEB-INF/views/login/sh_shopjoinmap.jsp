@@ -249,11 +249,16 @@
     	    	// 지도에 원을 표시합니다 
     	    	circle.setMap(map); 
     	      // 인포윈도우로 장소에 대한 설명을 표시합니다
-    	      var infowindow = new daum.maps.InfoWindow({
-    	          content: '<div style="padding:5px;">여기</div>'
-    	      });
+    	     var content = '<div class ="label"><span class="left"></span><span class="center" style="color:black;">HERE!</span><span class="right"></span></div>';
+    	     var customOverlay = new daum.maps.CustomOverlay({
+			    position: moveLatLon,
+			    content: content   
+			});
+			
+			// 커스텀 오버레이를 지도에 표시합니다
     	      map.setCenter(moveLatLon);
-    	      infowindow.open(map, marker);
+			  customOverlay.setMap(map);
+    	      //infowindow.open(map, marker);
     	  } 
     	});
 
