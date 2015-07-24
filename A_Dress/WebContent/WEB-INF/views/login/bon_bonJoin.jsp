@@ -312,6 +312,8 @@
 											.getElementById('bon_tel2').value))||(!regType1.test(document
 													.getElementById('bon_tel3').value))) {
 								alert('전화번호에는 숫자만 입력해주세요');
+							}else  if(($('#tel1').val().length < 3)	|| ($('#tel2').val().length < 3)	|| ($('#tel3').val().length < 4)) {
+								alert("전화번호를 확인해주세요.");
 							} else {
 								$('#bon_tel').val(
 										$('#bon_tel1').val() + "-"
