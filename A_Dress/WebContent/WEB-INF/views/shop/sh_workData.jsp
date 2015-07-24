@@ -5,7 +5,7 @@
 <!-- 매장의업무관리- 출결 페이지입니다. -->
 <script>
 	function worklogin(num, name) {
-		alert("직원번호 "+num+"번 " + name+"님이 출근하셨습니다.");
+		//alert("직원번호 "+num+"번 " + name+"님이 출근하셨습니다.");
 		$.ajax({
 			url : "sh_ajax_sh_workData",
 			type : "post",
@@ -17,9 +17,9 @@
 
 				str = data.trim();
 				if (str == 0) {
-					alert("출근 처리 되었습니다.");
+					alert("직원번호 "+num+"번 " + name+"님 출근 처리 되었습니다.");
 				} else if (str == -1) {
-					alert("중복 출근 error입니다. ")
+					alert("직원번호 "+num+"번 " + name+"님 중복 출근 error입니다. ")
 				} else {
 					alert("이미" + str + "에 출근처리 했습니다");
 				}
@@ -28,7 +28,7 @@
 		});
 	}
 	function worklogout(num) {
-		alert("직원번호 "+num+"번 " + name+"님이 퇴근하셨습니다.");
+		//alert("직원번호 "+num+"번 " + name+"님이 퇴근하셨습니다.");
 					$.ajax({
 						url : "sh_ajax_sh_workDataend",
 						type : "post",
@@ -40,11 +40,11 @@
 
 							str = data.trim();
 							if(str==0){
-								alert("출근 처리를 먼저하세요")
+								alert("직원번호 "+num+"번 님 출근 처리를 먼저하세요")
 							}else if(str==-1){
-							 	alert("중복 출근 error입니다. ")
+							 	alert("직원번호 "+num+"번 님 중복 출근 error입니다. ")
 							}else{
-								alert("퇴근 처리 되었습니다.");
+								alert("직원번호 "+num+"번 님 퇴근 처리 되었습니다.");
 							}
 						}
 
