@@ -212,15 +212,14 @@
                                       <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cCrnum" class="control-label col-lg-2">사업자 번호 <span class="required">*</span></label>
                                           <div class="col-lg-10">
-	                                              <input type="text" name="shop_crnum" id="scrnum" style="width: 40%; float: left; margin-right: 10px;" class="form-control" minlength="6" maxlength="10" autocomplete="off"> 
+	                                              <input type="text" name="shop_crnum" id="scrnum" style="width: 40%; float: left; margin-right: 10px;" class="form-control" value="${hotkey.key_crnum}" readonly="readonly"> 
                                           </div>
                                       </div>
                                       
                                       <div class="form-group "  style="font-family: '210 나무고딕' ">
                                           <label for="cEmail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
                                           <div class="col-lg-10">
-                                              	<form:input path="shop_mail" size="30" id="smail" cssStyle="width: 40%" cssClass="form-control" autocomplete="off"></form:input>
-												<form:errors path="shop_mail" cssClass="error"></form:errors>
+                                              	<input type="text" name="shop_mail"  id="smail" style="width: 40%" class="form-control" readonly="readonly" value="${hotkey.key_email}">
                                           </div>
                                       </div>
                                       
