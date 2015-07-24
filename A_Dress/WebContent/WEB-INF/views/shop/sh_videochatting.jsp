@@ -24,8 +24,7 @@ video {
 								<div id="localVideo" style="float: left; width: 48%;margin: 1%"></div>
 								<div id="remoteVideo" style="float: left; width: 48%;margin: 1%"></div>
 							</div>
-							<button onclick="exe()"  style="font-family: '210 나무고딕' ">click</button>
-							${test }
+							
 						</div>
 
 					</div>
