@@ -1,5 +1,6 @@
 package vo;
 
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
@@ -13,6 +14,7 @@ public class BonsaVO {
 	
 	// Valid °É¾î¾ßÇÏ´Â °Íµé
 	@NotEmpty(message = "ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä.")
+	@Pattern(regexp=".*[¤¡-ÆR]", message="ÇÑ±Û¸¸ »ç¿ë°¡´ÉÇÕ´Ï´Ù")
 	private String bon_name;
 	@NotEmpty(message = "¾ÆÀÌµð¸¦ ÀÔ·ÂÇÏ¼¼¿ä.")
 	@Size(min = 4, max = 8, message = "ID´Â 4~8ÀÚ¸®·Î ÀÔ·ÂÇÏ¼¼¿ä")
