@@ -8368,6 +8368,8 @@ to_date('2015-06-28/13:00','yyyy-MM-dd/hh24:mi')
 
 
 
+insert into croom values(croot_seq.nextVal,'bon_admin','æ»≥Á«œººø‰',sysdate,0,'A-4.JPG');
+
 
 
 commit;
