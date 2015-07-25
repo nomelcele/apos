@@ -661,7 +661,7 @@ public class Ajaxcon {
 						.append("\"style=\"width:40px; height: 40px;\" alt=\"\"/></div><div class=\"chat-content\"><div class=\"chat-meta\">");
 				outs.append(e.getCdate());
 				outs.append("<span class=\"pull-right\">");
-				// outs.append(e.getU_id());
+				outs.append(e.getU_id());
 				outs.append("</span></div>");
 				outs.append(e.getChat());
 				outs.append("<div class=\"clearfix\"></div></div></li>");
