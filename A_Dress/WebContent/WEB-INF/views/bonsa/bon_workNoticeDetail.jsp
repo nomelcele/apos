@@ -72,9 +72,11 @@
 							<label class="col-sm-2 control-label"
 								style="font-family: '210 나무고딕' ; font-size: 14px;">내용</label>
 							<div class="col-lg-10">
-								<textarea name="" id="" class="form-control7" cols="30" rows="5"
-									style="min-width: 350px; max-width: 700px; height: 100px; margin-left: 5.7%"
-									readonly="readonly">${v.content}</textarea>
+<!-- 								<textarea name="" id="" class="form-control7" cols="30" rows="5" -->
+<!-- 									style="min-width: 350px; max-width: 700px; height: 100px; margin-left: 5.7%" -->
+<!-- 									readonly="readonly"> -->
+									${v.content}
+<!-- 									</textarea> -->
 							</div>
 							<div class="col-lg-10">
 								<%-- 이미지 크기 --%>

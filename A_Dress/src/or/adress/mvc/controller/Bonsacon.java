@@ -168,39 +168,41 @@ public class Bonsacon {
 			String s = vo.getContent();
 			String filename = "";
 			String content = "";
-			String[] str = s.split(">");
-			for (String e : str) {
-				System.out.println(e);
-				if (!e.startsWith("<")) {
-					System.out.println("<가아닌가    " + e);
-					try {
-						content = e.substring(0, e.indexOf("<"));
-						break;
-					} catch (Exception ee) {
-						ee.printStackTrace();
-						break;
-					}
-
-				}
-			}
-			String[] ff = str[1].split("\"");
-
-			System.out.println("---------------------------------------");
-			for (String e : ff) {
-				System.out.println(e);
-				if (e.startsWith("upload")) {
-					filename = e.substring(7);
-				}
-			}
-			System.out.println("----------------------------");
-			System.out.println("파일명"+filename);
-			System.out.println(content);
-			if(content == null){
-				vo.setContent(" ");
-			}else{
-				vo.setContent(content);
-			}
-			vo.setPath(filename);
+//			String[] str = s.split(">");
+//			for (String e : str) {
+//				System.out.println(e);
+//				if (!e.startsWith("<")) {
+//					System.out.println("<가아닌가    " + e);
+//					try {
+//						content = e.substring(0, e.indexOf("<"));
+//						break;
+//					} catch (Exception ee) {
+//						ee.printStackTrace();
+//						break;
+//					}
+//
+//				}
+//			}
+//			String[] ff = str[1].split("\"");
+//
+//			System.out.println("---------------------------------------");
+//			for (String e : ff) {
+//				System.out.println(e);
+//				if (e.startsWith("upload")) {
+//					filename = e.substring(7);
+//				}
+//			}
+//			System.out.println("----------------------------");
+//			System.out.println("파일명"+filename);
+//			System.out.println(content);
+//			if(content == null){
+//				vo.setContent(" ");
+//			}else{
+//				vo.setContent(content);
+//			}
+//			vo.setPath(filename);
+//			MultipartFile file = vo.getUpload();
+//			vo.setPath(file.getOriginalFilename());
 			System.out.println("인서트전");
 			bdao.insert(vo);
 			System.out.println("인서트후");
