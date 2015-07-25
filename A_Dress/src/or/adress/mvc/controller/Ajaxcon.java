@@ -1198,10 +1198,10 @@ public class Ajaxcon {
 			bodyPart.setText(body);
 			bodyPart.setContent(
 					"<html><body><div style=\"z-index: 1; position: relative; margin-left: 45px;\">"
-							+ "<img src='http://localhost/A_Dress/product/mail.jpg' style=\"width: 100%;\">"
-							+ "<table style=\"margin-top:-100%\"><tr><td>"
+							+ "<img src='http://localhost/A_Dress/product/mail2.jpg' style=\"width: 80%;\">"
+							+ "<table style=\"margin-top:-35%; font-family: '210 ≥™π´∞ÌµÒ'\"><tr><td>"
 							+ name
-							+ "¥‘"
+							+ "¥‘ "
 							+ "æ»≥Á«œººø‰</td></tr><tr><td>∏¬√„ √ﬂ√µ¿Ã µµ¬¯«ﬂΩ¿¥œ¥Ÿ.</td></tr>"
 							+ "<tr><td>"
 							+ res

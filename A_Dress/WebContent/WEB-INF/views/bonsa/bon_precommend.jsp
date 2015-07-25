@@ -49,7 +49,7 @@
 	//메일 전송
 	function pro_chkmail(mail, name) {
 		var res;
-		res = "상품 이름 :" + $('#pre_pro_name').val() + "\n\r" + "상품 가격 :"
+		res = "상품 이름 :" + $('#pre_pro_name').val() + "</td></tr><tr><td>" + "상품 가격 :"
 				+ $('#pre_pro_price').val() + "\n\r";
 		if (confirm(name + "님에게 " + $('#pre_pro_name').val() + "을 추천 하시겠습니까 ?") == true) { //확인
 			$.ajax({
