@@ -56,20 +56,12 @@
 						<div class="form-group"
 							style="font-family: '210 나무고딕'; font-size: 14px;">
 							<label class="col-sm-2 control-label">내용</label>
-							<div class="col-lg-10">
-								<textarea name="" id="" class="form-control7" cols="30" rows="5"
-									style="min-width: 350px; max-width: 700px; height: 100px; margin-left: 4%;"
-									readonly="readonly">${v.content}</textarea>
-							</div>
-							<div class="col-lg-10">
-								<%-- 이미지 크기 --%>
-								<c:set var="chkpath" value="upload/null" />
-								<c:if test="${v.path ne chkpath }">
-									<img src="${v.path}"
-										style="width: 60%; resize: none; margin-left: 18%; margin-top: 3%;">
-								</c:if>
-
-								<%--                          <img src="${v.path}" style="width: 350px; resize: none "> --%>
+							<div class="col-lg-10" style="margin-left: 16.5%;" class="form-control round-input">
+<!-- 								<textarea name="" id="" class="form-control7" cols="30" rows="5" -->
+<!-- 									style="min-width: 350px; max-width: 700px; height: 100px; margin-left: 5.7%" -->
+<!-- 									readonly="readonly"> -->
+									${v.content}
+<!-- 									</textarea> -->
 							</div>
 						</div>
 						<form action="sh_workNotice" method="post" id="listform">

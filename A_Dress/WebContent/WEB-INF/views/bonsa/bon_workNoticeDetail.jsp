@@ -68,10 +68,10 @@
 									value="${v.writer}" readonly="readonly">
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group" style="font-family: '210 나무고딕' ; font-size: 14px;">
 							<label class="col-sm-2 control-label"
-								style="font-family: '210 나무고딕' ; font-size: 14px;">내용</label>
-							<div class="col-lg-10">
+								>내용</label>
+							<div class="col-lg-10" style="margin-left: 16.5%;" class="form-control round-input">
 <!-- 								<textarea name="" id="" class="form-control7" cols="30" rows="5" -->
 <!-- 									style="min-width: 350px; max-width: 700px; height: 100px; margin-left: 5.7%" -->
 <!-- 									readonly="readonly"> -->

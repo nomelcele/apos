@@ -73,48 +73,50 @@ public class Ajaxcon {
 	private StaffDao sfdao;
 
 	// 성별 물건 검색 ajax
-			@RequestMapping(value = "sh_AjaxProductSearch")
-			public ModelAndView sh_AjaxProductSearch(String shop_num, String key) {
-				ModelAndView mav = new ModelAndView("ajax/sh_AjaxProductSearch");
+	@RequestMapping(value = "sh_AjaxProductSearch")
+	public ModelAndView sh_AjaxProductSearch(String shop_num, String key) {
+		ModelAndView mav = new ModelAndView("ajax/sh_AjaxProductSearch");
 
-				System.out.println("ajax Test");
-				System.out.println("=================");
-				System.out.println("shopNum:" + shop_num + "key:" + key);
-				HashMap<String, String> map = new HashMap<>();
-				map.put("pro_check", key);
-				map.put("shop_num", shop_num);
+		System.out.println("ajax Test");
+		System.out.println("=================");
+		System.out.println("shopNum:" + shop_num + "key:" + key);
+		HashMap<String, String> map = new HashMap<>();
+		map.put("pro_check", key);
+		map.put("shop_num", shop_num);
 
-				List<ProductVO> list = pdao.getListProductGender(map);
-				Iterator<ProductVO> it = list.iterator();
-				StringBuffer res = new StringBuffer();
-				// res.append("<tr>");
-				int i = 0;
-				while (it.hasNext()) {
-					i++;
-					ProductVO v = new ProductVO();
-					v = it.next();
-					res.append("<tr>");
-					res.append("<td>" + i + "</td>");
-					res.append("<td>").append(v.getPro_name()).append("</td>");
-					res.append("<td>").append(v.getPro_code()).append("</td>");
-					res.append("<td>").append(v.getSto_size()).append("</td>");
-					res.append("<td>").append(v.getSto_amount()).append("</td>");
-					res.append("<td>").append(v.getPro_price()).append("</td>");
-					res.append("<td>").append(v.getPro_salerate()).append("</td>");
-					
-					res.append("<td>");
-					res.append("<a href=\"javascript:open_win('product/"+v.getPro_img()+"')\">");
-					res.append("<img src='product/" + v.getPro_img()
-							+ "' style=\"width: 100px; cursor: hand; \"></a></td>");// 추후 세일추가
-					
-					
-					res.append("<td>");
-					res.append("<a href=\"javascript:open_win1('barcode/"+v.getPro_barcode()+"')\">");
-					res.append("<img src='barcode/" + v.getPro_barcode()
-							+ "' style=\"width: 100px;\"></a></td>");
-					res.append("</tr>");
+		List<ProductVO> list = pdao.getListProductGender(map);
+		Iterator<ProductVO> it = list.iterator();
+		StringBuffer res = new StringBuffer();
+		// res.append("<tr>");
+		int i = 0;
+		while (it.hasNext()) {
+			i++;
+			ProductVO v = new ProductVO();
+			v = it.next();
+			res.append("<tr>");
+			res.append("<td>" + i + "</td>");
+			res.append("<td>").append(v.getPro_name()).append("</td>");
+			res.append("<td>").append(v.getPro_code()).append("</td>");
+			res.append("<td>").append(v.getSto_size()).append("</td>");
+			res.append("<td>").append(v.getSto_amount()).append("</td>");
+			res.append("<td>").append(v.getPro_price()).append("</td>");
+			res.append("<td>").append(v.getPro_salerate()).append("</td>");
 
-				}
+			res.append("<td>");
+			res.append("<a href=\"javascript:open_win('product/"
+					+ v.getPro_img() + "')\">");
+			res.append("<img src='product/" + v.getPro_img()
+					+ "' style=\"width: 100px; cursor: hand; \"></a></td>");// 추후
+																			// 세일추가
+
+			res.append("<td>");
+			res.append("<a href=\"javascript:open_win1('barcode/"
+					+ v.getPro_barcode() + "')\">");
+			res.append("<img src='barcode/" + v.getPro_barcode()
+					+ "' style=\"width: 100px;\"></a></td>");
+			res.append("</tr>");
+
+		}
 
 		// res.append("</tr>");
 		String strString = res.toString();
@@ -178,19 +180,25 @@ public class Ajaxcon {
 			v = it.next();
 			res.append("<tr>");
 			res.append("<td>" + i + "</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getShop_name()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getPro_code()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getSto_size()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">")
+					.append(v.getShop_name()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">")
+					.append(v.getPro_code()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">")
+					.append(v.getSto_size()).append("</td>");
 			res.append("<td style=\"width:20%; font-family: '210 나무고딕'; \">")
 					.append("<input type=\"number\" style=\"width:100%;\" class=\"form-control\" id=\"p_num"
 							+ i
 							+ "\" value=\"1\" max=\""
 							+ v.getSto_amount()
 							+ "\">").append("</td>");
-			//res.append("<td style=\"font-family: '210 나무고딕'; \">").append("<input type=\"number\" id=\"p_orinum"+i+"\" readonly=\"readonly\" class=\"form-control\" value=\""+v.getSto_amount()+"\"").append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getSto_amount()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getPro_price()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">").append(v.getPro_salerate()).append("</td>");
+			// res.append("<td style=\"font-family: '210 나무고딕'; \">").append("<input type=\"number\" id=\"p_orinum"+i+"\" readonly=\"readonly\" class=\"form-control\" value=\""+v.getSto_amount()+"\"").append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">")
+					.append(v.getSto_amount()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">")
+					.append(v.getPro_price()).append("</td>");
+			res.append("<td style=\"font-family: '210 나무고딕'; \">")
+					.append(v.getPro_salerate()).append("</td>");
 			res.append("<td><img src='product/" + v.getPro_img()
 					+ "' style=\"width: 50px;\"></td>");// 추후 세일추가
 			res.append("<td><img src='barcode/" + v.getPro_barcode()
@@ -611,8 +619,8 @@ public class Ajaxcon {
 		String u_id = "";
 		String chat = "";
 		try {
-			u_id = URLDecoder.decode(
-					session.getAttribute("shop_name").toString(), "utf-8");
+			u_id = URLDecoder.decode(session.getAttribute("shop_name")
+					.toString(), "utf-8");
 			chat = URLDecoder.decode(request.getParameter("chat"), "utf-8");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
@@ -787,7 +795,7 @@ public class Ajaxcon {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
 
-			date.append("'"+v.getSell_date()).append("',");
+			date.append("'" + v.getSell_date()).append("',");
 			rescash.append(v.getSell_cash()).append(",");
 			resnum.append(v.getCount()).append(",");
 
@@ -795,10 +803,10 @@ public class Ajaxcon {
 		date.append("]");
 		rescash.append("]");
 		resnum.append("]");
-		String res = date.toString()+"@"+rescash.toString()+"@"+resnum.toString();
+		String res = date.toString() + "@" + rescash.toString() + "@"
+				+ resnum.toString();
 		System.out.println(res);
 
-		
 		mav.addObject("res", res);
 		return mav;
 	}
@@ -851,7 +859,7 @@ public class Ajaxcon {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
 
-			date.append("'"+v.getSell_date()).append("',");
+			date.append("'" + v.getSell_date()).append("',");
 			rescash.append(v.getSell_cash()).append(",");
 			resnum.append(v.getCount()).append(",");
 
@@ -859,7 +867,8 @@ public class Ajaxcon {
 		date.append("]");
 		rescash.append("]");
 		resnum.append("]");
-		String res = date.toString()+"@"+rescash.toString()+"@"+resnum.toString();
+		String res = date.toString() + "@" + rescash.toString() + "@"
+				+ resnum.toString();
 		System.out.println(res);
 
 		ModelAndView mav = new ModelAndView();
@@ -916,7 +925,7 @@ public class Ajaxcon {
 			SalesCheckVO v = new SalesCheckVO();
 			v = it.next();
 
-			date.append("'"+v.getSell_date()).append("',");
+			date.append("'" + v.getSell_date()).append("',");
 			rescash.append(v.getSell_cash()).append(",");
 			resnum.append(v.getCount()).append(",");
 
@@ -924,7 +933,8 @@ public class Ajaxcon {
 		date.append("]");
 		rescash.append("]");
 		resnum.append("]");
-		String res = date.toString()+"@"+rescash.toString()+"@"+resnum.toString();
+		String res = date.toString() + "@" + rescash.toString() + "@"
+				+ resnum.toString();
 		System.out.println(res);
 
 		ModelAndView mav = new ModelAndView();
@@ -1031,11 +1041,11 @@ public class Ajaxcon {
 		mav.addObject("excel_date", excel_date);
 		return mav;
 	}
-	
-	@RequestMapping(value="sh_excel2", method=RequestMethod.POST)
+
+	@RequestMapping(value = "sh_excel2", method = RequestMethod.POST)
 	public ModelAndView sh_excel2(int ex_staff_num, String ex_date_ps,
-			String ex_date_ps2, HttpSession session){
-		
+			String ex_date_ps2, HttpSession session) {
+
 		ModelAndView mav = new ModelAndView("sh_excel2");
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("staff_num", String.valueOf(ex_staff_num));
@@ -1186,11 +1196,20 @@ public class Ajaxcon {
 			// BodyPart를 생성
 			BodyPart bodyPart = new MimeBodyPart();
 			bodyPart.setText(body);
-			bodyPart.setContent("<h1>" + name + "\"님" + "안녕하세요~" + "</h1>"
-					+ "<h3>" + res + "</h3>"
-					+ "<img src='http://localhost/A_Dress/product/" + img
-					+ "' style=\"width: 100px;\">", "text/html; charset=EUC-KR");
-
+			bodyPart.setContent(
+					"<html><body><div style=\"z-index: 1; position: relative; margin-left: 45px;\">"
+							+ "<img src='http://localhost/A_Dress/product/mail.jpg' style=\"width: 100%;\">"
+							+ "<table style=\"margin-top:-100%\"><tr><td>"
+							+ name
+							+ "님"
+							+ "안녕하세요</td></tr><tr><td>맞춤 추천이 도착했습니다.</td></tr>"
+							+ "<tr><td>"
+							+ res
+							+ "</td></tr>"
+							+ "<tr><td><img src='http://localhost/A_Dress/product/"
+							+ img
+							+ "' style=\"width: 100px;\"></td></tr></table></div></body></html>",
+					"text/html; charset=EUC-KR");
 			// 1. Multipart에 BodyPart를 붙인다.
 			multipart.addBodyPart(bodyPart);
 			// 이메일 메시지의 내용에 Multipart를 붙인다.
@@ -1247,7 +1266,7 @@ public class Ajaxcon {
 	@RequestMapping(value = "sh_ajax_workPay")
 	public ModelAndView sh_ajax_workPay(int staff_num, String date_ps,
 			String date_ps2, HttpSession session) {
-		
+
 		ModelAndView mav = new ModelAndView();
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("staff_num", String.valueOf(staff_num));
@@ -1296,19 +1315,20 @@ public class Ajaxcon {
 		mav.addObject("res", count);
 		return mav;
 	}
+
 	// HOTKEY신청 부분에서의 CRNUM 확인
-		@RequestMapping(value = "crnumchk")
-		public ModelAndView crnumchk(int key_crnum) {
-			ModelAndView mav = new ModelAndView("ajax/crnumchk");
-			System.out.println(key_crnum);
-			int res = shdao.chkcrnum(key_crnum);
-			boolean result=false;
-			if(res==1){
-				result =true; // 값이 존재
-			}else{
-				result=false;
-			}
-			mav.addObject("result",result);
-			return mav;
+	@RequestMapping(value = "crnumchk")
+	public ModelAndView crnumchk(int key_crnum) {
+		ModelAndView mav = new ModelAndView("ajax/crnumchk");
+		System.out.println(key_crnum);
+		int res = shdao.chkcrnum(key_crnum);
+		boolean result = false;
+		if (res == 1) {
+			result = true; // 값이 존재
+		} else {
+			result = false;
 		}
+		mav.addObject("result", result);
+		return mav;
+	}
 }
