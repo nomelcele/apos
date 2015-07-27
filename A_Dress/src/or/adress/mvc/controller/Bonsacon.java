@@ -337,6 +337,7 @@ public class Bonsacon {
 	        String recipient = mail; // 받는 사람 E-Mail
 	        String subject = "APOS - 매장 가입을 환영합니다";
 	        String body = "\""+name+"\"님" + "환영합니다~"+"\n\r"+"Hotkey : "+hotkey;
+	       System.out.println("hotkey_name:"+name);
 	        ShopHotkeyVO v = new ShopHotkeyVO();
 	        v.setKey_num(key_num);
 	        v.setKey_msg(m);
