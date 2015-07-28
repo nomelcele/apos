@@ -102,7 +102,8 @@ public class MakeXML {
 			xo.output(
 					doc,
 					new FileOutputStream(
-							"C:\\kosta97\\spring\\workspace\\A_Dress\\src\\suggest\\barcode.xml"));
+							"C:\\kosta97\\spring\\workspace"
+							+ "\\A_Dress\\src\\suggest\\barcode.xml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

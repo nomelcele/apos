@@ -11,8 +11,8 @@ video {
 <section id="main-content">
 
 	<section class="wrapper">
-		<div class="row" style="font-size: 15px; width: 125%;">
-			<div class="col-lg-12">
+		<div class="row" >
+			<div class="col-lg-12" style="font-size: 15px; width: 125%;">
 				<h3 class="page-header" style="font-family: '210 나무고딕' ">
 					<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span>매장과 화상채팅
 				</h3>
