@@ -25,10 +25,14 @@
 			chk = false;
 		}
 	}
-	function insertproduct(pcode, psize, pamount, pprice, a, psalerate) {
-		var order = $('#p_num' + a).val().trim();
-		if(order != "" && order <= pamount ){
+	function insertproduct(pcode, psize, pprice, a, psalerate) {
+		parseInt(mile, 10)
+		var order = parseInt($('#p_num' + a).val().trim(),10);
+		//var chkchk =parseInt(pamount.trim(),10)+1;
+		//alert(chkchk);
+		if(order != "" && order <= $('#p_orinum'+a).val() && $('#p_orinum'+a).val() > 0){
 			//i++;
+			$('#p_orinum'+a).val($('#p_orinum'+a).val()-order);
 			j++;
 			if(psalerate != 0){
 				pprice = pprice*((100-psalerate)*0.01)

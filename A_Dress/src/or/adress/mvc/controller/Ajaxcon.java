@@ -192,9 +192,9 @@ public class Ajaxcon {
 							+ "\" value=\"1\" max=\""
 							+ v.getSto_amount()
 							+ "\">").append("</td>");
-			// res.append("<td style=\"font-family: '210 ³ª¹«°íµñ'; \">").append("<input type=\"number\" id=\"p_orinum"+i+"\" readonly=\"readonly\" class=\"form-control\" value=\""+v.getSto_amount()+"\"").append("</td>");
-			res.append("<td style=\"font-family: '210 ³ª¹«°íµñ'; \">")
-					.append(v.getSto_amount()).append("</td>");
+			res.append("<td style=\"font-family: '210 ³ª¹«°íµñ'; \">").append("<input type=\"number\" id=\"p_orinum"+i+"\" readonly=\"readonly\" class=\"form-control\" value=\""+v.getSto_amount()+"\"").append("</td>");
+//			res.append("<td style=\"font-family: '210 ³ª¹«°íµñ'; \">")
+//					.append(v.getSto_amount()).append("</td>");
 			res.append("<td style=\"font-family: '210 ³ª¹«°íµñ'; \">")
 					.append(v.getPro_price()).append("</td>");
 			res.append("<td style=\"font-family: '210 ³ª¹«°íµñ'; \">")
@@ -207,8 +207,7 @@ public class Ajaxcon {
 			res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
 			res.append("href=\"javascript:insertproduct('")
 					.append(v.getPro_code()).append("', '");
-			res.append(v.getSto_size()).append("', '")
-					.append(v.getSto_amount()).append("', '");
+			res.append(v.getSto_size()).append("', '");
 			res.append(v.getPro_price()).append(
 					"', '" + i + "','" + v.getPro_salerate() + "')\">");
 			res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
