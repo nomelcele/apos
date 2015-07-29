@@ -85,7 +85,7 @@ public class ProductDao {
 	public List<ProductVO> getListProduct_bon3(int pro_code){
 		return ss.selectList("product.product_bon3", pro_code);
 	}
-	//惑前技老利侩]
+	//惑前技老利侩
 	public void acceptsalerate(SaleVO vo){
 		ss.update("product.acceptsalerate", vo);
 	}
