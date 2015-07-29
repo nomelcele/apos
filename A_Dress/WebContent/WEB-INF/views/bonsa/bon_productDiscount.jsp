@@ -119,7 +119,8 @@
 								 <td><input id="sale_end"
 									name="sale_end" autocomplete="off" type="date"
 									required /></td> 
-                              <td rowspan="2"><div class="btn-group"><a class="btn btn-success" href="javascript:saleaccept()"><i class="icon_check_alt2"></i></a></div></td>
+                              <td rowspan="2"><div class="btn-group"><a class="btn btn-success" href="javascript:saleaccept()">
+                              <i class="icon_check_alt2"></i></a></div></td>
                            </tr>
                            <tr class="active">
                            		<td>세일 내용	:	</td>
