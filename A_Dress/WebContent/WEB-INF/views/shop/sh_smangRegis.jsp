@@ -16,13 +16,15 @@
 	var cusnum = 0;
 	var chk = true;
 	function usingmileage() {
-		if (chk) {
+		if (chk && $('#mileage').val() > 0) {
 			price -= $('#mileage').val();
 			mile = mile - $('#mileage').val();
 			console.log("이차 : " + mile);
 			document.getElementById('total').innerHTML = price;
 			document.getElementById('miletotal').innerHTML = mile;
 			chk = false;
+		}else{
+			alert("잘못된 값 입니다.")
 		}
 	}
 	function insertproduct(pcode, psize, pprice, a, psalerate) {
@@ -30,7 +32,7 @@
 		var order = parseInt($('#p_num' + a).val().trim(),10);
 		//var chkchk =parseInt(pamount.trim(),10)+1;
 		//alert(chkchk);
-		if(order != "" && order <= $('#p_orinum'+a).val() && $('#p_orinum'+a).val() > 0){
+		if(order != "" && order > 0 && order <= $('#p_orinum'+a).val() && $('#p_orinum'+a).val() > 0){
 			//i++;
 			$('#p_orinum'+a).val($('#p_orinum'+a).val()-order);
 			j++;
