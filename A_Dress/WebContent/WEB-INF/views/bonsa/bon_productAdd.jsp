@@ -3,6 +3,16 @@
 
 <script>
 var procode = false;
+
+
+function resetFormElement(e) {
+    e.wrap('<form>').closest('form').get(0).reset(); 
+    //리셋하려는 폼양식 요소를 폼(<form>) 으로 감싸고 (wrap()) , 
+    //요소를 감싸고 있는 가장 가까운 폼( closest('form')) 에서 Dom요소를 반환받고 ( get(0) ),
+    //DOM에서 제공하는 초기화 메서드 reset()을 호출
+    e.unwrap(); //감싼 <form> 태그를 제거
+}
+
 	$(function() {
 		$('#pimg')
 				.change(
@@ -11,7 +21,6 @@ var procode = false;
 							// pop가져오는 명령, toLowerCase 소문자로...
 							var ext = $(this).val().split('.').pop()
 									.toLowerCase();
-							//alert(ext)
 
 							//배열에 추출한 확장자가 존재하는지 체크
 							//alert($.inArray(ext, ['gif','png','jpg','jpeg']));
