@@ -55,7 +55,8 @@ public class Androidcon {
 		System.out.println("Request barcode : " + barcode);
 		
 		String key = "false";
-		
+		//안드로이드에서 넘어오는 바코드 번호에 매장 ID를 붙여서 매장을 구분한다.
+		//(해당 매장에만 보일수 있도록)
 		System.out.println("Request barcode : " +  id+"<@>"+barcode);
 		xml.shbarcode(id+"@@@"+barcode);
 		mav.addObject("res",  barcode);

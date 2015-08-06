@@ -24,10 +24,11 @@ public class Barcoder {
 //			suggest = new Suggest();
 //		return suggest;
 //	}
-
+//해당 경로의 xml파일을 읽는다.
 	public Barcoder() {
 		SAXBuilder sb = new SAXBuilder();
-		String path = "C:\\kosta97\\spring\\workspace\\A_Dress\\src\\suggest\\barcode.xml";
+		String path = "C:\\kosta97\\spring\\workspace"
+				+ "\\A_Dress\\src\\suggest\\barcode.xml";
 		try {
 			doc = sb.build(path);
 			root = doc.getRootElement();

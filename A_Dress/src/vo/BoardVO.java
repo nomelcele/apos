@@ -4,14 +4,14 @@ import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 public class BoardVO {
-	// Valid 안걸어 되는것
+	
 	private int no,hit,groupno;
 	private String writer,regdate,path, CKEditorFuncNum;
 	private MultipartFile upload;
 	private int bo_num;
 	private int cnt;
 	
-	// Valid 걸어야 되는것
+	
 	@NotEmpty(message = "제목을 입력하세요.")
 	private String title;
 	@NotEmpty(message = "내용을 입력하세요.")

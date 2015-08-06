@@ -4,6 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!-- 매장의업무관리- 출결 페이지입니다. -->
 <script>
+	//출근 유효성 검사 
 	function worklogin(num, name) {
 		//alert("직원번호 "+num+"번 " + name+"님이 출근하셨습니다.");
 		$.ajax({
@@ -27,6 +28,7 @@
 
 		});
 	}
+	//퇴근 유효성 검사 
 	function worklogout(num) {
 		//alert("직원번호 "+num+"번 " + name+"님이 퇴근하셨습니다.");
 					$.ajax({
