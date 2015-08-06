@@ -44,9 +44,7 @@
 
 											});
 
-									$
-											.ajax({
-												url : "sh_ajaxoutletChart?shop_num="
+									$.ajax({url : "sh_ajaxoutletChart?shop_num="
 														+ shop_num
 														+ "&date_ps="
 														+ $('#date_ps').val()

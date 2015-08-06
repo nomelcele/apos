@@ -57,7 +57,8 @@ public class MakeXML {
 			xo.output(
 					doc,
 					new FileOutputStream(
-							"C:\\kosta97\\spring\\workspace\\A_Dress\\src\\suggest\\suggest.xml"));
+							"C:\\kosta97\\spring\\workspace"
+							+ "\\A_Dress\\src\\suggest\\suggest.xml"));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

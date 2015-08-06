@@ -90,10 +90,12 @@
 		// onopen : 서버가 연결이 되었을 때 발생
 		var str = "";
 		var first = true;
-		eventSource2.onmessage = function(e) { //리스너형식으로 돌아가고 있는 콜백함수
+		//리스너형식으로 돌아가고 있는 콜백함수
+		eventSource2.onmessage = function(e) { 
 			console.log("리스너 실행");
-
+			//xml에서 파싱한 값을 @@@을 기준으로 매장 id와 바코드 넘버로 분리한다.
 			var spl = event.data.split("@@@");
+			//null이 아니라 바코드 넘버가 있을경우 해당 칸에 바코드 넘버를 삽입한다.
 			if (spl[0]=="${sessionScope.shop_id}" && spl[1] != "no"  ) {
 				$("#pro_name").val(spl[1]);
 				console.log("리스너 실행");
@@ -119,35 +121,7 @@
 	};
 	
 </script>
-<%-- 전체보기 위한 form --%>
-<!-- <form id="all"> -->
-<!--    <input type="hidden" id="cmd" name="cmd" value="sproduct"> <input -->
-<!--       type="hidden" id="subcmd" name="subcmd" value="pcheck"> <input -->
-<!--       type="hidden" id="childcmd" name="childcmd" value="psearch"> <input -->
-<!--       type="hidden" id="childcmd" name="check" value="%"> -->
-<!-- </form> -->
-<%-- <%-- 남자 상품 form --%>
 
-<!-- <form id="men"> -->
-<!--    <input type="hidden" id="cmd" name="cmd" value="sproduct"> <input -->
-<!--       type="hidden" id="subcmd" name="subcmd" value="pcheck"> <input -->
-<!--       type="hidden" id="childcmd" name="childcmd" value="psearch"> <input -->
-<!--       type="hidden" id="childcmd" name="check" value="1"> -->
-<!-- </form> -->
-<%-- <%-- 여자 상품 form --%>
-
-<!-- <form id="woman"> -->
-<!--    <input type="hidden" id="cmd" name="cmd" value="sproduct"> <input -->
-<!--       type="hidden" id="subcmd" name="subcmd" value="pcheck"> <input -->
-<!--       type="hidden" id="childcmd" name="childcmd" value="psearch"> <input -->
-<!--       type="hidden" id="childcmd" name="check" value="2"> -->
-<!-- </form> -->
-<!-- <form id="kid"> -->
-<!--    <input type="hidden" id="cmd" name="cmd" value="sproduct"> <input -->
-<!--       type="hidden" id="subcmd" name="subcmd" value="pcheck"> <input -->
-<!--       type="hidden" id="childcmd" name="childcmd" value="psearch"> <input -->
-<!--       type="hidden" id="childcmd" name="check" value="3"> -->
-<!-- </form> -->
 <section id="main-content">
 	<section class="wrapper">
 		<section class="panel">
