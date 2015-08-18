@@ -107,7 +107,9 @@ references product(pro_code) on delete cascade,
 constraint sell_sell_shopnum_fk foreign key(sell_shopnum)
 references shop(shop_num) on delete cascade,
 constraint sell_sell_memnum_fk foreign key(sell_memnum)
-references member(mem_num) on delete cascade);
+references member(mem_num) on delete cascade,
+constraint sell_sell_mileage_ck check(sell_mileage between 0 and 999999)
+);
 
 ------------------------------------------------------
 create table hotkey(
@@ -137,13 +139,6 @@ references shop(shop_num) on delete cascade
 commit;
 
 ----------------------------------------------------------
-create table discount(
-dis_num number(10) constraint discount_dis_num_pk primary key,
-dis_salerate float(10),
-dis_pronum number(10),
-constraint discount_dis_pronum_fk foreign key (dis_pronum)
-references product(pro_num) on delete cascade
-);
 
 create table staff(
 staff_num number constraint staff_staff_num_pk primary key,
