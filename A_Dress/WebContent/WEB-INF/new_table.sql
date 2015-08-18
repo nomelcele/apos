@@ -87,7 +87,9 @@ references product(pro_code) on delete cascade,
 constraint sell_sell_shopnum_fk foreign key(sell_shopnum)
 references shop(shop_num) on delete cascade,
 constraint sell_sell_memnum_fk foreign key(sell_memnum)
-references member(mem_num) on delete cascade);
+references member(mem_num) on delete cascade,
+constraint sell_sell_mileage_ck check(sell_mileage between 0 and 999999)
+);
 
 ------------------------------------------------------
 create table hotkey(
