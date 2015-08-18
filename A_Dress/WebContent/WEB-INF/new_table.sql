@@ -67,7 +67,7 @@ pro_barcode varchar2(50) constraint product_pro_barcode_nn not null,
 pro_img varchar2(50) constraint product_pro_img_nn not null,
 pro_date date,
 pro_price number(30),
-pro_salerate number(30),
+pro_salerate number(30) constraint product_pro_salerate_ck check(pro_salerate between 0 and 100),
 constraint product_pro_code_uq unique (pro_code)
 );
 ---------------------5/28----------------------------
