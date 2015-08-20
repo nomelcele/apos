@@ -244,7 +244,7 @@ drop sequence stock_seq;
 drop sequence discount_seq;
 drop sequence staff_seq;
 drop sequence stockreq_seq;
-drop sequence sroot_seq;
+drop sequence croot_seq;
 drop sequence calendar_seq;
 drop SEQUENCE workpay_seq;
 
@@ -292,7 +292,7 @@ create sequence stockreq_seq
 increment by 1
 start with 1;
 
-create sequence sroot_seq
+create sequence croot_seq
 increment by 1
 start with 1;
 
