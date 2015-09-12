@@ -41,12 +41,6 @@
 	</beans:bean>
 	<!-- Xml 파싱을 위해 클래스 설정  -->
 	<beans:bean id="makeXml" class="xml.MakeXML"/>
-	<!-- 메일 전송을 위한 클래스 bean 설정 -->
-	<beans:bean id="sendConfirmJoiningMail" class="mail.SendConfirmJoiningMail"/>
-	<beans:bean id="sendRefuseJoiningMail" class="mail.SendRefuseJoiningMail"/>
-	<beans:bean id="sendRecommendProductMail" class="mail.SendRecommendProductMail"/>
-	<beans:bean id="sendFindIdMail" class="mail.SendFindIdMail"/>
-	<beans:bean id="sendFindPwdMail" class="mail.SendFindPwdMail"/>
 	<!-- transaction annotation 방식 설정 -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
@@ -101,6 +95,19 @@
 
 <beans:bean id="userDetailsService"
       class="or.adress.mvc.dao.AppUserDetailsServiceDAO" />
+      
+<beans:bean id="BonAdapter"
+		class="temp.BonAdapter"/>
+<beans:bean id="ShopAdapter"
+		class="temp.ShopAdapter"/>
+		
+<!-- 메일 전송을 위한 클래스 bean 설정 -->
+	<beans:bean id="sendConfirmJoiningMail" class="mail.SendConfirmJoiningMail"/>
+	<beans:bean id="sendRefuseJoiningMail" class="mail.SendRefuseJoiningMail"/>
+	<beans:bean id="sendRecommendProductMail" class="mail.SendRecommendProductMail"/>
+	<beans:bean id="sendFindIdMail" class="mail.SendFindIdMail"/>
+	<beans:bean id="sendFindPwdMail" class="mail.SendFindPwdMail"/>
+
       
 
  <authentication-manager id="jdbc-auth">

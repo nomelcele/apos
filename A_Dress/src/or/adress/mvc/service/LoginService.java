@@ -21,11 +21,11 @@ import vo.ShopVO;
 @Service
 public class LoginService {
 	@Autowired
-	ShopDao sdao;
+	ShopDao shdao;
 	@Autowired
 	ProductDao pdao;
 	@Autowired
-	BonsaDao bdao;
+	BonsaDao bondao;
 	@Autowired
 	LoginDao ldao;
 	
@@ -39,7 +39,7 @@ public class LoginService {
 	public void shopjoinservice(ShopVO vo, JoinVO jvo){
 		ldao.grade(jvo);
 		ldao.login(jvo);
-		sdao.shopjoin(vo);
+		shdao.shopjoin(vo);
 		int shop_num = pdao.get_last_shopnum();
 			List<String> pro_num_list = pdao.get_productnumlist();
 			for(String pro_code : pro_num_list){
@@ -77,7 +77,7 @@ public class LoginService {
 		}
 	
 	public void bonjoinservice(BonsaVO vo, JoinVO jvo){
-		bdao.sawonjoin(vo);
+		bondao.sawonjoin(vo);
 		ldao.login(jvo);
 		ldao.grade(jvo);
 		
