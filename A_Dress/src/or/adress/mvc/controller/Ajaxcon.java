@@ -24,6 +24,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import mail.SendFindIdMail;
+import mail.SendFindPwdMail;
+import mail.SendRecommendProductMail;
 import or.adress.mvc.dao.BonsaDao;
 import or.adress.mvc.dao.ChatDao;
 import or.adress.mvc.dao.MemberDao;
@@ -72,6 +75,14 @@ public class Ajaxcon {
 	@Autowired
 	private StaffDao sfdao;
 
+	// 메일 전송을 위한 클래스
+	@Autowired
+	private SendRecommendProductMail sendRecommendProductMail;
+	@Autowired
+	private SendFindIdMail sendFindIdMail;
+	@Autowired
+	private SendFindPwdMail sendFindPwdMail;
+
 	// 성별 물건 검색 ajax
 	@RequestMapping(value = "sh_AjaxProductSearch")
 	public ModelAndView sh_AjaxProductSearch(String shop_num, String key) {
@@ -85,82 +96,28 @@ public class Ajaxcon {
 		map.put("shop_num", shop_num);
 
 		List<ProductVO> list = pdao.getListProductGender(map);
-		Iterator<ProductVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		// res.append("<tr>");
-		int i = 0;
-		while (it.hasNext()) {
-			i++;
-			ProductVO v = new ProductVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<td>" + i + "</td>");
-			res.append("<td>").append(v.getPro_name()).append("</td>");
-			res.append("<td>").append(v.getPro_code()).append("</td>");
-			res.append("<td>").append(v.getSto_size()).append("</td>");
-			res.append("<td>").append(v.getSto_amount()).append("</td>");
-			res.append("<td>").append(v.getPro_price()).append("</td>");
-			res.append("<td>").append(v.getPro_salerate()).append("</td>");
-
-			res.append("<td>");
-			res.append("<a href=\"javascript:open_win('product/"
-					+ v.getPro_img() + "')\">");
-			res.append("<img src='product/" + v.getPro_img()
-					+ "' style=\"width: 100px; cursor: hand; \"></a></td>");// 추후
-																			// 세일추가
-
-			res.append("<td>");
-			res.append("<a href=\"javascript:open_win1('barcode/"
-					+ v.getPro_barcode() + "')\">");
-			res.append("<img src='barcode/" + v.getPro_barcode()
-					+ "' style=\"width: 100px;\"></a></td>");
-			res.append("</tr>");
-
-		}
-
-		// res.append("</tr>");
-		String strString = res.toString();
+		String strString = makeNewHtmlCodes(list.iterator(), "productsByGender");
+		
 		System.out.println(strString);
 		// xml을 읽어 오기 위해서 만든 클래스의 메서드를 호출
 		mav.addObject("strString", strString);
 
 		return mav;
+
 	}
 
 	// 판매등록 고객검색콜백
 	@RequestMapping(value = "sh_smang_callback", method = RequestMethod.POST)
 	public ModelAndView sh_smang_callback(String name) {
-		// String name = request.getParameter("name");
 		System.out.println(name);
 		List<MemVO> list = shdao.getListMember(name);
-		Iterator<MemVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		while (it.hasNext()) {
-			MemVO v = new MemVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<td>").append(v.getMem_num()).append("</td>");
-			res.append("<td>").append(v.getMem_name()).append("</td>");
-			res.append("<td>").append(v.getMem_addr()).append("</td>");
-			res.append("<td>").append(v.getMem_tel()).append("</td>");
-			res.append("<td>").append(v.getMem_mileage()).append("</td>");
-			res.append("<td>");
-			res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
-			res.append("href=\"javascript:ckcustomer('")
-					.append(v.getMem_name()).append("', '");
-			res.append(v.getMem_tel()).append("', '");
-			res.append(v.getMem_mileage()).append(
-					"', '" + v.getMem_num() + "')\">");
-			res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
-			res.append("</td>");
-			res.append("</tr>");
-
-		}
-		String str = res.toString();
+		String str = makeNewHtmlCodes(list.iterator(), "membersForSalesRegister");
+		
 		System.out.println(str);
 		ModelAndView mav = new ModelAndView("ajax/sh_smang_callback");
 		mav.addObject("cuscont", str);
 		return mav;
+		
 	}
 
 	// 판매등록 상품검색 콜백
@@ -171,54 +128,12 @@ public class Ajaxcon {
 		map.put("pname", pname);
 		map.put("shop_num", shop_num);
 		List<SmangVO> list = smdao.getListProduct(map);
-		Iterator<SmangVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		int i = 0;
-		while (it.hasNext()) {
-			i++;
-			SmangVO v = new SmangVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<td>" + i + "</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">")
-					.append(v.getShop_name()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">")
-					.append(v.getPro_code()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">")
-					.append(v.getSto_size()).append("</td>");
-			res.append("<td style=\"width:20%; font-family: '210 나무고딕'; \">")
-					.append("<input type=\"number\" style=\"width:100%;\" class=\"form-control\" id=\"p_num"
-							+ i
-							+ "\" value=\"1\" max=\""
-							+ v.getSto_amount()
-							+ "\">").append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">").append("<input type=\"number\" id=\"p_orinum"+i+"\" readonly=\"readonly\" class=\"form-control\" value=\""+v.getSto_amount()+"\"").append("</td>");
-//			res.append("<td style=\"font-family: '210 나무고딕'; \">")
-//					.append(v.getSto_amount()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">")
-					.append(v.getPro_price()).append("</td>");
-			res.append("<td style=\"font-family: '210 나무고딕'; \">")
-					.append(v.getPro_salerate()).append("</td>");
-			res.append("<td><img src='product/" + v.getPro_img()
-					+ "' style=\"width: 50px;\"></td>");// 추후 세일추가
-			res.append("<td><img src='barcode/" + v.getPro_barcode()
-					+ "' style=\"width: 50px;\"></td>");
-			res.append("<td>");
-			res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
-			res.append("href=\"javascript:insertproduct('")
-					.append(v.getPro_code()).append("', '");
-			res.append(v.getSto_size()).append("', '");
-			res.append(v.getPro_price()).append(
-					"', '" + i + "','" + v.getPro_salerate() + "')\">");
-			res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
-			res.append("</td>");
-			res.append("</tr>");
-
-		}
-		String str2 = res.toString();
+		String str2 = makeNewHtmlCodes(list.iterator(), "productsForSalesRegister");
+		
 		ModelAndView mav = new ModelAndView("ajax/sh_smang_callback2");
 		mav.addObject("procont", str2);
 		return mav;
+		
 	}
 
 	// 본사로그인 캡챠 (로그인)
@@ -249,10 +164,6 @@ public class Ajaxcon {
 	public ModelAndView bon_findid(String name, String tel1, String tel2,
 			String tel3) {
 		ModelAndView mav = new ModelAndView("ajax/bon_findid");
-		// String name = request.getParameter("name");
-		// String tel1 = request.getParameter("tel1");
-		// String tel2 = request.getParameter("tel2");
-		// String tel3 = request.getParameter("tel3");
 		String tel = tel1 + "-" + tel2 + "-" + tel3;
 
 		System.out.println("-----------bon_findid.jsp---------");
@@ -270,75 +181,17 @@ public class Ajaxcon {
 
 	// 아이디 찾기 메일발송
 	@RequestMapping(value = "bon_findid2", method = RequestMethod.POST)
-	public void bon_findid2(HttpServletRequest request) {
+	public void bon_findid2(@RequestParam HashMap<String, String> params) {
 		// 메일 관련 정보
-		String mail = request.getParameter("mail");
-		String name = request.getParameter("name");
-		String id = request.getParameter("id");
+//		String mail = request.getParameter("mail");
+//		String name = request.getParameter("name");
+//		String id = request.getParameter("id");
+		
 
-		System.out.println("--------여기는 FIND ID 메일 보내는 곳--------");
-		System.out.println("MAIL : " + mail);
-		System.out.println("NAME : " + name);
-		System.out.println("ID : " + id);
+		System.out.println("에이젝스 컨트롤러!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
 
-		String host = "smtp.naver.com";
-		final String username = "ama949@naver.com"; // 보내는 사람 네이버 ID
-		final String password = "skdltm11a"; // 비밀번호
-		int port = 465;
-
-		// 메일 내용
-		String recipient = mail; // 받는 사람 E-Mail
-		String subject = "APOS - ID 찾기 결과입니다.";
-		String body = "\"" + name + "\"님의" + "\n\r" + "ID는 : " + id + "\n\r"
-				+ "감사합니다";
-
-		Properties props = System.getProperties();
-
-		props.put("mail.smtp.host", host);
-		props.put("mail.smtp.port", port);
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.ssl.enable", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.ssl.trust", host);
-
-		Session session = Session.getDefaultInstance(props,
-				new javax.mail.Authenticator() {
-					String un = username;
-					String pw = password;
-
-					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication(un, pw);
-					}
-				});
-		session.setDebug(true); // for debug
-
-		Message msg = new MimeMessage(session);
-		try {
-			msg.setFrom(new InternetAddress(username));
-			msg.setRecipient(Message.RecipientType.TO, new InternetAddress(
-					recipient));
-			msg.setSubject(subject);
-			msg.setSentDate(new Date());
-			// 파일 첨부시에는 BodyPart를 사용
-			// msg.setText(body);
-
-			// 파일첨부를 위한 Multipart
-			Multipart multipart = new MimeMultipart();
-
-			// BodyPart를 생성
-			BodyPart bodyPart = new MimeBodyPart();
-			bodyPart.setText(body);
-
-			// 1. Multipart에 BodyPart를 붙인다.
-			multipart.addBodyPart(bodyPart);
-
-			// 이메일 메시지의 내용에 Multipart를 붙인다.
-			msg.setContent(multipart);
-			Transport.send(msg);
-		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		sendFindIdMail.mailSend(params);
+		
 	}
 
 	// 비밀번호찾기 (디비)
@@ -347,6 +200,7 @@ public class Ajaxcon {
 		// String name = request.getParameter("name");
 		// String id = request.getParameter("id");
 
+		System.out.println("에이젝스 컨트롤러!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
 		System.out.println("-----------bon_findpwd.jsp---------");
 		System.out.println("Request NAME : " + name);
 		System.out.println("Request ID : " + id);
@@ -363,75 +217,12 @@ public class Ajaxcon {
 
 	// 비밀번호 찾기 메일발송
 	@RequestMapping(value = "bon_findpwd2", method = RequestMethod.POST)
-	public void bon_findpwd2(String name, String mail, String pwd) {
-		// 메일 관련 정보
-		// String mail = request.getParameter("mail");
-		// String name = request.getParameter("name");
-		// String pwd = request.getParameter("pwd");
+	public void bon_findpwd2(@RequestParam HashMap<String, String> params) {
+		// 원래 파라미터
+		// String name, String mail, String pwd
+		
 
-		System.out.println("--------여기는 FIND ID 메일 보내는 곳--------");
-		System.out.println("MAIL : " + mail);
-		System.out.println("NAME : " + name);
-		System.out.println("PWD : " + pwd);
-
-		String host = "smtp.naver.com";
-		final String username = "ama949@naver.com"; // 보내는 사람 네이버 ID
-		final String password = "skdltm11a"; // 비밀번호
-		int port = 465;
-
-		// 메일 내용
-		String recipient = mail; // 받는 사람 E-Mail
-		String subject = "APOS - PASS WORD 찾기 결과입니다.";
-		String body = "\"" + name + "\"님의" + "\n\r" + "PWD는 : " + pwd + "\n\r"
-				+ "감사합니다";
-
-		Properties props = System.getProperties();
-
-		props.put("mail.smtp.host", host);
-		props.put("mail.smtp.port", port);
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.ssl.enable", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.ssl.trust", host);
-
-		Session session = Session.getDefaultInstance(props,
-				new javax.mail.Authenticator() {
-					String un = username;
-					String pw = password;
-
-					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication(un, pw);
-					}
-				});
-		session.setDebug(true); // for debug
-
-		Message msg = new MimeMessage(session);
-		try {
-			msg.setFrom(new InternetAddress(username));
-			msg.setRecipient(Message.RecipientType.TO, new InternetAddress(
-					recipient));
-			msg.setSubject(subject);
-			msg.setSentDate(new Date());
-			// 파일 첨부시에는 BodyPart를 사용
-			// msg.setText(body);
-
-			// 파일첨부를 위한 Multipart
-			Multipart multipart = new MimeMultipart();
-
-			// BodyPart를 생성
-			BodyPart bodyPart = new MimeBodyPart();
-			bodyPart.setText(body);
-
-			// 1. Multipart에 BodyPart를 붙인다.
-			multipart.addBodyPart(bodyPart);
-
-			// 이메일 메시지의 내용에 Multipart를 붙인다.
-			msg.setContent(multipart);
-			Transport.send(msg);
-		} catch (MessagingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println("에이젝스 컨트롤러!!!!!!!!!");
 	}
 
 	// 샵 회원가입 (ajax)
@@ -513,36 +304,8 @@ public class Ajaxcon {
 		map.put("pname", pcode);
 		map.put("shop_num", shopnum);
 		List<SmangVO> list = smdao.getListProduct(map);
+		String str2 = makeNewHtmlCodes(list.iterator(), "productsForChangingAmountStock");
 
-		Iterator<SmangVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		int i = 0;
-		while (it.hasNext()) {
-			i++;
-			SmangVO v = new SmangVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<td>" + i + "</td>");
-			// res.append("<td>").append(v.getShop_name()).append("</td>");
-			res.append("<td>").append(v.getPro_code()).append("</td>");
-			res.append("<td>").append(v.getSto_size()).append("</td>");
-			res.append("<td>").append(v.getSto_amount()).append("</td>");
-			res.append("<td>").append(v.getPro_price()).append("</td>");
-			res.append("<td><img src='product/" + v.getPro_img()
-					+ "' style=\"width: 100px;\"></td>");// 추후 세일추가
-			res.append("<td><img src='barcode/" + v.getPro_barcode()
-					+ "' style=\"width: 100px;\"></td>");
-			res.append("<td>");
-			res.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
-			res.append("href=\"javascript:proset('");
-			res.append(v.getPro_code()).append("', '").append(v.getSto_size());
-			res.append("')\">");
-			res.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
-			res.append("</td>");
-			res.append("</tr>");
-
-		}
-		String str2 = res.toString();
 		mav.addObject("str2", str2);
 		return mav;
 	}
@@ -558,25 +321,9 @@ public class Ajaxcon {
 	// 매장 정산관리 판매현황 -
 	@RequestMapping(value = "sh_salesGetTable_ajax", method = RequestMethod.POST)
 	public ModelAndView sh_ajaxsaletable(String shop_num, String date_ps) {
-
 		List<SalesCheckVO> list = skdao.getonday(shop_num, date_ps);
-		Iterator<SalesCheckVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		while (it.hasNext()) {
-			SalesCheckVO v = new SalesCheckVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<th>").append(v.getSell_date()).append("</th>");
-			res.append("<th>").append(v.getSell_pronum()).append("</th>");
-			res.append("<th><img src='product/").append(v.getSell_proimg())
-					.append("' style=\"width: 100px;\"></td>");
-			res.append("<th>").append(v.getSell_cash()).append("</th>");
-			res.append("<th>").append(v.getSell_many()).append("</th>");
-			res.append("<th>").append(v.getSell_memnum()).append("</th>");
-			res.append("<th>").append(v.getSell_sell()).append("</th>");
-			res.append("</tr>");
-
-		}
+		String res = makeNewHtmlCodes(list.iterator(), "SalesResults");
+		
 		System.out.println(res.toString());
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/sh_ajaxsaletable");
@@ -757,19 +504,8 @@ public class Ajaxcon {
 		ModelAndView mav = new ModelAndView();
 		System.out.println(shop_num + ":" + startdate + ":" + enddate);
 		List<SalesCheckVO> list = skdao.getList(shop_num, startdate, enddate);
-		Iterator<SalesCheckVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		while (it.hasNext()) {
-			SalesCheckVO v = new SalesCheckVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<th>").append(v.getSell_date()).append("</th>");
-			res.append("<th>").append(v.getSell_shopname()).append("</th>");
-			res.append("<th>").append(v.getSell_cash()).append("</th>");
-			res.append("<th>").append(v.getCount()).append("</th>");
-			res.append("</tr>");
+		String res = makeNewHtmlCodes(list.iterator(), "SalesResultsByDate");
 
-		}
 		mav.setViewName("ajax/sh_ajaxoutletsale");
 		mav.addObject("list", res);
 		return mav;
@@ -817,23 +553,8 @@ public class Ajaxcon {
 		System.out.println(pro_code + startdate + enddate);
 		List<SalesCheckVO> list = skdao.getProductList(pro_code, startdate,
 				enddate);
-		Iterator<SalesCheckVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		while (it.hasNext()) {
-			SalesCheckVO v = new SalesCheckVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<th>").append(v.getSell_date()).append("</th>");
-			res.append("<th>").append(v.getSell_proname()).append("</th>");
-			res.append("<th>").append(v.getSell_cash()).append("</th>");
-			res.append("<th>").append(v.getCount()).append("</th>");
-			res.append("</tr>");
-			System.out.println(v.getDate());
-		}
-		// res.append("</tr>");
-		String strString = res.toString();
-		System.out.println(strString);
-		// ----
+		String res = makeNewHtmlCodes(list.iterator(), "SalesResultsByProduct");
+		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/bon_ajaxproductsale");
 		mav.addObject("list", res);
@@ -883,22 +604,8 @@ public class Ajaxcon {
 		System.out.println(shop_name + startdate + enddate);
 		List<SalesCheckVO> list = skdao.get_shopList(shop_name, startdate,
 				enddate);
-		Iterator<SalesCheckVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		while (it.hasNext()) {
-			SalesCheckVO v = new SalesCheckVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<th>").append(v.getSell_date()).append("</th>");
-			res.append("<th>").append(v.getSell_shopname()).append("</th>");
-			res.append("<th>").append(v.getSell_cash()).append("</th>");
-			res.append("<th>").append(v.getCount()).append("</th>");
-			res.append("</tr>");
-
-		}
-		// res.append("</tr>");
-		String strString = res.toString();
-		System.out.println(strString);
+		String res = makeNewHtmlCodes(list.iterator(), "SalesResultsByShop");
+		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/bon_ajaxoutletsale");
 		mav.addObject("res", res);
@@ -966,26 +673,8 @@ public class Ajaxcon {
 	public ModelAndView sh_ajaxsmangexc(int sell_sell) {
 		System.out.println(sell_sell);
 		List<SalesCheckVO> list = smdao.get_selltable(sell_sell);
-		Iterator<SalesCheckVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		while (it.hasNext()) {
-			SalesCheckVO v = new SalesCheckVO();
-			v = it.next();
-			res.append("<tr>");
-			res.append("<th>").append(v.getSell_num()).append("</th>");
-			res.append("<th>").append(v.getSell_memname()).append("</th>");
-			res.append("<th>").append(v.getSell_pronum()).append("</th>");
-			res.append("<th>").append(v.getSell_cash()).append("</th>");
-			res.append("<th>").append(v.getSell_many()).append("</th>");
-			res.append("<th>")
-					.append("<a class=\"btn btn-warning\" data-toggle=\"modal\" href=\"#myModal2\"  onclick=\"sh_managEx("
-							+ v.getSell_num() + ")\">환불 </a></th>");
-			res.append("</tr>");
-
-		}
-		// res.append("</tr>");
-		String strString = res.toString();
-		System.out.println(strString);
+		String res = makeNewHtmlCodes(list.iterator(), "SalesResultsByReceiptNumber");
+		
 		ModelAndView mav = new ModelAndView("ajax/sh_ajaxsmangexc");
 		mav.addObject("list", res);
 		return mav;
@@ -995,27 +684,10 @@ public class Ajaxcon {
 	@RequestMapping(value = "bpd_chk", method = RequestMethod.POST)
 	public ModelAndView bpd_chk(int pro_code) {
 		List<ProductVO> list = pdao.getListProduct_bon3(pro_code);
-		Iterator<ProductVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		int i = 1;
-		while (it.hasNext()) {
-			ProductVO vo = new ProductVO();
-			vo = it.next();
-			res.append("<tr>");
-			res.append("<td>").append(vo.getPro_num()).append("</td>");
-			res.append("<td>").append(vo.getPro_name()).append("</td>");
-			res.append("<td>").append(vo.getPro_code()).append("</td>");
-			res.append("<td>").append(vo.getPro_price()).append("</td>");
-			res.append("<td><img src='product/").append(vo.getPro_img())
-					.append("' style=\"width: 100px;\"></td>");
-			res.append("<td><img src='barcode/").append(vo.getPro_barcode())
-					.append("' style=\"width: 100px;\"></td>");
-			res.append("<td>").append(vo.getPro_salerate()).append("%</td>");
-			res.append("</tr>");
-		}
-		String str = res.toString();
+		String res = makeNewHtmlCodes(list.iterator(), "productsForChangingSaleRate");
+		
 		ModelAndView mav = new ModelAndView("ajax/bpd_chk_callback");
-		mav.addObject("str", str);
+		mav.addObject("str", res);
 		return mav;
 	}
 
@@ -1072,34 +744,10 @@ public class Ajaxcon {
 	@RequestMapping(value = "bon_precommand", method = RequestMethod.POST)
 	public ModelAndView bon_precommand(int pro_code) {
 		List<ProductVO> list = pdao.getListProduct_bon3(pro_code);
-		Iterator<ProductVO> it = list.iterator();
-		StringBuffer res = new StringBuffer();
-		int i = 1;
-		while (it.hasNext()) {
-			ProductVO vo = new ProductVO();
-			vo = it.next();
-			res.append("<tr>");
-			res.append("<td>").append(vo.getPro_num()).append("</td>");
-			res.append("<td>").append(vo.getPro_name()).append("</td>");
-			res.append("<td>").append(vo.getPro_code()).append("</td>");
-			res.append("<td>").append(vo.getPro_price()).append("</td>");
-			res.append("<td><img src='product/").append(vo.getPro_img())
-					.append("' style=\"width: 100px;\"></td>");
-			res.append("<td><img src='barcode/").append(vo.getPro_barcode())
-					.append("' style=\"width: 100px;\"></td>");
-			res.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" ");
-			res.append("href=\"javascript:pro_chk('").append(vo.getPro_num())
-					.append("', '");
-			res.append(vo.getPro_code()).append("', '");
-			res.append(vo.getPro_name()).append(
-					"', '" + vo.getPro_price() + "', '" + vo.getPro_img()
-							+ "')\">");
-			res.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");
-			res.append("</tr>");
-		}
-		String str = res.toString();
+		String res = makeNewHtmlCodes(list.iterator(), "productsForRecommendationToMember");
+		
 		ModelAndView mav = new ModelAndView("ajax/bpd_chk_callback");
-		mav.addObject("str", str);
+		mav.addObject("str", res);
 		return mav;
 	}
 
@@ -1111,114 +759,23 @@ public class Ajaxcon {
 		map.put("pro_code", pro_code);
 		String select = pro_code.substring(4, 5);
 		System.out.println("잘라낸 코드 넘버:" + select);
-		StringBuffer res = new StringBuffer();
+		System.out.println("상품 추천-멤버 찾기");
 		map.put("pre_code", "___" + select);
+
 		List<MemVO> list = memdao.presearchmem(map);
-		Iterator<MemVO> it = list.iterator();
-		while (it.hasNext()) {
-			MemVO vo = new MemVO();
-			vo = it.next();
-			res.append("<tr>");
-			res.append("<td>").append(vo.getMem_num()).append("</td>");
-			res.append("<td>").append(vo.getMem_name()).append("</td>");
-			res.append("<td>").append(vo.getMem_email()).append("</td>");
-			res.append("<td>").append(vo.getMem_tel()).append("</td>");
-
-			res.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" ");
-			res.append("href=\"javascript:pro_chkmail('");
-
-			res.append(vo.getMem_email()).append(
-					"', '" + vo.getMem_name() + "')\">");
-			res.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");
-			res.append("</tr>");
-
-		}
+		String res = makeNewHtmlCodes(list.iterator(), "membersForProductRecommendation");
+		
 		mav.addObject("res", res);
-
 		return mav;
 	}
 
+	// 고객에게 상품 추천 메일 전송
 	@RequestMapping(value = "/bon_precommandsearchmail")
-	public void bon_precommandsearchmail(String mail, String name, String res,
-			String img) {
-
-		//
-		System.out.println("--------여기는 YES 메일 보내는 곳--------");
-		System.out.println("MAIL : " + mail);
-		System.out.println("NAME : " + name);
-		System.out.println("HOTKEY : " + res);
-
-		String host = "smtp.naver.com";
-		final String username = "ama949@naver.com"; // 보내는 사람 네이버 ID
-		final String password = "skdltm11a"; // 비밀번호
-		int port = 465;
-		String m = "Yes";
-		// 메일 내용
-		String recipient = mail; // 받는 사람 E-Mail
-		String subject = "ADRESS-맞춤  추천";
-		String body = "<h1>" + name + "님" + "안녕하세요~" + "</h1>" + "<h3>" + res
-				+ "</h3>";
-
-		Properties props = System.getProperties();
-
-		props.put("mail.smtp.host", host);
-		props.put("mail.smtp.port", port);
-		props.put("mail.smtp.auth", "true");
-		props.put("mail.smtp.ssl.enable", "true");
-		props.put("mail.smtp.starttls.enable", "true");
-		props.put("mail.smtp.ssl.trust", host);
-
-		Session session = Session.getDefaultInstance(props,
-				new javax.mail.Authenticator() {
-					String un = username;
-					String pw = password;
-
-					protected PasswordAuthentication getPasswordAuthentication() {
-						return new PasswordAuthentication(un, pw);
-					}
-				});
-		session.setDebug(true); // for debug
-
-		Message msg = new MimeMessage(session);
-		try {
-			msg.setFrom(new InternetAddress(username));
-			msg.setRecipient(Message.RecipientType.TO, new InternetAddress(
-					recipient));
-			msg.setSubject(subject);
-			msg.setSentDate(new Date());
-			// 파일 첨부시에는 BodyPart를 사용
-			// msg.setText(body);
-
-			// 파일첨부를 위한 Multipart
-			Multipart multipart = new MimeMultipart();
-
-			// BodyPart를 생성
-			BodyPart bodyPart = new MimeBodyPart();
-			bodyPart.setText(body);
-			bodyPart.setContent(
-					"<html><body><div style=\"z-index: 1; position: relative; margin-left: 45px;\">"
-							+ "<img src='http://localhost/A_Dress/product/mail2.jpg' style=\"width: 80%;\">"
-							+ "<table style=\"margin-top:-35%; font-family: '210 나무고딕'\"><tr><td>"
-							+ name
-							+ "님 "
-							+ "안녕하세요</td></tr><tr><td>맞춤 추천이 도착했습니다.</td></tr>"
-							+ "<tr><td>"
-							+ res
-							+ "</td></tr>"
-							+ "<tr><td><img src='http://localhost/A_Dress/product/"
-							+ img
-							+ "' style=\"width: 100px;\"></td></tr></table></div></body></html>",
-					"text/html; charset=EUC-KR");
-			// 1. Multipart에 BodyPart를 붙인다.
-			multipart.addBodyPart(bodyPart);
-			// 이메일 메시지의 내용에 Multipart를 붙인다.
-			msg.setContent(multipart);
-
-			Transport.send(msg);
-		} catch (MessagingException e) {
-			e.printStackTrace();
-		}
-
+	public void bon_precommandsearchmail(@RequestParam HashMap<String, String> params) {
+		// 원래 파라미터
+		// String mail, String name, String res, String img
+		System.out.println("에이젝스 컨트롤러!!!!!!!!!!!!!!!!");	
+		sendRecommendProductMail.mailSend(params);
 	}
 
 	// 출결 출근
@@ -1261,7 +818,7 @@ public class Ajaxcon {
 
 	}
 
-	// 급여 계산
+	// 직원 급여 계산
 	@RequestMapping(value = "sh_ajax_workPay")
 	public ModelAndView sh_ajax_workPay(int staff_num, String date_ps,
 			String date_ps2, HttpSession session) {
@@ -1272,36 +829,12 @@ public class Ajaxcon {
 		map.put("date_ps", date_ps);
 		map.put("date_ps2", date_ps2);
 		map.put("shop_num", session.getAttribute("shop_num").toString());
+		
 		List<StaffVO> list = sfdao.get_pay(map);
-		StringBuffer res = new StringBuffer();
-		Iterator<StaffVO> it = list.iterator();
-
-		// 합계 급액과 근무 시간을 위한 변수
-		int timeres = 0, payres = 0;
-		while (it.hasNext()) {
-			StaffVO vo = it.next();
-			res.append("<tr>");
-			res.append("<td>").append(vo.getStaff_name()).append("</td>");
-			res.append("<td>").append(vo.getWork_login()).append("</td>");
-			res.append("<td>").append(vo.getWork_logout()).append("</td>");
-			res.append("<td>").append(vo.getWork_time()).append(" 시간")
-					.append("</td>");
-			res.append("<td>").append(vo.getWork_time() * 10000).append(" 원")
-					.append("</td>");
-			res.append("</tr>");
-			timeres += vo.getWork_time();
-			payres += vo.getWork_time() * 10000;
-
-		}
-		res.append("<tr><th>합계</th>");
-		res.append("<th>-</th>");
-		res.append("<th>-</th>");
-		res.append("<th>" + timeres + " 시간</th>");
-		res.append("<th>" + payres + " 원</th>");
-		res.append("</tr>");
-
+		String res = makeNewHtmlCodes(list.iterator(), "staffForPayManagement");
+		
 		mav.setViewName("ajax/sh_ajax_sh_workPay");
-		mav.addObject("res", res.toString());
+		mav.addObject("res", res);
 		return mav;
 	}
 
@@ -1330,4 +863,293 @@ public class Ajaxcon {
 		mav.addObject("result", result);
 		return mav;
 	}
+	
+	// html 코드를 작성하여 리턴하는 메서드
+	public String makeNewHtmlCodes(Iterator searchRes,String searchType){
+		// searchRes: DB 검색 결과가 담긴 List 내부의 VO들을 읽기 위한 Iterator
+		// searchType: html 코드가 어떤 내용인지를 의미하는 키워드
+		StringBuffer newHtmlCodes = new StringBuffer();
+		
+		switch(searchType){
+		case "productsByGender":
+			int numberOfProduct = 0;
+			while (searchRes.hasNext()) {
+				numberOfProduct++;
+				ProductVO productInfo = new ProductVO();
+				productInfo = (ProductVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>" + numberOfProduct + "</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_name()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_code()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getSto_size()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getSto_amount()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_price()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_salerate()).append("</td>");
+
+				newHtmlCodes.append("<td>");
+				newHtmlCodes.append("<a href=\"javascript:open_win('product/"
+						+ productInfo.getPro_img() + "')\">");
+				newHtmlCodes.append("<img src='product/" + productInfo.getPro_img()
+						+ "' style=\"width: 100px; cursor: hand; \"></a></td>");
+				newHtmlCodes.append("<td>");
+				newHtmlCodes.append("<a href=\"javascript:open_win1('barcode/"
+						+ productInfo.getPro_barcode() + "')\">");
+				newHtmlCodes.append("<img src='barcode/" + productInfo.getPro_barcode()
+						+ "' style=\"width: 100px;\"></a></td>");
+				newHtmlCodes.append("</tr>");
+
+			}
+			break;
+		case "membersForSalesRegister":
+			while (searchRes.hasNext()) {
+				MemVO memberInfo = new MemVO();
+				memberInfo = (MemVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_num()).append("</td>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_name()).append("</td>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_addr()).append("</td>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_tel()).append("</td>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_mileage()).append("</td>");
+				newHtmlCodes.append("<td>");
+				newHtmlCodes.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
+				newHtmlCodes.append("href=\"javascript:ckcustomer('")
+						.append(memberInfo.getMem_name()).append("', '");
+				newHtmlCodes.append(memberInfo.getMem_tel()).append("', '");
+				newHtmlCodes.append(memberInfo.getMem_mileage()).append(
+						"', '" + memberInfo.getMem_num() + "')\">");
+				newHtmlCodes.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
+				newHtmlCodes.append("</td>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "productsForSalesRegister":
+			int numberOfProductForSaleRegister = 0;
+			while (searchRes.hasNext()) {
+				numberOfProductForSaleRegister++;
+				SmangVO purchaseInfo = new SmangVO();
+				purchaseInfo = (SmangVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>" + numberOfProductForSaleRegister + "</td>");
+				newHtmlCodes.append("<td style=\"font-family: '210 나무고딕'; \">")
+						.append(purchaseInfo.getShop_name()).append("</td>");
+				newHtmlCodes.append("<td style=\"font-family: '210 나무고딕'; \">")
+						.append(purchaseInfo.getPro_code()).append("</td>");
+				newHtmlCodes.append("<td style=\"font-family: '210 나무고딕'; \">")
+						.append(purchaseInfo.getSto_size()).append("</td>");
+				newHtmlCodes.append("<td style=\"width:20%; font-family: '210 나무고딕'; \">")
+						.append("<input type=\"number\" style=\"width:100%;\" class=\"form-control\" id=\"p_num"
+								+ numberOfProductForSaleRegister
+								+ "\" value=\"1\" max=\""
+								+ purchaseInfo.getSto_amount()
+								+ "\">").append("</td>");
+				newHtmlCodes.append("<td style=\"font-family: '210 나무고딕'; \">").append("<input type=\"number\" id=\"p_orinum"+numberOfProductForSaleRegister+"\" readonly=\"readonly\" class=\"form-control\" value=\""+purchaseInfo.getSto_amount()+"\"").append("</td>");
+				newHtmlCodes.append("<td style=\"font-family: '210 나무고딕'; \">")
+						.append(purchaseInfo.getPro_price()).append("</td>");
+				newHtmlCodes.append("<td style=\"font-family: '210 나무고딕'; \">")
+						.append(purchaseInfo.getPro_salerate()).append("</td>");
+				newHtmlCodes.append("<td><img src='product/" + purchaseInfo.getPro_img()
+						+ "' style=\"width: 50px;\"></td>");
+				newHtmlCodes.append("<td><img src='barcode/" + purchaseInfo.getPro_barcode()
+						+ "' style=\"width: 50px;\"></td>");
+				newHtmlCodes.append("<td>");
+				newHtmlCodes.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
+				newHtmlCodes.append("href=\"javascript:insertproduct('")
+						.append(purchaseInfo.getPro_code()).append("', '");
+				newHtmlCodes.append(purchaseInfo.getSto_size()).append("', '");
+				newHtmlCodes.append(purchaseInfo.getPro_price()).append(
+						"', '" + numberOfProductForSaleRegister + "','" + purchaseInfo.getPro_salerate() + "')\">");
+				newHtmlCodes.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
+				newHtmlCodes.append("</td>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "productsForChangingAmountStock":
+			int numberOfProductForChangingAmountStock = 0;
+			while (searchRes.hasNext()) {
+				numberOfProductForChangingAmountStock++;
+				SmangVO purchaseInfo = new SmangVO();
+				purchaseInfo = (SmangVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>" + numberOfProductForChangingAmountStock + "</td>");
+				newHtmlCodes.append("<td>").append(purchaseInfo.getPro_code()).append("</td>");
+				newHtmlCodes.append("<td>").append(purchaseInfo.getSto_size()).append("</td>");
+				newHtmlCodes.append("<td>").append(purchaseInfo.getSto_amount()).append("</td>");
+				newHtmlCodes.append("<td>").append(purchaseInfo.getPro_price()).append("</td>");
+				newHtmlCodes.append("<td><img src='product/" + purchaseInfo.getPro_img()
+						+ "' style=\"width: 100px;\"></td>");
+				newHtmlCodes.append("<td><img src='barcode/" + purchaseInfo.getPro_barcode()
+						+ "' style=\"width: 100px;\"></td>");
+				newHtmlCodes.append("<td>");
+				newHtmlCodes.append("<div class=\"btn-group\"><a class=\"btn btn-success\" ");
+				newHtmlCodes.append("href=\"javascript:proset('");
+				newHtmlCodes.append(purchaseInfo.getPro_code()).append("', '").append(purchaseInfo.getSto_size());
+				newHtmlCodes.append("')\">");
+				newHtmlCodes.append("<i class=\"icon_check_alt2\"\"></i></a></div>");
+				newHtmlCodes.append("</td>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "SalesResults":
+			while (searchRes.hasNext()) {
+				SalesCheckVO salesInfo = new SalesCheckVO();
+				salesInfo = (SalesCheckVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_date()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_pronum()).append("</th>");
+				newHtmlCodes.append("<th><img src='product/").append(salesInfo.getSell_proimg())
+						.append("' style=\"width: 100px;\"></td>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_cash()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_many()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_memnum()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_sell()).append("</th>");
+				newHtmlCodes.append("</tr>");
+
+			}
+			break;
+		case "SalesResultsByDate":
+			while (searchRes.hasNext()) {
+				SalesCheckVO salesInfo = new SalesCheckVO();
+				salesInfo = (SalesCheckVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_date()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_shopname()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_cash()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getCount()).append("</th>");
+				newHtmlCodes.append("</tr>");
+
+			}
+			break;
+		case "SalesResultsByProduct":
+			while (searchRes.hasNext()) {
+				SalesCheckVO salesInfo = new SalesCheckVO();
+				salesInfo = (SalesCheckVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_date()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_proname()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_cash()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getCount()).append("</th>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "SalesResultsByShop":
+			while (searchRes.hasNext()) {
+				SalesCheckVO salesInfo = new SalesCheckVO();
+				salesInfo = (SalesCheckVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_date()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_shopname()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_cash()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getCount()).append("</th>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "SalesResultsByReceiptNumber":
+			while (searchRes.hasNext()) {
+				SalesCheckVO salesInfo = new SalesCheckVO();
+				salesInfo = (SalesCheckVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_num()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_memname()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_pronum()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_cash()).append("</th>");
+				newHtmlCodes.append("<th>").append(salesInfo.getSell_many()).append("</th>");
+				newHtmlCodes.append("<th>")
+						.append("<a class=\"btn btn-warning\" data-toggle=\"modal\" href=\"#myModal2\"  onclick=\"sh_managEx("
+								+ salesInfo.getSell_num() + ")\">환불 </a></th>");
+				newHtmlCodes.append("</tr>");
+
+			}
+			break;
+		case "productsForChangingSaleRate":
+			while (searchRes.hasNext()) {
+				ProductVO productInfo = new ProductVO();
+				productInfo = (ProductVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_num()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_name()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_code()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_price()).append("</td>");
+				newHtmlCodes.append("<td><img src='product/").append(productInfo.getPro_img())
+						.append("' style=\"width: 100px;\"></td>");
+				newHtmlCodes.append("<td><img src='barcode/").append(productInfo.getPro_barcode())
+						.append("' style=\"width: 100px;\"></td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_salerate()).append("%</td>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "productsForRecommendationToMember":
+			while (searchRes.hasNext()) {
+				ProductVO productInfo = new ProductVO();
+				productInfo = (ProductVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_num()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_name()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_code()).append("</td>");
+				newHtmlCodes.append("<td>").append(productInfo.getPro_price()).append("</td>");
+				newHtmlCodes.append("<td><img src='product/").append(productInfo.getPro_img())
+						.append("' style=\"width: 100px;\"></td>");
+				newHtmlCodes.append("<td><img src='barcode/").append(productInfo.getPro_barcode())
+						.append("' style=\"width: 100px;\"></td>");
+				newHtmlCodes.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" ");
+				newHtmlCodes.append("href=\"javascript:pro_chk('").append(productInfo.getPro_num())
+						.append("', '");
+				newHtmlCodes.append(productInfo.getPro_code()).append("', '");
+				newHtmlCodes.append(productInfo.getPro_name()).append(
+						"', '" + productInfo.getPro_price() + "', '" + productInfo.getPro_img()
+								+ "')\">");
+				newHtmlCodes.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "membersForProductRecommendation":
+			while (searchRes.hasNext()) {
+				MemVO memberInfo = new MemVO();
+				memberInfo = (MemVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_num()).append("</td>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_name()).append("</td>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_email()).append("</td>");
+				newHtmlCodes.append("<td>").append(memberInfo.getMem_tel()).append("</td>");
+
+				newHtmlCodes.append("<td><div class=\"btn-group\"><a class=\"btn btn-success\" ");
+				newHtmlCodes.append("href=\"javascript:pro_chkmail('");
+
+				newHtmlCodes.append(memberInfo.getMem_email()).append(
+						"', '" + memberInfo.getMem_name() + "')\">");
+				newHtmlCodes.append("<i class=\"icon_check_alt2\"\"></i></a></div></td>");
+				newHtmlCodes.append("</tr>");
+			}
+			break;
+		case "staffForPayManagement":
+			// 합계 급액과 근무 시간을 위한 변수
+			int workingHours = 0, totalPay = 0;
+			while (searchRes.hasNext()) {
+				StaffVO staffInfo = new StaffVO();
+				staffInfo = (StaffVO)searchRes.next();
+				newHtmlCodes.append("<tr>");
+				newHtmlCodes.append("<td>").append(staffInfo.getStaff_name()).append("</td>");
+				newHtmlCodes.append("<td>").append(staffInfo.getWork_login()).append("</td>");
+				newHtmlCodes.append("<td>").append(staffInfo.getWork_logout()).append("</td>");
+				newHtmlCodes.append("<td>").append(staffInfo.getWork_time()).append(" 시간")
+						.append("</td>");
+				newHtmlCodes.append("<td>").append(staffInfo.getWork_time() * 10000).append(" 원")
+						.append("</td>");
+				newHtmlCodes.append("</tr>");
+				workingHours += staffInfo.getWork_time();
+				totalPay += staffInfo.getWork_time() * 10000;
+
+			}
+			newHtmlCodes.append("<tr><th>합계</th>");
+			newHtmlCodes.append("<th>-</th>");
+			newHtmlCodes.append("<th>-</th>");
+			newHtmlCodes.append("<th>" + workingHours + " 시간</th>");
+			newHtmlCodes.append("<th>" + totalPay + " 원</th>");
+			newHtmlCodes.append("</tr>");
+			break;
+		}
+		
+		return newHtmlCodes.toString();
+		
+	}
+	
 }
