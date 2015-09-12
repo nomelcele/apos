@@ -255,10 +255,7 @@ public class Logincon {
 	// 아이디찾기
 	@RequestMapping(value = "findid_sh", method = RequestMethod.POST)
 	public ModelAndView findid_sh(@RequestParam HashMap<String, String> params) {
-		// 원래 파라미터
-		// String email, String name, String tel
 		
-		System.out.println("로그인 컨트롤러!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
 //		System.out.println("-----------SHOP_findid.jsp---------");
 //		System.out.println("Request NAME : " + name);
 //		System.out.println("Request TEL : " + tel);
@@ -279,12 +276,8 @@ public class Logincon {
 		} else {
 			chk = "true";
 			
-			sendFindIdMail.mailSend(params);
+			sendFindIdMail.sendMailProcess(params);
 			
-//			String subject = "APOS - ID 찾기 결과입니다.";
-//			String body = "\"" + name + "\"님의" + "\n\r" + "ID는 : " + id
-//					+ "\n\r" + "감사합니다";
-//			mail(email, name, id, subject, body);
 		}
 		ModelAndView mav = new ModelAndView("ajax/sh_findid");
 		mav.addObject("data", chk);
@@ -293,13 +286,6 @@ public class Logincon {
 
 	@RequestMapping(value = "findpwd_sh", method = RequestMethod.POST)
 	public ModelAndView findpwd_sh(@RequestParam HashMap<String, String> params) {
-		// 원래 파라미터
-		// String name, String id, String email
-		
-		System.out.println("로그인 컨트롤러!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
-//		System.out.println("-----------SHOP_findpwd.jsp---------");
-//		System.out.println("Request NAME : " + name);
-//		System.out.println("Request ID : " + id);
 		String pwd = null;
 		String chk = "false";
 		
@@ -315,12 +301,8 @@ public class Logincon {
 			chk = "false";
 		} else {
 			chk = "true";
-			sendFindPwdMail.mailSend(params);
+			sendFindPwdMail.sendMailProcess(params);
 			
-//			String subject = "APOS - PWD 찾기 결과입니다.";
-//			String body = "\"" + name + "\"님의" + "\n\r" + "PWD는 : " + pwd
-//					+ "\n\r" + "감사합니다";
-//			mail(email, name, id, subject, body);
 			System.out.println("Request RES : " + pwd);
 		}
 		ModelAndView mav = new ModelAndView("ajax/sh_findid");

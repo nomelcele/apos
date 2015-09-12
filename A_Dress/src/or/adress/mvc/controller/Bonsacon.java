@@ -297,7 +297,7 @@ public class Bonsacon {
 	@RequestMapping(value = "/bon_shopJoinOK")
 	public ModelAndView bon_shopJoinOK(@RequestParam HashMap<String, String> params) {
 		 	// 메일 전송
-			sendConfirmJoiningMail.mailSend(params);
+			sendConfirmJoiningMail.sendMailProcess(params);
 			
 			String hotkey_status = "Yes";
 			int key_num = Integer.parseInt(params.get("key_num"));
@@ -312,27 +312,8 @@ public class Bonsacon {
 	// 완료
 	@RequestMapping(value = "/bon_shopJoinNO")
 	public ModelAndView bon_shopJoinNO(@RequestParam HashMap<String, String> params) {
-		// 원래 파라미터
-		// String mail, String name, String hotkey, int key_num
-		// 
-//		System.out.println("--------여기는 NO 메일 보내는 곳--------");
-//		System.out.println("MAIL : "+mail);
-//		System.out.println("NAME : "+name);
-//		System.out.println("HOTKEY : "+hotkey);
-		
-//		String host = "smtp.naver.com";
-//        final String username = "ama949@naver.com"; // 보내는 사람 네이버  ID
-//        final String password = "skdltm11a"; // 비밀번호
-//        int port=465;
-//         
-        // 메일 내용
-//        String recipient = mail; // 받는 사람 E-Mail
-//        String subject = "APOS - 매장 가입을 거절당했습니다";
-//        String body = "\""+name+"\"님" + "안녕하세요~"+"\n\r"+"회사 규정상 회원 가입처리가 거절 되었습니다"+"\n\r"+"감사합니다";
-        // *******************************
-		// *******************************
 		// 메일 전송
-		sendRefuseJoiningMail.mailSend(params);
+		sendRefuseJoiningMail.sendMailProcess(params);
 		
 		ShopHotkeyVO v = new ShopHotkeyVO();
         String m = "No";
@@ -342,50 +323,6 @@ public class Bonsacon {
         bondao.deletehotkey(v);
         
         return bon_shopJoin();
-//        Properties props = System.getProperties();
-//         
-//         
-//        props.put("mail.smtp.host", host);
-//        props.put("mail.smtp.port", port);
-//        props.put("mail.smtp.auth", "true");
-//        props.put("mail.smtp.ssl.enable", "true");
-//        props.put("mail.smtp.starttls.enable","true");  
-//        props.put("mail.smtp.ssl.trust", host);
-//          
-//        Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
-//            String un=username;
-//            String pw=password;
-//            protected PasswordAuthentication getPasswordAuthentication() {
-//                return new PasswordAuthentication(un, pw);
-//            }
-//        });
-//        session.setDebug(true); //for debug
-          
-//        Message msg = new MimeMessage(session);
-//        try {
-//			msg.setFrom(new InternetAddress(username));
-//			msg.setRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
-//			msg.setSubject(subject);
-//			msg.setSentDate(new Date());
-//			// 파일 첨부시에는 BodyPart를 사용
-//			// msg.setText(body);
-//			
-//			// 파일첨부를 위한 Multipart
-//			Multipart multipart = new MimeMultipart();
-//			
-//			// BodyPart를 생성
-//			BodyPart bodyPart = new MimeBodyPart();
-//			bodyPart.setText(body);
-//			
-//			// 1. Multipart에 BodyPart를 붙인다.
-//			multipart.addBodyPart(bodyPart);
-//			
-//			// 이메일 메시지의 내용에 Multipart를 붙인다.
-//			msg.setContent(multipart);
-//			Transport.send(msg);
-//		} catch (MessagingException e) {
-//			e.printStackTrace();
-//		}
         
 	}
 	

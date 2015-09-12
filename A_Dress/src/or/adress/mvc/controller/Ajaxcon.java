@@ -96,11 +96,10 @@ public class Ajaxcon {
 		map.put("shop_num", shop_num);
 
 		List<ProductVO> list = pdao.getListProductGender(map);
-		String strString = makeNewHtmlCodes(list.iterator(), "productsByGender");
+		String productsByGender = makeNewHtmlCodes(list.iterator(), "productsByGender");
 		
-		System.out.println(strString);
 		// xml을 읽어 오기 위해서 만든 클래스의 메서드를 호출
-		mav.addObject("strString", strString);
+		mav.addObject("strString", productsByGender);
 
 		return mav;
 
@@ -109,13 +108,12 @@ public class Ajaxcon {
 	// 판매등록 고객검색콜백
 	@RequestMapping(value = "sh_smang_callback", method = RequestMethod.POST)
 	public ModelAndView sh_smang_callback(String name) {
-		System.out.println(name);
-		List<MemVO> list = shdao.getListMember(name);
-		String str = makeNewHtmlCodes(list.iterator(), "membersForSalesRegister");
+		List<MemVO> list = shdao.getListMember(name); // 검색어에 해당하는 고객 목록
+		String membersForSalesRegister = makeNewHtmlCodes(list.iterator(), "membersForSalesRegister");
+		// 비동기식으로 나타날 html 코드를 작성하여 리턴하는 메서드 호출
 		
-		System.out.println(str);
 		ModelAndView mav = new ModelAndView("ajax/sh_smang_callback");
-		mav.addObject("cuscont", str);
+		mav.addObject("cuscont", membersForSalesRegister);
 		return mav;
 		
 	}
@@ -128,10 +126,10 @@ public class Ajaxcon {
 		map.put("pname", pname);
 		map.put("shop_num", shop_num);
 		List<SmangVO> list = smdao.getListProduct(map);
-		String str2 = makeNewHtmlCodes(list.iterator(), "productsForSalesRegister");
+		String productsForSalesRegister = makeNewHtmlCodes(list.iterator(), "productsForSalesRegister");
 		
 		ModelAndView mav = new ModelAndView("ajax/sh_smang_callback2");
-		mav.addObject("procont", str2);
+		mav.addObject("procont", productsForSalesRegister);
 		return mav;
 		
 	}
@@ -182,25 +180,13 @@ public class Ajaxcon {
 	// 아이디 찾기 메일발송
 	@RequestMapping(value = "bon_findid2", method = RequestMethod.POST)
 	public void bon_findid2(@RequestParam HashMap<String, String> params) {
-		// 메일 관련 정보
-//		String mail = request.getParameter("mail");
-//		String name = request.getParameter("name");
-//		String id = request.getParameter("id");
-		
-
-		System.out.println("에이젝스 컨트롤러!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
-
-		sendFindIdMail.mailSend(params);
-		
+		sendFindIdMail.sendMailProcess(params);
 	}
 
 	// 비밀번호찾기 (디비)
 	@RequestMapping(value = "bon_findpwd", method = RequestMethod.POST)
 	public ModelAndView bon_findpwd(String name, String id) {
-		// String name = request.getParameter("name");
-		// String id = request.getParameter("id");
 
-		System.out.println("에이젝스 컨트롤러!!!!!!!!!!!!!!!!!!!!!!!!!!!!1");
 		System.out.println("-----------bon_findpwd.jsp---------");
 		System.out.println("Request NAME : " + name);
 		System.out.println("Request ID : " + id);
@@ -218,11 +204,7 @@ public class Ajaxcon {
 	// 비밀번호 찾기 메일발송
 	@RequestMapping(value = "bon_findpwd2", method = RequestMethod.POST)
 	public void bon_findpwd2(@RequestParam HashMap<String, String> params) {
-		// 원래 파라미터
-		// String name, String mail, String pwd
-		
-
-		System.out.println("에이젝스 컨트롤러!!!!!!!!!");
+		sendFindPwdMail.sendMailProcess(params);
 	}
 
 	// 샵 회원가입 (ajax)
@@ -304,9 +286,9 @@ public class Ajaxcon {
 		map.put("pname", pcode);
 		map.put("shop_num", shopnum);
 		List<SmangVO> list = smdao.getListProduct(map);
-		String str2 = makeNewHtmlCodes(list.iterator(), "productsForChangingAmountStock");
+		String productsForChangingAmountStock = makeNewHtmlCodes(list.iterator(), "productsForChangingAmountStock");
 
-		mav.addObject("str2", str2);
+		mav.addObject("str2", productsForChangingAmountStock);
 		return mav;
 	}
 
@@ -553,11 +535,11 @@ public class Ajaxcon {
 		System.out.println(pro_code + startdate + enddate);
 		List<SalesCheckVO> list = skdao.getProductList(pro_code, startdate,
 				enddate);
-		String res = makeNewHtmlCodes(list.iterator(), "SalesResultsByProduct");
+		String SalesResultsByProduct = makeNewHtmlCodes(list.iterator(), "SalesResultsByProduct");
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/bon_ajaxproductsale");
-		mav.addObject("list", res);
+		mav.addObject("list", SalesResultsByProduct);
 		return mav;
 	}
 
@@ -604,11 +586,11 @@ public class Ajaxcon {
 		System.out.println(shop_name + startdate + enddate);
 		List<SalesCheckVO> list = skdao.get_shopList(shop_name, startdate,
 				enddate);
-		String res = makeNewHtmlCodes(list.iterator(), "SalesResultsByShop");
+		String SalesResultsByShop = makeNewHtmlCodes(list.iterator(), "SalesResultsByShop");
 		
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("ajax/bon_ajaxoutletsale");
-		mav.addObject("res", res);
+		mav.addObject("res", SalesResultsByShop);
 		return mav;
 	}
 
@@ -673,10 +655,10 @@ public class Ajaxcon {
 	public ModelAndView sh_ajaxsmangexc(int sell_sell) {
 		System.out.println(sell_sell);
 		List<SalesCheckVO> list = smdao.get_selltable(sell_sell);
-		String res = makeNewHtmlCodes(list.iterator(), "SalesResultsByReceiptNumber");
+		String SalesResultsByReceiptNumber = makeNewHtmlCodes(list.iterator(), "SalesResultsByReceiptNumber");
 		
 		ModelAndView mav = new ModelAndView("ajax/sh_ajaxsmangexc");
-		mav.addObject("list", res);
+		mav.addObject("list", SalesResultsByReceiptNumber);
 		return mav;
 	}
 
@@ -684,10 +666,10 @@ public class Ajaxcon {
 	@RequestMapping(value = "bpd_chk", method = RequestMethod.POST)
 	public ModelAndView bpd_chk(int pro_code) {
 		List<ProductVO> list = pdao.getListProduct_bon3(pro_code);
-		String res = makeNewHtmlCodes(list.iterator(), "productsForChangingSaleRate");
+		String productsForChangingSaleRate = makeNewHtmlCodes(list.iterator(), "productsForChangingSaleRate");
 		
 		ModelAndView mav = new ModelAndView("ajax/bpd_chk_callback");
-		mav.addObject("str", res);
+		mav.addObject("str", productsForChangingSaleRate);
 		return mav;
 	}
 
@@ -744,10 +726,10 @@ public class Ajaxcon {
 	@RequestMapping(value = "bon_precommand", method = RequestMethod.POST)
 	public ModelAndView bon_precommand(int pro_code) {
 		List<ProductVO> list = pdao.getListProduct_bon3(pro_code);
-		String res = makeNewHtmlCodes(list.iterator(), "productsForRecommendationToMember");
+		String productsForRecommendationToMember = makeNewHtmlCodes(list.iterator(), "productsForRecommendationToMember");
 		
 		ModelAndView mav = new ModelAndView("ajax/bpd_chk_callback");
-		mav.addObject("str", res);
+		mav.addObject("str", productsForRecommendationToMember);
 		return mav;
 	}
 
@@ -763,19 +745,16 @@ public class Ajaxcon {
 		map.put("pre_code", "___" + select);
 
 		List<MemVO> list = memdao.presearchmem(map);
-		String res = makeNewHtmlCodes(list.iterator(), "membersForProductRecommendation");
+		String membersForProductRecommendation = makeNewHtmlCodes(list.iterator(), "membersForProductRecommendation");
 		
-		mav.addObject("res", res);
+		mav.addObject("res", membersForProductRecommendation);
 		return mav;
 	}
 
 	// 고객에게 상품 추천 메일 전송
 	@RequestMapping(value = "/bon_precommandsearchmail")
 	public void bon_precommandsearchmail(@RequestParam HashMap<String, String> params) {
-		// 원래 파라미터
-		// String mail, String name, String res, String img
-		System.out.println("에이젝스 컨트롤러!!!!!!!!!!!!!!!!");	
-		sendRecommendProductMail.mailSend(params);
+		sendRecommendProductMail.sendMailProcess(params);
 	}
 
 	// 출결 출근
@@ -831,10 +810,10 @@ public class Ajaxcon {
 		map.put("shop_num", session.getAttribute("shop_num").toString());
 		
 		List<StaffVO> list = sfdao.get_pay(map);
-		String res = makeNewHtmlCodes(list.iterator(), "staffForPayManagement");
+		String staffForPayManagement = makeNewHtmlCodes(list.iterator(), "staffForPayManagement");
 		
 		mav.setViewName("ajax/sh_ajax_sh_workPay");
-		mav.addObject("res", res);
+		mav.addObject("res", staffForPayManagement);
 		return mav;
 	}
 
