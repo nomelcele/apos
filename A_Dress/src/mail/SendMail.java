@@ -29,7 +29,7 @@ public abstract class SendMail {
 	private Properties props;
 	private Session session;
 	
-	public void mailSend(HashMap<String, String> map) { // 이름 나중에 고치기
+	public void sendMailProcess(HashMap<String, String> map) { // 이름 나중에 고치기
 		HashMap<String, String> mailInfo = setSubjectAndContents(map); 
 		// 메일 제목과 내용을 설정하는 메서드
 		// 받는 사람 주소, 보낼 메일의 제목, 보낼 메일의 내용을 담고 있는 HashMap을 리턴한다.
@@ -87,7 +87,7 @@ public abstract class SendMail {
 				bodyPart.setText(mailInfo.get("mailContents"));
 			}
 
-			// 1. Multipart에 BodyPart를 붙인다.
+			// Multipart에 BodyPart를 붙인다.
 			multipart.addBodyPart(bodyPart);
 
 			// 이메일 메시지의 내용에 Multipart를 붙인다.
