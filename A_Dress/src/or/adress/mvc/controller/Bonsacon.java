@@ -296,7 +296,10 @@ public class Bonsacon {
 	// 본사가 매장 회원 가입 요청을 승인했을 때(hotkey 발급) 가입 승인 메일 전송
 	@RequestMapping(value = "/bon_shopJoinOK")
 	public ModelAndView bon_shopJoinOK(@RequestParam HashMap<String, String> params) {
-		 	// 메일 전송
+		 	// 메일 전송하는 메서드 호출
+			// params에는 클라이언트로부터 가져온 정보들(메일 주소, 이름, 핫키, 핫키의 번호)이 있다.
+			// 메일 주소는 실제 메일을 전송하는 작업을 할 때 필요하고, 이름과 핫키는 메일의 내용을 채울 때 필요하기 때문에
+			// 메서드 호출 시 파라미터로 넘겨준다.
 			sendConfirmJoiningMail.sendMailProcess(params);
 			
 			String hotkey_status = "Yes";
