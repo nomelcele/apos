@@ -122,7 +122,7 @@
 					url : "findid_sh",
 					type : "POST",
 					data : {
-						email : $('#find_email1').val(),
+						mail : $('#find_email1').val(),
 						name : $('#find_name1').val(),
 						tel : $('#find_tel1').val()+"-"+$('#find_tel2').val()+"-"+$('#find_tel3').val()
 						
@@ -151,7 +151,7 @@
 					data : {
 						name : $('#find_name2').val(),
 						id : $('#find_id').val(),
-						email : $('#find_email2').val()
+						mail : $('#find_email2').val()
 					},
 					success : function(data) {
 						// res는 pwd
