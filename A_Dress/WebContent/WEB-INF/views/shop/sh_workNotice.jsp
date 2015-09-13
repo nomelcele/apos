@@ -35,7 +35,7 @@
 					margin-top: -3%; ">
 						<div class="col-lg-12">
 
-					
+					&nbsp
 
 							<h3 class="page-header" style="font-family: '210 나무고딕'; color: #000000 ">
 								<span><img src = "img/work.ico" style="width: 16pt; height: 15pt;"></span>공지사항
