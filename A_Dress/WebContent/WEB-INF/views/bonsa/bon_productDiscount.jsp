@@ -48,18 +48,18 @@
                </h3>
 
                <header class="panel-heading tab-bg-primary ">
-                  <div class="form-group " style="margin-left: -3%">
+                  <div class="form-group " style="margin-left: -3%;width: 100%;">
                      <form action="sh_productsaerch" method="post"
                         id="productcheckform">
 
-                        <div style="margin-bottom: -1%">
+                        <div style="margin-bottom: -1%">&nbsp
 
-                           <div class="col-lg-3" style="margin-left: -5%">
+                           <div class="col-lg-3" style="margin-left: -5%;width: 500px;">
                                <label for="cname" class="control-label col-lg-6" style="font-size: 13px;
-                            font-family: '210 나무고딕' ">
+                            font-family: '210 나무고딕';width: 25%; margin-left: 6%; ">
                                상품코드
                               </label> <input class="form-control" id="pro_code" name="pro_code"
-                                 style="width: 50%" autocomplete="off" type="text" required
+                                 style="width: 40%" autocomplete="off" type="text" required
                                  onKeypress="javascript:if(event.keyCode==13) {return false;}" />
                               <button class="form-control6" type="button"
                                  onclick="javascript:productcheckaction()" id="btn1"
