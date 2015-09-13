@@ -123,7 +123,7 @@
 											<label for="cname" class="control-label col-lg-2">이름<span
 												class="required">*</span></label>
 											<div class="col-lg-3">
-													<form:input path="mem_name"  cssClass="form-control" style="width: 50%" id="mem_name" autocomplete="off"/>
+													<form:input path="mem_name"  cssClass="form-control" style="width: 63%" id="mem_name" autocomplete="off"/>
 													<form:errors path="mem_name" cssClass="error"/>
 											</div>
 										</div>
@@ -134,7 +134,7 @@
 												<span class="required">*</span>
 											</label>
 											<div class="col-lg-2">
-												<input class="form-control1 " id="mem_date" type="date"  style="width: 50%" name="mem_date" required />
+												<input class="form-control1" id="mem_date" type="date"  style="width: 150px;" name="mem_date" required />
 											</div>
 										</div>
 
@@ -143,7 +143,7 @@
 												<span class="required">*</span>
 											</label>
 											<div class="col-lg-4">
-													<form:input path="mem_email" cssClass="form-control " id="smail" style="width: 40%"  autocomplete="off"/>
+													<form:input path="mem_email" cssClass="form-control " id="smail" style="width: 53%"  autocomplete="off"/>
 													<form:errors path="mem_email" cssClass="error"/>
 											</div>
 										</div>
@@ -155,11 +155,11 @@
 											</label>
 											<div class="">
 												<input class="form-control"
-													style="width: 20%; margin-left: 40px;" id="tel1"
+													style="width: 17%; margin-left: 30px;" id="tel1"
 													minlength="3" maxlength="3" type="tel" autocomplete="off" required />- <input
-													class="form-control" style="width: 20%" id="tel2"
+													class="form-control" style="width: 17%" id="tel2"
 													type="tel" required minlength="3" maxlength="4" autocomplete="off" />- <input
-													class="form-control" style="width: 20%" id="tel3"
+													class="form-control" style="width: 17%" id="tel3"
 													type="tel" required minlength="4" maxlength="4" autocomplete="off"/>
 													<input type="hidden" name="mem_tel" id="mem_tel">
 											</div>
