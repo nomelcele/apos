@@ -135,9 +135,9 @@ $(function(){
 							</div>
 						</form>
 </div>
-&nbsp&nbsp&nbsp&nbsp
+
 						<div class="form-group"
-							style="margin-left: 250px; margin-top: 50px;">
+							style="margin-left: 360px; margin-top: 180px;">
 							<div class="col-lg-offset-2 col-lg-12">
 								<button class="btn btn-default" type="button" id="memchange2">
 								수정</button>								
