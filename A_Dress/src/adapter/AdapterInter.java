@@ -1,4 +1,4 @@
-package temp;
+package adapter;
 
 import or.adress.mvc.dao.BoardDao;
 import or.adress.mvc.dao.BonsaDao;

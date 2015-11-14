@@ -26,9 +26,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import adapter.ShopAdapter;
 import suggest.Barcoder;
 import suggest.Suggest;
-import temp.ShopAdapter;
 import vo.BoardVO;
 import vo.CalendarVO;
 import vo.ChaVO;

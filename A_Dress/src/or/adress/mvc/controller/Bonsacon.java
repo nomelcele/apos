@@ -48,7 +48,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
 
-import temp.BonAdapter;
+import adapter.BonAdapter;
 import vo.BoardVO;
 import vo.CalendarVO;
 import vo.ChaVO;
