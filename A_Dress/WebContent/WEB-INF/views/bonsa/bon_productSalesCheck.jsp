@@ -188,13 +188,15 @@
 
 						<div style="margin-left: 10px;">
 							<label for="cname" class="control-label col-lg-2" style="margin-left: 1.2%;">물품코드번호</label> 
-							<input id="pro_code" name="name" width="80%" autocomplete="off"
+							<input id="pro_code" name="name" width="78%" autocomplete="off"
 								type="text" onkeydown="startSuggest();" required />
 <br/>
+<br/>
+
 							<div id="view"></div>
 							<div style="margin-left: 10px;">
-								<label for="cname" class="control-label col-lg-2"><p>기간</p>
-								</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="date_ps" name="date_ps" autocomplete="off"
+								<label for="cname" class="control-label col-lg-2">기간
+								</label>&nbsp;<input id="date_ps" name="date_ps" autocomplete="off"
 									type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
 									name="date_ps2" autocomplete="off" type="date" required /> <input
