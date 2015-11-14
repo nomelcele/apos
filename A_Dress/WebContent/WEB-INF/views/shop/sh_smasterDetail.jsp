@@ -73,7 +73,7 @@ $(function(){
 					<div class="col-lg-6">
 						<form method="post" action="sh_detail_change" id="finishbtn"  enctype="multipart/form-data">
 					
-								<label style="width: 200px; margin-top:1px;  margin-left: 7%;" for="cname"
+								<label style="width: 200px; margin-top:1px;" for="cname"
 									class="control-label col-lg-2">대리점</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="shop_name"
@@ -91,7 +91,7 @@ $(function(){
                     	  <br/>
                     	  <input type="hidden" name="shop_num" value="${sessionScope.shop_num }">
 								<div class="form-group ">
-								<label style="width: 200px; margin-left: 7%;" for="cname"
+								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">성명</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="shop_master"
@@ -101,7 +101,7 @@ $(function(){
 	
 								
 								<div class="form-group ">
-								<label style="width: 200px;  margin-left: 7%;" for="cname"
+								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">전화번호</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="shop_tel"
@@ -110,7 +110,7 @@ $(function(){
 								</div>
 								
 							<div class="form-group ">
-								<label style="width: 200px; margin-left: 7%;" for="cname"
+								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">E-MAIL</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="shop_mail"
@@ -122,7 +122,7 @@ $(function(){
 						
 
 							<div class="form-group ">
-								<label style="width: 200px; margin-left: 7%;" for="cname"
+								<label style="width: 200px;" for="cname"
 									class="control-label col-lg-2">매장 주소</label>
 								<div class="col-lg-2">
 									<input class="form-control" style="width: 260px;" id="shop_adr"
