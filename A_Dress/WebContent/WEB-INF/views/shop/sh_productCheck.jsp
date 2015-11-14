@@ -156,7 +156,11 @@
 								</div>
 							</form>
 						</div>
-						<div>
+						
+					</header>
+
+					<div class="panel-body" style="width: 100%">
+					<div>
 							<ul class="nav nav-tabs"  style="font-family: '210 나무고딕' ">
 								<li class=""><a data-toggle="tab" href="#search"
 									id="ajevery">search</a></li>
@@ -168,9 +172,6 @@
 									onclick="javascript:Product(3)">kids</a></li>
 							</ul>
 						</div>
-					</header>
-
-					<div class="panel-body" style="width: 100%">
 						<div class="tab-content" style="width: 100%">
 
 							<div id="search" class="tab-pane active">
