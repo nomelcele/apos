@@ -97,9 +97,9 @@
       class="or.adress.mvc.dao.AppUserDetailsServiceDAO" />
       
 <beans:bean id="BonAdapter"
-		class="temp.BonAdapter"/>
+		class="adapter.BonAdapter"/>
 <beans:bean id="ShopAdapter"
-		class="temp.ShopAdapter"/>
+		class="adapter.ShopAdapter"/>
 		
 <!-- 메일 전송을 위한 클래스 bean 설정 -->
 	<beans:bean id="sendConfirmJoiningMail" class="mail.SendConfirmJoiningMail"/>
