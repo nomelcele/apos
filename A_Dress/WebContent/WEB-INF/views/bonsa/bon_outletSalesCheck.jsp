@@ -204,10 +204,10 @@
 								onkeydown="startSuggest();" required />
 							<div id="view"></div>
 							<div class="col-lg-2" style="margin-left: -5%;"></div>
-							
+					<br/>		
 							<div style="margin-left: 10px;">
 								<label for="cname" class="control-label col-lg-2">
-								<p align="left">기간</p> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+								<p align="left">기간</p> </label>
 								<input id="date_ps" name="date_ps"
 									minlength="2" autocomplete="off" type="date" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								~&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="date_ps2"
