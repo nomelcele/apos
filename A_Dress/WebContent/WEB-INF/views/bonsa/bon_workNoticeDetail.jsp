@@ -144,8 +144,12 @@
 							<input type="hidden" name="comm_bonum" value="${v.no}">
 							<input type="hidden" name="no" value="${v.no }">
 							<input type="hidden" name="page" value="1">
+						
 						</form:form>
 						<%--                   </form> --%>
+					
+						<div style="float: left; margin-top:25px; margin-left:26px;" >
+						<div style="float: left;" >
 						<form action="bon_noticedelte" method="post" id="deleteform">
 							<input type="hidden" name="no" value="${v.no }"> <input
 								type="hidden" name="writer" value="${v.writer }">
@@ -154,12 +158,14 @@
 								style="margin-left: 5%; margin-top: 1%; float: left; font-family: '210 나무고딕'">글
 								삭제</button>
 						</form>
+						</div><div style="float: left;">  &nbsp; &nbsp;&nbsp;</div><div style="float: left;" >
 						<form action="bon_workNotice" method="post" id="listform">
 							<input type="hidden" name="page" value="1">
 							<button type="button" class="btn btn-primary"
 								onclick="javascript:listaction()"
 								style="margin-left: 1%; margin-top: 1%; font-family: '210 나무고딕'">목록</button>
 						</form>
+					</div></div>
 					</div>
 				</section>
 			</div>
